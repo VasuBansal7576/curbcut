@@ -195,6 +195,13 @@ function chapterEnd(id,t,d,frame){
   text(id==='chapter'?'How it works.':'Try the next key.',41,530,116,paper,670)
   if(id==='install')mono('github.com/VasuBansal7576/curbcut',50,720,24,paper)
 }
+function drawShopRun(terminal,replay,label){
+  g.setTransform(4/3,0,0,4/3,0,0)
+  photo(terminal,0,0,W,H)
+  const x=835,y=496,w=555,h=281
+  mono('KANE REPLAY   /   '+label,x,y-30,17,paper)
+  photo(replay,x,y,w,h,0,0,replay.width,replay.width*h/w)
+}
 function pending(id,t,d,frame){
   const material={
     check:['curbcut check','A failed task goes back to the agent.','Munich Airport · Reading view'],

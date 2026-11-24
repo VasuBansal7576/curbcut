@@ -10,16 +10,19 @@ const read = file => JSON.parse(fs.readFileSync(file,'utf8'))
 const edit = read(path.join(__dirname,'edit.json'))
 const pending = read(path.join(launch,'film/pending.json')).shots
 const calculator = 'proof/kane/calculator-net-add-days/'
-const airport = 'proof/heldout-v6/kane/v6-5193be8805ece27f858e/'
+const delivered = read(path.join(launch,'footage/manifest.json')).slots
 const worms = 'proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/'
 const reels = {
   chapter:[calculator+'2026-11-21T19-46-40.781Z/control',3],
   calcMouse:[calculator+'2026-11-21T19-46-40.781Z/control',9],
   calcKeys:[calculator+'runtime-replay/attempt-1/after',62],
-  check:[airport+'before-1',11],gate:[airport+'control-1',18],
   trust:[worms+'after',60],shortcut:[worms+'before',68],
-  retire:[calculator+'2026-11-22T10-42-44.839Z/recheck-with',10],
   install:[worms+'after',66]
+}
+const shopReplays = {
+  check:[['before',76,4.5,'Keyboard · before'],['control',54,2.5,'Mouse control'],['after',100,5,'Keyboard · first repair']],
+  gate:[['fail',115,6,'Keyboard · original source'],['pass',116,5,'Keyboard · source fixed']],
+  retire:[['without',54,8,'Keyboard · patch disabled']]
 }
 const ff = args => execFileSync('ffmpeg',['-y','-v','error',...args],{stdio:'inherit'})
 const uri = name => pathToFileURL(name).href
@@ -43,8 +46,23 @@ async function main(){
       fs.mkdirSync(folder)
       const slot=pending.find(s=>s.id===shot.id)
       const incoming=slot&&path.join(root,slot.path)
+      const deliveredSlot=delivered[shot.id]
+      const replayFrames=[]
+      if(deliveredSlot){
+        for(const [key,start,duration,label] of shopReplays[shot.id]){
+          const replayFolder=path.join(folder,key)
+          fs.mkdirSync(replayFolder)
+          ff(['-ss',String(start),'-i',path.join(root,deliveredSlot.kaneRecordings[key]),'-t',String(duration),'-vf','fps=30','-q:v','2',path.join(replayFolder,'%04d.jpg')])
+          const names=fs.readdirSync(replayFolder).sort()
+          if(names.length!==duration*30)throw Error('Short Kane recording: '+key)
+          replayFrames.push(...names.map(name=>({url:uri(path.join(replayFolder,name)),label})))
+        }
+        if(replayFrames.length!==shot.duration*30)throw Error('Replay duration mismatch: '+shot.id)
+      }
       let source,offset=0
-      if(incoming&&fs.existsSync(incoming)){
+      if(deliveredSlot){
+        source=path.join(root,deliveredSlot.file)
+      }else if(incoming&&fs.existsSync(incoming)){
         source=incoming
         shot.incoming=true
       }else if(reels[shot.id]){
@@ -58,7 +76,7 @@ async function main(){
         if(frames.length!==shot.duration*30)throw Error('Expected '+shot.duration*30+' frames for '+shot.id+', got '+frames.length)
       }
       const stream=path.join(folder,'picture.h264')
-      const encoded=await page.evaluate(async ({shot,frames})=>{
+      const encoded=await page.evaluate(async ({shot,frames,replayFrames})=>{
         const chunks=[]
         let error
         const enc=new VideoEncoder({output:chunk=>{const bytes=new Uint8Array(chunk.byteLength);chunk.copyTo(bytes);chunks.push(bytes)},error:e=>{error=String(e)}})
@@ -66,7 +84,12 @@ async function main(){
         try{
           for(let i=0;i<shot.duration*30;i++){
             const recording=frames?await img(frames[i]):null
-            await drawShot(shot,i/30,recording)
+            if(replayFrames.length){
+              const replay=replayFrames[i]
+              drawShopRun(recording,await img(replay.url),replay.label)
+            }else{
+              await drawShot(shot,i/30,recording)
+            }
             const frame=new VideoFrame(canvas,{timestamp:Math.round(i*1000000/30),duration:Math.round(1000000/30)})
             enc.encode(frame,{keyFrame:i%60===0});frame.close()
             if(enc.encodeQueueSize>5)await enc.flush()
@@ -76,7 +99,7 @@ async function main(){
         }finally{enc.close()}
         const blob=new Blob(chunks)
         return await new Promise(resolve=>{const r=new FileReader();r.onload=()=>resolve(r.result.split(',')[1]);r.readAsDataURL(blob)})
-      },{shot,frames})
+      },{shot,frames,replayFrames})
       fs.writeFileSync(stream,Buffer.from(encoded,'base64'))
       const segment=path.join(work,shot.id+'.mp4')
       ff(['-r','30','-i',stream,'-c:v','copy','-video_track_timescale','30000',segment])

@@ -4,7 +4,7 @@ The full demo runs 3:05. Its opening 75 seconds form the launch film. Its first 
 
 ## Edit and recording slots
 
-Read [the edit](edit.json) for scene order and narration. Each row has a start time and duration in seconds. [The pending manifest](../pending.json) names the five replacement recordings and their exact frame counts. Place a recording at the indicated repository-relative path and render again. The renderer uses its picture, preserves the narration, and reports a short source. Each missing recording has an on-screen pending label and an identified reference replay.
+Read [the edit](edit.json) for scene order and narration. Each row has a start time and duration in seconds. [The pending manifest](../pending.json) lists the trust popup and one-key barrier report slots and their frame counts. Place a recording at the indicated repository-relative path and render again. The renderer uses its picture, preserves the narration, and reports a short source. Each missing recording has an on-screen pending label and an identified reference replay.
 
 From the repository root, install the locked Node dependencies and Playwright Chromium, then run:
 
@@ -26,8 +26,12 @@ The direct Kane-to-agent handoff is UnitConverters. Its source run is a496782e-9
 
 Munich Airport and Meridiano were freshly captured at 2×. Meridiano was captured after its lead article photo and other news images loaded. Its masthead and lead-story crops omit the reserved ad space. The live names and 1.128-second application time come from the recorded Jev run. The voices perform the role and name from the extension’s Reading view. [Jev measurements](../../../proof/jev/live-naming-demo/capture.json)
 
-The ExtremeTerrain macro uses the original 5× paired measurements. The report uses the actual Mass.edu source-change recommendation. The retirement slot uses a public Kane recheck as labeled reference footage. [Plate index](../plates/index.json) · [Owner report](../../../evidence/v4-86f207deeb57-7bc09a21/report.md) · [Recheck evidence](../../../proof/recheck/README.md)
+The ExtremeTerrain macro uses the original 5× paired measurements. The report uses the actual Mass.edu source-change recommendation. The retirement slot plays the unpatched Stillroom shop recheck beside the recorded terminal output. [Plate index](../plates/index.json) · [Owner report](../../../evidence/v4-86f207deeb57-7bc09a21/report.md) · [Recheck evidence](../../../proof/recheck/README.md)
 
 ## Second chapter
 
-“How it works” opens on the date calculator before the ExtremeTerrain measurement. Kane's four roles are spoken in one sentence. The mouse run shows the resulting calendar date. The Reading view run scrolls from the list of controls to the named field. The source-owner report appears once in the opening. The final retirement slot explains when the rule comes out of the extension. [Mouse control](../../../proof/kane/calculator-net-add-days/2026-11-21T19-46-40.781Z/control/result.json) · [Repaired run](../../../proof/kane/calculator-net-add-days/runtime-replay/attempt-1/after/result.json)
+“How it works” opens on the date calculator before the ExtremeTerrain measurement. Kane's four roles are spoken in one sentence. The mouse run shows the resulting calendar date. The Reading view run scrolls from the list of controls to the named field. The source-owner report appears once in the opening. The retirement recording shows the verified rule changing to retired. [Mouse control](../../../proof/kane/calculator-net-add-days/2026-11-21T19-46-40.781Z/control/result.json) · [Repaired run](../../../proof/kane/calculator-net-add-days/runtime-replay/attempt-1/after/result.json)
+
+## Stillroom shop recordings
+
+The check, gate and retirement slots use their full terminal clips and the corresponding Kane recordings from [the footage manifest](../../footage/manifest.json). The shop check passed with Grok’s first proposal. A later publish step failed. The gate demonstrates the Claude Code Stop hook before and after a native button source fix. The retirement recheck passed with the patch disabled on the source-fixed shop fixture. [Run evidence and session IDs](../../../proof/demo/README.md)
