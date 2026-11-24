@@ -68,11 +68,18 @@ function evidencePath(value) {
   return /^(?:proof|evidence)\/[a-zA-Z0-9./_-]+$/.test(relative) && !relative.split('/').includes('..')?relative:null
 }
 
+export function wcagCriteria(patch) {
+  const personaFallback={'keyboard-only':'2.1.1','screen-reader-view':'4.1.2','low-vision':'1.4.10','low-contrast-simulation':'1.4.3','document-language':'3.1.1'}
+  const ids=patch?.rules?.length?[...new Set(patch.rules.map(rule=>categoryCriteria[patch.evaluation?.category] ??
+    (rule.action==='injectCSS' && Object.hasOwn(rule.value,'color')?'1.4.3':ruleCriteria[rule.action]??'2.1.1')))]:
+    [personaFallback[patch?.persona]??'2.1.1']
+  return ids.map(id=>({id,name:criteria[id][0],who:criteria[id][1]}))
+}
+
 export function createReport(patch) {
   if(!['verified','locally-verified'].includes(patch.status)) throw new Error('A verified patch is required.')
   const local=patch.status==='locally-verified'
-  const entries=[...new Set(patch.rules.map(rule=>categoryCriteria[patch.evaluation?.category] ??
-    (rule.action==='injectCSS' && Object.hasOwn(rule.value,'color')?'1.4.3':ruleCriteria[rule.action]??'2.1.1')))]
+  const entries=wcagCriteria(patch).map(entry=>entry.id)
   const evidence=local?[['Local measurement',patch.evidence.localMeasurement]]:
     [['Kane before recording',patch.evidence.before],['Kane after recording',patch.evidence.after]]
   const references=evidence.flatMap(([label,file])=>{

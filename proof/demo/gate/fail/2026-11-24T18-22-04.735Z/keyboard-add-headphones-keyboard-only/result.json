@@ -1,0 +1,1105 @@
+{
+  "status": "fail",
+  "runId": "2f63df68-fe0f-47b5-8f34-918444b55049",
+  "reason": "Forward and reverse Tab traversal skipped the visible Field Headphones Add to cart control.",
+  "summary": "The product’s visible Add to cart control is not included in normal keyboard focus movement after the search results appear.\nInclude the visible Field Headphones Add to cart button in the normal Tab sequence and verify that Enter or Space adds the item and updates Cart (1).\nevidence: objective_contradiction: Forward and reverse Tab traversal skipped the visible Field Headphones Add to cart control.",
+  "resultCode": 740,
+  "reasonCode": "assertion_error.confirmed_product_bug",
+  "credits": 29.1596875,
+  "exitCode": 1,
+  "exitSignal": null,
+  "steps": [
+    "press_key: PRIMARY: type the next character of headphones into the focused search field",
+    "press_key: PRIMARY: type the next character of headphones into the focused search field",
+    "press_key: PRIMARY: type the next character of headphones into the focused search field",
+    "press_key: PRIMARY: type the next character of headphones into the focused search field",
+    "press_key: PRIMARY: type the next character of headphones into the focused search field",
+    "press_key: PRIMARY: type the next character of headphones into the focused search field",
+    "press_key: PRIMARY: type the final character of headphones into the focused search field",
+    "press_key: PRIMARY: press the Tab key",
+    "press_key: PRIMARY: activate the Search control with the Enter key",
+    "press_key: PRIMARY: press the Tab key",
+    "press_key: PRIMARY: press the Shift+Tab key",
+    "wait: Waiting after determining the Field Headphones Add to cart control is unreachable by keyboard focus navigation"
+  ],
+  "preflight": {
+    "persona": "keyboard-only",
+    "status": "pass",
+    "url": "http://127.0.0.1:4391/fixtures/shop/",
+    "httpStatus": 200,
+    "width": 1280,
+    "browser": "159.0.8154.6"
+  },
+  "objective": "Use only keyboard input. Use Tab or Shift+Tab to move focus and Enter or Space to activate the exact control. Move in whichever direction is shorter. Group repeated Tab presses if supported, checking focus frequently. Do not click, focus elements directly, use JavaScript, or navigate directly to the destination. Keep focus on the page. When the exact control receives focus, activate it and check the outcome once. The exact visible target is outside the sequential Tab order in the initial browser state. Check this with several real focus moves, including forward Tab. Do not search for a different control. If a required control is missing, invisible, or cannot be reached, report the task as failed. Stay on this public site. Do not sign in, register, pay, send or submit anything, or interact with a CAPTCHA or access challenge. Leave fixture settings unchanged. Use visible controls only. Search for headphones and add Field Headphones to the cart. Confirm Cart (1).",
+  "kaneStatus": "fail",
+  "limits": {
+    "maxSteps": 50,
+    "timeout": 360,
+    "assertionMode": "dom"
+  },
+  "evidencePack": ".curbcut/gate/2026-11-24T18-22-04.735Z/keyboard-add-headphones-keyboard-only/7012678d-7150-4b04-8fbc-7f8c6a721970.evidence",
+  "evidenceValid": true,
+  "outcomeChecks": [
+    false
+  ],
+  "browserVerdict": {
+    "status": "fail",
+    "basis": "target-skipped-by-tab",
+    "tabs": 6,
+    "tabIndex": -1
+  },
+  "inspectionTarget": {
+    "visible": true,
+    "tabIndex": -1,
+    "managedKeyboard": false,
+    "reader": null
+  },
+  "runner": "kane",
+  "recordingTrail": [
+    {
+      "index": 0,
+      "events": [
+        {
+          "type": "document",
+          "documentId": "ea3cf82f-fec8-45a4-9988-9e09e9330b18",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "document",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "text",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "text",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "text",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "text",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "text",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "text",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "text",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "text",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "text",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "text",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "activate",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "key": "Enter",
+          "focused": true,
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "reverse": true,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0",
+          "url": "http://127.0.0.1:4391/fixtures/shop/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "revisited": true,
+          "top": true
+        }
+      ]
+    }
+  ],
+  "inspection": {
+    "harness": {
+      "persona": "keyboard-only",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920,
+      "keys": {
+        "tab": 6,
+        "activate": 1,
+        "other": 11,
+        "text": 10
+      },
+      "blockedActivations": 0,
+      "documentId": "9078f53f-8b5b-4030-bc36-7756e8d4b8c0"
+    },
+    "readerVisible": false,
+    "width": 1280,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "http://127.0.0.1:4391/fixtures/shop/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "button",
+    "context": {
+      "nodes": [
+        {
+          "selector": "div.add-to-cart",
+          "parent": "#products > article:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "add-to-cart"
+          },
+          "hoverHandlers": [],
+          "text": "Add to cart",
+          "children": [],
+          "box": [
+            504,
+            816,
+            110,
+            44
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#products > article:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)",
+          "parent": "#products > article:nth-of-type(1) > div:nth-of-type(2)",
+          "tag": "div",
+          "attributes": {
+            "class": "purchase"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "strong",
+            "div.add-to-cart"
+          ],
+          "box": [
+            147,
+            816,
+            467,
+            44
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#products > article:nth-of-type(1) > div:nth-of-type(2)",
+          "parent": "#products > article:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "product-copy"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "p.eyebrow",
+            "h3",
+            "p",
+            "div.purchase"
+          ],
+          "box": [
+            129,
+            678,
+            502,
+            199
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#products > article:nth-of-type(1)",
+          "parent": "#products",
+          "tag": "article",
+          "attributes": {
+            "class": "product"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.art.headphone-art",
+            "div.product-copy"
+          ],
+          "box": [
+            128,
+            501,
+            504,
+            377
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#products",
+          "parent": "section.catalog",
+          "tag": "div",
+          "attributes": {
+            "id": "products"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "article.product",
+            "article.product"
+          ],
+          "box": [
+            128,
+            501,
+            1024,
+            377
+          ],
+          "style": {
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#cart-status",
+          "parent": "section.catalog",
+          "tag": "p",
+          "attributes": {
+            "id": "cart-status",
+            "role": "status"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [],
+          "box": [
+            128,
+            894,
+            1024,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "section.catalog",
+          "parent": "main",
+          "tag": "section",
+          "attributes": {
+            "class": "catalog",
+            "aria-labelledby": "catalog-heading"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#catalog-heading",
+            "#search-form",
+            "#search-status",
+            "#products",
+            "#cart-status",
+            "#shipping"
+          ],
+          "box": [
+            64,
+            299,
+            1152,
+            711
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "main",
+          "parent": "body",
+          "tag": "main",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "section.hero",
+            "section.catalog"
+          ],
+          "box": [
+            0,
+            -256,
+            1280,
+            1266
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "body",
+          "parent": "html",
+          "tag": "body",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "header.masthead",
+            "main",
+            "#shipping-dialog",
+            "#cart-dialog",
+            "footer"
+          ],
+          "box": [
+            0,
+            -332,
+            1280,
+            1399
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "html",
+          "tag": "html",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "head",
+            "body"
+          ],
+          "box": [
+            0,
+            -332,
+            1280,
+            1399
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": []
+    },
+    "nodes": [
+      {
+        "selector": "#cart-status",
+        "role": "status",
+        "name": "",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 128,
+        "width": 1024
+      },
+      {
+        "selector": "div.add-to-cart",
+        "role": "text",
+        "name": "Add to cart",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 504,
+        "width": 110
+      },
+      {
+        "selector": "div.purchase",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 147,
+        "width": 467
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "$89",
+        "state": "",
+        "tag": "strong",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 147,
+        "width": 32
+      },
+      {
+        "selector": "div.product-copy",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 129,
+        "width": 502
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "Search",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 488,
+        "width": 80
+      },
+      {
+        "selector": "#search-form",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tag": "form",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 128,
+        "width": 1024
+      },
+      {
+        "selector": "#search",
+        "role": "searchbox",
+        "name": "",
+        "state": "",
+        "tag": "input",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 128,
+        "width": 352
+      },
+      {
+        "selector": "section.catalog",
+        "role": "region",
+        "name": "Shop the collection",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "header.masthead",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "a.wordmark",
+        "role": "link",
+        "name": "Stillroom Supply",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 64,
+        "width": 188
+      },
+      {
+        "selector": "#cart",
+        "role": "button",
+        "name": "Cart (0)",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1130,
+        "width": 86
+      },
+      {
+        "selector": "main",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tag": "main",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "section.hero",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "p.eyebrow",
+        "role": "text",
+        "name": "The listening collection",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 102,
+        "width": 1075
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Make roomfor sound.",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 102,
+        "width": 1075
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Everyday audio for quieter rituals.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 102,
+        "width": 1075
+      },
+      {
+        "selector": "#catalog-heading",
+        "role": "heading",
+        "name": "Shop the collection",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 128,
+        "width": 1024
+      },
+      {
+        "selector": "#search-status",
+        "role": "status",
+        "name": "1 product found.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 128,
+        "width": 1024
+      },
+      {
+        "selector": "#products",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "grid",
+        "left": 128,
+        "width": 1024
+      },
+      {
+        "selector": "article.product",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tag": "article",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 128,
+        "width": 504
+      },
+      {
+        "selector": "p.eyebrow",
+        "role": "text",
+        "name": "Over-ear audio",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 147,
+        "width": 467
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Field Headphones",
+        "state": "",
+        "tag": "h3",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 147,
+        "width": 467
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Soft cushions and a warm, balanced sound.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 147,
+        "width": 467
+      },
+      {
+        "selector": "#shipping",
+        "role": "button",
+        "name": "Shipping details",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 128,
+        "width": 145
+      },
+      {
+        "selector": "#start-reservation",
+        "role": "button",
+        "name": "Start a cart reservation",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 277,
+        "width": 195
+      },
+      {
+        "selector": "#reservation-status",
+        "role": "status",
+        "name": "",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 128,
+        "width": 1024
+      },
+      {
+        "selector": "footer",
+        "role": "contentinfo",
+        "name": "",
+        "state": "",
+        "tag": "footer",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#native-fix",
+        "role": "checkbox",
+        "name": "Native fixes",
+        "state": "unchecked",
+        "tag": "input",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 1112,
+        "width": 13
+      }
+    ]
+  },
+  "video": ".curbcut/gate/2026-11-24T18-22-04.735Z/keyboard-add-headphones-keyboard-only/recording.mp4"
+}

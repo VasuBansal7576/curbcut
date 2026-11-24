@@ -1,0 +1,46 @@
+{
+  "phases": [
+    {
+      "file": "attempt-1/after/result.json",
+      "status": "inconclusive",
+      "runner": "kane",
+      "runId": "16996ae9-0632-42b0-b23b-2e6e7188ce8c",
+      "credits": null,
+      "reason": "No sealed Kane pack was found in the session.",
+      "video": ".curbcut/check/keyboard-add-headphones/2026-11-24T18-09-54.850Z/attempt-1/after/recording.mp4"
+    },
+    {
+      "file": "attempt-1/after-retry/result.json",
+      "status": "blocked",
+      "runner": "playwright-cdp",
+      "runId": null,
+      "credits": null,
+      "reason": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4317/fixtures/shop/",
+      "video": null
+    },
+    {
+      "file": "before/result.json",
+      "status": "inconclusive",
+      "runner": "kane",
+      "runId": "ed85b7f2-5bae-4e17-8caa-4b616cef4f6c",
+      "credits": 11.66757,
+      "reason": "Checkpoint assertion failed: \"The exact visible target is outside the sequential Tab order in the initial browser state.\"",
+      "video": ".curbcut/check/keyboard-add-headphones/2026-11-24T18-09-54.850Z/before/recording.mp4"
+    },
+    {
+      "file": "control/result.json",
+      "status": "pass",
+      "runner": "kane",
+      "runId": "0ebb0bd4-b727-443e-98c0-91ccacab5c6a",
+      "credits": 18.8379625,
+      "reason": "Objective completed",
+      "video": ".curbcut/check/keyboard-add-headphones/2026-11-24T18-09-54.850Z/control/recording.mp4"
+    }
+  ],
+  "kaneSessionIds": [
+    "16996ae9-0632-42b0-b23b-2e6e7188ce8c",
+    "ed85b7f2-5bae-4e17-8caa-4b616cef4f6c",
+    "0ebb0bd4-b727-443e-98c0-91ccacab5c6a"
+  ],
+  "credits": 30.5055325
+}
