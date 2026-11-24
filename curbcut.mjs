@@ -5,6 +5,7 @@ import {requireKane} from './core/kane.mjs'
 import {serve} from './core/server.mjs'
 import {recheckLocal} from './core/recheck-local.mjs'
 import {preflight} from './core/preflight.mjs'
+import {visualPreflight} from './core/jev-preflight.mjs'
 import {verifyQueue} from './core/jev-queue.mjs'
 import {createReport} from './extension/lib/report.js'
 const [action,file,localId]=process.argv.slice(2)
@@ -21,11 +22,13 @@ try {
     const result=await withLock(()=>fix(task))
     console.log(JSON.stringify(result,null,2))
     if(!['already-accessible','verified'].includes(result.status)) process.exitCode=1
+  } else if(action==='visual-preflight' && file) {
+    console.log(JSON.stringify(await visualPreflight(await readJSON(file)),null,2))
   } else if(action==='preflight' && file) {
     const result=await preflight(await readJSON(file))
     console.log(JSON.stringify(result,null,2))
     if(result.status!=='pass') process.exitCode=1
   } else if(action==='recheck' && file==='--local') console.log(JSON.stringify(await withLock(()=>recheckLocal(localId)),null,2))
   else if(action==='recheck') console.log(JSON.stringify(await withLock(()=>recheck(file)),null,2))
-  else console.log('curbcut serve | curbcut verify-queue | curbcut report <patch-id> | curbcut fix <task.json> | curbcut preflight <task.json> | curbcut recheck [patch-id|--public|--local [patch-id]]')
+  else console.log('curbcut serve | curbcut verify-queue | curbcut report <patch-id> | curbcut fix <task.json> | curbcut preflight <task.json> | curbcut visual-preflight <task.json> | curbcut recheck [patch-id|--public|--local [patch-id]]')
 } catch(error) {console.error(error.message);process.exitCode=2}

@@ -1,0 +1,99 @@
+{
+  "runner": "playwright",
+  "checkedAt": "2026-11-24T14:32:00.485Z",
+  "rows": [
+    {
+      "id": "v6-dev-lang-59f85e6c21e2c13dfe5f",
+      "url": "https://www.paulgraham.com/avg.html",
+      "evidence": "proof/heldout-v6/development-language/v6-dev-lang-59f85e6c21e2c13dfe5f.json",
+      "expected": "en",
+      "status": "locally-fixed",
+      "before": {
+        "status": "fail",
+        "measurement": {
+          "lang": null
+        }
+      },
+      "after": {
+        "status": "pass",
+        "measurement": {
+          "lang": "en"
+        }
+      },
+      "restored": {
+        "status": "fail",
+        "measurement": {
+          "lang": null
+        }
+      },
+      "decision": {
+        "tag": "en",
+        "confidence": 1,
+        "providerMs": 372,
+        "model": "jev-1.14.0"
+      }
+    },
+    {
+      "id": "v6-dev-lang-284c7c99ab280efb2a3e",
+      "url": "https://www.berkshirehathaway.com/letters/1999htm.html",
+      "evidence": "proof/heldout-v6/development-language/v6-dev-lang-284c7c99ab280efb2a3e.json",
+      "expected": "en",
+      "status": "locally-fixed",
+      "before": {
+        "status": "fail",
+        "measurement": {
+          "lang": null
+        }
+      },
+      "after": {
+        "status": "pass",
+        "measurement": {
+          "lang": "en"
+        }
+      },
+      "restored": {
+        "status": "fail",
+        "measurement": {
+          "lang": null
+        }
+      },
+      "decision": {
+        "tag": "en",
+        "confidence": 1,
+        "providerMs": 295,
+        "model": "jev-1.14.0"
+      }
+    },
+    {
+      "id": "v6-dev-lang-4b1499ed6395c7f5bd4c",
+      "url": "https://www.norvig.com/sudoku.html",
+      "evidence": "proof/heldout-v6/development-language/v6-dev-lang-4b1499ed6395c7f5bd4c.json",
+      "expected": "en",
+      "status": "locally-fixed",
+      "before": {
+        "status": "fail",
+        "measurement": {
+          "lang": null
+        }
+      },
+      "after": {
+        "status": "pass",
+        "measurement": {
+          "lang": "en"
+        }
+      },
+      "restored": {
+        "status": "fail",
+        "measurement": {
+          "lang": null
+        }
+      },
+      "decision": {
+        "tag": "en",
+        "confidence": 1,
+        "providerMs": 283,
+        "model": "jev-1.14.0"
+      }
+    }
+  ]
+}
