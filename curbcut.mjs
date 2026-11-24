@@ -10,9 +10,10 @@ import {verifyQueue} from './core/jev-queue.mjs'
 import {checkPage} from './core/check.mjs'
 import {runGate,serializeGate} from './core/gate.mjs'
 import {meter,summarizeCost} from './core/cost.mjs'
+import {runCensus} from './core/census.mjs'
 import {createReport} from './extension/lib/report.js'
 
-const usage='curbcut serve | curbcut verify-queue | curbcut report <patch-id> | curbcut fix <task.json> | curbcut check <url> "<task>" [--persona keyboard-only|screen-reader-view|low-vision] [--local] [--dry-run] | curbcut gate [--config curbcut.gate.json] [--url <preview>] [--local] [--dry-run] [--json] | curbcut cost [--json] | curbcut preflight <task.json> | curbcut visual-preflight <task.json> | curbcut recheck [patch-id|--public|--local [patch-id]]'
+const usage='curbcut serve | curbcut verify-queue | curbcut report <patch-id> | curbcut fix <task.json> | curbcut check <url> "<task>" [--persona keyboard-only|screen-reader-view|low-vision] [--local] [--dry-run] | curbcut gate [--config curbcut.gate.json] [--url <preview>] [--local] [--dry-run] [--json] | curbcut census <url-list-file> [--limit N] | curbcut cost [--json] | curbcut preflight <task.json> | curbcut visual-preflight <task.json> | curbcut recheck [patch-id|--public|--local [patch-id]]'
 
 function parseArgv(argv) {
   const flags={}
@@ -20,7 +21,7 @@ function parseArgv(argv) {
   for(let i=0;i<argv.length;i++) {
     const arg=argv[i]
     if(arg==='--local' || arg==='--dry-run' || arg==='--public' || arg==='--json') flags[arg.slice(2)]=true
-    else if(arg==='--persona' || arg==='--config' || arg==='--url') flags[arg.slice(2)]=argv[++i]
+    else if(arg==='--persona' || arg==='--config' || arg==='--url' || arg==='--limit') flags[arg.slice(2)]=argv[++i]
     else if(arg.startsWith('--persona=')) flags.persona=arg.slice(10)
     else if(arg.startsWith('--config=')) flags.config=arg.slice(9)
     else if(arg.startsWith('--url=')) flags.url=arg.slice(6)
@@ -31,7 +32,16 @@ function parseArgv(argv) {
 
 const {action,rest,flags}=parseArgv(process.argv.slice(2))
 async function main() {
-  if(action==='cost') console.log(JSON.stringify(await summarizeCost(),null,2))
+  if(action==='census' && rest[0]) {
+    const limit=flags.limit===undefined?undefined:Number(flags.limit)
+    if(Object.hasOwn(flags,'limit') && !Number.isInteger(Number(flags.limit))) throw new Error('census --limit needs an integer')
+    const result=await runCensus(rest[0],{limit})
+    console.log(JSON.stringify({observed:result.observed,blocked:result.blocked,failed:result.failed,
+      tokens:result.tokens,branch:result.branch,commit:result.commit,
+      recipes:result.recipes.map(recipe=>({id:recipe.id,share:recipe.jev.share,low:recipe.jev.low,high:recipe.jev.high,
+        labelled:recipe.labelled.n}))},null,2))
+  }
+  else if(action==='cost') console.log(JSON.stringify(await summarizeCost(),null,2))
   else if(action==='serve') {await serve();console.log('Curb Cut · http://127.0.0.1:4317/site/')}
   else if(action==='verify-queue') console.log(JSON.stringify(await verifyQueue(),null,2))
   else if(action==='report' && rest[0]) {
@@ -63,7 +73,7 @@ async function main() {
     if(result.status!=='pass') process.exitCode=1
   } else if(action==='recheck' && flags.local) console.log(JSON.stringify(await withLock(()=>recheckLocal(rest[0])),null,2))
   else if(action==='recheck') console.log(JSON.stringify(await withLock(()=>recheck(flags.public?'--public':rest[0])),null,2))
-  else console.log(usage+' | curbcut cost')
+  else console.log(usage)
 }
 try {
   if(['check','fix','gate'].includes(action)) await meter(action,{
