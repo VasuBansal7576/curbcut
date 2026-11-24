@@ -1,0 +1,58 @@
+# Proof index
+
+Start with [Mass.edu before](hard-v4/kane/v4-86f207deeb57-7bc09a21/before/recording.mp4) and [after](hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/recording.mp4). The same keyboard task opens About and follows “The DHE” with the repair. [Pointer control](hard-v4/kane/v4-86f207deeb57-7bc09a21/control/recording.mp4) · [Kane evidence pack](hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/70a47b25-b707-443b-98dd-d8849884cec2.evidence)
+
+## Held-out v6
+
+| Claim | Result | Evidence |
+| --- | --- | --- |
+| Scouting and registration | 400 sites attempted, 118 tasks registered | [Sample](heldout-v6/sample.json) · [Scout ledger](heldout-v6/scouting.json) · [Registration](heldout-v6/registration.json) · [Integrity receipt](heldout-v6/study-integrity.json) |
+| Local repairs | 76/118. Contrast 47/62, image alternatives 8/12, empty links 12/12, empty buttons 9/12, language 0/20 | [Measurements and outcomes](heldout-v6/local-summary.json) · [Example contrast measurement](heldout-v6/measurements/v6-02908098a5e1c23c7852.json) |
+| Kane name-type sample | 7/15. Image alternatives 3/5, empty links 1/5, empty buttons 3/5 | [Seeded selection](heldout-v6/kane-selection.json) · [Run ledger with recordings and packs](heldout-v6/kane-summary.json) · [Example before](heldout-v6/kane/v6-170c2d7431ef79a6a7f9/before-1/recording.mp4) · [After](heldout-v6/kane/v6-170c2d7431ef79a6a7f9/after-1/recording.mp4) · [After pack](heldout-v6/kane/v6-170c2d7431ef79a6a7f9/after-1/8066e22d-33ca-4427-b30a-cbc0a91b792b.evidence) |
+| Local proof scope | 41 contrast releases from v6 and 3 language releases from development pages | [V6 release manifest](heldout-v6/release.json) · [Language development measures](heldout-v6/development-language/summary.json) · [Contrast simulation calibration](heldout-v6/calibration/summary.json) |
+
+[V6 protocol and results](heldout-v6/README.md) · [WebAIM’s six failure types](https://webaim.org/projects/million/)
+
+## Held-out v5
+
+| Claim | Result | Evidence |
+| --- | --- | --- |
+| Frozen evaluation | 2,050 sites attempted, 142 tasks registered | [Sample](heldout-v5/sample.json) · [Scout ledger](heldout-v5/scouting.json) · [Registration](heldout-v5/registration.json) · [Integrity receipt](heldout-v5/registration-integrity.json) |
+| Local repairs | 99/142, including 51/89 multi-step journeys and 19/20 form labels | [Outcome and attempt ledger](heldout-v5/local-summary.json) |
+| Random Kane sample | 11/20 verified, including 6/6 sampled form labels. Three failed, six inconclusive | [Seeded registration](heldout-v5/kane-sample-20/registration.json) · [Run ledger](heldout-v5/kane-sample-20/summary.json) · [Holafly before](heldout-v5/kane-sample-20/v5-b3a020e9a510-2d198473/before/recording.mp4) · [After](heldout-v5/kane-sample-20/v5-b3a020e9a510-2d198473/after/recording.mp4) · [After pack](heldout-v5/kane-sample-20/v5-b3a020e9a510-2d198473/after/46ecaa02-5a65-4a90-8297-c108ca4f81fe.evidence) |
+| Original Kane sample | 0/4 selected, three started | [Selection](heldout-v5/kane-selection.json) · [Run ledger](heldout-v5/kane-summary.json) |
+| 50-step rerun | 1/2 verified, WoRMS | [Rerun registration](heldout-v5/kane-rerun-50/registration.json) · [Run ledger](heldout-v5/kane-rerun-50/summary.json) · [Before](heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/before/recording.mp4) · [After](heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/after/recording.mp4) · [After pack](heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/after/eb14dcd6-443a-4fc5-9edc-e47e9028c267.evidence) |
+
+[V5 protocol, deviations and per-case evidence](heldout-v5/README.md) · [Interrupted first draw](heldout-v5-aborted/README.md)
+
+## V4 and earlier
+
+| Cohort | Result | Evidence |
+| --- | --- | --- |
+| Hard v4 | 64/102 local repairs, including 29/54 journeys. Kane verified 2/21 selected | [Study and per-case results](hard-v4/README.md) · [Registration](hard-v4/registration.json) · [Kane ledger](hard-v4/kane-summary.json) · [CSC before](hard-v4/kane/v4-27c6f312c486-51e6e4ad/before/recording.mp4) · [After](hard-v4/kane/v4-27c6f312c486-51e6e4ad/attempt-1/after/recording.mp4) |
+| Held-out v3 | 10/23 Kane-verified | [Study](heldout-v3/README.md) · [Ledger](heldout-v3/summary.json) |
+| Held-out v2 | 13/39 Kane-verified among started cases | [Study](heldout-v2/README.md) · [Ledger](heldout-v2/summary.json) |
+| Original held-out | 0/26 Kane-verified | [Study](heldout/README.md) · [Ledger](heldout/summary.json) |
+
+The [Kane session ledger](kane/ledger.json) indexes archived sessions across cohorts. The [Kane evidence guide](kane/README.md) describes the recording, result JSON and sealed pack in each phase directory.
+
+## Installed extension and reliability
+
+| Claim | Result | Evidence |
+| --- | --- | --- |
+| Release bundle | 105 active repairs. 61 Kane-verified and 44 local proof | [Bundled rules and evidence pointers](../extension/bundled.json) |
+| Installed-extension audits | 43/43 original fixes, 11/11 new v5 fixes and 51/51 new v6 fixes passed their release audits | [Original audit](reliability/extension-e2e.json) · [New v5 audit](heldout-v5/kane-sample-20/extension-e2e.json) · [New v6 audit](heldout-v6/extension-e2e.json) · [V6 candidate exclusions](heldout-v6/extension-e2e-initial.json) |
+| Nightly replay | 43 checked, 38 still verified, 4 inconclusive. One broken result was subsequently retired | [Nightly runs and disposition](reliability/nightly.json) · [Earlier Kane rechecks](recheck/README.md) |
+| Report to repair | ColorHexa’s color picker became keyboard-reachable in the reporting tab | [Live report recording and Kane sessions](live/README.md) · [Site-owner report](../evidence/report-d6870c43f8831c2d3b/report.md) |
+| Local harness | Three fixture tasks recorded fail, pass with the rule, and pass after a native fix | [Fixture evidence](local.json) · [Replay instructions](methodology/README.md#local-demo) |
+
+## TypeSafe Jev experiment
+
+| Claim | Result | Evidence |
+| --- | --- | --- |
+| Immediate repair | 2/102 v4 development and 3/142 v5 held-out, all hover-menu repairs | [Benchmark](jev/benchmark.json) · [V4 replay](jev/hard-v4-replay.json) · [V5 replay](jev/heldout-v5-replay.json) |
+| Latency | 801 ms median capture to installation across 66 timed v5 cases. 771 ms median for the 3 successful cases | [Benchmark timings](jev/benchmark.json) · [Demo video](jev/demo.mp4) · [Demo timing](jev/demo.json) |
+| Kane follow-up | 3 eligible cases against a minimum of 5. Zero runs and zero credits | [Eligibility check](jev/kane-eligibility.json) |
+| Kane archive experiments | Predictor scored 427 sessions. Frame auditor flagged 37 of 49 scored packs | [Predictor](jev/predict-summary.json) · [Frame audit](jev/audit-summary.json) |
+
+[Jev protocol and limitations](jev/README.md)

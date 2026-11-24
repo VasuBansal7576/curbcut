@@ -18,7 +18,7 @@ export async function historicalDomains(refs) {
   const sites=new Set()
   const pattern='https?://[A-Za-z0-9._-]+|"(site|domain|host|hostname)": *"[A-Za-z0-9._-]+"'
   for(const ref of refs) {
-    const child=spawn('git',['grep','-I','-h','-o','-E',pattern,ref,'--','tasks','patches','proof','README.md','SPEC.md'],
+    const child=spawn('git',['grep','-I','-h','-o','-E',pattern,ref,'--','tasks','patches','proof','README.md','SPEC.md','docs/SPEC.md'],
       {cwd:ROOT,stdio:['ignore','pipe','inherit']})
     const exit=new Promise((resolve,reject)=>{child.once('error',reject);child.once('close',resolve)})
     for await(const line of createInterface({input:child.stdout})) {

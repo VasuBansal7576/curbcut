@@ -2,6 +2,10 @@
 
 The [two-minute film](curbcut-launch.mp4) follows a keyboard user from the About menu on Mass.edu to the Department of Higher Education page. The [15-second cut](curbcut-launch-15s.mp4) shows the same keys with repairs off and on. The master also follows Kane’s held-out keyboard test on the World Register of Marine Species. The [shot list](shots.md) gives the spoken lines, source files, Kane step numbers and verdicts.
 
+## Extension screenshots
+
+[Popup, settings and instant-fix badge](ui/) at 2×. The captures use an installed extension in isolated headless Chromium, with representative page markup and a simulated TypeSafe reply for the badge.
+
 ## Render from the repository root
 
 Use Node 22 or later, the repository’s locked Playwright dependency, Playwright’s Chromium build, FFmpeg with libx264, and ffprobe. The checked-in stills, fonts, word timings and audio mixes are sufficient for an offline render. No live site access or speech model is needed for this path.
