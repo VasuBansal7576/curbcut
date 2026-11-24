@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "frozenTag": "curbcut-freeze-v6",
+  "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+  "objectFormat": "sha1",
+  "archive": {
+    "file": "frozen-source.tar.gz",
+    "sha256": "5b11eaa5cc952288b2d1475e4d9a7d3e6d86ba81752f066a10c4567a99416c52"
+  },
+  "frozenObjects": {
+    "core": {
+      "type": "tree",
+      "hash": "f3f2d37aae7717bf216371cfea534e9419077b73"
+    },
+    "fixtures/shop/v6": {
+      "type": "tree",
+      "hash": "3d3423e60af3c0469415570fbddc3f758eaa6002"
+    },
+    "schemas": {
+      "type": "tree",
+      "hash": "bb119f8701c72aaf27dc5681f16767082a4564d3"
+    },
+    "extension/runtime.js": {
+      "type": "blob",
+      "hash": "9b16fb2bf2975d342c2b47deecb0b097d8674553"
+    },
+    "package.json": {
+      "type": "blob",
+      "hash": "ca5c0d669d4dd2fe30e9dc8696408f693c0e11e1"
+    },
+    "package-lock.json": {
+      "type": "blob",
+      "hash": "cac6d9a740147bd8a554dac1f09550b4d55be009"
+    },
+    "scripts/calibrate-v6.mjs": {
+      "type": "blob",
+      "hash": "6233964779d40bd8e16992b658dc5b2d5bc9bb46"
+    },
+    "scripts/freeze-v6.mjs": {
+      "type": "blob",
+      "hash": "d97f66e40b340e2f1bd1c5f928551af7872adb9e"
+    },
+    "scripts/sample-v6.mjs": {
+      "type": "blob",
+      "hash": "7ae8949a59198830d63ba2e621ee50615294596e"
+    },
+    "scripts/scout-v6.mjs": {
+      "type": "blob",
+      "hash": "b017c0c8533ac09d21bd52feb23c57ca5918fb43"
+    },
+    "scripts/repair-v6.mjs": {
+      "type": "blob",
+      "hash": "da1a1f0811f76b7ffd745743f7f09470d5a15634"
+    },
+    "scripts/kane-v6.mjs": {
+      "type": "blob",
+      "hash": "4ffb61c6ad9ab166d740939a8d3bcef99a84692f"
+    }
+  },
+  "inputs": {
+    "sample.json": {
+      "commit": "5b9b3e1cb7a19a056975a145adf360826c1658ce",
+      "blob": "67a1a6c11cd1925a9b97c8b65511086df2c29844"
+    }
+  }
+}
