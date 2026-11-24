@@ -1,0 +1,1494 @@
+{
+  "version": 1,
+  "registeredAt": "2026-11-24T10:45:09.054Z",
+  "seed": "2ae7039e8a902fe573adb6e30d9e550d6841c00824aaa850383e779d2738e76b",
+  "method": "Draw 32 random bytes once and encode as lowercase hex. Sort all eligible task IDs by ascending lowercase SHA-256 of the UTF-8 seed, one newline, and the task ID. Visit entries in this order.",
+  "inputBlobs": {
+    "registration.json": "cb569c4321810421401e6273f1a4e509f6c63394",
+    "local-summary.json": "28d4dfe41211f6c8ff75aec28f332bf1d41850f9",
+    "kane-selection.json": "78d95f80fbeda66cd130d7855bc1fa8116a2198f"
+  },
+  "excludedPreviousSelection": [
+    "v5-39c81de4ef43-33ae7f34",
+    "v5-873b26b255a2-924a9a17",
+    "v5-c22b9bdca86b-71a63d77",
+    "v5-cc3cea40d183-52a181e1"
+  ],
+  "target": 20,
+  "replacement": "Skip and record each case that fails the free two-persona CDP preflight, then take the next ID. No replacement for a case admitted by preflight.",
+  "protocol": {
+    "sequence": [
+      "before",
+      "control",
+      "after"
+    ],
+    "before": "Use the registered persona on the unpatched page.",
+    "control": "Use the pointer on the unpatched page.",
+    "after": "Use the registered persona with the exact locally successful candidate whose file SHA-256 is recorded.",
+    "limits": {
+      "keyboard-only": {
+        "maxSteps": 50,
+        "timeout": 360
+      },
+      "control": {
+        "maxSteps": 22,
+        "timeout": 300
+      },
+      "low-vision": {
+        "maxSteps": 26,
+        "timeout": 360
+      },
+      "screen-reader-view": {
+        "maxSteps": 24,
+        "timeout": 250
+      },
+      "color-blind": {
+        "maxSteps": 24,
+        "timeout": 250
+      }
+    },
+    "verdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "retry": "Retry each inconclusive phase once. Keep both records and take the retry verdict. A blocked run after preflight is an inconclusive phase and may receive its one retry.",
+    "evidence": "Each decisive phase needs a Kane session ID, a validated sealed evidence pack, a viewport recording, and the adapter verdict. No local result counts as Kane.",
+    "agreement": "Compare each decisive phase with the saved local verdict. Report phase agreement and all-lane agreement for cases with three decisive runs. Count inconclusive and unrun phases separately.",
+    "denominator": "Count each preflight-admitted case in which at least one Kane invocation starts, including partial cases. Report the number with all three phases separately.",
+    "stopping": "Stop the stage after the same harness or provider execution failure occurs twice. Keep routine measurement inconclusives and repeat them once per phase."
+  },
+  "budget": {
+    "maximumSpend": 2600,
+    "minimumBalance": 2300,
+    "phaseReserve": 100,
+    "rule": "Before each invocation, require at least the larger of 2300 and the starting balance minus 2600, plus the phase reserve. Stop if the balance guard fails or the ledger shows the cap has been reached."
+  },
+  "order": [
+    {
+      "id": "v5-a4b9c9c41e01-05222b52",
+      "site": "sacred-texts.com",
+      "persona": "keyboard-only",
+      "rank": "02c9a084ba8187bb57787bbcd394cd85323d3227b6d8c70b090d7113cde4be42",
+      "candidateFile": "proof/heldout-v5/local/v5-a4b9c9c41e01-05222b52/attempt-1/candidate.json",
+      "candidateSha256": "3ff5f29266c7a588266f87925d3f339ad33d16bcbe0e47fc015470b8a800e1e1",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-a4b9c9c41e01-05222b52/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-a4b9c9c41e01-05222b52/attempt-1/after.json"
+    },
+    {
+      "id": "v5-857ef2c1ce84-168863dc",
+      "site": "www.crictracker.com",
+      "persona": "keyboard-only",
+      "rank": "08887fa64f15aefba49aa3de7adb5d99287a1453624ac85a87b1459d17779db7",
+      "candidateFile": "proof/heldout-v5/local/v5-857ef2c1ce84-168863dc/attempt-1/candidate.json",
+      "candidateSha256": "2176a781be278734d4c784d7cd92dc0343b59a788668b620804897c0d923843f",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-857ef2c1ce84-168863dc/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-857ef2c1ce84-168863dc/attempt-1/after.json"
+    },
+    {
+      "id": "v5-f2ad66f1be05-fa8c7355",
+      "site": "www.legitscript.com",
+      "persona": "low-vision",
+      "rank": "093d41d63a0c8d03717cea0599363e4780a21deb0a0a8d1efbf060da10cfcc5d",
+      "candidateFile": "proof/heldout-v5/local/v5-f2ad66f1be05-fa8c7355/attempt-1/candidate.json",
+      "candidateSha256": "4f0c815981494a5428a7b31fe4282e65ce27bb4ea8b73cda5f6eed86aee8fe6b",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-f2ad66f1be05-fa8c7355/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-f2ad66f1be05-fa8c7355/attempt-1/after.json"
+    },
+    {
+      "id": "v5-fcff2ddd132fff0edeae",
+      "site": "www.forumotion.com",
+      "persona": "screen-reader-view",
+      "rank": "09ed5e1458ca8495821eb416bbbecc719f270c8be343782fad2800c7a9a0fce8",
+      "candidateFile": "proof/heldout-v5/local/v5-fcff2ddd132fff0edeae/attempt-1/candidate.json",
+      "candidateSha256": "ec56e4e9f8c7b8d23ab3f874e2f2315beb6c801ff41b197e0461c430a43dd6f0",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-fcff2ddd132fff0edeae/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-fcff2ddd132fff0edeae/attempt-1/after.json"
+    },
+    {
+      "id": "v5-97763e796ed8-d549191b",
+      "site": "www.manhwaden.com",
+      "persona": "keyboard-only",
+      "rank": "0c7457141b9041e83f535752a12f8b17eeb7ca1b4dedb35d46476a71c7fad59d",
+      "candidateFile": "proof/heldout-v5/local/v5-97763e796ed8-d549191b/attempt-1/candidate.json",
+      "candidateSha256": "a2e815d13f5a6a2ead9efc1e4ff3a9c2e22413870a1fda996ac1f3a4b27edce0",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-97763e796ed8-d549191b/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-97763e796ed8-d549191b/attempt-1/after.json"
+    },
+    {
+      "id": "v5-ab1225a91bea3a027001",
+      "site": "rtmark.net",
+      "persona": "low-vision",
+      "rank": "10b16969b004a7c7df16deeb397c8d6e3e3b254dce3012491bdade85361c88b0",
+      "candidateFile": "proof/heldout-v5/local/v5-ab1225a91bea3a027001/attempt-1/candidate.json",
+      "candidateSha256": "68449e4cced97270e717c2fb858537edcd85194d26550d466c3a12193ab18163",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-ab1225a91bea3a027001/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-ab1225a91bea3a027001/attempt-1/after.json"
+    },
+    {
+      "id": "v5-c46d9e085415a2e891b3",
+      "site": "rekhta.org",
+      "persona": "screen-reader-view",
+      "rank": "1170b9770681f46be8de0d66f81d5908529e59eb202f6df8f4f1b5bc88f2dbfb",
+      "candidateFile": "proof/heldout-v5/local/v5-c46d9e085415a2e891b3/attempt-2/candidate.json",
+      "candidateSha256": "bf6abaf8eab1517d80aff79e66630356979d559d157838e4dff660e15d61c360",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-c46d9e085415a2e891b3/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-c46d9e085415a2e891b3/attempt-2/after.json"
+    },
+    {
+      "id": "v5-2f50b19bf48c-e5978111",
+      "site": "goznak.ru",
+      "persona": "low-vision",
+      "rank": "125bb061de6dd997840e5c41b059aa683c2cf0163ec4af11ef71dcf9cee3f25a",
+      "candidateFile": "proof/heldout-v5/local/v5-2f50b19bf48c-e5978111/attempt-2/candidate.json",
+      "candidateSha256": "a9ad3c8241e2fc7978c6e0d429f66b6c31a6a47e079bceddd9c67070573f61d5",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-2f50b19bf48c-e5978111/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-2f50b19bf48c-e5978111/attempt-2/after.json"
+    },
+    {
+      "id": "v5-fcd52c5a5920e388762d",
+      "site": "azgames.io",
+      "persona": "screen-reader-view",
+      "rank": "126c068273ccfb4fbef202d6c9ccd6a8dccddcfc9d563d2dc618e6b66b2577e4",
+      "candidateFile": "proof/heldout-v5/local/v5-fcd52c5a5920e388762d/attempt-3/candidate.json",
+      "candidateSha256": "08c4202de90c45adb4bea872e4c6b379ba21a87c336abdc6bb918413fe804fd4",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-fcd52c5a5920e388762d/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-fcd52c5a5920e388762d/attempt-3/after.json"
+    },
+    {
+      "id": "v5-cf5e31bb10aecd3af383",
+      "site": "uindex.org",
+      "persona": "screen-reader-view",
+      "rank": "1377ddca7f940ad460323c74c2990336a00fd79bde6fd7a79742d8a7ffba0951",
+      "candidateFile": "proof/heldout-v5/local/v5-cf5e31bb10aecd3af383/attempt-2/candidate.json",
+      "candidateSha256": "7ae030aecf2dc753319e0b0626f1c5d819e2081339f8e78a3503c9bb961cfda3",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-cf5e31bb10aecd3af383/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-cf5e31bb10aecd3af383/attempt-2/after.json"
+    },
+    {
+      "id": "v5-e35e95e464a0b456fb7a",
+      "site": "armorgames.com",
+      "persona": "screen-reader-view",
+      "rank": "1523307c0d202edcd3cfd39d3bb50c8bd5bc947a4d8df91d355d88fb1dd93372",
+      "candidateFile": "proof/heldout-v5/local/v5-e35e95e464a0b456fb7a/attempt-2/candidate.json",
+      "candidateSha256": "587aa6b08925d3090fbf9e1d91e570f263d59306f59e2e2a2eaebfbcfadb4741",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-e35e95e464a0b456fb7a/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-e35e95e464a0b456fb7a/attempt-2/after.json"
+    },
+    {
+      "id": "v5-003fd3b4076d-6079696a",
+      "site": "www.freedommortgage.com",
+      "persona": "keyboard-only",
+      "rank": "1775009daf92a35801b3bd07de53f20eee6efd83dae589221a805bf843b52a10",
+      "candidateFile": "proof/heldout-v5/local/v5-003fd3b4076d-6079696a/attempt-3/candidate.json",
+      "candidateSha256": "092024171154e04e8c125c4317c10f1567d243f0c594a8fd972f20f9d79260bb",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-003fd3b4076d-6079696a/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-003fd3b4076d-6079696a/attempt-3/after.json"
+    },
+    {
+      "id": "v5-b5c8c2309d78-653b97f8",
+      "site": "www.e2open.com",
+      "persona": "keyboard-only",
+      "rank": "17e5215b5ebd918f0cb50eee2e2a3db7d6417a1fa38a88c7d04f5cf8fd623757",
+      "candidateFile": "proof/heldout-v5/local/v5-b5c8c2309d78-653b97f8/attempt-1/candidate.json",
+      "candidateSha256": "f045cc1db7fbf40834f822b72ca74382590e491a9078d99c32093dd1814152e7",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-b5c8c2309d78-653b97f8/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-b5c8c2309d78-653b97f8/attempt-1/after.json"
+    },
+    {
+      "id": "v5-9e9bb4ee04e0ed570269",
+      "site": "www.systemrequirementslab.com",
+      "persona": "low-vision",
+      "rank": "1a6ab877543d9cfab7e293062901bd3ad47b6e68222bdae7109dac2c75868277",
+      "candidateFile": "proof/heldout-v5/local/v5-9e9bb4ee04e0ed570269/attempt-1/candidate.json",
+      "candidateSha256": "aaa2490cd6bca8cb0576c4fcdd0330047d439c2302ff9193f21f699356a162a7",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-9e9bb4ee04e0ed570269/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-9e9bb4ee04e0ed570269/attempt-1/after.json"
+    },
+    {
+      "id": "v5-d733df02c68b-e1ef840e",
+      "site": "www.kyndryl.com",
+      "persona": "low-vision",
+      "rank": "1b1f8f2260d3ba38e8cda2f75fb511ce702c3decc575690631bac7b19745066e",
+      "candidateFile": "proof/heldout-v5/local/v5-d733df02c68b-e1ef840e/attempt-1/candidate.json",
+      "candidateSha256": "6f19615cb7eadf9f117bcda9c19583e047a8ea3197aa8947bd532e03ccd51b3d",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-d733df02c68b-e1ef840e/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-d733df02c68b-e1ef840e/attempt-1/after.json"
+    },
+    {
+      "id": "v5-78c6473662e589ae4e3e",
+      "site": "lawphil.net",
+      "persona": "low-vision",
+      "rank": "1caf873a33f7a7e4f87f5bc71cd163fbba6010f4c5d146226c50225ed5062876",
+      "candidateFile": "proof/heldout-v5/local/v5-78c6473662e589ae4e3e/attempt-1/candidate.json",
+      "candidateSha256": "b4d53fb0b853fe30e76fe1ba76466e26cb3e8c25fd4a4aeb52014d0aa2210e3a",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-78c6473662e589ae4e3e/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-78c6473662e589ae4e3e/attempt-1/after.json"
+    },
+    {
+      "id": "v5-7dc57bda3fb85932eb21",
+      "site": "trackjs.com",
+      "persona": "low-vision",
+      "rank": "1d38efb0499a274b3bb5304f0185447222aaee726702f2a4f3c1e14e96229e1d",
+      "candidateFile": "proof/heldout-v5/local/v5-7dc57bda3fb85932eb21/attempt-1/candidate.json",
+      "candidateSha256": "f2d0b953e19e806baf4a91cb4b7ab79160cdaf155e9a28f0ac2fb1aad2d6e504",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-7dc57bda3fb85932eb21/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-7dc57bda3fb85932eb21/attempt-1/after.json"
+    },
+    {
+      "id": "v5-1b0ce5c57b500551ae39",
+      "site": "www.expansion.com",
+      "persona": "low-vision",
+      "rank": "1e114057fca0f6936cd948ecff8b3f7d65bd1d26ea136db7a3f5f617c95fc77d",
+      "candidateFile": "proof/heldout-v5/local/v5-1b0ce5c57b500551ae39/attempt-1/candidate.json",
+      "candidateSha256": "b44cba7cf034ae29b00473acd70e42481c91cab911c5c9cf2b16c045b0083c5c",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-1b0ce5c57b500551ae39/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-1b0ce5c57b500551ae39/attempt-1/after.json"
+    },
+    {
+      "id": "v5-b3a020e9a510-2d198473",
+      "site": "esim.holafly.com",
+      "persona": "keyboard-only",
+      "rank": "21d218c074f7a00c212d24eb9934443dce19d314769733c4e9bebcc9da4a41a7",
+      "candidateFile": "proof/heldout-v5/local/v5-b3a020e9a510-2d198473/attempt-1/candidate.json",
+      "candidateSha256": "9bdd1bbc51c2a53f0167a191247c08f9415f2309213d487053c28913a24a029f",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-b3a020e9a510-2d198473/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-b3a020e9a510-2d198473/attempt-1/after.json"
+    },
+    {
+      "id": "v5-c29e58c404c0-f9350d36",
+      "site": "www.snhu.edu",
+      "persona": "low-vision",
+      "rank": "22fd7eb8a1924c9a21151dcb3093a4641f952d555b0b3f7a681be77992c8b659",
+      "candidateFile": "proof/heldout-v5/local/v5-c29e58c404c0-f9350d36/attempt-3/candidate.json",
+      "candidateSha256": "da3685a7a8ed3fe646b3a595044973fdaf5236ef89f5898aea24b9495fd4008c",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-c29e58c404c0-f9350d36/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-c29e58c404c0-f9350d36/attempt-3/after.json"
+    },
+    {
+      "id": "v5-da5c14f912fb3f74fbbb",
+      "site": "www.shanghairanking.com",
+      "persona": "screen-reader-view",
+      "rank": "2f6c38a3b2563232e48e5b33703a8e8c096fc9ba4d2087142922ceee0726a201",
+      "candidateFile": "proof/heldout-v5/local/v5-da5c14f912fb3f74fbbb/attempt-1/candidate.json",
+      "candidateSha256": "a8739317f5357d89e213631f498d292a539b91831846254a7aaae0b5cb69b3bc",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-da5c14f912fb3f74fbbb/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-da5c14f912fb3f74fbbb/attempt-1/after.json"
+    },
+    {
+      "id": "v5-6306497b8adea28dad67",
+      "site": "www.mdoffice.com.ua",
+      "persona": "low-vision",
+      "rank": "3768eecbb741428d1de5d07e7a04e21af87189cfbc8c24cb723f813b00bdd9ec",
+      "candidateFile": "proof/heldout-v5/local/v5-6306497b8adea28dad67/attempt-1/candidate.json",
+      "candidateSha256": "672997a186953da2c4c3dcb62b7684697100ee99c6480829a516b0604cc3a5a7",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-6306497b8adea28dad67/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-6306497b8adea28dad67/attempt-1/after.json"
+    },
+    {
+      "id": "v5-63140921051a6d305c3c",
+      "site": "www.nd.edu",
+      "persona": "low-vision",
+      "rank": "3ba48e280ce4c3c1ce46396d8977c0ba93d92d5f091e670f0ba102e56840ee15",
+      "candidateFile": "proof/heldout-v5/local/v5-63140921051a6d305c3c/attempt-1/candidate.json",
+      "candidateSha256": "fe912d48583dd3267a758b36afcdc31084eee5a9628141db36c79fd8a06c89e5",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-63140921051a6d305c3c/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-63140921051a6d305c3c/attempt-1/after.json"
+    },
+    {
+      "id": "v5-fdc61982a2d1-1397652f",
+      "site": "www.ird.fr",
+      "persona": "keyboard-only",
+      "rank": "3c190c1310e7fa832a9a6800958dc66c918a0fe25a3558ff4ed6c35c8a81da92",
+      "candidateFile": "proof/heldout-v5/local/v5-fdc61982a2d1-1397652f/attempt-1/candidate.json",
+      "candidateSha256": "f0ffc14607fe7f36ecb7f74ec4e4e47bbb6d6531ce443b21d6f8ecbd0d7fea5b",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-fdc61982a2d1-1397652f/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-fdc61982a2d1-1397652f/attempt-1/after.json"
+    },
+    {
+      "id": "v5-a2e671fad9cf-e4ff77de",
+      "site": "ycharts.com",
+      "persona": "low-vision",
+      "rank": "3df6f94ddc39ed2beb286dca1376f937f7bb610b337af7f69fa0fb4e4400d4dd",
+      "candidateFile": "proof/heldout-v5/local/v5-a2e671fad9cf-e4ff77de/attempt-5/candidate.json",
+      "candidateSha256": "28ab46f3849467ef4a8c125a397c10162d7ffc159674ec6b93add93daf06b92c",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-a2e671fad9cf-e4ff77de/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-a2e671fad9cf-e4ff77de/attempt-5/after.json"
+    },
+    {
+      "id": "v5-2c5b454b7051b469faec",
+      "site": "www.chunkbase.com",
+      "persona": "low-vision",
+      "rank": "3ff83eab5410a56358a86409c1fae1196d48dad01725d71319166e39b861702c",
+      "candidateFile": "proof/heldout-v5/local/v5-2c5b454b7051b469faec/attempt-1/candidate.json",
+      "candidateSha256": "f928eeebff8ddabfea163d71dad0d7d35841852bb20d3df43a113a3b82365ace",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-2c5b454b7051b469faec/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-2c5b454b7051b469faec/attempt-1/after.json"
+    },
+    {
+      "id": "v5-7364ca848b28-3d3cb1ec",
+      "site": "www.perusall.com",
+      "persona": "keyboard-only",
+      "rank": "40354642892a06e7d9250ac291a2b8abf94c0af2c4a98a2a1af2ece2631b2d7c",
+      "candidateFile": "proof/heldout-v5/local/v5-7364ca848b28-3d3cb1ec/attempt-2/candidate.json",
+      "candidateSha256": "fa5f5fa71cceae29eae1533af159c12000cdcdfb9902c52c239e43045e153276",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-7364ca848b28-3d3cb1ec/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-7364ca848b28-3d3cb1ec/attempt-2/after.json"
+    },
+    {
+      "id": "v5-5e4fe7223dec3ad6220a",
+      "site": "divar.ir",
+      "persona": "low-vision",
+      "rank": "40466d659e6e4b48b4f1388be9387f610bfd6638e73ec13099005775625f7cfe",
+      "candidateFile": "proof/heldout-v5/local/v5-5e4fe7223dec3ad6220a/attempt-4/candidate.json",
+      "candidateSha256": "9b78fecd0b9a94c388c5d0e0a45621fff3da34a637d6e962e7420d662ee6b29b",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-5e4fe7223dec3ad6220a/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-5e4fe7223dec3ad6220a/attempt-4/after.json"
+    },
+    {
+      "id": "v5-54350528c664-811bbf91",
+      "site": "bangmod.cloud",
+      "persona": "keyboard-only",
+      "rank": "40c80956718bdaa98fe8a46be43be712d117913cea41de05d360785aaf557ec2",
+      "candidateFile": "proof/heldout-v5/local/v5-54350528c664-811bbf91/attempt-2/candidate.json",
+      "candidateSha256": "b38b87634933dd1a0080595bbc293ef1996961035b2fe8f09c4b98c1e5cfe158",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-54350528c664-811bbf91/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-54350528c664-811bbf91/attempt-2/after.json"
+    },
+    {
+      "id": "v5-9622486897a1-afa09ca3",
+      "site": "sciencedaily.com",
+      "persona": "keyboard-only",
+      "rank": "439e6cc4fdfdd341768531a928b78260a88a1191b861f6aa4881b2e84b058b63",
+      "candidateFile": "proof/heldout-v5/local/v5-9622486897a1-afa09ca3/attempt-1/candidate.json",
+      "candidateSha256": "881bd92431bae6a6858fbf7ef1637ef53f368da22edcbc6198d82972f5381003",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-9622486897a1-afa09ca3/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-9622486897a1-afa09ca3/attempt-1/after.json"
+    },
+    {
+      "id": "v5-4640c542c67a77933560",
+      "site": "lmgtfy.com",
+      "persona": "low-vision",
+      "rank": "43ac9ccb9683e6b790971f903ad271afd9a552440e3aa19235538f2c452e4c04",
+      "candidateFile": "proof/heldout-v5/local/v5-4640c542c67a77933560/attempt-1/candidate.json",
+      "candidateSha256": "5af7ca3adc0c877336dd29917411b4c6593962851be34269cb715a67a3542654",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-4640c542c67a77933560/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-4640c542c67a77933560/attempt-1/after.json"
+    },
+    {
+      "id": "v5-ffa5b846356dc17b179d",
+      "site": "www.chemnet.com",
+      "persona": "low-vision",
+      "rank": "482a3dacd549ed96ae8f3dc84cc915634bc83633d1f6266167e20066d8882a50",
+      "candidateFile": "proof/heldout-v5/local/v5-ffa5b846356dc17b179d/attempt-1/candidate.json",
+      "candidateSha256": "e56b8b674fcb4a76361bd80beddeb08738da3a438dc31c7c3de4340f088a7e52",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-ffa5b846356dc17b179d/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-ffa5b846356dc17b179d/attempt-1/after.json"
+    },
+    {
+      "id": "v5-7577362f6282cf34117d",
+      "site": "www.indiabix.com",
+      "persona": "screen-reader-view",
+      "rank": "4f573d10b5c05315bbd5f567c1a8f9c9ab210553a6cd72970d2e9cb3ff4a1a44",
+      "candidateFile": "proof/heldout-v5/local/v5-7577362f6282cf34117d/attempt-1/candidate.json",
+      "candidateSha256": "a8c9530c02a314147ce6a6c7dab78109d7ddf4a95774054da5f449cddda43b59",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-7577362f6282cf34117d/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-7577362f6282cf34117d/attempt-1/after.json"
+    },
+    {
+      "id": "v5-2a37736a7729-42c4aaca",
+      "site": "sepe.es",
+      "persona": "keyboard-only",
+      "rank": "4fe68831e717da89a4b26a81a95b76594cb2f496db2f29309f050c173c558e94",
+      "candidateFile": "proof/heldout-v5/local/v5-2a37736a7729-42c4aaca/attempt-1/candidate.json",
+      "candidateSha256": "c4bda28e8e1615e893cb70dddb7f4ecaa77033f4ed0038f3bb9deedf6ef1d288",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-2a37736a7729-42c4aaca/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-2a37736a7729-42c4aaca/attempt-1/after.json"
+    },
+    {
+      "id": "v5-58b5371d885a717f80df",
+      "site": "jxnews.com.cn",
+      "persona": "low-vision",
+      "rank": "5338b029cdb0b8c7b809de1f4e3fd864b64ac9148e4af37a2e8ef0db89e36598",
+      "candidateFile": "proof/heldout-v5/local/v5-58b5371d885a717f80df/attempt-1/candidate.json",
+      "candidateSha256": "360a5168424c7c48f0ea029d7650dac387ea509eec95afe3a7ddb9c36719c2e0",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-58b5371d885a717f80df/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-58b5371d885a717f80df/attempt-1/after.json"
+    },
+    {
+      "id": "v5-2cdebc725e6217cd5bea",
+      "site": "www.definitions.net",
+      "persona": "screen-reader-view",
+      "rank": "5b528681dc4a4a303361dda8b7572736e4c29904c2d3672c779368351347a815",
+      "candidateFile": "proof/heldout-v5/local/v5-2cdebc725e6217cd5bea/attempt-1/candidate.json",
+      "candidateSha256": "1c03e3605458a36e72a27b3062629bfd96147a08b8e34675c6b2f2e197098ac7",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-2cdebc725e6217cd5bea/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-2cdebc725e6217cd5bea/attempt-1/after.json"
+    },
+    {
+      "id": "v5-17d974a572467eb1600a",
+      "site": "www.itmedia.co.jp",
+      "persona": "low-vision",
+      "rank": "5d388f0253bbc680da36594919132ecaa563be0dec57d34047f695975b63c394",
+      "candidateFile": "proof/heldout-v5/local/v5-17d974a572467eb1600a/attempt-1/candidate.json",
+      "candidateSha256": "66f153bc19430a33ec6a89dc79c14c2f50d53c676129b8fac5be96a5440fd58a",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-17d974a572467eb1600a/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-17d974a572467eb1600a/attempt-1/after.json"
+    },
+    {
+      "id": "v5-641cf8573e64-907a2744",
+      "site": "www.pdflib.com",
+      "persona": "keyboard-only",
+      "rank": "5f479ac6edb4fe1bab9ca335920381f2d528de035755af755f3ab9f969b92042",
+      "candidateFile": "proof/heldout-v5/local/v5-641cf8573e64-907a2744/attempt-1/candidate.json",
+      "candidateSha256": "c3dab280f03ededa85b6c30d6eb1349d13dbc02653d5556a328e2574e00f82b0",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-641cf8573e64-907a2744/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-641cf8573e64-907a2744/attempt-1/after.json"
+    },
+    {
+      "id": "v5-b69c0c4bbc71-11274908",
+      "site": "www.a8.net",
+      "persona": "keyboard-only",
+      "rank": "5f8950fd99cb540a5c7a5c0d2dc5a7003aa6b15aa09f443cb4ab633b3fec9994",
+      "candidateFile": "proof/heldout-v5/local/v5-b69c0c4bbc71-11274908/attempt-1/candidate.json",
+      "candidateSha256": "e67ca0296912481afef06863b03951de433081271526fe178165dd0618b6902a",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-b69c0c4bbc71-11274908/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-b69c0c4bbc71-11274908/attempt-1/after.json"
+    },
+    {
+      "id": "v5-dcd8408fcc80-04eb85e0",
+      "site": "mcgrp.ru",
+      "persona": "keyboard-only",
+      "rank": "60f4459fd63d5800d77448c02b7397357e226908fec347368e07ade77b36aefb",
+      "candidateFile": "proof/heldout-v5/local/v5-dcd8408fcc80-04eb85e0/attempt-3/candidate.json",
+      "candidateSha256": "a94f99cfdb7ebaab7790009f689388da7ff9b174b47378189d1470b80beede03",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-dcd8408fcc80-04eb85e0/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-dcd8408fcc80-04eb85e0/attempt-3/after.json"
+    },
+    {
+      "id": "v5-01a5930f072f-ba6a98ba",
+      "site": "www.airalo.com",
+      "persona": "keyboard-only",
+      "rank": "6443676e868365d0e21b11a85b240aa1352a7a20d9097f0061fcb068718bbef5",
+      "candidateFile": "proof/heldout-v5/local/v5-01a5930f072f-ba6a98ba/attempt-4/candidate.json",
+      "candidateSha256": "cfe0f094996922dccc6d89936fb1f359c1a7d1a19f2664d403e85a54d18a6bc4",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-01a5930f072f-ba6a98ba/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-01a5930f072f-ba6a98ba/attempt-4/after.json"
+    },
+    {
+      "id": "v5-cc610c63de73-3721130a",
+      "site": "thethaiger.com",
+      "persona": "keyboard-only",
+      "rank": "664f084d36dac12d6b080ed6016226ca64be815f7ead3be7ad6b8fa8866889ec",
+      "candidateFile": "proof/heldout-v5/local/v5-cc610c63de73-3721130a/attempt-1/candidate.json",
+      "candidateSha256": "cbc718d37e30422922b51f2e30c50b7c0ffb762906ac3766b4e059f9a36f307a",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-cc610c63de73-3721130a/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-cc610c63de73-3721130a/attempt-1/after.json"
+    },
+    {
+      "id": "v5-753e8896b66346b8196c",
+      "site": "24timezones.com",
+      "persona": "low-vision",
+      "rank": "677a39265229e6e85293236e31e33aa9039c8603a600ff11ae86dd1318dbc5cf",
+      "candidateFile": "proof/heldout-v5/local/v5-753e8896b66346b8196c/attempt-1/candidate.json",
+      "candidateSha256": "13c83014ad2217a6941fe372ba2769c1c1981ff762c1eda7e095a915ca4a13e5",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-753e8896b66346b8196c/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-753e8896b66346b8196c/attempt-1/after.json"
+    },
+    {
+      "id": "v5-ef812af22b0a73baac84",
+      "site": "www.ghanaweb.com",
+      "persona": "screen-reader-view",
+      "rank": "68764e621a27ed360163bdcf6b80859699ce26ab99180df51675935354021c91",
+      "candidateFile": "proof/heldout-v5/local/v5-ef812af22b0a73baac84/attempt-1/candidate.json",
+      "candidateSha256": "23bbb629b9ea4b24b755df37554b6d7a72607955d4a52ac94512855a039b5084",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-ef812af22b0a73baac84/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-ef812af22b0a73baac84/attempt-1/after.json"
+    },
+    {
+      "id": "v5-0954cd49ad0a-b2f105fc",
+      "site": "ufal.br",
+      "persona": "keyboard-only",
+      "rank": "6acc9a480873ca2ead74e404129a86dfab71b8a3ab66a547aab48cdef3814212",
+      "candidateFile": "proof/heldout-v5/local/v5-0954cd49ad0a-b2f105fc/attempt-1/candidate.json",
+      "candidateSha256": "14bdb7499b989c41ca6d72481adb3b7038105528cb512cba4bf83e7279f8d4d7",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-0954cd49ad0a-b2f105fc/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-0954cd49ad0a-b2f105fc/attempt-1/after.json"
+    },
+    {
+      "id": "v5-296cd426ca2ac81bceba",
+      "site": "www.cgbchina.com.cn",
+      "persona": "low-vision",
+      "rank": "6c67feb67671120c7c00b8846cfe99585648a439072344e38a71334cf20fd498",
+      "candidateFile": "proof/heldout-v5/local/v5-296cd426ca2ac81bceba/attempt-2/candidate.json",
+      "candidateSha256": "8a1ad865e5654efa962a31534a426831247736bf9c489a404f4466bb20f87295",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-296cd426ca2ac81bceba/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-296cd426ca2ac81bceba/attempt-2/after.json"
+    },
+    {
+      "id": "v5-8375f66e12e5-e2bb5916",
+      "site": "www.hostnet.nl",
+      "persona": "low-vision",
+      "rank": "6fc9efa686fc4d918441cc40837256cbb76b37928b8ecc2b078d5088adf33d79",
+      "candidateFile": "proof/heldout-v5/local/v5-8375f66e12e5-e2bb5916/attempt-1/candidate.json",
+      "candidateSha256": "a53f585d2d45bb79f8827b2013133c4cfede8abc4c08aaab688e1e0c5ca986f7",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-8375f66e12e5-e2bb5916/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-8375f66e12e5-e2bb5916/attempt-1/after.json"
+    },
+    {
+      "id": "v5-da7cd68dba5c-1e159de5",
+      "site": "www.infoblox.com",
+      "persona": "keyboard-only",
+      "rank": "70006103203df877d7e0e16b8cecfc87c43c88155ff1c4aa91b774de4f42eb63",
+      "candidateFile": "proof/heldout-v5/local/v5-da7cd68dba5c-1e159de5/attempt-1/candidate.json",
+      "candidateSha256": "5d731ff0a743c6e836290b183cb105437467d4e4169108abd8d419d8e673366f",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-da7cd68dba5c-1e159de5/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-da7cd68dba5c-1e159de5/attempt-1/after.json"
+    },
+    {
+      "id": "v5-0fde566de5ea-3112da06",
+      "site": "taggrs.io",
+      "persona": "keyboard-only",
+      "rank": "701f07bb91fb97faefca0605fd44ea957ef534b1d7af3a97ca0d66613a995eb2",
+      "candidateFile": "proof/heldout-v5/local/v5-0fde566de5ea-3112da06/attempt-1/candidate.json",
+      "candidateSha256": "d1b4221f6a9e6f3345218edaa66c734edf821d85e272eb4b84c416c9c2aa20aa",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-0fde566de5ea-3112da06/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-0fde566de5ea-3112da06/attempt-1/after.json"
+    },
+    {
+      "id": "v5-c93579475f631b42f3f9",
+      "site": "pingomatic.com",
+      "persona": "low-vision",
+      "rank": "73678256d061275066f4ef552812a055fc69edc4b1fe479c66b309bd2042d327",
+      "candidateFile": "proof/heldout-v5/local/v5-c93579475f631b42f3f9/attempt-1/candidate.json",
+      "candidateSha256": "7f9ef8bf1d45a40454922b31728775fc7a167e1c93c9c259a56b452c8edc3f7c",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-c93579475f631b42f3f9/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-c93579475f631b42f3f9/attempt-1/after.json"
+    },
+    {
+      "id": "v5-b95d3b36402f-8ebc4b9a",
+      "site": "helloclue.com",
+      "persona": "keyboard-only",
+      "rank": "7b1c075b05ab0f326b7eb7797322b940cc315a6074e4d056f9b3c93cdc9d8b85",
+      "candidateFile": "proof/heldout-v5/local/v5-b95d3b36402f-8ebc4b9a/attempt-2/candidate.json",
+      "candidateSha256": "54980bfb3a24bbdcbeab51d764067388fa20eb143373e7ec31ed582416409a69",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-b95d3b36402f-8ebc4b9a/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-b95d3b36402f-8ebc4b9a/attempt-2/after.json"
+    },
+    {
+      "id": "v5-9766a6ff14fe-aeb5b4d5",
+      "site": "mihanwebhost.com",
+      "persona": "keyboard-only",
+      "rank": "7ffc800b5b8ecf01dba33991a799642d4fc72716e5cf27115193a54fdeffc80b",
+      "candidateFile": "proof/heldout-v5/local/v5-9766a6ff14fe-aeb5b4d5/attempt-1/candidate.json",
+      "candidateSha256": "2a67419d2dc3f77240bc33f8b9f6ec00eb03c2bd40c801d27f26a02ef6b1437c",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-9766a6ff14fe-aeb5b4d5/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-9766a6ff14fe-aeb5b4d5/attempt-1/after.json"
+    },
+    {
+      "id": "v5-45ea66669cdc-c2486832",
+      "site": "www.mailinator.com",
+      "persona": "keyboard-only",
+      "rank": "80cba70c4658a03f2c9bd0d7fe78c17ed8b70656d1c9430aa018eba6c020b8fc",
+      "candidateFile": "proof/heldout-v5/local/v5-45ea66669cdc-c2486832/attempt-1/candidate.json",
+      "candidateSha256": "3bda599850d4bc0319c0d53e56c3e17f1451cd487edf8e9b0eff3f2cc669c092",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-45ea66669cdc-c2486832/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-45ea66669cdc-c2486832/attempt-1/after.json"
+    },
+    {
+      "id": "v5-466477653e7fb3de06d2",
+      "site": "www.bytello.com",
+      "persona": "low-vision",
+      "rank": "8f73666881e393826d83858957cff7f8065bb00cbea4eae02984734676eeab80",
+      "candidateFile": "proof/heldout-v5/local/v5-466477653e7fb3de06d2/attempt-1/candidate.json",
+      "candidateSha256": "fc1b078a6302af070822cb92692fa5f620a99e62fd81f0aa0b5b5929223b221c",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-466477653e7fb3de06d2/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-466477653e7fb3de06d2/attempt-1/after.json"
+    },
+    {
+      "id": "v5-48688aa70a1b-e410b44c",
+      "site": "www.ronet.de",
+      "persona": "low-vision",
+      "rank": "8fed843e8b8ee5a6bc527198377c29edf1886fe6274265db59829e002c80a515",
+      "candidateFile": "proof/heldout-v5/local/v5-48688aa70a1b-e410b44c/attempt-1/candidate.json",
+      "candidateSha256": "f8d115df168d47230ce73017a0e60ef264ff14f11d56ad79ecabc91d5abb6334",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-48688aa70a1b-e410b44c/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-48688aa70a1b-e410b44c/attempt-1/after.json"
+    },
+    {
+      "id": "v5-74737c44f3d0-3fba48d1",
+      "site": "megogo.net",
+      "persona": "keyboard-only",
+      "rank": "9013eb5a9e54c935738ee0b0ae5dc81b819806b1075a5330ea0e5b02a64bd30d",
+      "candidateFile": "proof/heldout-v5/local/v5-74737c44f3d0-3fba48d1/attempt-1/candidate.json",
+      "candidateSha256": "8df9e110b96224f6245378273d2b72d4d5d8ff45d77cb0addef7b4ba570c2cb3",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-74737c44f3d0-3fba48d1/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-74737c44f3d0-3fba48d1/attempt-1/after.json"
+    },
+    {
+      "id": "v5-73d5f95f3e21-33f93bd3",
+      "site": "www.xel.nl",
+      "persona": "keyboard-only",
+      "rank": "91082b983783067dedf5d2c6900f091848db0636fb49d9c5b9f3354d2148cc82",
+      "candidateFile": "proof/heldout-v5/local/v5-73d5f95f3e21-33f93bd3/attempt-1/candidate.json",
+      "candidateSha256": "b6527c95492e3a42903de8013b79e952faa8adc9cd4f8754c8f54415ab206eeb",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-73d5f95f3e21-33f93bd3/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-73d5f95f3e21-33f93bd3/attempt-1/after.json"
+    },
+    {
+      "id": "v5-5f22528618352a280b18",
+      "site": "www.india.com",
+      "persona": "screen-reader-view",
+      "rank": "9584958b32f5b2622ed69ff81a8ce2f7665208709f95e826401d7e26c95b9190",
+      "candidateFile": "proof/heldout-v5/local/v5-5f22528618352a280b18/attempt-1/candidate.json",
+      "candidateSha256": "d5504ef5d140f97ecbd0a7e65436e53da033859d41501e3cd00850a2e3609bc8",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-5f22528618352a280b18/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-5f22528618352a280b18/attempt-1/after.json"
+    },
+    {
+      "id": "v5-98dbfb0d54b8-551e1833",
+      "site": "www.online-convert.com",
+      "persona": "keyboard-only",
+      "rank": "96142aa6bfe6f725163b67ae5c9d38b412a6ca8228fb7a69c78b4beac9883f49",
+      "candidateFile": "proof/heldout-v5/local/v5-98dbfb0d54b8-551e1833/attempt-1/candidate.json",
+      "candidateSha256": "207442c9296e3095c60af4ef19d8d520ceab74ec14e8844fa71923c347e1b9df",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-98dbfb0d54b8-551e1833/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-98dbfb0d54b8-551e1833/attempt-1/after.json"
+    },
+    {
+      "id": "v5-2320efe4266e-692a0164",
+      "site": "www.illuminateed.com",
+      "persona": "keyboard-only",
+      "rank": "9c107130a863577410d7e306396fdc69e1a174e2458c402df868cd9cdbf7dbe2",
+      "candidateFile": "proof/heldout-v5/local/v5-2320efe4266e-692a0164/attempt-1/candidate.json",
+      "candidateSha256": "0bae4ce0133de8df0ad070307509e6c81a361bf96a6d54e375fcfa72c8820712",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-2320efe4266e-692a0164/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-2320efe4266e-692a0164/attempt-1/after.json"
+    },
+    {
+      "id": "v5-99e07c17f3a049d8c582",
+      "site": "megasoft.ru",
+      "persona": "low-vision",
+      "rank": "a0c14f2ddb38abdebd13feae3cbf612cb57741182f4f7956da77522b6a928257",
+      "candidateFile": "proof/heldout-v5/local/v5-99e07c17f3a049d8c582/attempt-1/candidate.json",
+      "candidateSha256": "a09c45d5d1cdb220622a715849bfe3f038cf8718464e277d65e3f17dc6159661",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-99e07c17f3a049d8c582/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-99e07c17f3a049d8c582/attempt-1/after.json"
+    },
+    {
+      "id": "v5-4d9b7cd1a38df17dc02d",
+      "site": "www.kenyans.co.ke",
+      "persona": "screen-reader-view",
+      "rank": "a3682571572799e2c4c30236c2800c6e57f4234abf3cfc79a677c8d0a66c4dfd",
+      "candidateFile": "proof/heldout-v5/local/v5-4d9b7cd1a38df17dc02d/attempt-1/candidate.json",
+      "candidateSha256": "f9ce117431f4da2af556872aefc2f1bdaf877501dcbade27aebeefea8c023193",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-4d9b7cd1a38df17dc02d/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-4d9b7cd1a38df17dc02d/attempt-1/after.json"
+    },
+    {
+      "id": "v5-14b9841d342aa2bb9dd7",
+      "site": "goinvest.ru",
+      "persona": "low-vision",
+      "rank": "a48902b57be84947007db5bb1c7a61e305a670d7dad898527dc3286485aecc5a",
+      "candidateFile": "proof/heldout-v5/local/v5-14b9841d342aa2bb9dd7/attempt-1/candidate.json",
+      "candidateSha256": "9feaf8b8ccb1dd71b61fa107c38c048529a26d3b4d46dc7364661a0825e93700",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-14b9841d342aa2bb9dd7/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-14b9841d342aa2bb9dd7/attempt-1/after.json"
+    },
+    {
+      "id": "v5-b9166198a9c3-39af8059",
+      "site": "nova.edu",
+      "persona": "keyboard-only",
+      "rank": "a55ce1729b02652d275999ec34cb6e8deb09957301c0b87c2a8bf79827508671",
+      "candidateFile": "proof/heldout-v5/local/v5-b9166198a9c3-39af8059/attempt-1/candidate.json",
+      "candidateSha256": "b9ec9b7f6a1e08fb5da566ff417d1be03c95db46ad78b9ce959ff0f510927d42",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-b9166198a9c3-39af8059/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-b9166198a9c3-39af8059/attempt-1/after.json"
+    },
+    {
+      "id": "v5-b61bc93e9135-70557fc6",
+      "site": "www.onecause.com",
+      "persona": "keyboard-only",
+      "rank": "a7fb836db96d0c9d659d2af522cd5b82e43d32cc04a58737ca09d8687777aec3",
+      "candidateFile": "proof/heldout-v5/local/v5-b61bc93e9135-70557fc6/attempt-1/candidate.json",
+      "candidateSha256": "67219bc284abfc021d24d35a441fb3050410a90c8c3bf6fc68aee79475c5a7f4",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-b61bc93e9135-70557fc6/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-b61bc93e9135-70557fc6/attempt-1/after.json"
+    },
+    {
+      "id": "v5-5a314b63f68c-905985ea",
+      "site": "www.codetantra.com",
+      "persona": "keyboard-only",
+      "rank": "a859e05fbda215847acc08726924b3af5a81ebbf3cccc61e59cf54de593fc020",
+      "candidateFile": "proof/heldout-v5/local/v5-5a314b63f68c-905985ea/attempt-1/candidate.json",
+      "candidateSha256": "959db67b76b1e4d498747ebaaac9a11306b0335504f4fd650ba854290b41abf4",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-5a314b63f68c-905985ea/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-5a314b63f68c-905985ea/attempt-1/after.json"
+    },
+    {
+      "id": "v5-eb7b2aa0bdf3-76aa4005",
+      "site": "www.flightglobal.com",
+      "persona": "keyboard-only",
+      "rank": "a9238896fc06168de3d72fa6183cad0a5fb0f6725a3835989214503333753499",
+      "candidateFile": "proof/heldout-v5/local/v5-eb7b2aa0bdf3-76aa4005/attempt-1/candidate.json",
+      "candidateSha256": "98d925aec4a210abbcd817d782b15c983b66ffeddd9ce2635d39b4943e176271",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-eb7b2aa0bdf3-76aa4005/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-eb7b2aa0bdf3-76aa4005/attempt-1/after.json"
+    },
+    {
+      "id": "v5-807d62652316a6fbbc4a",
+      "site": "www.bafin.de",
+      "persona": "low-vision",
+      "rank": "a943e55a25d2fedc97362f24a07657410a82fbe15b5ed6fb2c0422a3e7b30577",
+      "candidateFile": "proof/heldout-v5/local/v5-807d62652316a6fbbc4a/attempt-1/candidate.json",
+      "candidateSha256": "c087a13789e2a876f13183bdb36d27b2ad2eb9e36be0da063c9704e9e613b69f",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-807d62652316a6fbbc4a/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-807d62652316a6fbbc4a/attempt-1/after.json"
+    },
+    {
+      "id": "v5-f487e6b701e1-2c662e31",
+      "site": "caddyserver.com",
+      "persona": "keyboard-only",
+      "rank": "ad07390a09f3d52832f81b8eb3323a5fea295cace121c2fbe3afc423d64ec50e",
+      "candidateFile": "proof/heldout-v5/local/v5-f487e6b701e1-2c662e31/attempt-1/candidate.json",
+      "candidateSha256": "c4b110e18aff717b834ab48b97b4fa3baed56332a3d002e683c540f1b0697395",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-f487e6b701e1-2c662e31/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-f487e6b701e1-2c662e31/attempt-1/after.json"
+    },
+    {
+      "id": "v5-987edaaf216b0e19b87b",
+      "site": "www.facer.io",
+      "persona": "screen-reader-view",
+      "rank": "aefeb29b6c14924729fc1840b1d591f0801ccdc74a79d4b8b1a77b232a7dcc64",
+      "candidateFile": "proof/heldout-v5/local/v5-987edaaf216b0e19b87b/attempt-1/candidate.json",
+      "candidateSha256": "6b9cc4155090685392b8fa1ef71d617f58faa8b758215825c70fabd851af84a2",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-987edaaf216b0e19b87b/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-987edaaf216b0e19b87b/attempt-1/after.json"
+    },
+    {
+      "id": "v5-d20bb75baf87397a4cd5",
+      "site": "www.bmc.com",
+      "persona": "screen-reader-view",
+      "rank": "af023dd011ccdc08d129ba7244e5a03ea47c6b099170db013da079ae92bfbcbc",
+      "candidateFile": "proof/heldout-v5/local/v5-d20bb75baf87397a4cd5/attempt-1/candidate.json",
+      "candidateSha256": "d1907be31303a31deb5a4ce0efaf00cceb73d2d7a069eb89bea686b1253190a0",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-d20bb75baf87397a4cd5/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-d20bb75baf87397a4cd5/attempt-1/after.json"
+    },
+    {
+      "id": "v5-6e2fa530ab3d56a3d621",
+      "site": "mjt.lu",
+      "persona": "low-vision",
+      "rank": "b4453412e09d178ee5ba531a85be8ba7c7a67ba0f2bdb5e8368562cd5bbdf450",
+      "candidateFile": "proof/heldout-v5/local/v5-6e2fa530ab3d56a3d621/attempt-1/candidate.json",
+      "candidateSha256": "063cc3fb98c66d322006885f2b5164ce2ace0511557ed1c0f7700c077de1b2a7",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-6e2fa530ab3d56a3d621/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-6e2fa530ab3d56a3d621/attempt-1/after.json"
+    },
+    {
+      "id": "v5-650b5d2fee64-fa4c9fc7",
+      "site": "www.celebritynetworth.com",
+      "persona": "low-vision",
+      "rank": "b5608898a9e2a8c5ec9f785aa56833eef80673cc8976ee398f9e5f65edefe51b",
+      "candidateFile": "proof/heldout-v5/local/v5-650b5d2fee64-fa4c9fc7/attempt-3/candidate.json",
+      "candidateSha256": "286eeabd9846820cd6a70af75a6ef3f38cbcbbdcc254d9497038ec83e8f2ab60",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-650b5d2fee64-fa4c9fc7/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-650b5d2fee64-fa4c9fc7/attempt-3/after.json"
+    },
+    {
+      "id": "v5-a3f3f5acedfc-e39c0cf1",
+      "site": "www.ufsm.br",
+      "persona": "low-vision",
+      "rank": "b9f90ebd45647a4c17ea5e7ba2869d63e115c3c2a6a1ed8c3cc91011120a36f2",
+      "candidateFile": "proof/heldout-v5/local/v5-a3f3f5acedfc-e39c0cf1/attempt-1/candidate.json",
+      "candidateSha256": "f44957cf4d98f94ec5a511e888bc813e5a851151dd7198b2ef07c7ede270a3cb",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-a3f3f5acedfc-e39c0cf1/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-a3f3f5acedfc-e39c0cf1/attempt-1/after.json"
+    },
+    {
+      "id": "v5-79bdf2d05394-bcd1c577",
+      "site": "kimiafarma.co.id",
+      "persona": "keyboard-only",
+      "rank": "ba102c9c34479da8843facd5380b44d6dd763842c33fb1f53b945ff3470f559d",
+      "candidateFile": "proof/heldout-v5/local/v5-79bdf2d05394-bcd1c577/attempt-3/candidate.json",
+      "candidateSha256": "c90a5d1ad5401857c6f2ea2609f684f797826d345de968a610f7c222a9ad7c19",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-79bdf2d05394-bcd1c577/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-79bdf2d05394-bcd1c577/attempt-3/after.json"
+    },
+    {
+      "id": "v5-95d2f5ed269f-5caad237",
+      "site": "www.llnl.gov",
+      "persona": "keyboard-only",
+      "rank": "bec14a2993be0246edd303a32548ae38678a3dd6718703588180465bb3f24ac3",
+      "candidateFile": "proof/heldout-v5/local/v5-95d2f5ed269f-5caad237/attempt-1/candidate.json",
+      "candidateSha256": "1b24b86e6bb1bd5ab2e7437a920b5640a446b2cbae33b30a18ebd362b4479be8",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-95d2f5ed269f-5caad237/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-95d2f5ed269f-5caad237/attempt-1/after.json"
+    },
+    {
+      "id": "v5-e7b2d4f06605-b7cbfb6a",
+      "site": "www.tribuneindia.com",
+      "persona": "keyboard-only",
+      "rank": "bf289fbdaf2ffce6bb48a2e5b5e47793b566b89caebef520213d125748429a0f",
+      "candidateFile": "proof/heldout-v5/local/v5-e7b2d4f06605-b7cbfb6a/attempt-2/candidate.json",
+      "candidateSha256": "06e467d68c802a26117fdc326482bf905d238e0493f235a11d1e12dd0d6fdfc1",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-e7b2d4f06605-b7cbfb6a/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-e7b2d4f06605-b7cbfb6a/attempt-2/after.json"
+    },
+    {
+      "id": "v5-29340f94955a-53fc1f7c",
+      "site": "www.evrensel.net",
+      "persona": "keyboard-only",
+      "rank": "c4b0a4660ea07b19a5e336fbb039178dd3f2579ef1611a083377d2d58110cd51",
+      "candidateFile": "proof/heldout-v5/local/v5-29340f94955a-53fc1f7c/attempt-1/candidate.json",
+      "candidateSha256": "728d3d80af83488498e16977a0477a29961b91d43cd8b25654fe9e4106ff4418",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-29340f94955a-53fc1f7c/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-29340f94955a-53fc1f7c/attempt-1/after.json"
+    },
+    {
+      "id": "v5-77f6ea3ec90a8e403cab",
+      "site": "nj.gov",
+      "persona": "screen-reader-view",
+      "rank": "c7587282f04558fb90ed4219c4fe3e97a29002b4f1672c7e3d1b379067509e5a",
+      "candidateFile": "proof/heldout-v5/local/v5-77f6ea3ec90a8e403cab/attempt-1/candidate.json",
+      "candidateSha256": "ef07c1b6bb42bf310c4bc81cb52ac20bbb50ac164607d867a7ea3826cc088f88",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-77f6ea3ec90a8e403cab/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-77f6ea3ec90a8e403cab/attempt-1/after.json"
+    },
+    {
+      "id": "v5-279126abe75cf5fe4e61",
+      "site": "www.automox.com",
+      "persona": "low-vision",
+      "rank": "ca81193595e5866d5cec31bc2d505ddfefb6cc059d4ca044f96004643d4f9bbe",
+      "candidateFile": "proof/heldout-v5/local/v5-279126abe75cf5fe4e61/attempt-1/candidate.json",
+      "candidateSha256": "5f3f04b1926b499eacde94ea31928d7a3d37d2884a450fc7145ccc96813fed92",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-279126abe75cf5fe4e61/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-279126abe75cf5fe4e61/attempt-1/after.json"
+    },
+    {
+      "id": "v5-6af2720aeb97-5ddb9105",
+      "site": "www.boerse-online.de",
+      "persona": "keyboard-only",
+      "rank": "ccdf330ece4739e8ac49c67ae7c2ae52724ad39f81180d5f9615b127c5d1562b",
+      "candidateFile": "proof/heldout-v5/local/v5-6af2720aeb97-5ddb9105/attempt-1/candidate.json",
+      "candidateSha256": "7e610b0bc030cbb35829483f31c3dac8be7fe1191763fe28c1ebfc6d2763cd9a",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-6af2720aeb97-5ddb9105/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-6af2720aeb97-5ddb9105/attempt-1/after.json"
+    },
+    {
+      "id": "v5-ca3798b3b980799923de",
+      "site": "futuresouls.com",
+      "persona": "low-vision",
+      "rank": "d1e7205d0a2504072e3665f36e259a412f9c5091d964c6d8f529dd1607b84a1c",
+      "candidateFile": "proof/heldout-v5/local/v5-ca3798b3b980799923de/attempt-1/candidate.json",
+      "candidateSha256": "40c68853019464b8a114d90ac9af26ef7a96db1fc3c983da8981edd02aa32434",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-ca3798b3b980799923de/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-ca3798b3b980799923de/attempt-1/after.json"
+    },
+    {
+      "id": "v5-e2a9611c7721-9325e614",
+      "site": "feeder.co",
+      "persona": "keyboard-only",
+      "rank": "d635408cc6008da5eb893ff80a75ff48387bb42e931f48420e98e935d0181022",
+      "candidateFile": "proof/heldout-v5/local/v5-e2a9611c7721-9325e614/attempt-2/candidate.json",
+      "candidateSha256": "5794cc5e38caca9231ba21393ea487ad9bf3b5718b355642fcf193acfa651260",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-e2a9611c7721-9325e614/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-e2a9611c7721-9325e614/attempt-2/after.json"
+    },
+    {
+      "id": "v5-9bd39ced7538954cd6f4",
+      "site": "www.talabat.com",
+      "persona": "screen-reader-view",
+      "rank": "d83f68a6f529c13be84084542a54a85ff96cfe11575c884045a51434fdcb082c",
+      "candidateFile": "proof/heldout-v5/local/v5-9bd39ced7538954cd6f4/attempt-1/candidate.json",
+      "candidateSha256": "d2dbae8099c3e4dfcba350c53cc6ee87331a21f66e0cf521e3a92026c85dd6dc",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-9bd39ced7538954cd6f4/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-9bd39ced7538954cd6f4/attempt-1/after.json"
+    },
+    {
+      "id": "v5-94c61e4b9841d585b2d7",
+      "site": "rufus.ie",
+      "persona": "low-vision",
+      "rank": "d848a4840a8a116b13a24e4f54d35a83c0f99e314e1618ad406459dc732fd89a",
+      "candidateFile": "proof/heldout-v5/local/v5-94c61e4b9841d585b2d7/attempt-1/candidate.json",
+      "candidateSha256": "cceb51fa2726a6f8f27f4b9436c29521fcc09bfe9ca2996f44757318ceb381f1",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-94c61e4b9841d585b2d7/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-94c61e4b9841d585b2d7/attempt-1/after.json"
+    },
+    {
+      "id": "v5-4470816c71467e0fa6bc",
+      "site": "www.magna.com",
+      "persona": "low-vision",
+      "rank": "d8d93f654f9fdd6aaded476b9af52af03905b4e3a83919a65a0d26320e61032c",
+      "candidateFile": "proof/heldout-v5/local/v5-4470816c71467e0fa6bc/attempt-1/candidate.json",
+      "candidateSha256": "3994b6e3a2ed84a1a9698c41e3241ee3794c954a4d019157aef7c87a092bbc0b",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-4470816c71467e0fa6bc/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-4470816c71467e0fa6bc/attempt-1/after.json"
+    },
+    {
+      "id": "v5-a9df85261cf0d47ce083",
+      "site": "webhook.site",
+      "persona": "screen-reader-view",
+      "rank": "dada3a95926ce504a9fcb4a29e614c0c3e8fe9418eed8155e6875b4cbb968106",
+      "candidateFile": "proof/heldout-v5/local/v5-a9df85261cf0d47ce083/attempt-1/candidate.json",
+      "candidateSha256": "107720fcce44783a2ac14068ac320a7c486ee81dcd4fe417575ff79844758822",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-a9df85261cf0d47ce083/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-a9df85261cf0d47ce083/attempt-1/after.json"
+    },
+    {
+      "id": "v5-777798f4cbcca82f9a6a",
+      "site": "kktlab.ru",
+      "persona": "low-vision",
+      "rank": "db7bb5631a6ed78df28042d34deae3afd1e53e9afa54bea970504fcc34ad1d98",
+      "candidateFile": "proof/heldout-v5/local/v5-777798f4cbcca82f9a6a/attempt-1/candidate.json",
+      "candidateSha256": "917acfe283f10718841f2a65f4e7dc38fd6a13eed9593448684daf038391cfd2",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-777798f4cbcca82f9a6a/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-777798f4cbcca82f9a6a/attempt-1/after.json"
+    },
+    {
+      "id": "v5-7b267457c921bdee8928",
+      "site": "www.nelomanga.net",
+      "persona": "screen-reader-view",
+      "rank": "dd6e71c5c77f7aee6f3a40474d8ebe4f9d112b08aa4a43c00c648bce5271e8c7",
+      "candidateFile": "proof/heldout-v5/local/v5-7b267457c921bdee8928/attempt-1/candidate.json",
+      "candidateSha256": "453342e456f85441d9ad33b0d0f08127294d2a02e1546562333d7e6f9ed81995",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-7b267457c921bdee8928/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-7b267457c921bdee8928/attempt-1/after.json"
+    },
+    {
+      "id": "v5-594d359c836ad0a90aa8",
+      "site": "www.swtor.com",
+      "persona": "low-vision",
+      "rank": "dd762d302edcb99c66237dfb74c627376a55a83d1c1285c56169d4700fc5a22a",
+      "candidateFile": "proof/heldout-v5/local/v5-594d359c836ad0a90aa8/attempt-3/candidate.json",
+      "candidateSha256": "e28e283eeb0de180c16c992185436d0ecb7dfe55ab5cb79156aa8ed2e9b32e3d",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-594d359c836ad0a90aa8/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-594d359c836ad0a90aa8/attempt-3/after.json"
+    },
+    {
+      "id": "v5-d7d578dc51d1ba895c9a",
+      "site": "stardust-tv.com",
+      "persona": "low-vision",
+      "rank": "e7f094b5ed8db3515c7376316844d927cdfc2d6db857e8e507574aec13b1a8e5",
+      "candidateFile": "proof/heldout-v5/local/v5-d7d578dc51d1ba895c9a/attempt-1/candidate.json",
+      "candidateSha256": "e2896a63fd214b39fb2b9d434e785c02b3462ba6a85b5856644372c295b3cd35",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-d7d578dc51d1ba895c9a/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-d7d578dc51d1ba895c9a/attempt-1/after.json"
+    },
+    {
+      "id": "v5-5c4180c90d404bc4bd14",
+      "site": "www.indriya.com",
+      "persona": "screen-reader-view",
+      "rank": "eb2795083de218000b6bb7401ccb2f15e5e8be24a0b287a7b9627ca0a08de150",
+      "candidateFile": "proof/heldout-v5/local/v5-5c4180c90d404bc4bd14/attempt-1/candidate.json",
+      "candidateSha256": "ea355bcd17a4083997b3d2d77d218ba75d5689569e22d9cd09932700f857d4c0",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-5c4180c90d404bc4bd14/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-5c4180c90d404bc4bd14/attempt-1/after.json"
+    },
+    {
+      "id": "v5-7b801b9b8f66-2ef1d4b9",
+      "site": "www.aeserver.com",
+      "persona": "keyboard-only",
+      "rank": "edfcf65f67a728dbdf0f1c7674257145ac7373732b23ae2f1e0573abb0d803be",
+      "candidateFile": "proof/heldout-v5/local/v5-7b801b9b8f66-2ef1d4b9/attempt-1/candidate.json",
+      "candidateSha256": "134f7516ecd46728634357a3aaa044c7ccf005edecafc5b9b9e8cc5ad5fb96e8",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-7b801b9b8f66-2ef1d4b9/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-7b801b9b8f66-2ef1d4b9/attempt-1/after.json"
+    },
+    {
+      "id": "v5-439db0d7b7aec279133a",
+      "site": "gamekillerapp.com",
+      "persona": "screen-reader-view",
+      "rank": "f4ca089c2db5760d2a9845313cc3d5a8cc086bd9ec01016dc1eb04314ba9aea1",
+      "candidateFile": "proof/heldout-v5/local/v5-439db0d7b7aec279133a/attempt-1/candidate.json",
+      "candidateSha256": "04cf018553f66cdc07767b836c3fd59f1c3a14994f8e28a9f073bbd1de59a728",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-439db0d7b7aec279133a/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-439db0d7b7aec279133a/attempt-1/after.json"
+    },
+    {
+      "id": "v5-128f06b2ae3738c845e6",
+      "site": "www.etnews.com",
+      "persona": "low-vision",
+      "rank": "f6044c3718acf16848a051fe2711d2ab1500ca48c2e2e873dfb24527d0570d0f",
+      "candidateFile": "proof/heldout-v5/local/v5-128f06b2ae3738c845e6/attempt-1/candidate.json",
+      "candidateSha256": "969f795aa110d9cdc9491fb82aa85bbe5c096a86098b434887e46cc27075b235",
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "sourceLocalRun": "proof/heldout-v5/local/v5-128f06b2ae3738c845e6/before.json",
+      "sourceLocalAfter": "proof/heldout-v5/local/v5-128f06b2ae3738c845e6/attempt-1/after.json"
+    }
+  ]
+}
