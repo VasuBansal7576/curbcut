@@ -19,7 +19,7 @@ The render reads the local, Kane and release counts from the ledgers and checks 
 
 The [plate index](film/plates/index.json) identifies the source file, screenshot member and step for Kane evidence. The Munich baseline pack records the unsuccessful search at the top of Reading view. The paired close-ups show the exact carousel selector in fresh installed-extension captures. The word outlines use Chromium text ranges, and the patched Kane outline follows the clicked row’s recorded rectangle. [Munich evidence](../evidence/v6-5193be8805ece27f858e/report.md)
 
-The ExtremeTerrain meter uses two fresh installed-extension captures. The “Details” link measured 4.386958:1 before and 4.501341:1 after. Both values round to two decimals in the film. This is local contrast proof. The Meridiano plates come directly from the original live-naming run. [Contrast measurement](../proof/heldout-v6/measurements/v6-035402528fb5fd67e4c6.json) · [Meridiano evidence](../proof/jev/live-naming-demo/)
+The ExtremeTerrain meter uses two fresh installed-extension captures. The “Details” link measured 4.386958:1 before and 4.501341:1 after. Both values round to two decimals in the film. This is local contrast proof. The Meridiano close-up re-typesets seven adjacent rows from the recorded Reading view. The two target strings and their model confidence values (92% for Menú and 100% for Buscar) come from the saved capture. [Contrast measurement](../proof/heldout-v6/measurements/v6-035402528fb5fd67e4c6.json) · [Meridiano evidence](../proof/jev/live-naming-demo/)
 
 The owner scene shows the supplied 2× popup captures and a typeset copy of the Markdown produced by the extension’s report generator for Mass.edu. The retirement scene returns to the shopping case. [Extension screenshots](ui/) · [Report generator](../extension/lib/report.js)
 
@@ -55,17 +55,18 @@ node launch/scripts/render.mjs verify
 
 Kokoro uses af_heart at 1.04×. Both spoken instances of “live” use /laɪv/. Jev uses /dʒɛv/. “Menú” and “Buscar” appear as original on-screen labels. The 88 BPM score ducks beneath speech. The five motion effects are supplied under the [Pixabay Content License](https://pixabay.com/service/license-summary/). [Approved narration](film/narration.json) · [Synthesized phonemes](film/pronunciation.json)
 
-To recapture the new live plates, run the commands below in order. Each live-site capture measures the actual target and checks its outcome. Each browser process closes at the end of its capture. Site changes can affect future captures.
+To rebuild the evidence plates, run the commands below. The live-site captures measure the target in an isolated browser. The Jev script renders the recorded Meridiano rows offline at 3× device scale. Each script closes its browser when finished.
 
 ```sh
 node launch/scripts/capture-contrast.mjs
 node launch/scripts/capture-reader.mjs
 node launch/scripts/capture-report.mjs
+node launch/scripts/jev-plates.mjs
 ```
 
 ## Delivery checks
 
-[Word-to-frame sync](out/sync.json) measures consecutive decoded frames in the event region. [Geometry](out/geometry.json) measures the visible union of real source rectangles after overlays and the maximum source-pixel scale on every product frame. [Delivery verification](out/verification.json) includes format, loudness, speech recognition, frame motion, source-pack identity and decoded-still sharpness. [Midpoint review](out/beats/index.json) identifies one full-resolution decoded image for each beat in both cuts. [Navigation review](out/stills/navigation/README.md) measures lettering at both desktop and phone sizes.
+[Word-to-frame sync](out/sync.json) measures consecutive decoded frames in the event region. [Geometry](out/geometry.json) measures the visible union of real source rectangles after overlays and the maximum source-pixel scale on every product frame. [Delivery verification](out/verification.json) includes format, loudness, speech recognition, frame motion, source-pack identity and decoded-still sharpness. [Midpoint review](out/beats/index.json) identifies one full-resolution decoded image for each beat in both cuts and records the visible letter heights of both button labels at each Jev midpoint. [Navigation review](out/stills/navigation/README.md) measures lettering at both desktop and phone sizes.
 
 | Encoded measurement | Launch film | Teaser |
 |---|---:|---:|
@@ -77,6 +78,6 @@ node launch/scripts/capture-report.mjs
 | True peak | −1.6 dBTP | −2.2 dBTP |
 | Words matched in full-cut Whisper pass | 415/418 | 34/34 |
 
-Whisper recovered every narrated count and both instances of “live.” Its uninterrupted master pass heard “then” for “Step one” and “lock” for “locked.” Rechecking those two encoded scenes separately recovered both phrases. The pronunciation record confirms /laɪv/ in both lines. Speech measured 13.7 dB above the ducked score. [Full transcript](out/transcript.txt) · [Scene rechecks](out/verification.json)
+Whisper recovered every narrated count and both instances of “live.” Its uninterrupted master pass heard “then” for “Step one” and “lock” for “locked.” Rechecking those two encoded scenes separately recovered both phrases. The pronunciation record confirms /laɪv/ in both lines. Speech measured 13.7 dB above the ducked score in the approved mix. The Jev picture revision retains those stem measurements from the identical AAC track. [Full transcript](out/transcript.txt) · [Scene rechecks](out/verification.json)
 
 All 67 beat midpoints were inspected. Across the 15 product scenes, the lowest visible source area was 71.01% and the largest source scale was 1.25×. All 15 Kane stills matched their archived evidence-pack members byte for byte.

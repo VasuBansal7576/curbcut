@@ -12,6 +12,7 @@ const graphics={
   samples:'Random samples',v5:'11 of 20 v5 repairs verified',v6:'7 of 15 v6 repairs verified',limits:'Unverified outcomes',
   inventory:'105 active fixes',shipped:'61 verified by Kane'
 }
+const jevRegions={pair:[1708,450,142,48],labels:[300,440,305,170],precision:[1244,718,380,112]}
 const clean=s=>s.toLowerCase().replace(/^[^a-z0-9]+|[^a-z0-9]+$/g,'')
 const beats=[],cues=[],rows=[]
 for(const [cut,shots] of Object.entries(cuts)){
@@ -33,7 +34,7 @@ for(const [cut,shots] of Object.entries(cuts)){
       const product=states[state]
       const region=cut==='teaser'?(state==='logo'?[60,160,730,535]:[1370,834,490,110]):
         state==='logo'?[56,160,780,540]:product?[140,24,385,51]:[84,300,580,220]
-      const spec=[product?.headline??graphics[state],region]
+      const spec=[product?.headline??graphics[state],shot.id==='jev'?(jevRegions[state]??region):region]
       const beat={cut,scene:shot.id,word,state,event:spec[0],region:spec[1],local:words[index][1],wordStart:+(shot.frame/30+words[index][1]).toFixed(6)}
       if(still[shot.id]===state)beat.still=shot.id
       beats.push(beat);addSources(state)
@@ -64,5 +65,5 @@ for(const cut of ['master','teaser']){
 }
 sheet+='## Word-linked picture changes\n\n| Cut | Scene | Spoken word | Onset | Picture |\n|---|---|---|---:|---|\n'
 for(const b of beats)sheet+=`| ${b.cut} | ${b.scene} | ${b.word} | ${time(b.wordStart)} | ${b.event} |\n`
-sheet+='\nThe Munich baseline Kane pack records an unsuccessful search at the top of Reading view. The close-up uses a separate Chromium capture of the selector in the local study. The patched Kane outline uses the clicked row rectangle stored in step 4. The Jev close-up uses the two rows visible in the Meridiano capture. The Mass.edu insets come from the original Kane packs. ExtremeTerrain uses the measured foreground and background in each installed-extension capture.\n'
+sheet+='\nThe Munich baseline Kane pack records an unsuccessful search at the top of Reading view. The close-up uses a separate Chromium capture of the selector in the local study. The patched Kane outline uses the clicked row rectangle stored in step 4. The Jev close-up re-typesets seven adjacent Meridiano Reading view rows at 3× device scale. The two button names and their confidence values come from the recorded run. The Mass.edu insets come from the original Kane packs. ExtremeTerrain uses the measured foreground and background in each installed-extension capture.\n'
 save('shots.md',sheet)

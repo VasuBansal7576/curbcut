@@ -1069,37 +1069,73 @@
     ]
   },
   "jev-off": {
-    "file": "../../../proof/jev/live-naming-demo/before.png",
+    "file": "jev-off.png",
     "source": "proof/jev/live-naming-demo/capture.json",
-    "size": [
-      1920,
-      1080
-    ],
-    "rect": [
-      97,
-      523,
-      462,
-      69
-    ],
+    "screenshot": "proof/jev/live-naming-demo/before.png",
+    "method": "Retypeset seven recorded Reading view rows; the two target strings and model confidence values come from capture.json.",
     "url": "https://meridiano.net/",
-    "label": "LIVE NAMING EXPERIMENT",
+    "size": [
+      2880,
+      1320
+    ],
+    "deviceScaleFactor": 3,
+    "targets": [
+      {
+        "text": "button · (unnamed) · expanded false",
+        "confidence": 0.92,
+        "rect": [
+          114,
+          486,
+          2652,
+          156
+        ]
+      },
+      {
+        "text": "button · (unnamed)",
+        "confidence": 1,
+        "rect": [
+          114,
+          642,
+          2652,
+          156
+        ]
+      }
+    ],
     "study": "proof/jev/live-naming-real-sites.json"
   },
   "jev-on": {
-    "file": "../../../proof/jev/live-naming-demo/after.png",
+    "file": "jev-on.png",
     "source": "proof/jev/live-naming-demo/capture.json",
-    "size": [
-      1920,
-      1080
-    ],
-    "rect": [
-      97,
-      523,
-      462,
-      69
-    ],
+    "screenshot": "proof/jev/live-naming-demo/after.png",
+    "method": "Retypeset seven recorded Reading view rows; the two target strings and model confidence values come from capture.json.",
     "url": "https://meridiano.net/",
-    "label": "LIVE NAMING EXPERIMENT",
+    "size": [
+      2880,
+      1320
+    ],
+    "deviceScaleFactor": 3,
+    "targets": [
+      {
+        "text": "button · Menú · expanded false",
+        "confidence": 0.92,
+        "rect": [
+          114,
+          486,
+          2652,
+          156
+        ]
+      },
+      {
+        "text": "button · Buscar",
+        "confidence": 1,
+        "rect": [
+          114,
+          642,
+          2652,
+          156
+        ]
+      }
+    ],
     "study": "proof/jev/live-naming-real-sites.json"
   },
   "popup-multiple-fixes": {

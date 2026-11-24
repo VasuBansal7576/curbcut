@@ -108,6 +108,32 @@ function ownerPage(s,assets,t,age){
     keyline([x+rectSource[0]*z,y+rectSource[1]*z,Math.min(rectSource[2],1680)*z,rectSource[3]*z],age)
   }
 }
+function jevPage(shot,s,a,beat,t,study){
+  const namesAt=shot.cues[0].words.find(([word])=>word==='names')[1]
+  const z=(2/3)*(1+.037*t/(shot.frames/30)+.026*smooth((t-namesAt)/1.2))
+  const c={x:-(a.img.width*z-W)*.22,y:pageTop-(a.img.height*z-(pageBottom-pageTop))*.44,z}
+  ctx.drawImage(a.img,c.x,c.y,a.img.width*z,a.img.height*z)
+  const named=s.asset==='jev-on'
+  for(const target of a.targets){
+    const [x,y,w,h]=project(target.rect,c)
+    const accent=named?yellow:red
+    rect(x-17,y+19,7,h-38,accent);cover(x-17,y+19,7,h-38)
+    if(beat?.state==='pair'||named){
+      const label=named?Math.round(target.confidence*100)+'% CONFIDENCE':'NO NAME'
+      face(28,'Mono',600)
+      const width=ctx.measureText(label).width+36,left=Math.min(W-56,x+w)-width,top=y+(h-48)/2
+      rect(left,top,width,48,accent);cover(left,top,width,48)
+      mono(label,left+18,top+34,28,ink)
+    }
+  }
+  if(s.precision){
+    const [correct,total]=study.names,x=1230,y=683,w=620,h=211
+    rect(x,y,w,h,ink);cover(x,y,w,h)
+    mono('EXPERIMENTAL  /  REAL SITES',x+24,y+41,25,yellow)
+    print(correct+' of '+total,x+23,y+134,102,white)
+    print('applied names correct',x+26,y+182,36,yellow,'Overpass',600)
+  }
+}
 function footage(shot,s,previous,assets,beat,t,age,scene){
   const a=assets[s.asset]
   if(s.nav){
@@ -115,7 +141,8 @@ function footage(shot,s,previous,assets,beat,t,age,scene){
     if(window.navProof){
       for(const word of [...window.navProof.lettering,...(window.navProof.kane?[window.navProof.kane]:[])])word.region[1]+=83
     }
-  }else if(s.owner)ownerPage(s,assets,t,age)
+  }else if(shot.id==='jev')jevPage(shot,s,a,beat,t,scene.study)
+  else if(s.owner)ownerPage(s,assets,t,age)
   else{
     const target=camera(s,a,shot,t)
     const prior=previous && assets[previous.asset]
@@ -136,28 +163,12 @@ function footage(shot,s,previous,assets,beat,t,age,scene){
         proofStamp(s.fail?'FAIL':'PASS',words[0]+words[2]+13,words[1]+(words[3]-49)/2,s.fail)
       }else keyline(r,age,s.fail)
       if(s.meter)meter(s,assets,age)
-      else if(shot.id==='names'||shot.id==='jev'){
-        if(shot.id==='jev' && s.callout){
-          const x=950,y=352, on=s.asset==='jev-on'
-          for(const [i,label] of (on?['Menú','Buscar']:['(unnamed)','(unnamed)']).entries()){
-            const lineY=r[1]+(i===0?.23:.79)*r[3],top=y+i*94
-            line(r[0]+r[2],lineY,x,top+36,yellow,3)
-            cover(r[0]+r[2],Math.min(lineY,top+36)-2,x-r[0]-r[2],Math.abs(top+36-lineY)+4)
-            rect(x,top,394,75,ink);cover(x,top,394,75)
-            print(label,x+22,top+56,54,on?yellow:white)
-          }
-        }else if(s.callout && !a.words){
+      else if(shot.id==='names'){
+        if(s.callout && !a.words){
           const px=Math.min(1410,Math.max(970,r[0]+Math.min(r[2],815)+75)),py=Math.max(213,Math.min(746,r[1]-33))
           face(56,'Highway');const w=ctx.measureText(s.callout).width+50
           rect(px,py,w,83,ink);cover(px,py,w,83);print(s.callout,px+25,py+61,56,white)
           if(s.pass||s.fail)proofStamp(s.fail?'FAIL':'PASS',px,py+83,s.fail)
-        }
-        if(s.precision){
-          const [correct,total]=scene.study.names
-          rect(1045,348,760,235,ink);cover(1045,348,760,235)
-          mono('EXPERIMENTAL  /  REAL SITES',1073,394,27,yellow)
-          print(correct+' of '+total,1070,496,114,white)
-          print('applied names correct',1075,549,38,yellow,'Overpass',600)
         }
       }else notation(s,r,age)
     }else if(s.fail && beat)proofStamp('FAIL  /  TARGET ABSENT',1084,466,true)
