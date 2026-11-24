@@ -1,6 +1,5 @@
 import path from 'node:path'
 import {setTimeout as delay} from 'node:timers/promises'
-import {stat} from 'node:fs/promises'
 import {jevKey} from '../core/jev.mjs'
 import {chooseInstant,instantPatch,threshold} from '../core/jev-policy.js'
 import {captureInstant} from '../core/jev-capture.mjs'
@@ -87,17 +86,6 @@ function percentiles(values) {
   const sorted=values.filter(Number.isFinite).toSorted((left,right)=>left-right)
   return {n:sorted.length,median:sorted[Math.ceil(sorted.length*.5)-1]??null,p95:sorted[Math.ceil(sorted.length*.95)-1]??null}
 }
-async function baseline(cohort) {
-  const source=await readJSON(path.join(ROOT,'proof',cohort,'local-summary.json'))
-  const elapsed=[]
-  for(const item of source.results) {
-    if(!item.phases?.length) continue
-    const files=item.phases.map(phase=>phase.file).filter(Boolean).map(file=>path.join(ROOT,file))
-    const times=(await Promise.all(files.map(file=>stat(file).catch(()=>null)))).filter(Boolean).map(info=>info.mtimeMs)
-    if(times.length>=2 && Math.max(...times)-Math.min(...times)>2000) elapsed.push(Math.round(Math.max(...times)-Math.min(...times)))
-  }
-  return {fixed:source.fixed,total:source.total,wallMs:source.wallMs??null,usableFilesystemTimings:elapsed.length?percentiles(elapsed):null}
-}
 function summary(rows) {
   const verified=rows.filter(row=>row.status==='instant-fixed')
   const validDecisions=rows.filter(row=>row.patch)
@@ -125,7 +113,7 @@ const result={version:1,runner:'playwright',startedAt:instant(),threshold,cohort
 for(const cohort of cohorts) {
   const {tasks}=await readJSON(path.join(ROOT,'proof',cohort,'registration.json'))
   const file=path.join(root,cohort+'-replay.json')
-  const prior=limit===Infinity?await readJSON(file).catch(error=>{if(error.code!=='ENOENT')throw error}):null
+  const prior=limit===Infinity && !process.argv.includes('--fresh')?await readJSON(file).catch(error=>{if(error.code!=='ENOENT')throw error}):null
   if(prior && prior.threshold!==threshold) throw new Error('Resume requires the same confidence threshold.')
   const rows=prior?.rows??[]
   const active=new Set()
@@ -151,7 +139,7 @@ for(const cohort of cohorts) {
     }
   }
   await Promise.all(Array.from({length:5},worker))
-  result.cohorts[cohort]={...summary(rows),registered:tasks.length,baseline:await baseline(cohort),
+  result.cohorts[cohort]={...summary(rows),registered:tasks.length,
     ...(limit===Infinity?{replay:'proof/jev/'+cohort+'-replay.json'}:{rows})}
   if(limit===Infinity) await saveJSON(path.join(root,cohort+'-summary.json'),result.cohorts[cohort])
 }

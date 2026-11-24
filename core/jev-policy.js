@@ -86,6 +86,10 @@ export function instantPatch(url,decision,observedTask) {
   const page=new URL(url)
   const {family,rules,label}=decision
   const naming=['addLabel','setAltText'].includes(family)
+  const objective=observedTask?{}:naming?{requiredName:rules[0].value}:
+    family==='reflow' && label.length>=8?{
+      probe:{action:'read'},outcomeChecks:[{selector:rules[0].selector,kind:'contains',equals:label},{selector:rules[0].selector,kind:'fits-width'}]
+    }:{}
   const persona=naming?'screen-reader-view':family==='reflow'?'low-vision':'keyboard-only'
   const task=naming?'Find the '+label+' element in the reading view.':
     family==='reflow'?'Read the content beginning “'+label+'” without horizontal scrolling.':
@@ -96,6 +100,6 @@ export function instantPatch(url,decision,observedTask) {
     family==='makeFocusable'?'Locate the '+label+' control with the pointer without activating it.':
       'Hover over the '+label+' menu and check that the submenu appears.'
   return {id:'instant-'+crypto.randomUUID(),url:page.origin+page.pathname,persona,task,controlTask,
-    observedSelector:rules[0].selector,...observedTask,site:page.hostname,match:page.origin+page.pathname,
+    observedSelector:rules[0].selector,...objective,...observedTask,site:page.hostname,match:page.origin+page.pathname,
     barrier:'Jev suggested '+family+' for '+label+'.',rules,status:'candidate',evidence:{},history:[]}
 }

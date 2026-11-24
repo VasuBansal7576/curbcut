@@ -10,7 +10,9 @@ const read=(filename,defaultValue)=>readJSON(path.join(folder,filename)).catch(e
 const percentiles=values=>{
   const sorted=values.filter(Number.isFinite).toSorted((a,b)=>a-b)
   const quantile=p=>sorted[Math.ceil(p*sorted.length)-1]??null
-  return {count:sorted.length,median:quantile(.5),p95:quantile(.95)}
+  const center=Math.floor(sorted.length/2)
+  const median=sorted.length%2?sorted[center]:sorted.length?(sorted[center-1]+sorted[center])/2:null
+  return {count:sorted.length,median,p95:quantile(.95)}
 }
 const groups={1:'Hover navigation',2:'Disclosures',3:'Tabs and carousels',4:'Modal dialogs',5:'Custom listboxes',6:'Other journeys',
   reflow:'Single-control reflow','single-control':'Other single-control tasks',unclassified:'Unclassified'}

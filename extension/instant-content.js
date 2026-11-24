@@ -43,6 +43,28 @@
     return true;
   }
 
+  function menuObjective(patch) {
+    const rule = patch.rules[0];
+    if (!["mirrorHoverToFocus", "mirrorHoverEventToFocus"].includes(rule.action)) return {};
+    const owner = document.querySelector(rule.selector);
+    const controls = [...owner.querySelectorAll("a[href],button")];
+    const trigger = controls.find(node => node.checkVisibility({ visibilityProperty: true }) && node.tabIndex >= 0);
+    const item = controls.find(node => node !== trigger && !node.checkVisibility({ visibilityProperty: true }));
+    if (!trigger || !item) return {};
+    const opener = CurbCut.exactSelector(trigger);
+    const target = CurbCut.exactSelector(item);
+    if (document.querySelectorAll(opener).length !== 1 || document.querySelectorAll(target).length !== 1) return {};
+    return {
+      observedSelector: opener,
+      barrierClass: 1,
+      journey: [
+        { selector: opener, action: "focus", pointer: { action: "hover" } },
+        { selector: target, action: "observe" },
+      ],
+      outcomeChecks: [{ selector: target, kind: "visible" }],
+    };
+  }
+
   function navigate() {
     captured = null;
     if (applied?.url !== location.href) release();
@@ -90,6 +112,7 @@
       }
       const matches = new Set();
       try {
+        const objective = menuObjective(patch);
         const cleanup = CurbCut.apply(patch, index => matches.add(index));
         if (matches.size !== patch.rules.length) {
           cleanup();
@@ -100,7 +123,7 @@
         applied = { url: location.href, cleanup };
         captured.applied = true;
         show("Fixed for you · unverified", true);
-        respond({ ok: true });
+        respond({ ok: true, objective });
       } catch { respond({ ok: false }); }
     }
     if (message.type === "INSTANT_FINISH") {

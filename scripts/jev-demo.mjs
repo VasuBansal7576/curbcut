@@ -23,9 +23,10 @@ const size={width:1920,height:1080}
 const server=await serve().catch(error=>{if(error.code!=='EADDRINUSE')throw error})
 const record=!process.argv.includes('--probe')
 let context,video,recording
+const watchdog=setTimeout(()=>{void context?.close()},45000).unref()
 async function tabTo(page,selector,limit=45) {
   for(let attempt=0;attempt<limit;attempt++) {
-    if(await page.locator(selector).evaluate(node=>document.activeElement===node).catch(()=>false)) return
+    if(await page.locator(selector).evaluate(node=>document.activeElement===node,null,{timeout:700}).catch(()=>false)) return
     await page.keyboard.press('Tab')
   }
   throw new Error('Tab traversal did not reach '+selector)
@@ -45,8 +46,10 @@ try {
   const link=task.journey.at(-1).selector
   const outcome=task.outcomeChecks.find(check=>check.kind==='url-path').equals
   await page.locator(opener).waitFor({timeout:6000})
+  console.log('Public page and menu opener loaded.')
   await page.bringToFront()
   await tabTo(page,opener)
+  console.log('Reached the menu opener by Tab.')
   await delay(850)
   if(await page.locator(link).isVisible()) throw new Error('The keyboard already opened the submenu.')
   if(!record) {
@@ -75,6 +78,7 @@ try {
     })
     const start=performance.now()
     await page.keyboard.press('Alt+Shift+KeyF')
+    console.log('Pressed Alt+Shift+F.')
     await page.locator('[data-curbcut-instant]').getByRole('button',{name:'Undo'}).waitFor({timeout:10000})
     const latencyMs=await page.evaluate(()=>window.__recordedInstantLatency)??Math.round(performance.now()-start)
     if(!await page.locator(link).isVisible()) throw new Error('The badge appeared but the submenu stayed hidden.')
@@ -97,6 +101,7 @@ try {
     console.log('Recorded '+recording+' ('+latencyMs+' ms)')
   }
 } finally {
+  clearTimeout(watchdog)
   await context?.close()
   await rm(profile,{recursive:true,force:true})
   server?.close()

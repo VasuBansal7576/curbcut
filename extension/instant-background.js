@@ -16,7 +16,7 @@ async function instantPost(path, payload) {
     body: JSON.stringify(payload),
     signal: AbortSignal.timeout(10000),
   });
-  if (!response.ok) throw new Error("Local bridge returned HTTP " + response.status + ".");
+  if (!response.ok) throw Object.assign(new Error("Local bridge request failed."), { status: response.status });
   return response.json();
 }
 
@@ -103,10 +103,10 @@ function instantFix(tabId) {
       const applied = await send({ type: "INSTANT_APPLY", token: captured.token, patch });
       if (!applied?.ok) return { ok: false, reason: "target-changed" };
       const endToEndMs = Math.round(performance.now() - start);
-      await queueInstant(patch, decision);
+      await queueInstant({ ...patch, ...applied.objective }, decision);
       return { ok: true, endToEndMs, providerMs: decision.providerMs, confidence: decision.confidence, family: decision.family };
-    } catch {
-      return { ok: false, reason: phase };
+    } catch (error) {
+      return { ok: false, reason: phase, ...(Number.isInteger(error.status) ? { status: error.status } : {}) };
     } finally {
       if (captured?.token) await send({ type: "INSTANT_FINISH", token: captured.token }).catch(() => {});
     }
