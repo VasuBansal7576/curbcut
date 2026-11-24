@@ -255,6 +255,9 @@ async function checkLane(task,persona,patch=null,{requireMatch=false,capture=fal
     if(!await target.isVisible()) return {status:persona==='keyboard-only'?'fail':'inconclusive',
       reason:'The unique target was not visible.',...(capture?{snapshot:await captureSnapshot(initial,selector)}:{})}
     const {action,value,role}=task.probe
+    if(action==='click' && !fixtureURL(new URL(task.url)) && !await safeJourneyTarget(target,task)) {
+      return {status:'blocked',reason:'The activation leaves the public, read-only interaction.'}
+    }
     const scrollKeys=[]
     if(attachedBrowser && action==='read') {
       let reached=false

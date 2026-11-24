@@ -113,6 +113,9 @@ export async function session(task,persona,patch,output,{local=false,gate=false,
       report('document')
       const quote=task.probe?.action==='read' && task.outcomeChecks?.find(check=>check.kind==='contains' && check.selector===task.observedSelector)?.equals
       if(topLevel && quote) CurbCut.observePassage(task.observedSelector,quote,report)
+      if(topLevel && task.probe && !fixture) {
+        window.addEventListener('submit',event=>{event.preventDefault();event.stopImmediatePropagation()},true)
+      }
       if(topLevel && task.journey) {
         if(!fixture) {
           window.addEventListener('submit',event=>{event.preventDefault();event.stopImmediatePropagation()},true)
