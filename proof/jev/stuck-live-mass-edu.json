@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-24T14:57:31.939Z",
+  "checkedAt": "2026-11-24T19:07:43.184Z",
   "url": "https://www.mass.edu/",
   "runner": "Playwright headless Chromium with installed Curb Cut extension",
   "activeRepairs": 0,
@@ -7,7 +7,7 @@
     "capture": {
       "ok": true
     },
-    "instantPrivacy": false,
+    "instantPrivacy": true,
     "populatedVisibleFields": [
       "email"
     ]
@@ -212,6 +212,78 @@
     "destinationVisible": false
   },
   "pointerVisible": true,
-  "verdicts": [],
+  "verdicts": [
+    {
+      "trace": [
+        {
+          "key": "Tab",
+          "focus": 0,
+          "role": "link",
+          "visible": false,
+          "named": false,
+          "gapMs": null,
+          "effect": "focus-change",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 1,
+          "role": "link",
+          "visible": true,
+          "named": true,
+          "gapMs": 200,
+          "effect": "focus-change",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 2,
+          "role": "button",
+          "visible": true,
+          "named": false,
+          "gapMs": 200,
+          "effect": "focus-change",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 3,
+          "role": "button",
+          "visible": true,
+          "named": false,
+          "gapMs": 200,
+          "effect": "focus-change",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 4,
+          "role": "button",
+          "visible": true,
+          "named": true,
+          "gapMs": 200,
+          "effect": "focus-change",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 5,
+          "role": "link",
+          "visible": true,
+          "named": true,
+          "gapMs": 200,
+          "effect": "focus-change",
+          "revisited": false
+        }
+      ],
+      "provider": {
+        "httpStatus": 200,
+        "probability": 0.1
+      },
+      "result": {
+        "offer": false
+      }
+    }
+  ],
   "offerText": null
 }

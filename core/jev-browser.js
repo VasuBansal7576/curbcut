@@ -97,7 +97,8 @@ export function instantPrivacy() {
   return ![...document.querySelectorAll('input,textarea,[contenteditable=true]')].some(node=>{
     if(!node.getClientRects().length) return false
     if(node.matches('input[type=checkbox],input[type=radio],input[type=range],input[type=button],input[type=submit],input[type=reset],input[type=hidden]')) return false
-    return Boolean(node.isContentEditable ? node.textContent.trim() : node.value)
+    if(node.isContentEditable) return Boolean(node.textContent.trim())
+    return Boolean(node.value) && node.value!==node.defaultValue && node.value!==node.placeholder
   })
 }
 
