@@ -252,7 +252,7 @@ const repo='https://github.com/VasuBansal7576/curbcut'
 const deploy=process.env.CURBCUT_PAGES==='1'
 const html=deploy?result.replace(/(href|src)="\.\.\/([^"]+)"/g,(_,attribute,file)=>{
   if(file==='fixtures/shop/') return 'href="'+repo+'/releases/tag/v1.0"'
-  if(file.endsWith('.mp4')) return attribute+'="'+repo+'/raw/main/'+file+'"'
+  if(/\.mp4(?:[?#]|$)/.test(file)) return attribute+'="'+repo+'/raw/main/'+file+'"'
   const kind=file.endsWith('/')?'tree':'blob'
   return attribute+'="'+repo+'/'+kind+'/main/'+file+'"'
 }).replace('Try the fixture shop ↗','Get the extension'):result

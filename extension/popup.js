@@ -119,7 +119,7 @@ import {createReport} from './lib/report.js';
       }
 
       li.append(top, links);
-      if (!patch.unverified && patch.matchedRules?.length) {
+      if (!patch.unverified && patch.matchedRules?.length && patch.selectorMatches?.every(({ count }) => count > 0)) {
         const report = document.createElement("details");
         const title = document.createElement("summary");
         title.textContent = "Send the fix to the site owner";
