@@ -15,7 +15,7 @@ FPS = 30
 
 
 def music(seconds):
-    beat = 60 / 88
+    beat = .5
     total = round(RATE * seconds)
     bed = np.zeros((total, 2), dtype=np.float32)
     chords = [(62, 65, 69, 72), (58, 65, 69, 72), (60, 64, 67, 71), (57, 64, 67, 72)]
@@ -39,6 +39,15 @@ def music(seconds):
                 detune = 1 + (.0008 if ch else -.0008)
                 tone = np.sin(phase) + .34 * np.sin(2 * phase * detune) + .15 * np.sin(3 * phase)
                 bed[start:start+count, ch] += velocity * tone * envelope * (.85 if n % 2 == ch else .66)
+    for pulse in range(math.ceil(seconds / beat)):
+        start = round(pulse * beat * RATE)
+        count = min(round(.18 * RATE), total - start)
+        if count <= 0:
+            continue
+        local = np.arange(count) / RATE
+        drum = np.sin(2*np.pi*(51*local + 3.4*(1-np.exp(-35*local)))) * np.exp(-22*local)
+        tick = np.sin(2*np.pi*1650*local) * np.exp(-115*local)
+        bed[start:start+count] += (.20 * drum + .055 * tick)[:, None]
     t = np.arange(total) / RATE
     fade = np.minimum(1, t / .13) * np.minimum(1, (seconds - t) / .5)
     return bed * fade[:, None]
@@ -48,16 +57,16 @@ def timeline(name, script):
     scenes = []
     start = 0
     for scene, rows in script.items():
-        pos = .095
+        pos = .052
         cues = []
         for i, row in enumerate(rows):
             end = pos + row["seconds"]
             cues.append(dict(row, start=pos, end=end))
             pos = end + (.075 if i < len(rows) - 1 else .085)
-        minimum = 3.2
-        frames = math.ceil(max(pos, minimum) * FPS)
+        tail = {"title":1.0,"close":2.0,"wait":.9,"scale":.9}.get(scene,.72)
+        frames = math.ceil(max(3.0,end+tail)*2) * 15
         if name == "teaser":
-            frames = {"teaser-before": 160, "teaser-after": 160, "teaser-title": 130}[scene]
+            frames = {"teaser-cold":95,"teaser-title":102,"teaser-menu":102,"teaser-close":151}[scene]
             assert end < frames / FPS
         scenes.append(dict(id=scene, frame=start, frames=frames, cues=cues))
         start += frames
@@ -66,22 +75,16 @@ def timeline(name, script):
 
 def sound_effects(scenes, length):
     folder = LAUNCH / "audio/sfx"
-    cues = {
-        "skip": [("key-press", "tab"), ("impact-bass-1", "skipped")],
-        "title": [("whoosh-short", "curb")], "control": [("pop", "works")],
-        "test": [("impact-bass-1", "fails")], "prove": [("pop", "passes")],
-        "share": [("click-soft", "everyone")], "mass-on": [("key-press", "enter")],
-        "mass-proof": [("impact-bass-1", "failed"), ("pop", "reached")],
-        "worms": [("impact-bass-1", "failed"), ("pop", "passed")],
-        "results": [("pop", "99")], "owner": [("whoosh-short", "retires")],
-        "close": [("whoosh-short", "curb")], "teaser-title": [("whoosh-short", "curb")],
-        "teaser-before": [("key-press", "tab")], "teaser-after": [("key-press", "enter")],
-    }
+    cues = json.loads((LAUNCH / "film/cues.json").read_text())
     sounds = {}
     out = np.zeros(length, dtype=np.float32)
     for scene in scenes:
-        words = {word.lower().strip(".,?!"): t for cue in scene["cues"] for word, t in cue["words"]}
-        for sound, at in cues.get(scene["id"], []):
+        words = [(word.lower().strip(".,?!"),t) for cue in scene["cues"] for word,t in cue["words"]]
+        cursor = 0
+        for i,(word,_,sound) in enumerate(cues.get(scene["id"],cues[scene["id"].removeprefix("teaser-")])):
+            j = next(k for k in range(cursor,len(words)) if words[k][0]==word.lower())
+            cursor = j+1
+            at = words[j][1] if i else 0
             if sound not in sounds:
                 data = subprocess.check_output(["ffmpeg", "-loglevel", "error", "-i", folder / (sound + ".mp3"),
                                                 "-ar", str(RATE), "-ac", "1", "-f", "f32le", "-"])
@@ -90,7 +93,6 @@ def sound_effects(scenes, length):
                 data = data[:int(RATE * (.45 if sound.startswith("impact") else .32))].copy()
                 data[-960:] *= np.linspace(1, 0, 960)
                 sounds[sound] = data * (.075 / np.max(abs(data)))
-            at = words[at] if isinstance(at, str) else at
             start = round((scene["frame"]/FPS + at) * RATE)
             samples = sounds[sound][:length-start]
             out[start:start+len(samples)] += samples
@@ -140,19 +142,19 @@ def mix(name, scenes):
 def main():
     lines = json.loads((OUT / "voice.json").read_text())
     engine = timing_model()
-    cuts = json.loads((LAUNCH / "film/word-times.json").read_text())
-    script = {k:v for k,v in lines.items() if not k.startswith("teaser-")}
-    scenes = timeline("master", script)
-    for scene in scenes:
-        for cue in scene["cues"]:
-            cue["words"] = align_line(engine, cue)
-    seconds = mix("master", scenes)
-    for scene in scenes:
-        for cue in scene["cues"]:
-            del cue["seconds"], cue["wav"]
-    cuts["master"] = scenes
-    (LAUNCH / "audio/master.m4a").write_bytes((OUT / "master.m4a").read_bytes())
-    print("master", seconds, flush=True)
+    cuts = {}
+    for cut in ("master","teaser"):
+        scenes = timeline(cut,{k:v for k,v in lines.items() if k.startswith("teaser-") == (cut=="teaser")})
+        for scene in scenes:
+            for cue in scene["cues"]:
+                cue["words"] = align_line(engine, cue)
+        seconds = mix(cut,scenes)
+        for scene in scenes:
+            for cue in scene["cues"]:
+                del cue["seconds"], cue["wav"]
+        cuts[cut] = scenes
+        (LAUNCH / f"audio/{cut}.m4a").write_bytes((OUT / f"{cut}.m4a").read_bytes())
+        print(cut, seconds, flush=True)
     (LAUNCH / "film/word-times.json").write_text(json.dumps(cuts, ensure_ascii=False, indent=2)+"\n")
 
 

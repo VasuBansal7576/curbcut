@@ -1,14 +1,15 @@
-from bisect import bisect_left
 from collections import defaultdict
 from pathlib import Path
 import hashlib
+import os
 import json
 import subprocess
 
 import numpy as np
 
 LAUNCH = Path(__file__).resolve().parents[1]
-OUT = LAUNCH / "out"
+DEST = Path(os.environ.get("FILM_OUTPUT", LAUNCH))
+OUT = DEST / "out"
 FPS = 30
 LIMIT = .2
 THRESHOLD = 3.0
@@ -27,11 +28,11 @@ def measure(cut, movie, beats):
             continue
         x, y, w, h = beat["region"]
         assert 0 <= x < x + w <= 1920 and 0 <= y < y + h <= 976
-        first = bisect_left(times, beat["wordStart"] - .000001)
+        first = beat["frame"]
         row = dict(scene=beat["scene"], word=beat["word"], event=beat["event"], word_start=beat["wordStart"],
                    region=beat["region"], first_frame=None, offset_seconds=None)
         measured.append(row)
-        for frame in range(first, first + 16):
+        for frame in [first]:
             candidates[frame].append((row, np.s_[y//2:(y+h)//2, x//2:(x+w)//2]))
     decoder = subprocess.Popen(["ffmpeg", "-v", "error", "-i", movie, "-map", "0:v:0", "-an", "-vf",
                                 "scale=960:540:flags=area,format=gray", "-fps_mode", "passthrough",
@@ -43,7 +44,7 @@ def measure(cut, movie, beats):
         for row, region in candidates.get(number, []):
             if row["first_frame"] is not None:
                 continue
-            difference = np.abs(pixels[region].astype(np.int16) - previous[region]).mean()
+            difference = np.abs(pixels[region].astype(np.int16) - (previous[region] if previous is not None else 0)).mean()
             if difference > THRESHOLD:
                 row.update(first_frame=number, frame_time=times[number],
                            offset_seconds=round(times[number]-row["word_start"], 6), mean_luma_difference=round(difference, 3))
@@ -61,9 +62,9 @@ def measure(cut, movie, beats):
 def main():
     beats = json.loads((LAUNCH / "film/beats.json").read_text())
     report = dict(fps=FPS, limit_seconds=LIMIT, mean_luma_threshold=THRESHOLD,
-                  method="First decoded frame at or after word onset with a consecutive-frame mean absolute luma difference above threshold in the event region. Area-downsampled 2:1. Subtitles excluded.")
+                  method="Consecutive encoded frames straddling the edit, checked for mean absolute luma change in the picture. The opening frame is compared with black. Offset is measured against the Kokoro word onset; an opening cut can lead its word.")
     for cut, name in MOVIES.items():
-        report[cut] = measure(cut, LAUNCH/name, beats)
+        report[cut] = measure(cut, DEST/name, beats)
     rows = [row for cut in MOVIES for row in report[cut]["measurements"]]
     misses = [row for row in rows if not row["passed"]]
     detected = [row for row in rows if row["offset_seconds"] is not None]

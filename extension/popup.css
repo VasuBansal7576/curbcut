@@ -1,13 +1,8 @@
-@font-face {
-  font-family: "Barlow Condensed";
-  src: url("fonts/BarlowCondensed-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-display: swap;
-}
+@import url("brand.css");
 
 @font-face {
-  font-family: Overpass;
-  src: url("fonts/Overpass.ttf") format("truetype");
+  font-family: "Inter Tight";
+  src: url("fonts/InterTight.ttf") format("truetype");
   font-weight: 100 900;
   font-display: swap;
 }
@@ -20,20 +15,20 @@
 }
 
 :root {
-  color-scheme: dark;
-  --asphalt: #111214;
-  --road: #1b1c1e;
-  --yellow: #ffce1f;
-  --paint: #f4f1ea;
-  --red: #e8372c;
-  --muted: #c2bfb7;
-  --line: #4e4e4d;
-  --control-line: #8a8880;
-  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  color-scheme: light;
+  --paper: var(--brand-text);
+  --panel: color-mix(in srgb, var(--brand-surface) 5%, var(--brand-text));
+  --primary: var(--brand-surface);
+  --foreground: var(--brand-ink);
+  --danger: var(--brand-failure);
+  --muted: color-mix(in srgb, var(--brand-ink) 74%, var(--brand-text));
+  --line: color-mix(in srgb, var(--brand-ink) 23%, var(--brand-text));
+  --control-line: color-mix(in srgb, var(--brand-ink) 54%, var(--brand-text));
+  --display: "Inter Tight", system-ui, sans-serif;
   --mono: "JetBrains Mono", monospace;
-  background: var(--asphalt);
-  color: var(--paint);
-  font: 15px/1.45 Overpass, system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--foreground);
+  font: 15px/1.45 "Inter Tight", system-ui, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -42,7 +37,7 @@ body { margin: 0; }
 .popup { width: min(390px, 100vw); }
 .shell { padding: 20px 22px 8px; }
 h1, h2, p { margin: 0; }
-h1, h2 { font: 800 1.9rem/1 var(--display); }
+h1, h2 { font: 800 1.8rem/1.05 var(--display); letter-spacing: -.04em; }
 p, a, .patch-name, .row-toggle { overflow-wrap: anywhere; }
 
 .brand {
@@ -50,20 +45,20 @@ p, a, .patch-name, .row-toggle { overflow-wrap: anywhere; }
   align-items: center;
   gap: 12px;
   padding-block: 0 18px;
-  border-bottom: 3px solid var(--yellow);
+  border-bottom: 3px solid var(--primary);
 }
 
 .brand h1 {
   font-size: 2.9rem;
-  text-transform: uppercase;
-  line-height: .93;
+  letter-spacing: -.065em;
+  line-height: .98;
 }
 
 .mark {
   width: 38px;
   height: 15px;
   flex: 0 0 auto;
-  background: var(--yellow);
+  background: var(--primary);
   clip-path: polygon(0 0, 37% 0, 66% 71%, 100% 71%, 100% 100%, 61% 100%, 31% 29%, 0 29%);
   forced-color-adjust: none;
 }
@@ -83,7 +78,7 @@ p, a, .patch-name, .row-toggle { overflow-wrap: anywhere; }
   padding: 11px 13px;
   min-height: 65px;
   margin-top: 16px;
-  background: var(--road);
+  background: var(--panel);
   border: 1px solid var(--line);
   cursor: pointer;
 }
@@ -94,10 +89,10 @@ p, a, .patch-name, .row-toggle { overflow-wrap: anywhere; }
   min-width: 3ch;
   font: 700 .8rem/1 var(--mono);
 }
-.master:has(input:checked) .signal { color: var(--yellow); }
-.master:has(input:enabled:not(:checked)) { box-shadow: inset 3px 0 var(--red); }
+.master:has(input:checked) .signal { color: var(--primary); }
+.master:has(input:enabled:not(:checked)) { box-shadow: inset 3px 0 var(--danger); }
 
-input[type="checkbox"] { accent-color: var(--yellow); }
+input[type="checkbox"] { accent-color: var(--primary); }
 input[role="switch"] {
   appearance: none;
   display: grid;
@@ -108,8 +103,8 @@ input[role="switch"] {
   margin: 0;
   padding: 3px;
   border: 1px solid var(--control-line);
-  background: var(--asphalt);
-  color: var(--paint);
+  background: var(--paper);
+  color: var(--foreground);
   cursor: pointer;
 }
 
@@ -122,9 +117,9 @@ input[role="switch"]::before {
 
 input[role="switch"]:checked {
   place-items: center end;
-  border-color: var(--yellow);
-  background: var(--yellow);
-  color: var(--asphalt);
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--paper);
 }
 
 .master input { width: 51px; height: 28px; }
@@ -154,8 +149,8 @@ input:disabled, button:disabled { opacity: .65; cursor: default; }
 .count {
   min-width: 42px;
   padding: 3px 7px;
-  background: var(--paint);
-  color: var(--asphalt);
+  background: var(--foreground);
+  color: var(--paper);
   text-align: center;
   font: 700 1.5rem/1.4 var(--display);
   font-variant-numeric: lining-nums tabular-nums;
@@ -168,13 +163,13 @@ input:disabled, button:disabled { opacity: .65; cursor: default; }
 .persona { font-size: .87rem; color: var(--muted); }
 .badge {
   padding: 2px 5px;
-  border: 1px solid var(--paint);
+  border: 1px solid var(--foreground);
   font: 700 .71rem/1.45 var(--mono);
   text-transform: uppercase;
 }
 
-.badge.verified { background: var(--yellow); color: var(--asphalt); border-color: var(--yellow); }
-.badge.unverified { border-color: var(--red); }
+.badge.verified { background: var(--brand-accent); color: var(--foreground); border-color: var(--foreground); }
+.badge.unverified { border-color: var(--danger); }
 .patch-item details { margin-top: 2px; font-size: .9rem; }
 .patch-item summary { min-height: 24px; }
 .patch-item details:first-of-type, .measurement { margin-top: 6px; }
@@ -212,8 +207,8 @@ input[type="text"], input[type="url"], input[type="password"], select {
   padding: 8px;
   border: 1px solid var(--control-line);
   border-radius: 0;
-  background: var(--road);
-  color: var(--paint);
+  background: var(--panel);
+  color: var(--foreground);
   font: inherit;
   font-weight: 400;
 }
@@ -225,23 +220,23 @@ input::placeholder { color: var(--muted); }
 button {
   padding: 7px 10px;
   min-height: 34px;
-  background: var(--road);
-  color: var(--paint);
+  background: var(--panel);
+  color: var(--foreground);
   border: 1px solid var(--control-line);
   border-radius: 0;
   font: 700 .88rem/1.25 Overpass, system-ui, sans-serif;
   cursor: pointer;
 }
 
-.primary { background: var(--yellow); color: var(--asphalt); border-color: var(--yellow); }
+.primary { background: var(--primary); color: var(--paper); border-color: var(--primary); }
 button:hover:not(:disabled) { text-decoration: underline; }
-a, .text-button { color: var(--paint); text-decoration: underline; text-underline-offset: 3px; }
-a:hover, .text-button:hover { color: var(--yellow); }
+a, .text-button { color: var(--foreground); text-decoration: underline; text-underline-offset: 3px; }
+a:hover, .text-button:hover { color: var(--primary); }
 .measurement { display: inline-block; font-size: .9rem; }
 .text-button { border: 0; background: transparent; padding-inline: 0; }
 
 :where(a, button, input, select, summary):focus-visible {
-  outline: 2px solid var(--yellow);
+  outline: 2px solid var(--primary);
   outline-offset: 3px;
 }
 
@@ -256,7 +251,7 @@ a:hover, .text-button:hover { color: var(--yellow); }
 .status { font-size: .88rem; }
 .status:empty { margin: 0; }
 .status:not(:empty) { padding-top: 6px; }
-.status.is-error { border-inline-start: 3px solid var(--red); margin-block: 5px; padding: 2px 0 2px 8px; }
+.status.is-error { border-inline-start: 3px solid var(--danger); margin-block: 5px; padding: 2px 0 2px 8px; }
 .tools { margin-top: 6px; border-top: 1px solid var(--line); font-size: .9rem; }
 .footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; border-top: 1px solid var(--line); font-size: .88rem; }
 
@@ -264,8 +259,8 @@ a:hover, .text-button:hover { color: var(--yellow); }
 .options-section { display: grid; gap: 13px; margin-top: 22px; }
 .options-copy { display: grid; gap: 12px; color: var(--muted); }
 .options-section + .options-section { border-top: 1px solid var(--line); padding-top: 18px; }
-.options .row-toggle { background: var(--road); border: 1px solid var(--line); padding: 12px; }
-.options .row-toggle strong { display: block; color: var(--paint); }
+.options .row-toggle { background: var(--panel); border: 1px solid var(--line); padding: 12px; }
+.options .row-toggle strong { display: block; color: var(--foreground); }
 .options .row-toggle span { color: var(--muted); }
 .options form { display: grid; justify-items: start; gap: 10px; }
 .options form .field { width: 100%; }

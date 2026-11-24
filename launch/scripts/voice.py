@@ -48,6 +48,7 @@ def main():
     session = rt.InferenceSession(str(MODEL / "kokoro.onnx"), options, providers=["CPUExecutionProvider"])
     kokoro = Kokoro.from_session(session, str(MODEL / "voices.bin"))
     script = json.loads((LAUNCH / "film/narration.json").read_text())
+    script.update(json.loads((LAUNCH / "film/teaser-narration.json").read_text()))
     OUT.mkdir(parents=True, exist_ok=True)
     record = {}
     checks = {}

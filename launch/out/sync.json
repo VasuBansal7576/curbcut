@@ -2,1170 +2,864 @@
   "fps": 30,
   "limit_seconds": 0.2,
   "mean_luma_threshold": 3.0,
-  "method": "First decoded frame at or after word onset with a consecutive-frame mean absolute luma difference above threshold in the event region. Area-downsampled 2:1. Subtitles excluded.",
+  "method": "Consecutive encoded frames straddling the edit, checked for mean absolute luma change in the picture. The opening frame is compared with black. Offset is measured against the Kokoro word onset; an opening cut can lead its word.",
   "master": {
-    "sha256": "b8f6499d488cefaf0b85fbaa4e4707d958e7afc3944a2542974dc90132ee3e96",
-    "frames": 4354,
-    "beats": 60,
-    "passed": 60,
-    "worst_offset_seconds": 0.0323,
+    "sha256": "82a7de1054780409562f3c668fad03c2658558df14b2c8e68748644c687b466f",
+    "frames": 2265,
+    "beats": 39,
+    "passed": 39,
+    "worst_offset_seconds": 0.1673,
     "measurements": [
       {
-        "scene": "shopping",
-        "word": "keyboard",
-        "event": "Keyboard only",
-        "word_start": 1.8053,
+        "scene": "cold",
+        "word": "Press",
+        "event": "key",
+        "word_start": 0.1176,
         "region": [
-          140,
-          24,
-          385,
-          51
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 55,
-        "offset_seconds": 0.028033,
-        "frame_time": 1.833333,
-        "mean_luma_difference": 34.154,
+        "first_frame": 0,
+        "offset_seconds": -0.1176,
+        "frame_time": 0.0,
+        "mean_luma_difference": 121.865,
         "passed": true
       },
       {
-        "scene": "skip",
+        "scene": "cold",
         "word": "Tab",
-        "event": "Tab to the next control",
-        "word_start": 3.7427,
+        "event": "key-hit",
+        "word_start": 0.3926,
         "region": [
-          140,
-          24,
-          385,
-          51
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 113,
-        "offset_seconds": 0.023967,
-        "frame_time": 3.766667,
-        "mean_luma_difference": 67.537,
+        "first_frame": 12,
+        "offset_seconds": 0.0074,
+        "frame_time": 0.4,
+        "mean_luma_difference": 75.708,
         "passed": true
       },
       {
-        "scene": "skip",
-        "word": "skipped",
-        "event": "Add to cart skipped",
-        "word_start": 6.8177,
+        "scene": "cold",
+        "word": "menu",
+        "event": "closed",
+        "word_start": 1.0426,
         "region": [
-          140,
-          24,
-          385,
-          51
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 205,
-        "offset_seconds": 0.015633,
-        "frame_time": 6.833333,
-        "mean_luma_difference": 64.574,
+        "first_frame": 32,
+        "offset_seconds": 0.024067,
+        "frame_time": 1.066667,
+        "mean_luma_difference": 99.673,
         "passed": true
       },
       {
-        "scene": "skip",
-        "word": "can't",
-        "event": "Purchase blocked",
-        "word_start": 7.5573,
+        "scene": "menu",
+        "word": "Turn",
+        "event": "switch-off",
+        "word_start": 3.1247,
         "region": [
-          140,
-          24,
-          385,
-          51
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 227,
-        "offset_seconds": 0.009367,
-        "frame_time": 7.566667,
-        "mean_luma_difference": 67.522,
+        "first_frame": 90,
+        "offset_seconds": -0.1247,
+        "frame_time": 3.0,
+        "mean_luma_difference": 67.846,
         "passed": true
       },
       {
-        "scene": "scale",
-        "word": "2026",
-        "event": "Top million home pages",
-        "word_start": 10.3177,
+        "scene": "menu",
+        "word": "Curb",
+        "event": "switch-on",
+        "word_start": 3.5997,
         "region": [
-          84,
-          300,
-          580,
-          220
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 310,
-        "offset_seconds": 0.015633,
-        "frame_time": 10.333333,
-        "mean_luma_difference": 97.799,
+        "first_frame": 108,
+        "offset_seconds": 0.0003,
+        "frame_time": 3.6,
+        "mean_luma_difference": 7.841,
         "passed": true
       },
       {
-        "scene": "scale",
+        "scene": "menu",
+        "word": "Same",
+        "event": "same-key",
+        "word_start": 5.1883,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 156,
+        "offset_seconds": 0.0117,
+        "frame_time": 5.2,
+        "mean_luma_difference": 33.184,
+        "passed": true
+      },
+      {
+        "scene": "menu",
+        "word": "opens",
+        "event": "opened",
+        "word_start": 6.7883,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 204,
+        "offset_seconds": 0.0117,
+        "frame_time": 6.8,
+        "mean_luma_difference": 71.554,
+        "passed": true
+      },
+      {
+        "scene": "problem",
+        "word": "For",
+        "event": "millions",
+        "word_start": 8.6423,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 255,
+        "offset_seconds": -0.1423,
+        "frame_time": 8.5,
+        "mean_luma_difference": 39.952,
+        "passed": true
+      },
+      {
+        "scene": "problem",
+        "word": "Menus",
+        "event": "mouse",
+        "word_start": 11.0173,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 331,
+        "offset_seconds": 0.016033,
+        "frame_time": 11.033333,
+        "mean_luma_difference": 24.273,
+        "passed": true
+      },
+      {
+        "scene": "problem",
+        "word": "Buttons",
+        "event": "anonymous",
+        "word_start": 13.1673,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 396,
+        "offset_seconds": 0.0327,
+        "frame_time": 13.2,
+        "mean_luma_difference": 29.634,
+        "passed": true
+      },
+      {
+        "scene": "problem",
+        "word": "Text",
+        "event": "faint-word",
+        "word_start": 14.6673,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 441,
+        "offset_seconds": 0.0327,
+        "frame_time": 14.7,
+        "mean_luma_difference": 35.203,
+        "passed": true
+      },
+      {
+        "scene": "problem",
         "word": "95.9",
-        "event": "95.9% with failures",
-        "word_start": 11.6427,
+        "event": "percent",
+        "word_start": 16.0338,
         "region": [
-          84,
-          300,
-          580,
-          220
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 350,
-        "offset_seconds": 0.023967,
-        "frame_time": 11.666667,
-        "mean_luma_difference": 66.633,
+        "first_frame": 482,
+        "offset_seconds": 0.032867,
+        "frame_time": 16.066667,
+        "mean_luma_difference": 37.452,
         "passed": true
       },
       {
-        "scene": "scale",
-        "word": "six",
-        "event": "Six common mistakes",
-        "word_start": 18.9647,
+        "scene": "problem",
+        "word": "top",
+        "event": "population",
+        "word_start": 18.0088,
         "region": [
-          84,
-          300,
-          580,
-          220
+          110,
+          820,
+          1540,
+          104
         ],
-        "first_frame": 569,
-        "offset_seconds": 0.001967,
-        "frame_time": 18.966667,
-        "mean_luma_difference": 84.79,
+        "first_frame": 541,
+        "offset_seconds": 0.024533,
+        "frame_time": 18.033333,
+        "mean_luma_difference": 28.088,
+        "passed": true
+      },
+      {
+        "scene": "wait",
+        "word": "Websites",
+        "event": "years",
+        "word_start": 22.1362,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 660,
+        "offset_seconds": -0.1362,
+        "frame_time": 22.0,
+        "mean_luma_difference": 48.141,
+        "passed": true
+      },
+      {
+        "scene": "wait",
+        "word": "wait",
+        "event": "cant-wait",
+        "word_start": 25.4612,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 764,
+        "offset_seconds": 0.005467,
+        "frame_time": 25.466667,
+        "mean_luma_difference": 44.614,
         "passed": true
       },
       {
         "scene": "title",
-        "word": "Curb Cut",
-        "event": "Cut the curb into a ramp",
-        "word_start": 20.6353,
+        "word": "Curb",
+        "event": "brand",
+        "word_start": 27.621,
         "region": [
-          56,
-          160,
-          780,
-          540
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 620,
-        "offset_seconds": 0.031367,
-        "frame_time": 20.666667,
-        "mean_luma_difference": 85.294,
+        "first_frame": 825,
+        "offset_seconds": -0.121,
+        "frame_time": 27.5,
+        "mean_luma_difference": 43.98,
         "passed": true
       },
       {
-        "scene": "test",
-        "word": "Step one",
-        "event": "Try the keyboard journey",
-        "word_start": 26.818633,
+        "scene": "title",
+        "word": "now",
+        "event": "now",
+        "word_start": 28.646,
         "region": [
-          140,
-          24,
-          385,
-          51
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 805,
-        "offset_seconds": 0.0147,
-        "frame_time": 26.833333,
-        "mean_luma_difference": 105.089,
+        "first_frame": 860,
+        "offset_seconds": 0.020667,
+        "frame_time": 28.666667,
+        "mean_luma_difference": 32.601,
         "passed": true
       },
       {
-        "scene": "test",
+        "scene": "names",
+        "word": "A",
+        "event": "reader-off",
+        "word_start": 31.621,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 945,
+        "offset_seconds": -0.121,
+        "frame_time": 31.5,
+        "mean_luma_difference": 50.328,
+        "passed": true
+      },
+      {
+        "scene": "names",
+        "word": "previous",
+        "event": "reader-on",
+        "word_start": 34.721,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 1042,
+        "offset_seconds": 0.012333,
+        "frame_time": 34.733333,
+        "mean_luma_difference": 7.071,
+        "passed": true
+      },
+      {
+        "scene": "contrast",
+        "word": "Faint",
+        "event": "contrast-off",
+        "word_start": 36.6673,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 1095,
+        "offset_seconds": -0.1673,
+        "frame_time": 36.5,
+        "mean_luma_difference": 61.6,
+        "passed": true
+      },
+      {
+        "scene": "contrast",
+        "word": "readable",
+        "event": "contrast-on",
+        "word_start": 37.5673,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 1128,
+        "offset_seconds": 0.0327,
+        "frame_time": 37.6,
+        "mean_luma_difference": 7.109,
+        "passed": true
+      },
+      {
+        "scene": "proof",
+        "word": "And",
+        "event": "guess",
+        "word_start": 39.642,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 1185,
+        "offset_seconds": -0.142,
+        "frame_time": 39.5,
+        "mean_luma_difference": 24.191,
+        "passed": true
+      },
+      {
+        "scene": "proof",
+        "word": "Kane",
+        "event": "kane",
+        "word_start": 41.692,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 1251,
+        "offset_seconds": 0.008,
+        "frame_time": 41.7,
+        "mean_luma_difference": 12.43,
+        "passed": true
+      },
+      {
+        "scene": "proof",
+        "word": "tries",
+        "event": "replay",
+        "word_start": 43.267,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 1299,
+        "offset_seconds": 0.033,
+        "frame_time": 43.3,
+        "mean_luma_difference": 27.624,
+        "passed": true
+      },
+      {
+        "scene": "proof",
         "word": "fails",
-        "event": "Keyboard test failed",
-        "word_start": 32.818633,
+        "event": "failed",
+        "word_start": 47.117,
         "region": [
-          140,
-          24,
-          385,
-          51
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 985,
-        "offset_seconds": 0.0147,
-        "frame_time": 32.833333,
-        "mean_luma_difference": 78.885,
+        "first_frame": 1414,
+        "offset_seconds": 0.016333,
+        "frame_time": 47.133333,
+        "mean_luma_difference": 11.089,
         "passed": true
       },
       {
-        "scene": "control",
-        "word": "mouse",
-        "event": "Try the pointer",
-        "word_start": 34.626033,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 1039,
-        "offset_seconds": 0.0073,
-        "frame_time": 34.633333,
-        "mean_luma_difference": 73.365,
-        "passed": true
-      },
-      {
-        "scene": "control",
-        "word": "works",
-        "event": "Headphones added",
-        "word_start": 36.126033,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 1084,
-        "offset_seconds": 0.0073,
-        "frame_time": 36.133333,
-        "mean_luma_difference": 77.283,
-        "passed": true
-      },
-      {
-        "scene": "control",
-        "word": "broken",
-        "event": "Keyboard barrier confirmed",
-        "word_start": 37.437633,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 1124,
-        "offset_seconds": 0.029034,
-        "frame_time": 37.466667,
-        "mean_luma_difference": 53.803,
-        "passed": true
-      },
-      {
-        "scene": "rules",
-        "word": "Step two",
-        "event": "Write the repair",
-        "word_start": 39.0853,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 1173,
-        "offset_seconds": 0.0147,
-        "frame_time": 39.1,
-        "mean_luma_difference": 79.172,
-        "passed": true
-      },
-      {
-        "scene": "rules",
-        "word": "rules",
-        "event": "Four declarative rules",
-        "word_start": 42.1603,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 1265,
-        "offset_seconds": 0.006367,
-        "frame_time": 42.166667,
-        "mean_luma_difference": 73.817,
-        "passed": true
-      },
-      {
-        "scene": "prove",
-        "word": "Step three",
-        "event": "Replay with the fix",
-        "word_start": 43.518633,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 1306,
-        "offset_seconds": 0.0147,
-        "frame_time": 43.533333,
-        "mean_luma_difference": 86.914,
-        "passed": true
-      },
-      {
-        "scene": "prove",
+        "scene": "proof",
         "word": "passes",
-        "event": "Keyboard test passed",
-        "word_start": 46.543633,
+        "event": "passed",
+        "word_start": 48.742,
         "region": [
-          140,
-          24,
-          385,
-          51
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 1397,
-        "offset_seconds": 0.023034,
-        "frame_time": 46.566667,
-        "mean_luma_difference": 61.383,
+        "first_frame": 1463,
+        "offset_seconds": 0.024667,
+        "frame_time": 48.766667,
+        "mean_luma_difference": 29.705,
         "passed": true
       },
       {
-        "scene": "prove",
+        "scene": "proof",
+        "word": "recording",
+        "event": "record",
+        "word_start": 49.767,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 1494,
+        "offset_seconds": 0.033,
+        "frame_time": 49.8,
+        "mean_luma_difference": 33.319,
+        "passed": true
+      },
+      {
+        "scene": "scale",
+        "word": "105",
+        "event": "inventory",
+        "word_start": 52.1196,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 1560,
+        "offset_seconds": -0.1196,
+        "frame_time": 52.0,
+        "mean_luma_difference": 53.218,
+        "passed": true
+      },
+      {
+        "scene": "scale",
         "word": "proof",
-        "event": "Recorded replay",
-        "word_start": 48.368633,
+        "event": "popup-proof",
+        "word_start": 55.6446,
         "region": [
-          140,
-          24,
-          385,
-          51
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 1452,
-        "offset_seconds": 0.031367,
-        "frame_time": 48.4,
-        "mean_luma_difference": 49.244,
-        "passed": true
-      },
-      {
-        "scene": "share",
-        "word": "Step four",
-        "event": "Distribute the repair",
-        "word_start": 49.051967,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 1472,
-        "offset_seconds": 0.0147,
-        "frame_time": 49.066667,
-        "mean_luma_difference": 82.7,
-        "passed": true
-      },
-      {
-        "scene": "share",
-        "word": "everyone",
-        "event": "Fixes enabled",
-        "word_start": 52.076967,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 1563,
-        "offset_seconds": 0.023033,
-        "frame_time": 52.1,
-        "mean_luma_difference": 75.834,
-        "passed": true
-      },
-      {
-        "scene": "mass-off",
-        "word": "mass.edu",
-        "event": "Mass.edu",
-        "word_start": 56.1103,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 1684,
-        "offset_seconds": 0.023033,
-        "frame_time": 56.133333,
-        "mean_luma_difference": 83.319,
-        "passed": true
-      },
-      {
-        "scene": "mass-off",
-        "word": "About",
-        "event": "Tab to About.",
-        "word_start": 58.9103,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 1768,
-        "offset_seconds": 0.023033,
-        "frame_time": 58.933333,
-        "mean_luma_difference": 56.952,
-        "passed": true
-      },
-      {
-        "scene": "mass-off",
-        "word": "never",
-        "event": "Menu stays shut",
-        "word_start": 60.0103,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 1801,
-        "offset_seconds": 0.023033,
-        "frame_time": 60.033333,
-        "mean_luma_difference": 77.147,
-        "passed": true
-      },
-      {
-        "scene": "mass-on",
-        "word": "Curb Cut",
-        "event": "Repairs on.",
-        "word_start": 61.287233,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 1839,
-        "offset_seconds": 0.012767,
-        "frame_time": 61.3,
-        "mean_luma_difference": 75.199,
-        "passed": true
-      },
-      {
-        "scene": "mass-on",
-        "word": "open",
-        "event": "Menu open.",
-        "word_start": 62.812233,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 1885,
-        "offset_seconds": 0.0211,
-        "frame_time": 62.833333,
-        "mean_luma_difference": 30.773,
-        "passed": true
-      },
-      {
-        "scene": "mass-on",
-        "word": "menu",
-        "event": "Tab to The DHE.",
-        "word_start": 63.137233,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 1895,
-        "offset_seconds": 0.029434,
-        "frame_time": 63.166667,
-        "mean_luma_difference": 79.403,
-        "passed": true
-      },
-      {
-        "scene": "mass-on",
-        "word": "Enter",
-        "event": "Destination reached",
-        "word_start": 64.012233,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 1921,
-        "offset_seconds": 0.0211,
-        "frame_time": 64.033333,
-        "mean_luma_difference": 88.903,
-        "passed": true
-      },
-      {
-        "scene": "names",
-        "word": "blind",
-        "event": "Find the named button",
-        "word_start": 65.798967,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 1974,
-        "offset_seconds": 0.001033,
-        "frame_time": 65.8,
-        "mean_luma_difference": 75.841,
-        "passed": true
-      },
-      {
-        "scene": "names",
-        "word": "no name",
-        "event": "Accessible name missing",
-        "word_start": 68.648967,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 2060,
-        "offset_seconds": 0.0177,
-        "frame_time": 68.666667,
-        "mean_luma_difference": 67.924,
-        "passed": true
-      },
-      {
-        "scene": "names",
-        "word": "previous slide",
-        "event": "Previous slide",
-        "word_start": 73.905867,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 2218,
-        "offset_seconds": 0.027466,
-        "frame_time": 73.933333,
-        "mean_luma_difference": 73.875,
-        "passed": true
-      },
-      {
-        "scene": "names",
-        "word": "found",
-        "event": "Kane found the named row",
-        "word_start": 75.580867,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 2268,
-        "offset_seconds": 0.019133,
-        "frame_time": 75.6,
-        "mean_luma_difference": 68.819,
-        "passed": true
-      },
-      {
-        "scene": "names",
-        "word": "couldn't",
-        "event": "Baseline search failed",
-        "word_start": 76.705867,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 2302,
-        "offset_seconds": 0.027466,
-        "frame_time": 76.733333,
-        "mean_luma_difference": 62.132,
-        "passed": true
-      },
-      {
-        "scene": "contrast",
-        "word": "faint",
-        "event": "Below the AA threshold",
-        "word_start": 79.476033,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 2385,
-        "offset_seconds": 0.023967,
-        "frame_time": 79.5,
-        "mean_luma_difference": 70.286,
-        "passed": true
-      },
-      {
-        "scene": "contrast",
-        "word": "nudges",
-        "event": "Adjust the text colour",
-        "word_start": 81.351033,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 2441,
-        "offset_seconds": 0.015634,
-        "frame_time": 81.366667,
-        "mean_luma_difference": 67.873,
-        "passed": true
-      },
-      {
-        "scene": "contrast",
-        "word": "measures",
-        "event": "AA threshold reached",
-        "word_start": 83.851033,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 2516,
-        "offset_seconds": 0.015634,
-        "frame_time": 83.866667,
-        "mean_luma_difference": 71.208,
+        "first_frame": 1670,
+        "offset_seconds": 0.022067,
+        "frame_time": 55.666667,
+        "mean_luma_difference": 46.872,
         "passed": true
       },
       {
         "scene": "jev",
-        "word": "experiment",
-        "event": "Live naming experiment",
-        "word_start": 86.731233,
+        "word": "On",
+        "event": "jev-off",
+        "word_start": 57.0997,
         "region": [
-          140,
-          24,
-          385,
-          51
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 2602,
-        "offset_seconds": 0.0021,
-        "frame_time": 86.733333,
-        "mean_luma_difference": 82.753,
+        "first_frame": 1710,
+        "offset_seconds": -0.0997,
+        "frame_time": 57.0,
+        "mean_luma_difference": 79.148,
         "passed": true
       },
       {
         "scene": "jev",
-        "word": "unlabelled",
-        "event": "Two unnamed buttons",
-        "word_start": 91.381233,
+        "word": "Jev",
+        "event": "jev",
+        "word_start": 58.7747,
         "region": [
-          1708,
-          450,
-          142,
-          48
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 2742,
-        "offset_seconds": 0.018767,
-        "frame_time": 91.4,
-        "mean_luma_difference": 59.245,
+        "first_frame": 1764,
+        "offset_seconds": 0.0253,
+        "frame_time": 58.8,
+        "mean_luma_difference": 14.546,
         "passed": true
       },
       {
         "scene": "jev",
-        "word": "live",
-        "event": "Two live names",
-        "word_start": 92.306233,
+        "word": "second",
+        "event": "jev-on",
+        "word_start": 60.8747,
         "region": [
-          300,
-          440,
-          305,
-          170
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 2770,
-        "offset_seconds": 0.0271,
-        "frame_time": 92.333333,
-        "mean_luma_difference": 42.501,
-        "passed": true
-      },
-      {
-        "scene": "jev",
-        "word": "13",
-        "event": "Names checked on real sites",
-        "word_start": 94.972233,
-        "region": [
-          1244,
-          718,
-          380,
-          112
-        ],
-        "first_frame": 2850,
-        "offset_seconds": 0.027767,
-        "frame_time": 95.0,
-        "mean_luma_difference": 65.322,
+        "first_frame": 1827,
+        "offset_seconds": 0.0253,
+        "frame_time": 60.9,
+        "mean_luma_difference": 12.157,
         "passed": true
       },
       {
         "scene": "jev",
         "word": "quiet",
-        "event": "Abstain when uncertain",
-        "word_start": 98.547233,
+        "event": "quiet",
+        "word_start": 63.1497,
         "region": [
-          140,
-          24,
-          385,
-          51
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 2957,
-        "offset_seconds": 0.019434,
-        "frame_time": 98.566667,
-        "mean_luma_difference": 58.023,
-        "passed": true
-      },
-      {
-        "scene": "results",
-        "word": "locked",
-        "event": "Freeze the repair code",
-        "word_start": 99.4927,
-        "region": [
-          84,
-          300,
-          580,
-          220
-        ],
-        "first_frame": 2985,
-        "offset_seconds": 0.0073,
-        "frame_time": 99.5,
-        "mean_luma_difference": 63.259,
-        "passed": true
-      },
-      {
-        "scene": "results",
-        "word": "2,050",
-        "event": "2,050 unseen sites",
-        "word_start": 101.3677,
-        "region": [
-          84,
-          300,
-          580,
-          220
-        ],
-        "first_frame": 3042,
-        "offset_seconds": 0.0323,
-        "frame_time": 101.4,
-        "mean_luma_difference": 96.435,
-        "passed": true
-      },
-      {
-        "scene": "results",
-        "word": "99",
-        "event": "99 of 142 fixed locally",
-        "word_start": 104.575,
-        "region": [
-          84,
-          300,
-          580,
-          220
-        ],
-        "first_frame": 3138,
-        "offset_seconds": 0.025,
-        "frame_time": 104.6,
-        "mean_luma_difference": 100.852,
-        "passed": true
-      },
-      {
-        "scene": "results",
-        "word": "51",
-        "event": "51 of 89 hard journeys",
-        "word_start": 108.25,
-        "region": [
-          84,
-          300,
-          580,
-          220
-        ],
-        "first_frame": 3248,
-        "offset_seconds": 0.016667,
-        "frame_time": 108.266667,
-        "mean_luma_difference": 62.073,
-        "passed": true
-      },
-      {
-        "scene": "six",
-        "word": "400",
-        "event": "400 new sites",
-        "word_start": 110.926033,
-        "region": [
-          84,
-          300,
-          580,
-          220
-        ],
-        "first_frame": 3328,
-        "offset_seconds": 0.0073,
-        "frame_time": 110.933333,
-        "mean_luma_difference": 82.814,
-        "passed": true
-      },
-      {
-        "scene": "six",
-        "word": "five",
-        "event": "Five additional categories",
-        "word_start": 113.301033,
-        "region": [
-          84,
-          300,
-          580,
-          220
-        ],
-        "first_frame": 3400,
-        "offset_seconds": 0.0323,
-        "frame_time": 113.333333,
-        "mean_luma_difference": 66.025,
-        "passed": true
-      },
-      {
-        "scene": "six",
-        "word": "76",
-        "event": "76 of 118 fixed locally",
-        "word_start": 116.251033,
-        "region": [
-          84,
-          300,
-          580,
-          220
-        ],
-        "first_frame": 3488,
-        "offset_seconds": 0.015634,
-        "frame_time": 116.266667,
-        "mean_luma_difference": 80.195,
-        "passed": true
-      },
-      {
-        "scene": "verified",
-        "word": "random",
-        "event": "Random samples",
-        "word_start": 118.947333,
-        "region": [
-          84,
-          300,
-          580,
-          220
-        ],
-        "first_frame": 3569,
-        "offset_seconds": 0.019334,
-        "frame_time": 118.966667,
-        "mean_luma_difference": 54.773,
-        "passed": true
-      },
-      {
-        "scene": "verified",
-        "word": "11",
-        "event": "11 of 20 v5 repairs verified",
-        "word_start": 121.422333,
-        "region": [
-          84,
-          300,
-          580,
-          220
-        ],
-        "first_frame": 3643,
-        "offset_seconds": 0.011,
-        "frame_time": 121.433333,
-        "mean_luma_difference": 63.97,
-        "passed": true
-      },
-      {
-        "scene": "verified",
-        "word": "7",
-        "event": "7 of 15 v6 repairs verified",
-        "word_start": 122.722333,
-        "region": [
-          84,
-          300,
-          580,
-          220
-        ],
-        "first_frame": 3682,
-        "offset_seconds": 0.011,
-        "frame_time": 122.733333,
-        "mean_luma_difference": 51.341,
-        "passed": true
-      },
-      {
-        "scene": "verified",
-        "word": "why",
-        "event": "Unverified outcomes",
-        "word_start": 125.322333,
-        "region": [
-          84,
-          300,
-          580,
-          220
-        ],
-        "first_frame": 3760,
-        "offset_seconds": 0.011,
-        "frame_time": 125.333333,
-        "mean_luma_difference": 87.991,
-        "passed": true
-      },
-      {
-        "scene": "verified",
-        "word": "105",
-        "event": "105 active fixes",
-        "word_start": 126.439233,
-        "region": [
-          84,
-          300,
-          580,
-          220
-        ],
-        "first_frame": 3794,
-        "offset_seconds": 0.027434,
-        "frame_time": 126.466667,
-        "mean_luma_difference": 89.287,
-        "passed": true
-      },
-      {
-        "scene": "verified",
-        "word": "61",
-        "event": "61 verified by Kane",
-        "word_start": 129.589233,
-        "region": [
-          84,
-          300,
-          580,
-          220
-        ],
-        "first_frame": 3888,
-        "offset_seconds": 0.010767,
-        "frame_time": 129.6,
-        "mean_luma_difference": 44.516,
+        "first_frame": 1895,
+        "offset_seconds": 0.016967,
+        "frame_time": 63.166667,
+        "mean_luma_difference": 83.146,
         "passed": true
       },
       {
         "scene": "owner",
-        "word": "every fix",
-        "event": "Fixes on this page",
-        "word_start": 131.826033,
+        "word": "Then",
+        "event": "paper",
+        "word_start": 64.6136,
         "region": [
-          140,
-          24,
-          385,
-          51
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 3955,
-        "offset_seconds": 0.0073,
-        "frame_time": 131.833333,
-        "mean_luma_difference": 80.633,
+        "first_frame": 1935,
+        "offset_seconds": -0.1136,
+        "frame_time": 64.5,
+        "mean_luma_difference": 15.551,
         "passed": true
       },
       {
         "scene": "owner",
-        "word": "site owner",
-        "event": "Send fix to site owner",
-        "word_start": 133.176033,
+        "word": "owner",
+        "event": "report",
+        "word_start": 65.8386,
         "region": [
-          140,
-          24,
-          385,
-          51
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 3996,
-        "offset_seconds": 0.023967,
-        "frame_time": 133.2,
-        "mean_luma_difference": 66.521,
+        "first_frame": 1976,
+        "offset_seconds": 0.028067,
+        "frame_time": 65.866667,
+        "mean_luma_difference": 71.351,
         "passed": true
       },
       {
         "scene": "owner",
-        "word": "exact change",
-        "event": "Source change",
-        "word_start": 134.301033,
+        "word": "nobody",
+        "event": "retire",
+        "word_start": 67.2136,
         "region": [
-          140,
-          24,
-          385,
-          51
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 4030,
-        "offset_seconds": 0.0323,
-        "frame_time": 134.333333,
-        "mean_luma_difference": 58.369,
-        "passed": true
-      },
-      {
-        "scene": "owner",
-        "word": "recording",
-        "event": "Before and after recordings",
-        "word_start": 136.051033,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 4082,
-        "offset_seconds": 0.015634,
-        "frame_time": 136.066667,
-        "mean_luma_difference": 61.566,
-        "passed": true
-      },
-      {
-        "scene": "owner",
-        "word": "website",
-        "event": "Native repair passes",
-        "word_start": 137.826033,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 4135,
-        "offset_seconds": 0.0073,
-        "frame_time": 137.833333,
-        "mean_luma_difference": 59.134,
-        "passed": true
-      },
-      {
-        "scene": "owner",
-        "word": "retires",
-        "event": "Patch retired",
-        "word_start": 139.826033,
-        "region": [
-          140,
-          24,
-          385,
-          51
-        ],
-        "first_frame": 4195,
-        "offset_seconds": 0.0073,
-        "frame_time": 139.833333,
-        "mean_luma_difference": 75.438,
+        "first_frame": 2017,
+        "offset_seconds": 0.019733,
+        "frame_time": 67.233333,
+        "mean_luma_difference": 63.864,
         "passed": true
       },
       {
         "scene": "close",
-        "word": "Curb Cut",
-        "event": "Cut the curb into a ramp",
-        "word_start": 140.697333,
+        "word": "Curb",
+        "event": "end",
+        "word_start": 69.121,
         "region": [
-          56,
-          160,
-          780,
-          540
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 4221,
-        "offset_seconds": 0.002667,
-        "frame_time": 140.7,
-        "mean_luma_difference": 85.337,
+        "first_frame": 2070,
+        "offset_seconds": -0.121,
+        "frame_time": 69.0,
+        "mean_luma_difference": 33.915,
+        "passed": true
+      },
+      {
+        "scene": "close",
+        "word": "people",
+        "event": "end-line",
+        "word_start": 70.871,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 2127,
+        "offset_seconds": 0.029,
+        "frame_time": 70.9,
+        "mean_luma_difference": 36.189,
+        "passed": true
+      },
+      {
+        "scene": "close",
+        "word": "Get",
+        "event": "sign",
+        "word_start": 72.074,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 2163,
+        "offset_seconds": 0.026,
+        "frame_time": 72.1,
+        "mean_luma_difference": 37.282,
         "passed": true
       }
     ]
   },
   "teaser": {
-    "sha256": "702e048730828a940f7c0ad8b5b870d8494fb9d82a9f8e3901f7bc4f6231fffb",
+    "sha256": "0a9fb013e591ac8f511b1dec43f244f78efd7258abb3c3a3ec580893bdb8682e",
     "frames": 450,
-    "beats": 7,
-    "passed": 7,
-    "worst_offset_seconds": 0.026334,
+    "beats": 10,
+    "passed": 10,
+    "worst_offset_seconds": 0.171,
     "measurements": [
       {
-        "scene": "teaser-before",
-        "word": "mass.edu",
-        "event": "Mass.edu",
-        "word_start": 0.3177,
+        "scene": "teaser-cold",
+        "word": "Press",
+        "event": "key",
+        "word_start": 0.1176,
         "region": [
-          1370,
-          834,
-          490,
-          110
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 10,
-        "offset_seconds": 0.015633,
-        "frame_time": 0.333333,
-        "mean_luma_difference": 92.384,
+        "first_frame": 0,
+        "offset_seconds": -0.1176,
+        "frame_time": 0.0,
+        "mean_luma_difference": 121.866,
         "passed": true
       },
       {
-        "scene": "teaser-before",
+        "scene": "teaser-cold",
         "word": "Tab",
-        "event": "Tab to About.",
-        "word_start": 1.8177,
+        "event": "key-hit",
+        "word_start": 0.3926,
         "region": [
-          1370,
-          834,
-          490,
-          110
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 55,
-        "offset_seconds": 0.015633,
-        "frame_time": 1.833333,
-        "mean_luma_difference": 71.743,
+        "first_frame": 12,
+        "offset_seconds": 0.0074,
+        "frame_time": 0.4,
+        "mean_luma_difference": 75.706,
         "passed": true
       },
       {
-        "scene": "teaser-before",
-        "word": "shut",
-        "event": "Menu stays shut.",
-        "word_start": 3.6927,
+        "scene": "teaser-cold",
+        "word": "menu",
+        "event": "closed",
+        "word_start": 1.0426,
         "region": [
-          1370,
-          834,
-          490,
-          110
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 111,
-        "offset_seconds": 0.0073,
-        "frame_time": 3.7,
-        "mean_luma_difference": 46.347,
-        "passed": true
-      },
-      {
-        "scene": "teaser-after",
-        "word": "Curb Cut",
-        "event": "Repairs on.",
-        "word_start": 5.690333,
-        "region": [
-          1370,
-          834,
-          490,
-          110
-        ],
-        "first_frame": 171,
-        "offset_seconds": 0.009667,
-        "frame_time": 5.7,
-        "mean_luma_difference": 61.493,
-        "passed": true
-      },
-      {
-        "scene": "teaser-after",
-        "word": "opens",
-        "event": "Menu open.",
-        "word_start": 6.715333,
-        "region": [
-          1370,
-          834,
-          490,
-          110
-        ],
-        "first_frame": 202,
-        "offset_seconds": 0.018,
-        "frame_time": 6.733333,
-        "mean_luma_difference": 53.298,
-        "passed": true
-      },
-      {
-        "scene": "teaser-after",
-        "word": "Enter",
-        "event": "Destination reached.",
-        "word_start": 7.540333,
-        "region": [
-          1370,
-          834,
-          490,
-          110
-        ],
-        "first_frame": 227,
-        "offset_seconds": 0.026334,
-        "frame_time": 7.566667,
-        "mean_luma_difference": 33.432,
+        "first_frame": 32,
+        "offset_seconds": 0.024067,
+        "frame_time": 1.066667,
+        "mean_luma_difference": 99.665,
         "passed": true
       },
       {
         "scene": "teaser-title",
-        "word": "Curb Cut",
-        "event": "Cut the curb into a ramp",
-        "word_start": 10.830667,
+        "word": "Curb",
+        "event": "switch-off",
+        "word_start": 3.287667,
         "region": [
-          60,
-          160,
-          730,
-          535
+          96,
+          120,
+          1728,
+          804
         ],
-        "first_frame": 325,
-        "offset_seconds": 0.002666,
-        "frame_time": 10.833333,
-        "mean_luma_difference": 90.727,
+        "first_frame": 95,
+        "offset_seconds": -0.121,
+        "frame_time": 3.166667,
+        "mean_luma_difference": 67.841,
+        "passed": true
+      },
+      {
+        "scene": "teaser-title",
+        "word": "now",
+        "event": "switch-on",
+        "word_start": 4.312667,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 130,
+        "offset_seconds": 0.020666,
+        "frame_time": 4.333333,
+        "mean_luma_difference": 7.841,
+        "passed": true
+      },
+      {
+        "scene": "teaser-menu",
+        "word": "Same",
+        "event": "same-key",
+        "word_start": 6.737667,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 197,
+        "offset_seconds": -0.171,
+        "frame_time": 6.566667,
+        "mean_luma_difference": 32.98,
+        "passed": true
+      },
+      {
+        "scene": "teaser-menu",
+        "word": "opens",
+        "event": "opened",
+        "word_start": 8.337667,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 251,
+        "offset_seconds": 0.029,
+        "frame_time": 8.366667,
+        "mean_luma_difference": 71.512,
+        "passed": true
+      },
+      {
+        "scene": "teaser-close",
+        "word": "Curb",
+        "event": "end",
+        "word_start": 10.087667,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 299,
+        "offset_seconds": -0.121,
+        "frame_time": 9.966667,
+        "mean_luma_difference": 56.435,
+        "passed": true
+      },
+      {
+        "scene": "teaser-close",
+        "word": "people",
+        "event": "end-line",
+        "word_start": 11.837667,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 356,
+        "offset_seconds": 0.029,
+        "frame_time": 11.866667,
+        "mean_luma_difference": 36.189,
+        "passed": true
+      },
+      {
+        "scene": "teaser-close",
+        "word": "Get",
+        "event": "sign",
+        "word_start": 13.040667,
+        "region": [
+          96,
+          120,
+          1728,
+          804
+        ],
+        "first_frame": 392,
+        "offset_seconds": 0.026,
+        "frame_time": 13.066667,
+        "mean_luma_difference": 37.282,
         "passed": true
       }
     ]
   },
   "summary": {
-    "beats": 67,
-    "passed": 67,
+    "beats": 49,
+    "passed": 49,
     "missed": 0,
-    "worst_offset_seconds": 0.0323,
-    "worst_scene": "results",
-    "worst_word": "2,050"
+    "worst_offset_seconds": 0.171,
+    "worst_scene": "teaser-menu",
+    "worst_word": "Same"
   }
 }

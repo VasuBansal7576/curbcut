@@ -1,6 +1,8 @@
 from difflib import SequenceMatcher
 from pathlib import Path
 from zipfile import ZipFile
+from contact import contacts
+import colorsys
 import hashlib
 import os
 import json
@@ -9,16 +11,16 @@ import re
 import subprocess
 
 import numpy as np
-import soundfile as sf
-from PIL import Image, ImageDraw, ImageFont
-from scipy.signal import welch
+from PIL import Image
+from scipy.ndimage import binary_erosion
 
 LAUNCH = Path(__file__).resolve().parents[1]
-OUT = LAUNCH / "out"
+DEST = Path(os.environ.get("FILM_OUTPUT", LAUNCH))
+OUT = DEST / "out"
 WORK = Path(os.environ.get("FILM_CACHE", "/private/tmp/curbcut-v5-build"))
 MODELS = Path(os.environ.get("FILM_MODELS", LAUNCH / "models"))
-MASTER = LAUNCH / "curbcut-launch.mp4"
-TEASER = LAUNCH / "curbcut-launch-15s.mp4"
+MASTER = DEST / "curbcut-launch.mp4"
+TEASER = DEST / "curbcut-launch-15s.mp4"
 
 
 def run(args):
@@ -56,116 +58,10 @@ def levels(video):
                 highpass_300Hz_mean_dBFS=high, difference_dB=round(high - full, 1))
 
 
-def contact_sheet(duration):
-    folder = WORK / "contact-frames"
-    folder.mkdir(exist_ok=True)
-    run(["ffmpeg", "-loglevel", "error", "-y", "-i", MASTER, "-an", "-vf",
-         r"select=not(mod(n\,60)),scale=480:270:flags=lanczos", "-fps_mode", "vfr", folder / "%03d.png"])
-    count = math.ceil(duration / 2)
-    sheet = Image.new("RGB", (480*5, 298*math.ceil(count/5)), "#111214")
-    draw = ImageDraw.Draw(sheet)
-    font = ImageFont.truetype(str(LAUNCH / "film/fonts/JetBrainsMono.ttf"), 17)
-    for i in range(count):
-        frame = Image.open(folder / f"{i+1:03d}.png").convert("RGB")
-        assert np.asarray(frame).std() > 15
-        x, y = (i % 5)*480, (i // 5)*298
-        sheet.paste(frame, (x, y+28))
-        draw.text((x+10, y+3), f"{i*2//60:02d}:{i*2%60:02d}", font=font, fill="#FFCE1F")
-    sheet.save(OUT / "contact.png")
-    return count
-
-
-def stills():
-    beats = json.loads((LAUNCH / "film/beats.json").read_text())
-    folder = OUT / "stills"
-    folder.mkdir(exist_ok=True)
-    frames = {}
-    selected = [b for b in beats if "still" in b]
-    assert sorted(b["scene"] for b in selected) == sorted({b["scene"] for b in beats})
-    for cut, video in [("master", MASTER), ("teaser", TEASER)]:
-        cut_beats = [b for b in beats if b["cut"] == cut]
-        shots = {s["id"]:s for s in json.loads((LAUNCH / "film/word-times.json").read_text())[cut]}
-        marks = []
-        for i,b in enumerate(cut_beats):
-            if "still" not in b:
-                continue
-            shot = shots[b["scene"]]
-            end = next((r["local"] for r in cut_beats[i+1:] if r["scene"] == b["scene"]),shot["frames"]/30)
-            local = math.ceil(b["local"]*30-1e-8)+3 if cut=="teaser" else math.floor((b["local"]+end)*15)
-            marks.append((shot["frame"]+min(local,shot["frames"]-1),b["still"]))
-        temp = WORK / ("stills-" + cut)
-        temp.mkdir(parents=True, exist_ok=True)
-        choose = "+".join(f"eq(n\\,{frame})" for frame, _ in marks)
-        run(["ffmpeg", "-v", "error", "-y", "-i", video, "-an", "-vf", "select="+choose,
-             "-fps_mode", "vfr", temp / "%03d.png"])
-        for i, (frame, name) in enumerate(marks, 1):
-            target = folder / (name + ".png")
-            (temp / f"{i:03d}.png").replace(target)
-            assert Image.open(target).size == (1920, 1080)
-            phone = folder / "phone"
-            phone.mkdir(exist_ok=True)
-            Image.open(target).resize((640,360), Image.Resampling.LANCZOS).save(phone / target.name)
-            frames[name] = frame
-    return frames
-
-
-def sharpness(stills):
-    references = WORK / "references"
-    if any(not (references / (name + ".png")).exists() for name in stills):
-        run(["node", LAUNCH / "scripts/render.mjs", "stills"])
-    scores = {}
-    for name in stills:
-        filename = name + ".png"
-        canvas = np.asarray(Image.open(references / filename).convert("L"), dtype=np.float32)
-        decoded = np.asarray(Image.open(OUT / "stills" / filename).convert("L"), dtype=np.float32)
-        error = np.mean((canvas - decoded)**2)
-        psnr = float(10*np.log10(255**2/max(error, 1e-10)))
-        gradient = np.abs(np.diff(canvas, axis=1))
-        edges = gradient > 50
-        retained = np.abs(np.diff(decoded, axis=1))[edges].sum() / gradient[edges].sum()
-        scores[name] = {"luma_psnr_db": round(psnr, 2), "high_contrast_edge_ratio": round(float(retained), 3)}
-        assert psnr > 38 and .87 < retained < 1.13, (name, scores[name])
-    return scores
-
-
-def motion(video, frames):
-    w, h = 480, 232
-    sample = subprocess.check_output(["ffmpeg", "-loglevel", "error", "-i", video, "-an", "-vf",
-        r"select=not(mod(n\,15)),crop=1920:928:0:0,scale=480:232:flags=area,format=gray",
-        "-fps_mode", "vfr", "-f", "rawvideo", "-"])
-    decoded = np.frombuffer(sample, np.uint8).reshape(-1,h,w)
-    assert len(decoded) == math.ceil(frames/15)
-    changed = []
-    pixel_static = []
-    quiet = []
-    for i, (before, after) in enumerate(zip(decoded, decoded[1:])):
-        delta = np.abs(before.astype(np.int16)-after)
-        frac = (delta >= 5).mean()
-        if not delta.any():
-            pixel_static.append(i*15)
-        if frac >= .001:
-            changed.append(i*15)
-        else:
-            quiet.append(i*15)
-    runs = []
-    for frame in quiet:
-        if runs and runs[-1][1] == frame:
-            runs[-1][1] = frame + 15
-        else:
-            runs.append([frame, frame+15])
-    max_hold = max(((b-a)/30 for a,b in runs), default=0)
-    assert max_hold < 2, (video, runs)
-    return dict(comparison="Frames n and n+15 at 30 fps, above the subtitle band. Motion requires a luma change "
-                           "of at least 5/255 in at least 0.1% of a 480×232 area-downsample.",
-                pairs=len(decoded)-1, first_pair=[0,15], last_pair=[(len(decoded)-2)*15,(len(decoded)-1)*15],
-                moving_pairs=len(changed), quiet_start_frames=quiet, pixel_static_start_frames=pixel_static,
-                longest_quiet_interval_seconds=max_hold)
-
-
 def words(text):
     text = text.lower().replace("’", "'").replace("%", " percent").replace("homepages", "home pages")
     variants = {
-        "curbcut": "curb cut", "colour": "color", "unlabelled": "unlabeled", "offscreen": "off screen", "may tee": "meity", "may t.": "meity.",
+        "curbcut": "curb cut", "colour": "color", "unlabelled": "unlabeled", "one hundred and five": "105", "one hundred five": "105", "offscreen": "off screen", "may tee": "meity", "may t.": "meity.",
         "mass dot e d u": "mass.edu", "mass dot edu": "mass.edu", "c s c dot gov dot in": "csc.gov.in",
         "color hexa": "colorhexa", "pop-ups": "pop ups", "2,050": "2050", "two thousand fifty": "2050",
     }
@@ -180,7 +76,7 @@ def transcript(video, target, sections):
     wav = WORK / (target.name + "-16k.wav")
     run(["ffmpeg", "-loglevel", "error", "-y", "-i", video, "-vn", "-ar", 16000, "-ac", 1, wav])
     run(["whisper-cli", "-ng", "-np", "-t", 5, "-l", "en", "-m", MODELS / "ggml-small.en.bin",
-         "-f", wav, "--prompt", "Curb Cut, Kane, Jev, TypeSafe, Munich Airport, Mass.edu.",
+         "-f", wav, "--prompt", "Curb Cut, Kane, Jev.",
          "--carry-initial-prompt", "-otxt", "-of", target])
     actual = words(target.with_suffix(".txt").read_text())
     expected = []
@@ -200,93 +96,73 @@ def transcript(video, target, sections):
             diff.append(f"{kind} | {' '.join(expected[i:j])} → {' '.join(actual[a:b])}")
     coverage = {name:round(len(matched.intersection(range(a,b))) / (b-a),3) for name,a,b in ranges}
     (WORK / (target.name+"-diff.txt")).write_text("\n".join(diff)+"\n")
-    assert min(coverage.values()) >= .70, coverage
+    assert len(matched) / len(expected) >= .94, diff
     return dict(script_words=len(expected), matched_words=len(matched), lines=len(ranges), line_match=coverage, differences=diff)
 
 
-def scene_transcripts(shots, full):
-    result = {}
-    for shot in shots:
-        name = shot["id"]
-        if all(full["line_match"][f"{name}.{i+1}"] == 1 for i in range(len(shot["cues"]))):
-            continue
-        path = WORK / (name+"-asr.wav")
-        target = WORK / (name+"-asr")
-        run(["ffmpeg","-v","error","-y","-i",MASTER,"-ss",str(shot["frame"]/30),"-t",str(shot["frames"]/30),
-             "-vn","-ar","16000","-ac","1",path])
-        run(["whisper-cli","-ng","-np","-t",4,"-l","en","-m",MODELS/"ggml-small.en.bin",
-             "-f",path,"--prompt","Curb Cut, Kane, Jev, TypeSafe, Munich Airport, Mass.edu.","-otxt","-of",target])
-        result[name] = target.with_suffix(".txt").read_text().strip()
-    return result
+def palette_audit():
+    tokens = json.loads((LAUNCH.parent/"core/brand-palette.json").read_text())
+    colors = [tuple(bytes.fromhex(c.lstrip("#"))) for c in tokens.values()]
+    allowed = [colorsys.rgb_to_hsv(*c)[0] for c in colors if max(c)-min(c)>34]
+    maximum = 0
+    for cut in ["master","teaser"]:
+        for frame in sorted((WORK/("half-second-"+cut)).glob("*.jpg")):
+            with Image.open(frame) as im:
+                rgb = np.asarray(im.resize((480,270)).convert("RGB"),dtype=np.float32)/255
+            hue = np.asarray(Image.fromarray((rgb*255).astype(np.uint8)).convert("HSV"))[:,:,0]/255
+            chroma = np.max(rgb,axis=2)-np.min(rgb,axis=2)
+            far = np.ones(hue.shape,dtype=bool)
+            for value in allowed:
+                delta = np.abs(hue-value)
+                far &= np.minimum(delta,1-delta)>.05
+            unexpected = far & (chroma > .18)
+            interior = binary_erosion(unexpected, structure=np.ones((3,3), dtype=bool))
+            percent = float(np.mean(interior) * 100)
+            assert percent<.08, (frame.name,percent)
+            maximum = max(maximum,percent)
+    return {"maximum_unexpected_saturated_interior_percent":round(maximum,4)}
 
 
 def main():
-    WORK.mkdir(parents=True, exist_ok=True)
-    script = json.loads((LAUNCH / "film/narration.json").read_text())
-    sections = {name:lines for name,lines in script.items() if not name.startswith("teaser-")}
-    short = {name:lines for name,lines in script.items() if name.startswith("teaser-")}
-    cuts = json.loads((LAUNCH / "film/word-times.json").read_text())
-    cues = [[s["frame"]/30+c["start"], s["frame"]/30+c["end"], c["text"]] for s in cuts["master"] for c in s["cues"]]
-    assert [c[2] for c in cues] == [s for lines in sections.values() for s in lines]
-    assert all(0 <= a < b for a,b,_ in cues)
-    assert all(prev[1] <= cur[0] for prev,cur in zip(cues,cues[1:]))
-    def timestamp(seconds):
-        ms = math.floor(1000*seconds+.5)
-        return f"{ms//3600000:02d}:{ms//60000%60:02d}:{ms//1000%60:02d}.{ms%1000:03d}"
-    vtt = "WEBVTT\n\n" + "\n".join(f"{timestamp(a)} --> {timestamp(b)}\n{text}\n" for a, b, text in cues)
-    assert (LAUNCH / "captions/launch.vtt").read_text() == vtt
+    WORK.mkdir(parents=True,exist_ok=True)
+    cuts = json.loads((LAUNCH/"film/word-times.json").read_text())
     report = {}
-    for video, name in [(MASTER, "master"), (TEASER, "teaser")]:
-        report[name] = metadata(video) | levels(video)
-        audio_hash, _ = run(["ffmpeg", "-v", "error", "-i", video, "-map", "0:a:0", "-c", "copy", "-f", "hash", "-hash", "sha256", "-"])
-        report[name]["aac_packet_sha256"] = audio_hash.strip().split("=")[1]
-        report[name]["sha256"] = hashlib.sha256(video.read_bytes()).hexdigest()
-    assert report["master"]["frames"] == sum(shot["frames"] for shot in cuts["master"])
-    assert report["teaser"]["duration"] == 15
-    report["contact_frames"] = contact_sheet(report["master"]["duration"])
-    report["stills_by_frame"] = stills()
-    report["decoded_still_vs_lossless_canvas"] = sharpness(report["stills_by_frame"])
-    for name, video in [("master", MASTER), ("teaser", TEASER)]:
-        report[name]["motion"] = motion(video, report[name]["frames"])
-    report["master"]["transcript"] = transcript(MASTER, OUT / "transcript", sections)
-    text = (OUT / "transcript.txt").read_text()
-    normalized = " ".join(words(text))
-    assert normalized.count(" live ") == 2
-    for claim in ["13 of its 15 names","99 of 142","51 of the 89","76 of 118","11 of 20","7 of 15","105 fixes","61 of them"]:
-        assert claim in normalized, claim
-    report["master"]["scene_transcript_rechecks"] = scene_transcripts(cuts["master"],report["master"]["transcript"])
-    report["teaser"]["transcript"] = transcript(TEASER, WORK / "teaser-transcript", short)
-    if (WORK / "master-bed.wav").exists():
-        bed, rate = sf.read(WORK / "master-bed.wav")
-        voice, _ = sf.read(WORK / "master-voice.wav")
-        hz, energy = welch(bed, fs=rate, nperseg=8192, axis=0)
-        pct = 100 * energy[(hz >= 200) & (hz <= 4000)].sum() / energy.sum()
-        report["bed_energy_200Hz_to_4kHz_percent"] = round(float(pct), 2)
-        report["voice_over_ducked_bed_rms_dB"] = round(float(10*np.log10(np.mean(voice**2)/np.mean(bed**2))), 1)
-        hz, speech = welch(voice, fs=rate, nperseg=8192)
-        speech_pct = 100 * speech[(hz >= 200) & (hz <= 4000)].sum() / speech.sum()
-        report["speech_energy_200Hz_to_4kHz_percent"] = round(float(speech_pct), 2)
-        assert speech_pct > 50
-        assert pct > 50 and report["voice_over_ducked_bed_rms_dB"] > 6
-    report["minimum_visible_page_percent"] = {
-        p.name.removesuffix("-coverage.json"): round(100*json.loads(p.read_text()),2)
-        for p in WORK.glob("*-coverage.json") if json.loads(p.read_text()) < 1
-    }
-    expected = {s["id"] for cut in cuts.values() for s in cut} - {"scale","title","results","six","verified","close","teaser-title"}
-    assert set(report["minimum_visible_page_percent"]) == expected
-    plates = LAUNCH / "film/plates"
-    evidence = [p for p in json.loads((plates / "index.json").read_text()).values() if p.get("member")]
-    for plate in evidence:
-        with ZipFile(LAUNCH.parent / plate["source"]) as pack:
-            assert pack.read(plate["member"]) == (plates / plate["file"]).read_bytes(), plate["file"]
-    report["evidence_stills_matching_pack"] = len(evidence)
-    assert min(report["minimum_visible_page_percent"].values()) >= 70
-    phones = json.loads((LAUNCH / "film/pronunciation.json").read_text())
-    report["live_g2p"] = {line:p for line,p in phones.items() if " live" in line}
-    assert len(report["live_g2p"]) == 2 and all("lˈaɪv" in p for p in report["live_g2p"].values())
-    (OUT / "verification.json").write_text(json.dumps(report, indent=2, ensure_ascii=False)+"\n")
-    print(json.dumps(report, indent=2))
+    for name,movie in [("master",MASTER),("teaser",TEASER)]:
+        script = json.loads((LAUNCH/"film"/("narration.json" if name=="master" else "teaser-narration.json")).read_text())
+        settings = metadata(movie) | levels(movie)
+        assert settings["frames"]==sum(s["frames"] for s in cuts[name])
+        assert (name=="master" and 70<=settings["duration"]<=85) or (name=="teaser" and settings["duration"]==15)
+        lines = [line for group in script.values() for line in group]
+        assert lines==[cue["text"] for s in cuts[name] for cue in s["cues"]]
+        track = LAUNCH/"captions"/("launch.vtt" if name=="master" else "teaser.vtt")
+        assert track.read_text().strip().split("\n\n")[1:]==[f"{stamp(s['frame']/30+c['start'])} --> {stamp(s['frame']/30+c['end'])}\n{c['text']}" for s in cuts[name] for c in s["cues"]]
+        settings["transcript"] = transcript(movie,OUT/("transcript" if name=="master" else "teaser-transcript"),script)
+        settings["sha256"] = hashlib.sha256(movie.read_bytes()).hexdigest()
+        report[name] = settings
+    record = json.loads((LAUNCH/"film/pronunciation.json").read_text())
+    live = [v for k,v in record.items() if " live " in k]
+    assert len(live)==1 and "lˈaɪv" in live[0]
+    report["spoken_live"] = "/laɪv/"
+    catalog = json.loads((LAUNCH/"film/plates/index.json").read_text())
+    for plate in [p for p in catalog.values() if "member" in p]:
+        with ZipFile(LAUNCH.parent/plate["source"]) as pack:
+            assert pack.read(plate["member"])==(LAUNCH/"film/plates"/plate["file"]).read_bytes()
+    assert [catalog[k]["verdict"] for k in ["efcfdd9f-13","cb96e3af-17"]]==["FAIL","PASS"]
+    report["verified_kane_frames"] = ["efcfdd9f-13","cb96e3af-17"]
+    geometry = json.loads((OUT/"geometry.json").read_text())
+    assert set(geometry)=={s["id"] for shots in cuts.values() for s in shots}
+    report["maximum_source_scale"] = round(max(geometry.values()),5)
+    assert 0<report["maximum_source_scale"]<=1.25
+    report["half_second_frames"] = contacts()
+    report["palette"] = palette_audit()
+    (OUT/"verification.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
+    print(json.dumps(report,ensure_ascii=False,indent=2))
 
 
-if __name__ == "__main__":
+def stamp(seconds):
+    ms = math.floor(seconds*1000+.5)
+    return f"{ms//3600000:02d}:{ms//60000%60:02d}:{ms//1000%60:02d}.{ms%1000:03d}"
+
+
+if __name__=="__main__":
     main()

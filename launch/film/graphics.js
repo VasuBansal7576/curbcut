@@ -1,51 +1,81 @@
-function pavement(t,closing=false) {
-  const progress=clamp((t+.035)/.86)
-  const s=1.13+.035*smooth(t/5.8)
-  const p=(x,y,z)=>[1200+(x*.9-y*.76)*s,350+(x*.27+y*.49-z)*s]
-  const height=(x,y)=>96-(x>=180&&x<=473?96*progress*clamp((y-90)/270):0)
-  const plane=(points,fill,stroke,width=2)=>poly(points.map(([x,y,z])=>p(x,y,z)),fill,stroke,width)
-  const deck=(x1,x2,y1,y2,h,fill)=>plane([[x1,y1,h(x1,y1)],[x2,y1,h(x2,y1)],[x2,y2,h(x2,y2)],[x1,y2,h(x1,y2)]],fill,ink,3)
-  const high=()=>96
-  for(let x=355;x<1050;x+=90) {
-    const v=((t*24)%42)
-    plane([[x,410+v,0],[x+42,410+v,0],[x+42,582+v,0],[x,582+v,0]],'rgba(244,241,234,.84)')
-  }
-  for(const [a,b,h] of [[0,180,high],[180,473,height],[473,720,high]]) {
-    plane([[a,360,h(a,360)],[b,360,h(b,360)],[b,360,0],[a,360,0]],'rgba(244,241,234,.43)',ink,3)
-  }
-  deck(0,720,0,90,high,white)
-  deck(0,180,90,360,high,white)
-  if(progress>0)plane([[180,90,96],[180,360,96],[180,360,height(180,360)]],white,ink,3)
-  deck(180,473,90,360,height,yellow)
-  deck(473,720,90,360,high,white)
-  plane([[473,90,96],[473,360,96],[473,360,height(473,360)]],'#777776',ink,2)
-  for(const x of [90,315,600])plane([[x,0,96],[x,90,96]],null,ink,2)
-  for(const x of [90,600])plane([[x,90,96],[x,360,96]],null,ink,2)
-  for(const y of [170,260]) {
-    plane([[0,y,96],[180,y,96]],null,ink,2)
-    plane([[473,y,96],[720,y,96]],null,ink,2)
-  }
-  for(let j=0;j<5;j++)for(let i=0;i<9;i++){
-    const x=195+32*i,y=235+23*j
-    const [u,v]=p(x,y,height(x,y))
-    const f=.24+.76*at(t,1+.06*i+.045*j,.45)
-    disk(u,v,6.6,ink,4.3)
-    disk(u-1.7,v-3.9*f,4.6,yellow,2.7)
-  }
-  if(!window.current.shot.id.startsWith('teaser-')){
-    plane([[473,90,96],[473,360,96],[473,360,height(473,360)]],'#777776',ink,2)
-  }
-  const a=p(0,360,96),b=p(180,360,96),d=p(473,360,height(473,360)),e=p(473,360,96)
-  traced([a,b,p(180,360,height(180,360)),d,e,p(720,360,96)],at(t,0,1.75),ink,5)
-  const span=240*progress
-  const cross=[[1035,772],[1272-span*.45,772],[1272+span*.55,843],[1672,843]]
-  traced(cross,at(t,0,1.25),yellow,9)
-
+function roundBox(x,y,w,h,r,color){
+  ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fillStyle=color;ctx.fill()
 }
-function identity(shot,t) {
-  const isClose=shot.id!=='title'
-  print('CURB',66,410,338)
-  print('CUT',66,688,338,yellow)
-  pavement(t,isClose)
-  print(isClose?'Verified by Kane.':'Fixing the web for people it shuts out.',78,826,isClose?66:57,white,'Overpass',650,1020)
+function gradient(x,y,X,Y,stops){
+  const g=ctx.createLinearGradient(x,y,X,Y)
+  for(const [p,c] of stops)g.addColorStop(p,c)
+  return g
+}
+function label(text,x,y,size=30,color=lime){mono(text,x,y,size,color)}
+function typeLines(lines,x,y,size,color=white,width=1700,leading=.86,emphasis=''){
+  const runs=lines.map(line=>line.split(/( +)/).map(word=>({word,italic:!!emphasis&&word.toLowerCase().replace(/[^a-z]/g,'')===emphasis})))
+  const measure=(part,px)=>{face(px,part.italic?'Instrument':'Tight',part.italic?400:810);return part.word.trim()?ctx.measureText(part.word).width:px*.25}
+  const maximum=Math.max(...runs.map(row=>row.reduce((sum,p)=>sum+measure(p,size),0)))
+  const px=Math.min(size,size*width/maximum)
+  for(const [i,row] of runs.entries()){
+    let left=x
+    for(const part of row){
+      const advance=measure(part,px)
+      ctx.fillStyle=color;ctx.fillText(part.word,left,y+i*px*leading);left+=advance
+    }
+  }
+}
+function keycap(x,y,k,t,legend='Tab'){
+  const press=10*Math.exp(-6*t)*Math.sin(t*22)
+  ctx.save();ctx.translate(x,y);ctx.scale(k,k);ctx.rotate(-.12);ctx.transform(1,0,-.22,.88,0,0)
+  ctx.shadowColor='rgba(0,0,0,.7)';ctx.shadowBlur=48;ctx.shadowOffsetY=47
+  roundBox(-305,-170,610,370,42,ink);ctx.shadowColor='transparent'
+  for(let i=52;i>=0;i-=2){
+    const shade=.1+(52-i)*.004
+    roundBox(-300,-184+i+press,600,354,41,toned(ink,white,shade))
+  }
+  roundBox(-300,-184+press,600,354,42,gradient(0,-184,0,170,[[0,white],[.06,toned(white,cobalt,.06)],[.8,toned(white,cobalt,.13)],[1,toned(white,cobalt,.34)]]))
+  roundBox(-283,-170+press,566,318,31,gradient(-245,-150,235,125,[[0,white],[1,toned(white,cobalt,.065)]]))
+  ctx.translate(0,press)
+  print(legend,-232,84,126,ink,'Tight',740)
+  line(102,-64,202,-64,cobalt,13);poly([[169,-98],[206,-64],[169,-30]],null,cobalt,13);line(226,-108,226,-23,cobalt,12)
+  ctx.restore()
+}
+function curbObject(x,y,k,t,opened=true){
+  const turn=.04*Math.sin(t*.9)
+  const project=(u,v,h)=>[x+k*(u+v*(.68+turn)),y+k*(v*-.55+u*.14-h)]
+  const shape=(pts,color)=>poly(pts.map(p=>project(...p)),color)
+  const h=126, sl=opened?smooth(t/.82):0, shoulder=-52+sl*246
+  const profile=[[-400,h],[-55,h],[shoulder,20],[335,20]]
+  ctx.save()
+  ctx.shadowColor='rgba(0,0,0,.5)';ctx.shadowBlur=42*k;ctx.shadowOffsetY=46*k
+  shape([[-412,-8,-22],[348,-8,-22],[348,270,-22],[-412,270,-22]],ink);ctx.shadowColor='transparent'
+  for(let i=0;i<profile.length-1;i++){
+    const [u,z]=profile[i],[v,w]=profile[i+1]
+    shape([[u,0,z],[v,0,w],[v,0,-25],[u,0,-25]],i===1?toned(ink,cobalt,.74):toned(ink,cobalt,.42))
+    shape([[u,0,z],[v,0,w],[v,260,w],[u,260,z]],i===1?(opened?lime:toned(cobalt,white,.68)):white)
+  }
+  ctx.restore()
+}
+function brandLock(x,y,k,color){
+  curbMark(x,y-60*k,1.9*k,color)
+  print('Curb Cut',x+202*k,y+3*k,128*k,color)
+}
+function pointerObject(x,y,k,t){
+  const points=[[0,0],[.08,1.06],[.35,.79],[.58,1.20],[.77,1.10],[.54,.71],[.90,.63]]
+  ctx.save();ctx.translate(x+30*(1-at(t,0,.55)),y);ctx.rotate(-.22+.12*at(t,0,.52));ctx.scale(k,k)
+  ctx.shadowColor='rgba(0,0,0,.6)';ctx.shadowBlur=.14;ctx.shadowOffsetY=.14
+  poly(points,ink);ctx.shadowColor='transparent'
+  for(let j=15;j>=0;j--)poly(points.map(([a,b])=>[a+j*.003,b+j*.004]),j?toned(ink,lime,.4):lime)
+  ctx.restore()
+}
+function blankTag(x,y,k,t){
+  ctx.save();ctx.translate(x,y+22*(1-at(t,0,.5)));ctx.rotate(-.1-.06*at(t,0,.5));ctx.scale(k,k)
+  const outline=[[-310,-137],[235,-137],[337,-37],[337,38],[235,137],[-310,137]]
+  for(let i=18;i>=0;i--)poly(outline.map(([u,v])=>[u,v+i]),i?toned(ink,white,.28):white)
+  disk(244,0,22,ink)
+  ctx.fillStyle=ink;ctx.fillRect(-250,-4,256,12)
+  ctx.restore()
+}
+function brandStamp(t){
+  ground()
+  curbMark(127,174,1.45,lime)
+  print('Curb Cut',285,226,65,white)
+  typeLines(['Get Curb Cut','for Chrome.'],116,513,184,white,1650,.93,'chrome')
+  print('github.com/VasuBansal7576/curbcut',128,914,51,lime,'Mono',650,1640)
 }

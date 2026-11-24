@@ -7,7 +7,7 @@ from PIL import Image
 
 PLATES = Path(__file__).resolve().parents[1] / "film/plates"
 SELECTIONS = {
-    "mass-off": [5, 10, 11], "mass-on": [10, 11, 12, 13],
+    "mass-off": [10], "mass-on": [10],
 }
 
 

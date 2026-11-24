@@ -1,7 +1,7 @@
-Curb Cut repairs accessibility barriers in the browser and gives site owners the exact source change and its evidence.
+Curb Cut is a Chrome extension for keyboard, screen reader and low-vision users. It fixes accessibility barriers as you use real websites. Press Tab on Mass.edu and the About menu stays closed. Turn the extension on and the same action reveals the links inside it. [Launch film](curbcut-launch.mp4) · [15-second teaser](curbcut-launch-15s.mp4)
 
-Watch a keyboard user reach The DHE on Mass.edu, a screen reader find Munich Airport’s newly named previous-slide button, and a local browser check measure an ExtremeTerrain link at 4.39:1 before the repair and 4.50:1 after. The opt-in Jev experiment names controls on unfamiliar pages. Reviewers judged 13 of 15 applied names correct on real sites. [Launch film](curbcut-launch.mp4) · [Jev results](../proof/jev/live-naming-real-sites.json)
+The film shows Munich Airport’s unnamed carousel button becoming “Vorherige Folie,” an ExtremeTerrain link becoming readable, and Kane replaying a keyboard task before and after its repair. On an unfamiliar page, Meridiano, the optional Jev naming experiment identifies “Menú” and “Buscar.” [Meridiano evidence](../proof/jev/live-naming-demo/)
 
-Frozen-code tests confirmed 99 of 142 repairs on 2,050 previously unseen sites, including 51 of 89 multi-step journeys. V5 covered form labels. V6 tested the five other common failure types on 400 more sites and confirmed 76 of 118 repairs. Kane verified 11 of 20 sampled v5 repairs and 7 of 15 sampled v6 naming repairs. [Study results and recordings](../proof/README.md)
+The extension ships 105 fixes and exposes the evidence for each one. The popup can generate a report with the specific change a site owner can make. Once the native site passes its check, the extension can retire the patch. [Release inventory](../extension/bundled.json) · [Evidence archive](../proof/README.md)
 
-The extension ships 105 audited fixes. Of those, 61 have Kane proof and 44 have local proof. The popup exposes the evidence and exports a site-owner report. A patch retires when the native site passes its check. [Extension inventory](../extension/bundled.json)
+[Get Curb Cut for Chrome](https://github.com/VasuBansal7576/curbcut)

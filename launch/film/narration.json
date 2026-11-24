@@ -1,76 +1,41 @@
 {
-  "shopping": [
-    "This is someone shopping with only a keyboard."
+  "cold": [
+    "Press Tab. The menu won't open."
   ],
-  "skip": [
-    "They press Tab to move through the page… and the Add to cart button gets skipped.",
-    "They can't buy anything."
+  "menu": [
+    "Turn on the Curb Cut Chrome extension.",
+    "Same keys. Now the menu opens."
   ],
-  "scale": [
-    "That's not rare. In 2026, 95.9 percent of the top million home pages had accessibility failures.",
-    "And almost all of them come from the same six mistakes."
+  "problem": [
+    "For millions of people, this is the web. Menus that only work with a mouse. Buttons with no name. Text too faint to read.",
+    "95.9 percent of the top million home pages have barriers like these."
+  ],
+  "wait": [
+    "Websites take years to fix them. The people shut out can't wait that long."
   ],
   "title": [
-    "So we built Curb Cut.",
-    "It fixes those barriers from the outside, right in your browser, and proves every fix works."
-  ],
-  "test": [
-    "Step one. Kane, an AI testing agent, tries the task the way a disabled person would. It fails."
-  ],
-  "control": [
-    "Kane tries again with a mouse. The same task works.",
-    "So the website is broken, not the task."
-  ],
-  "rules": [
-    "Step two. An agent writes a small, safe fix. Just rules, no code."
-  ],
-  "prove": [
-    "Step three. Kane runs the task again with the fix, and it passes. The recording is the proof."
-  ],
-  "share": [
-    "Step four. The extension shares the proven fix with everyone who visits that site."
-  ],
-  "mass-off": [
-    "Some barriers are whole journeys. On mass.edu, a keyboard user reaches About, and the menu never opens."
-  ],
-  "mass-on": [
-    "With Curb Cut, the same keys open the menu, and Enter takes you to the page."
+    "Curb Cut fixes them now, right in your browser."
   ],
   "names": [
-    "For blind users, the most common barrier is a button with no name. A screen reader just says, button.",
-    "On Munich Airport, Curb Cut names it: previous slide. Kane found it with the fix, and couldn't without it."
+    "A screen reader used to say just, button. Now it says, previous slide."
   ],
   "contrast": [
-    "The most common failure of all is faint text. Curb Cut nudges the colour just enough to be readable, and measures it."
+    "Faint text, made readable."
+  ],
+  "proof": [
+    "And no fix ships on a guess. Kane, an AI tester, tries the task the way a disabled person would. Without the fix, it fails. With the fix, it passes. That recording is the proof."
+  ],
+  "scale": [
+    "105 fixes are live today, and every one shows its proof."
   ],
   "jev": [
-    "And on pages we've never fixed, there's an experiment. Jev, a fast decision model from TypeSafe, names unlabelled buttons live, in about a second.",
-    "On real sites, 13 of its 15 names were right. When it isn't sure, it stays quiet."
-  ],
-  "results": [
-    "Then we locked the code and pointed it at 2,050 websites it had never seen.",
-    "It fixed 99 of 142 barriers on its own, including 51 of the 89 hard ones."
-  ],
-  "six": [
-    "On 400 more new sites, we tested the five other common failures. Curb Cut fixed 76 of 118."
-  ],
-  "verified": [
-    "Kane checked random samples of those fixes, and proved 11 of 20, then 7 of 15. Where it couldn't, we say why.",
-    "Today, 105 fixes are live in the extension. 61 of them proven by Kane."
+    "On sites we've never seen, Jev names unlabelled buttons in about a second. When it isn't sure, it stays quiet."
   ],
   "owner": [
-    "And every fix can go back to the site owner: the exact change, with Kane's recording as proof. When the website fixes itself, our patch retires."
+    "Then the fix goes to the site owner, so one day, nobody needs us."
   ],
   "close": [
-    "Curb Cut. Fixing the web for the people it shuts out. Verified by Kane."
-  ],
-  "teaser-before": [
-    "On mass.edu, press Tab to About. The menu stays shut."
-  ],
-  "teaser-after": [
-    "With Curb Cut, the menu opens. Enter takes you to the page."
-  ],
-  "teaser-title": [
-    "Curb Cut. Fixing the web for the people it shuts out."
+    "Curb Cut. Fixing the web for the people it shuts out.",
+    "Get Curb Cut for Chrome."
   ]
 }

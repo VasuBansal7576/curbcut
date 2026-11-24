@@ -1,3 +1,4 @@
+import brand from './brand-palette.json' with {type:'json'}
 import {collectNames,visibleLanguageSample,applyLiveName} from './jev-naming-browser.js'
 import {computeAccessibleName, getRole, isInaccessible} from 'dom-accessibility-api'
 import {discoverCoverage,coverageObservation} from './coverage-browser.js'
@@ -111,12 +112,25 @@ function reader(report=()=>{}) {
   const panel=document.createElement('dialog')
   panel.dataset.curbcutReader=''
   panel.setAttribute('aria-label','Curb Cut reading view')
-  panel.style.cssText='position:fixed;inset:0;margin:0;width:100vw;max-width:none;height:100vh;max-height:none;box-sizing:border-box;border:0;overflow:auto;background:#142324;color:#f6f6e8;font:16px/1.5 system-ui;padding:32px max(5vw,24px);z-index:2147483647'
+  const readerFont='CurbCutReaderText,system-ui,sans-serif'
+  const style=document.createElement('style')
+  const fontFile=globalThis.chrome?.runtime?.getURL
+  const faces=fontFile ? [
+    ['CurbCutReaderText','InterTight.ttf','100 900']
+  ].map(([family,file,weight])=>`@font-face{font-family:${family};src:url("${chrome.runtime.getURL('fonts/'+file)}");font-weight:${weight};font-display:swap}`).join('') : ''
+  style.textContent=faces+`
+    [data-curbcut-reader] :focus-visible {outline:3px solid ${brand.surface} !important;outline-offset:-3px}
+    [data-curbcut-reader] input:focus-visible {outline-color:${brand.surface} !important;outline-offset:-5px;box-shadow:0 0 0 3px ${brand.accent}}
+    @media (forced-colors:active){[data-curbcut-reader] :focus-visible,[data-curbcut-reader] input:focus-visible{outline-color:Highlight !important}}
+    @media (prefers-reduced-motion:reduce){[data-curbcut-reader],[data-curbcut-reader] *{scroll-behavior:auto !important;animation:none !important;transition:none !important}}
+  `
+  panel.style.cssText=`position:fixed;inset:0;margin:0;width:100vw;max-width:none;height:100vh;max-height:none;box-sizing:border-box;border:0;overflow:auto;background:${brand.text};color:${brand.ink};font:500 1.125rem/1.5 CurbCutReaderText,system-ui,sans-serif;padding:32px max(5vw,24px);z-index:2147483647`
   const title=document.createElement('h1')
   title.textContent='Reading view'
-  title.style.cssText='font:600 32px/1.2 system-ui;color:#d5f99e;margin:0 0 20px'
+  title.style.cssText=`font:800 2.5rem/1.1 CurbCutReaderText,system-ui,sans-serif;letter-spacing:-.045em;color:${brand.surface};margin:0 0 20px`
   const rows=document.createElement('div')
-  panel.append(title,rows)
+  for(const node of [panel,title,rows])node.style.setProperty('font-family',readerFont,'important')
+  panel.append(style,title,rows)
   document.body.append(panel)
   panel.showModal()
   panel.addEventListener('cancel',e=>e.preventDefault())
@@ -132,8 +146,12 @@ function reader(report=()=>{}) {
     const activatable=reportable || ['link','button','checkbox','radio','tab','switch','menuitem','option'].includes(info.role)
     const row=document.createElement(editable?'label':activatable?'button':'div')
     row.tabIndex=0
-    row.style.cssText='display:block;box-sizing:border-box;width:100%;max-width:850px;text-align:left;color:inherit;background:transparent;border:0;border-bottom:1px solid #445853;padding:7px 4px;font:inherit'
+    row.style.cssText=`display:block;box-sizing:border-box;width:100%;max-width:850px;text-align:left;color:inherit;background:transparent;border:0;border-bottom:1px solid color-mix(in srgb,${brand.ink} 30%,${brand.text});padding:10px 8px;font:inherit`
+    row.style.setProperty('font-family',readerFont,'important')
     const text=document.createElement('span')
+    text.style.setProperty('font','inherit','important')
+    text.style.setProperty('font-family',readerFont,'important')
+    text.style.setProperty('color','inherit','important')
     row.append(text)
     if(editable) {
       row.tabIndex=-1
@@ -141,7 +159,7 @@ function reader(report=()=>{}) {
       input.type=info.role==='searchbox'?'search':'text'
       input.value=el.value
       input.setAttribute('aria-label',info.name || 'Unnamed '+info.role)
-      input.style.cssText='display:block;color:#132220;background:#fff;padding:6px;width:85%'
+      input.style.cssText=`display:block;color:${brand.ink};background:${brand.text};border:2px solid ${brand.ink};border-radius:0;padding:8px;width:85%;font:inherit`
       input.addEventListener('input',event=>{
         if(event.isTrusted) report('reader-text',el,info)
         const prototype=el instanceof HTMLTextAreaElement?HTMLTextAreaElement.prototype:HTMLInputElement.prototype
@@ -294,7 +312,8 @@ function enforce(persona,report=()=>{}, {topLevel=true}={}) {
   }
   if(persona==='low-vision') {
     const clip=()=>{
-      const style=document.createElement('style')
+      const readerFont='CurbCutReaderText,system-ui,sans-serif'
+  const style=document.createElement('style')
       style.textContent='html,body{overflow-x:clip!important}'
       document.documentElement.append(style)
     }

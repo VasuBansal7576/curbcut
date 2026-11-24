@@ -9,3 +9,6 @@ await writeFile(new URL('../core/validate.generated.cjs',import.meta.url),compil
 await build({entryPoints:['core/browser.js'],bundle:true,format:'iife',outfile:'extension/runtime.js',minify:true,legalComments:'none',platform:'browser'})
 await build({entryPoints:['core/jev-policy.js'],bundle:true,format:'iife',globalName:'CurbCutJev',outfile:'extension/jev-runtime.js',minify:true,legalComments:'none',platform:'browser'})
 await build({entryPoints:['core/jev-decisions.js'],bundle:true,format:'iife',globalName:'CurbCutDecisions',outfile:'extension/jev-decisions-runtime.js',minify:true,legalComments:'none',platform:'browser'})
+
+const brand = JSON.parse(await readFile(new URL('../core/brand-palette.json',import.meta.url)))
+await writeFile(new URL('../extension/brand.css',import.meta.url),':root {\n'+Object.entries(brand).map(([key,value])=>'  --brand-'+key+': '+value+';').join('\n')+'\n}\n')

@@ -12,12 +12,13 @@ const inventory=JSON.parse(await readFile(path.join(extension,'bundled.json')))
 const patch=inventory.find(p=>p.id==='v6-035402528fb5fd67e4c6')
 const source=await readFile(path.join(root,'core/contrast.js'),'utf8')
 const inspect=new Function('node',source.replaceAll('export function','function')+'\nconst model=contrastModel(node); return model && measureContrast(model)')
-const index=JSON.parse(await readFile(path.join(plates,'index.json')))
+const updates={}
+const dpr=5
 for(const enabled of [false,true]){
   const profile=await mkdtemp(path.join(tmpdir(),'curbcut-contrast-'))
   let context
   try{
-    context=await chromium.launchPersistentContext(profile,{channel:'chromium',headless:true,viewport:{width:1440,height:900},deviceScaleFactor:2,args:['--mute-audio','--disable-extensions-except='+extension,'--load-extension='+extension]})
+    context=await chromium.launchPersistentContext(profile,{channel:'chromium',headless:true,viewport:{width:1440,height:900},deviceScaleFactor:dpr,args:['--mute-audio','--disable-extensions-except='+extension,'--load-extension='+extension]})
     const worker=context.serviceWorkers()[0]??await context.waitForEvent('serviceworker')
     await worker.evaluate(enabled=>chrome.storage.local.set({enabled}),enabled)
     const page=context.pages()[0]
@@ -36,12 +37,14 @@ for(const enabled of [false,true]){
     const box=await link.boundingBox()
     const id='contrast-'+(enabled?'on':'off')
     const file=id+'.png'
-    await page.screenshot({path:path.join(plates,file),animations:'disabled'})
-    index[id]={file,source:'proof/heldout-v6/extension-e2e.json',patch:patch.id,label:'LOCAL PROOF',enabled,url:page.url(),selector:patch.observedSelector,deviceScaleFactor:2,size:[2880,1800],rect:[box.x,box.y,box.width,box.height].map(x=>x*2),measurement}
+    const clip={x:Math.floor(box.x-24),y:Math.max(0,Math.floor(box.y-12)),width:Math.ceil(box.width+48),height:Math.ceil(box.height+24)}
+    await page.screenshot({path:path.join(plates,file),clip,animations:'disabled'})
+    updates[id]={file,source:'proof/heldout-v6/extension-e2e.json',patch:patch.id,enabled,url:page.url(),selector:patch.observedSelector,deviceScaleFactor:dpr,pageRect:box,clip,size:[clip.width*dpr,clip.height*dpr],rect:[box.x-clip.x,box.y-clip.y,box.width,box.height].map(x=>x*dpr),measurement}
     console.log(id,measurement.ratio,box)
   }finally{
     await context?.close()
     await rm(profile,{recursive:true,force:true})
   }
 }
-await writeFile(path.join(plates,'index.json'),JSON.stringify(index,null,2)+'\n')
+const index=JSON.parse(await readFile(path.join(plates,'index.json')))
+await writeFile(path.join(plates,'index.json'),JSON.stringify({...index,...updates},null,2)+'\n')

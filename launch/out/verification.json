@@ -1,76 +1,41 @@
 {
   "master": {
-    "duration": 145.133333,
-    "frames": 4354,
+    "duration": 75.5,
+    "frames": 2265,
     "video": "H.264, 1920×1080, 30 fps",
     "audio": "AAC stereo, 48 kHz",
     "integrated_LUFS": -16.0,
     "true_peak_dBTP": -1.6,
-    "full_mean_dBFS": -19.2,
-    "highpass_300Hz_mean_dBFS": -21.2,
+    "full_mean_dBFS": -19.4,
+    "highpass_300Hz_mean_dBFS": -21.4,
     "difference_dB": -2.0,
-    "aac_packet_sha256": "02bf7e848b5225711db5eb2db62a22e1982ef9d40512959b808c0b3b21b6da27",
-    "sha256": "b8f6499d488cefaf0b85fbaa4e4707d958e7afc3944a2542974dc90132ee3e96",
-    "motion": {
-      "comparison": "Frames n and n+15 at 30 fps, above the subtitle band. Motion requires a luma change of at least 5/255 in at least 0.1% of a 480×232 area-downsample.",
-      "pairs": 290,
-      "first_pair": [
-        0,
-        15
-      ],
-      "last_pair": [
-        4335,
-        4350
-      ],
-      "moving_pairs": 289,
-      "quiet_start_frames": [
-        600
-      ],
-      "pixel_static_start_frames": [],
-      "longest_quiet_interval_seconds": 0.5
-    },
     "transcript": {
-      "script_words": 418,
-      "matched_words": 415,
-      "lines": 27,
+      "script_words": 192,
+      "matched_words": 188,
+      "lines": 15,
       "line_match": {
-        "shopping.1": 1.0,
-        "skip.1": 1.0,
-        "skip.2": 1.0,
-        "scale.1": 1.0,
-        "scale.2": 1.0,
+        "cold.1": 1.0,
+        "menu.1": 1.0,
+        "menu.2": 1.0,
+        "problem.1": 1.0,
+        "problem.2": 1.0,
+        "wait.1": 0.857,
         "title.1": 1.0,
-        "title.2": 1.0,
-        "test.1": 0.889,
-        "control.1": 1.0,
-        "control.2": 1.0,
-        "rules.1": 1.0,
-        "prove.1": 1.0,
-        "share.1": 1.0,
-        "mass-off.1": 1.0,
-        "mass-on.1": 1.0,
         "names.1": 1.0,
-        "names.2": 1.0,
         "contrast.1": 1.0,
+        "proof.1": 1.0,
+        "scale.1": 0.818,
         "jev.1": 1.0,
-        "jev.2": 1.0,
-        "results.1": 0.933,
-        "results.2": 1.0,
-        "six.1": 1.0,
-        "verified.1": 1.0,
-        "verified.2": 1.0,
         "owner.1": 1.0,
-        "close.1": 1.0
+        "close.1": 1.0,
+        "close.2": 1.0
       },
       "differences": [
-        "replace | step one → then",
-        "replace | locked → lock"
+        "replace | shut out → shutout",
+        "replace | every one → everyone"
       ]
     },
-    "scene_transcript_rechecks": {
-      "test": "Step 1. Kane, an AI testing agent, tries the task the way a disabled person would. It fails.",
-      "results": "Then we locked the code and pointed it at 2050 websites it had never seen.\nIt fixed 99 of 142 barriers on its own, including 51 of the 89 hard ones."
-    }
+    "sha256": "82a7de1054780409562f3c668fad03c2658558df14b2c8e68748644c687b466f"
   },
   "teaser": {
     "duration": 15.0,
@@ -78,178 +43,33 @@
     "video": "H.264, 1920×1080, 30 fps",
     "audio": "AAC stereo, 48 kHz",
     "integrated_LUFS": -16.0,
-    "true_peak_dBTP": -2.2,
-    "full_mean_dBFS": -20.1,
-    "highpass_300Hz_mean_dBFS": -22.2,
-    "difference_dB": -2.1,
-    "aac_packet_sha256": "6f7d3afe9fcf82da67cb2104c5f46f9eb4e4d150d1178bf8b39213fc42af1e20",
-    "sha256": "702e048730828a940f7c0ad8b5b870d8494fb9d82a9f8e3901f7bc4f6231fffb",
-    "motion": {
-      "comparison": "Frames n and n+15 at 30 fps, above the subtitle band. Motion requires a luma change of at least 5/255 in at least 0.1% of a 480×232 area-downsample.",
-      "pairs": 29,
-      "first_pair": [
-        0,
-        15
-      ],
-      "last_pair": [
-        420,
-        435
-      ],
-      "moving_pairs": 29,
-      "quiet_start_frames": [],
-      "pixel_static_start_frames": [],
-      "longest_quiet_interval_seconds": 0
-    },
+    "true_peak_dBTP": -1.8,
+    "full_mean_dBFS": -19.4,
+    "highpass_300Hz_mean_dBFS": -21.6,
+    "difference_dB": -2.2,
     "transcript": {
-      "script_words": 34,
-      "matched_words": 34,
-      "lines": 3,
+      "script_words": 37,
+      "matched_words": 37,
+      "lines": 5,
       "line_match": {
-        "teaser-before.1": 1.0,
-        "teaser-after.1": 1.0,
-        "teaser-title.1": 1.0
+        "teaser-cold.1": 1.0,
+        "teaser-title.1": 1.0,
+        "teaser-menu.1": 1.0,
+        "teaser-close.1": 1.0,
+        "teaser-close.2": 1.0
       },
       "differences": []
-    }
+    },
+    "sha256": "0a9fb013e591ac8f511b1dec43f244f78efd7258abb3c3a3ec580893bdb8682e"
   },
-  "contact_frames": 73,
-  "stills_by_frame": {
-    "shopping": 75,
-    "skip": 215,
-    "scale": 459,
-    "title": 709,
-    "test": 993,
-    "control": 1103,
-    "rules": 1282,
-    "prove": 1423,
-    "share": 1585,
-    "mass-off": 1814,
-    "mass-on": 1942,
-    "names": 2242,
-    "contrast": 2524,
-    "jev": 2902,
-    "results": 3281,
-    "six": 3514,
-    "verified": 3916,
-    "owner": 4012,
-    "close": 4287,
-    "teaser-before": 114,
-    "teaser-after": 205,
-    "teaser-title": 328
-  },
-  "decoded_still_vs_lossless_canvas": {
-    "shopping": {
-      "luma_psnr_db": 44.93,
-      "high_contrast_edge_ratio": 0.999
-    },
-    "skip": {
-      "luma_psnr_db": 43.4,
-      "high_contrast_edge_ratio": 0.998
-    },
-    "scale": {
-      "luma_psnr_db": 44.49,
-      "high_contrast_edge_ratio": 0.996
-    },
-    "title": {
-      "luma_psnr_db": 45.27,
-      "high_contrast_edge_ratio": 1.0
-    },
-    "test": {
-      "luma_psnr_db": 43.16,
-      "high_contrast_edge_ratio": 0.999
-    },
-    "control": {
-      "luma_psnr_db": 43.1,
-      "high_contrast_edge_ratio": 1.0
-    },
-    "rules": {
-      "luma_psnr_db": 43.61,
-      "high_contrast_edge_ratio": 0.998
-    },
-    "prove": {
-      "luma_psnr_db": 43.05,
-      "high_contrast_edge_ratio": 0.999
-    },
-    "share": {
-      "luma_psnr_db": 45.01,
-      "high_contrast_edge_ratio": 1.0
-    },
-    "mass-off": {
-      "luma_psnr_db": 45.84,
-      "high_contrast_edge_ratio": 0.995
-    },
-    "mass-on": {
-      "luma_psnr_db": 44.89,
-      "high_contrast_edge_ratio": 0.993
-    },
-    "names": {
-      "luma_psnr_db": 42.55,
-      "high_contrast_edge_ratio": 1.0
-    },
-    "contrast": {
-      "luma_psnr_db": 45.9,
-      "high_contrast_edge_ratio": 0.997
-    },
-    "jev": {
-      "luma_psnr_db": 42.76,
-      "high_contrast_edge_ratio": 0.998
-    },
-    "results": {
-      "luma_psnr_db": 44.94,
-      "high_contrast_edge_ratio": 0.999
-    },
-    "six": {
-      "luma_psnr_db": 44.88,
-      "high_contrast_edge_ratio": 0.998
-    },
-    "verified": {
-      "luma_psnr_db": 44.93,
-      "high_contrast_edge_ratio": 0.998
-    },
-    "owner": {
-      "luma_psnr_db": 47.32,
-      "high_contrast_edge_ratio": 1.0
-    },
-    "close": {
-      "luma_psnr_db": 45.21,
-      "high_contrast_edge_ratio": 0.996
-    },
-    "teaser-before": {
-      "luma_psnr_db": 45.95,
-      "high_contrast_edge_ratio": 0.999
-    },
-    "teaser-after": {
-      "luma_psnr_db": 45.39,
-      "high_contrast_edge_ratio": 0.999
-    },
-    "teaser-title": {
-      "luma_psnr_db": 45.35,
-      "high_contrast_edge_ratio": 0.998
-    }
-  },
-  "bed_energy_200Hz_to_4kHz_percent": 99.99,
-  "voice_over_ducked_bed_rms_dB": 13.7,
-  "speech_energy_200Hz_to_4kHz_percent": 80.9,
-  "minimum_visible_page_percent": {
-    "prove": 79.83,
-    "skip": 79.88,
-    "owner": 79.83,
-    "share": 72.07,
-    "mass-on": 72.48,
-    "test": 79.88,
-    "mass-off": 77.98,
-    "contrast": 71.33,
-    "shopping": 80.06,
-    "rules": 71.01,
-    "teaser-after": 76.37,
-    "names": 78.84,
-    "control": 79.84,
-    "jev": 73.83,
-    "teaser-before": 82.33
-  },
-  "evidence_stills_matching_pack": 15,
-  "live_g2p": {
-    "And on pages we've never fixed, there's an experiment. Jev, a fast decision model from TypeSafe, names unlabelled buttons live, in about a second.": "ænd ˌɔn pˈeɪdʒᵻz wiːv nˈɛvɚ fˈɪkst, ðɛɹz ɐn ɛkspˈɛɹɪmənt. dʒˈɛv, ɐ fˈæst dᵻsˈɪʒən mˈɑːdəl fɹʌm tˈaɪp sˈeɪf, nˈeɪmz ʌnlˈeɪbəld bˈʌʔnz lˈaɪv, ɪn ɐbˌaʊt ɐ sˈɛkənd.",
-    "Today, 105 fixes are live in the extension. 61 of them proven by Kane.": "tədˈeɪ, wˈʌn hˈʌndɹɪd fˈaɪv fˈɪksᵻz ɑːɹ lˈaɪv ɪnðɪ ɛkstˈɛnʃən. sˈɪksti wˈʌn ʌv ðˌɛm pɹˈuːvən baɪ kˈeɪn."
+  "spoken_live": "/laɪv/",
+  "verified_kane_frames": [
+    "efcfdd9f-13",
+    "cb96e3af-17"
+  ],
+  "maximum_source_scale": 1.235,
+  "half_second_frames": 181,
+  "palette": {
+    "maximum_unexpected_saturated_interior_percent": 0.0455
   }
 }

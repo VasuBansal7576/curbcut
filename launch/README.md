@@ -1,31 +1,25 @@
 # Curb Cut launch film
 
-The [launch film](curbcut-launch.mp4) follows a skipped shopping button through a keyboard test, pointer control, repair and replay. It then follows real repairs on Mass.edu, Munich Airport and ExtremeTerrain, and an experimental live naming run on Meridiano. The [15-second teaser](curbcut-launch-15s.mp4) follows the Mass.edu menu. [Thumbnail](curbcut-launch-thumbnail.png) · [Captions](captions/launch.vtt) · [Scene and word timestamps](shots.md)
+Curb Cut is a Chrome extension that fixes accessibility barriers on live websites for keyboard, screen reader and low-vision users. [Get Curb Cut for Chrome](https://github.com/VasuBansal7576/curbcut)
+
+The 75.50-second film starts with a Tab key and a closed Mass.edu menu. The same key opens it after Curb Cut is enabled. Other shots show the actual previous-slide label on Munich Airport, a contrast repair on ExtremeTerrain, a Kane keyboard replay, the extension popup, Jev naming two Meridiano buttons and a site-owner report. The 15-second teaser follows the Mass.edu interaction. Both cuts have English caption tracks.
+
+[Launch film](curbcut-launch.mp4) · [Teaser](curbcut-launch-15s.mp4) · [Thumbnail](curbcut-launch-thumbnail.png) · [Launch captions](captions/launch.vtt) · [Teaser captions](captions/teaser.vtt) · [Word and cut times](shots.md)
 
 ## What the numbers describe
 
-| Evidence | What was counted |
-|---|---|
-| WebAIM Million 2026 | 95.9% of the one million home pages had detectable WCAG failures. Six failure types accounted for 96% of detected errors. [WebAIM study](https://webaim.org/projects/million/) |
-| Held-out v5 | Frozen code, 2,050 previously unseen Tranco domains, 142 registered barriers and 99 local repairs. Of 89 multi-step journeys, 51 passed. V5 also covered form labels. [Sample](../proof/heldout-v5/sample.json) · [Local outcomes](../proof/heldout-v5/local-summary.json) |
-| Held-out v6 | A fresh draw of 400 sites yielded 118 registered barriers in five additional categories. Local tests confirmed 47/62 contrast repairs, 8/12 alternative-text repairs, 12/12 empty links, 9/12 empty buttons and 0/20 document-language repairs. Total 76/118. [Sample](../proof/heldout-v6/sample.json) · [Local outcomes](../proof/heldout-v6/local-summary.json) |
-| Independent Kane samples | Kane verified 11/20 sampled v5 repairs. Three failed and six were inconclusive. Kane verified 7/15 v6 naming repairs, from five selected cases per naming category. [V5 run ledger](../proof/heldout-v5/kane-sample-20/summary.json) · [V6 run ledger](../proof/heldout-v6/kane-summary.json) |
-| Release inventory | 105 active fixes across releases. Of those, 61 have Kane proof and 44 have local proof. [Bundled inventory](../extension/bundled.json) |
-| Experimental Jev naming | Reviewers judged 13/15 applied names correct on seven real sites. The median time to the first name was 1,137 ms. On Meridiano, the menu and search buttons received “Menú” and “Buscar.” [Adjudication](../proof/jev/live-naming-real-sites.json) · [Capture](../proof/jev/live-naming-demo/capture.json) |
+- WebAIM found detectable WCAG failures on 95.9% of the top million home pages in its 2026 automated scan. [WebAIM Million](https://webaim.org/projects/million/)
+- The extension bundles 105 active fixes. Each has evidence available from the popup. The inventory marks 61 fixes as Kane-verified and 44 as locally verified. The film shows the paired Kane recordings of the Mass.edu task. [Inventory](../extension/bundled.json) · [Evidence archive](../proof/README.md)
 
-The render reads the local, Kane and release counts from the ledgers and checks them against the narrated figures before encoding. [Study data loader](scripts/study.mjs)
+## Picture and sound
 
-## Picture sources
+The plate index records each source and the two original Kane screenshot members. Mass.edu uses the same keyboard focus and crop in both states. Munich Airport and Meridiano were captured on the public sites with the installed extension in isolated headless Chromium. Meridiano uses the live Jev service. The ExtremeTerrain crop isolates the actual Details link. Its source measurements are 4.386958:1 before and 4.501341:1 after. The site-owner report uses the source-change paragraph returned by the extension’s report generator. [Plate index](film/plates/index.json) · [Design references and revisions](film/benchmark-notes.md)
 
-The [plate index](film/plates/index.json) identifies the source file, screenshot member and step for Kane evidence. The Munich baseline pack records the unsuccessful search at the top of Reading view. The paired close-ups show the exact carousel selector in fresh installed-extension captures. The word outlines use Chromium text ranges, and the patched Kane outline follows the clicked row’s recorded rectangle. [Munich evidence](../evidence/v6-5193be8805ece27f858e/report.md)
+A physical Tab key, a curb that opens into a ramp and matched browser frames connect the scenes. The film, Reading view and popup share cobalt, white, ink, lime and coral tokens. Inter Tight, Instrument Serif Italic and JetBrains Mono are served locally for the film. The mix uses Kokoro af_heart at 1.04×, a 120 BPM score, and individually timed keypresses, impacts and short motion sounds. The English adjective “live” is pronounced /laɪv/. [Colour tokens](../core/brand-palette.json) · [Pronunciation record](film/pronunciation.json) · [Cut and sound cues](film/cues.json)
 
-The ExtremeTerrain meter uses two fresh installed-extension captures. The “Details” link measured 4.386958:1 before and 4.501341:1 after. Both values round to two decimals in the film. This is local contrast proof. The Meridiano close-up re-typesets seven adjacent rows from the recorded Reading view. The two target strings and their model confidence values (92% for Menú and 100% for Buscar) come from the saved capture. [Contrast measurement](../proof/heldout-v6/measurements/v6-035402528fb5fd67e4c6.json) · [Meridiano evidence](../proof/jev/live-naming-demo/)
+## Reproduction
 
-The owner scene shows the supplied 2× popup captures and a typeset copy of the Markdown produced by the extension’s report generator for Mass.edu. The retirement scene returns to the shopping case. [Extension screenshots](ui/) · [Report generator](../extension/lib/report.js)
-
-## Render from the repository root
-
-Use Node 22 or later, the locked Playwright dependency, Playwright Chromium, FFmpeg with libx264, and ffprobe. The film, captions, shot list and thumbnail can be rebuilt offline from the checked-in sources, word timings and master audio. The renderer uses muted, isolated headless Chromium. It preserves the checked-in teaser.
+Use Node 22+, the locked Playwright dependency, Playwright Chromium, FFmpeg and ffprobe. Set a temporary cache. The renderer rebuilds both movies and the poster from checked-in audio, pictures and word timings. Set FILM_OUTPUT to a temporary directory to make a review export.
 
 ```sh
 npm ci
@@ -34,9 +28,7 @@ export FILM_CACHE="$(mktemp -d)"
 node launch/scripts/render.mjs render
 ```
 
-## Rebuild speech and verify
-
-Use Python 3.11 and whisper.cpp’s whisper-cli. The model files and the instrumented timing model belong in the temporary build directory. Install dependencies into its virtual environment.
+For new speech or independent verification, use Python 3.11 and whisper.cpp’s whisper-cli. Install Python packages and download models into the temporary cache. After verification that directory can be deleted.
 
 ```sh
 export FILM_MODELS="$FILM_CACHE/models"
@@ -53,31 +45,18 @@ node launch/scripts/render.mjs render
 node launch/scripts/render.mjs verify
 ```
 
-Kokoro uses af_heart at 1.04×. Both spoken instances of “live” use /laɪv/. Jev uses /dʒɛv/. “Menú” and “Buscar” appear as original on-screen labels. The 88 BPM score ducks beneath speech. The five motion effects are supplied under the [Pixabay Content License](https://pixabay.com/service/license-summary/). [Approved narration](film/narration.json) · [Synthesized phonemes](film/pronunciation.json)
-
-To rebuild the evidence plates, run the commands below. The live-site captures measure the target in an isolated browser. The Jev script renders the recorded Meridiano rows offline at 3× device scale. Each script closes its browser when finished.
+For fresh captures, build the extension runtime before capturing Reading view. The live Meridiano capture uses the repository’s configured Jev key. Site changes can alter future results.
 
 ```sh
-node launch/scripts/capture-contrast.mjs
+node scripts/build-runtime.mjs
+node launch/scripts/capture-popup.mjs
 node launch/scripts/capture-reader.mjs
+node launch/scripts/capture-contrast.mjs
 node launch/scripts/capture-report.mjs
-node launch/scripts/jev-plates.mjs
+CAPTURE_SITE=mass CAPTURE_DIR="$FILM_CACHE/navigation" node launch/scripts/capture.mjs
+"$FILM_PYTHON" launch/scripts/nav-plates.py "$FILM_CACHE/navigation"
 ```
 
 ## Delivery checks
 
-[Word-to-frame sync](out/sync.json) measures consecutive decoded frames in the event region. [Geometry](out/geometry.json) measures the visible union of real source rectangles after overlays and the maximum source-pixel scale on every product frame. [Delivery verification](out/verification.json) includes format, loudness, speech recognition, frame motion, source-pack identity and decoded-still sharpness. [Midpoint review](out/beats/index.json) identifies one full-resolution decoded image for each beat in both cuts and records the visible letter heights of both button labels at each Jev midpoint. [Navigation review](out/stills/navigation/README.md) measures lettering at both desktop and phone sizes.
-
-| Encoded measurement | Launch film | Teaser |
-|---|---:|---:|
-| Duration | 2:25.133 | 0:15.000 |
-| 1920 × 1080 H.264 frames at 30 fps | 4,354 | 450 |
-| Word-linked visual changes within ±0.2 s | 60/60 | 7/7 |
-| Largest absolute offset | 0.0323 s | 0.026334 s |
-| Integrated loudness | −16.0 LUFS | −16.0 LUFS |
-| True peak | −1.6 dBTP | −2.2 dBTP |
-| Words matched in full-cut Whisper pass | 415/418 | 34/34 |
-
-Whisper recovered every narrated count and both instances of “live.” Its uninterrupted master pass heard “then” for “Step one” and “lock” for “locked.” Rechecking those two encoded scenes separately recovered both phrases. The pronunciation record confirms /laɪv/ in both lines. Speech measured 13.7 dB above the ducked score in the approved mix. The Jev picture revision retains those stem measurements from the identical AAC track. [Full transcript](out/transcript.txt) · [Scene rechecks](out/verification.json)
-
-All 67 beat midpoints were inspected. Across the 15 product scenes, the lowest visible source area was 71.01% and the largest source scale was 1.25×. All 15 Kane stills matched their archived evidence-pack members byte for byte.
+Verification decodes consecutive frames across each edit and measures signed offsets against the spoken word. It also checks frame count, source magnification, both caption tracks, master and teaser transcripts, pronunciation, loudness and the archived Kane screenshot bytes. The contact sheet contains one decoded frame every half second from both cuts. [Contact sheet](out/contact.png) · [Word sync](out/sync.json) · [Verification](out/verification.json) · [Full transcript](out/transcript.txt)

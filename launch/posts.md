@@ -2,23 +2,20 @@
 
 ## Hacker News
 
-**Show HN: Curb Cut repairs accessibility barriers in your browser**
+**Show HN: Curb Cut fixes accessibility barriers in your browser**
 
-On Mass.edu, a keyboard user can reach About and still miss every link inside it. The film shows the same keys opening the repaired menu and reaching The DHE. On Munich Airport, a screen reader can identify the previous-slide button once it has a name. Kane recorded both journeys. [Watch the film](curbcut-launch.mp4)
+Press Tab on Mass.edu. The About menu gets focus, but its links stay out of reach. Turn on Curb Cut and the same key opens the menu. On Munich Airport a screen reader can now identify the previous-slide button. [Watch the launch film](curbcut-launch.mp4)
 
-We froze the repair code before testing 2,050 previously unseen sites. Local tests confirmed 99 of 142 repairs, including 51 of 89 hard journeys. We tested five additional failure types on 400 more sites and confirmed 76 of 118 repairs. Form labels were covered in the first study. [V5 outcomes](../proof/heldout-v5/local-summary.json) · [V6 outcomes](../proof/heldout-v6/local-summary.json)
+The Curb Cut Chrome extension ships 105 fixes. The popup lets you inspect the evidence for a fix and send the proposed source change to the people who run the site. The film follows one Mass.edu keyboard task through Kane’s failed and successful attempts. [Evidence](../proof/README.md) · [Get Curb Cut for Chrome](https://github.com/VasuBansal7576/curbcut)
 
-Kane independently verified 11 of 20 sampled v5 repairs and 7 of 15 sampled v6 naming repairs. The extension ships 105 fixes. Of those, 61 have Kane recordings and 44 have local proof. You can send the exact source change and the evidence to the site owner. [Evidence index](../proof/README.md)
+## X
 
-## X thread
+Press Tab. The menu won’t open. Same site, same key, Curb Cut on. Now it opens. [15-second film](curbcut-launch-15s.mp4)
 
-1. Try reaching The DHE from the About menu on Mass.edu with only a keyboard. Watch what happens with the extension off and on. [15-second film](curbcut-launch-15s.mp4)
-2. An unnamed Munich Airport control becomes “Vorherige Folie,” or “previous slide.” On ExtremeTerrain, a small colour change moves the Details link from 4.39:1 to 4.50:1. The first has a Kane replay. The second has a measured local contrast check. [Launch film](curbcut-launch.mp4)
-3. Frozen-code tests recorded 99/142 local repairs across 2,050 previously unseen sites, then 76/118 on 400 more. Kane verified 11/20 and 7/15 in separate samples. [Study records](../proof/README.md)
-4. Jev can name controls on unfamiliar pages when you opt in. On Meridiano it named the menu and search buttons “Menú” and “Buscar.” Reviewers judged 13 of 15 applied names correct across seven real sites. [Live naming evidence](../proof/jev/live-naming-real-sites.json)
+Curb Cut gives unnamed buttons a label, makes faint text readable and puts the evidence for each shipped fix in the extension. On unfamiliar sites, the optional Jev experiment can name a control or leave it alone when uncertain. [Get Curb Cut for Chrome](https://github.com/VasuBansal7576/curbcut)
 
 ## LinkedIn
 
-On Munich Airport, the previous-slide button appeared in Reading view without a name. Curb Cut supplied “Vorherige Folie.” Kane then found and selected the exact row. The extension can give the site owner the same source change and the before-and-after recordings. [Watch the film](curbcut-launch.mp4)
+On Munich Airport, a screen reader used to announce the carousel control as “button.” With Curb Cut it reads “Vorherige Folie,” German for “previous slide.” On Meridiano, the opt-in Jev experiment found names for the menu and search buttons. [Launch film](curbcut-launch.mp4)
 
-There are 105 fixes in the extension, 61 verified by Kane and 44 supported by local checks. Each patch can retire once the site passes the same check on its own. The opt-in Jev naming experiment is reported separately. On real sites, 13 of its 15 applied names were correct. [Bundled fixes](../extension/bundled.json) · [Naming study](../proof/jev/live-naming-real-sites.json)
+There are 105 active fixes. Anyone can open the popup and send a site owner the proposed change, the barrier it addresses and the supporting evidence. The long-term goal is for the site to work on its own. [Get Curb Cut for Chrome](https://github.com/VasuBansal7576/curbcut)
