@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curb Cut instant fix settings</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="panel" aria-labelledby="jev-heading">
+      <h1 id="jev-heading">Instant fix settings</h1>
+      <p>When you press Alt+Shift+F or choose “I’m stuck — fix this page”, Curb Cut sends TypeSafe Jev a visible-tab screenshot and a short description of nearby page elements, including labels, layout, and the page path. Use instant fixes on public pages. A page with a populated editable field or sign-in form is skipped.</p>
+      <p>Repairs apply to the current tab. Press Escape to undo. Curb Cut queues the temporary rules and a generated task with your local Curb Cut server for Kane verification.</p>
+      <form id="jev-form">
+        <label class="field" for="jev-key">
+          <span>TypeSafe API key</span>
+          <input id="jev-key" type="password" autocomplete="off" placeholder="Leave blank to use the local server">
+        </label>
+        <button type="submit" class="primary">Save</button>
+      </form>
+      <p id="jev-status" role="status"></p>
+    </section>
+  </main>
+  <script src="lib/jev-config.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

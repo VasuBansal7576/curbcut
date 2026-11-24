@@ -59,6 +59,11 @@
         <h2 id="stuck-heading">I’m stuck</h2>
         <kbd class="hotkey">Ctrl+Shift+U</kbd>
       </div>
+      <button id="instant-fix" type="button" class="primary wide">I’m stuck — fix this page</button>
+      <p class="hint">Alt+Shift+F shares a screenshot and nearby page elements with TypeSafe.
+        <button id="instant-settings" type="button" class="text-btn">Instant fix settings</button>
+      </p>
+      <p id="instant-status" class="status" role="status"></p>
       <p class="hint">Public pages only. Snapshot skips passwords, login, and checkout.</p>
       <label class="field" for="persona-select">
         <span>Persona</span>
@@ -108,5 +113,6 @@
   <script src="lib/select.js"></script>
   <script src="lib/sensitive.js"></script>
   <script type="module" src="popup.js"></script>
+  <script type="module" src="instant-popup.js"></script>
 </body>
 </html>

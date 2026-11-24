@@ -12,12 +12,14 @@
     "clipboardWrite"
   ],
   "host_permissions": [
-    "http://127.0.0.1:4317/*",
-    "http://*/*",
-    "https://*/*"
+    "<all_urls>"
   ],
   "background": {
     "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
   },
   "action": {
     "default_title": "Curb Cut",
@@ -36,6 +38,10 @@
     "128": "icons/icon128.png"
   },
   "commands": {
+    "instant-fix": {
+      "suggested_key": { "default": "Alt+Shift+F" },
+      "description": "Try an instant accessibility repair"
+    },
     "im-stuck": {
       "suggested_key": {
         "default": "Ctrl+Shift+U",
@@ -57,7 +63,8 @@
         "lib/validate.js",
         "lib/select.js",
         "lib/sensitive.js",
-        "content.js"
+        "content.js",
+        "instant-content.js"
       ],
       "run_at": "document_idle",
       "all_frames": false
