@@ -86,4 +86,11 @@ The public replays used hand-authored candidate rules and separate fresh Chrome 
 
 Work on publicly readable pages in fresh browser profiles. Stop before login, payment or signup. Curb Cut records task-level outcomes and does not certify a site’s overall accessibility. The hosted Kane and Codex services receive the inputs needed for an explicitly started live run. Local replays with saved candidates need neither service. The reports and posts in this repository are local drafts.
 
-The extension ships no remote JavaScript. Patch data uses a fixed action set. Site-specific repairs such as extending a timeout require a matching page mechanism, and the Escape repair supports native dialogs or an identifiable close control. Candidate public repairs stay out of the shared feed until they have Kane evidence.
+The extension ships no remote JavaScript. Patch data uses a fixed action set. Site-specific repairs such as extending a timeout require a matching page mechanism, and the Escape repair supports native dialogs or an identifiable close control. Public name and interaction repairs enter the shared feed after the required Kane task replay. V6 contrast and document language repairs can enter with local browser measurements and are marked Local proof.
+
+
+## V6 coverage
+
+The v6 scout checks rendered accessible names, text contrast and document language. It commits the sample before scouting and the preflight-passing task list before repair. The contrast and language checks measure the page before applying the JSON rule, immediately after applying it and after removing it. The installed extension audit checks the same observable condition in fresh pages with the extension off and on. [V6 protocol and calibration](../heldout-v6/README.md)
+
+The report button in the popup and `curbcut report <patch-id>` produce the same Markdown. The report identifies the rule and criterion, includes the source attribute or CSS change where applicable, and links to the evidence on GitHub. Copy and download keep the report on the user's device.
