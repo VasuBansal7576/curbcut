@@ -1,0 +1,30 @@
+{
+  "status": "inconclusive",
+  "runId": "16996ae9-0632-42b0-b23b-2e6e7188ce8c",
+  "credits": null,
+  "exitCode": 2,
+  "exitSignal": null,
+  "steps": [],
+  "preflight": {
+    "persona": "keyboard-only",
+    "status": "pass",
+    "url": "http://127.0.0.1:4317/fixtures/shop/",
+    "httpStatus": 200,
+    "width": 1280,
+    "browser": "159.0.8154.6"
+  },
+  "objective": "Use only keyboard input. Use Tab or Shift+Tab to move focus and Enter or Space to activate the exact control. Move in whichever direction is shorter. Group repeated Tab presses if supported, checking focus frequently. Do not click, focus elements directly, use JavaScript, or navigate directly to the destination. Keep focus on the page. When the exact control receives focus, activate it and check the outcome once. Stay on this public site. Do not sign in, register, pay, send or submit anything, or interact with a CAPTCHA or access challenge. Leave fixture settings unchanged. Use visible controls only. Search for headphones and add Field Headphones to the cart. Confirm Cart (1).",
+  "kaneStatus": "inconclusive",
+  "limits": {
+    "maxSteps": 50,
+    "timeout": 360,
+    "assertionMode": "dom"
+  },
+  "evidenceError": "No sealed Kane pack was found in the session.",
+  "integrity": "No sealed Kane pack was found in the session.",
+  "outcomeChecks": [],
+  "runner": "kane",
+  "recordingTrail": [],
+  "inspection": null,
+  "video": ".curbcut/check/keyboard-add-headphones/2026-11-24T18-09-54.850Z/attempt-1/after/recording.mp4"
+}

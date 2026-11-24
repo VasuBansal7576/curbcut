@@ -11,7 +11,7 @@ export const forbiddenJourneyAction=value=>restrictedAction.test(value)
 const personas=new Set(['keyboard-only','low-vision','screen-reader-view','color-blind','low-contrast-simulation','document-language'])
 const restricted=/(?:^|[/?&=_-])(?:log[-_]?in|sign[-_]?(?:up|in)|checkout|payment|register|oauth|password|account)(?:[/?&=_.-]|$)/i
 const restrictedHost=/^(?:accounts?|auth|checkout|login|oauth|payments?|signin|sso)$/i
-export function fixtureURL(url) {return url.origin==='http://127.0.0.1:4317' && url.pathname.startsWith('/fixtures/shop/')}
+export function fixtureURL(url) {return url.protocol==='http:' && loopbackHost(url.hostname) && url.pathname.startsWith('/fixtures/shop/')}
 export function loopbackHost(hostname) {
   return ['127.0.0.1','localhost','::1'].includes(hostname.replace(/^\[|\]$/g,'').toLowerCase())
 }
