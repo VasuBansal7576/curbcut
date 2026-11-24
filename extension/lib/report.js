@@ -31,6 +31,8 @@ const native={
   extendTimeout:'Update the source timeout and give the visitor control over additional time.'
 }
 const line=value=>String(value).replace(/[\r\n]+/g,' ').replace(/[\\`*_{}<>\[\]]/g,'\\$&')
+const sortedEntries=value=>Object.entries(value).sort(([a],[b])=>a.localeCompare(b,'en'))
+const orderedJSON=(_,value)=>value && typeof value==='object' && !Array.isArray(value)?Object.fromEntries(sortedEntries(value)):value
 const attr=value=>String(value).replace(/[&"<>]/g,char=>({'&':'&amp;','"':'&quot;','<':'&lt;','>':'&gt;'}[char]))
 function code(language,value) {
   const fence='`'.repeat(Math.max(3,...[...value.matchAll(/`+/g)].map(match=>match[0].length+1)))
@@ -45,9 +47,9 @@ function source(rule) {
   if(['injectCSS','setContrast','restoreFocusOutline'].includes(rule.action)) {
     const declarations=rule.action==='restoreFocusOutline'?{outline:'3px solid Highlight','outline-offset':'3px'}:rule.value
     const selector=rule.action==='restoreFocusOutline'?':is('+rule.selector+'):focus-visible':rule.selector
-    return code('diff',['+ '+selector+' {',...Object.entries(declarations).map(([key,value])=>'+   '+key+': '+value+';'),'+ }'].join('\n'))
+    return code('diff',['+ '+selector+' {',...sortedEntries(declarations).map(([key,value])=>'+   '+key+': '+value+';'),'+ }'].join('\n'))
   }
-  return native[rule.action]+'\n\n'+code('json',JSON.stringify(rule,null,2))
+  return native[rule.action]+'\n\n'+code('json',JSON.stringify(rule,orderedJSON,2))
 }
 
 function evidencePath(value) {

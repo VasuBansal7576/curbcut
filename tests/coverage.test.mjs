@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import {readFile} from 'node:fs/promises'
+import {mkdtemp,readFile,rm} from 'node:fs/promises'
+import {tmpdir} from 'node:os'
+import path from 'node:path'
 import {chromium} from 'playwright'
 import {contrastRepair,measureContrast,rgb} from '../core/contrast.js'
 import {detectLanguage,observeCoverage} from '../core/coverage.mjs'
@@ -98,4 +100,54 @@ test('CLI uses the same Markdown formatter as the popup and links archived Kane 
   assert.match(report,/color: #767676;/)
   assert.match(report,/Local proof/)
   assert(!report.includes('Kane'))
+})
+
+test('installed popup copies and downloads the CLI report without submitting it',async()=>{
+  const profile=await mkdtemp(path.join(tmpdir(),'curbcut-report-test-'))
+  const extension=path.resolve('extension')
+  const id='v4-86f207deeb57-7bc09a21'
+  const patch=await readJSON('patches/'+id+'.json')
+  let context
+  try {
+    context=await chromium.launchPersistentContext(profile,{channel:'chromium',headless:true,acceptDownloads:true,
+      args:['--disable-extensions-except='+extension,'--load-extension='+extension]})
+    await context.route('**/*',route=>{
+      const target=route.request().url()
+      if(target.startsWith('chrome-extension:')) return route.continue()
+      if(target!==patch.match) return route.abort()
+      return route.fulfill({contentType:'text/html',body:'<style>#menu ul {display:none} #menu:hover ul {display:block}</style><div id="mainnav"><nav><ul><li id="menu"><a href="/about">About</a><ul><li><a href="/dhe">The DHE</a></li></ul></li></ul></nav></div>'})
+    })
+    const worker=context.serviceWorkers()[0]??await context.waitForEvent('serviceworker')
+    const page=context.pages()[0]??await context.newPage()
+    await page.goto(patch.match)
+    const popup=await context.newPage()
+    const popupUrl=new URL('popup.html',worker.url()).href
+    await popup.goto(popupUrl)
+    const ready=await popup.evaluate(async url=>{
+      const tabs=await chrome.tabs.query({})
+      const tab=tabs.find(tab=>tab.url===url)
+      if(!tab) return false
+      await chrome.storage.local.set({pendingStuck:true,capturedTabId:tab.id})
+      const deadline=Date.now()+5000
+      while(Date.now()<deadline) {
+        const result=await chrome.runtime.sendMessage({type:'QUERY_ACTIVE',capturedTabId:tab.id,includeMatches:true})
+        if(result.active?.some(item=>item.matchedRules?.length)) return true
+        await new Promise(resolve=>setTimeout(resolve,100))
+      }
+      return false
+    },patch.match)
+    assert(ready,'The installed patch matched the page')
+    await popup.reload()
+    const panel=popup.locator('[data-patch-id="'+id+'"]')
+    await panel.getByText('Send the fix to the site owner').click()
+    await panel.getByRole('button',{name:'Copy Markdown'}).click()
+    await panel.getByText('Copied.',{exact:true}).waitFor()
+    const [download]=await Promise.all([popup.waitForEvent('download'),
+      panel.getByRole('button',{name:'Download .md'}).click()])
+    assert.equal(download.suggestedFilename(),id+'.md')
+    assert.equal(await readFile(await download.path(),'utf8'),createReport(patch))
+  } finally {
+    await context?.close()
+    await rm(profile,{recursive:true,force:true})
+  }
 })
