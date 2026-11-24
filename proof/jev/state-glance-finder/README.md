@@ -10,7 +10,7 @@ Seed `curbcut-jev-state-glance-finder-v1`. Decision model `jev-1.14.0`. Isolated
 
 City-services fixture (`fixtures/shop/jev-state.html`): Jev applied `aria-selected=true` on Hours (0.95), `aria-invalid=true` on the red permit field (0.98, error choice 0.92), and `aria-current=page` on Permits (0.94). Custom checked, disabled, and collapsed disclosure were left untouched. 3 correct, 0 wrong, 42 abstained on that page.
 
-Glance fixture: dialog yes at 0.90 (IoU 0.91), error yes at 0.99 (IoU 0.80), cookie 0.57 abstained, main box 0.30 abstained, primary action box 0.85 (IoU 0.69).
+Glance fixture: dialog yes at 0.90 (IoU 0.91), error yes at 0.99 (IoU 0.80), cookie 0.57 abstained. Jev boxes on that fixture, later dropped: main 0.30 abstained, primary action 0.85 (IoU 0.69).
 
 Finder fixture: all three queries (`parking ticket`, `birth certificate`, `bulk trash`) hit literal matches inside the collapsed menu. Jev was not asked.
 
@@ -31,17 +31,21 @@ Kane was not started. The repair engine has no `aria-selected` action, so an aft
 
 ## Glance
 
+Ships the three yes/no items. Jump targets use the DOM: a visible `main` or `[role=main]`, otherwise the largest visible article or main-like region. Primary action is not shipped. A first-button-in-main heuristic hits the fixture Renew control and is not reliable on public pages.
+
 Same 16 measured pages.
 
-| Question | n | Correct | Wrong | Abstained |
-| --- | ---: | ---: | ---: | ---: |
-| Dialog open | 16 | 14 | 2 | 0 |
-| Cookie banner | 16 | 15 | 0 | 1 |
-| Error visible | 16 | 15 | 0 | 1 |
-| Main content box | 16 | 2 | 0 | 14 |
-| Primary action box | 16 | 0 | 3 | 13 |
+| Question | n | Correct | Wrong | Abstained | Ships |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Dialog open | 16 | 14 | 2 | 0 | yes |
+| Cookie banner | 16 | 15 | 0 | 1 | yes |
+| Error visible | 16 | 15 | 0 | 1 | yes |
+| Main content box | 16 | 2 | 0 | 14 | dropped |
+| Primary action box | 16 | 0 | 3 | 13 | dropped |
 
-Dialog false positives: woah.org, samcart.com. Box questions mostly abstain at the 0.70 floor; the three primary-action boxes that cleared it missed the labelled control (IoU under 0.45).
+Dialog false positives: woah.org, samcart.com.
+
+Jev box questions were measured on this run, then dropped from the product: main 2/16, primary action 0/16 with 3 wrong (IoU under 0.45). The 0.70 box floor stays frozen as a historical constant. Raw box answers remain in [results.json](results.json).
 
 ## Find a service
 

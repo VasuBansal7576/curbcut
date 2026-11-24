@@ -69,13 +69,10 @@ test('glance and finder decisions parse typed Jev answers',async t=>{
   t.mock.method(globalThis,'fetch',async(_url,request)=>{
     const body=JSON.parse(request.body)
     if(body.questions.dialog) {
+      assert.equal(body.questions.dialogBox,undefined)
+      assert.equal(body.questions.main,undefined)
       return Response.json({model:'jev-test',answers:{
-        dialog:{noul:0.96},cookie:{noul:0.1},error:{noul:0.91},
-        dialogBox:{box:{left:0.2,right:0.8,top:0.2,bottom:0.7},confidence:0.9},
-        cookieBox:{box:{left:0,right:0.01,top:0,bottom:0.01},confidence:0.2},
-        errorBox:{box:{left:0.1,right:0.9,top:0.1,bottom:0.2},confidence:0.88},
-        main:{box:{left:0.05,right:0.95,top:0.15,bottom:0.85},confidence:0.93},
-        action:{box:{left:0.1,right:0.3,top:0.7,bottom:0.8},confidence:0.81}
+        dialog:{noul:0.96},cookie:{noul:0.1},error:{noul:0.91}
       }})
     }
     return Response.json({model:'jev-test',answers:{match:{choice:'l0',confidence:0.91}}})
@@ -84,7 +81,8 @@ test('glance and finder decisions parse typed Jev answers',async t=>{
   const glance=await askGlance('test-only',screenshot)
   assert.equal(glance.items.find(item=>item.kind==='dialog').yes,true)
   assert.equal(glance.items.find(item=>item.kind==='cookie').yes,false)
-  assert.ok(glance.items.find(item=>item.kind==='main').box)
+  assert.equal(glance.items.find(item=>item.kind==='error').yes,true)
+  assert.equal(glance.items.some(item=>item.kind==='main' || item.kind==='action' || item.box),false)
   const finder=await askFinder('test-only','pay a parking ticket',[{id:'l0',text:'Pay a parking ticket',href:'https://city.example/tickets'}])
   assert.equal(finder.chosen.id,'l0')
 })
@@ -110,6 +108,31 @@ test('visual state collection, apply, and undo run on the development fixture',a
       return document.querySelector('#hours-tab').hasAttribute('aria-selected')
     })
     assert.equal(restored,false)
+  } finally {await browser.close()}
+},{timeout:20000})
+
+test('glance jump targets use the main landmark and skip a primary action',async()=>{
+  const html=await readFile(new URL('../fixtures/shop/jev-glance.html',import.meta.url),'utf8')
+  const browser=await chromium.launch({channel:'chromium',headless:true,args:['--mute-audio']})
+  try {
+    const page=await browser.newPage({viewport:{width:1280,height:800}})
+    await page.setContent(html,{waitUntil:'load'})
+    await page.addScriptTag({path:new URL('../extension/runtime.js',import.meta.url).pathname})
+    const regions=await page.evaluate(()=>{
+      const found=CurbCut.glanceRegions()
+      return {
+        main:found.main?.id||found.main?.localName,
+        dialog:found.dialog?.id,
+        cookie:found.cookie?.id,
+        error:found.error?.id,
+        focused:CurbCut.focusGlanceNode(found.main)?.localName
+      }
+    })
+    assert.equal(regions.main,'main')
+    assert.equal(regions.dialog,'hours-dialog')
+    assert.equal(regions.cookie,'cookie')
+    assert.equal(regions.error,'renew-error')
+    assert.equal(regions.focused,'main')
   } finally {await browser.close()}
 },{timeout:20000})
 

@@ -35,15 +35,6 @@ const percentile=(values,p)=>{
   const index=Math.min(ranked.length-1,Math.max(0,Math.ceil(ranked.length*p)-1))
   return ranked[index]
 }
-const iou=(a,b)=>{
-  if(!a || !b) return 0
-  const left=Math.max(a.left,b.left),right=Math.min(a.right,b.right)
-  const top=Math.max(a.top,b.top),bottom=Math.min(a.bottom,b.bottom)
-  const inter=Math.max(0,right-left)*Math.max(0,bottom-top)
-  const union=(a.right-a.left)*(a.bottom-a.top)+(b.right-b.left)*(b.bottom-b.top)-inter
-  return union?inter/union:0
-}
-
 async function cropPairs(page,screenshot,targets,viewport) {
   return page.evaluate(async ({screenshot,targets,viewport})=>{
     const blob=await (await fetch(screenshot)).blob()
@@ -145,21 +136,14 @@ function judgeState(labels,decisions) {
 
 function judgeGlance(label,items) {
   const by=Object.fromEntries(items.map(item=>[item.kind,item]))
-  const flag=(kind,labelled,box)=>{
-    const item=by[kind]
-    if(kind==='main' || kind==='action') {
-      const hit=item?.box && iou(item.box,box)>=0.45
-      return {kind,labelled:true,yes:Boolean(item?.box),correct:hit,wrong:Boolean(item?.box) && !hit,abstained:!item?.box,iou:iou(item?.box,box)}
-    }
-    const yes=item?.yes===true
-    return {kind,labelled,yes,correct:yes===labelled,wrong:yes && !labelled,abstained:!yes && labelled,iou:item?.box && box?iou(item.box,box):null}
+  const flag=(kind,labelled)=>{
+    const yes=by[kind]?.yes===true
+    return {kind,labelled,yes,correct:yes===labelled,wrong:yes && !labelled,abstained:!yes && labelled}
   }
   return [
-    flag('dialog',label.dialog,label.dialogBox),
-    flag('cookie',label.cookie,label.cookieBox),
-    flag('error',label.error,label.errorBox),
-    flag('main',true,label.mainBox),
-    flag('action',true,label.actionBox)
+    flag('dialog',label.dialog),
+    flag('cookie',label.cookie),
+    flag('error',label.error)
   ]
 }
 
@@ -355,10 +339,15 @@ try {
   }
   const stateRows=summary.public.pages.flatMap(page=>page.rows||[])
   summary.public.state=tally(stateRows)
-  summary.public.glanceAccuracy=Object.fromEntries(['dialog','cookie','error','main','action'].map(kind=>{
+  summary.public.glanceAccuracy=Object.fromEntries(['dialog','cookie','error'].map(kind=>{
     const rows=summary.public.glance.flatMap(page=>page.rows||[]).filter(row=>row.kind===kind)
     return [kind,{n:rows.length,correct:rows.filter(row=>row.correct).length,wrong:rows.filter(row=>row.wrong).length,abstained:rows.filter(row=>row.abstained).length}]
   }))
+  summary.public.glanceDropped={
+    main:{n:16,correct:2,wrong:0,abstained:14},
+    action:{n:16,correct:0,wrong:3,abstained:13},
+    reason:'Jev box answers measured 2026-11-24 then dropped. Glance ships dialog, cookie, and error. Jumps use the DOM main landmark.'
+  }
   for(const site of civic) {
     const result=await measureFinder(key,browser,site)
     summary.finder.sites.push(result)
@@ -408,13 +397,17 @@ Reference labels were taken from the rendered page (computed style, visible clas
 
 ## Glance
 
-| Question | n | Correct | Wrong | Abstained |
-| --- | ---: | ---: | ---: | ---: |
-| Dialog open | ${glance.dialog?.n??0} | ${glance.dialog?.correct??0} | ${glance.dialog?.wrong??0} | ${glance.dialog?.abstained??0} |
-| Cookie banner | ${glance.cookie?.n??0} | ${glance.cookie?.correct??0} | ${glance.cookie?.wrong??0} | ${glance.cookie?.abstained??0} |
-| Error visible | ${glance.error?.n??0} | ${glance.error?.correct??0} | ${glance.error?.wrong??0} | ${glance.error?.abstained??0} |
-| Main content box | ${glance.main?.n??0} | ${glance.main?.correct??0} | ${glance.main?.wrong??0} | ${glance.main?.abstained??0} |
-| Primary action box | ${glance.action?.n??0} | ${glance.action?.correct??0} | ${glance.action?.wrong??0} | ${glance.action?.abstained??0} |
+Ships the three yes/no items. Jump targets use the DOM main landmark or largest article-like region. Primary action is not shipped.
+
+| Question | n | Correct | Wrong | Abstained | Ships |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Dialog open | ${glance.dialog?.n??0} | ${glance.dialog?.correct??0} | ${glance.dialog?.wrong??0} | ${glance.dialog?.abstained??0} | yes |
+| Cookie banner | ${glance.cookie?.n??0} | ${glance.cookie?.correct??0} | ${glance.cookie?.wrong??0} | ${glance.cookie?.abstained??0} | yes |
+| Error visible | ${glance.error?.n??0} | ${glance.error?.correct??0} | ${glance.error?.wrong??0} | ${glance.error?.abstained??0} | yes |
+| Main content box | 16 | 2 | 0 | 14 | dropped |
+| Primary action box | 16 | 0 | 3 | 13 | dropped |
+
+Jev box questions were measured on the 2026-11-24 public run, then dropped. Raw answers remain in results.json.
 
 ## Find a service
 

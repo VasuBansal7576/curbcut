@@ -222,9 +222,37 @@ export function focusFromBox(box) {
   const y=((box.top+box.bottom)/2)*innerHeight
   let node=document.elementFromPoint(x,y)
   if(!node || node.closest(excluded)) return null
-  const focusable=node.closest('a[href],button,input,select,textarea,summary,[tabindex]:not([tabindex="-1"]),[role=button],[role=link],[role=tab]')
-  const target=focusable||node.closest('main,[role=main],article,section,header,nav')||node
-  if(target.tabIndex<0 && !target.matches('a[href],button,input,select,textarea,summary')) target.tabIndex=-1
-  try {target.focus({preventScroll:false})} catch {return null}
-  return target
+  return focusGlanceNode(node.closest('a[href],button,input,select,textarea,summary,[tabindex]:not([tabindex="-1"]),[role=button],[role=link],[role=tab]')
+    || node.closest('main,[role=main],article,section,header,nav') || node)
+}
+
+function area(node) {
+  const box=node.getBoundingClientRect()
+  return Math.max(0,Math.min(innerWidth,box.right)-Math.max(0,box.left))*Math.max(0,Math.min(innerHeight,box.bottom)-Math.max(0,box.top))
+}
+
+export function glanceMain() {
+  const landmark=[...document.querySelectorAll('main,[role=main]')].find(node=>visible(node) && !node.closest(excluded))
+  if(landmark) return landmark
+  const ranked=[...document.querySelectorAll('article,[role=article],#content,#main,.content,.main')]
+    .filter(node=>visible(node) && !node.closest(excluded) && !node.closest('header,nav,footer,aside,[role=banner],[role=navigation],[role=contentinfo],[role=complementary]'))
+    .sort((a,b)=>area(b)-area(a))
+  return ranked[0]||null
+}
+
+export function glanceRegions() {
+  const pick=selector=>[...document.querySelectorAll(selector)].find(node=>visible(node) && !node.closest(excluded))||null
+  return {
+    dialog:pick('dialog[open],[role=dialog],[aria-modal=true],.modal,[class*=modal i]'),
+    cookie:pick('[id*=cookie i],[class*=cookie i],[id*=consent i],[class*=consent i],[class*=gdpr i]'),
+    error:pick('[role=alert],.error,[class*=error i]'),
+    main:glanceMain()
+  }
+}
+
+export function focusGlanceNode(node) {
+  if(!node?.isConnected) return null
+  if(node.tabIndex<0 && !node.matches('a[href],button,input,select,textarea,summary')) node.tabIndex=-1
+  try {node.focus({preventScroll:false})} catch {return null}
+  return node
 }

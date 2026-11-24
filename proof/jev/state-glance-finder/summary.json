@@ -55,6 +55,11 @@
       "abstained": 13
     }
   },
+  "glanceShips": ["dialog", "cookie", "error"],
+  "glanceDropped": {
+    "kinds": ["main", "action"],
+    "reason": "Jev box answers were unusable on the public run (main 2/16, primary action 0/16 with 3 wrong). Glance ships the three yes/no items. Jumps use the DOM main landmark. Primary action is not shipped."
+  },
   "finder": {
     "questions": 24,
     "literal": 11,

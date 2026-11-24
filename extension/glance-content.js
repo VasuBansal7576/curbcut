@@ -56,19 +56,22 @@
     live.setAttribute("role", "status");
     live.setAttribute("aria-live", "polite");
     live.setAttribute("aria-atomic", "true");
-    const spoken = items.map(item => {
-      if (item.kind === "main" || item.kind === "action") return item.box ? item.label + " located." : item.label + " not located.";
-      return item.yes ? item.label + "." : "No " + item.label.toLowerCase() + ".";
-    }).join(" ");
+    const flags = items.filter(item => item.kind === "dialog" || item.kind === "cookie" || item.kind === "error");
+    const spoken = flags.map(item => item.yes ? item.label + "." : "No " + item.label.toLowerCase() + ".").join(" ");
     live.textContent = spoken || "Nothing to report.";
     const row = document.createElement("div");
     row.className = "row";
-    for (const item of items) {
-      if (!item.box) continue;
+    const regions = CurbCut.glanceRegions();
+    const jumps = [];
+    for (const item of flags) {
+      if (item.yes && regions[item.kind]) jumps.push({ label: item.label, node: regions[item.kind] });
+    }
+    if (regions.main) jumps.push({ label: "Main content", node: regions.main });
+    for (const jump of jumps) {
       const button = document.createElement("button");
       button.type = "button";
-      button.textContent = "Jump to " + item.label;
-      button.addEventListener("click", () => CurbCut.focusFromBox(item.box));
+      button.textContent = "Jump to " + jump.label;
+      button.addEventListener("click", () => CurbCut.focusGlanceNode(jump.node));
       row.append(button);
     }
     const close = document.createElement("button");

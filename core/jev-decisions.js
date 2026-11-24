@@ -1,4 +1,4 @@
-import {askJev,box,imageAsset,noul} from './jev-policy.js'
+import {askJev,imageAsset,noul} from './jev-policy.js'
 
 export const decisionModel='jev-1.14.0'
 export const namingThresholds={name:.55,decorative:.90}
@@ -263,39 +263,22 @@ export async function visualStatePage(key,pairs,decide=(batch)=>askVisualState(k
   return rows
 }
 
-function boxAnswer(answer,threshold) {
-  const box=answer?.box
-  const confidence=probability(answer?.confidence)
-  if(confidence<threshold || !box) return null
-  const {left,right,top,bottom}=box
-  if(![left,right,top,bottom].every(value=>Number.isFinite(value) && value>=0 && value<=1) || right-left<0.01 || bottom-top<0.01) return null
-  return {left,right,top,bottom,confidence}
-}
-
 export async function askGlance(key,screenshot,thresholds=glanceThresholds) {
   const {id,asset}=imageAsset(screenshot)
   const questions={
     dialog:noul('Is a dialog, modal, or overlay currently open and covering page content?','A modal dialog or overlay is open.','No dialog is covering the page.'),
     cookie:noul('Is a cookie, consent, or privacy banner covering the main content?','A cookie or consent banner covers the content.','No cookie or consent banner is covering the content.'),
-    error:noul('Is an error, alert, or validation message visible on the page?','A visible error or alert is present.','No error message is visible.'),
-    dialogBox:box('Locate the open dialog, modal, or overlay. If none is open, mark an empty unused corner.'),
-    cookieBox:box('Locate the cookie, consent, or privacy banner. If none is present, mark an empty unused corner.'),
-    errorBox:box('Locate the visible error, alert, or validation message. If none is present, mark an empty unused corner.'),
-    main:box('Locate the main content region of the page.'),
-    action:box('Locate the primary action a visitor would use next, such as a main button or key link.')
+    error:noul('Is an error, alert, or validation message visible on the page?','A visible error or alert is present.','No error message is visible.')
   }
   const {answers,providerMs,model}=await askJev(key,{model:decisionModel,state:id,questions,assets:{[id]:asset}},{timeout:20000})
   const flag=(kind,label)=>{
     const score=probability(answers?.[kind]?.noul)
-    const region=score>=thresholds.noul?boxAnswer(answers?.[kind+'Box'],thresholds.box):null
-    return {kind,label,yes:score>=thresholds.noul,score,box:region}
+    return {kind,label,yes:score>=thresholds.noul,score}
   }
   const items=[
     flag('dialog','Dialog open'),
     flag('cookie','Cookie banner covering content'),
-    flag('error','Error message visible'),
-    {kind:'main',label:'Main content',yes:true,score:probability(answers?.main?.confidence),box:boxAnswer(answers?.main,thresholds.box)},
-    {kind:'action',label:'Primary action',yes:true,score:probability(answers?.action?.confidence),box:boxAnswer(answers?.action,thresholds.box)}
+    flag('error','Error message visible')
   ]
   return {items,providerMs,model,answers}
 }
