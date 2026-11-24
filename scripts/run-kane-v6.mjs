@@ -1,10 +1,12 @@
 import assert from 'node:assert/strict'
 import path from 'node:path'
 import {instant} from '../core/io.mjs'
+import {siteKey} from '../core/task.mjs'
 import {requireKane} from '../core/kane.mjs'
 import {categories} from '../core/coverage.mjs'
 import {directory,frozen,input,read,save} from './freeze-v6.mjs'
 import {git,sha256} from './scout-v4.mjs'
+import {runCoverageEvidence} from './kane-evidence-v6.mjs'
 
 const freeze=await frozen()
 const calibration=await read('calibration/summary.json')
@@ -19,7 +21,6 @@ const collect=seed=>Object.fromEntries(eligible.map(category=>[category,pool.fil
   .map(row=>({id:row.id,rank:sha256(seed+'\n'+row.id),candidateSha256:sha256(JSON.stringify(row.patch))}))
   .sort((a,b)=>a.rank.localeCompare(b.rank)).slice(0,5)]))
 
-import {runCoverageEvidence} from './kane-evidence-v6.mjs'
 
 const evidenceFiles=['scripts/run-kane-v6.mjs','scripts/kane-evidence-v6.mjs']
 const selectionFile='kane-selection.json'
@@ -30,7 +31,8 @@ if(process.argv[2]==='seal') {
     evidenceRunner[file]=await git(['rev-parse','HEAD:'+file])
     assert.equal(await git(['hash-object','--no-filters',file]),evidenceRunner[file])
   }
-  await save(selectionFile,{...selection,phaseReserve:125,evidenceRunner})
+  await save(selectionFile,{...selection,phaseReserve:125,concurrency:2,
+    runOrder:'Interleave categories by selected rank. At most two cases run at once, and one per registrable domain.',evidenceRunner})
 } else if(process.argv[2]==='run') {
   const selectionInput=await input('kane-selection.json')
   const selection=await read(selectionFile)
@@ -44,14 +46,21 @@ if(process.argv[2]==='seal') {
   }
   const prior=await read('kane-summary.json').catch(error=>{if(error.code!=='ENOENT') throw error})
   const balance=async()=>Number((await requireKane()).match(/Available credits:\s*([\d,.]+)/)?.[1].replaceAll(',',''))
-  const threshold=Math.max(selection.minimumBalance,calibration.initialBalance-selection.maximumStudyCredits+selection.phaseReserve)
+  const threshold=Math.max(selection.minimumBalance,calibration.initialBalance-selection.maximumStudyCredits+selection.phaseReserve*selection.concurrency)
   process.env.CURBCUT_KANE_MIN_CREDITS=String(threshold)
   const summary=prior??{runner:'kane',selection:selectionInput,startedAt:instant(),studyInitialBalance:calibration.initialBalance,
     startingBalance:await balance(),threshold,cases:[]}
   const failures=new Map()
-  for(const [category,targets] of Object.entries(selection.targets)) for(const target of targets) {
-    if(summary.cases.some(row=>row.id===target.id) || summary.stopped) continue
+  const activeSites=new Set()
+  let writes=Promise.resolve()
+  const byCategory=Object.entries(selection.targets)
+  const queue=Array.from({length:5},(_,rank)=>byCategory.flatMap(([category,targets])=>{
+    const target=targets[rank]
+    if(!target || summary.cases.some(row=>row.id===target.id)) return []
     const {patch}=pool.find(row=>row.id===target.id)
+    return [{category,target,patch,site:siteKey(new URL(patch.url))}]
+  })).flat()
+  async function runCase({category,target,patch}) {
     const row={id:target.id,category,phases:{},verified:false}
     let work=patch
     if(patch.evaluation.role) {
@@ -64,11 +73,12 @@ if(process.argv[2]==='seal') {
       const attempts=[]
       row.phases[phase]=attempts
       for(let attempt=1;attempt<=2;attempt++) {
+        if(summary.stopped) break
         if(await balance()<threshold) {summary.stopped='Credit guard reached.';break}
         const relative='kane/'+target.id+'/'+phase+'-'+attempt
         let result
         try {result=await runCoverageEvidence(work,phase==='control'?'control':patch.persona,phase==='after'?patch:null,path.join(directory,relative),
-          {maxSteps:phase==='control'?10:18,timeout:160})}
+          {maxSteps:phase==='after'?18:10,timeout:160})}
         catch(error) {
           const reason=error.message.split('\n')[0]
           failures.set(reason,(failures.get(reason)??0)+1)
@@ -88,9 +98,21 @@ if(process.argv[2]==='seal') {
     })
     summary.cases.push(row)
     summary.finalBalance=await balance()
-    await save('kane-summary.json',summary)
+    writes=writes.then(()=>save('kane-summary.json',summary))
+    await writes
     console.log(row.id,category,row.verified?'verified':'unverified',summary.finalBalance)
   }
+  async function worker() {
+    while(queue.length && !summary.stopped) {
+      const index=queue.findIndex(item=>!activeSites.has(item.site))
+      if(index===-1) return
+      const [item]=queue.splice(index,1)
+      activeSites.add(item.site)
+      try {await runCase(item)}
+      finally {activeSites.delete(item.site)}
+    }
+  }
+  await Promise.all(Array.from({length:selection.concurrency},worker))
   summary.finishedAt=instant()
   summary.finalBalance=await balance()
   summary.studyCreditsUsed=Number((calibration.initialBalance-summary.finalBalance).toFixed(4))
