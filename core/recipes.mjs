@@ -4,6 +4,7 @@ import {ROOT,readJSON} from './io.mjs'
 import {contrastRepair} from './contrast.js'
 import {detectLanguage} from './coverage.mjs'
 import {selectorFields} from './widgets.js'
+import {hoverRecipeRules} from './hover.js'
 import validate from './validate.generated.cjs'
 
 export const digest=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex')
@@ -39,7 +40,7 @@ export function recipes(task,snapshot) {
     if(requiredName && value!==requiredName) continue
     add('The control lacks a name present in nearby text.',[{selector,action:'addLabel',value}])
   }
-  for(const owner of hoverOwners??[]) add('A CSS hover rule reveals a descendant.',[{selector:owner,action:'mirrorHoverToFocus'}])
+  for(const rule of hoverRecipeRules(hoverOwners)) add('A CSS hover rule reveals a descendant.',[rule])
   return out
 }
 

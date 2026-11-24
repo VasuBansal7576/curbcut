@@ -1,0 +1,43 @@
+{
+  "registrationCommit": "4977467",
+  "publicTrial": {
+    "status": "superseded",
+    "requested": 30,
+    "eligible": 81,
+    "run": 0,
+    "confirmedClass1ScoutingCases": {
+      "hard-v4": 39,
+      "heldout-v5": 44
+    },
+    "reason": "The original zero count came from passing hostnames to siteKey(), which expects URLs. The corrected historical draw was never run.",
+    "matchingRule": null,
+    "noMatch": null,
+    "wrongMatch": null,
+    "pointerRegressions": null,
+    "timeToFixMs": null,
+    "independentOracleRuns": 0
+  },
+  "installedExtensionSmoke": {
+    "syntheticCssHover": "matched",
+    "escapeUndo": "passed",
+    "bundledPatchChecks": {
+      "asme-org-tr2": "passed",
+      "cato-org-tr2": "passed",
+      "v4-86f207deeb57-7bc09a21": "passed"
+    }
+  },
+  "kane": {
+    "selected": 0,
+    "verified": 0,
+    "creditsSpent": 0
+  },
+  "checks": {
+    "build": "passed",
+    "npmTest": {
+      "passed": 38,
+      "failed": 8,
+      "reason": "A process in another worktree held 127.0.0.1:4317."
+    }
+  },
+  "correctedRegistrationCommit": "d764df9"
+}

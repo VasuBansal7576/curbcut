@@ -293,6 +293,25 @@ test('repair observations include hidden targets, ancestors, hover rules and liv
   } finally {await new Promise(resolve=>server.close(resolve))}
 })
 
+test('the hover recipe finds a shared owner beyond the trigger neighborhood',async()=>{
+  const server=await fixtureServer()
+  let browser
+  try {
+    const url='http://127.0.0.1:4317/fixtures/shop/journeys.html'
+    browser=await session({url},'control',null,tmpdir(),{local:true})
+    const rules=await browser.page.evaluate(()=>{
+      const trigger=document.querySelector('#products-trigger')
+      for(let depth=0;depth<6;depth++) {
+        const wrapper=document.createElement('div')
+        trigger.before(wrapper)
+        wrapper.append(trigger)
+      }
+      return CurbCut.menuHoverRecipes(trigger,['#porch-link'])
+    })
+    assert.deepEqual(rules,[{selector:'#products-menu',action:'mirrorHoverToFocus'}])
+  } finally {await browser?.abort();server.close()}
+})
+
 test('common widget specimens are discovered and work with patched keyboard and pointer input',async t=>{
   const {confirmBarrier,replayLane}=await import('../core/probe.mjs')
   const {normalizeTask}=await import('../core/task.mjs')

@@ -1,0 +1,1327 @@
+{
+  "seed": "curbcut-mirror-dom-v1",
+  "eligible": 81,
+  "requested": 30,
+  "entries": [
+    {
+      "site": "einpresswire.com",
+      "source": "proof/hard-v4/scouting.json",
+      "task": {
+        "id": "v4-e67da2a0e371-8a199948",
+        "url": "https://www.einpresswire.com/",
+        "persona": "keyboard-only",
+        "task": "Open “About” from keyboard focus or with Arrow Down and follow “EIN Presswire overview”. Confirm the public destination /ein-presswire-overview.",
+        "controlTask": "Hover “About”, click “EIN Presswire overview” and confirm /ein-presswire-overview.",
+        "observedSelector": "div:nth-of-type(1) > header > div > div:nth-of-type(2) > nav > ul > li:nth-of-type(1) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/ein-presswire-overview"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "div:nth-of-type(1) > header > div > div:nth-of-type(2) > nav > ul > li:nth-of-type(1)",
+          "div:nth-of-type(1) > header > div > div:nth-of-type(2) > nav > ul > li:nth-of-type(1) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "div:nth-of-type(1) > header > div > div:nth-of-type(2) > nav > ul > li:nth-of-type(1) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "div:nth-of-type(1) > header > div > div:nth-of-type(2) > nav > ul > li:nth-of-type(1) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "div:nth-of-type(1) > header > div > div:nth-of-type(2) > nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "pair.com",
+      "source": "proof/hard-v4/scouting.json",
+      "task": {
+        "id": "v4-1fde51a51c13-b5f5a97b",
+        "url": "https://www.pair.com/",
+        "persona": "keyboard-only",
+        "task": "Open “Domains” from keyboard focus or with Arrow Down and follow “Domains Pricing”. Confirm the public destination /domains-pricing/.",
+        "controlTask": "Hover “Domains”, click “Domains Pricing” and confirm /domains-pricing/.",
+        "observedSelector": "#mega-menu-item-28596 > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/domains-pricing/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#mega-menu-item-28596",
+          "#mega-sub-menu-28596"
+        ],
+        "journey": [
+          {
+            "selector": "#mega-menu-item-28596 > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#mega-menu-item-28596 > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#mega-menu-item-28598 > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "napster.com",
+      "source": "proof/hard-v4/scouting.json",
+      "task": {
+        "id": "v4-638be782228b-637f4ce2",
+        "url": "https://www.napster.com/",
+        "persona": "keyboard-only",
+        "task": "Open “For Developers” from keyboard focus or with Arrow Down and follow “Documentation”. Confirm the public destination /docs.",
+        "controlTask": "Hover “For Developers”, click “Documentation” and confirm /docs.",
+        "observedSelector": "#w-dropdown-toggle-2",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/docs"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "div:nth-of-type(2) > div > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > nav > div:nth-of-type(3)",
+          "#w-dropdown-list-2"
+        ],
+        "journey": [
+          {
+            "selector": "#w-dropdown-toggle-2",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-toggle-2",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-list-2 > a:nth-of-type(2)",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "mihanwebhost.com",
+      "source": "proof/heldout-v5/scouting.json",
+      "task": {
+        "id": "v5-9766a6ff14fe-aeb5b4d5",
+        "url": "https://mihanwebhost.com/",
+        "persona": "keyboard-only",
+        "task": "Open “میزبانی” from keyboard focus or with Arrow Down and follow “هاست لینوکس سی پنل آلمان”. Confirm the public destination /my/germany-cpanel-linux-web-host.",
+        "controlTask": "Hover “میزبانی”, click “هاست لینوکس سی پنل آلمان” and confirm /my/germany-cpanel-linux-web-host.",
+        "observedSelector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/my/germany-cpanel-linux-web-host"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2)",
+          "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > ul > li:nth-of-type(2) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "vietjack.com",
+      "source": "proof/hard-v4/scouting.json",
+      "task": {
+        "id": "v4-74e02400748b-ef29d192",
+        "url": "https://vietjack.com/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels with vertical scrolling only, hover “GIÁO ÁN - ĐỀ THI”, click “Giáo án, Bài giảng powerpoint lớp 1” and confirm /giao-an/giao-an-lop-1.jsp.",
+        "controlTask": "Hover “GIÁO ÁN - ĐỀ THI”, click “Giáo án, Bài giảng powerpoint lớp 1” and confirm /giao-an/giao-an-lop-1.jsp.",
+        "observedSelector": "#scroll-menu > ul > li:nth-of-type(14) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/giao-an/giao-an-lop-1.jsp"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#scroll-menu > ul > li:nth-of-type(14)",
+          "#scroll-menu > ul > li:nth-of-type(14) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#scroll-menu > ul > li:nth-of-type(14) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#scroll-menu > ul > li:nth-of-type(14) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#scroll-menu > ul > li:nth-of-type(14) > ul > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "mailinator.com",
+      "source": "proof/heldout-v5/scouting.json",
+      "task": {
+        "id": "v5-45ea66669cdc-c2486832",
+        "url": "https://www.mailinator.com/",
+        "persona": "keyboard-only",
+        "task": "Open “WHY MAILINATOR” from keyboard focus or with Arrow Down and follow “Applications/Solutions”. Confirm the public destination /applications-solutions/.",
+        "controlTask": "Hover “WHY MAILINATOR”, click “Applications/Solutions” and confirm /applications-solutions/.",
+        "observedSelector": "#menu-item-8021 > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/applications-solutions/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#menu-item-8021",
+          "#menu-item-8021 > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#menu-item-8021 > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-item-8021 > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-item-8037 > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "audience.io",
+      "source": "proof/hard-v4/scouting.json",
+      "task": {
+        "id": "v4-52c7859b6fdc-1dbfa8c6",
+        "url": "https://www.audience.io/",
+        "persona": "keyboard-only",
+        "task": "Open “Platform” from keyboard focus or with Arrow Down and follow “Promotions”. Confirm the public destination /promotions.",
+        "controlTask": "Hover “Platform”, click “Promotions” and confirm /promotions.",
+        "observedSelector": "#w-dropdown-toggle-0",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/promotions"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#w-node-_0fc76abe-e44c-d547-de15-6c3e7f8f7cd3-7f8f7ccf > div:nth-of-type(1)",
+          "#w-dropdown-list-0"
+        ],
+        "journey": [
+          {
+            "selector": "#w-dropdown-toggle-0",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-toggle-0",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-list-0 > a:nth-of-type(1)",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "kavirtire.ir",
+      "source": "proof/hard-v4/scouting.json",
+      "task": {
+        "id": "v4-358d06a5be14-68acbc65",
+        "url": "https://kavirtire.ir/",
+        "persona": "keyboard-only",
+        "task": "Open “محصولات” from keyboard focus or with Arrow Down and follow “کاتالوگ محصولات”. Confirm the public destination /upload/files/2025/05/catalog-fa.pdf.",
+        "controlTask": "Hover “محصولات”, click “کاتالوگ محصولات” and confirm /upload/files/2025/05/catalog-fa.pdf.",
+        "observedSelector": "#primary-navigation > ul > li:nth-of-type(2) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/upload/files/2025/05/catalog-fa.pdf"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#primary-navigation > ul > li:nth-of-type(2)",
+          "#primary-navigation > ul > li:nth-of-type(2) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#primary-navigation > ul > li:nth-of-type(2) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#primary-navigation > ul > li:nth-of-type(2) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#primary-navigation > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "washingtoncitypaper.com",
+      "source": "proof/hard-v4/scouting.json",
+      "task": {
+        "id": "v4-5c34a9ed265c-77d2f0cf",
+        "url": "https://washingtoncitypaper.com/",
+        "persona": "keyboard-only",
+        "task": "Open “Classifieds, Etc.” from keyboard focus or with Arrow Down and follow “Press Releases”. Confirm the public destination /local.",
+        "controlTask": "Hover “Classifieds, Etc.”, click “Press Releases” and confirm /local.",
+        "observedSelector": "#menu-primary-menu-1 > li:nth-of-type(6) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/local"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#menu-primary-menu-1 > li:nth-of-type(6)",
+          "#menu-primary-menu-1 > li:nth-of-type(6) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#menu-primary-menu-1 > li:nth-of-type(6) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-primary-menu-1 > li:nth-of-type(6) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-primary-menu-1 > li:nth-of-type(6) > ul > li:nth-of-type(4) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "screenmeet.com",
+      "source": "proof/heldout-v5/scouting.json",
+      "task": {
+        "id": "v5-7b471f096b99-b5e3a21f",
+        "url": "https://www.screenmeet.com/",
+        "persona": "keyboard-only",
+        "task": "Open “Products” from keyboard focus or with Arrow Down and follow “ScreenMeet AI”. Confirm the public destination /products/ai/ai-worker.",
+        "controlTask": "Hover “Products”, click “ScreenMeet AI” and confirm /products/ai/ai-worker.",
+        "observedSelector": "#w-dropdown-toggle-0",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/products/ai/ai-worker"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "header > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div > div:nth-of-type(1)",
+          "#w-dropdown-list-0"
+        ],
+        "journey": [
+          {
+            "selector": "#w-dropdown-toggle-0",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-toggle-0",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-list-0 > div > div > div:nth-of-type(1) > a:nth-of-type(1)",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "snhu.edu",
+      "source": "proof/heldout-v5/scouting.json",
+      "task": {
+        "id": "v5-c29e58c404c0-f9350d36",
+        "url": "https://www.snhu.edu/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels with vertical scrolling only, hover “Academic Programs”, click “Associate Degrees” and confirm /online-degrees/associate.",
+        "controlTask": "Hover “Academic Programs”, click “Associate Degrees” and confirm /online-degrees/associate.",
+        "observedSelector": "#menu > ul > li:nth-of-type(1) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/online-degrees/associate"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#menu > ul > li:nth-of-type(1)",
+          "#menu > ul > li:nth-of-type(1) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#menu > ul > li:nth-of-type(1) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu > ul > li:nth-of-type(1) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu > ul > li:nth-of-type(1) > ul > li:nth-of-type(3) > ul:nth-of-type(2) > li:nth-of-type(2) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "celebritynetworth.com",
+      "source": "proof/heldout-v5/scouting.json",
+      "task": {
+        "id": "v5-650b5d2fee64-fa4c9fc7",
+        "url": "https://www.celebritynetworth.com/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels with vertical scrolling only, hover “Athletes”, click “Baseball Players” and confirm /category/richest-athletes/richest-baseball/.",
+        "controlTask": "Hover “Athletes”, click “Baseball Players” and confirm /category/richest-athletes/richest-baseball/.",
+        "observedSelector": "#menu-item-150538 > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/category/richest-athletes/richest-baseball/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#menu-item-150538",
+          "#menu-item-150538 > div"
+        ],
+        "journey": [
+          {
+            "selector": "#menu-item-150538 > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-item-150538 > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-item-150538 > div > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "perusall.com",
+      "source": "proof/heldout-v5/scouting.json",
+      "task": {
+        "id": "v5-7364ca848b28-3d3cb1ec",
+        "url": "https://www.perusall.com/",
+        "persona": "keyboard-only",
+        "task": "Open “Features” from keyboard focus or with Arrow Down and follow “Assessment”. Confirm the public destination /assessment-tools-analytics-integrity.",
+        "controlTask": "Hover “Features”, click “Assessment” and confirm /assessment-tools-analytics-integrity.",
+        "observedSelector": "#w-dropdown-toggle-0",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/assessment-tools-analytics-integrity"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "div:nth-of-type(2) > div > div > div:nth-of-type(1) > nav > div:nth-of-type(1)",
+          "#w-dropdown-list-0"
+        ],
+        "journey": [
+          {
+            "selector": "#w-dropdown-toggle-0",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-toggle-0",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-list-0 > div > a:nth-of-type(3)",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "um-surabaya.ac.id",
+      "source": "proof/hard-v4/scouting.json",
+      "task": {
+        "id": "v4-cc24dd9e10e4-3d3faa5f",
+        "url": "https://www.um-surabaya.ac.id/",
+        "persona": "keyboard-only",
+        "task": "Open “TENTANG UMSURA” from keyboard focus or with Arrow Down and follow “Penghargaan dan Prestasi”. Confirm the public destination /about/penghargaan.",
+        "controlTask": "Hover “TENTANG UMSURA”, click “Penghargaan dan Prestasi” and confirm /about/penghargaan.",
+        "observedSelector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/about/penghargaan"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#desktop-nav > ul > li:nth-of-type(1)",
+          "#desktop-nav > ul > li:nth-of-type(1) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#desktop-nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a:nth-of-type(5)",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "dailypay.com",
+      "source": "proof/hard-v4/scouting.json",
+      "task": {
+        "id": "v4-b1609e34bea2-0f6d50ae",
+        "url": "https://www.dailypay.com/",
+        "persona": "keyboard-only",
+        "task": "Open “Employers” from keyboard focus or with Arrow Down and follow “Hospitals & Healthcare”. Confirm the public destination /industries/healthcare/.",
+        "controlTask": "Hover “Employers”, click “Hospitals & Healthcare” and confirm /industries/healthcare/.",
+        "observedSelector": "#page > div:nth-of-type(3) > header > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/industries/healthcare/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#page > div:nth-of-type(3) > header > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1)",
+          "#page > div:nth-of-type(3) > header > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div"
+        ],
+        "journey": [
+          {
+            "selector": "#page > div:nth-of-type(3) > header > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#page > div:nth-of-type(3) > header > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#page > div:nth-of-type(3) > header > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "stoqapp.com",
+      "source": "proof/hard-v4/scouting.json",
+      "task": {
+        "id": "v4-a756c4ddd34b-44b78023",
+        "url": "https://www.stoqapp.com/",
+        "persona": "keyboard-only",
+        "task": "Open “Features” from keyboard focus or with Arrow Down and follow “Back in stock”. Confirm the public destination /back-in-stock.",
+        "controlTask": "Hover “Features”, click “Back in stock” and confirm /back-in-stock.",
+        "observedSelector": "#w-dropdown-toggle-0",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/back-in-stock"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "div > div:nth-of-type(2) > div > div:nth-of-type(1) > nav > div:nth-of-type(1) > div",
+          "#w-dropdown-list-0"
+        ],
+        "journey": [
+          {
+            "selector": "#w-dropdown-toggle-0",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-toggle-0",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-list-0 > a:nth-of-type(2)",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "thethaiger.com",
+      "source": "proof/heldout-v5/scouting.json",
+      "task": {
+        "id": "v5-cc610c63de73-3721130a",
+        "url": "https://thethaiger.com/",
+        "persona": "keyboard-only",
+        "task": "Open “Thailand” from keyboard focus or with Arrow Down and follow “Economy”. Confirm the public destination /hot-news/economy.",
+        "controlTask": "Hover “Thailand”, click “Economy” and confirm /hot-news/economy.",
+        "observedSelector": "#menu-item-1014687 > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/hot-news/economy"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#menu-item-1014687",
+          "#menu-item-1014687 > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#menu-item-1014687 > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-item-1014687 > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-item-1014696 > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "moveworks.com",
+      "source": "proof/hard-v4/scouting.json",
+      "task": {
+        "id": "v4-3b4eda89b814-c75d4162",
+        "url": "https://www.moveworks.com/",
+        "persona": "keyboard-only",
+        "task": "Open “Solutions” from keyboard focus or with Arrow Down and follow “Employee Experience”. Confirm the public destination /us/en/solutions/employee-experience.",
+        "controlTask": "Hover “Solutions”, click “Employee Experience” and confirm /us/en/solutions/employee-experience.",
+        "observedSelector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > button",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/us/en/solutions/employee-experience"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2)",
+          "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > div"
+        ],
+        "journey": [
+          {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > button",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > button",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > div > div > div:nth-of-type(1) > ul > li:nth-of-type(2) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "clickcease.com",
+      "source": "proof/hard-v4/scouting.json",
+      "task": {
+        "id": "v4-0d51d08abf7e-35c810d3",
+        "url": "https://www.clickcease.com/",
+        "persona": "keyboard-only",
+        "task": "Open “Product” from keyboard focus or with Arrow Down and follow “Total Protection Suite Total protection to block bad bots and traffic across paid and organic campaigns.”. Confirm the public destination /product.html.",
+        "controlTask": "Hover “Product”, click “Total Protection Suite Total protection to block bad bots and traffic across paid and organic campaigns.” and confirm /product.html.",
+        "observedSelector": "#w-dropdown-toggle-0",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/product.html"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "div:nth-of-type(1) > div > div:nth-of-type(3) > div:nth-of-type(1) > nav > div:nth-of-type(1) > div:nth-of-type(1)",
+          "#w-dropdown-list-0"
+        ],
+        "journey": [
+          {
+            "selector": "#w-dropdown-toggle-0",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-toggle-0",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-list-0 > div > div:nth-of-type(2) > a:nth-of-type(1)",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "xel.nl",
+      "source": "proof/heldout-v5/scouting.json",
+      "task": {
+        "id": "v5-73d5f95f3e21-33f93bd3",
+        "url": "https://www.xel.nl/",
+        "persona": "keyboard-only",
+        "task": "Open “WordPress xel” from keyboard focus or with Arrow Down and follow “WordPress Veiligxel”. Confirm the public destination /veilig/.",
+        "controlTask": "Hover “WordPress xel”, click “WordPress Veiligxel” and confirm /veilig/.",
+        "observedSelector": "#menu-primary-navigation > li:nth-of-type(2) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/veilig/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#menu-primary-navigation > li:nth-of-type(2)",
+          "#menu-primary-navigation > li:nth-of-type(2) > div"
+        ],
+        "journey": [
+          {
+            "selector": "#menu-primary-navigation > li:nth-of-type(2) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-primary-navigation > li:nth-of-type(2) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-primary-navigation > li:nth-of-type(2) > div > div > div:nth-of-type(1) > ul > li:nth-of-type(3) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "manhwaden.com",
+      "source": "proof/heldout-v5/scouting.json",
+      "task": {
+        "id": "v5-97763e796ed8-d549191b",
+        "url": "https://www.manhwaden.com/",
+        "persona": "keyboard-only",
+        "task": "Open “★MANHWA GENRES” from keyboard focus or with Arrow Down and follow “Drama”. Confirm the public destination /manga-genre/drama/.",
+        "controlTask": "Hover “★MANHWA GENRES”, click “Drama” and confirm /manga-genre/drama/.",
+        "observedSelector": "#menu-item-354 > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/manga-genre/drama/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#menu-item-354",
+          "#menu-item-354 > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#menu-item-354 > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-item-354 > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-item-356 > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "bsky.network",
+      "source": "proof/hard-v4/scouting.json",
+      "task": {
+        "id": "v4-133129e4da0d-df1d4593",
+        "url": "https://bsky.network/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels with vertical scrolling only, hover “English”, click “日本語” and confirm /ja/.",
+        "controlTask": "Hover “English”, click “日本語” and confirm /ja/.",
+        "observedSelector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/ja/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+          "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > ul > li:nth-of-type(2) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "goznak.ru",
+      "source": "proof/heldout-v5/scouting.json",
+      "task": {
+        "id": "v5-2f50b19bf48c-e5978111",
+        "url": "https://goznak.ru/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels with vertical scrolling only, hover “О ГОЗНАКЕ”, click “Компания сегодня” and confirm /about/today/.",
+        "controlTask": "Hover “О ГОЗНАКЕ”, click “Компания сегодня” and confirm /about/today/.",
+        "observedSelector": "header > div > div:nth-of-type(1) > div > span",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/about/today/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "header > div > div:nth-of-type(1) > div",
+          "header > div > div:nth-of-type(1) > div > div"
+        ],
+        "journey": [
+          {
+            "selector": "header > div > div:nth-of-type(1) > div > span",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "header > div > div:nth-of-type(1) > div > span",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "header > div > div:nth-of-type(1) > div > div > span:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "flightglobal.com",
+      "source": "proof/heldout-v5/scouting.json",
+      "task": {
+        "id": "v5-eb7b2aa0bdf3-76aa4005",
+        "url": "https://www.flightglobal.com/",
+        "persona": "keyboard-only",
+        "task": "Open “AIRLINES” from keyboard focus or with Arrow Down and follow “Strategy”. Confirm the public destination /category/strategy/.",
+        "controlTask": "Hover “AIRLINES”, click “Strategy” and confirm /category/strategy/.",
+        "observedSelector": "#menu-item-271307 > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/category/strategy/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#menu-item-271307",
+          "#menu-item-271307 > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#menu-item-271307 > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-item-271307 > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-item-271308 > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "orfonline.org",
+      "source": "proof/heldout-v5/scouting.json",
+      "task": {
+        "id": "v5-334569d0bd71-a62eae71",
+        "url": "https://www.orfonline.org/",
+        "persona": "keyboard-only",
+        "task": "Open “RESEARCH” from keyboard focus or with Arrow Down and follow “Young Voices”. Confirm the public destination /expert-speak-category/young-voices.",
+        "controlTask": "Hover “RESEARCH”, click “Young Voices” and confirm /expert-speak-category/young-voices.",
+        "observedSelector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/expert-speak-category/young-voices"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div",
+          "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > div"
+        ],
+        "journey": [
+          {
+            "selector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > div > div > div:nth-of-type(1) > ul > li:nth-of-type(3) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "elle.de",
+      "source": "proof/heldout-v5/scouting.json",
+      "task": {
+        "id": "v5-2bd312020238-8b5f15cd",
+        "url": "https://www.elle.de/",
+        "persona": "keyboard-only",
+        "task": "Open “BEAUTY” from keyboard focus or with Arrow Down and follow “TRENDS”. Confirm the public destination /beauty/trends.",
+        "controlTask": "Hover “BEAUTY”, click “TRENDS” and confirm /beauty/trends.",
+        "observedSelector": "#__next > div:nth-of-type(2) > nav > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/beauty/trends"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#__next > div:nth-of-type(2) > nav > div:nth-of-type(2) > div > ul > li:nth-of-type(2)",
+          "#__next > div:nth-of-type(2) > nav > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#__next > div:nth-of-type(2) > nav > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#__next > div:nth-of-type(2) > nav > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#__next > div:nth-of-type(2) > nav > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "localstack.cloud",
+      "source": "proof/hard-v4/scouting.json",
+      "task": {
+        "id": "v4-8931e12f7957-698be0b8",
+        "url": "https://www.localstack.cloud/",
+        "persona": "keyboard-only",
+        "task": "Open “Resources” from keyboard focus or with Arrow Down and follow “Blog postLet Your AI Agent Write Least-Privilege IAM Policies”. Confirm the public destination /let-your-ai-agent-write-least-privilege-iam-policies/.",
+        "controlTask": "Hover “Resources”, click “Blog postLet Your AI Agent Write Least-Privilege IAM Policies” and confirm /let-your-ai-agent-write-least-privilege-iam-policies/.",
+        "observedSelector": "#w-dropdown-toggle-2",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/let-your-ai-agent-write-least-privilege-iam-policies/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#ls-nav-menu > div:nth-of-type(1) > div:nth-of-type(3)",
+          "#w-dropdown-list-2"
+        ],
+        "journey": [
+          {
+            "selector": "#w-dropdown-toggle-2",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-toggle-2",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-list-2 > div > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "cardano.org",
+      "source": "proof/hard-v4/scouting.json",
+      "task": {
+        "id": "v4-a91e388df654-553cb250",
+        "url": "https://cardano.org/",
+        "persona": "keyboard-only",
+        "task": "Open “English” from keyboard focus or with Arrow Down and follow “Deutsch85%”. Confirm the public destination /de/.",
+        "controlTask": "Hover “English”, click “Deutsch85%” and confirm /de/.",
+        "observedSelector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/de/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)",
+          "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(2) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "superguidatv.it",
+      "source": "proof/heldout-v5/scouting.json",
+      "task": {
+        "id": "v5-61feacfef5dd-9224445a",
+        "url": "https://www.superguidatv.it/",
+        "persona": "keyboard-only",
+        "task": "Open “Soap opera” from keyboard focus or with Arrow Down and follow “La forza di una donna”. Confirm the public destination /soap/la-forza-di-una-donna/.",
+        "controlTask": "Hover “Soap opera”, click “La forza di una donna” and confirm /soap/la-forza-di-una-donna/.",
+        "observedSelector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/soap/la-forza-di-una-donna/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#menu-td-demo-header-menu-1 > li:nth-of-type(5)",
+          "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > ul > li:nth-of-type(2) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    },
+    {
+      "site": "kimiafarma.co.id",
+      "source": "proof/heldout-v5/scouting.json",
+      "task": {
+        "id": "v5-79bdf2d05394-bcd1c577",
+        "url": "https://kimiafarma.co.id/",
+        "persona": "keyboard-only",
+        "task": "Open “PROFIL” from keyboard focus or with Arrow Down and follow “Profil Perusahaan”. Confirm the public destination /id/sejarah-kimia-farma.",
+        "controlTask": "Hover “PROFIL”, click “Profil Perusahaan” and confirm /id/sejarah-kimia-farma.",
+        "observedSelector": "#navbarCollapse > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/id/sejarah-kimia-farma"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#navbarCollapse > div:nth-of-type(2) > div > ul > li:nth-of-type(2)",
+          "#navbarCollapse > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#navbarCollapse > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#navbarCollapse > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#navbarCollapse > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ]
+      }
+    }
+  ]
+}

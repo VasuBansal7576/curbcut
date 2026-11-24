@@ -134,3 +134,7 @@ export function mirrorHover(scope,onMatch) {
     for(const {parent,copy} of copies.values()) remove(parent,copy)
   }}
 }
+
+export function hoverRecipeRules(owners) {
+  return (owners??[]).map(selector=>({selector,action:'mirrorHoverToFocus'}))
+}

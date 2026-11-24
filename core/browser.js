@@ -4,7 +4,7 @@ import {computeAccessibleName, getRole, isInaccessible} from 'dom-accessibility-
 import {discoverCoverage,coverageObservation} from './coverage-browser.js'
 import {apply,match} from './engine.js'
 import {keyboardVisibility,observePassage,widthEvidence} from './geometry.js'
-import {isMirroredHoverEvent,observedHoverRules} from './hover.js'
+import {isMirroredHoverEvent,observedHoverRules,hoverRecipeRules} from './hover.js'
 import {inspectRuleSelectors} from './selectors.js'
 import {collectInstantState,instantPrivacy} from './jev-browser.js'
 
@@ -76,17 +76,7 @@ function repairContext(targets) {
   return {nodes,hoverRules:observedHoverRules(nodes.map(node=>node.selector))}
 }
 
-function repairObservations(target,context) {
-  const asset=source=>{
-    try {return new URL(source,location.href).pathname.replace(/([.-])[a-f0-9]{8,}(?=[.-]|$)/gi,'$1*')}
-    catch {return null}
-  }
-  const stack=[document.querySelector('meta[name=generator i]')?.content?.slice(0,120),
-    ...[...document.querySelectorAll('script[src],link[rel=stylesheet][href]')].slice(0,60)
-      .map(node=>asset(node.src??node.href))].filter(Boolean)
-  const visibleText=node=>node?.checkVisibility({visibilityProperty:true})?node.innerText?.trim().slice(0,160):null
-  const labels=target?[...[...target.labels??[]].map(visibleText),target.getAttribute('placeholder'),
-    visibleText(target.previousElementSibling),visibleText(target.nextElementSibling)].filter(Boolean):[]
+function recipeHoverOwners(context) {
   const hoverOwners=[]
   for(const entry of context?.nodes??[]) {
     const owner=document.querySelector(entry.selector)
@@ -103,7 +93,38 @@ function repairObservations(target,context) {
       }
     }
   }
-  return {stack,labels,visibleText:visibleText(target)??null,explicitRole:target?.getAttribute('role'),hoverOwners:[...new Set(hoverOwners)],
+  return [...new Set(hoverOwners)]
+}
+
+function menuHoverRecipes(trigger, revealed) {
+  const owners = new Set()
+  for (const selector of revealed) {
+    for (let node=document.querySelector(selector)?.parentElement;node && node!==document.body;node=node.parentElement) {
+      if (node.contains(trigger)) owners.add(node)
+    }
+  }
+  const scopes = [...owners].flatMap(owner => {
+    const selector = exactSelector(owner)
+    const matches = document.querySelectorAll(selector)
+    return selector.length <= 280 && matches.length === 1 && matches[0] === owner ? [selector] : []
+  }).slice(0,24)
+  return hoverRecipeRules(recipeHoverOwners({
+    nodes:scopes.map(selector=>({selector})), hoverRules:observedHoverRules(scopes),
+  }))
+}
+
+function repairObservations(target,context) {
+  const asset=source=>{
+    try {return new URL(source,location.href).pathname.replace(/([.-])[a-f0-9]{8,}(?=[.-]|$)/gi,'$1*')}
+    catch {return null}
+  }
+  const stack=[document.querySelector('meta[name=generator i]')?.content?.slice(0,120),
+    ...[...document.querySelectorAll('script[src],link[rel=stylesheet][href]')].slice(0,60)
+      .map(node=>asset(node.src??node.href))].filter(Boolean)
+  const visibleText=node=>node?.checkVisibility({visibilityProperty:true})?node.innerText?.trim().slice(0,160):null
+  const labels=target?[...[...target.labels??[]].map(visibleText),target.getAttribute('placeholder'),
+    visibleText(target.previousElementSibling),visibleText(target.nextElementSibling)].filter(Boolean):[]
+  return {stack,labels,visibleText:visibleText(target)??null,explicitRole:target?.getAttribute('role'),hoverOwners:recipeHoverOwners(context),
     language:document.documentElement.lang.trim()?null:visibleLanguageSample(),
     measurement:target?coverageObservation(target,{category:'low-contrast'}):null}
 }
@@ -382,4 +403,4 @@ function enforce(persona,report=()=>{}, {topLevel=true}={}) {
   }
   return state
 }
-globalThis.CurbCut=Object.freeze({collectNames:()=>collectNames(exactSelector),visibleLanguageSample,applyLiveName,apply,match,snapshot,reader,readerRow,enforce,exactSelector,discoverCoverage:()=>discoverCoverage(exactSelector),coverageObservation,keyboardVisibility,inspectRuleSelectors,observePassage,widthEvidence,instantPrivacy,collectInstantState:()=>collectInstantState(exactSelector)})
+globalThis.CurbCut=Object.freeze({observedHoverRules,menuHoverRecipes,collectNames:()=>collectNames(exactSelector),visibleLanguageSample,applyLiveName,apply,match,snapshot,reader,readerRow,enforce,exactSelector,discoverCoverage:()=>discoverCoverage(exactSelector),coverageObservation,keyboardVisibility,inspectRuleSelectors,observePassage,widthEvidence,instantPrivacy,collectInstantState:()=>collectInstantState(exactSelector)})

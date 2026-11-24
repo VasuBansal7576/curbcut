@@ -9,6 +9,7 @@ importScripts(
   "jev-stuck-runtime.js",
   "lib/jev-config.js",
   "instant-background.js",
+  "mirror-background.js",
   "naming-background.js",
   "stuck-background.js"
 );
@@ -390,6 +391,7 @@ async function handleCommand(command, tab) {
   if (!tab?.id) {
     tab = (await chrome.tabs.query({ active: true, currentWindow: true }))[0];
   }
+  if (command === "match-mouse") return matchMouse(tab);
   if (tab) await ensureTab(tab);
   if (command === "im-stuck") return openCapture(tab?.id);
   if (command === "instant-fix") return instantFix(tab?.id);
