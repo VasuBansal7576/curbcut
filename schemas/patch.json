@@ -650,6 +650,58 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "repairMethod": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "templateId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "inherited-from": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "controlSourceTask": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "verificationPolicy": {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "enum": [
+                "full",
+                "sampled",
+                "local-sample-bypass"
+              ]
+            },
+            "minimumVerified": {
+              "type": "integer"
+            },
+            "oneIn": {
+              "type": "integer"
+            },
+            "seed": {
+              "type": "string"
+            },
+            "verifiedInstances": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "mode",
+            "minimumVerified",
+            "oneIn",
+            "seed",
+            "verifiedInstances"
+          ],
+          "additionalProperties": false
+        },
         "before": {
           "type": "string",
           "minLength": 1,
@@ -740,7 +792,7 @@
         },
         "localMeasurement": {
           "type": "string",
-          "pattern": "^proof/heldout-v6/[a-zA-Z0-9/._-]+[.]json$",
+          "pattern": "^proof/(?:heldout-v6|kane)/[a-zA-Z0-9/._-]+[.]json$",
           "maxLength": 240
         }
       }
@@ -1118,6 +1170,29 @@
           "status": {
             "const": "locally-verified"
           }
+        },
+        "not": {
+          "required": [
+            "evidence"
+          ],
+          "properties": {
+            "evidence": {
+              "type": "object",
+              "required": [
+                "verificationPolicy"
+              ],
+              "properties": {
+                "verificationPolicy": {
+                  "type": "object",
+                  "properties": {
+                    "mode": {
+                      "const": "local-sample-bypass"
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "then": {
@@ -1203,6 +1278,91 @@
             }
           }
         ]
+      }
+    },
+    {
+      "if": {
+        "allOf": [
+          {
+            "properties": {
+              "status": {
+                "const": "locally-verified"
+              }
+            }
+          },
+          {
+            "required": [
+              "evidence"
+            ],
+            "properties": {
+              "evidence": {
+                "type": "object",
+                "required": [
+                  "verificationPolicy"
+                ],
+                "properties": {
+                  "verificationPolicy": {
+                    "type": "object",
+                    "properties": {
+                      "mode": {
+                        "const": "local-sample-bypass"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "then": {
+        "properties": {
+          "evidence": {
+            "type": "object",
+            "required": [
+              "localMeasurement",
+              "verifiedAt",
+              "templateId",
+              "inherited-from",
+              "localOracle",
+              "repairMethod"
+            ],
+            "properties": {
+              "repairMethod": {
+                "const": "inheritance"
+              },
+              "localMeasurement": {
+                "type": "string",
+                "pattern": "^proof/kane/[a-zA-Z0-9/._-]+/local-repair[.]json$"
+              },
+              "localOracle": {
+                "type": "object",
+                "required": [
+                  "before",
+                  "control",
+                  "after"
+                ],
+                "properties": {
+                  "before": {
+                    "const": "fail"
+                  },
+                  "control": {
+                    "const": "pass"
+                  },
+                  "after": {
+                    "const": "pass"
+                  }
+                }
+              }
+            },
+            "not": {
+              "type": "object",
+              "required": [
+                "kaneRunIds"
+              ]
+            }
+          }
+        }
       }
     }
   ]

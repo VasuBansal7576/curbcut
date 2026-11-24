@@ -1,0 +1,2963 @@
+{
+  "startedAt": "2026-11-24T18:11:00.167Z",
+  "liveAgentCalls": 0,
+  "kaneCredits": 0,
+  "recipes": [
+    {
+      "id": "v5-b69c0c4bbc71-11274908",
+      "url": "https://www.a8.net/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal missed journey step 1."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#slideArea > div > div:nth-of-type(3)",
+              "action": "makeFocusable"
+            },
+            {
+              "selector": "#slideArea > div > div:nth-of-type(3)",
+              "action": "setRole",
+              "value": "button"
+            },
+            {
+              "selector": "#slideArea > div > div:nth-of-type(3)",
+              "action": "bindEnterToClick"
+            },
+            {
+              "selector": "#slideArea > div > div:nth-of-type(3)",
+              "action": "restoreFocusOutline"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-fb0b1cbb5d2e-afbfd163",
+      "url": "https://www.readingplus.com/",
+      "persona": "keyboard-only",
+      "status": "page drifted or blocked",
+      "before": {
+        "status": "blocked",
+        "reason": "page.goto: net::ERR_ABORTED at https://www.readingplus.com/"
+      },
+      "control": null,
+      "verdicts": []
+    },
+    {
+      "id": "v5-96c59d65a851-545842db",
+      "url": "https://konghq.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-b66dd24e3487-434c0e77",
+      "url": "https://capgo.app/",
+      "persona": "keyboard-only",
+      "status": "page drifted or blocked",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "inconclusive",
+        "reason": "Journey step 1 did not identify a unique control."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-2a37736a7729-42c4aaca",
+      "url": "https://sepe.es/HomeSepe",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 2 did not receive the expected keyboard focus."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-cc3cea40d183-52a181e1",
+      "url": "https://www.kaizhenglaw.com/",
+      "persona": "keyboard-only",
+      "status": "page drifted or blocked",
+      "before": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [],
+      "browserRetry": {
+        "at": "2026-11-24T18:25:17.631Z",
+        "initial": {
+          "id": "v5-cc3cea40d183-52a181e1",
+          "url": "https://www.kaizhenglaw.com/",
+          "persona": "keyboard-only",
+          "status": "page drifted or blocked",
+          "before": {
+            "status": "inconclusive",
+            "reason": "browserType.launchPersistentContext: Target page, context or browser has been closed"
+          },
+          "control": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "verdicts": []
+        }
+      }
+    },
+    {
+      "id": "v5-7b801b9b8f66-2ef1d4b9",
+      "url": "https://www.aeserver.com/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#menu-main-menu > li:nth-of-type(1)",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-b3a020e9a510-2d198473",
+      "url": "https://esim.holafly.com/",
+      "persona": "keyboard-only",
+      "status": "page drifted or blocked",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "inconclusive",
+        "reason": "Journey step 1 did not identify a unique control."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-d286cd4e5d75-a722d795",
+      "url": "https://www.cabq.gov/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 2 did not receive the expected keyboard focus."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-9766a6ff14fe-aeb5b4d5",
+      "url": "https://mihanwebhost.com/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "div.scrollnavmenu > li:nth-of-type(2)",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-0cc76370f21d-a17b13ec",
+      "url": "https://www.fluco.store/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 could not be seen while focused: clipped or off-screen."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-acb0fb9f8c97-603c0357",
+      "url": "https://wpbrigade.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "The final journey outcome did not hold."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-f1fd2ab8e876-1c2c2a91",
+      "url": "https://www.fastweb.it/",
+      "persona": "keyboard-only",
+      "status": "recipe matched but oracle failed",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 2 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "div.aux > div:nth-of-type(1)",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "fail",
+            "reason": "Journey step 2 was unavailable after the prior step."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-b61bc93e9135-70557fc6",
+      "url": "https://www.onecause.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-87835c3cd500-aabf1679",
+      "url": "https://bupropion150mg.shop/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 could not be seen while focused: clipped or off-screen."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-1a3ef33e9c58-3eefe840",
+      "url": "https://www.uni-bayreuth.de/",
+      "persona": "keyboard-only",
+      "status": "page drifted or blocked",
+      "before": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-01a5930f072f-ba6a98ba",
+      "url": "https://www.airalo.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal missed journey step 1."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-acb00fb9798b-55f0ba82",
+      "url": "https://www.iab.com/",
+      "persona": "keyboard-only",
+      "status": "page drifted or blocked",
+      "before": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "control": {
+        "status": "fail",
+        "reason": "Journey step 2 was unavailable after the prior step."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-df3468e47d73-7e1b1979",
+      "url": "https://asm.org/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-7364ca848b28-3d3cb1ec",
+      "url": "https://www.perusall.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-73d5f95f3e21-33f93bd3",
+      "url": "https://www.xel.nl/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#menu-primary-navigation > li:nth-of-type(2)",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-dac78760abc4-21826452",
+      "url": "https://www.spreaker.com/",
+      "persona": "keyboard-only",
+      "status": "page drifted or blocked",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "inconclusive",
+        "reason": "Journey step 1 did not identify a unique control."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-36e674f09325-10a97cfe",
+      "url": "https://www.jostens.com/",
+      "persona": "keyboard-only",
+      "status": "page drifted or blocked",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal missed journey step 1."
+      },
+      "control": {
+        "status": "fail",
+        "reason": "locator.click: Timeout 1500ms exceeded."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-54350528c664-811bbf91",
+      "url": "https://bangmod.cloud/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-6646bc262e29-b16e9d6d",
+      "url": "https://www.webhostingpad.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal missed journey step 1."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-650b5d2fee64-fa4c9fc7",
+      "url": "https://www.celebritynetworth.com/",
+      "persona": "low-vision",
+      "status": "recipe matched but oracle failed",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 extends past the visible width."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#menu-item-150538",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "fail",
+            "reason": "Journey step 1 extends past the visible width."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-cc610c63de73-3721130a",
+      "url": "https://thethaiger.com/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#menu-item-1014687",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-dac78760abc4-19c73eb3",
+      "url": "https://www.pdq.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 2 did not receive the expected keyboard focus."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-29340f94955a-53fc1f7c",
+      "url": "https://www.evrensel.net/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "nav.menu.relative > ul:nth-of-type(1) > li:nth-of-type(15)",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-0fde566de5ea-3112da06",
+      "url": "https://taggrs.io/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 could not be seen while focused: clipped or off-screen."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-e7b2d4f06605-b7cbfb6a",
+      "url": "https://www.tribuneindia.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-98dbfb0d54b8-551e1833",
+      "url": "https://www.online-convert.com/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "div.dropdown.border-left",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-857ef2c1ce84-168863dc",
+      "url": "https://www.crictracker.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 2 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-5a314b63f68c-905985ea",
+      "url": "https://www.codetantra.com/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 2 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "ul.navbar-nav.mx-auto > li:nth-of-type(2)",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-e2a9611c7721-9325e614",
+      "url": "https://feeder.co/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-8375f66e12e5-e2bb5916",
+      "url": "https://www.hostnet.nl/",
+      "persona": "low-vision",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-48688aa70a1b-e410b44c",
+      "url": "https://www.ronet.de/",
+      "persona": "low-vision",
+      "status": "recipe matched but oracle failed",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#menu-menu-1 > li:nth-of-type(2)",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "fail",
+            "reason": "Journey step 1 was unavailable after the prior step."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-e12c1bff92c5-ed915ada",
+      "url": "https://imp.ch/",
+      "persona": "low-vision",
+      "status": "recipe matched but oracle failed",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#menu-item-445",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "fail",
+            "reason": "Journey step 1 was unavailable after the prior step."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-0954cd49ad0a-b2f105fc",
+      "url": "https://ufal.br/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "li.ufal.has_subtree > ul:nth-of-type(1) > li:nth-of-type(1)",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-2f50b19bf48c-e5978111",
+      "url": "https://goznak.ru/",
+      "persona": "low-vision",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-79bdf2d05394-bcd1c577",
+      "url": "https://kimiafarma.co.id/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-c4d452c17cd0-b3a03f5d",
+      "url": "https://daily.dev/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 could not be seen while focused: clipped or off-screen."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-6af2720aeb97-5ddb9105",
+      "url": "https://www.boerse-online.de/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 could not be seen while focused: opacity below 0.1."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-a2e671fad9cf-e4ff77de",
+      "url": "https://ycharts.com/",
+      "persona": "low-vision",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-da7cd68dba5c-1e159de5",
+      "url": "https://www.infoblox.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-d118abe71d63-3373fa85",
+      "url": "https://www.nrc.gov/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 could not be seen while focused: clipped or off-screen."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-fdc61982a2d1-1397652f",
+      "url": "https://www.ird.fr/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "ul.header-inverted__menu > li:nth-of-type(1)",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-dcd8408fcc80-04eb85e0",
+      "url": "https://mcgrp.ru/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-003fd3b4076d-6079696a",
+      "url": "https://www.freedommortgage.com/",
+      "persona": "keyboard-only",
+      "status": "page drifted or blocked",
+      "before": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-873b26b255a2-924a9a17",
+      "url": "https://www.mordorintelligence.com/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "ul.flex.nav-items > li:nth-of-type(1)",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-7b471f096b99-b5e3a21f",
+      "url": "https://www.screenmeet.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-61feacfef5dd-9224445a",
+      "url": "https://www.superguidatv.it/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-2320efe4266e-692a0164",
+      "url": "https://www.illuminateed.com/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#menu-item-7623 > a",
+              "action": "setContrast",
+              "value": {
+                "color": "#767676"
+              }
+            }
+          ],
+          "after": {
+            "status": "fail",
+            "reason": "Journey step 3 was unavailable after the prior step."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "#menu-item-7623",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-fffa38e6afe5-df31d689",
+      "url": "https://grants.gov/",
+      "persona": "low-vision",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 2 extends past the visible width."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-dbb18043d373-98bab91c",
+      "url": "https://twicsy.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal missed journey step 3."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-39c81de4ef43-33ae7f34",
+      "url": "https://tikfinity.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 did not receive the expected keyboard focus."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-45ea66669cdc-c2486832",
+      "url": "https://www.mailinator.com/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#menu-item-8021",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-fec042caa4d8-b98a8035",
+      "url": "https://www.tricentis.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 2 did not receive the expected keyboard focus."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-641cf8573e64-907a2744",
+      "url": "https://www.pdflib.com/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "nav.mfc_verticalMenuDesktopFlyout > ul:nth-of-type(1) > li:nth-of-type(1)",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-03ffd714caa8-14276c77",
+      "url": "https://www.care.com/",
+      "persona": "keyboard-only",
+      "status": "page drifted or blocked",
+      "before": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-f487e6b701e1-2c662e31",
+      "url": "https://caddyserver.com/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "li.dropdown-trigger",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-b5c8c2309d78-653b97f8",
+      "url": "https://www.e2open.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal missed journey step 1."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-b9166198a9c3-39af8059",
+      "url": "https://nova.edu/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal missed journey step 1."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-d7366952ec8d-10250078",
+      "url": "https://www.rainforest-alliance.org/",
+      "persona": "keyboard-only",
+      "status": "page drifted or blocked",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal missed journey step 1."
+      },
+      "control": {
+        "status": "fail",
+        "reason": "locator.hover: Timeout 1500ms exceeded."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-c29e58c404c0-f9350d36",
+      "url": "https://www.snhu.edu/",
+      "persona": "low-vision",
+      "status": "recipe matched but oracle failed",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "ul.navbar-nav > li:nth-of-type(1)",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "fail",
+            "reason": "Journey step 1 was unavailable after the prior step."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-eb7b2aa0bdf3-76aa4005",
+      "url": "https://www.flightglobal.com/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#menu-item-271307",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-334569d0bd71-a62eae71",
+      "url": "https://www.orfonline.org/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1)",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-a3f3f5acedfc-e39c0cf1",
+      "url": "https://www.ufsm.br/",
+      "persona": "low-vision",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-70142cc88d1f-158476bf",
+      "url": "https://stackoverflow.co/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-97763e796ed8-d549191b",
+      "url": "https://www.manhwaden.com/",
+      "persona": "keyboard-only",
+      "status": "page drifted or blocked",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "blocked",
+        "reason": "The journey left the public task site or registered destination."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-4cb45708801b-3b36ea65",
+      "url": "https://www.fiber.net/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-a61d1a540ba6-b09c786c",
+      "url": "https://www.contentstack.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal missed journey step 3."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-3fb0d0336b20-915f3944",
+      "url": "https://www.productmadness.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 could not be seen while focused: clipped or off-screen."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-c340f69d864f-1514e25a",
+      "url": "https://www.editions-harmattan.fr/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 2 did not receive the expected keyboard focus."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-443f8ee3b6e8-02557d69",
+      "url": "https://ramfincorp.com/",
+      "persona": "keyboard-only",
+      "status": "recipe matched but oracle failed",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal missed journey step 1."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(3)",
+              "action": "makeFocusable"
+            },
+            {
+              "selector": "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(3)",
+              "action": "setRole",
+              "value": "button"
+            },
+            {
+              "selector": "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(3)",
+              "action": "bindEnterToClick"
+            },
+            {
+              "selector": "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(3)",
+              "action": "restoreFocusOutline"
+            }
+          ],
+          "after": {
+            "status": "fail",
+            "reason": "Journey step 1 could not be seen while focused: clipped or off-screen."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(3)",
+              "action": "addLabel",
+              "value": "Harmandeep Hayer\nHow do I apply for an instant personal loan online?\n\nApplying for a personal loan is quick and simple. Fill out the online application form, up"
+            }
+          ],
+          "after": {
+            "status": "fail",
+            "reason": "Tab traversal missed journey step 1."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(3)",
+              "action": "addLabel",
+              "value": "1\n2\n3\n4"
+            }
+          ],
+          "after": {
+            "status": "fail",
+            "reason": "Tab traversal missed journey step 1."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-95d2f5ed269f-5caad237",
+      "url": "https://www.llnl.gov/",
+      "persona": "keyboard-only",
+      "status": "fixed by recipe",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#block-primary-menu-sierra > ul:nth-of-type(1) > li:nth-of-type(1)",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-a4b9c9c41e01-05222b52",
+      "url": "https://sacred-texts.com/",
+      "persona": "keyboard-only",
+      "status": "page drifted or blocked",
+      "before": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-5dfd5099e5a1-4af64c4c",
+      "url": "https://www.theadvocate.com/",
+      "persona": "keyboard-only",
+      "status": "page drifted or blocked",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-e80edc4a0ef1-1dfc85d7",
+      "url": "https://www.metroopinion.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 2 did not receive the expected keyboard focus."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-2bd312020238-8b5f15cd",
+      "url": "https://www.elle.de/",
+      "persona": "keyboard-only",
+      "status": "recipe matched but oracle failed",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 could not be seen while focused: opacity below 0.1."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "ul.Navigation_navList__2PDwu > li:nth-of-type(2)",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "fail",
+            "reason": "Journey step 3 could not be seen while focused: clipped or off-screen."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-af564ab070db-43142dbd",
+      "url": "https://npo.nl/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 could not be seen while focused: clipped or off-screen."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-74737c44f3d0-3fba48d1",
+      "url": "https://megogo.net/en",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal missed journey step 1."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-f2ad66f1be05-fa8c7355",
+      "url": "https://www.legitscript.com/",
+      "persona": "low-vision",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-0c662bb06496-a983f26c",
+      "url": "https://www.hotelscombined.com/",
+      "persona": "keyboard-only",
+      "status": "page drifted or blocked",
+      "before": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-d733df02c68b-e1ef840e",
+      "url": "https://www.kyndryl.com/in/en",
+      "persona": "low-vision",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-c22b9bdca86b-71a63d77",
+      "url": "https://marinespecies.org/",
+      "persona": "keyboard-only",
+      "status": "recipe matched but oracle failed",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal missed journey step 1."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "li.dropdown",
+              "action": "mirrorHoverToFocus"
+            }
+          ],
+          "after": {
+            "status": "fail",
+            "reason": "Tab traversal missed journey step 1."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v5-42dfcce449a2-338a809d",
+      "url": "https://idc88amp.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 2 did not receive the expected keyboard focus."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-9622486897a1-afa09ca3",
+      "url": "https://sciencedaily.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 2 did not receive the expected keyboard focus."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    },
+    {
+      "id": "v5-b95d3b36402f-8ebc4b9a",
+      "url": "https://helloclue.com/",
+      "persona": "keyboard-only",
+      "status": "no recipe matched",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "verdicts": []
+    }
+  ],
+  "inheritance": [
+    {
+      "id": "asme-org-tr2",
+      "url": "https://www.asme.org/",
+      "family": "addLabel",
+      "site": "asme.org",
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "status": "near miss",
+      "donorCount": 11,
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#home-search",
+              "action": "addLabel",
+              "value": "Search"
+            }
+          ],
+          "source": "cato-org-tr2",
+          "templateId": "9ba074949b29c1bc64d4",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "#home-search",
+              "action": "addLabel",
+              "value": "Search forums"
+            }
+          ],
+          "source": "v5-fcff2ddd132fff0edeae",
+          "templateId": "b4e6f7179cd84c2f48e5",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "#home-search",
+              "action": "addLabel",
+              "value": "search"
+            }
+          ],
+          "source": "poets-org-tr2",
+          "templateId": "14686e726ef6ad10600b",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        }
+      ],
+      "falseMatches": []
+    },
+    {
+      "id": "calculator-net-add-days",
+      "url": "https://www.calculator.net/date-calculator.html",
+      "family": "addLabel",
+      "site": "calculator.net",
+      "status": "no safe declarative objective",
+      "donorCount": 12
+    },
+    {
+      "id": "cato-org-tr2",
+      "url": "https://www.cato.org/",
+      "family": "addLabel",
+      "site": "cato.org",
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "status": "near miss",
+      "donorCount": 11,
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#query",
+              "action": "addLabel",
+              "value": "Search products, events, courses, resource categories..."
+            }
+          ],
+          "source": "asme-org-tr2",
+          "templateId": "e855e19cb16d43af0367",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "#query",
+              "action": "addLabel",
+              "value": "search"
+            }
+          ],
+          "source": "poets-org-tr2",
+          "templateId": "14686e726ef6ad10600b",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "#query",
+              "action": "addLabel",
+              "value": "Search forums"
+            }
+          ],
+          "source": "v5-fcff2ddd132fff0edeae",
+          "templateId": "b4e6f7179cd84c2f48e5",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        }
+      ],
+      "falseMatches": []
+    },
+    {
+      "id": "colorhexa-open-picker",
+      "url": "https://www.colorhexa.com/",
+      "family": "keyboard activation",
+      "site": "colorhexa.com",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "status": "no template matched",
+      "donorCount": 7,
+      "verdicts": [],
+      "falseMatches": []
+    },
+    {
+      "id": "discuz-vip-tr2",
+      "url": "https://www.discuz.vip/",
+      "family": "keyboard activation",
+      "site": "discuz.vip",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "status": "no template matched",
+      "donorCount": 7,
+      "verdicts": [],
+      "falseMatches": []
+    },
+    {
+      "id": "dol-gov-tr2",
+      "url": "https://www.dol.gov/",
+      "family": "keyboard activation",
+      "site": "dol.gov",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "status": "no template matched",
+      "donorCount": 7,
+      "verdicts": [],
+      "falseMatches": []
+    },
+    {
+      "id": "euronext-com-tr",
+      "url": "https://www.euronext.com/en",
+      "family": "addLabel",
+      "site": "euronext.com",
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "status": "no template matched",
+      "donorCount": 11,
+      "verdicts": [],
+      "falseMatches": []
+    },
+    {
+      "id": "fourmilab-prepare-latitude",
+      "url": "https://www.fourmilab.ch/cgi-bin/Earth",
+      "family": "addLabel",
+      "site": "fourmilab.ch",
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "fail",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "status": "page drifted or blocked",
+      "donorCount": 12
+    },
+    {
+      "id": "geeksforgeeks-open-search",
+      "url": "https://www.geeksforgeeks.org/",
+      "family": "keyboard activation",
+      "site": "geeksforgeeks.org",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "status": "no template matched",
+      "donorCount": 7,
+      "verdicts": [],
+      "falseMatches": []
+    },
+    {
+      "id": "kidderminster-application-faq",
+      "url": "https://www.kidderminster.ac.uk/good-to-know-articles/how-to-apply-for-a-course/",
+      "family": "keyboard activation",
+      "site": "kidderminster.ac.uk",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "status": "no template matched",
+      "donorCount": 7,
+      "verdicts": [],
+      "falseMatches": []
+    },
+    {
+      "id": "mynoise-open-menu",
+      "url": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+      "family": "keyboard activation",
+      "site": "mynoise.net",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "status": "no template matched",
+      "donorCount": 7,
+      "verdicts": [],
+      "falseMatches": []
+    },
+    {
+      "id": "nws-radar-play-pause",
+      "url": "https://radar.weather.gov/",
+      "family": "keyboard activation",
+      "site": "weather.gov",
+      "before": {
+        "status": "fail",
+        "reason": "The unique target was not visible."
+      },
+      "control": {
+        "status": "inconclusive",
+        "reason": "The unique target was not visible."
+      },
+      "status": "page drifted or blocked",
+      "donorCount": 8
+    },
+    {
+      "id": "poets-org-tr2",
+      "url": "https://poets.org/",
+      "family": "addLabel",
+      "site": "poets.org",
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "status": "near miss",
+      "donorCount": 11,
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "input[placeholder=\"search\"]",
+              "action": "addLabel",
+              "value": "Search"
+            }
+          ],
+          "source": "cato-org-tr2",
+          "templateId": "9ba074949b29c1bc64d4",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "input[placeholder=\"search\"]",
+              "action": "addLabel",
+              "value": "Search products, events, courses, resource categories..."
+            }
+          ],
+          "source": "asme-org-tr2",
+          "templateId": "e855e19cb16d43af0367",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        }
+      ],
+      "falseMatches": []
+    },
+    {
+      "id": "procurement-journey-considerations",
+      "url": "https://www.procurementjourney.scot/index.php/route-1/route-1-introduction",
+      "family": "keyboard activation",
+      "site": "procurementjourney.scot",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "control": {
+        "status": "inconclusive",
+        "reason": "locator.click: Timeout 2000ms exceeded."
+      },
+      "status": "page drifted or blocked",
+      "donorCount": 8
+    },
+    {
+      "id": "report-605ca95e172608f662",
+      "url": "https://www.colorhexa.com/ff0000",
+      "family": "keyboard activation",
+      "site": "colorhexa.com",
+      "status": "no safe declarative objective",
+      "donorCount": 7
+    },
+    {
+      "id": "report-cb10e18073d48f295a",
+      "url": "https://www.colorhexa.com/ff6600",
+      "family": "keyboard activation",
+      "site": "colorhexa.com",
+      "status": "no safe declarative objective",
+      "donorCount": 7
+    },
+    {
+      "id": "report-d6870c43f8831c2d3b",
+      "url": "https://www.colorhexa.com/0066ff",
+      "family": "keyboard activation",
+      "site": "colorhexa.com",
+      "status": "no safe declarative objective",
+      "donorCount": 7
+    },
+    {
+      "id": "sanantonio-library-reader",
+      "url": "https://www.mysapl.org/",
+      "family": "addLabel",
+      "site": "mysapl.org",
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "status": "near miss",
+      "donorCount": 11,
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#searchTermsCatalog",
+              "action": "addLabel",
+              "value": "Find Meaning..."
+            }
+          ],
+          "source": "v5-c46d9e085415a2e891b3",
+          "templateId": "e0d4dbf62d2cf01e27b0",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "#searchTermsCatalog",
+              "action": "addLabel",
+              "value": "Search forums"
+            }
+          ],
+          "source": "v5-fcff2ddd132fff0edeae",
+          "templateId": "b4e6f7179cd84c2f48e5",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        }
+      ],
+      "falseMatches": []
+    },
+    {
+      "id": "sfmta-pause-carousel",
+      "url": "https://www.sfmta.com/",
+      "family": "keyboard activation",
+      "site": "sfmta.com",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "status": "no template matched",
+      "donorCount": 7,
+      "verdicts": [],
+      "falseMatches": []
+    },
+    {
+      "id": "statcounter-edit-chart",
+      "url": "https://gs.statcounter.com/",
+      "family": "keyboard activation",
+      "site": "statcounter.com",
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "status": "no template matched",
+      "donorCount": 7,
+      "verdicts": [],
+      "falseMatches": []
+    },
+    {
+      "id": "unglobalcompact-org-tr2",
+      "url": "https://unglobalcompact.org/",
+      "family": "addLabel",
+      "site": "unglobalcompact.org",
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "status": "near miss",
+      "donorCount": 11,
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#search_keywords",
+              "action": "addLabel",
+              "value": "Search Game..."
+            }
+          ],
+          "source": "v5-fcd52c5a5920e388762d",
+          "templateId": "9a2d890309e885bc4422",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "#search_keywords",
+              "action": "addLabel",
+              "value": "Search Games"
+            }
+          ],
+          "source": "v5-e35e95e464a0b456fb7a",
+          "templateId": "f069c128f0fc6da717df",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        }
+      ],
+      "falseMatches": []
+    },
+    {
+      "id": "v4-86f207deeb57-7bc09a21",
+      "url": "https://www.mass.edu/",
+      "family": "CSS hover",
+      "site": "mass.edu",
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "The complete journey reached the declared outcome."
+      },
+      "status": "no eligible donor",
+      "donorCount": 0
+    },
+    {
+      "id": "v5-c46d9e085415a2e891b3",
+      "url": "https://rekhta.org/",
+      "family": "addLabel",
+      "site": "rekhta.org",
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "status": "near miss",
+      "donorCount": 11,
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#dictSearchText",
+              "action": "addLabel",
+              "value": "Search Catalog"
+            }
+          ],
+          "source": "sanantonio-library-reader",
+          "templateId": "beececeec90a9a6a61ce",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "#dictSearchText",
+              "action": "addLabel",
+              "value": "Search forums"
+            }
+          ],
+          "source": "v5-fcff2ddd132fff0edeae",
+          "templateId": "b4e6f7179cd84c2f48e5",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        }
+      ],
+      "falseMatches": []
+    },
+    {
+      "id": "v5-cf5e31bb10aecd3af383",
+      "url": "https://uindex.org/",
+      "family": "addLabel",
+      "site": "uindex.org",
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "status": "near miss",
+      "donorCount": 11,
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#search",
+              "action": "addLabel",
+              "value": "Search"
+            }
+          ],
+          "source": "unglobalcompact-org-tr2",
+          "templateId": "6bc34b9a7f55d5493143",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "#search",
+              "action": "addLabel",
+              "value": "Search Games"
+            }
+          ],
+          "source": "v5-e35e95e464a0b456fb7a",
+          "templateId": "f069c128f0fc6da717df",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "#search",
+              "action": "addLabel",
+              "value": "Search Game..."
+            }
+          ],
+          "source": "v5-fcd52c5a5920e388762d",
+          "templateId": "9a2d890309e885bc4422",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        }
+      ],
+      "falseMatches": []
+    },
+    {
+      "id": "v5-da5c14f912fb3f74fbbb",
+      "url": "https://www.shanghairanking.com/",
+      "family": "addLabel",
+      "site": "shanghairanking.com",
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "status": "near miss",
+      "donorCount": 11,
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#__layout > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > div > div:nth-of-type(1) > input",
+              "action": "addLabel",
+              "value": "Search Catalog"
+            }
+          ],
+          "source": "sanantonio-library-reader",
+          "templateId": "beececeec90a9a6a61ce",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "#__layout > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > div > div:nth-of-type(1) > input",
+              "action": "addLabel",
+              "value": "Find Meaning..."
+            }
+          ],
+          "source": "v5-c46d9e085415a2e891b3",
+          "templateId": "e0d4dbf62d2cf01e27b0",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "#__layout > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > div > div:nth-of-type(1) > input",
+              "action": "addLabel",
+              "value": "Search forums"
+            }
+          ],
+          "source": "v5-fcff2ddd132fff0edeae",
+          "templateId": "b4e6f7179cd84c2f48e5",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        }
+      ],
+      "falseMatches": []
+    },
+    {
+      "id": "v5-e35e95e464a0b456fb7a",
+      "url": "https://armorgames.com/",
+      "family": "addLabel",
+      "site": "armorgames.com",
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "status": "near miss",
+      "donorCount": 11,
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#search-input",
+              "action": "addLabel",
+              "value": "Search"
+            }
+          ],
+          "source": "unglobalcompact-org-tr2",
+          "templateId": "6bc34b9a7f55d5493143",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "#search-input",
+              "action": "addLabel",
+              "value": "Search Game..."
+            }
+          ],
+          "source": "v5-fcd52c5a5920e388762d",
+          "templateId": "9a2d890309e885bc4422",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        }
+      ],
+      "falseMatches": []
+    },
+    {
+      "id": "v5-fcd52c5a5920e388762d",
+      "url": "https://azgames.io/",
+      "family": "addLabel",
+      "site": "azgames.io",
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "status": "near miss",
+      "donorCount": 11,
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#txt-search1",
+              "action": "addLabel",
+              "value": "Search"
+            }
+          ],
+          "source": "unglobalcompact-org-tr2",
+          "templateId": "6bc34b9a7f55d5493143",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "#txt-search1",
+              "action": "addLabel",
+              "value": "Search Games"
+            }
+          ],
+          "source": "v5-e35e95e464a0b456fb7a",
+          "templateId": "f069c128f0fc6da717df",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        }
+      ],
+      "falseMatches": []
+    },
+    {
+      "id": "v5-fcff2ddd132fff0edeae",
+      "url": "https://www.forumotion.com/",
+      "family": "addLabel",
+      "site": "forumotion.com",
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "status": "near miss",
+      "donorCount": 11,
+      "verdicts": [
+        {
+          "rules": [
+            {
+              "selector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+              "action": "addLabel",
+              "value": "Search products, events, courses, resource categories..."
+            }
+          ],
+          "source": "asme-org-tr2",
+          "templateId": "e855e19cb16d43af0367",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+              "action": "addLabel",
+              "value": "Search"
+            }
+          ],
+          "source": "cato-org-tr2",
+          "templateId": "9ba074949b29c1bc64d4",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        {
+          "rules": [
+            {
+              "selector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+              "action": "addLabel",
+              "value": "Search Catalog"
+            }
+          ],
+          "source": "sanantonio-library-reader",
+          "templateId": "beececeec90a9a6a61ce",
+          "after": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        }
+      ],
+      "falseMatches": []
+    },
+    {
+      "id": "v6-1c713d1e1e5115a94c06",
+      "url": "https://www.futbolfantasy.com/",
+      "family": "addLabel",
+      "site": "futbolfantasy.com",
+      "before": {
+        "status": "inconclusive",
+        "reason": "Checked the declared coverage measurement."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the coverage target in the control lane."
+      },
+      "status": "page drifted or blocked",
+      "donorCount": 12
+    },
+    {
+      "id": "v6-5193be8805ece27f858e",
+      "url": "https://www.munich-airport.de/",
+      "family": "addLabel",
+      "site": "munich-airport.de",
+      "before": {
+        "status": "inconclusive",
+        "reason": "Checked the declared coverage measurement."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the coverage target in the control lane."
+      },
+      "status": "page drifted or blocked",
+      "donorCount": 12
+    },
+    {
+      "id": "v6-5d6a06db450ef73285c8",
+      "url": "https://inappstory.ru/",
+      "family": "addLabel",
+      "site": "inappstory.ru",
+      "before": {
+        "status": "inconclusive",
+        "reason": "Checked the declared coverage measurement."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the coverage target in the control lane."
+      },
+      "status": "page drifted or blocked",
+      "donorCount": 12
+    },
+    {
+      "id": "v6-6631495303224e7a36cd",
+      "url": "https://www.independent.com/",
+      "family": "addLabel",
+      "site": "independent.com",
+      "before": {
+        "status": "inconclusive",
+        "reason": "Checked the declared coverage measurement."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the coverage target in the control lane."
+      },
+      "status": "page drifted or blocked",
+      "donorCount": 12
+    },
+    {
+      "id": "ventusky-precipitation",
+      "url": "https://www.ventusky.com/",
+      "family": "keyboard activation",
+      "site": "ventusky.com",
+      "before": {
+        "status": "fail",
+        "reason": "The unique target was not visible."
+      },
+      "control": {
+        "status": "inconclusive",
+        "reason": "The unique target was not visible."
+      },
+      "status": "page drifted or blocked",
+      "donorCount": 8
+    },
+    {
+      "id": "w3schools-select-swatch",
+      "url": "https://www.w3schools.com/colors/colors_picker.asp#main",
+      "family": "keyboard activation",
+      "site": "w3schools.com",
+      "before": {
+        "status": "fail",
+        "reason": "The unique target was not visible."
+      },
+      "control": {
+        "status": "inconclusive",
+        "reason": "The unique target was not visible."
+      },
+      "status": "page drifted or blocked",
+      "donorCount": 8
+    }
+  ],
+  "pacing": {
+    "parallelSites": 3,
+    "minimumLaneGapMs": 2000,
+    "recipesCompletedBeforeResume": 17
+  },
+  "completedAt": "2026-11-24T18:25:02.310Z",
+  "interrupted": false
+}

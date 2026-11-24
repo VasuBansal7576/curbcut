@@ -3,12 +3,14 @@
 ```mermaid
 flowchart LR
     scout["Scout or user report"] --> task["Barrier task"]
-    task --> agent["Repair agent (Codex)"]
-    agent --> patch["Declarative JSON patch"]
+    task --> deterministic["Matching templates and recipes"]
+    deterministic --> patch["Declarative JSON patch"]
+    deterministic -->|"No passing candidate"| agent["Repair agent (Codex or Grok)"]
+    agent --> patch
     patch --> local["Local oracle<br/>Persona and pointer control"]
     local --> kane["Kane recordings<br/>Before, control, after"]
     kane --> bundle["Extension bundle"]
-    local -->|"Measured contrast or language"| bundle
+    local -->|"Measured coverage or family sample bypass"| bundle
     bundle --> recheck["Nightly local recheck<br/>Retire or mark broken"]
     recheck -->|"Update feed"| bundle
     bundle --> owner["Site-owner Markdown report"]
@@ -25,7 +27,7 @@ flowchart LR
     queue -->|"verify-queue"| task
 ```
 
-The current live `fix` loop runs Kane’s baseline and pointer control before requesting a repair. The frozen v4 and v5 studies produced candidates with local persona and pointer replays before sending selected repairs to Kane. V6 replayed contrast and language locally before, during and after applying the rule. [Live loop](core/loop.mjs) · [V6 evidence](proof/heldout-v6/README.md)
+The repair agent is selected with `CURBCUT_AGENT` (`codex`, the default, or `grok`). `check` derives a task from a URL and plain English, then runs the local oracle and the `fix` loop. `gate` replays configured tasks against a developer’s running app and prints failures for a coding agent to fix in source. Tasks with a declarative objective try inherited templates and deterministic recipes before requesting an agent proposal. Passing local repairs proceed to Kane verification or publish with local evidence under the family sampling policy. Tasks without a local objective use the Kane baseline to collect the failure. [Live loop](core/loop.mjs) · [Cost policy and replay](proof/cost/README.md)
 
 The live naming path gathers crops from the active viewport and combines them with a fixed vocabulary and page-specific candidates. It verifies the tab, document and target before attaching a temporary name. The keyboard-help check sends a bounded allowlist of navigation keys, anonymous focus IDs, roles, visibility, timing and interaction effects. It offers a known rule or a one-time naming pass after a confident result. [Decision evidence](proof/jev/README.md)
 
@@ -50,7 +52,7 @@ The extension and replay browser share one engine. The schema bounds actions and
 
 ## Proof protocol
 
-The optional visual preflight classifies a fresh, isolated start screenshot before case selection. Confident blocker classifications are marked for review. The registered Kane runner uses the original study protocol. [Preflight backtest](proof/jev/preflight-backtest.json)
+The optional visual preflight classifies a fresh, isolated start screenshot before case selection. Confident bot challenges stop Kane verification in interactive repairs and gates. The registered Kane runner uses the original study protocol. [Preflight backtest](proof/jev/preflight-backtest.json)
 
 Freeze the workflow, pin the sampling source and seed, and commit the site draw before scouting and the eligible tasks before repair. Record blocked, unresolved and inconclusive outcomes against the registered denominators. Seeded Kane selections record which locally repaired tasks are eligible, along with run limits. Evidence ledgers link the original browser results, recordings, sealed Kane packs and session IDs. The integrity scripts reconstruct frozen Git trees and verify recorded input hashes. The v6 verifier also checks shipped patch bytes. [V4 integrity](proof/hard-v4/verify-integrity.mjs) · [V5 integrity](scripts/verify-v5.mjs) · [V6 integrity](scripts/verify-v6.mjs) · [V7 integrity](scripts/verify-v7.mjs)
 
@@ -67,5 +69,5 @@ The nightly local recheck retires a verified rule when the original task passes 
 | [`scripts/`](scripts/) and [`tests/`](tests/) | Study runners, release builds, verification and tests |
 | [`fixtures/`](fixtures/) and [`examples/`](examples/) | Local test pages and example nightly schedule |
 | [`site/`](site/) and [`launch/`](launch/) | Evidence dashboard, film, screenshots and launch copy |
-| [`docs/`](docs/) and [`.github/`](.github/) | Original build brief and Pages workflow |
-| [`curbcut.mjs`](curbcut.mjs) | CLI entry point |
+| [`docs/`](docs/) and [`.github/`](.github/) | Original build brief, agent gate, and Pages workflow |
+| [`curbcut.mjs`](curbcut.mjs) | CLI entry point: `fix`, `check`, `gate`, `cost`, `report`, `recheck` |

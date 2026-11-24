@@ -76,6 +76,38 @@ function repairContext(targets) {
   return {nodes,hoverRules:observedHoverRules(nodes.map(node=>node.selector))}
 }
 
+function repairObservations(target,context) {
+  const asset=source=>{
+    try {return new URL(source,location.href).pathname.replace(/([.-])[a-f0-9]{8,}(?=[.-]|$)/gi,'$1*')}
+    catch {return null}
+  }
+  const stack=[document.querySelector('meta[name=generator i]')?.content?.slice(0,120),
+    ...[...document.querySelectorAll('script[src],link[rel=stylesheet][href]')].slice(0,60)
+      .map(node=>asset(node.src??node.href))].filter(Boolean)
+  const visibleText=node=>node?.checkVisibility({visibilityProperty:true})?node.innerText?.trim().slice(0,160):null
+  const labels=target?[...[...target.labels??[]].map(visibleText),target.getAttribute('placeholder'),
+    visibleText(target.previousElementSibling),visibleText(target.nextElementSibling)].filter(Boolean):[]
+  const hoverOwners=[]
+  for(const entry of context?.nodes??[]) {
+    const owner=document.querySelector(entry.selector)
+    if(!owner) continue
+    for(const rule of context.hoverRules) {
+      if(!/display:\s*(?:block|flex|grid|inline)|visibility:\s*visible|opacity:\s*1(?:[; ]|$)/i.test(rule.declarations)) continue
+      for(const branch of rule.selector.split(',')) {
+        const match=branch.match(/^(.+?):hover(\s+|\s*>\s*)([^+~]+)$/)
+        if(!match) continue
+        try {
+          const child=owner.matches(match[1]) && owner.querySelector(':scope '+match[2]+match[3])
+          if(child && !child.checkVisibility({visibilityProperty:true,opacityProperty:true})) hoverOwners.push(entry.selector)
+        } catch {}
+      }
+    }
+  }
+  return {stack,labels,explicitRole:target?.getAttribute('role'),hoverOwners:[...new Set(hoverOwners)],
+    language:document.documentElement.lang.trim()?null:visibleLanguageSample(),
+    measurement:target?coverageObservation(target,{category:'low-contrast'}):null}
+}
+
 function snapshot(observedSelector,hints=[]) {
   const target=observedSelector ? document.querySelector(observedSelector) : null
   const selected=new Map()
@@ -92,9 +124,10 @@ function snapshot(observedSelector,hints=[]) {
   const contextTargets=new Map(target?[[target,observedSelector]]:[])
   for(const [node,selector] of selected) if(!contextTargets.has(node)) contextTargets.set(node,selector)
   const context=contextTargets.size?repairContext(contextTargets):undefined
-  const nodes=[...new Set([...selected.keys(),...neighborhood(target),...neighborhood(focused),...overflowing,...visible])].slice(0,180)
+  const descendants=target?[...target.querySelectorAll(selectors)].slice(0,20):[]
+  const nodes=[...new Set([...selected.keys(),...neighborhood(target),...descendants,...neighborhood(focused),...overflowing,...visible])].slice(0,180)
   return {url:location.origin+location.pathname,width:innerWidth,scrollWidth:document.documentElement.scrollWidth,
-    focused:focused ? identify(focused):null,context,
+    focused:focused ? identify(focused):null,context,repair:{...repairObservations(target,context),descendants:descendants.map(identify)},
     nodes:nodes.map(el=>{
       const box=el.getBoundingClientRect()
       const style=getComputedStyle(el)

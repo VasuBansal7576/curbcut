@@ -44,6 +44,18 @@ A menu that opens only on hover can shut out keyboard users. An unnamed search f
 
 Use the extension zip from GitHub Releases once published, or open `chrome://extensions`, enable **Developer mode**, select **Load unpacked**, and choose [`extension/`](extension/). Try the About menu on [Massachusetts higher education](https://www.mass.edu/) with the fix off and on. Tab to **About**, open the submenu, and follow **The DHE**. [Before](proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/before/recording.mp4) · [After](proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/recording.mp4)
 
+## CLI
+
+```sh
+node curbcut.mjs check http://127.0.0.1:4317/fixtures/shop/ "Search for headphones and add Field Headphones to the cart. Confirm Cart (1)." --local
+node curbcut.mjs check <url> "<task>" --persona keyboard-only --dry-run
+node curbcut.mjs gate --local --config examples/curbcut.gate.json
+```
+
+`check` turns a URL and a plain-English task into a declarative objective, runs the local oracle, then the repair loop. `--local` uses Playwright only. `--dry-run` prints the derived checks and the Kane credit estimate. `gate` reads `curbcut.gate.json` and runs each task as the keyboard and screen-reader personas against a running app. Failures print a reason and a compact DOM snippet for a coding agent to fix in source. [Gate setup](docs/gate.md)
+
+The repair agent defaults to `codex exec`. Set `CURBCUT_AGENT=grok` to use the Grok CLI at `~/.grok/bin/grok`. `CURBCUT_MODEL` selects the model for the chosen backend.
+
 ## Check our numbers
 
 With Node 22 or later, run these from the repository root.
@@ -66,3 +78,5 @@ Each result covers a recorded task. Reading view models DOM roles and names, and
 In the installed extension, opt-in TypeSafe Jev live naming applied **15/35** unnamed links and buttons across a 19-site public run. Manual review found **13/15 correct (86.7%)** and two vague. At least one name appeared on **7 of 13** sites with unnamed controls. The median time to the first applied name was **1.14 s**. [Public-site results](proof/jev/live-naming-real-sites.json) · [Meridiano demo](proof/jev/live-naming-demo/capture.json)
 
 At Mass.edu, Tab cycles reproduced the About submenu barrier. A populated email field triggered the privacy gate and no keyboard help offer appeared. In the earlier v7 study, Kane verified **2/5** naming cases and the language decision fixed **1/1** task in the local oracle. [Keyboard replay](proof/jev/stuck-live-mass-edu.json) · [Held-out v7 study](proof/heldout-v7/README.md)
+
+`curbcut cost` summarizes agent tokens and Kane balance changes from recorded `check`, `fix`, and `gate` runs. Pass an array of task objects to `curbcut fix` to batch proposals by site. See the [cost replay](proof/cost/README.md) for configuration, results, and measurement limits.

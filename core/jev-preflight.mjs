@@ -1,3 +1,6 @@
+import path from 'node:path'
+import {saveJSON} from './io.mjs'
+import {recordCost} from './cost.mjs'
 import {tmpdir} from 'node:os'
 import {askJev,imageAsset} from './jev-policy.js'
 import {jevKey} from './jev.mjs'
@@ -45,4 +48,15 @@ export async function visualPreflight(data) {
     const result=await choosePreflight(key,task.task,'data:image/jpeg;base64,'+image.toString('base64'))
     return {runner:'playwright-jev',status:result.flag?'review':'observed',threshold:preflightThreshold,...result}
   } finally {await browser?.abort()}
+}
+
+export async function botPreflight(task,directory) {
+  const visual=await visualPreflight(task).catch(()=>null)
+  if(!visual) return null
+  const blocked=visual.flag && visual.choice==='bot'
+  const reason=blocked?'Jev flagged a bot challenge at the start screen.':null
+  await saveJSON(path.join(directory,'visual-preflight.json'),{...visual,...(blocked?{kaneSkipped:true,reason}:{})})
+  if(!blocked) return null
+  recordCost('bot-preflight',{kaneRunsAvoided:1,reason})
+  return {status:'blocked',reason,preflight:visual}
 }

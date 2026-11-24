@@ -4,6 +4,7 @@ import {session} from './chrome.mjs'
 import {BlockedPage,pageBlock} from './access.mjs'
 import {fixtureURL,forbiddenJourneyAction,managedKeyboardSelector,normalizeTask,taskDestination,taskNavigation} from './task.mjs'
 
+import {observeCoverage} from './coverage.mjs'
 import {widthEvidence} from './geometry.js'
 
 export function passageQuote(task) {
@@ -208,12 +209,40 @@ function matchedPatch(browser,patch) {
   return [...browser.observations.values()].some(page=>page.events.some(event=>event.type==='rule' && event.patchId===patch.id))
 }
 
+async function captureSnapshot(page,selector,hints=[],listeners=false) {
+  const snapshot=await page.evaluate(({selector,hints})=>CurbCut.snapshot(selector,hints),{selector,hints}).catch(()=>null)
+  if(!snapshot?.repair || !selector || !listeners) return snapshot
+  const client=await page.context().newCDPSession(page).catch(()=>null)
+  if(!client) return snapshot
+  try {
+    const {result}=await client.send('Runtime.evaluate',{expression:'document.querySelector('+JSON.stringify(selector)+')'})
+    if(result.objectId) {
+      const {listeners}=await client.send('DOMDebugger.getEventListeners',{objectId:result.objectId})
+      snapshot.repair.click=listeners.some(listener=>listener.type==='click')
+    }
+  } catch {} finally {await client.detach().catch(()=>{})}
+  return snapshot
+}
+
 async function checkLane(task,persona,patch=null,{requireMatch=false,capture=false,targetWait=0,attachedBrowser,observe}={}) {
   let browser=attachedBrowser
   try {
     browser??=await session(task,persona,patch,tmpdir(),{local:true,gate:true})
+    if(task.evaluation) {
+      const snapshot=await captureSnapshot(browser.page,task.observedSelector)
+      const outcome=await observeCoverage(browser.page,task,{enabled:Boolean(patch)})
+      if(persona==='control' && !patch) {
+        const visible=await browser.page.locator(task.observedSelector).isVisible()
+        return {snapshot,status:visible?'pass':'inconclusive',reason:'Checked the coverage target in the control lane.'}
+      }
+      return {...outcome,snapshot,reason:'Checked the declared coverage measurement.'}
+    }
     if(task.journey) {
       const result=await journeyLane(browser,task,persona,{capture})
+      if(capture && result.snapshot?.repair && !patch && persona!=='control') {
+        const observed=await captureSnapshot(browser.page,task.observedSelector,[],true)
+        if(observed?.url===result.snapshot.url) result.snapshot.repair.click=observed.repair?.click
+      }
       if(requireMatch && result.status==='pass' && !matchedPatch(browser,patch)) {
         return {...result,status:'inconclusive',reason:'No repair rule matched during the journey.'}
       }
@@ -223,8 +252,12 @@ async function checkLane(task,persona,patch=null,{requireMatch=false,capture=fal
     const selector=task.observedSelector
     const target=targetLocator(initial,task,selector)
     if(targetWait && !await target.isVisible()) await target.waitFor({state:'visible',timeout:targetWait}).catch(()=>{})
-    if(!await target.isVisible()) return {status:persona==='keyboard-only'?'fail':'inconclusive',reason:'The unique target was not visible.'}
+    if(!await target.isVisible()) return {status:persona==='keyboard-only'?'fail':'inconclusive',
+      reason:'The unique target was not visible.',...(capture?{snapshot:await captureSnapshot(initial,selector)}:{})}
     const {action,value,role}=task.probe
+    if(action==='click' && !fixtureURL(new URL(task.url)) && !await safeJourneyTarget(target,task)) {
+      return {status:'blocked',reason:'The activation leaves the public, read-only interaction.'}
+    }
     const scrollKeys=[]
     if(attachedBrowser && action==='read') {
       let reached=false
@@ -246,7 +279,7 @@ async function checkLane(task,persona,patch=null,{requireMatch=false,capture=fal
     },null,{timeout:1000})
     const geometry=await target.evaluate(widthEvidence,{text:action==='read'},{timeout:1000})
     const details={geometry,...(attachedBrowser && action==='read'?{scrollKeys}:{}),
-      snapshot:await initial.evaluate(selector=>globalThis.CurbCut?.snapshot(selector),selector).catch(()=>null)}
+      snapshot:await captureSnapshot(initial,selector,[],capture && !patch && persona!=='control')}
     const before=await outcomeChecks(initial,task,persona)
     if(action!=='read' && before.every(Boolean)) return {status:'inconclusive',reason:'The outcome already held before interaction.',...details}
     if((action==='read' || persona==='low-vision') && !geometry.fits) return {status:'fail',reason:'The target does not fit the visible width.',...details}
@@ -319,7 +352,7 @@ export async function confirmBarrier(data) {
 }
 
 export async function oracle(task,patch=null) {
-  const persona=await checkLane(task,task.persona,patch)
+  const persona=await checkLane(task,task.persona,patch,{capture:!patch,requireMatch:Boolean(patch)})
   if(patch) return {runner:'playwright',...persona}
   const control=await checkLane(task,'control')
   if(control.status!=='pass') return {runner:'playwright',status:control.status==='blocked'?'blocked':'inconclusive',control,persona}
