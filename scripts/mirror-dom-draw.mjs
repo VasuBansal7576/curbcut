@@ -6,7 +6,7 @@ const read = file => JSON.parse(readFileSync(file))
 const seed = 'curbcut-mirror-dom-v1'
 const rank = value => createHash('sha256').update(seed+'\n'+value).digest('hex')
 const bundled = new Set(read('extension/bundled.json').flatMap(row => [row.site,row.url,row.match].flatMap(value => {
-  try { return [siteKey(new URL(value.includes('://') ? value : 'https://'+value).hostname)] }
+  try { return [siteKey(new URL(value.includes('://') ? value : 'https://'+value))] }
   catch { return [] }
 })))
 const pool = new Map()
@@ -18,7 +18,7 @@ for (const source of sources) {
           result?.persona?.status !== 'fail' || !task.observedSelector ||
           forbiddenJourneyAction(task.task+' '+task.controlTask)) continue
       const url = new URL(task.url)
-      const site = siteKey(url.hostname)
+      const site = siteKey(url)
       if (!acceptableURL(url) || bundled.has(site)) continue
       const entry = {site,source,task}
       if (!pool.has(site) || rank(task.id) < rank(pool.get(site).task.id)) pool.set(site,entry)

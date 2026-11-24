@@ -13,12 +13,12 @@ const release = 'proof/heldout-finder-release/sample.json'
 const fallback = 'proof/heldout-v5/sample.json'
 const sources = [[prior,finder(prior).sites],[release,finder(release).sites],
   [fallback,read(fallback).sites.map(row => row.site)]]
-const excluded = new Set(read('extension/bundled.json').map(row => siteKey(new URL(row.url).hostname)))
+const excluded = new Set(read('extension/bundled.json').map(row => siteKey(new URL(row.url))))
 const candidates = []
 for (const [source,sites] of sources) {
   for (const site of [...sites].sort((a,b) => order(a).localeCompare(order(b)))) {
     const url = new URL('https://'+site+'/')
-    const domain = siteKey(url.hostname)
+    const domain = siteKey(url)
     if (excluded.has(domain) || !acceptableURL(url)) continue
     candidates.push({site,source,url:url.href})
     excluded.add(domain)
