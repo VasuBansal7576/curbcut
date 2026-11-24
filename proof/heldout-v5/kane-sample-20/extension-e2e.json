@@ -1,0 +1,1650 @@
+{
+  "runner": "playwright-extension",
+  "checkedAt": "2026-11-24T12:20:44.079Z",
+  "bundleSha256": "1eba1f4507f81f1acd40b0964a0e3f5f6a90bd1add2def2273d53081b5039f1f",
+  "total": 11,
+  "passed": 11,
+  "counts": {
+    "pass": 11
+  },
+  "journeys": {
+    "total": 1,
+    "passed": 1
+  },
+  "results": [
+    {
+      "id": "v5-78c6473662e589ae4e3e",
+      "url": "https://lawphil.net/",
+      "persona": "low-vision",
+      "journey": false,
+      "probeAction": "read",
+      "off": {
+        "enabled": false,
+        "active": false,
+        "landed": "https://lawphil.net/",
+        "httpStatus": 200,
+        "matchedRules": [],
+        "selectorsConfirmed": false,
+        "selectorMatches": [],
+        "probe": {
+          "status": "fail",
+          "reason": "The target does not fit the visible width.",
+          "geometry": {
+            "left": 15.59375,
+            "right": 512.390625,
+            "width": 320,
+            "scrollX": 0,
+            "clientWidth": 518,
+            "scrollWidth": 518,
+            "inView": true,
+            "fits": false
+          },
+          "scrollKeys": []
+        }
+      },
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://lawphil.net/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "p",
+                "classes": [],
+                "label": "About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "center > table:nth-of-type(2)",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "table",
+                "classes": [],
+                "label": "Latest on Republic Acts Other Projects of the Foundation Executive Issuances Case Updates Related We"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "center > table:nth-of-type(2) > tbody, center > table:nth-of-type(2) > tbody > tr:nth-of-type(7), center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td",
+            "count": 4,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "tbody",
+                "classes": [],
+                "label": "Latest on Republic Acts Other Projects of the Foundation Executive Issuances Case Updates Related We"
+              },
+              {
+                "tag": "tr",
+                "classes": [],
+                "label": "About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice"
+              },
+              {
+                "tag": "td",
+                "classes": [],
+                "label": "About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice"
+              },
+              {
+                "tag": "td",
+                "classes": [],
+                "label": ""
+              }
+            ]
+          }
+        ],
+        "probe": {
+          "geometry": {
+            "left": 1.25,
+            "right": 313.734375,
+            "width": 320,
+            "scrollX": 0,
+            "clientWidth": 320,
+            "scrollWidth": 320,
+            "inView": true,
+            "fits": true
+          },
+          "scrollKeys": [],
+          "url": "https://lawphil.net/",
+          "checks": [
+            true,
+            true
+          ],
+          "status": "pass",
+          "reason": "Checked the declared outcome after the read action."
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "id": "v5-7dc57bda3fb85932eb21",
+      "url": "https://trackjs.com/",
+      "persona": "low-vision",
+      "journey": false,
+      "probeAction": "read",
+      "off": {
+        "enabled": false,
+        "active": false,
+        "landed": "https://trackjs.com/",
+        "httpStatus": 200,
+        "matchedRules": [],
+        "selectorsConfirmed": false,
+        "selectorMatches": [],
+        "probe": {
+          "status": "fail",
+          "reason": "The target does not fit the visible width.",
+          "geometry": {
+            "left": 15,
+            "right": 356.796875,
+            "width": 320,
+            "scrollX": 0,
+            "clientWidth": 345,
+            "scrollWidth": 345,
+            "inView": true,
+            "fits": false
+          },
+          "scrollKeys": []
+        }
+      },
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://trackjs.com/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "body.product.index, body.product.index div.container",
+            "count": 14,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "body",
+                "classes": [
+                  "product",
+                  "index"
+                ],
+                "label": "document.documentElement.classList.remove(\"no-js\"); Security Update: In the wake of AI-fueld securit"
+              },
+              {
+                "tag": "div",
+                "classes": [
+                  "container"
+                ],
+                "label": "Security Update: In the wake of AI-fueld security incidents, we're auditing all our systems and prac"
+              },
+              {
+                "tag": "div",
+                "classes": [
+                  "container"
+                ],
+                "label": "Product How it works Understand how TrackJS works behind the scenes to automatically capture and rep"
+              },
+              {
+                "tag": "div",
+                "classes": [
+                  "container"
+                ],
+                "label": "Who watches the vibe coder? Monitor production JavaScript Shipping AI code is fast. Debugging it wit"
+              },
+              {
+                "tag": "div",
+                "classes": [
+                  "container",
+                  "align-center"
+                ],
+                "label": "“AI got us shipping twice as fast, but the production bugs were inscrutable. TrackJS gave us the run"
+              }
+            ]
+          }
+        ],
+        "probe": {
+          "geometry": {
+            "left": 15,
+            "right": 296.0625,
+            "width": 320,
+            "scrollX": 0,
+            "clientWidth": 290,
+            "scrollWidth": 290,
+            "inView": true,
+            "fits": true
+          },
+          "scrollKeys": [],
+          "url": "https://trackjs.com/",
+          "checks": [
+            true,
+            true
+          ],
+          "status": "pass",
+          "reason": "Checked the declared outcome after the read action."
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "id": "v5-9e9bb4ee04e0ed570269",
+      "url": "https://www.systemrequirementslab.com/cyri",
+      "persona": "low-vision",
+      "journey": false,
+      "probeAction": "read",
+      "off": {
+        "enabled": false,
+        "active": false,
+        "landed": "https://www.systemrequirementslab.com/cyri",
+        "httpStatus": 200,
+        "matchedRules": [],
+        "selectorsConfirmed": false,
+        "selectorMatches": [],
+        "probe": {
+          "status": "fail",
+          "reason": "The target does not fit the visible width.",
+          "geometry": {
+            "left": 10,
+            "right": 669.375,
+            "width": 320,
+            "scrollX": 0,
+            "clientWidth": 665,
+            "scrollWidth": 665,
+            "inView": true,
+            "fits": false
+          },
+          "scrollKeys": []
+        }
+      },
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.systemrequirementslab.com/cyri",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#main-table, #main-table > tbody, #main-table > tbody > tr, #main-table > tbody > tr > td:nth-of-type(2)",
+            "count": 4,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "table",
+                "id": "main-table",
+                "classes": [
+                  "table",
+                  "table-borderless",
+                  "table-sm"
+                ],
+                "label": "Sign In Can You RUN ItCan I Run AIGame ListsMy Computer DetailsRate My PCWhat Will RUN ItGPU Compare"
+              },
+              {
+                "tag": "tbody",
+                "classes": [],
+                "label": "Sign In Can You RUN ItCan I Run AIGame ListsMy Computer DetailsRate My PCWhat Will RUN ItGPU Compare"
+              },
+              {
+                "tag": "tr",
+                "classes": [],
+                "label": "Sign In Can You RUN ItCan I Run AIGame ListsMy Computer DetailsRate My PCWhat Will RUN ItGPU Compare"
+              },
+              {
+                "tag": "td",
+                "classes": [],
+                "label": "Sign In Can You RUN ItCan I Run AIGame ListsMy Computer DetailsRate My PCWhat Will RUN ItGPU Compare"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "#main-table > tbody > tr > td:nth-of-type(2) > div, #main-table > tbody > tr > td:nth-of-type(2) > div > div:nth-of-type(2), #main-table main[role=\"main\"]",
+            "count": 3,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [],
+                "label": "Sign In Can You RUN ItCan I Run AIGame ListsMy Computer DetailsRate My PCWhat Will RUN ItGPU Compare"
+              },
+              {
+                "tag": "div",
+                "classes": [],
+                "label": "Can I Run It? System Requirements Lab analyzes your computer in just seconds, and it's FREE. See for"
+              },
+              {
+                "tag": "main",
+                "classes": [],
+                "role": "main",
+                "label": "Can I Run It? System Requirements Lab analyzes your computer in just seconds, and it's FREE. See for"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "#main-table main[role=\"main\"] > .row.row-layout",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "row",
+                  "row-layout"
+                ],
+                "label": "Can I Run It? System Requirements Lab analyzes your computer in just seconds, and it's FREE. See for"
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": "#main-table main[role=\"main\"] > .row.row-layout > .col.col-layout:first-of-type",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "col",
+                  "col-layout"
+                ],
+                "label": "Can I Run It? System Requirements Lab analyzes your computer in just seconds, and it's FREE. See for"
+              }
+            ]
+          }
+        ],
+        "probe": {
+          "geometry": {
+            "left": 10,
+            "right": 303.984375,
+            "width": 320,
+            "scrollX": 0,
+            "clientWidth": 300,
+            "scrollWidth": 300,
+            "inView": true,
+            "fits": true
+          },
+          "scrollKeys": [],
+          "url": "https://www.systemrequirementslab.com/cyri",
+          "checks": [
+            true,
+            true
+          ],
+          "status": "pass",
+          "reason": "Checked the declared outcome after the read action."
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "id": "v5-ab1225a91bea3a027001",
+      "url": "https://rtmark.net/",
+      "persona": "low-vision",
+      "journey": false,
+      "probeAction": "read",
+      "off": {
+        "enabled": false,
+        "active": false,
+        "landed": "https://rtmark.net/",
+        "httpStatus": 200,
+        "matchedRules": [],
+        "selectorsConfirmed": false,
+        "selectorMatches": [],
+        "probe": {
+          "status": "fail",
+          "reason": "The target does not fit the visible width.",
+          "geometry": {
+            "left": 0,
+            "right": 571.546875,
+            "width": 320,
+            "scrollX": 0,
+            "clientWidth": 585,
+            "scrollWidth": 585,
+            "inView": true,
+            "fits": false
+          },
+          "scrollKeys": []
+        }
+      },
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://rtmark.net/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "body",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "body",
+                "classes": [],
+                "label": "Privacy PolicyOpt-out Privacy policy Samoukale, LTD. is committed to protecting the privacy of Inter"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "body > div.wrapper",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "wrapper"
+                ],
+                "label": "Privacy policy Samoukale, LTD. is committed to protecting the privacy of Internet users. Accordingly"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "body > div.wrapper > div.main_column",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "main_column"
+                ],
+                "label": "Privacy policy Samoukale, LTD. is committed to protecting the privacy of Internet users. Accordingly"
+              }
+            ]
+          }
+        ],
+        "probe": {
+          "geometry": {
+            "left": 0,
+            "right": 203.09375,
+            "width": 320,
+            "scrollX": 0,
+            "clientWidth": 208,
+            "scrollWidth": 208,
+            "inView": true,
+            "fits": true
+          },
+          "scrollKeys": [],
+          "url": "https://rtmark.net/",
+          "checks": [
+            true,
+            true
+          ],
+          "status": "pass",
+          "reason": "Checked the declared outcome after the read action."
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "id": "v5-b3a020e9a510-2d198473",
+      "url": "https://esim.holafly.com/",
+      "persona": "keyboard-only",
+      "journey": true,
+      "off": {
+        "enabled": false,
+        "active": false,
+        "landed": "https://esim.holafly.com/",
+        "httpStatus": 200,
+        "matchedRules": [],
+        "selectorsConfirmed": false,
+        "selectorMatches": [],
+        "journey": {
+          "status": "fail",
+          "reason": "Tab traversal missed journey step 3.",
+          "steps": [
+            {
+              "selector": "#countries-ba4i7pb",
+              "action": "focus",
+              "traversal": {
+                "reached": true,
+                "tabs": 19
+              },
+              "visibility": null
+            },
+            {
+              "selector": "#countries-ba4i7pb",
+              "action": "key",
+              "key": "ArrowRight"
+            },
+            {
+              "selector": "#regions-ba4i7pb",
+              "action": "activate",
+              "traversal": {
+                "reached": false,
+                "tabs": 96,
+                "exhausted": true
+              }
+            }
+          ],
+          "url": "https://esim.holafly.com/",
+          "snapshot": null
+        }
+      },
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://esim.holafly.com/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "container",
+            "selector": "#Destinations .destinations__segmented [role=\"tablist\"]",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "inline-flex",
+                  "justify-center",
+                  "w-auto",
+                  "gap-2"
+                ],
+                "role": "tablist",
+                "label": "Segmented control"
+              }
+            ]
+          },
+          {
+            "index": 0,
+            "field": "items",
+            "selector": "button[role=\"tab\"]",
+            "scope": "#Destinations .destinations__segmented [role=\"tablist\"]",
+            "count": 3,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "button",
+                "id": "countries-ba4i7pb",
+                "classes": [
+                  "text-sm",
+                  "sm:text-base",
+                  "md:px-5",
+                  "px-4"
+                ],
+                "role": "tab",
+                "label": "Countries"
+              },
+              {
+                "tag": "button",
+                "id": "regions-ba4i7pb",
+                "classes": [
+                  "text-sm",
+                  "sm:text-base",
+                  "md:px-5",
+                  "px-4"
+                ],
+                "role": "tab",
+                "label": "Regions"
+              },
+              {
+                "tag": "button",
+                "id": "plans-ba4i7pb",
+                "classes": [
+                  "text-sm",
+                  "sm:text-base",
+                  "md:px-5",
+                  "px-4"
+                ],
+                "role": "tab",
+                "label": "Plans New"
+              }
+            ]
+          }
+        ],
+        "journey": {
+          "status": "pass",
+          "reason": "The complete journey reached the declared outcome.",
+          "steps": [
+            {
+              "selector": "#countries-ba4i7pb",
+              "action": "focus",
+              "traversal": {
+                "reached": true,
+                "tabs": 19
+              },
+              "visibility": null
+            },
+            {
+              "selector": "#countries-ba4i7pb",
+              "action": "key",
+              "key": "ArrowRight"
+            },
+            {
+              "selector": "#regions-ba4i7pb",
+              "action": "activate",
+              "visibility": null
+            },
+            {
+              "selector": "#panel-regions-ba4i7pb",
+              "action": "observe"
+            }
+          ],
+          "url": "https://esim.holafly.com/",
+          "checks": [
+            true
+          ],
+          "snapshot": null
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "id": "v5-c46d9e085415a2e891b3",
+      "url": "https://rekhta.org/",
+      "persona": "screen-reader-view",
+      "journey": false,
+      "probeAction": "type",
+      "off": {
+        "enabled": false,
+        "active": false,
+        "landed": "https://rekhta.org/",
+        "httpStatus": 200,
+        "matchedRules": [],
+        "selectorsConfirmed": false,
+        "selectorMatches": [],
+        "probe": {
+          "status": "fail",
+          "reason": "The expected usable role and name were absent from Reading view.",
+          "geometry": {
+            "left": 449,
+            "right": 1005,
+            "width": 1280,
+            "scrollX": 0,
+            "clientWidth": 471,
+            "scrollWidth": 471,
+            "inView": false,
+            "fits": true
+          },
+          "reader": {
+            "role": "textbox",
+            "name": "",
+            "state": "",
+            "editable": true,
+            "activatable": false
+          }
+        }
+      },
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://rekhta.org/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#dictSearchText",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "input",
+                "id": "dictSearchText",
+                "classes": [],
+                "label": "Find Meaning..."
+              }
+            ]
+          }
+        ],
+        "probe": {
+          "geometry": {
+            "left": 449,
+            "right": 1005,
+            "width": 1280,
+            "scrollX": 0,
+            "clientWidth": 471,
+            "scrollWidth": 471,
+            "inView": false,
+            "fits": true
+          },
+          "reader": {
+            "role": "textbox",
+            "name": "Find Meaning...",
+            "state": "",
+            "editable": true,
+            "activatable": false
+          },
+          "url": "https://rekhta.org/",
+          "checks": [
+            true
+          ],
+          "status": "pass",
+          "reason": "Checked the declared outcome after the type action."
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "id": "v5-cf5e31bb10aecd3af383",
+      "url": "https://uindex.org/",
+      "persona": "screen-reader-view",
+      "journey": false,
+      "probeAction": "type",
+      "off": {
+        "enabled": false,
+        "active": false,
+        "landed": "https://uindex.org/",
+        "httpStatus": 200,
+        "matchedRules": [],
+        "selectorsConfirmed": false,
+        "selectorMatches": [],
+        "probe": {
+          "status": "fail",
+          "reason": "The expected usable role and name were absent from Reading view.",
+          "geometry": {
+            "left": 218.578125,
+            "right": 1052.625,
+            "width": 1280,
+            "scrollX": 0,
+            "clientWidth": 808,
+            "scrollWidth": 808,
+            "inView": true,
+            "fits": true
+          },
+          "reader": {
+            "role": "textbox",
+            "name": "",
+            "state": "",
+            "editable": true,
+            "activatable": false
+          }
+        }
+      },
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://uindex.org/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#searchform > input#search",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "input",
+                "id": "search",
+                "classes": [],
+                "label": "Search torrents..."
+              }
+            ]
+          }
+        ],
+        "probe": {
+          "geometry": {
+            "left": 218.578125,
+            "right": 1052.625,
+            "width": 1280,
+            "scrollX": 0,
+            "clientWidth": 808,
+            "scrollWidth": 808,
+            "inView": true,
+            "fits": true
+          },
+          "reader": {
+            "role": "textbox",
+            "name": "Search torrents...",
+            "state": "",
+            "editable": true,
+            "activatable": false
+          },
+          "url": "https://uindex.org/",
+          "checks": [
+            true
+          ],
+          "status": "pass",
+          "reason": "Checked the declared outcome after the type action."
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "id": "v5-da5c14f912fb3f74fbbb",
+      "url": "https://www.shanghairanking.com/",
+      "persona": "screen-reader-view",
+      "journey": false,
+      "probeAction": "type",
+      "off": {
+        "enabled": false,
+        "active": false,
+        "landed": "https://www.shanghairanking.com/",
+        "httpStatus": 200,
+        "matchedRules": [],
+        "selectorsConfirmed": false,
+        "selectorMatches": [],
+        "probe": {
+          "status": "fail",
+          "reason": "The expected usable role and name were absent from Reading view.",
+          "geometry": {
+            "left": 52,
+            "right": 652,
+            "width": 1280,
+            "scrollX": 0,
+            "clientWidth": 510,
+            "scrollWidth": 510,
+            "inView": false,
+            "fits": true
+          },
+          "reader": {
+            "role": "textbox",
+            "name": "",
+            "state": "",
+            "editable": true,
+            "activatable": false
+          }
+        }
+      },
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.shanghairanking.com/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "div.search-container > div.contain-wrap > div.input-box > div.input-wrap > input.input",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "input",
+                "classes": [
+                  "input"
+                ],
+                "label": "Search for a university"
+              }
+            ]
+          }
+        ],
+        "probe": {
+          "geometry": {
+            "left": 52,
+            "right": 652,
+            "width": 1280,
+            "scrollX": 0,
+            "clientWidth": 510,
+            "scrollWidth": 510,
+            "inView": false,
+            "fits": true
+          },
+          "reader": {
+            "role": "textbox",
+            "name": "Search for a university",
+            "state": "",
+            "editable": true,
+            "activatable": false
+          },
+          "url": "https://www.shanghairanking.com/",
+          "checks": [
+            true
+          ],
+          "status": "pass",
+          "reason": "Checked the declared outcome after the type action."
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "id": "v5-e35e95e464a0b456fb7a",
+      "url": "https://armorgames.com/",
+      "persona": "screen-reader-view",
+      "journey": false,
+      "probeAction": "type",
+      "off": {
+        "enabled": false,
+        "active": false,
+        "landed": "https://armorgames.com/",
+        "httpStatus": 200,
+        "matchedRules": [],
+        "selectorsConfirmed": false,
+        "selectorMatches": [],
+        "probe": {
+          "status": "fail",
+          "reason": "The expected usable role and name were absent from Reading view.",
+          "geometry": {
+            "left": 797.0625,
+            "right": 927.0625,
+            "width": 1280,
+            "scrollX": 0,
+            "clientWidth": 100,
+            "scrollWidth": 100,
+            "inView": true,
+            "fits": true
+          },
+          "reader": {
+            "role": "textbox",
+            "name": "",
+            "state": "",
+            "editable": true,
+            "activatable": false
+          }
+        }
+      },
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://armorgames.com/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#search-input",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "input",
+                "id": "search-input",
+                "classes": [
+                  "search",
+                  "ui-autocomplete-input"
+                ],
+                "role": "textbox",
+                "label": "Search Games"
+              }
+            ]
+          }
+        ],
+        "probe": {
+          "geometry": {
+            "left": 797.0625,
+            "right": 927.0625,
+            "width": 1280,
+            "scrollX": 0,
+            "clientWidth": 100,
+            "scrollWidth": 100,
+            "inView": true,
+            "fits": true
+          },
+          "reader": {
+            "role": "textbox",
+            "name": "Search Games",
+            "state": "",
+            "editable": true,
+            "activatable": false
+          },
+          "url": "https://armorgames.com/",
+          "checks": [
+            true
+          ],
+          "status": "pass",
+          "reason": "Checked the declared outcome after the type action."
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "id": "v5-fcd52c5a5920e388762d",
+      "url": "https://azgames.io/",
+      "persona": "screen-reader-view",
+      "journey": false,
+      "probeAction": "type",
+      "off": {
+        "enabled": false,
+        "active": false,
+        "landed": "https://azgames.io/",
+        "httpStatus": 200,
+        "matchedRules": [],
+        "selectorsConfirmed": false,
+        "selectorMatches": [],
+        "probe": {
+          "status": "fail",
+          "reason": "The expected usable role and name were absent from Reading view.",
+          "geometry": {
+            "left": 918,
+            "right": 1155,
+            "width": 1280,
+            "scrollX": 0,
+            "clientWidth": 178,
+            "scrollWidth": 178,
+            "inView": true,
+            "fits": true
+          },
+          "reader": {
+            "role": "textbox",
+            "name": "",
+            "state": "",
+            "editable": true,
+            "activatable": false
+          }
+        }
+      },
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://azgames.io/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#txt-search1",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "input",
+                "id": "txt-search1",
+                "classes": [
+                  "txt-search"
+                ],
+                "label": "Search Game..."
+              }
+            ]
+          }
+        ],
+        "probe": {
+          "geometry": {
+            "left": 918,
+            "right": 1155,
+            "width": 1280,
+            "scrollX": 0,
+            "clientWidth": 178,
+            "scrollWidth": 178,
+            "inView": true,
+            "fits": true
+          },
+          "reader": {
+            "role": "textbox",
+            "name": "Search Game...",
+            "state": "",
+            "editable": true,
+            "activatable": false
+          },
+          "url": "https://azgames.io/",
+          "checks": [
+            true
+          ],
+          "status": "pass",
+          "reason": "Checked the declared outcome after the type action."
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "id": "v5-fcff2ddd132fff0edeae",
+      "url": "https://www.forumotion.com/",
+      "persona": "screen-reader-view",
+      "journey": false,
+      "probeAction": "type",
+      "off": {
+        "enabled": false,
+        "active": false,
+        "landed": "https://www.forumotion.com/",
+        "httpStatus": 200,
+        "matchedRules": [],
+        "selectorsConfirmed": false,
+        "selectorMatches": [],
+        "probe": {
+          "status": "fail",
+          "reason": "The expected usable role and name were absent from Reading view.",
+          "geometry": {
+            "left": 265,
+            "right": 955,
+            "width": 1280,
+            "scrollX": 0,
+            "clientWidth": 664,
+            "scrollWidth": 664,
+            "inView": false,
+            "fits": true
+          },
+          "reader": {
+            "role": "textbox",
+            "name": "Search for a forum in the directory",
+            "state": "",
+            "editable": true,
+            "activatable": false
+          }
+        }
+      },
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.forumotion.com/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "input",
+                "classes": [
+                  "form-control"
+                ],
+                "label": "Search forums"
+              }
+            ]
+          }
+        ],
+        "probe": {
+          "geometry": {
+            "left": 265,
+            "right": 955,
+            "width": 1280,
+            "scrollX": 0,
+            "clientWidth": 664,
+            "scrollWidth": 664,
+            "inView": false,
+            "fits": true
+          },
+          "reader": {
+            "role": "textbox",
+            "name": "Search forums",
+            "state": "",
+            "editable": true,
+            "activatable": false
+          },
+          "url": "https://www.forumotion.com/",
+          "checks": [
+            true
+          ],
+          "status": "pass",
+          "reason": "Checked the declared outcome after the type action."
+        }
+      },
+      "status": "pass"
+    }
+  ],
+  "probes": {
+    "total": 10,
+    "passed": 10
+  },
+  "twins": {
+    "total": 11,
+    "serving": 3,
+    "passed": 3,
+    "counts": {
+      "pass": 3,
+      "cross-host-redirect": 7,
+      "unavailable": 1
+    },
+    "results": [
+      {
+        "id": "v5-78c6473662e589ae4e3e",
+        "url": "https://www.lawphil.net/",
+        "persona": "low-vision",
+        "journey": false,
+        "probeAction": "read",
+        "off": {
+          "enabled": false,
+          "active": false,
+          "landed": "https://www.lawphil.net/",
+          "httpStatus": 200,
+          "matchedRules": [],
+          "selectorsConfirmed": false,
+          "selectorMatches": [],
+          "probe": {
+            "status": "fail",
+            "reason": "The target does not fit the visible width.",
+            "geometry": {
+              "left": 15.59375,
+              "right": 512.390625,
+              "width": 320,
+              "scrollX": 0,
+              "clientWidth": 518,
+              "scrollWidth": 518,
+              "inView": true,
+              "fits": false
+            },
+            "scrollKeys": []
+          }
+        },
+        "on": {
+          "enabled": true,
+          "active": true,
+          "landed": "https://www.lawphil.net/",
+          "httpStatus": 200,
+          "matchedRules": [
+            0,
+            1,
+            2
+          ],
+          "selectorsConfirmed": true,
+          "selectorMatches": [
+            {
+              "index": 0,
+              "field": "selector",
+              "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "p",
+                  "classes": [],
+                  "label": "About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice"
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "field": "selector",
+              "selector": "center > table:nth-of-type(2)",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "table",
+                  "classes": [],
+                  "label": "Latest on Republic Acts Other Projects of the Foundation Executive Issuances Case Updates Related We"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "field": "selector",
+              "selector": "center > table:nth-of-type(2) > tbody, center > table:nth-of-type(2) > tbody > tr:nth-of-type(7), center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td",
+              "count": 4,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "tbody",
+                  "classes": [],
+                  "label": "Latest on Republic Acts Other Projects of the Foundation Executive Issuances Case Updates Related We"
+                },
+                {
+                  "tag": "tr",
+                  "classes": [],
+                  "label": "About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice"
+                },
+                {
+                  "tag": "td",
+                  "classes": [],
+                  "label": "About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice"
+                },
+                {
+                  "tag": "td",
+                  "classes": [],
+                  "label": ""
+                }
+              ]
+            }
+          ],
+          "probe": {
+            "geometry": {
+              "left": 1.25,
+              "right": 313.734375,
+              "width": 320,
+              "scrollX": 0,
+              "clientWidth": 320,
+              "scrollWidth": 320,
+              "inView": true,
+              "fits": true
+            },
+            "scrollKeys": [],
+            "url": "https://www.lawphil.net/",
+            "checks": [
+              true,
+              true
+            ],
+            "status": "pass",
+            "reason": "Checked the declared outcome after the read action."
+          }
+        },
+        "status": "pass",
+        "probe": {
+          "status": "serving",
+          "httpStatus": 200,
+          "landed": "https://www.lawphil.net/"
+        }
+      },
+      {
+        "id": "v5-7dc57bda3fb85932eb21",
+        "url": "https://www.trackjs.com/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://trackjs.com/",
+          "reason": "Redirects to trackjs.com."
+        }
+      },
+      {
+        "id": "v5-9e9bb4ee04e0ed570269",
+        "url": "https://systemrequirementslab.com/cyri",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.systemrequirementslab.com/cyri",
+          "reason": "Redirects to www.systemrequirementslab.com."
+        }
+      },
+      {
+        "id": "v5-ab1225a91bea3a027001",
+        "url": "https://www.rtmark.net/",
+        "status": "unavailable",
+        "probe": {
+          "status": "unavailable",
+          "reason": "ENOTFOUND"
+        }
+      },
+      {
+        "id": "v5-b3a020e9a510-2d198473",
+        "url": "https://www.esim.holafly.com/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://esim.holafly.com/",
+          "reason": "Redirects to esim.holafly.com."
+        }
+      },
+      {
+        "id": "v5-c46d9e085415a2e891b3",
+        "url": "https://www.rekhta.org/",
+        "persona": "screen-reader-view",
+        "journey": false,
+        "probeAction": "type",
+        "off": {
+          "enabled": false,
+          "active": false,
+          "landed": "https://www.rekhta.org/",
+          "httpStatus": 200,
+          "matchedRules": [],
+          "selectorsConfirmed": false,
+          "selectorMatches": [],
+          "probe": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view.",
+            "geometry": {
+              "left": 449,
+              "right": 1005,
+              "width": 1280,
+              "scrollX": 0,
+              "clientWidth": 471,
+              "scrollWidth": 471,
+              "inView": false,
+              "fits": true
+            },
+            "reader": {
+              "role": "textbox",
+              "name": "",
+              "state": "",
+              "editable": true,
+              "activatable": false
+            }
+          }
+        },
+        "on": {
+          "enabled": true,
+          "active": true,
+          "landed": "https://www.rekhta.org/",
+          "httpStatus": 200,
+          "matchedRules": [
+            0
+          ],
+          "selectorsConfirmed": true,
+          "selectorMatches": [
+            {
+              "index": 0,
+              "field": "selector",
+              "selector": "#dictSearchText",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "input",
+                  "id": "dictSearchText",
+                  "classes": [],
+                  "label": "Find Meaning..."
+                }
+              ]
+            }
+          ],
+          "probe": {
+            "geometry": {
+              "left": 449,
+              "right": 1005,
+              "width": 1280,
+              "scrollX": 0,
+              "clientWidth": 471,
+              "scrollWidth": 471,
+              "inView": false,
+              "fits": true
+            },
+            "reader": {
+              "role": "textbox",
+              "name": "Find Meaning...",
+              "state": "",
+              "editable": true,
+              "activatable": false
+            },
+            "url": "https://www.rekhta.org/",
+            "checks": [
+              true
+            ],
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        "status": "pass",
+        "probe": {
+          "status": "serving",
+          "httpStatus": 200,
+          "landed": "https://www.rekhta.org/"
+        }
+      },
+      {
+        "id": "v5-cf5e31bb10aecd3af383",
+        "url": "https://www.uindex.org/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://uindex.org/",
+          "reason": "Redirects to uindex.org."
+        }
+      },
+      {
+        "id": "v5-da5c14f912fb3f74fbbb",
+        "url": "https://shanghairanking.com/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.shanghairanking.com/",
+          "reason": "Redirects to www.shanghairanking.com."
+        }
+      },
+      {
+        "id": "v5-e35e95e464a0b456fb7a",
+        "url": "https://www.armorgames.com/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://armorgames.com/",
+          "reason": "Redirects to armorgames.com."
+        }
+      },
+      {
+        "id": "v5-fcd52c5a5920e388762d",
+        "url": "https://www.azgames.io/",
+        "persona": "screen-reader-view",
+        "journey": false,
+        "probeAction": "type",
+        "off": {
+          "enabled": false,
+          "active": false,
+          "landed": "https://www.azgames.io/",
+          "httpStatus": 200,
+          "matchedRules": [],
+          "selectorsConfirmed": false,
+          "selectorMatches": [],
+          "probe": {
+            "status": "fail",
+            "reason": "The expected usable role and name were absent from Reading view.",
+            "geometry": {
+              "left": 918,
+              "right": 1155,
+              "width": 1280,
+              "scrollX": 0,
+              "clientWidth": 178,
+              "scrollWidth": 178,
+              "inView": true,
+              "fits": true
+            },
+            "reader": {
+              "role": "textbox",
+              "name": "",
+              "state": "",
+              "editable": true,
+              "activatable": false
+            }
+          }
+        },
+        "on": {
+          "enabled": true,
+          "active": true,
+          "landed": "https://www.azgames.io/",
+          "httpStatus": 200,
+          "matchedRules": [
+            0
+          ],
+          "selectorsConfirmed": true,
+          "selectorMatches": [
+            {
+              "index": 0,
+              "field": "selector",
+              "selector": "#txt-search1",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "input",
+                  "id": "txt-search1",
+                  "classes": [
+                    "txt-search"
+                  ],
+                  "label": "Search Game..."
+                }
+              ]
+            }
+          ],
+          "probe": {
+            "geometry": {
+              "left": 918,
+              "right": 1155,
+              "width": 1280,
+              "scrollX": 0,
+              "clientWidth": 178,
+              "scrollWidth": 178,
+              "inView": true,
+              "fits": true
+            },
+            "reader": {
+              "role": "textbox",
+              "name": "Search Game...",
+              "state": "",
+              "editable": true,
+              "activatable": false
+            },
+            "url": "https://www.azgames.io/",
+            "checks": [
+              true
+            ],
+            "status": "pass",
+            "reason": "Checked the declared outcome after the type action."
+          }
+        },
+        "status": "pass",
+        "probe": {
+          "status": "serving",
+          "httpStatus": 200,
+          "landed": "https://www.azgames.io/"
+        }
+      },
+      {
+        "id": "v5-fcff2ddd132fff0edeae",
+        "url": "https://forumotion.com/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.forumotion.com/",
+          "reason": "Redirects to www.forumotion.com."
+        }
+      }
+    ]
+  }
+}

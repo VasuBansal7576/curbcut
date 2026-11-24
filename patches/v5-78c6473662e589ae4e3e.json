@@ -1,0 +1,87 @@
+{
+  "id": "v5-78c6473662e589ae4e3e",
+  "url": "https://lawphil.net/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice” at normal width.",
+  "observedSelector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+      "equals": "About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "lawphil.net",
+  "match": "https://lawphil.net/",
+  "barrier": "The footer paragraph inherits a 518-pixel width from its table cell. At 320 CSS pixels, horizontal clipping cuts off the links that extend past the viewport.",
+  "rules": [
+    {
+      "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "width": "auto",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    },
+    {
+      "selector": "center > table:nth-of-type(2)",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "center > table:nth-of-type(2) > tbody, center > table:nth-of-type(2) > tbody > tr:nth-of-type(7), center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v5/kane-sample-20/v5-78c6473662e589ae4e3e/before/recording.mp4",
+    "control": "proof/heldout-v5/kane-sample-20/v5-78c6473662e589ae4e3e/control/recording.mp4",
+    "after": "proof/heldout-v5/kane-sample-20/v5-78c6473662e589ae4e3e/after/recording.mp4",
+    "verifiedAt": "2026-11-24T11:49:48.682Z",
+    "kaneRunIds": [
+      "28e33cf5-904c-4e22-b54d-7373706242bd",
+      "545cbf49-75ae-4ec5-8b51-119942feb3a3",
+      "e149aa26-ec26-40d4-9329-2a2c348462f5"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-24T11:49:48.682Z",
+      "event": "verified",
+      "before": "28e33cf5-904c-4e22-b54d-7373706242bd",
+      "control": "545cbf49-75ae-4ec5-8b51-119942feb3a3",
+      "after": "e149aa26-ec26-40d4-9329-2a2c348462f5"
+    }
+  ]
+}

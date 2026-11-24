@@ -1,12 +1,12 @@
 {
-  "tested": 234,
-  "blocked": 61,
+  "tested": 245,
+  "blocked": 72,
   "blockedByPersona": {
-    "keyboard-only": 29,
-    "low-vision": 24,
-    "screen-reader-view": 8
+    "keyboard-only": 30,
+    "low-vision": 28,
+    "screen-reader-view": 14
   },
-  "fixed": 44,
+  "fixed": 55,
   "open": 17,
   "publicTasks": [
     {
@@ -3070,6 +3070,86 @@
       ]
     },
     {
+      "id": "v5-78c6473662e589ae4e3e",
+      "url": "https://lawphil.net/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice” and confirm it fits without horizontal scrolling.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-78c6473662e589ae4e3e.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-7dc57bda3fb85932eb21",
+      "url": "https://trackjs.com/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Shipping AI code is fast. Debugging it without context is hard. TrackJS” and confirm it fits without horizontal scrolling.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-7dc57bda3fb85932eb21.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-9e9bb4ee04e0ed570269",
+      "url": "https://www.systemrequirementslab.com/cyri",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “See for yourself, takes less than a minute. The question of Can” and confirm it fits without horizontal scrolling.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-9e9bb4ee04e0ed570269.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-ab1225a91bea3a027001",
+      "url": "https://rtmark.net/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “This Privacy Statement presents our privacy policy, including our privacy practices. Below” and confirm it fits without horizontal scrolling.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-ab1225a91bea3a027001.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-b3a020e9a510-2d198473",
+      "url": "https://esim.holafly.com/",
+      "persona": "keyboard-only",
+      "task": "Focus “Countries”, move once with ArrowRight, activate “Regions” and read its panel.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-b3a020e9a510-2d198473.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
       "id": "v5-c22b9bdca86b-71a63d77",
       "url": "https://marinespecies.org/",
       "persona": "keyboard-only",
@@ -3081,6 +3161,102 @@
         },
         {
           "source": "patches/v5-c22b9bdca86b-71a63d77.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-c46d9e085415a2e891b3",
+      "url": "https://rekhta.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Find Meaning...” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-c46d9e085415a2e891b3.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-cf5e31bb10aecd3af383",
+      "url": "https://uindex.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search torrents...” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-cf5e31bb10aecd3af383.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-da5c14f912fb3f74fbbb",
+      "url": "https://www.shanghairanking.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search for a university” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-da5c14f912fb3f74fbbb.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-e35e95e464a0b456fb7a",
+      "url": "https://armorgames.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search Games” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-e35e95e464a0b456fb7a.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-fcd52c5a5920e388762d",
+      "url": "https://azgames.io/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search Game...” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-fcd52c5a5920e388762d.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-fcff2ddd132fff0edeae",
+      "url": "https://www.forumotion.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search forums” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-fcff2ddd132fff0edeae.json",
           "status": "fixed"
         }
       ]

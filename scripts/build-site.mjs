@@ -1,6 +1,6 @@
 import path from 'node:path'
 import {createHash} from 'node:crypto'
-import {access,mkdir,readdir,writeFile} from 'node:fs/promises'
+import {access,mkdir,readdir,readFile,writeFile} from 'node:fs/promises'
 import {isDeepStrictEqual} from 'node:util'
 import {ROOT,readJSON,saveJSON} from '../core/io.mjs'
 import {catalog} from '../core/loop.mjs'
@@ -23,7 +23,7 @@ const url=file=>'../'+file.split('/').map(encodeURIComponent).join('/')
 const archive=await archiveKane()
 const publicTasks=await Promise.all((await readdir(path.join(ROOT,'tasks/public/kane'))).filter(file=>file.endsWith('.json')).sort().map(file=>read('tasks/public/kane/'+file,null)))
 const counts=await publicMetrics({patches:publicRepairs,kaneTasks:publicTasks,archive})
-const [rechecked,heldout,heldoutV2,heldoutV3,live,hardScout,hardLocal,hardKane,localRecheck,v5Scout,v5Local,v5Kane,v5Rerun,extensionAudit,nightly]=await Promise.all([
+const [rechecked,heldout,heldoutV2,heldoutV3,live,hardScout,hardLocal,hardKane,localRecheck,v5Scout,v5Local,v5Kane,v5Rerun,v5Sample,extensionAudit,sampleAudit,nightly]=await Promise.all([
   read('proof/recheck/summary.json',null),
   read('proof/heldout/summary.json',null),
   read('proof/heldout-v2/summary.json',null),
@@ -37,7 +37,9 @@ const [rechecked,heldout,heldoutV2,heldoutV3,live,hardScout,hardLocal,hardKane,l
   read('proof/heldout-v5/local-summary.json',null),
   read('proof/heldout-v5/kane-summary.json',null),
   read('proof/heldout-v5/kane-rerun-50/summary.json',null),
+  read('proof/heldout-v5/kane-sample-20/summary.json',null),
   read('proof/reliability/extension-e2e.json',null),
+  read('proof/heldout-v5/kane-sample-20/extension-e2e.json',null),
   read('proof/reliability/nightly.json',null)
 ])
 const hardClasses={1:'Hover navigation',2:'Disclosures',3:'Tabs and carousels',4:'Modal dialogs',5:'Custom listboxes',6:'Other multi-step journeys'}
@@ -53,6 +55,8 @@ const v5Section=v5Scout && v5Local?'<section class="section"><h2>Held-out v5</h2
   (v5Kane?'<p>In the original study, Kane verified '+v5Kane.fixed+' / '+v5Kane.selected+' selected, with '+v5Kane.started+' started. Before and after verdicts agreed on '+
     v5Kane.agreement.matched+' / '+v5Kane.agreement.paired+' assessed pairs. '+v5Kane.spent+' credits used.</p>':'')+
   (v5Rerun?'<p>The 50-step Kane rerun verified '+v5Rerun.kaneVerified+' / '+v5Rerun.cases.length+' cases.</p>':'')+
+  (v5Sample?.finishedAt?'<p>Kane verified '+v5Sample.kaneVerified+' of '+v5Sample.started+
+    ' started cases from the seeded held-out sample. <a href="../proof/heldout-v5/README.md#seeded-kane-sample">Sample results and evidence</a></p>':'')+
   comparisonTable('Local repairs by barrier','Barrier',compareRows(v5Classes,v5Local.byClass,v5Local.v4.byClass))+
   comparisonTable('Local repairs by persona','Persona',compareRows(v5Personas,v5Local.byPersona,v5Local.v4.byPersona))+
   '<p><a href="../proof/heldout-v5/README.md">Read the registration, results, and session evidence</a></p></section>':''
@@ -66,12 +70,13 @@ const hardSection=v5Section || (hardScout && hardLocal?'<section class="section"
   (hardKane?hardKane.fixed+' / '+hardKane.selected+' Kane-verified in the random subset':'Kane verification pending')+
   '</p><table><caption>Repairs by barrier class</caption><thead><tr><th scope="col">Barrier</th><th scope="col">Local Playwright</th><th scope="col">Kane verified / started</th></tr></thead><tbody>'+
   hardRows+'</tbody></table><p><a href="../proof/hard-v4/README.md">Read the cohort, credit use and individual outcomes</a></p></section>':'')
-const installed=new Map((extensionAudit?.results??[]).map(row=>[row.id,row]))
+const installed=new Map([...(extensionAudit?.results??[]),...(sampleAudit?.results??[])].map(row=>[row.id,row]))
 const installedPasses=active.filter(patch=>installed.get(patch.id)?.status==='pass')
 const localRecheckSection=nightly && extensionAudit?'<section class="section"><h2>Shipped fix reliability</h2><p>'+installedPasses.length+' / '+active.length+
   ' active patches passed the installed extension audit. '+installedPasses.filter(patch=>patch.journey).length+' recorded journeys passed the extension off and on comparison.</p><p>'+
   (nightly.counts['still-verified']??0)+' tasks passed the local nightly recheck. '+(nightly.dispositions?.length??0)+' retired and '+
-  (nightly.counts.inconclusive??0)+' inconclusive.</p><p><a href="../proof/reliability/extension-e2e.json">Installed extension audit</a> · '+
+  (nightly.counts.inconclusive??0)+' inconclusive.</p><p><a href="../proof/reliability/extension-e2e.json">Original installed extension audit</a> · '+
+  (sampleAudit?'<a href="../proof/heldout-v5/kane-sample-20/extension-e2e.json">New installed extension audit</a> · ':'')+
   '<a href="../proof/reliability/nightly.json">Local nightly findings</a></p></section>':localRecheck?'<section class="section"><h2>Local regression recheck</h2><p>'+localRecheck.total+' patch objectives · '+
   Object.entries(localRecheck.counts).map(([status,count])=>count+' '+esc(status)).join(' · ')+
   '</p><p><a href="../proof/hard-v4/regression-summary.json">Per-patch local recheck evidence</a></p></section>':''
@@ -150,6 +155,16 @@ for(const patch of recorded) {
   const candidate=path.join(path.dirname(provenancePath),'candidate.json')
   const agentCandidate=provenance.priorAgentProposal??candidate
   const agentPatch=await read(agentCandidate,null)
+  const sampleCase=v5Sample?.cases.find(row=>row.id===patch.id && row.kaneVerified &&
+    row.runs.some(run=>run.phase==='after' && run.recording===patch.evidence.after))
+  const storedCandidate='patches/'+patch.id+'/candidate.json'
+  if(sampleCase) {
+    const [original,shipped]=await Promise.all([agentCandidate,storedCandidate].map(file=>readFile(path.join(ROOT,file))))
+    const withEvidence={...agentPatch,status:patch.status,evidence:patch.evidence,history:patch.history}
+    if(agentCandidate!==sampleCase.candidateFile || !original.equals(shipped) ||
+      createHash('sha256').update(shipped).digest('hex')!==sampleCase.candidateSha256 ||
+      !isDeepStrictEqual(patch,withEvidence)) throw new Error('Sample proposal changed for '+patch.id)
+  }
   if(rerunCase && (agentCandidate!==rerunCase.candidateFile ||
     createHash('sha256').update(JSON.stringify(agentPatch)).digest('hex')!==rerunCase.patchSha256)) throw new Error('Kane rerun proposal changed for '+patch.id)
   const agentProvenance=await read(path.join(path.dirname(agentCandidate),'provenance.json'),null)
@@ -164,6 +179,7 @@ for(const patch of recorded) {
     !isDeepStrictEqual((await read(candidate,null))?.rules,patch.rules) ||
     !isDeepStrictEqual(agentPatch?.rules,patch.rules)) throw new Error('Unconfirmed agent proposal for '+patch.id)
   const proposal='[Runtime repair proposal]('+videoLink(agentCandidate)+') · [Repair provenance]('+videoLink(provenancePath)+') · '+
+    (sampleCase?'[Frozen catalog candidate]('+videoLink(storedCandidate)+') · ':'')+
     (localSource?'[Local Playwright failure]('+videoLink(sourceLocalRun)+')':'Failure session '+source.sessionId)
   const report=['# '+patch.site,patch.task,'**Persona** '+patch.persona,'**Observed barrier** '+patch.barrier,'**Patch status** '+patch.status,'## Recorded runs',...phases,...rechecks,...localRetirements,proposal,'## Source repair and relevant WCAG criteria','A passing task captures one interaction under the recorded conditions.',...recommendations.map(r=>'- '+r),'Verified '+patch.evidence.verifiedAt].join('\n\n')
   await mkdir(folder,{recursive:true});await writeFile(path.join(folder,'report.md'),report+'\n')

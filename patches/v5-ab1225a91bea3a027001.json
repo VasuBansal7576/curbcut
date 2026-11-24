@@ -1,0 +1,82 @@
+{
+  "id": "v5-ab1225a91bea3a027001",
+  "url": "https://rtmark.net/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “This Privacy Statement presents our privacy policy, including our privacy practices. Below” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “This Privacy Statement presents our privacy policy, including our privacy practices. Below” at normal width.",
+  "observedSelector": "div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2)",
+      "equals": "This Privacy Statement presents our privacy policy, including our privacy practices. Below"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "rtmark.net",
+  "match": "https://rtmark.net/",
+  "barrier": "At a 320 CSS pixel viewport, the body's 900px minimum width keeps the wrapper 900px wide and the privacy passage 585px wide, leaving part of the text outside the visible area.",
+  "rules": [
+    {
+      "selector": "body",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "body > div.wrapper",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "body > div.wrapper > div.main_column",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v5/kane-sample-20/v5-ab1225a91bea3a027001/before/recording.mp4",
+    "control": "proof/heldout-v5/kane-sample-20/v5-ab1225a91bea3a027001/control/recording.mp4",
+    "after": "proof/heldout-v5/kane-sample-20/v5-ab1225a91bea3a027001/after/recording.mp4",
+    "verifiedAt": "2026-11-24T11:05:09.374Z",
+    "kaneRunIds": [
+      "8ffd095e-08a0-4153-8e01-304acbc3a42a",
+      "c0c9745b-78ca-47e9-ae84-6bf48ac00f0d",
+      "5cbe80a2-5c41-468b-b408-c1e931b77ca4"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-24T11:05:09.374Z",
+      "event": "verified",
+      "before": "8ffd095e-08a0-4153-8e01-304acbc3a42a",
+      "control": "c0c9745b-78ca-47e9-ae84-6bf48ac00f0d",
+      "after": "5cbe80a2-5c41-468b-b408-c1e931b77ca4"
+    }
+  ]
+}

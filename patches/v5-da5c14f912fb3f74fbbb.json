@@ -1,0 +1,62 @@
+{
+  "id": "v5-da5c14f912fb3f74fbbb",
+  "url": "https://www.shanghairanking.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search for a university” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search for a university” field and type test without submitting.",
+  "observedSelector": "#__layout > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > div > div:nth-of-type(1) > input",
+  "requiredName": "Search for a university",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#__layout > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > div > div:nth-of-type(1) > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.shanghairanking.com",
+  "match": "https://www.shanghairanking.com/",
+  "barrier": "The university search input has a native textbox role but no accessible name, so Reading view cannot identify it as “Search for a university”.",
+  "rules": [
+    {
+      "selector": "div.search-container > div.contain-wrap > div.input-box > div.input-wrap > input.input",
+      "action": "addLabel",
+      "value": "Search for a university"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v5/kane-sample-20/v5-da5c14f912fb3f74fbbb/before/recording.mp4",
+    "control": "proof/heldout-v5/kane-sample-20/v5-da5c14f912fb3f74fbbb/control/recording.mp4",
+    "after": "proof/heldout-v5/kane-sample-20/v5-da5c14f912fb3f74fbbb/after/recording.mp4",
+    "verifiedAt": "2026-11-24T12:18:46.370Z",
+    "kaneRunIds": [
+      "cbab0e05-ba35-4f4e-b2f6-9d32acc96367",
+      "184cc756-a913-47f9-85db-038144b8d2e5",
+      "1b021df1-f46e-4a02-819e-a2711f92649e"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-24T12:18:46.370Z",
+      "event": "verified",
+      "before": "cbab0e05-ba35-4f4e-b2f6-9d32acc96367",
+      "control": "184cc756-a913-47f9-85db-038144b8d2e5",
+      "after": "1b021df1-f46e-4a02-819e-a2711f92649e"
+    }
+  ]
+}

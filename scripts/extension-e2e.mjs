@@ -7,8 +7,8 @@ import {setTimeout as delay} from 'node:timers/promises'
 import {BlockedPage,pageBlock} from '../core/access.mjs'
 import {guardRequests} from '../core/chrome.mjs'
 import {wwwTwin} from '../core/engine.js'
-import {ROOT,instant,saveJSON} from '../core/io.mjs'
-import {journeyLane} from '../core/probe.mjs'
+import {ROOT,instant,readJSON,saveJSON} from '../core/io.mjs'
+import {journeyLane,replayInstalledProbe} from '../core/probe.mjs'
 import {acceptableURL,allowedHost,normalizeTask,siteKey,taskDestination} from '../core/task.mjs'
 
 const extension=path.join(ROOT,'extension')
@@ -16,9 +16,14 @@ const runtime=await readFile(path.join(extension,'runtime.js'),'utf8')
 const bundleBytes=await readFile(path.join(extension,'bundled.json'))
 const bundled=JSON.parse(bundleBytes)
 const output=path.join(ROOT,'proof/reliability/extension-e2e.json')
-const only=process.argv[2]
-const patches=only?bundled.filter(patch=>patch.id===only):bundled
-if(!patches.length) throw new Error('No bundled patch matches the requested audit.')
+const requested=new Set(process.argv.slice(2))
+const patches=requested.size?bundled.filter(patch=>requested.has(patch.id)):bundled
+if(!patches.length || requested.size && patches.length!==requested.size) throw new Error('A requested audit patch is absent from the bundle.')
+const sample=await readJSON(path.join(ROOT,'proof/heldout-v5/kane-sample-20/summary.json')).catch(error=>{
+  if(error.code==='ENOENT') return null
+  throw error
+})
+const sampleRepairs=new Set(sample?.cases.filter(row=>row.kaneVerified).map(row=>row.id))
 
 const pause=()=>delay(900)
 const ask=(popup,message)=>popup.evaluate(message=>chrome.runtime.sendMessage(message),message)
@@ -72,6 +77,9 @@ async function audit(patch,url,{twin=false}={}) {
       task.journey.push({selector,action:'focus'})
       task.outcomeChecks.push({selector,kind:'text',equals:'Match taxa'},{selector,kind:'focused'})
     }
+    const replayProbe=Boolean(task.probe && sampleRepairs.has(task.id))
+    const replay=Boolean(task.journey) || replayProbe
+    if(replayProbe) row.probeAction=task.probe.action
     profile=await mkdtemp(path.join(tmpdir(),'curbcut-extension-'))
     context=await chromium.launchPersistentContext(profile,{channel:'chromium',headless:true,acceptDownloads:false,
       viewport:{width:task.persona==='low-vision'?320:1280,height:800},
@@ -79,7 +87,7 @@ async function audit(patch,url,{twin=false}={}) {
     await guardRequests(context,task,{extension:true})
     const worker=context.serviceWorkers().find(worker=>worker.url().startsWith('chrome-extension:'))??
       await context.waitForEvent('serviceworker',{predicate:worker=>worker.url().startsWith('chrome-extension:'),timeout:8000})
-    if(task.journey) {
+    if(replay) {
       const settings=JSON.stringify({persona:task.persona,site:siteKey(new URL(task.url))})
       await context.addInitScript({content:runtime+'\n;('+function({persona,site}) {
         if(location.protocol==='https:' && (location.hostname===site || location.hostname.endsWith('.'+site))) CurbCut.enforce(persona)
@@ -140,16 +148,20 @@ async function audit(patch,url,{twin=false}={}) {
           await delay(200)
         } while(Date.now()<deadline)
         if(!queryWorked) throw new Error('The popup could not query the live extension page.')
-        let journey
-        if(task.journey && (enabled?active:!active)) {
+        let journey,probe
+        if(replay && (enabled?active:!active)) {
           const browser={page,context,responses,async activePage(expected){
             const pages=context.pages().filter(candidate=>taskDestination(task,new URL(candidate.url())))
             return pages.find(candidate=>candidate.url()===expected)??pages.at(-1)
           }}
-          journey=await journeyLane(browser,task,task.persona,{onDOM:enabled?observe:undefined})
+          if(task.journey) journey=await journeyLane(browser,task,task.persona,{onDOM:enabled?observe:undefined})
+          else {
+            probe=await replayInstalledProbe(browser,task)
+            delete probe.snapshot
+          }
         }
         return {enabled,active,landed:page.url(),httpStatus:response?.status(),matchedRules:[...matchedRules].sort((a,b)=>a-b),
-          selectorsConfirmed:selectorsConfirmed(),selectorMatches:[...selectorMatches.values()],journey}
+          selectorsConfirmed:selectorsConfirmed(),selectorMatches:[...selectorMatches.values()],journey,probe}
       } finally {
         await Promise.all(context.pages().filter(candidate=>candidate!==popup).map(async candidate=>{
           await candidate.close()
@@ -158,7 +170,7 @@ async function audit(patch,url,{twin=false}={}) {
       }
     }
 
-    if(task.journey) {
+    if(replay) {
       row.off=await lane(false)
       await pause()
     }
@@ -166,10 +178,11 @@ async function audit(patch,url,{twin=false}={}) {
     if(!row.on.active) return {...row,status:'inactive',reason:'The popup did not report the bundled patch on its task page.'}
     if(!row.on.selectorsConfirmed) return {...row,status:twin?'twin not covered':'selector-miss',reason:'One or more rules or selector fields did not match in the installed extension.'}
     if(row.off?.active) return {...row,status:'inconclusive',reason:'The popup reported the patch while the extension switch was off.'}
-    if(row.off?.journey?.status==='pass') return {...row,status:'already-accessible',reason:'The registered journey passed with the extension switched off.'}
-    if(row.on.journey?.status==='fail') return {...row,status:'journey-fail',reason:row.on.journey.reason}
-    if(task.journey && (row.off?.journey?.status!=='fail' || row.on.journey?.status!=='pass')) {
-      return {...row,status:'inconclusive',reason:'The measured journey needs a failing off lane and a passing on lane.'}
+    const off=row.off?.journey??row.off?.probe,on=row.on.journey??row.on.probe
+    if(off?.status==='pass') return {...row,status:'already-accessible',reason:'The registered task passed with the extension switched off.'}
+    if(on?.status==='fail') return {...row,status:task.journey?'journey-fail':'probe-fail',reason:on.reason}
+    if(replay && (off?.status!=='fail' || on?.status!=='pass')) {
+      return {...row,status:'inconclusive',reason:off?.status!=='fail'?off?.reason??'The off lane was not measured.':on?.reason??'The on lane was not measured.'}
     }
     return {...row,status:'pass'}
   } catch(error) {
@@ -206,10 +219,12 @@ for(const patch of patches) {
 const countStatuses=rows=>Object.fromEntries(Object.entries(Object.groupBy(rows,row=>row.status)).map(([status,group])=>[status,group.length]))
 const counts=countStatuses(results),twinCounts=countStatuses(twinResults)
 const journeys=results.filter(row=>row.journey)
+const probes=results.filter(row=>row.probeAction)
 const summary={runner:'playwright-extension',checkedAt:instant(),bundleSha256:createHash('sha256').update(bundleBytes).digest('hex'),
   total:results.length,passed:counts.pass??0,counts,journeys:{total:journeys.length,passed:journeys.filter(row=>row.status==='pass').length},results,
+  probes:{total:probes.length,passed:probes.filter(row=>row.status==='pass').length},
   twins:{total:twinResults.length,serving:twinResults.filter(row=>row.probe?.status==='serving').length,passed:twinCounts.pass??0,counts:twinCounts,results:twinResults}}
-if(only) console.log(JSON.stringify(summary,null,2))
+if(requested.size) console.log(JSON.stringify(summary,null,2))
 else {
   await saveJSON(output,summary)
   console.log(summary.passed+'/'+summary.total+' bundled fixes passed the extension audit.')

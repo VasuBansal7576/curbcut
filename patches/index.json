@@ -2610,6 +2610,429 @@
     ]
   },
   {
+    "id": "v5-78c6473662e589ae4e3e",
+    "url": "https://lawphil.net/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice” at normal width.",
+    "observedSelector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+        "equals": "About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "lawphil.net",
+    "match": "https://lawphil.net/",
+    "barrier": "The footer paragraph inherits a 518-pixel width from its table cell. At 320 CSS pixels, horizontal clipping cuts off the links that extend past the viewport.",
+    "rules": [
+      {
+        "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+        "action": "injectCSS",
+        "value": {
+          "max-width": "100%",
+          "width": "auto",
+          "white-space": "normal",
+          "overflow-wrap": "anywhere"
+        }
+      },
+      {
+        "selector": "center > table:nth-of-type(2)",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      },
+      {
+        "selector": "center > table:nth-of-type(2) > tbody, center > table:nth-of-type(2) > tbody > tr:nth-of-type(7), center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "width": "auto",
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v5/kane-sample-20/v5-78c6473662e589ae4e3e/before/recording.mp4",
+      "control": "proof/heldout-v5/kane-sample-20/v5-78c6473662e589ae4e3e/control/recording.mp4",
+      "after": "proof/heldout-v5/kane-sample-20/v5-78c6473662e589ae4e3e/after/recording.mp4",
+      "verifiedAt": "2026-11-24T11:49:48.682Z",
+      "kaneRunIds": [
+        "28e33cf5-904c-4e22-b54d-7373706242bd",
+        "545cbf49-75ae-4ec5-8b51-119942feb3a3",
+        "e149aa26-ec26-40d4-9329-2a2c348462f5"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-24T11:49:48.682Z",
+        "event": "verified",
+        "before": "28e33cf5-904c-4e22-b54d-7373706242bd",
+        "control": "545cbf49-75ae-4ec5-8b51-119942feb3a3",
+        "after": "e149aa26-ec26-40d4-9329-2a2c348462f5"
+      }
+    ]
+  },
+  {
+    "id": "v5-7dc57bda3fb85932eb21",
+    "url": "https://trackjs.com/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “Shipping AI code is fast. Debugging it without context is hard. TrackJS” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “Shipping AI code is fast. Debugging it without context is hard. TrackJS” at normal width.",
+    "observedSelector": "main > section:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(1) > p",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "main > section:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(1) > p",
+        "equals": "Shipping AI code is fast. Debugging it without context is hard. TrackJS"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "main > section:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(1) > p"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "trackjs.com",
+    "match": "https://trackjs.com/",
+    "barrier": "At 320 CSS pixels, the body's 375px minimum width and the containers' 345px minimum width keep the hero paragraph's right edge at 360px, beyond the visible viewport.",
+    "rules": [
+      {
+        "selector": "body.product.index, body.product.index div.container",
+        "action": "injectCSS",
+        "value": {
+          "min-width": "0"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v5/kane-sample-20/v5-7dc57bda3fb85932eb21/before/recording.mp4",
+      "control": "proof/heldout-v5/kane-sample-20/v5-7dc57bda3fb85932eb21/control/recording.mp4",
+      "after": "proof/heldout-v5/kane-sample-20/v5-7dc57bda3fb85932eb21/after/recording.mp4",
+      "verifiedAt": "2026-11-24T11:52:53.711Z",
+      "kaneRunIds": [
+        "6a82cb5b-ad5a-40bd-8b19-8b4e34c87122",
+        "6d083a4c-7ad8-423f-a8de-a0954f7c944b",
+        "0b89ade8-fc09-4169-9cfc-c8294fb0eed0"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-24T11:52:53.711Z",
+        "event": "verified",
+        "before": "6a82cb5b-ad5a-40bd-8b19-8b4e34c87122",
+        "control": "6d083a4c-7ad8-423f-a8de-a0954f7c944b",
+        "after": "0b89ade8-fc09-4169-9cfc-c8294fb0eed0"
+      }
+    ]
+  },
+  {
+    "id": "v5-9e9bb4ee04e0ed570269",
+    "url": "https://www.systemrequirementslab.com/cyri",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “See for yourself, takes less than a minute. The question of Can” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “See for yourself, takes less than a minute. The question of Can” at normal width.",
+    "observedSelector": "#main-table > tbody > tr > td:nth-of-type(2) > div > div:nth-of-type(2) > main > div > div:nth-of-type(1) > div > p:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#main-table > tbody > tr > td:nth-of-type(2) > div > div:nth-of-type(2) > main > div > div:nth-of-type(1) > div > p:nth-of-type(1)",
+        "equals": "See for yourself, takes less than a minute. The question of Can"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#main-table > tbody > tr > td:nth-of-type(2) > div > div:nth-of-type(2) > main > div > div:nth-of-type(1) > div > p:nth-of-type(1)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "www.systemrequirementslab.com",
+    "match": "https://www.systemrequirementslab.com/cyri",
+    "barrier": "The table-based layout holds the main content at 1000 CSS pixels. At a 320 CSS pixel viewport, the passage extends from x=10 to x=675, where the page’s horizontal clipping cuts off the text.",
+    "rules": [
+      {
+        "selector": "#main-table, #main-table > tbody, #main-table > tbody > tr, #main-table > tbody > tr > td:nth-of-type(2)",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "width": "auto",
+          "min-width": "0",
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "#main-table > tbody > tr > td:nth-of-type(2) > div, #main-table > tbody > tr > td:nth-of-type(2) > div > div:nth-of-type(2), #main-table main[role=\"main\"]",
+        "action": "injectCSS",
+        "value": {
+          "width": "auto",
+          "min-width": "0",
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "#main-table main[role=\"main\"] > .row.row-layout",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "width": "auto",
+          "min-width": "0",
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "#main-table main[role=\"main\"] > .row.row-layout > .col.col-layout:first-of-type",
+        "action": "injectCSS",
+        "value": {
+          "width": "auto",
+          "min-width": "0",
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v5/kane-sample-20/v5-9e9bb4ee04e0ed570269/before/recording.mp4",
+      "control": "proof/heldout-v5/kane-sample-20/v5-9e9bb4ee04e0ed570269/control/recording.mp4",
+      "after": "proof/heldout-v5/kane-sample-20/v5-9e9bb4ee04e0ed570269/after/recording.mp4",
+      "verifiedAt": "2026-11-24T11:41:25.941Z",
+      "kaneRunIds": [
+        "460c7499-3ea1-4bc3-9a09-363f33035a52",
+        "b435dc9f-d3d2-47e9-9340-8995d195ef44",
+        "4ea72be2-0206-4c0b-b67d-8e7b22ecd2de"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-24T11:41:25.941Z",
+        "event": "verified",
+        "before": "460c7499-3ea1-4bc3-9a09-363f33035a52",
+        "control": "b435dc9f-d3d2-47e9-9340-8995d195ef44",
+        "after": "4ea72be2-0206-4c0b-b67d-8e7b22ecd2de"
+      }
+    ]
+  },
+  {
+    "id": "v5-ab1225a91bea3a027001",
+    "url": "https://rtmark.net/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “This Privacy Statement presents our privacy policy, including our privacy practices. Below” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “This Privacy Statement presents our privacy policy, including our privacy practices. Below” at normal width.",
+    "observedSelector": "div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2)",
+        "equals": "This Privacy Statement presents our privacy policy, including our privacy practices. Below"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "rtmark.net",
+    "match": "https://rtmark.net/",
+    "barrier": "At a 320 CSS pixel viewport, the body's 900px minimum width keeps the wrapper 900px wide and the privacy passage 585px wide, leaving part of the text outside the visible area.",
+    "rules": [
+      {
+        "selector": "body",
+        "action": "injectCSS",
+        "value": {
+          "min-width": "0"
+        }
+      },
+      {
+        "selector": "body > div.wrapper",
+        "action": "injectCSS",
+        "value": {
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      },
+      {
+        "selector": "body > div.wrapper > div.main_column",
+        "action": "injectCSS",
+        "value": {
+          "max-width": "100%",
+          "box-sizing": "border-box",
+          "overflow-wrap": "anywhere"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v5/kane-sample-20/v5-ab1225a91bea3a027001/before/recording.mp4",
+      "control": "proof/heldout-v5/kane-sample-20/v5-ab1225a91bea3a027001/control/recording.mp4",
+      "after": "proof/heldout-v5/kane-sample-20/v5-ab1225a91bea3a027001/after/recording.mp4",
+      "verifiedAt": "2026-11-24T11:05:09.374Z",
+      "kaneRunIds": [
+        "8ffd095e-08a0-4153-8e01-304acbc3a42a",
+        "c0c9745b-78ca-47e9-ae84-6bf48ac00f0d",
+        "5cbe80a2-5c41-468b-b408-c1e931b77ca4"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-24T11:05:09.374Z",
+        "event": "verified",
+        "before": "8ffd095e-08a0-4153-8e01-304acbc3a42a",
+        "control": "c0c9745b-78ca-47e9-ae84-6bf48ac00f0d",
+        "after": "5cbe80a2-5c41-468b-b408-c1e931b77ca4"
+      }
+    ]
+  },
+  {
+    "id": "v5-b3a020e9a510-2d198473",
+    "url": "https://esim.holafly.com/",
+    "persona": "keyboard-only",
+    "task": "Focus “Countries”, move once with ArrowRight, activate “Regions” and read its panel.",
+    "controlTask": "Click “Regions” and read its panel.",
+    "observedSelector": "#countries-ba4i7pb",
+    "outcomeChecks": [
+      {
+        "kind": "visible",
+        "selector": "#panel-regions-ba4i7pb"
+      }
+    ],
+    "barrierClass": 3,
+    "relatedSelectors": [
+      "#Destinations > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div",
+      "[role=tab]",
+      "#panel-regions-ba4i7pb"
+    ],
+    "journey": [
+      {
+        "selector": "#countries-ba4i7pb",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#countries-ba4i7pb",
+        "action": "key",
+        "key": "ArrowRight",
+        "pointer": {
+          "action": "click",
+          "selector": "#regions-ba4i7pb"
+        }
+      },
+      {
+        "selector": "#regions-ba4i7pb",
+        "action": "activate",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#panel-regions-ba4i7pb",
+        "action": "observe"
+      }
+    ],
+    "site": "esim.holafly.com",
+    "match": "https://esim.holafly.com/",
+    "barrier": "ArrowRight from Countries does not move focus to Regions, and Regions has tabindex=\"-1\", so Tab skips it.",
+    "rules": [
+      {
+        "action": "arrowKeyNavigation",
+        "container": "#Destinations .destinations__segmented [role=\"tablist\"]",
+        "items": "button[role=\"tab\"]",
+        "orientation": "horizontal",
+        "activate": "focus"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v5/kane-sample-20/v5-b3a020e9a510-2d198473/before/recording.mp4",
+      "control": "proof/heldout-v5/kane-sample-20/v5-b3a020e9a510-2d198473/control/recording.mp4",
+      "after": "proof/heldout-v5/kane-sample-20/v5-b3a020e9a510-2d198473/after/recording.mp4",
+      "verifiedAt": "2026-11-24T12:10:12.616Z",
+      "kaneRunIds": [
+        "ce28867a-857f-40fd-a13e-931e617917a3",
+        "56947950-3912-48c0-b7b0-5b834b0fcb9e",
+        "92ff5286-3610-4bbf-8b87-89ae677bfea1"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-24T12:10:12.616Z",
+        "event": "verified",
+        "before": "ce28867a-857f-40fd-a13e-931e617917a3",
+        "control": "56947950-3912-48c0-b7b0-5b834b0fcb9e",
+        "after": "92ff5286-3610-4bbf-8b87-89ae677bfea1"
+      }
+    ]
+  },
+  {
     "id": "v5-c22b9bdca86b-71a63d77",
     "url": "https://marinespecies.org/",
     "persona": "keyboard-only",
@@ -2671,6 +3094,378 @@
         "before": "997b7c62-125d-4613-8769-90ffafd35782",
         "control": "1ee0357f-4309-495b-b4c5-431c7a8aee5c",
         "after": "bc62f31e-4ff9-4ba8-880c-4dccdafe284d"
+      }
+    ]
+  },
+  {
+    "id": "v5-c46d9e085415a2e891b3",
+    "url": "https://rekhta.org/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Find Meaning...” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Find Meaning...” field and type test without submitting.",
+    "observedSelector": "#dictSearchText",
+    "requiredName": "Find Meaning...",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#dictSearchText",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "rekhta.org",
+    "match": "https://rekhta.org/",
+    "barrier": "The dictionary input has a native textbox role but an empty accessible name, so it cannot be found as “Find Meaning...” in Reading view.",
+    "rules": [
+      {
+        "selector": "#dictSearchText",
+        "action": "addLabel",
+        "value": "Find Meaning..."
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v5/kane-sample-20/v5-c46d9e085415a2e891b3/before/recording.mp4",
+      "control": "proof/heldout-v5/kane-sample-20/v5-c46d9e085415a2e891b3/control/recording.mp4",
+      "after": "proof/heldout-v5/kane-sample-20/v5-c46d9e085415a2e891b3/after/recording.mp4",
+      "verifiedAt": "2026-11-24T11:07:29.569Z",
+      "kaneRunIds": [
+        "1150c058-a8c7-404c-8589-4f8551757234",
+        "4b370e20-4899-4231-bfb3-b90a81b525fe",
+        "bf0e29ab-2c28-4402-9c3d-107e1d24608a"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-24T11:07:29.569Z",
+        "event": "verified",
+        "before": "1150c058-a8c7-404c-8589-4f8551757234",
+        "control": "4b370e20-4899-4231-bfb3-b90a81b525fe",
+        "after": "bf0e29ab-2c28-4402-9c3d-107e1d24608a"
+      }
+    ]
+  },
+  {
+    "id": "v5-cf5e31bb10aecd3af383",
+    "url": "https://uindex.org/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search torrents...” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search torrents...” field and type test without submitting.",
+    "observedSelector": "#search",
+    "requiredName": "Search torrents...",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#search",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "uindex.org",
+    "match": "https://uindex.org/",
+    "barrier": "The native textbox #search has no accessible name, so it cannot be found by its expected name in Reading view.",
+    "rules": [
+      {
+        "selector": "#searchform > input#search",
+        "action": "addLabel",
+        "value": "Search torrents..."
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v5/kane-sample-20/v5-cf5e31bb10aecd3af383/before/recording.mp4",
+      "control": "proof/heldout-v5/kane-sample-20/v5-cf5e31bb10aecd3af383/control/recording.mp4",
+      "after": "proof/heldout-v5/kane-sample-20/v5-cf5e31bb10aecd3af383/after/recording.mp4",
+      "verifiedAt": "2026-11-24T11:21:07.030Z",
+      "kaneRunIds": [
+        "595e3b5c-7a24-4d04-9552-e1b1b54e0cda",
+        "efcd7807-9b36-4519-80cc-ec808f2f9ea5",
+        "3607af22-d90d-4865-8df7-cc19d3fdeb86"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-24T11:21:07.030Z",
+        "event": "verified",
+        "before": "595e3b5c-7a24-4d04-9552-e1b1b54e0cda",
+        "control": "efcd7807-9b36-4519-80cc-ec808f2f9ea5",
+        "after": "3607af22-d90d-4865-8df7-cc19d3fdeb86"
+      }
+    ]
+  },
+  {
+    "id": "v5-da5c14f912fb3f74fbbb",
+    "url": "https://www.shanghairanking.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search for a university” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search for a university” field and type test without submitting.",
+    "observedSelector": "#__layout > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > div > div:nth-of-type(1) > input",
+    "requiredName": "Search for a university",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#__layout > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > div > div:nth-of-type(1) > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.shanghairanking.com",
+    "match": "https://www.shanghairanking.com/",
+    "barrier": "The university search input has a native textbox role but no accessible name, so Reading view cannot identify it as “Search for a university”.",
+    "rules": [
+      {
+        "selector": "div.search-container > div.contain-wrap > div.input-box > div.input-wrap > input.input",
+        "action": "addLabel",
+        "value": "Search for a university"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v5/kane-sample-20/v5-da5c14f912fb3f74fbbb/before/recording.mp4",
+      "control": "proof/heldout-v5/kane-sample-20/v5-da5c14f912fb3f74fbbb/control/recording.mp4",
+      "after": "proof/heldout-v5/kane-sample-20/v5-da5c14f912fb3f74fbbb/after/recording.mp4",
+      "verifiedAt": "2026-11-24T12:18:46.370Z",
+      "kaneRunIds": [
+        "cbab0e05-ba35-4f4e-b2f6-9d32acc96367",
+        "184cc756-a913-47f9-85db-038144b8d2e5",
+        "1b021df1-f46e-4a02-819e-a2711f92649e"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-24T12:18:46.370Z",
+        "event": "verified",
+        "before": "cbab0e05-ba35-4f4e-b2f6-9d32acc96367",
+        "control": "184cc756-a913-47f9-85db-038144b8d2e5",
+        "after": "1b021df1-f46e-4a02-819e-a2711f92649e"
+      }
+    ]
+  },
+  {
+    "id": "v5-e35e95e464a0b456fb7a",
+    "url": "https://armorgames.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search Games” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search Games” field and type test without submitting.",
+    "observedSelector": "#search-input",
+    "requiredName": "Search Games",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#search-input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "armorgames.com",
+    "match": "https://armorgames.com/",
+    "barrier": "The visible search textbox has no accessible name, so Reading view cannot identify it as “Search Games”.",
+    "rules": [
+      {
+        "selector": "#search-input",
+        "action": "addLabel",
+        "value": "Search Games"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v5/kane-sample-20/v5-e35e95e464a0b456fb7a/before/recording.mp4",
+      "control": "proof/heldout-v5/kane-sample-20/v5-e35e95e464a0b456fb7a/control/recording.mp4",
+      "after": "proof/heldout-v5/kane-sample-20/v5-e35e95e464a0b456fb7a/after/recording.mp4",
+      "verifiedAt": "2026-11-24T11:23:35.839Z",
+      "kaneRunIds": [
+        "8a712d55-dc89-406b-b2de-930a054f147c",
+        "9ec2e3bb-49ac-4b27-a16a-09c2f4b49760",
+        "51146f1b-6f38-496c-96ef-31db65b00f29"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-24T11:23:35.839Z",
+        "event": "verified",
+        "before": "8a712d55-dc89-406b-b2de-930a054f147c",
+        "control": "9ec2e3bb-49ac-4b27-a16a-09c2f4b49760",
+        "after": "51146f1b-6f38-496c-96ef-31db65b00f29"
+      }
+    ]
+  },
+  {
+    "id": "v5-fcd52c5a5920e388762d",
+    "url": "https://azgames.io/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search Game...” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search Game...” field and type test without submitting.",
+    "observedSelector": "#txt-search1",
+    "requiredName": "Search Game...",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#txt-search1",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "azgames.io",
+    "match": "https://azgames.io/",
+    "barrier": "The game search input has a native textbox role but no accessible name, so it cannot be found by the name “Search Game...” in Reading view.",
+    "rules": [
+      {
+        "selector": "#txt-search1",
+        "action": "addLabel",
+        "value": "Search Game..."
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v5/kane-sample-20/v5-fcd52c5a5920e388762d/before/recording.mp4",
+      "control": "proof/heldout-v5/kane-sample-20/v5-fcd52c5a5920e388762d/control/recording.mp4",
+      "after": "proof/heldout-v5/kane-sample-20/v5-fcd52c5a5920e388762d/after/recording.mp4",
+      "verifiedAt": "2026-11-24T11:18:57.884Z",
+      "kaneRunIds": [
+        "77718721-c20e-48ff-8a11-e6886790584e",
+        "1be74eae-aae6-485e-8a5a-a27914ae716b",
+        "293cec9a-46f6-4612-bd3b-09bfe4708006"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-24T11:18:57.884Z",
+        "event": "verified",
+        "before": "77718721-c20e-48ff-8a11-e6886790584e",
+        "control": "1be74eae-aae6-485e-8a5a-a27914ae716b",
+        "after": "293cec9a-46f6-4612-bd3b-09bfe4708006"
+      }
+    ]
+  },
+  {
+    "id": "v5-fcff2ddd132fff0edeae",
+    "url": "https://www.forumotion.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search forums” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search forums” field and type test without submitting.",
+    "observedSelector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+    "requiredName": "Search forums",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.forumotion.com",
+    "match": "https://www.forumotion.com/",
+    "barrier": "Reading view names the directory search textbox “Search for a forum in the directory,” so it cannot be found by the expected name “Search forums.”",
+    "rules": [
+      {
+        "selector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+        "action": "addLabel",
+        "value": "Search forums"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v5/kane-sample-20/v5-fcff2ddd132fff0edeae/before/recording.mp4",
+      "control": "proof/heldout-v5/kane-sample-20/v5-fcff2ddd132fff0edeae/control/recording.mp4",
+      "after": "proof/heldout-v5/kane-sample-20/v5-fcff2ddd132fff0edeae/after/recording.mp4",
+      "verifiedAt": "2026-11-24T11:02:16.375Z",
+      "kaneRunIds": [
+        "0ada2477-e9ac-4abc-9f53-1a19a06596e3",
+        "86f34519-b230-4ce5-b583-11f73a873119",
+        "414f52f7-1fdc-46bc-93dd-dfcfd5430303"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-24T11:02:16.375Z",
+        "event": "verified",
+        "before": "0ada2477-e9ac-4abc-9f53-1a19a06596e3",
+        "control": "86f34519-b230-4ce5-b583-11f73a873119",
+        "after": "414f52f7-1fdc-46bc-93dd-dfcfd5430303"
       }
     ]
   },

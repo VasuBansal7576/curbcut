@@ -1,0 +1,62 @@
+{
+  "id": "v5-e35e95e464a0b456fb7a",
+  "url": "https://armorgames.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search Games” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search Games” field and type test without submitting.",
+  "observedSelector": "#search-input",
+  "requiredName": "Search Games",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#search-input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "armorgames.com",
+  "match": "https://armorgames.com/",
+  "barrier": "The visible search textbox has no accessible name, so Reading view cannot identify it as “Search Games”.",
+  "rules": [
+    {
+      "selector": "#search-input",
+      "action": "addLabel",
+      "value": "Search Games"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v5/kane-sample-20/v5-e35e95e464a0b456fb7a/before/recording.mp4",
+    "control": "proof/heldout-v5/kane-sample-20/v5-e35e95e464a0b456fb7a/control/recording.mp4",
+    "after": "proof/heldout-v5/kane-sample-20/v5-e35e95e464a0b456fb7a/after/recording.mp4",
+    "verifiedAt": "2026-11-24T11:23:35.839Z",
+    "kaneRunIds": [
+      "8a712d55-dc89-406b-b2de-930a054f147c",
+      "9ec2e3bb-49ac-4b27-a16a-09c2f4b49760",
+      "51146f1b-6f38-496c-96ef-31db65b00f29"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-24T11:23:35.839Z",
+      "event": "verified",
+      "before": "8a712d55-dc89-406b-b2de-930a054f147c",
+      "control": "9ec2e3bb-49ac-4b27-a16a-09c2f4b49760",
+      "after": "51146f1b-6f38-496c-96ef-31db65b00f29"
+    }
+  ]
+}

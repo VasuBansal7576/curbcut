@@ -1,0 +1,92 @@
+{
+  "id": "v5-b3a020e9a510-2d198473",
+  "url": "https://esim.holafly.com/",
+  "persona": "keyboard-only",
+  "task": "Focus “Countries”, move once with ArrowRight, activate “Regions” and read its panel.",
+  "controlTask": "Click “Regions” and read its panel.",
+  "observedSelector": "#countries-ba4i7pb",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#panel-regions-ba4i7pb"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "#Destinations > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div",
+    "[role=tab]",
+    "#panel-regions-ba4i7pb"
+  ],
+  "journey": [
+    {
+      "selector": "#countries-ba4i7pb",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#countries-ba4i7pb",
+      "action": "key",
+      "key": "ArrowRight",
+      "pointer": {
+        "action": "click",
+        "selector": "#regions-ba4i7pb"
+      }
+    },
+    {
+      "selector": "#regions-ba4i7pb",
+      "action": "activate",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#panel-regions-ba4i7pb",
+      "action": "observe"
+    }
+  ],
+  "site": "esim.holafly.com",
+  "match": "https://esim.holafly.com/",
+  "barrier": "ArrowRight from Countries does not move focus to Regions, and Regions has tabindex=\"-1\", so Tab skips it.",
+  "rules": [
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#Destinations .destinations__segmented [role=\"tablist\"]",
+      "items": "button[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v5/kane-sample-20/v5-b3a020e9a510-2d198473/before/recording.mp4",
+    "control": "proof/heldout-v5/kane-sample-20/v5-b3a020e9a510-2d198473/control/recording.mp4",
+    "after": "proof/heldout-v5/kane-sample-20/v5-b3a020e9a510-2d198473/after/recording.mp4",
+    "verifiedAt": "2026-11-24T12:10:12.616Z",
+    "kaneRunIds": [
+      "ce28867a-857f-40fd-a13e-931e617917a3",
+      "56947950-3912-48c0-b7b0-5b834b0fcb9e",
+      "92ff5286-3610-4bbf-8b87-89ae677bfea1"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-24T12:10:12.616Z",
+      "event": "verified",
+      "before": "ce28867a-857f-40fd-a13e-931e617917a3",
+      "control": "56947950-3912-48c0-b7b0-5b834b0fcb9e",
+      "after": "92ff5286-3610-4bbf-8b87-89ae677bfea1"
+    }
+  ]
+}

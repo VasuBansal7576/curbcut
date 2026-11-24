@@ -1,0 +1,62 @@
+{
+  "id": "v5-c46d9e085415a2e891b3",
+  "url": "https://rekhta.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Find Meaning...” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Find Meaning...” field and type test without submitting.",
+  "observedSelector": "#dictSearchText",
+  "requiredName": "Find Meaning...",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#dictSearchText",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "rekhta.org",
+  "match": "https://rekhta.org/",
+  "barrier": "The dictionary input has a native textbox role but an empty accessible name, so it cannot be found as “Find Meaning...” in Reading view.",
+  "rules": [
+    {
+      "selector": "#dictSearchText",
+      "action": "addLabel",
+      "value": "Find Meaning..."
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v5/kane-sample-20/v5-c46d9e085415a2e891b3/before/recording.mp4",
+    "control": "proof/heldout-v5/kane-sample-20/v5-c46d9e085415a2e891b3/control/recording.mp4",
+    "after": "proof/heldout-v5/kane-sample-20/v5-c46d9e085415a2e891b3/after/recording.mp4",
+    "verifiedAt": "2026-11-24T11:07:29.569Z",
+    "kaneRunIds": [
+      "1150c058-a8c7-404c-8589-4f8551757234",
+      "4b370e20-4899-4231-bfb3-b90a81b525fe",
+      "bf0e29ab-2c28-4402-9c3d-107e1d24608a"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-24T11:07:29.569Z",
+      "event": "verified",
+      "before": "1150c058-a8c7-404c-8589-4f8551757234",
+      "control": "4b370e20-4899-4231-bfb3-b90a81b525fe",
+      "after": "bf0e29ab-2c28-4402-9c3d-107e1d24608a"
+    }
+  ]
+}

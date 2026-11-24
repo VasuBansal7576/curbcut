@@ -1,0 +1,59 @@
+{
+  "id": "v5-78c6473662e589ae4e3e",
+  "url": "https://lawphil.net/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice” at normal width.",
+  "observedSelector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+      "equals": "About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "lawphil.net",
+  "match": "https://lawphil.net/",
+  "barrier": "The footer paragraph inherits a 518-pixel width from its table cell. At 320 CSS pixels, horizontal clipping cuts off the links that extend past the viewport.",
+  "rules": [
+    {
+      "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "width": "auto",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    },
+    {
+      "selector": "center > table:nth-of-type(2)",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "center > table:nth-of-type(2) > tbody, center > table:nth-of-type(2) > tbody > tr:nth-of-type(7), center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

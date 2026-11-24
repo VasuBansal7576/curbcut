@@ -208,10 +208,10 @@ function matchedPatch(browser,patch) {
   return [...browser.observations.values()].some(page=>page.events.some(event=>event.type==='rule' && event.patchId===patch.id))
 }
 
-async function checkLane(task,persona,patch=null,{requireMatch=false,capture=false,targetWait=0}={}) {
-  let browser
+async function checkLane(task,persona,patch=null,{requireMatch=false,capture=false,targetWait=0,attachedBrowser}={}) {
+  let browser=attachedBrowser
   try {
-    browser=await session(task,persona,patch,tmpdir(),{local:true,gate:true})
+    browser??=await session(task,persona,patch,tmpdir(),{local:true,gate:true})
     if(task.journey) {
       const result=await journeyLane(browser,task,persona,{capture})
       if(requireMatch && result.status==='pass' && !matchedPatch(browser,patch)) {
@@ -225,13 +225,28 @@ async function checkLane(task,persona,patch=null,{requireMatch=false,capture=fal
     if(targetWait && !await target.isVisible()) await target.waitFor({state:'visible',timeout:targetWait}).catch(()=>{})
     if(!await target.isVisible()) return {status:persona==='keyboard-only'?'fail':'inconclusive',reason:'The unique target was not visible.'}
     const {action,value,role}=task.probe
+    const scrollKeys=[]
+    if(attachedBrowser && action==='read') {
+      let reached=false
+      for(let step=0;step<=40;step++) {
+        const {top,height}=await target.evaluate(el=>({top:el.getBoundingClientRect().top,height:innerHeight}))
+        if(top>=0 && top<height) {reached=true;break}
+        if(step===40) break
+        const key=top<0?'PageUp':'PageDown'
+        await initial.keyboard.press(key)
+        scrollKeys.push(key)
+        await delay(180)
+      }
+      if(!reached) return {status:'inconclusive',reason:'The keyboard did not reach the start of the passage.',scrollKeys}
+    }
     const evaluateTarget=()=>target.evaluate((element,options)=>{
       const entry=CurbCut.readerRow(element)
       const row=entry?.row
       return row?.isConnected?{...entry.info,editable:!!row.querySelector('input'),activatable:row.localName==='button'}:null
     },null,{timeout:1000})
     const geometry=await target.evaluate(widthEvidence,{text:action==='read'},{timeout:1000})
-    const details={geometry,snapshot:await initial.evaluate(selector=>globalThis.CurbCut?.snapshot(selector),selector).catch(()=>null)}
+    const details={geometry,...(attachedBrowser && action==='read'?{scrollKeys}:{}),
+      snapshot:await initial.evaluate(selector=>globalThis.CurbCut?.snapshot(selector),selector).catch(()=>null)}
     const before=await outcomeChecks(initial,task,persona)
     if(action!=='read' && before.every(Boolean)) return {status:'inconclusive',reason:'The outcome already held before interaction.',...details}
     if((action==='read' || persona==='low-vision') && !geometry.fits) return {status:'fail',reason:'The target does not fit the visible width.',...details}
@@ -287,7 +302,7 @@ async function checkLane(task,persona,patch=null,{requireMatch=false,capture=fal
     return {...details,url:page.url(),checks,status:passed?'pass':'fail',reason:'Checked the declared outcome after the '+action+' action.'}
   } catch(error) {
     return {status:error instanceof BlockedPage?'blocked':'inconclusive',reason:error.message.split('\n')[0]}
-  } finally {await browser?.abort()}
+  } finally {if(!attachedBrowser) await browser?.abort()}
 }
 
 export async function confirmBarrier(data) {
@@ -310,6 +325,10 @@ export async function oracle(task,patch=null) {
 
 export async function replayLane(task,persona,patch=null,{targetWait=0}={}) {
   return {runner:'playwright',...await checkLane(task,persona,patch,{requireMatch:Boolean(patch),capture:true,targetWait})}
+}
+
+export async function replayInstalledProbe(browser,task) {
+  return checkLane(task,task.persona,null,{attachedBrowser:browser})
 }
 
 export async function validateLiveSelectors(task,rules) {

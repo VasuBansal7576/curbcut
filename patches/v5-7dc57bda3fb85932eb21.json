@@ -1,0 +1,65 @@
+{
+  "id": "v5-7dc57bda3fb85932eb21",
+  "url": "https://trackjs.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Shipping AI code is fast. Debugging it without context is hard. TrackJS” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Shipping AI code is fast. Debugging it without context is hard. TrackJS” at normal width.",
+  "observedSelector": "main > section:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(1) > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "main > section:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(1) > p",
+      "equals": "Shipping AI code is fast. Debugging it without context is hard. TrackJS"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "main > section:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(1) > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "trackjs.com",
+  "match": "https://trackjs.com/",
+  "barrier": "At 320 CSS pixels, the body's 375px minimum width and the containers' 345px minimum width keep the hero paragraph's right edge at 360px, beyond the visible viewport.",
+  "rules": [
+    {
+      "selector": "body.product.index, body.product.index div.container",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0"
+      }
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v5/kane-sample-20/v5-7dc57bda3fb85932eb21/before/recording.mp4",
+    "control": "proof/heldout-v5/kane-sample-20/v5-7dc57bda3fb85932eb21/control/recording.mp4",
+    "after": "proof/heldout-v5/kane-sample-20/v5-7dc57bda3fb85932eb21/after/recording.mp4",
+    "verifiedAt": "2026-11-24T11:52:53.711Z",
+    "kaneRunIds": [
+      "6a82cb5b-ad5a-40bd-8b19-8b4e34c87122",
+      "6d083a4c-7ad8-423f-a8de-a0954f7c944b",
+      "0b89ade8-fc09-4169-9cfc-c8294fb0eed0"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-24T11:52:53.711Z",
+      "event": "verified",
+      "before": "6a82cb5b-ad5a-40bd-8b19-8b4e34c87122",
+      "control": "6d083a4c-7ad8-423f-a8de-a0954f7c944b",
+      "after": "0b89ade8-fc09-4169-9cfc-c8294fb0eed0"
+    }
+  ]
+}

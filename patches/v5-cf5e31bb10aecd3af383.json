@@ -1,0 +1,62 @@
+{
+  "id": "v5-cf5e31bb10aecd3af383",
+  "url": "https://uindex.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search torrents...” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search torrents...” field and type test without submitting.",
+  "observedSelector": "#search",
+  "requiredName": "Search torrents...",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#search",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "uindex.org",
+  "match": "https://uindex.org/",
+  "barrier": "The native textbox #search has no accessible name, so it cannot be found by its expected name in Reading view.",
+  "rules": [
+    {
+      "selector": "#searchform > input#search",
+      "action": "addLabel",
+      "value": "Search torrents..."
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v5/kane-sample-20/v5-cf5e31bb10aecd3af383/before/recording.mp4",
+    "control": "proof/heldout-v5/kane-sample-20/v5-cf5e31bb10aecd3af383/control/recording.mp4",
+    "after": "proof/heldout-v5/kane-sample-20/v5-cf5e31bb10aecd3af383/after/recording.mp4",
+    "verifiedAt": "2026-11-24T11:21:07.030Z",
+    "kaneRunIds": [
+      "595e3b5c-7a24-4d04-9552-e1b1b54e0cda",
+      "efcd7807-9b36-4519-80cc-ec808f2f9ea5",
+      "3607af22-d90d-4865-8df7-cc19d3fdeb86"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-24T11:21:07.030Z",
+      "event": "verified",
+      "before": "595e3b5c-7a24-4d04-9552-e1b1b54e0cda",
+      "control": "efcd7807-9b36-4519-80cc-ec808f2f9ea5",
+      "after": "3607af22-d90d-4865-8df7-cc19d3fdeb86"
+    }
+  ]
+}

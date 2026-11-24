@@ -59,7 +59,7 @@ Kane verified **11 of 20 started cases** from a seeded random ordering of 95 loc
 
 A verification requires a failing unpatched persona run, a passing mouse control and a passing replay with the exact frozen candidate. The runner saved both attempts when it retried an inconclusive phase. The 3 failed cases each had at least one decisive verdict that disagreed with the local oracle. The 6 inconclusive cases lacked a decisive triplet.
 
-Kane agreed with the local oracle on **50 of 53 decisive phases** and **11 of 14 fully assessed cases**. 7 phases were inconclusive or unrun. Final inconclusive phases by reason were 4 complete-journey-not-witnessed, 1 stuck.ap_stuck, 2 passage-not-reached. Across all attempts the inconclusive counts were 9 complete-journey-not-witnessed, 1 stuck.ap_stuck, 1 passage-changed, 3 passage-not-reached.
+Kane agreed with the local oracle on **50 of 53 decisive phases** and **11 of 14 fully assessed cases**. Seven final phases were inconclusive. Four lacked evidence of the full journey, two did not reach the registered passage, and one reported that the agent was stuck. Across all attempts, nine lacked full journey evidence, three did not reach the passage, one recorded a changed passage, and one reported a stuck agent. [Run ledger](kane-sample-20/summary.json)
 
 The sample used **1532.2988 credits** and finished with **3392.1428**. The runner reached the 20-case target.
 
@@ -89,6 +89,8 @@ The sample used **1532.2988 credits** and finished with **3392.1428**. The runne
 Free preflight skipped 1 ranked case.
 
 - www.manhwaden.com · The attached task document did not finish loading. [Preflight record](kane-sample-20/v5-97763e796ed8-d549191b/preflight.json)
+
+In the installed extension, all 11 Kane-verified tasks failed with the extension off and passed with it on. All three independently serving `www` twins passed as well. The audit used isolated headless Chromium. [Installed extension audit](kane-sample-20/extension-e2e.json)
 
 ## Sample and registration
 

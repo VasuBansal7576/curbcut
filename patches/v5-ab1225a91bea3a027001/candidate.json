@@ -1,0 +1,54 @@
+{
+  "id": "v5-ab1225a91bea3a027001",
+  "url": "https://rtmark.net/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “This Privacy Statement presents our privacy policy, including our privacy practices. Below” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “This Privacy Statement presents our privacy policy, including our privacy practices. Below” at normal width.",
+  "observedSelector": "div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2)",
+      "equals": "This Privacy Statement presents our privacy policy, including our privacy practices. Below"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "rtmark.net",
+  "match": "https://rtmark.net/",
+  "barrier": "At a 320 CSS pixel viewport, the body's 900px minimum width keeps the wrapper 900px wide and the privacy passage 585px wide, leaving part of the text outside the visible area.",
+  "rules": [
+    {
+      "selector": "body",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "body > div.wrapper",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "body > div.wrapper > div.main_column",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

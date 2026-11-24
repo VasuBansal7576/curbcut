@@ -4,7 +4,8 @@ import {ROOT,readJSON,saveJSON} from '../core/io.mjs'
 import {parseRun} from '../core/kane.mjs'
 
 export async function archiveKane() {
-  const roots=['proof/kane','proof/heldout-v3/runs','proof/hard-v4/kane','proof/heldout-v5/kane','proof/heldout-v5/kane-rerun-50']
+  const roots=['proof/kane','proof/heldout-v3/runs','proof/hard-v4/kane','proof/hard-v4/kane-objective-pilot',
+    'proof/heldout-v5/kane','proof/heldout-v5/kane-rerun-50','proof/heldout-v5/kane-sample-20']
   const entries=(await Promise.all(roots.map(async root=>{
     const files=await readdir(path.join(ROOT,root),{recursive:true}).catch(error=>{
       if(error.code==='ENOENT') return []

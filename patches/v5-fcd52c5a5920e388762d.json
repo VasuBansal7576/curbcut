@@ -1,0 +1,62 @@
+{
+  "id": "v5-fcd52c5a5920e388762d",
+  "url": "https://azgames.io/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search Game...” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search Game...” field and type test without submitting.",
+  "observedSelector": "#txt-search1",
+  "requiredName": "Search Game...",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#txt-search1",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "azgames.io",
+  "match": "https://azgames.io/",
+  "barrier": "The game search input has a native textbox role but no accessible name, so it cannot be found by the name “Search Game...” in Reading view.",
+  "rules": [
+    {
+      "selector": "#txt-search1",
+      "action": "addLabel",
+      "value": "Search Game..."
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v5/kane-sample-20/v5-fcd52c5a5920e388762d/before/recording.mp4",
+    "control": "proof/heldout-v5/kane-sample-20/v5-fcd52c5a5920e388762d/control/recording.mp4",
+    "after": "proof/heldout-v5/kane-sample-20/v5-fcd52c5a5920e388762d/after/recording.mp4",
+    "verifiedAt": "2026-11-24T11:18:57.884Z",
+    "kaneRunIds": [
+      "77718721-c20e-48ff-8a11-e6886790584e",
+      "1be74eae-aae6-485e-8a5a-a27914ae716b",
+      "293cec9a-46f6-4612-bd3b-09bfe4708006"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-24T11:18:57.884Z",
+      "event": "verified",
+      "before": "77718721-c20e-48ff-8a11-e6886790584e",
+      "control": "1be74eae-aae6-485e-8a5a-a27914ae716b",
+      "after": "293cec9a-46f6-4612-bd3b-09bfe4708006"
+    }
+  ]
+}

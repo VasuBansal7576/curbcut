@@ -25,10 +25,10 @@ A menu that opens only on hover can block keyboard users, and an unlabeled searc
 | Check | Result | Proof |
 | --- | --- | --- |
 | Held-out v5 | With the code frozen, local Playwright scouted 2,050 preregistered sites and confirmed **99 of 142 repairs (69.7%)**, including **51 of 89 multi-step journeys (57.3%)**. | [Results by barrier class and persona](proof/heldout-v5/README.md#local-playwright-results) |
-| Kane sample | **0 of 4** verified in the original sample. The 50-step rerun verified **1 of 2**, WoRMS. | [Original sample](proof/heldout-v5/README.md#kane-verification) · [50-step rerun](proof/heldout-v5/README.md#post-amendment-kane-rerun) |
-| Live fixes | Each shipped fix has Kane evidence. The installed extension audit passed **43 of 43** fixes and all 9 independently serving `www` twins. San Antonio Public Library can be slow to load. | [Extension audit](proof/reliability/extension-e2e.json) · [Kane sessions](proof/kane/README.md#verified-public-repairs) |
+| Kane sample | Kane verified **11 of 20** randomly selected, locally fixed held-out v5 cases. | [Registration and per-case results](proof/heldout-v5/README.md#seeded-kane-sample) |
+| Live fixes | The extension bundles **54** active Kane-verified fixes. All 11 new fixes failed off and passed on in the installed extension. The prior audit passed all 43 original fixes. San Antonio Public Library can be slow to load. | [New extension audit](proof/heldout-v5/kane-sample-20/extension-e2e.json) · [Prior extension audit](proof/reliability/extension-e2e.json) · [Kane sessions](proof/kane/README.md#verified-public-repairs) |
 
-In the original Kane sample, WoRMS and TikFinity hit the step limit, Kaizheng Law lacked evidence of the full task, and the credit guard stopped Mordor Intelligence before it ran. In the rerun, TikFinity’s baseline missed the required Arrow Down and its patched run ended with an agent error. [Session and credit ledger](proof/heldout-v5/kane-summary.json) · [Rerun ledger](proof/heldout-v5/kane-rerun-50/summary.json)
+The original Kane sample verified **0 of 4**. WoRMS and TikFinity hit the step limit, Kaizheng Law lacked evidence of the full task, and the credit guard stopped Mordor Intelligence before it ran. The 50-step rerun verified **1 of 2**, WoRMS. TikFinity’s baseline missed the required Arrow Down and its patched run ended with an agent error. [Original sample](proof/heldout-v5/README.md#kane-verification) · [50-step rerun](proof/heldout-v5/README.md#post-amendment-kane-rerun)
 
 ## See it yourself
 
@@ -59,7 +59,7 @@ For the fixture demo, install Chromium with `npx playwright install chromium`, t
 
 - `node scripts/verify-v5.mjs` reconstructs the frozen Git objects and checks the hashes for the preregistered site sample, task registration and Kane selection. [Freeze and registration](proof/heldout-v5/README.md#sample-and-registration)
 - `node scripts/verify-evidence.mjs` checks dashboard links, layout at 320px and recording metadata. Run it with the demo server stopped and Chromium and ffmpeg installed.
-- `node scripts/extension-e2e.mjs` audits the installed rules against live pages in isolated Chromium. It also replays the recorded keyboard checks for three original URLs and two twins. [Extension audit](proof/reliability/extension-e2e.json)
+- `node scripts/extension-e2e.mjs` audits the installed rules against live pages in isolated Chromium. It replays the registered tasks for the new fixes with the extension off and on. Pass patch IDs to audit just those fixes. [New extension audit](proof/heldout-v5/kane-sample-20/extension-e2e.json) · [Prior extension audit](proof/reliability/extension-e2e.json)
 
 ## Limits
 

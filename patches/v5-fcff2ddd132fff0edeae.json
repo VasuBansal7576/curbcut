@@ -1,0 +1,62 @@
+{
+  "id": "v5-fcff2ddd132fff0edeae",
+  "url": "https://www.forumotion.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search forums” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search forums” field and type test without submitting.",
+  "observedSelector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+  "requiredName": "Search forums",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.forumotion.com",
+  "match": "https://www.forumotion.com/",
+  "barrier": "Reading view names the directory search textbox “Search for a forum in the directory,” so it cannot be found by the expected name “Search forums.”",
+  "rules": [
+    {
+      "selector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+      "action": "addLabel",
+      "value": "Search forums"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v5/kane-sample-20/v5-fcff2ddd132fff0edeae/before/recording.mp4",
+    "control": "proof/heldout-v5/kane-sample-20/v5-fcff2ddd132fff0edeae/control/recording.mp4",
+    "after": "proof/heldout-v5/kane-sample-20/v5-fcff2ddd132fff0edeae/after/recording.mp4",
+    "verifiedAt": "2026-11-24T11:02:16.375Z",
+    "kaneRunIds": [
+      "0ada2477-e9ac-4abc-9f53-1a19a06596e3",
+      "86f34519-b230-4ce5-b583-11f73a873119",
+      "414f52f7-1fdc-46bc-93dd-dfcfd5430303"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-24T11:02:16.375Z",
+      "event": "verified",
+      "before": "0ada2477-e9ac-4abc-9f53-1a19a06596e3",
+      "control": "86f34519-b230-4ce5-b583-11f73a873119",
+      "after": "414f52f7-1fdc-46bc-93dd-dfcfd5430303"
+    }
+  ]
+}
