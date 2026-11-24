@@ -16,57 +16,32 @@ for (const button of buttons) {
   button.addEventListener('click', () => show(button))
 }
 show(buttons[0])
-for (const card of document.querySelectorAll('.replay')) {
-  const still = card.querySelector('.still')
-  const video = still.querySelector('video')
-  const repaired = card.querySelector('a.verdict.pass')
-  const stop = () => {
-    video.pause()
-    still.classList.remove('previewing')
+const switcher = document.querySelector('.site-switcher')
+const siteButtons = [...switcher.children]
+function selectSite(selected) {
+  for (const button of siteButtons) {
+    const active = button === selected
+    const panel = document.getElementById(button.getAttribute('aria-controls'))
+    button.setAttribute('aria-pressed', String(active))
+    if (!active) panel.querySelector('video').pause()
+    panel.hidden = !active
   }
-  const play = (event) => {
-    if (
-      matchMedia('(prefers-reduced-motion: reduce)').matches ||
-      document.querySelector('#player').open
-    )
-      return
-    const link = event.target.closest('a')
-    const source = link?.dataset.recording ? link : repaired
-    if (link && !link.dataset.recording) return stop()
-    const clip = source.classList.contains('fail')
-      ? card.dataset.previewBefore
-      : card.dataset.previewAfter
-    if (video.getAttribute('src') !== clip) video.src = clip
-    video.muted = true
-    video
-      .play()
-      .then(() => {
-        if (!video.paused) still.classList.add('previewing')
-      })
-      .catch(() => {})
-  }
-  card.addEventListener('pointerover', (event) => {
-    if (event.pointerType === 'mouse') play(event)
-  })
-  card.addEventListener('focusin', play)
-  card.addEventListener('pointerleave', stop)
-  card.addEventListener('focusout', (event) => {
-    if (!card.contains(event.relatedTarget)) stop()
-  })
-  card.addEventListener('click', stop)
-  card.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') stop()
-  })
-  video.addEventListener('ended', stop)
-  const visibility = new IntersectionObserver(([entry]) => {
-    if (!entry.isIntersecting) stop()
-  })
-  visibility.observe(card)
-  matchMedia('(prefers-reduced-motion: reduce)').addEventListener(
-    'change',
-    stop,
-  )
 }
+for (const button of siteButtons) button.addEventListener('click', () => selectSite(button))
+for (const panel of document.querySelectorAll('.replay')) {
+  const video = panel.querySelector('video')
+  panel.addEventListener('click', event => {
+    const link = event.target.closest('a[data-recording]')
+    if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return
+    event.preventDefault()
+    event.stopPropagation()
+    video.src = link.href
+    video.setAttribute('aria-label', link.dataset.recording)
+    video.play().catch(() => {})
+  })
+}
+selectSite(siteButtons[0])
+switcher.hidden = false
 const contrastToggle = document.querySelector('#contrast-toggle')
 contrastToggle.addEventListener('click', () => {
   const repaired = contrastToggle.getAttribute('aria-pressed') !== 'true'
