@@ -44,6 +44,18 @@ A menu that opens only on hover can shut out keyboard users. An unnamed search f
 
 Use the extension zip from GitHub Releases once published, or open `chrome://extensions`, enable **Developer mode**, select **Load unpacked**, and choose [`extension/`](extension/). Try the About menu on [Massachusetts higher education](https://www.mass.edu/) with the fix off and on. Tab to **About**, open the submenu, and follow **The DHE**. [Before](proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/before/recording.mp4) · [After](proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/recording.mp4)
 
+## CLI
+
+```sh
+node curbcut.mjs check http://127.0.0.1:4317/fixtures/shop/ "Search for headphones and add Field Headphones to the cart. Confirm Cart (1)." --local
+node curbcut.mjs check <url> "<task>" --persona keyboard-only --dry-run
+node curbcut.mjs gate --local --config examples/curbcut.gate.json
+```
+
+`check` turns a URL and a plain-English task into a declarative objective, runs the local oracle, then the repair loop. `--local` uses Playwright only. `--dry-run` prints the derived checks and the Kane credit estimate. `gate` reads `curbcut.gate.json` and runs each task as the keyboard and screen-reader personas against a running app. Failures print a reason and a compact DOM snippet for a coding agent to fix in source. [Gate setup](docs/gate.md)
+
+The repair agent defaults to `codex exec`. Set `CURBCUT_AGENT=grok` to use the Grok CLI at `~/.grok/bin/grok`. `CURBCUT_MODEL` selects the model for the chosen backend.
+
 ## Check our numbers
 
 With Node 22 or later, run these from the repository root.

@@ -4,7 +4,7 @@ import {mkdtemp,mkdir,readFile,writeFile,rm} from 'node:fs/promises'
 import {tmpdir} from 'node:os'
 import path from 'node:path'
 import {ROOT,command} from './io.mjs'
-import {acceptableURL,allowedHost,fixtureURL,journeyPaths,siteKey,taskDestination,taskNavigation} from './task.mjs'
+import {acceptableURL,allowedHost,fixtureURL,localAppURL,journeyPaths,siteKey,taskDestination,taskNavigation} from './task.mjs'
 import {BlockedPage,pageBlock} from './access.mjs'
 import {lockViewport} from './viewport.mjs'
 import {match} from './engine.js'
@@ -24,12 +24,13 @@ export async function guardRequests(context,task,{discovery=false,extension=fals
       if(discovery && ['image','media','font'].includes(request.resourceType())) return await route.abort()
       if(!acceptableURL(url)) return await route.abort()
       if(fixtureURL(base) && !fixtureURL(url)) return await route.abort()
+      if(localAppURL(base) && !fixtureURL(base) && url.origin!==base.origin && !localAppURL(url)) return await route.abort()
       if(request.isNavigationRequest()) {
         let nested=false
         try {nested=Boolean(request.frame().parentFrame())} catch {}
         if(!nested && !taskDestination(task,url)) return await route.abort()
       }
-      if(!fixtureURL(url)) {
+      if(!fixtureURL(url) && !localAppURL(url)) {
         if(!hosts.has(url.hostname)) hosts.set(url.hostname,allowedHost(url.hostname).catch(()=>false))
         if(!await hosts.get(url.hostname)) return await route.abort()
       }
@@ -77,11 +78,12 @@ export async function session(task,persona,patch,output,{local=false,gate=false,
       const events=observations.get(page).events
       if(events.length<4000) events.push({...event,top:frame===page.mainFrame()})
     })
-    const args=JSON.stringify({task,persona,patch,token,site:siteKey(base),fixture:fixtureURL(base),paths:journeyPaths(task)})
-    const init='('+function({task,persona,patch,token,site,fixture,paths}){
+    const args=JSON.stringify({task,persona,patch,token,site:siteKey(base),fixture:fixtureURL(base),localApp:localAppURL(base),paths:journeyPaths(task)})
+    const init='('+function({task,persona,patch,token,site,fixture,localApp,paths}){
       const topLevel=window===window.top
       const host=location.hostname
-      if(fixture ? location.origin!==new URL(task.url).origin : location.protocol!=='https:' || topLevel && host!==site && !host.endsWith('.'+site)) return
+      if(fixture || localApp) {if(location.origin!==new URL(task.url).origin) return}
+      else if(location.protocol!=='https:' || topLevel && host!==site && !host.endsWith('.'+site)) return
       const send=globalThis.__curbcutObserve
       const documentId=crypto.randomUUID()
       const journeySelectors=[...new Set(task.journey?.flatMap(step=>[step.selector,step.pointer?.selector].filter(Boolean))??[])]
@@ -123,7 +125,9 @@ export async function session(task,persona,patch,output,{local=false,gate=false,
             if(link) {
               const destination=new URL(link.href,location.href)
               const allowedHost=destination.hostname===site || destination.hostname.endsWith('.'+site)
-              if(destination.protocol!=='https:' || !allowedHost || (allowedPaths.size && !allowedPaths.has(destination.pathname))) {
+              const localOk=localApp && destination.origin===location.origin
+              const remoteBlocked=localOk?false:destination.protocol!=='https:' || !allowedHost
+              if(remoteBlocked || (allowedPaths.size && !allowedPaths.has(destination.pathname))) {
                 report('navigation-suppressed',node)
                 event.preventDefault()
                 event.stopImmediatePropagation()
