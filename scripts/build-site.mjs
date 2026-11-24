@@ -160,43 +160,60 @@ for(const patch of recorded) {
   const rechecks=await Promise.all(patch.history.filter(entry=>entry.event==='retired').map(entry=>runLink('retirement',entry.video,entry.runId)))
   const localRetirements=patch.history.filter(entry=>entry.event==='local-retired' && entry.evidence).map(entry=>
     '- [Local regression and retirement]('+videoLink(entry.evidence)+') · '+entry.reason)
-  const attempt=path.dirname(path.dirname(patch.evidence.after))
-  const proposalPaths=[attempt+'/provenance.json',attempt+'/retry/provenance.json']
-  const rerunCase=v5Rerun?.cases.find(row=>row.id===patch.id && row.kaneVerified &&
-    v5Rerun.runs.some(run=>run.id===patch.id && run.phase==='after' && run.recording===patch.evidence.after))
-  if(rerunCase) proposalPaths.push('proof/heldout-v5/kane/'+patch.id+'/attempt-1/provenance.json')
-  const provenancePath=(await Promise.all(proposalPaths.map(async file=>await read(file,null)?file:null))).find(Boolean)
-  if(!provenancePath) throw new Error('Missing proposal provenance for '+patch.id)
-  const provenance=await read(provenancePath,null)
-  const candidate=path.join(path.dirname(provenancePath),'candidate.json')
-  const agentCandidate=provenance.priorAgentProposal??candidate
-  const agentPatch=await read(agentCandidate,null)
-  const sampleCase=v5Sample?.cases.find(row=>row.id===patch.id && row.kaneVerified &&
-    row.runs.some(run=>run.phase==='after' && run.recording===patch.evidence.after))
-  const storedCandidate='patches/'+patch.id+'/candidate.json'
-  if(sampleCase) {
-    const [original,shipped]=await Promise.all([agentCandidate,storedCandidate].map(file=>readFile(path.join(ROOT,file))))
-    const withEvidence={...agentPatch,status:patch.status,evidence:patch.evidence,history:patch.history}
-    if(agentCandidate!==sampleCase.candidateFile || !original.equals(shipped) ||
-      createHash('sha256').update(shipped).digest('hex')!==sampleCase.candidateSha256 ||
-      !isDeepStrictEqual(patch,withEvidence)) throw new Error('Sample proposal changed for '+patch.id)
+  let proposal
+  if(patch.evaluation) {
+    const measured=v6Local?.rows.find(row=>row.id===patch.id && row.status==='locally-fixed')
+    const recorded=v6Kane?.cases.find(row=>row.id===patch.id && row.verified)
+    const measurement=patch.evidence.localMeasurement
+    const artifact='proof/heldout-v6/release/'+patch.id+'.json'
+    const shipped='patches/'+patch.id+'.json'
+    const [source,live]=await Promise.all([artifact,shipped].map(file=>readFile(path.join(ROOT,file))))
+    if(!measured || !recorded || !source.equals(live) || !isDeepStrictEqual(measured.patch.rules,patch.rules) ||
+      patch.history[0]?.frozenCommit!==v6Local.frozenCommit ||
+      createHash('sha256').update(JSON.stringify(measured.patch)).digest('hex')!==patch.history[0]?.candidateSha256) {
+      throw new Error('Unconfirmed frozen v6 repair '+patch.id)
+    }
+    if(!await read(measurement,null)) throw new Error('Missing v6 measurement for '+patch.id)
+    proposal='[Frozen local measurements and proposal]('+videoLink(measurement)+') · [Archived release bytes]('+videoLink(artifact)+')'
+  } else {
+    const attempt=path.dirname(path.dirname(patch.evidence.after))
+    const proposalPaths=[attempt+'/provenance.json',attempt+'/retry/provenance.json']
+    const rerunCase=v5Rerun?.cases.find(row=>row.id===patch.id && row.kaneVerified &&
+      v5Rerun.runs.some(run=>run.id===patch.id && run.phase==='after' && run.recording===patch.evidence.after))
+    if(rerunCase) proposalPaths.push('proof/heldout-v5/kane/'+patch.id+'/attempt-1/provenance.json')
+    const provenancePath=(await Promise.all(proposalPaths.map(async file=>await read(file,null)?file:null))).find(Boolean)
+    if(!provenancePath) throw new Error('Missing proposal provenance for '+patch.id)
+    const provenance=await read(provenancePath,null)
+    const candidate=path.join(path.dirname(provenancePath),'candidate.json')
+    const agentCandidate=provenance.priorAgentProposal??candidate
+    const agentPatch=await read(agentCandidate,null)
+    const sampleCase=v5Sample?.cases.find(row=>row.id===patch.id && row.kaneVerified &&
+      row.runs.some(run=>run.phase==='after' && run.recording===patch.evidence.after))
+    const storedCandidate='patches/'+patch.id+'/candidate.json'
+    if(sampleCase) {
+      const [original,shipped]=await Promise.all([agentCandidate,storedCandidate].map(file=>readFile(path.join(ROOT,file))))
+      const withEvidence={...agentPatch,status:patch.status,evidence:patch.evidence,history:patch.history}
+      if(agentCandidate!==sampleCase.candidateFile || !original.equals(shipped) ||
+        createHash('sha256').update(shipped).digest('hex')!==sampleCase.candidateSha256 ||
+        !isDeepStrictEqual(patch,withEvidence)) throw new Error('Sample proposal changed for '+patch.id)
+    }
+    if(rerunCase && (agentCandidate!==rerunCase.candidateFile ||
+      createHash('sha256').update(JSON.stringify(agentPatch)).digest('hex')!==rerunCase.patchSha256)) throw new Error('Kane rerun proposal changed for '+patch.id)
+    const agentProvenance=await read(path.join(path.dirname(agentCandidate),'provenance.json'),null)
+    const source=archive.find(run=>run.taskId===patch.id && run.sessionId===agentProvenance?.sourceRunId)
+    const sourceLocalRun=provenance.sourceLocalRun
+    const localFailure=sourceLocalRun && await read(sourceLocalRun,null)
+    const localSource=localFailure?.runner==='playwright' && localFailure.status==='fail' && [hardLocal,v5Local].some(cohort=>
+      cohort && provenance.registrationBlob===cohort.registered.blob && cohort.results.some(row=>
+        row.task.id===patch.id && row.status==='locally-fixed' && row.phases.some(phase=>phase.name==='before' && phase.file===sourceLocalRun)))
+    const kaneSource=!sourceLocalRun && source?.status===(patch.evidence.localOracle?patch.evidence.kaneVerdicts?.before:'fail')
+    if(agentProvenance?.writer!=='codex exec' || (!localSource && !kaneSource) ||
+      !isDeepStrictEqual((await read(candidate,null))?.rules,patch.rules) ||
+      !isDeepStrictEqual(agentPatch?.rules,patch.rules)) throw new Error('Unconfirmed agent proposal for '+patch.id)
+    proposal='[Runtime repair proposal]('+videoLink(agentCandidate)+') · [Repair provenance]('+videoLink(provenancePath)+') · '+
+      (sampleCase?'[Frozen catalog candidate]('+videoLink(storedCandidate)+') · ':'')+
+      (localSource?'[Local Playwright failure]('+videoLink(sourceLocalRun)+')':'Failure session '+source.sessionId)
   }
-  if(rerunCase && (agentCandidate!==rerunCase.candidateFile ||
-    createHash('sha256').update(JSON.stringify(agentPatch)).digest('hex')!==rerunCase.patchSha256)) throw new Error('Kane rerun proposal changed for '+patch.id)
-  const agentProvenance=await read(path.join(path.dirname(agentCandidate),'provenance.json'),null)
-  const source=archive.find(run=>run.taskId===patch.id && run.sessionId===agentProvenance?.sourceRunId)
-  const sourceLocalRun=provenance.sourceLocalRun
-  const localFailure=sourceLocalRun && await read(sourceLocalRun,null)
-  const localSource=localFailure?.runner==='playwright' && localFailure.status==='fail' && [hardLocal,v5Local].some(cohort=>
-    cohort && provenance.registrationBlob===cohort.registered.blob && cohort.results.some(row=>
-      row.task.id===patch.id && row.status==='locally-fixed' && row.phases.some(phase=>phase.name==='before' && phase.file===sourceLocalRun)))
-  const kaneSource=!sourceLocalRun && source?.status===(patch.evidence.localOracle?patch.evidence.kaneVerdicts?.before:'fail')
-  if(agentProvenance?.writer!=='codex exec' || (!localSource && !kaneSource) ||
-    !isDeepStrictEqual((await read(candidate,null))?.rules,patch.rules) ||
-    !isDeepStrictEqual(agentPatch?.rules,patch.rules)) throw new Error('Unconfirmed agent proposal for '+patch.id)
-  const proposal='[Runtime repair proposal]('+videoLink(agentCandidate)+') · [Repair provenance]('+videoLink(provenancePath)+') · '+
-    (sampleCase?'[Frozen catalog candidate]('+videoLink(storedCandidate)+') · ':'')+
-    (localSource?'[Local Playwright failure]('+videoLink(sourceLocalRun)+')':'Failure session '+source.sessionId)
   const report=['# '+patch.site,patch.task,'**Persona** '+patch.persona,'**Observed barrier** '+patch.barrier,'**Patch status** '+patch.status,'## Recorded runs',...phases,...rechecks,...localRetirements,proposal,'## Source repair and relevant WCAG criteria','A passing task captures one interaction under the recorded conditions.',...recommendations.map(r=>'- '+r),'Verified '+patch.evidence.verifiedAt].join('\n\n')
   await mkdir(folder,{recursive:true});await writeFile(path.join(folder,'report.md'),report+'\n')
 }
