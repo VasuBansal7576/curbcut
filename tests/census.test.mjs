@@ -8,13 +8,13 @@ import {renderReadme,summarize,wilson} from '../core/census-aggregate.mjs'
 import {clickListenerHits,pageSignals,recipeSignals} from '../core/census-signals.mjs'
 import {askCensus,compactJevState} from '../core/census.mjs'
 
-const patches=await readJSON('extension/bundled.json')
+const bundled=await readJSON('extension/bundled.json')
+const patches=bundled.filter(patch=>['verified','locally-verified'].includes(patch.status))
 const catalog=catalogDocument(patches)
 
 test('bundled patches group into recipes by unique action signature',()=>{
   const recipes=groupRecipes(patches)
-  assert.equal(patches.length,105)
-  assert.equal(recipes.reduce((sum,recipe)=>sum+recipe.patchCount,0),105)
+  assert.equal(recipes.reduce((sum,recipe)=>sum+recipe.patchCount,0),patches.length)
   assert.equal(new Set(recipes.map(recipe=>recipe.signature)).size,recipes.length)
   const byId=Object.fromEntries(recipes.map(recipe=>[recipe.id,recipe]))
   assert.equal(byId.setContrast.patchCount,41)

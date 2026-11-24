@@ -17,7 +17,7 @@ const objectives={
 
 function replayable(patch,supplements) {
   const data={...patch,...supplements[patch.id],...objectives[patch.id],url:patch.url??patch.match.replace(/\*$/,'')}
-  if(data.probe || data.journey) return data
+  if(data.probe || data.journey || data.evaluation) return data
   if(!data.observedSelector || !data.successSelector || data.persona!=='keyboard-only') return null
   return {...data,probe:{action:'click'},outcomeChecks:data.outcomeChecks??[{selector:data.successSelector,kind:'visible'}]}
 }
@@ -31,7 +31,7 @@ const compact=result=>{
 export async function recheckLocal(id) {
   const patches=await catalog()
   if(id && !patches.some(patch=>patch.id===id)) throw new Error('Unknown patch '+id)
-  const active=patches.filter(patch=>patch.status==='verified' && (!id || id===patch.id))
+  const active=patches.filter(patch=>['verified','locally-verified'].includes(patch.status) && (!id || id===patch.id))
   const supplements=await readJSON(path.join(ROOT,'tasks/recheck-keyboard.json'))
   const results=[]
   for(const patch of active) {

@@ -1110,6 +1110,44 @@
       ]
     }
   },
+  "$defs": {
+    "localDisposition": {
+      "properties": {
+        "status": {
+          "enum": [
+            "broken",
+            "retired"
+          ]
+        },
+        "evidence": {
+          "not": {
+            "required": [
+              "kaneRunIds"
+            ]
+          }
+        },
+        "history": {
+          "contains": {
+            "required": [
+              "event",
+              "runner"
+            ],
+            "properties": {
+              "event": {
+                "enum": [
+                  "local-broken",
+                  "local-retired"
+                ]
+              },
+              "runner": {
+                "const": "playwright"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "allOf": [
     {
       "if": {
@@ -1121,7 +1159,8 @@
               "retired"
             ]
           }
-        }
+        },
+        "not": {"$ref": "#/$defs/localDisposition"}
       },
       "then": {
         "properties": {
@@ -1166,11 +1205,10 @@
     },
     {
       "if": {
-        "properties": {
-          "status": {
-            "const": "locally-verified"
-          }
-        },
+        "anyOf": [
+          {"properties": {"status": {"const": "locally-verified"}}},
+          {"$ref": "#/$defs/localDisposition"}
+        ],
         "not": {
           "required": [
             "evidence"
@@ -1284,11 +1322,10 @@
       "if": {
         "allOf": [
           {
-            "properties": {
-              "status": {
-                "const": "locally-verified"
-              }
-            }
+            "anyOf": [
+              {"properties": {"status": {"const": "locally-verified"}}},
+              {"$ref": "#/$defs/localDisposition"}
+            ]
           },
           {
             "required": [

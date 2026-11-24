@@ -25,7 +25,7 @@ export async function meter(action,{balance},work) {
     row.kaneCredits=row.balanceBefore===null || row.balanceAfter===null?null:row.balanceBefore-row.balanceAfter
     row.agentTokens=row.events.reduce((sum,event)=>sum+(event.tokens??0),0)
     await saveJSON(path.join(directory,row.id+'.json'),row)
-    console.log('Cost '+JSON.stringify(row))
+    console.error('Cost '+JSON.stringify(row))
   }
 }
 

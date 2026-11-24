@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "curbcut gate --local --config curbcut.gate.json"
+          }
+        ]
+      }
+    ]
+  }
+}

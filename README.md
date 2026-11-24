@@ -1,82 +1,58 @@
 # Curb Cut
 
-A Chrome extension that fixes accessibility barriers on public websites, with proof for each shipped repair.
+Curb Cut uses Kane to reproduce accessibility barriers, verify repairs, and ship browser fixes with replayable evidence.
 
-[![Watch the two-minute Curb Cut launch film](launch/curbcut-launch-thumbnail.png)](launch/curbcut-launch.mp4)
+**Launch film on YouTube — link pending.**
 
-Watch on YouTube: (link coming)
+## Install in Chrome
 
-## The problem
+1. Download and unzip the [extension package](site/assets/curbcut-extension.zip). To build it yourself, run `npm ci` and `npm run package`.
+2. Open `chrome://extensions` and turn on **Developer mode**.
+3. Select **Load unpacked** and choose the extracted folder.
 
-A menu that opens only on hover can shut out keyboard users. An unnamed search field can leave screen reader users guessing. WebAIM detected WCAG failures on 95.9% of the million home pages it tested in 2026, and six failure types accounted for 96% of detected errors. [WebAIM Million 2026](https://webaim.org/projects/million/)
+## Try it in 60 seconds
 
-| Failure type | Home pages affected | Curb Cut repair | Locally fixed | Kane verified |
-| --- | ---: | --- | ---: | ---: |
-| Low contrast text | 83.9% | Adjust foreground or background | 47/62 v6 | Local proof |
-| Missing image alternatives | 53.1% | Add grounded alternative text | 8/12 v6 | 3/5 sampled |
-| Missing form labels | 51% | Name the input | 19/20 v5 | 6/6 sampled |
-| Empty links | 46.3% | Name the link by its purpose | 12/12 v6 | 1/5 sampled |
-| Empty buttons | 30.6% | Name the control by its function | 9/12 v6 | 3/5 sampled |
-| Missing document language | 13.5% | Set the language when detection agrees | 1/1 v7, 0/20 v6, 3/3 development | Local proof |
+Open [Mass.edu](https://www.mass.edu/), Tab to **About**, and use the keyboard to reach **The DHE**. Open Curb Cut’s popup to see the applied menu fix, toggle it off to compare, and open the evidence for the recorded runs. [Before, pointer control, and after](proof/README.md)
 
-[Cohort evidence and recordings](proof/README.md)
-
-## How it works
-
-1. Scout a public page and record a reproducible barrier task.
-2. Give Codex the failed task and browser observations. It proposes a scoped, reversible JSON patch.
-3. Replay the task with the accessibility persona and a pointer control. Kane records eligible before, control and after runs. Contrast and language use local browser measurements.
-4. Ship repairs with evidence. Recheck them as sites change and export a Markdown report that the site owner can use to fix the source.
-
-[Architecture and patch format](ARCHITECTURE.md)
-
-## Results
-
-| Check | Result | Evidence |
-| --- | --- | --- |
-| Held-out v6 | **76/118** local repairs across **400** scouted sites | [V6 results](proof/README.md#held-out-v6) |
-| Held-out v5 | **99/142** local repairs across **2,050** scouted sites, including **51/89** multi-step journeys | [V5 results](proof/README.md#held-out-v5) |
-| Kane samples | **11/20** in the v5 random sample and **7/15** in the v6 naming sample | [V5 sample](proof/heldout-v5/README.md#seeded-kane-sample) · [V6 sample](proof/heldout-v6/README.md#kane-results) |
-| Earlier Kane cohorts | V4 **2/21** selected, v3 **10/23**, v2 **13/39**, original **0/26** | [Earlier studies](proof/README.md#v4-and-earlier) |
-| Live fixes | **105** bundled fixes, **61 Kane-verified** and **44 with local proof** | [Installed-extension audits](proof/README.md#installed-extension-and-reliability) |
-
-## Try it
-
-Use the extension zip from GitHub Releases once published, or open `chrome://extensions`, enable **Developer mode**, select **Load unpacked**, and choose [`extension/`](extension/). Try the About menu on [Massachusetts higher education](https://www.mass.edu/) with the fix off and on. Tab to **About**, open the submenu, and follow **The DHE**. [Before](proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/before/recording.mp4) · [After](proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/recording.mp4)
-
-## CLI
-
-```sh
-node curbcut.mjs check http://127.0.0.1:4317/fixtures/shop/ "Search for headphones and add Field Headphones to the cart. Confirm Cart (1)." --local
-node curbcut.mjs check <url> "<task>" --persona keyboard-only --dry-run
-node curbcut.mjs gate --local --config examples/curbcut.gate.json
+```mermaid
+flowchart LR
+    A[Kane fails the task] --> B[Agent receives Kane's reason]
+    B --> C[Agent writes the rule]
+    C --> D[Kane reruns the task]
+    D --> E[Verified rule ships]
+    E --> F[Nightly recheck retires the rule when the site passes unaided]
 ```
 
-`check` turns a URL and a plain-English task into a declarative objective, runs the local oracle, then the repair loop. `--local` uses Playwright only. `--dry-run` prints the derived checks and the Kane credit estimate. `gate` reads `curbcut.gate.json` and runs each task as the keyboard and screen-reader personas against a running app. Failures print a reason and a compact DOM snippet for a coding agent to fix in source. `--json` writes the same result as JSON. [Gate setup](docs/gate.md) · [Pull request bot](docs/pr-bot.md)
+## For developers
 
-The repair agent defaults to `codex exec`. Set `CURBCUT_AGENT=grok` to use the Grok CLI at `~/.grok/bin/grok`. `CURBCUT_MODEL` selects the model for the chosen backend.
+Run `npm ci` and `npm link` to install the CLI, or run `node curbcut.mjs` directly.
 
-## Check our numbers
+- `curbcut check <url> "<task>"` runs the repair loop for a plain-English task. Set `CURBCUT_AGENT=grok` or `CURBCUT_AGENT=codex` (default) to select the repair agent.
+- `curbcut gate --config curbcut.gate.json` prints failing selectors and reasons so a coding agent can fix the source. Add `--local` to Check or Gate for Playwright without Kane credits. The [Claude Code Stop hook](docs/gate.md#claude-code-stop-hook) runs Gate after edits.
+- The [PR bot](docs/pr-bot.md) runs Gate against a preview URL, posts one updated comment, and uploads Kane recordings.
+- `curbcut cost` summarizes recorded tokens and Kane balance changes. Recipes and inherited rules get a local replay before a full agent proposal. The family policy samples eligible inherited fixes for Kane. [Cost proof and policy](proof/cost/README.md)
+- `curbcut census <url-list-file> --limit N` estimates recipe-pattern reach from public pages. [Census](proof/census/README.md)
 
-With Node 22 or later, run these from the repository root.
+## Browser extension
 
-```sh
-npm ci
-npm test
-npm run build
-node scripts/verify-v6.mjs
-node scripts/verify-v5.mjs
-node proof/hard-v4/verify-integrity.mjs
-```
+The popup shows applied repairs, provenance, and retired fixes. Report a barrier from the popup or via the configurable shortcut, then share the source-change report with the site owner. Reading view, low-vision tools, opt-in Jev naming, and experimental Match mouse can help on pages without a bundled fix. [Evidence dashboard](site/index.html) · [Match mouse](proof/mirror-dom/README.md)
 
-With Playwright Chromium installed, `node scripts/extension-e2e.mjs` rechecks the bundle on live public pages. Pass patch IDs to replay a subset. [Proof index](proof/README.md) · [Replay instructions](proof/methodology/README.md)
+## Four uses of Kane
 
-## Limits
+1. Reproduce the barrier and capture a failure reason for the repair agent.
+2. Establish a working pointer control for the same task.
+3. Replay the repaired task and save the verdict, recording, and sealed evidence pack.
+4. Recheck the native site to retire a repair when the site passes unaided. The nightly schedule also supports a Playwright lane.
 
-Each result covers a recorded task. Reading view models DOM roles and names, and screen reader parity remains untested. Kane can hit its step limit or return an inconclusive result.
+## Measured results
 
-In the installed extension, opt-in TypeSafe Jev live naming applied **15/35** unnamed links and buttons across a 19-site public run. Manual review found **13/15 correct (86.7%)** and two vague. At least one name appeared on **7 of 13** sites with unnamed controls. The median time to the first applied name was **1.14 s**. [Public-site results](proof/jev/live-naming-real-sites.json) · [Meridiano demo](proof/jev/live-naming-demo/capture.json)
+- **105 active fixes**, with **61 Kane-verified** and **44 with local proof**. [Catalog](extension/bundled.json)
+- V7 confirmed 6/10 accepted names and 1/1 language fix locally. Kane verified 2/5 live-naming cases. V6 fixed 76/118 locally and Kane verified 7/15 sampled names. V5 fixed 99/142 locally, including 51/89 journeys. Its Kane samples verified 11/20, 0/4, and 1/2 in the 50-step rerun. Hard v4 fixed 64/102 locally and Kane verified 2/21. Kane verified 10/23 in v3, 13/39 started in v2, and 0/26 in the original holdout. [Study details](proof/README.md)
+- Cost replay reproduced 99/142 v5 fixes at 19,905 versus 31,949 estimated tokens per fix and 76/118 v6 fixes, including 47 recipes. Both cohorts had zero confirmed inheritance or diff hits. Live recipes fixed 18/89 journeys. Live inheritance had 0 hits, 11 near misses, and 0 false matches across 34 tasks. Grok 4.5 corrected 0/11 near misses at about 155 estimated tokens per task. The bounded Grok 4.6 retry corrected 9/11 at about 3,554 estimated tokens per task versus 11,678 for the archived full-agent path. Two were unconfirmed after oracle timeouts. [Cost studies](proof/cost/README.md)
+- Match mouse found 1/22 held-out matches, with zero wrong matches or pointer regressions in the one repair. Kane verified 0/1. The development replay also found 1/22. [DOM parity](proof/mirror-dom/README.md)
+- The Jev mirror backtest missed its pre-set bar of 95% precision at 50% recall in development. On 95 test pairs it reached 75.0% precision, 40.5% recall, and 0.753 AUROC. The original instant repair study fixed 2/102 development and 3/142 held-out tasks, with zero Kane follow-ups after three cases qualified against a minimum of five. [Mirror backtest](proof/jev/mirror-backtest/README.md) · [Jev studies](proof/jev/README.md)
+- Live Jev naming applied 15/35 names across 19 public sites. Manual review found 13 correct and two vague, with names applied on 7/13 sites that exposed unnamed controls. Median time to the first name was 1.14 seconds. The archive predictor scored 427 sessions and the frame auditor flagged 37/49 packs. [Live naming review](proof/jev/live-naming-real-sites.json) · [Archive studies](proof/jev/README.md)
+- Census observed 103/200 pages, with 77 blocked and 20 failed. Jev’s observed shares included hover-only menus at 67.0%, unnamed fields and reflow overflow at 51.5% each, and low contrast at 29.1%. These are reach upper bounds based on apparent pattern presence. The 100 calibration labels were positives only, so the study reports recall. [All twelve recipe shares](proof/census/README.md)
+- Archived demo Kane sessions recorded Check fail, pointer pass, and after pass (`f0760ff2-f04f-4de2-88b8-915b609b7e02`, `8987d2d8-c2c7-47b0-955a-1617d9c5327b`, `d942c3ca-79a9-4d2e-8c3b-0c7a18f5265b`), Gate fail and pass (`2f63df68-fe0f-47b5-8f34-918444b55049`, `2d512cc4-756e-4a96-bcfb-bec5ea33773a`), and retirement (`0c6e7186-06cc-4a75-8744-dbf3c5be066b`). [Demo ledger and footage](proof/demo/README.md)
 
-At Mass.edu, Tab cycles reproduced the About submenu barrier. A populated email field triggered the privacy gate and no keyboard help offer appeared. In the earlier v7 study, Kane verified **2/5** naming cases and the language decision fixed **1/1** task in the local oracle. [Keyboard replay](proof/jev/stuck-live-mass-edu.json) · [Held-out v7 study](proof/heldout-v7/README.md)
-
-`curbcut cost` summarizes agent tokens and Kane balance changes from recorded `check`, `fix`, and `gate` runs. Pass an array of task objects to `curbcut fix` to batch proposals by site. See the [cost replay](proof/cost/README.md) for configuration, results, and measurement limits.
+[Architecture](ARCHITECTURE.md) · [Proof index](proof/README.md)

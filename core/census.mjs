@@ -163,7 +163,8 @@ async function visitWithRetry(entry,recipes,patches,key,browser) {
 export async function runCensus(listFile,{limit,calibrate=true,directory=outDir}={}) {
   const key=await jevKey()
   if(!key) throw new Error('Jev is not configured.')
-  const patches=await readJSON(path.join(ROOT,'extension/bundled.json'))
+  const patches=(await readJSON(path.join(ROOT,'extension/bundled.json')))
+    .filter(patch=>['verified','locally-verified'].includes(patch.status))
   const catalog=catalogDocument(patches)
   const recipes=catalog.recipes
   await saveJSON(path.join(directory,'recipes.json'),catalog)

@@ -206,7 +206,7 @@ export async function fix(data,{run=runKane,write=propose,persist=publish,check=
     prior=existing
   }
   if((task.probe || task.journey || task.evaluation) && (check===oracle || replay)) {
-    const evidenceDir=base && run===runKane?newDirectory(task.id):dir
+    const evidenceDir=dir
     const localDir=path.join(evidenceDir,'local')
     const local=await repairLocally(task,{base:localDir,write,attempts,replay,templates})
     if(local.status!=='locally-fixed') return local

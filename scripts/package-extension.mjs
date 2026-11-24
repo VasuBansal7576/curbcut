@@ -75,9 +75,13 @@ function referenced(manifest) {
   ].filter(Boolean)
 }
 
-export async function packageExtension({output}={}) {
+export async function packageExtension(options={}) {
   const built=await command('npm',['run','build'],{timeout:600000})
   assert.equal(built.code,0,built.stderr.slice(-4000))
+  return archiveExtension(options)
+}
+
+export async function archiveExtension({output}={}) {
   const manifest=await readJSON(path.join(source,'manifest.json'))
   const file=output??path.join(ROOT,'dist','curbcut-extension-'+manifest.version+'.zip')
   const names=(await files()).filter(name=>!excluded.test(name))

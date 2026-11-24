@@ -1,0 +1,122 @@
+{
+  "runner": "playwright",
+  "total": 7,
+  "counts": {
+    "inconclusive": 7
+  },
+  "results": [
+    {
+      "id": "v5-b3a020e9a510-2d198473",
+      "persona": "keyboard-only",
+      "url": "https://esim.holafly.com/",
+      "runner": "playwright",
+      "at": "2026-11-24T18:42:31.188Z",
+      "status": "inconclusive",
+      "control": {
+        "runner": "playwright",
+        "status": "inconclusive",
+        "reason": "Journey step 1 did not identify a unique control.",
+        "steps": [
+          {
+            "selector": "#countries-ba4i7pb",
+            "action": "focus"
+          }
+        ],
+        "url": "https://esim.holafly.com/"
+      },
+      "reason": "Pointer control: Journey step 1 did not identify a unique control."
+    },
+    {
+      "id": "v6-21ca92ec4c7518b0f27f",
+      "persona": "low-contrast-simulation",
+      "url": "https://www.lezhin.com/ko",
+      "runner": "playwright",
+      "at": "2026-11-24T18:43:24.387Z",
+      "status": "inconclusive",
+      "control": {
+        "runner": "playwright",
+        "status": "pass",
+        "reason": "Checked the coverage target in the control lane."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "inconclusive",
+        "measurement": null,
+        "reason": "Checked the declared coverage measurement."
+      },
+      "after": null,
+      "afterControl": null,
+      "reason": "Checked the declared coverage measurement."
+    },
+    {
+      "id": "v6-398b1e5100731035adec",
+      "persona": "low-contrast-simulation",
+      "url": "https://www.cnrl.com/",
+      "runner": "playwright",
+      "at": "2026-11-24T18:43:29.088Z",
+      "status": "inconclusive",
+      "control": {
+        "runner": "playwright",
+        "status": "inconclusive",
+        "reason": "Checked the coverage target in the control lane."
+      },
+      "reason": "Pointer control: Checked the coverage target in the control lane."
+    },
+    {
+      "id": "v6-4990d783b2f27c5e55da",
+      "persona": "low-contrast-simulation",
+      "url": "https://www.independent.com/",
+      "runner": "playwright",
+      "at": "2026-11-24T18:43:40.029Z",
+      "status": "inconclusive",
+      "control": {
+        "runner": "playwright",
+        "status": "inconclusive",
+        "reason": "Checked the coverage target in the control lane."
+      },
+      "reason": "Pointer control: Checked the coverage target in the control lane."
+    },
+    {
+      "id": "v6-a4ddc85e350589d755c9",
+      "persona": "low-contrast-simulation",
+      "url": "https://www.wpbeginner.com/",
+      "runner": "playwright",
+      "at": "2026-11-24T18:43:30.915Z",
+      "status": "inconclusive",
+      "control": {
+        "runner": "playwright",
+        "status": "inconclusive",
+        "reason": "Checked the coverage target in the control lane."
+      },
+      "reason": "Pointer control: Checked the coverage target in the control lane."
+    },
+    {
+      "id": "v6-a825c7f76a795943769b",
+      "persona": "low-contrast-simulation",
+      "url": "https://shi998.com/",
+      "runner": "playwright",
+      "at": "2026-11-24T18:43:44.552Z",
+      "status": "inconclusive",
+      "control": {
+        "runner": "playwright",
+        "status": "inconclusive",
+        "reason": "Checked the coverage target in the control lane."
+      },
+      "reason": "Pointer control: Checked the coverage target in the control lane."
+    },
+    {
+      "id": "v6-c97d773758c2c320e6dc",
+      "persona": "low-contrast-simulation",
+      "url": "https://e2n.de/",
+      "runner": "playwright",
+      "at": "2026-11-24T18:43:35.603Z",
+      "status": "inconclusive",
+      "control": {
+        "runner": "playwright",
+        "status": "inconclusive",
+        "reason": "Checked the coverage target in the control lane."
+      },
+      "reason": "Pointer control: Checked the coverage target in the control lane."
+    }
+  ]
+}

@@ -38,7 +38,7 @@ Fix the matching control in source (native button, accessible name, keyboard ope
 
 ## Claude Code Stop hook
 
-In `.claude/settings.json`:
+Copy the [Stop hook example](../examples/claude/settings.json) into your app’s `.claude/settings.json` after installing the CLI:
 
 ```json
 {
@@ -48,7 +48,7 @@ In `.claude/settings.json`:
         "hooks": [
           {
             "type": "command",
-            "command": "node /absolute/path/to/curbcut/curbcut.mjs gate --local --config curbcut.gate.json"
+            "command": "curbcut gate --local --config curbcut.gate.json"
           }
         ]
       }

@@ -4,7 +4,7 @@ Recorded 2026-11-24 against the Stillroom shop fixture on `http://127.0.0.1:4391
 
 Starting Kane balance: **1981.1673**. Floor 1300, spend cap 500. Final balance after these runs: **1604.6401**. Credits used: **376.5272**.
 
-The Claude Code Stop hook used for the gate shots is `.claude/settings.json`. It runs the Kane path:
+The Claude Code Stop hook used for the gate shots ran the Kane path. The [portable Stop hook example](../../examples/claude/settings.json) runs the local path.
 
 ```
 node curbcut.mjs gate --config proof/demo/gate/curbcut.gate.json

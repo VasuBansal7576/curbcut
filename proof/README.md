@@ -64,3 +64,13 @@ The [Kane session ledger](kane/ledger.json) indexes archived sessions across coh
 | Kane archive experiments | Predictor scored 427 sessions. Frame auditor flagged 37 of 49 scored packs | [Predictor](jev/predict-summary.json) · [Frame audit](jev/audit-summary.json) |
 
 [Jev protocol and limitations](jev/README.md)
+
+
+## Recipe, parity, and demo studies
+
+- [Cost replay and live trials](cost/README.md) covers 260 archived tasks, 89 live journey trials, 34 inheritance trials, and two sets of 11 template corrections.
+- [Recipe census](census/README.md) reports pattern shares, uncertainty intervals, and recall on positives-only labels.
+- [Match mouse](mirror-dom/README.md) records the 200-site draw, the 22 eligible hover barriers, and the failed Kane verification.
+- [Jev mirror backtest](jev/mirror-backtest/README.md) records the preregistered bar and the frozen result.
+- [CLI demo runs](demo/README.md) links the original Kane sessions and terminal footage for Check, Gate, and retirement.
+- [Submission recheck](reliability/submission-recheck.json) records the seven targeted local outcomes and preserves the original release audit above.

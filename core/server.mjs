@@ -13,7 +13,7 @@ import {chooseStuck} from './jev-stuck.js'
 import {jevKey} from './jev.mjs'
 import {enqueueInstant,enqueueDraft} from './jev-queue.mjs'
 const types={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.json':'application/json','.mp4':'video/mp4','.md':'text/plain','.txt':'text/plain','.svg':'image/svg+xml','.png':'image/png','.woff2':'font/woff2','.vtt':'text/vtt'}
-const publicRoots=['/site/','/fixtures/shop/','/patches/','/proof/','/evidence/','/launch/curbcut-launch.mp4']
+const publicRoots=['/site/','/fixtures/shop/','/patches/','/proof/','/evidence/','/launch/curbcut-launch.mp4','/docs/gate.md','/docs/pr-bot.md','/examples/claude/settings.json']
 export function serve(port=4317) {
   let running=false
   const server=http.createServer(async(req,res)=>{

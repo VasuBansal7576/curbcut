@@ -1,19 +1,27 @@
-import {execFile} from 'node:child_process'
-import {promisify} from 'node:util'
 import path from 'node:path'
-import {cp, mkdir, writeFile} from 'node:fs/promises'
+import {mkdir, readFile, writeFile} from 'node:fs/promises'
 import {build} from 'esbuild'
 import {focusStory} from './focus-story.mjs'
 import {dotField, mark} from './landing-scenes.mjs'
 import {ROOT, readJSON} from '../core/io.mjs'
 
-const execFileAsync = promisify(execFile)
+import {archiveExtension} from './package-extension.mjs'
+
+async function copyChanged(source, destination) {
+  const bytes = await readFile(source)
+  const current = await readFile(destination).catch(error => {
+    if (error.code !== 'ENOENT') throw error
+    return null
+  })
+  if (!current?.equals(bytes)) await writeFile(destination, bytes)
+}
 const repo = 'https://github.com/VasuBansal7576/curbcut'
 const raw = 'https://raw.githubusercontent.com/VasuBansal7576/curbcut/main/'
 const proof = file => readJSON(path.join(ROOT, 'proof', file + '.json'))
 const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]))
 const link = file => {
-  const encoded = file.split('/').map(encodeURIComponent).join('/')
+  const [pathname, anchor] = file.split('#')
+  const encoded = pathname.split('/').map(encodeURIComponent).join('/') + (anchor ? '#'+encodeURIComponent(anchor) : '')
   if (process.env.CURBCUT_PAGES !== '1') return '../' + encoded
   return (/\.(mp4|evidence)$/.test(file) ? raw : repo + '/blob/main/') + encoded
 }
@@ -117,19 +125,9 @@ export async function buildDashboard({bundled, v5Local, v5Sample, v6Local, v6Kan
   await mkdir(assets,{recursive:true})
   await Promise.all([build({entryPoints:[path.join(ROOT,'scripts/landing-motion.mjs')],bundle:true,minify:true,legalComments:'eof',outfile:path.join(assets,'story.js')}),
     ...[['launch/curbcut-launch-thumbnail.png','curbcut-launch-thumbnail.png'],['launch/captions/launch.vtt','launch.vtt'],
-      ['extension/icons/icon32.png','icon.png']].map(([source,name])=>cp(path.join(ROOT,source),path.join(assets,name)))])
+      ['extension/icons/icon32.png','icon.png']].map(([source,name])=>copyChanged(path.join(ROOT,source),path.join(assets,name)))])
   const download = 'assets/curbcut-extension.zip'
-  await execFileAsync('python3', ['-c', `
-from pathlib import Path
-from sys import argv
-from zipfile import ZipFile, ZIP_DEFLATED
-root = Path(argv[1])
-with ZipFile(argv[2], 'w', ZIP_DEFLATED) as archive:
-    for file in sorted(root.rglob('*')):
-        name = file.relative_to(root)
-        if file.is_file() and all(not part.startswith('.') for part in name.parts):
-            archive.write(file, name)
-`, path.join(ROOT, 'extension'), path.join(assets, 'curbcut-extension.zip')])
+  await archiveExtension({output:path.join(assets,'curbcut-extension.zip')})
   const mass = entries.find(entry=>entry.patch.id===featured[0][1])
   const percent = webAim.homePagesWithDetectedFailuresPercent
   const steps = [
@@ -173,8 +171,8 @@ ${select('barrier','Barrier',entries.map(r=>r.barrier))}${select('persona','Pers
 ${entries.map(ledgerRow).join('\n')}</table><p id="empty" hidden>No matching fixes. <button type="button" id="clear">Clear filters</button></p>
 <div class="pager"><span id="count" role="status" aria-live="polite"></span><div><button id="prev" type="button" aria-label="Previous page">← Previous</button><button id="next" type="button" aria-label="Next page">Next →</button></div></div></div></section>
 <section class="experiment scene" id="jev"><div class="frame jev-grid"><div><p class="kicker"><i class="signal"></i> Experimental · opt-in</p><h2>A name,<br>given live.</h2><p class="intro">Jev proposes names for unlabeled controls as you browse. In a ${jev.summary.attemptedSites}-site run, it named ${jev.summary.appliedNames} of ${jev.summary.unnamedControls} unnamed controls.</p>${proofLink('proof/jev/live-naming-real-sites.json','Read the manual review '+arrow)}</div><div class="jev-proof"><div class="label-sheet"><span class="mono">Jev / live naming</span><strong>${jev.adjudication.correct}/${jev.summary.appliedNames}</strong><span>names judged correct</span></div></div></div></section>
-<section class="scene"><div class="frame"><p class="kicker">Kane for developers</p><h2>Replay the failure.</h2><p class="intro">Kane records the blocked task, checks the pointer control, gives the coding agent the failed run, and repeats the task with the proposed fix.</p><div><pre data-subject>curbcut check &lt;url&gt; "&lt;task&gt;"
-curbcut gate</pre></div></div></section>
+<section class="scene"><div class="frame"><p class="kicker">Kane for developers</p><h2>Replay the failure.</h2><p class="intro">Kane records the blocked task, checks the pointer control, gives the coding agent the failed run, and repeats the task with the proposed fix.</p><div><pre data-subject>curbcut check --local &lt;url&gt; "&lt;task&gt;"
+curbcut gate --local --config curbcut.gate.json</pre><p>Omit <code>--local</code> for Kane. ${proofLink('docs/gate.md#claude-code-stop-hook','Claude Code Stop hook')} · ${proofLink('docs/pr-bot.md','Pull request bot')}</p></div></div></section>
 <section class="ending blue scene" id="download"><div class="frame end-grid"><div><p class="kicker"><i class="signal"></i> Curb Cut for Chrome</p><h2>Take it<br>with you.</h2><ol><li>Download and unzip the extension.</li><li>Open chrome://extensions and enable Developer mode.</li><li>Choose Load unpacked and select the extracted extension folder.</li></ol><div class="end-actions"><a class="primary" data-subject href="${download}">Download extension ↗</a><a href="${repo}">GitHub ↗</a></div></div><figure class="film"><video id="film" controls playsinline preload="none" poster="assets/focus-film.jpg" src="${process.env.CURBCUT_PAGES==='1'?raw+'launch/curbcut-launch.mp4':link('launch/curbcut-launch.mp4')}" aria-label="Curb Cut launch film"><track kind="captions" src="assets/launch.vtt" srclang="en" label="English"></video>
 <figcaption><button type="button" id="start-film" hidden>▶ Watch the film</button><span>English captions · CC</span></figcaption></figure></div></section>
 </main><footer><div class="frame"><a href="#opening" class="wordmark">${mark}Curb Cut</a><div><h2>Verify locally</h2><code>npm test &amp;&amp; npm run build</code><br><code>node scripts/verify-evidence.mjs</code></div><nav aria-label="Documentation"><a href="${repo}/blob/main/README.md">README ↗</a> ${proofLink('proof/README.md','Proof index '+arrow)}</nav></div></footer>

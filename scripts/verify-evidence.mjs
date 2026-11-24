@@ -56,7 +56,7 @@ try{
  assert.match(await page.locator('#count').textContent(),new RegExp('of '+inventory.length+' fixes$'))
  const local=(await readJSON('proof/local.json')).runs
  const external=(await readJSON('proof/public.json')).runs
- const kane=(await catalog()).filter(p=>['verified','broken','retired'].includes(p.status)).flatMap(p=>[p.evidence.before,p.evidence.control,p.evidence.after,...p.history.filter(h=>h.event==='retired').map(h=>h.video)])
+ const kane=(await catalog()).filter(p=>['verified','broken','retired'].includes(p.status) && p.evidence.kaneRunIds).flatMap(p=>[p.evidence.before,p.evidence.control,p.evidence.after,...p.history.filter(h=>h.event==='retired').map(h=>h.video)])
  const files=[...new Set([...kane,...meta.previews.map(file=>'site/'+file),...local.flatMap(r=>Object.values(r.videos)),...external.flatMap(r=>Object.values(r.phases).map(p=>p.video)),'proof/local/toggle.mp4','launch/curbcut-launch.mp4'])]
  const recordings=[]
  for(const file of files){

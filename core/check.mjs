@@ -210,7 +210,7 @@ export async function checkPage({url,task,persona='keyboard-only',local=false,dr
   const derived=await deriveTask({url,task,persona})
   const plan=estimateKanePlan(derived,{attempts:3,repair:true})
   if(dryRun) return {ok:true,dryRun:true,task:derived,kane:{local,runs:local?0:plan.runs,estimatedCredits:local?0:plan.estimatedCredits,phases:local?[]:plan.phases},text:formatDryRun(derived,local,plan)}
-  const dir=base??path.join(ROOT,'.curbcut','check',derived.id,instant().replaceAll(':','-'))
+  const dir=base??path.join(ROOT,...(local?['.curbcut','check']:['proof','kane']),derived.id,instant().replaceAll(':','-'))
   await mkdir(dir,{recursive:true})
   await saveJSON(path.join(dir,'task.json'),derived)
   const result=local?await repairLocally(derived,{base:dir,attempts:3,...(write?{write}:{})}):

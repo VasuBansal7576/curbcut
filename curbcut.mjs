@@ -34,14 +34,13 @@ const {action,rest,flags}=parseArgv(process.argv.slice(2))
 async function main() {
   if(action==='census' && rest[0]) {
     const limit=flags.limit===undefined?undefined:Number(flags.limit)
-    if(Object.hasOwn(flags,'limit') && !Number.isInteger(Number(flags.limit))) throw new Error('census --limit needs an integer')
+    if(Object.hasOwn(flags,'limit') && (!Number.isInteger(limit) || limit<0)) throw new Error('census --limit needs a non-negative integer')
     const result=await runCensus(rest[0],{limit})
     console.log(JSON.stringify({observed:result.observed,blocked:result.blocked,failed:result.failed,
       tokens:result.tokens,branch:result.branch,commit:result.commit,
       recipes:result.recipes.map(recipe=>({id:recipe.id,share:recipe.jev.share,low:recipe.jev.low,high:recipe.jev.high,
         labelled:recipe.labelled.n}))},null,2))
-  }
-  else if(action==='cost') console.log(JSON.stringify(await summarizeCost(),null,2))
+  } else if(action==='cost') console.log(JSON.stringify(await summarizeCost(),null,2))
   else if(action==='serve') {await serve();console.log('Curb Cut · http://127.0.0.1:4317/site/')}
   else if(action==='verify-queue') console.log(JSON.stringify(await verifyQueue(),null,2))
   else if(action==='report' && rest[0]) {

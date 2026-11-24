@@ -79,9 +79,10 @@ export async function runGate({config,local=false,dryRun=false,url}={}) {
       const meta={...row,id:task.id,observedSelector:task.observedSelector,requiredName:task.requiredName??null}
       if(!local) {
         const directory=path.join(dir,task.id+'-'+row.persona)
-        const measured=await botPreflight(task,directory)??await runKane(task,row.persona,null,directory)
+        const preflight=await botPreflight(task,directory)
+        const measured=preflight??await runKane(task,row.persona,null,directory)
         findings.push(annotate({...meta,status:gateStatus(measured.status),reason:measured.reason??measured.integrity??measured.status,
-          control:null,dom:compactDOM(measured.snapshot,task.observedSelector),recording:measured.video??null,runner:measured.runner??'kane'}))
+          control:null,dom:compactDOM(measured.snapshot,task.observedSelector),recording:measured.video??null,runner:preflight?'jev':'kane'}))
         continue
       }
       const measured=await confirmBarrier(task)

@@ -10,11 +10,11 @@ import {buildDashboard} from './dashboard.mjs'
 import {publicMetrics} from './public-metrics.mjs'
 const read=async(file,fallback)=>{try{return await readJSON(path.join(ROOT,file))}catch(e){if(e.code==='ENOENT')return fallback;throw e}}
 const patchList=await catalog()
-const recorded=patchList.filter(p=>['verified','broken','retired'].includes(p.status))
+const recorded=patchList.filter(p=>['verified','broken','retired'].includes(p.status) && p.evidence.kaneRunIds)
 const active=recorded.filter(p=>p.status==='verified')
 const locallyVerified=patchList.filter(p=>p.status==='locally-verified')
 const bundled=[...active,...locallyVerified]
-const retired=recorded.filter(p=>p.status==='retired')
+const retired=patchList.filter(p=>p.status==='retired')
 const shipped=[...bundled,...retired]
 const isFixture=patch=>fixtureURL(new URL(patch.url??patch.match))
 const fixtureRepairs=recorded.filter(isFixture)
@@ -135,7 +135,7 @@ for(const patch of recorded) {
       cohort && provenance.registrationBlob===cohort.registered.blob && cohort.results.some(row=>
         row.task.id===patch.id && row.status==='locally-fixed' && row.phases.some(phase=>phase.name==='before' && phase.file===sourceLocalRun)))
     const kaneSource=!sourceLocalRun && source?.status===(patch.evidence.localOracle?patch.evidence.kaneVerdicts?.before:'fail')
-    if(agentProvenance?.writer!=='codex exec' || (!localSource && !kaneSource) ||
+    if(!['codex exec','grok'].includes(agentProvenance?.writer) || (!localSource && !kaneSource) ||
       !isDeepStrictEqual((await read(candidate,null))?.rules,patch.rules) ||
       !isDeepStrictEqual(agentPatch?.rules,patch.rules)) throw new Error('Unconfirmed agent proposal for '+patch.id)
     proposal='[Runtime repair proposal]('+videoLink(agentCandidate)+') · [Repair provenance]('+videoLink(provenancePath)+') · '+
