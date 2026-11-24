@@ -1,12 +1,10 @@
 # DOM parity trial
 
-The registered draw requested 30 distinct unpatched sites. It found zero eligible sites in the hard-v4 and heldout-v5 scouting ledgers. The ledgers had 39 and 44 class-1 cases respectively with a passing pointer control and a failing keyboard run. Every one was on a registrable domain in the merged extension bundle. A supplemental check of the aborted v5 ledger found five more confirmed cases, all on bundled domains.
-
-The draw was committed as `4977467` before browser checks. The seed ranks sites by SHA-256. The filters require a public HTTPS URL, a recorded trigger selector and a safe task. Bundled domains include both bare and www hosts. [Draw](draw.json)
+The initial draw at `4977467` passed hostnames to a helper that expects URLs. The resulting zero count was invalid. Correcting the call produced 81 eligible historical domains and a separate 200-site fresh draw at `d764df9`. The historical draw was never run. [Corrected historical draw](draw.json) · [Fresh draw](fresh-draw.json)
 
 | Measure | Result |
 | --- | --- |
-| Public trial cases run | 0 of 30 requested |
+| Public trial cases run | 0 historical cases |
 | Matching rule, no match, wrong match | Unmeasured |
 | Pointer regressions and time to fix | Unmeasured |
 | Independent local-oracle replays | 0 |
