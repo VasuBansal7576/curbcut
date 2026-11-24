@@ -150,11 +150,11 @@ test('installed popup copies and downloads the CLI report without submitting it'
     const popup=await context.newPage()
     await popup.goto(new URL('popup.html',worker.url()).href)
     const panel=popup.locator('[data-patch-id="'+id+'"]')
-    await panel.getByText('Send fix to site owner').click()
-    await panel.getByRole('button',{name:'Copy Markdown'}).click()
-    await panel.getByText('Copied.',{exact:true}).waitFor()
+    await panel.getByText('Kane verified',{exact:true}).waitFor()
+    await panel.getByRole('link',{name:'Before recording'}).waitFor()
+    await panel.getByRole('link',{name:'After recording'}).waitFor()
     const [download]=await Promise.all([popup.waitForEvent('download'),
-      panel.getByRole('button',{name:'Download .md'}).click()])
+      panel.getByRole('button',{name:'Export report'}).click()])
     assert.equal(download.suggestedFilename(),id+'.md')
     assert.equal(await readFile(await download.path(),'utf8'),createReport(patch))
   } finally {

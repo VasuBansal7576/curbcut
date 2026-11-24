@@ -36,8 +36,21 @@
   ]);
   root.LOCAL_FEED_URL = "http://127.0.0.1:4317/patches/index.json";
   root.TASKS_URL = "http://127.0.0.1:4317/tasks";
+  root.TASKS_DRAFT_URL = "http://127.0.0.1:4317/tasks/draft";
   root.PROOF_URL = "https://vasubansal7576.github.io/curbcut/#evidence";
   root.EVIDENCE_BASE = "https://github.com/VasuBansal7576/curbcut/raw/main/";
+  root.CONTENT_SCRIPTS = Object.freeze([
+    "runtime.js",
+    "lib/constants.js",
+    "lib/match.js",
+    "lib/validate.js",
+    "lib/select.js",
+    "lib/sensitive.js",
+    "content.js",
+    "instant-content.js",
+    "naming-content.js",
+    "stuck-content.js",
+  ]);
   root.FIXTURE_ORIGIN = "http://127.0.0.1:4317";
   root.FIXTURE_PREFIX = "/fixtures/shop/";
   root.FEED_ALARM = "curbcut-feed-refresh";
@@ -49,10 +62,13 @@
     instantEnabled: false,
     fixturePreview: false,
     feedUrl: "",
+    evidenceBase: "",
     patches: [],
     demoPatches: [],
     lastFeedAt: null,
     feedError: null,
     pendingStuck: false,
+    pendingBarrier: null,
+    pendingBarrierError: null,
   });
 })();

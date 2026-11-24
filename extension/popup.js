@@ -20,6 +20,11 @@ import { createReport } from './lib/report.js';
     activeEmpty: document.getElementById("active-empty"),
     liveNames: document.getElementById("live-names-status"),
     activeCount: document.getElementById("active-count"),
+    siteFixed: document.getElementById("site-fixed"),
+    retiredList: document.getElementById("retired-patches"),
+    barrierPreview: document.getElementById("barrier-preview"),
+    barrierFields: document.getElementById("barrier-fields"),
+    barrierBlocked: document.getElementById("barrier-blocked"),
     persona: document.getElementById("persona-select"),
     taskInput: document.getElementById("task-input"),
     taskConfirm: document.getElementById("task-confirm"),
@@ -43,7 +48,10 @@ import { createReport } from './lib/report.js';
     sensitive: false,
     available: false,
     snapshot: null,
+    instantPatch: null,
+    retired: [],
   };
+  let barrierReport = null;
 
   function setTaskStatus(text, kind) {
     els.taskStatus.textContent = text || "";
@@ -87,6 +95,31 @@ import { createReport } from './lib/report.js';
     return anchor;
   }
 
+  function evidenceUrl(path) {
+    return Ext.evidenceHref(path, state.evidenceBase || Ext.EVIDENCE_BASE);
+  }
+
+  function proofKind(patch) {
+    if (patch.unverified) return { cls: "unverified", label: "Unverified" };
+    if (patch.status === "locally-verified") return { cls: "local", label: "Local proof" };
+    return { cls: "verified", label: "Kane verified" };
+  }
+
+  function exportReport(patch, status) {
+    try {
+      const file = new Blob([createReport(patch)], { type: "text/markdown;charset=utf-8" });
+      const url = URL.createObjectURL(file);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = patch.id + ".md";
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      status.textContent = "Report downloaded.";
+    } catch {
+      status.textContent = "Could not export the report.";
+    }
+  }
+
   function renderActive(active, emptyMessage) {
     els.activeList.replaceChildren();
     const items = Array.isArray(active) ? active : [];
@@ -99,6 +132,8 @@ import { createReport } from './lib/report.js';
       const li = document.createElement("li");
       li.className = "patch-item";
       li.dataset.patchId = patch.id;
+      const kind = proofKind(patch);
+      li.setAttribute("aria-label", `${patch.barrier}. ${kind.label}. ${personaLabels[patch.persona] || patch.persona}`);
 
       const top = document.createElement("div");
       top.className = "patch-item-top";
@@ -107,76 +142,105 @@ import { createReport } from './lib/report.js';
       persona.textContent = personaLabels[patch.persona] || patch.persona;
 
       const badge = document.createElement("span");
-      const local = patch.status === "locally-verified";
-      badge.className = "badge " + (patch.unverified ? "unverified" : local ? "local" : "verified");
-      badge.textContent = patch.unverified ? "Unverified" : local ? "Local proof" : "Kane verified";
+      badge.className = "badge " + kind.cls;
+      badge.textContent = kind.label;
 
       const name = document.createElement("p");
       name.className = "patch-name";
+      name.id = "patch-name-" + patch.id;
       name.textContent = patch.barrier;
 
       top.append(badge, persona);
       li.append(top, name);
 
-      const before = Ext.evidenceHref(patch.evidence?.before);
-      const after = Ext.evidenceHref(patch.evidence?.after);
-      const measurement = Ext.evidenceHref(patch.evidence?.localMeasurement);
-      if (local && measurement) {
+      const before = evidenceUrl(patch.evidence?.before);
+      const after = evidenceUrl(patch.evidence?.after);
+      const measurement = evidenceUrl(patch.evidence?.localMeasurement);
+      if (kind.cls === "local" && measurement) {
         const link = proofLink(measurement, "View measurements");
         link.className = "measurement";
         li.append(link);
-      } else if (before || after) {
-        const proof = document.createElement("details");
-        const title = document.createElement("summary");
-        title.textContent = "Watch proof";
+      } else if (kind.cls === "verified" && (before || after)) {
         const links = document.createElement("div");
         links.className = "evidence-links";
+        links.setAttribute("aria-label", "Proof recordings");
         if (before) links.append(proofLink(before, "Before recording"));
         if (after) links.append(proofLink(after, "After recording"));
-        proof.append(title, links);
-        li.append(proof);
+        li.append(links);
       }
 
-      if (!patch.unverified && patch.matchedRules?.length && patch.selectorMatches?.every(({ count }) => count > 0)) {
-        const report = document.createElement("details");
-        const title = document.createElement("summary");
-        title.textContent = "Send fix to site owner";
-        const copy = document.createElement("button");
-        copy.type = "button";
-        copy.className = "ghost";
-        copy.textContent = "Copy Markdown";
-        const status = document.createElement("span");
-        status.className = "status";
-        status.setAttribute("role", "status");
+      if (!patch.unverified && ["verified", "locally-verified"].includes(patch.status)) {
+        const actions = document.createElement("div");
+        actions.className = "report-actions";
         const download = document.createElement("button");
         download.type = "button";
         download.className = "ghost";
-        download.textContent = "Download .md";
-        copy.addEventListener("click", async () => {
-          try {
-            await navigator.clipboard.writeText(createReport(patch));
-            status.textContent = "Copied.";
-          } catch {
-            status.textContent = "Copy failed. Download the report instead.";
-          }
-        });
-        download.addEventListener("click", () => {
-          const file = new Blob([createReport(patch)], { type: "text/markdown;charset=utf-8" });
-          const url = URL.createObjectURL(file);
-          const link = document.createElement("a");
-          link.href = url;
-          link.download = patch.id + ".md";
-          link.click();
-          setTimeout(() => URL.revokeObjectURL(url), 1000);
-        });
-        const controls = document.createElement("div");
-        controls.className = "report-actions";
-        controls.append(copy, download, status);
-        report.append(title, controls);
-        li.append(report);
+        download.textContent = "Export report";
+        download.setAttribute("aria-describedby", name.id);
+        const status = document.createElement("span");
+        status.className = "status";
+        status.setAttribute("role", "status");
+        download.addEventListener("click", () => exportReport(patch, status));
+        actions.append(download, status);
+        li.append(actions);
       }
       els.activeList.append(li);
     }
+  }
+
+  function renderRetired(retired) {
+    const items = Array.isArray(retired) ? retired : [];
+    els.retiredList.replaceChildren();
+    els.siteFixed.hidden = items.length === 0;
+    els.retiredList.hidden = items.length === 0;
+    if (!items.length) {
+      els.siteFixed.textContent = "";
+      return;
+    }
+    const noun = items.length === 1 ? "barrier" : "barriers";
+    els.siteFixed.textContent = `This site now works without Curb Cut’s patch. The original ${noun} ${items.length === 1 ? "was" : "were"} fixed on the site.`;
+    for (const patch of items) {
+      const li = document.createElement("li");
+      li.className = "patch-item";
+      li.dataset.patchId = patch.id;
+      const badge = document.createElement("span");
+      badge.className = "badge retired";
+      badge.textContent = "Site fixed";
+      const name = document.createElement("p");
+      name.className = "patch-name";
+      name.textContent = patch.barrier;
+      li.append(badge, name);
+      els.retiredList.append(li);
+    }
+  }
+
+  function fieldRow(term, value) {
+    const dt = document.createElement("dt");
+    dt.textContent = term;
+    const dd = document.createElement("dd");
+    dd.textContent = value || "None";
+    return [dt, dd];
+  }
+
+  function renderBarrierPreview() {
+    const blocked = state.pendingBarrierError && !barrierReport;
+    els.barrierBlocked.hidden = !blocked;
+    els.barrierBlocked.textContent = blocked
+      ? (state.pendingBarrierError === "sensitive-url" || state.pendingBarrierError === "sensitive-document"
+        ? "This page looks authenticated or sensitive. Capture blocked."
+        : "Could not capture a barrier report on this page.")
+      : "";
+    els.barrierPreview.hidden = !barrierReport;
+    els.barrierFields.replaceChildren();
+    if (!barrierReport) return;
+    const focus = barrierReport.focus;
+    const keys = Array.isArray(barrierReport.keys) ? barrierReport.keys.map((step) => step.key).join(", ") : "";
+    els.barrierFields.append(
+      ...fieldRow("Address", barrierReport.url),
+      ...fieldRow("Page title", barrierReport.title),
+      ...fieldRow("Focused control", focus ? [focus.role, focus.name, focus.selector].filter(Boolean).join(" · ") : "None"),
+      ...fieldRow("Recent navigation keys", keys),
+    );
   }
 
   function renderState() {
@@ -200,13 +264,25 @@ import { createReport } from './lib/report.js';
       : `${count} verified cached · last refresh ${stamp}`;
     els.pageUrl.textContent = pageKey ? pageKey.replace(/^https?:\/\//, "") : "No web page selected";
     els.proofLink.href = Ext.PROOF_URL;
-    const active = state.enabled && !pagePaused ? page.active : [];
+    const active = state.enabled && !pagePaused ? [...page.active] : [];
+    if (state.enabled && !pagePaused && page.instantPatch) active.push({ ...page.instantPatch, unverified: true });
+    if (state.enabled && !pagePaused) {
+      for (const named of page.liveNames || []) {
+        active.push({
+          id: "jev-" + named.name,
+          barrier: "Named “" + named.name + "” with Jev",
+          persona: "screen-reader-view",
+          unverified: true,
+        });
+      }
+    }
     const emptyMessage = !state.enabled ? "Fixes are paused on all pages." :
       pagePaused ? "Fixes are paused for this page." :
         page.available ? "No known fix for this page." : "Fixes aren’t available on this tab.";
     renderActive(active, emptyMessage);
+    renderRetired(page.retired);
     const names = page.liveNames || [];
-    els.liveNames.hidden = !state.enabled || pagePaused || !names.length;
+    els.liveNames.hidden = true;
     els.liveNames.textContent = names.length ? `${names.length} named by Jev · unverified` : "";
     els.instantPanel.hidden = state.instantEnabled !== true || !state.enabled || pagePaused ||
       !page.available || page.sensitive || page.isFixture || active.length > 0 || !pageKey?.startsWith("https://");
@@ -222,6 +298,8 @@ import { createReport } from './lib/report.js';
       ? result.active.filter(patch => patch.matchedRules?.length || patch.unverified)
       : [];
     page.sensitive = Boolean(result?.sensitive);
+    page.instantPatch = result?.instantPatch || null;
+    page.retired = Ext.selectRetiredPatches(page.url, state);
     page.liveNames = result?.ok ? (await chrome.runtime.sendMessage({ type: "GET_LIVE_NAMES", capturedTabId }))?.names : [];
   }
 
@@ -232,23 +310,19 @@ import { createReport } from './lib/report.js';
     await refreshPageContext();
     if (state.pendingStuck) {
       els.stuck.open = true;
-      setTaskStatus("Hotkey capture ready. Confirm and send your task.", "is-ok");
+      barrierReport = state.pendingBarrier;
+      if (barrierReport) setTaskStatus("Hotkey capture ready. Review what will be sent, then save the draft.", "is-ok");
+      else setTaskStatus(state.pendingBarrierError === "sensitive-url" || state.pendingBarrierError === "sensitive-document"
+        ? "This page looks authenticated or sensitive. Capture blocked."
+        : "Hotkey capture ready. Confirm and save your report.", state.pendingBarrierError ? "is-error" : "is-ok");
+      renderBarrierPreview();
       await chrome.runtime.sendMessage({ type: "CLEAR_PENDING_STUCK" });
       state.pendingStuck = false;
+      state.pendingBarrier = null;
+      state.pendingBarrierError = null;
     } else renderReport(state.report);
     els.globalToggle.disabled = false;
     renderState();
-  }
-
-  async function ensureSnapshot() {
-    if (page.snapshot) return {ok: true, snapshot: page.snapshot, url: page.url};
-    const result = await chrome.runtime.sendMessage({ type: "CAPTURE_SNAPSHOT", capturedTabId });
-    if (!result || !result.ok) {
-      return { ok: false, reason: (result && result.reason) || "capture-failed" };
-    }
-    page.snapshot = result.snapshot;
-    page.url = result.url || page.url;
-    return { ok: true, snapshot: result.snapshot, url: result.url };
   }
 
   async function submit(mode) {
@@ -268,25 +342,31 @@ import { createReport } from './lib/report.js';
       setTaskStatus("This page looks authenticated or sensitive. Capture blocked.", "is-error");
       return;
     }
-    const captured = await ensureSnapshot();
-    if (!captured.ok) {
-      const messages = {
-        "sensitive-url": "URL looks sensitive. Capture blocked.",
-        "sensitive-document": "Page has password or auth fields. Capture blocked.",
-        "runtime-missing": "Patch runtime is not available on this page.",
-        "no-content-script": "Open a normal http(s) page and try again.",
-      };
-      setTaskStatus(messages[captured.reason] || "Could not capture snapshot.", "is-error");
-      return;
+    if (!barrierReport) {
+      const captured = await chrome.runtime.sendMessage({ type: "CAPTURE_BARRIER", capturedTabId });
+      if (!captured?.ok) {
+        const messages = {
+          "sensitive-url": "URL looks sensitive. Capture blocked.",
+          "sensitive-document": "Page has password or auth fields. Capture blocked.",
+          "runtime-missing": "Patch runtime is not available on this page.",
+          "no-content-script": "Open a normal http(s) page and try again.",
+        };
+        setTaskStatus(messages[captured?.reason] || "Could not capture a barrier report.", "is-error");
+        return;
+      }
+      barrierReport = captured.report;
+      renderBarrierPreview();
     }
     const payload = {
-      url: captured.url || page.url,
+      url: barrierReport.url || page.url,
+      title: barrierReport.title || "",
       persona: els.persona.value,
       task,
-      snapshot: captured.snapshot,
+      focus: barrierReport.focus,
+      keys: barrierReport.keys,
     };
     const response = await chrome.runtime.sendMessage({
-      type: "SUBMIT_TASK",
+      type: "SUBMIT_BARRIER",
       mode,
       confirmed: true,
       payload,
@@ -295,15 +375,15 @@ import { createReport } from './lib/report.js';
       setTaskStatus("Send failed.", "is-error");
       return;
     }
-    if (response.fallback === "download") {
-      setTaskStatus("Local loop unreachable. Task downloaded instead.", "is-ok");
-      return;
-    }
     if (mode === "download") {
-      setTaskStatus(`Downloaded ${response.filename || "task file"}.`, "is-ok");
+      setTaskStatus(`Downloaded ${response.filename || "report file"}.`, "is-ok");
       return;
     }
-    setTaskStatus("Task sent to local loop.", "is-ok");
+    if (response.queued === "storage") {
+      setTaskStatus("Local queue unreachable. Draft saved in the extension and will retry.", "is-ok");
+      return;
+    }
+    setTaskStatus("Draft saved to the local verification queue.", "is-ok");
   }
 
   let changingFixes = false;

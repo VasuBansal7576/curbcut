@@ -31,6 +31,8 @@
         </div>
         <span id="active-count" class="count" role="status" aria-label="Loading fixes">—</span>
       </div>
+      <p id="site-fixed" class="site-fixed" role="status" hidden></p>
+      <ul id="retired-patches" class="patch-list" hidden></ul>
       <p id="live-names-status" class="status" role="status" hidden></p>
       <ul id="active-patches" class="patch-list"></ul>
       <p id="active-empty" class="empty" hidden></p>
@@ -44,7 +46,12 @@
       <details id="stuck" class="disclosure">
         <summary><span>I’m stuck</span><kbd class="hotkey" aria-hidden="true">Ctrl+Shift+U</kbd></summary>
         <div class="detail-body">
-          <p class="hint">Report a barrier on a public page. Curb Cut captures a page snapshot without a screenshot.</p>
+          <p class="hint">Report a barrier on a public page. Curb Cut captures the address, title, focused control and recent navigation keys. No screenshot is taken.</p>
+          <div id="barrier-preview" class="barrier-preview" hidden>
+            <h3 id="barrier-preview-heading">What will be sent</h3>
+            <dl id="barrier-fields"></dl>
+          </div>
+          <p id="barrier-blocked" class="status is-error" role="status" hidden></p>
           <label class="field" for="persona-select">
             <span>How were you using the page?</span>
             <select id="persona-select">
@@ -60,11 +67,11 @@
           </label>
           <label class="confirm" for="task-confirm">
             <input id="task-confirm" type="checkbox">
-            <span>I confirm this is a public page and the task may be sent for patching.</span>
+            <span>I confirm this is a public page and this report may be saved as a local draft.</span>
           </label>
           <div class="actions">
-            <button id="send-task" type="button" class="primary">Send to local loop</button>
-            <button id="download-task" type="button">Download task</button>
+            <button id="send-task" type="button" class="primary">Save draft report</button>
+            <button id="download-task" type="button">Download report</button>
           </div>
         </div>
       </details>

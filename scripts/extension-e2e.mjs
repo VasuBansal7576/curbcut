@@ -26,7 +26,8 @@ const bundled=JSON.parse(bundleBytes)
 const output=path.join(ROOT,'proof/reliability/extension-e2e.json')
 const v6Only=process.argv[2]==='--v6'
 const requested=new Set(v6Only?process.argv.slice(3):process.argv.slice(2))
-const patches=requested.size?bundled.filter(patch=>requested.has(patch.id)):v6Only?bundled.filter(patch=>patch.evaluation):bundled
+const catalog=bundled.filter(patch=>['verified','locally-verified'].includes(patch.status))
+const patches=requested.size?bundled.filter(patch=>requested.has(patch.id)):v6Only?catalog.filter(patch=>patch.evaluation):catalog
 if(!patches.length || requested.size && patches.length!==requested.size) throw new Error('A requested audit patch is absent from the bundle.')
 const sample=await readJSON(path.join(ROOT,'proof/heldout-v5/kane-sample-20/summary.json')).catch(error=>{
   if(error.code==='ENOENT') return null

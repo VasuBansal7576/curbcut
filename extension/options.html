@@ -45,9 +45,21 @@
       <p class="hint">TypeSafe receives recent navigation keys, timing and anonymous focus signals. Typed text, page text, URLs and screenshots stay out of this check. Curb Cut asks before applying a fix.</p>
       <p id="stuck-detection-status" class="status" role="status"></p>
     </section>
+    <section class="options-section" aria-labelledby="evidence-heading">
+      <h2 id="evidence-heading">Proof recordings</h2>
+      <p class="hint">Kane-verified fixes in the popup link to before and after recordings. Leave this blank to use the GitHub archive, or set a base URL for hosted evidence files.</p>
+      <form id="evidence-form">
+        <label class="field" for="evidence-base">
+          <span>Evidence base URL</span>
+          <input id="evidence-base" type="url" placeholder="https://github.com/VasuBansal7576/curbcut/raw/main/">
+        </label>
+        <button type="submit" class="primary">Save evidence URL</button>
+      </form>
+      <p id="evidence-status" class="status" role="status"></p>
+    </section>
     <section class="options-section" aria-labelledby="connection-heading">
       <h2 id="connection-heading">TypeSafe connection</h2>
-      <p class="hint">With a personal key, the extension sends requests directly to TypeSafe. With an empty key, it sends the capture and candidate selectors to the local Curb Cut server at 127.0.0.1:4317. Both routes keep the candidate selectors out of the TypeSafe request.</p>
+      <p class="hint">Bundled repairs work with no key. TypeSafe features stay off until you turn them on. With a personal key, the extension sends requests directly to TypeSafe. With an empty key, those opt-in features use the local Curb Cut server at 127.0.0.1:4317.</p>
       <form id="jev-form">
         <label class="field" for="jev-key">
           <span>TypeSafe API key</span>

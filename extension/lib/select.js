@@ -48,10 +48,18 @@
     });
   }
 
-  function evidenceHref(path) {
+  function selectRetiredPatches(url, state) {
+    if (!state || !url) return [];
+    return root
+      .sanitizePatchArray(state.patches, { statuses: ["retired"] })
+      .filter((patch) => root.matchPatch(patch, url));
+  }
+
+  function evidenceHref(path, base) {
     if (!path || typeof path !== "string") return null;
+    const origin = typeof base === "string" && base.trim() ? base.trim() : root.EVIDENCE_BASE;
     try {
-      const link = new URL(path, root.EVIDENCE_BASE);
+      const link = new URL(path, origin.endsWith("/") ? origin : origin + "/");
       return ["https:", "http:"].includes(link.protocol) ? link.href : null;
     } catch { return null; }
   }
@@ -59,5 +67,6 @@
   root.pageKey = pageKey;
   root.isPagePaused = isPagePaused;
   root.selectActivePatches = selectActivePatches;
+  root.selectRetiredPatches = selectRetiredPatches;
   root.evidenceHref = evidenceHref;
 })();

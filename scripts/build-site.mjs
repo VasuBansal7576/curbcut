@@ -14,6 +14,8 @@ const recorded=patchList.filter(p=>['verified','broken','retired'].includes(p.st
 const active=recorded.filter(p=>p.status==='verified')
 const locallyVerified=patchList.filter(p=>p.status==='locally-verified')
 const bundled=[...active,...locallyVerified]
+const retired=recorded.filter(p=>p.status==='retired')
+const shipped=[...bundled,...retired]
 const isFixture=patch=>fixtureURL(new URL(patch.url??patch.match))
 const fixtureRepairs=recorded.filter(isFixture)
 const publicRepairs=recorded.filter(patch=>!isFixture(patch))
@@ -128,8 +130,8 @@ for(const patch of recorded) {
   const report=['# '+patch.site,patch.task,'**Persona** '+patch.persona,'**Observed barrier** '+patch.barrier,'**Patch status** '+patch.status,'## Recorded runs',...phases,...rechecks,...localRetirements,proposal,'## Source repair and relevant WCAG criteria','A passing task captures one interaction under the recorded conditions.',...recommendations.map(r=>'- '+r),'Verified '+patch.evidence.verifiedAt].join('\n\n')
   await mkdir(folder,{recursive:true});await writeFile(path.join(folder,'report.md'),report+'\n')
 }
-await saveJSON(path.join(ROOT,'patches/index.json'),bundled)
-await saveJSON(path.join(ROOT,'extension/bundled.json'),bundled)
+await saveJSON(path.join(ROOT,'patches/index.json'),shipped)
+await saveJSON(path.join(ROOT,'extension/bundled.json'),shipped)
 const md=value=>String(value??'').replaceAll('|','\\|').replace(/\s+/g,' ').trim()
 const runReference=(id,video)=>id?'['+id+'](../../'+path.dirname(video)+'/result.json)':'—'
 const runRow=patch=>{

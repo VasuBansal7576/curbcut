@@ -32,6 +32,25 @@ export async function enqueueInstant({patch,confidence,model}) {
   } finally {await rm(temporary,{force:true})}
 }
 
+export async function enqueueDraft(report) {
+  if(!report || typeof report!=='object' || typeof report.url!=='string' || typeof report.title!=='string') {
+    throw new Error('Invalid barrier report.')
+  }
+  const page=new URL(report.url)
+  if(!['http:','https:'].includes(page.protocol)) throw new Error('Invalid barrier report.')
+  const persona=typeof report.persona==='string'?report.persona:'keyboard-only'
+  const taskText=typeof report.task==='string'?report.task.trim():''
+  const id='draft-'+randomUUID()
+  const file=path.join(queue,id+'.json')
+  await saveJSON(file,{
+    status:'draft',
+    queuedAt:instant(),
+    task:{id,url:report.url,persona,task:taskText||report.title},
+    report
+  })
+  return {id,status:'draft'}
+}
+
 export function verifyQueue() {
   return withLock(async()=>{
     const names=await readdir(queue).catch(error=>{

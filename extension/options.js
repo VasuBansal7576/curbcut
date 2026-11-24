@@ -55,3 +55,20 @@ function bindSwitch(id, key, label) {
 }
 bindSwitch("live-names", "liveNamesEnabled", "Live naming");
 bindSwitch("stuck-detection", "stuckEnabled", "Keyboard help");
+
+const evidenceForm = document.querySelector("#evidence-form");
+const evidenceInput = document.querySelector("#evidence-base");
+const evidenceStatus = document.querySelector("#evidence-status");
+chrome.storage.local.get("evidenceBase").then(settings => {
+  evidenceInput.value = settings.evidenceBase || "";
+}).catch(() => { evidenceStatus.textContent = "Could not load the evidence URL."; });
+evidenceForm.addEventListener("submit", async event => {
+  event.preventDefault();
+  const evidenceBase = evidenceInput.value.trim();
+  try {
+    const response = await chrome.runtime.sendMessage({ type: "SET_EVIDENCE_BASE", evidenceBase });
+    evidenceStatus.textContent = response?.ok ? (evidenceBase ? "Evidence URL saved." : "Using the GitHub evidence archive.") : "Evidence URL rejected.";
+  } catch {
+    evidenceStatus.textContent = "Could not save the evidence URL.";
+  }
+});

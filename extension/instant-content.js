@@ -1,4 +1,6 @@
 (() => {
+  if (globalThis.__curbcutInstant) return;
+  globalThis.__curbcutInstant = true;
   const local = chrome.storage.local;
   const settingKeys = ["instantEnabled", "enabled", "pausedPages"];
   let settings = {};
@@ -70,6 +72,7 @@
     const restoreFocus = document.activeElement === badge ? applied.returnFocus : null;
     applied.cleanup();
     applied = null;
+    globalThis.__curbcutInstantPatch = null;
     show("Instant fix undone.");
     restoreFocus?.focus({ preventScroll: true });
     return true;
@@ -156,7 +159,13 @@
           return false;
         }
         applied?.cleanup();
-        applied = { url: location.href, cleanup };
+        applied = { url: location.href, cleanup, patch };
+        globalThis.__curbcutInstantPatch = {
+          id: patch.id,
+          barrier: patch.barrier || "Temporary instant fix",
+          persona: patch.persona || "keyboard-only",
+          unverified: true,
+        };
         captured.applied = true;
         show("Fixed for you · unverified", true);
         respond({ ok: true, objective });

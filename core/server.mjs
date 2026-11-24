@@ -11,7 +11,7 @@ import {chooseInstant} from './jev-policy.js'
 import {chooseNames,chooseLanguage} from './jev-decisions.js'
 import {chooseStuck} from './jev-stuck.js'
 import {jevKey} from './jev.mjs'
-import {enqueueInstant} from './jev-queue.mjs'
+import {enqueueInstant,enqueueDraft} from './jev-queue.mjs'
 const types={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.json':'application/json','.mp4':'video/mp4','.md':'text/plain','.txt':'text/plain','.svg':'image/svg+xml','.png':'image/png','.woff2':'font/woff2','.vtt':'text/vtt'}
 const publicRoots=['/site/','/fixtures/shop/','/patches/','/proof/','/evidence/','/launch/curbcut-launch.mp4']
 export function serve(port=4317) {
@@ -65,6 +65,21 @@ export function serve(port=4317) {
         const {job,status,phase,result}=await readJSON(path.join(ROOT,'.curbcut/jobs',jobMatch[1]+'.json'))
         res.setHeader('Cache-Control','no-store')
         return json(200,{job,status,phase,patchId:result?.patch?.id})
+      }
+      if(url.pathname==='/tasks/draft' && ['OPTIONS','POST'].includes(req.method)) {
+        const origin=req.headers.origin
+        if(origin && !/^chrome-extension:\/\/[a-p]{32}$/.test(origin)) return json(403,{error:'Extension only'})
+        if(origin) res.setHeader('Access-Control-Allow-Origin',origin)
+        if(req.method==='OPTIONS') {
+          res.writeHead(204,{'Access-Control-Allow-Methods':'POST','Access-Control-Allow-Headers':'Content-Type'})
+          return res.end()
+        }
+        if(!req.headers['content-type']?.startsWith('application/json')) return json(415,{error:'JSON required'})
+        const parts=[]
+        let size=0
+        for await(const chunk of req) {size+=chunk.length;if(size>65536) return json(413,{error:'Report too large'});parts.push(chunk)}
+        res.setHeader('Cache-Control','no-store')
+        return json(202,await enqueueDraft(JSON.parse(Buffer.concat(parts))))
       }
       if(url.pathname==='/tasks' && req.method==='POST') {
         const origin=req.headers.origin
