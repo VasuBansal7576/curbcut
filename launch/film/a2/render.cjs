@@ -8,23 +8,51 @@ const root = path.resolve(__dirname,'../../..')
 const launch = path.join(root,'launch')
 const read = file => JSON.parse(fs.readFileSync(file,'utf8'))
 const edit = read(path.join(__dirname,'edit.json'))
-const pending = read(path.join(launch,'film/pending.json')).shots
+const popupShots = read(path.join(launch,'film/pending.json')).recorded
 const calculator = 'proof/kane/calculator-net-add-days/'
-const airport = 'proof/heldout-v6/kane/v6-5193be8805ece27f858e/'
+const delivered = read(path.join(launch,'footage/manifest.json')).slots
 const worms = 'proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/'
 const reels = {
   chapter:[calculator+'2026-11-21T19-46-40.781Z/control',3],
   calcMouse:[calculator+'2026-11-21T19-46-40.781Z/control',9],
   calcKeys:[calculator+'runtime-replay/attempt-1/after',62],
-  check:[airport+'before-1',11],gate:[airport+'control-1',18],
   trust:[worms+'after',60],shortcut:[worms+'before',68],
-  retire:[calculator+'2026-11-22T10-42-44.839Z/recheck-with',10],
   install:[worms+'after',66]
+}
+const shopReplays = {
+  check:[['before',76,4.5,'Keyboard · before'],['control',54,2.5,'Mouse control'],['after',100,5,'Keyboard · first repair']],
+  gate:[['fail',115,6,'Keyboard · original source'],['pass',116,5,'Keyboard · source fixed']],
+  retire:[['without',54,8,'Keyboard · patch disabled']]
+}
+function evidencePage(id,key){
+  const base=path.join(root,delivered[id].sourceRun)
+  const terminal=id==='gate'?key+'/terminal.jsonl':'terminal.jsonl'
+  const events=fs.readFileSync(path.join(base,terminal),'utf8').trim().split('\n').map(line=>JSON.parse(line))
+  const output=events.filter(e=>e.kind==='out').flatMap(e=>e.data.split(/\r?\n/))
+  const command=events.find(e=>e.kind==='start').data.argv
+  if(id==='gate')return {title:command.slice(0,3).join(' '),source:'terminal.jsonl',rows:output.filter(Boolean),verdict:output.find(l=>/^(FAIL|PASS) /.test(l)).split(' ')[0]}
+  if(id==='retire')return {title:command.slice(0,3).join(' '),source:'terminal.jsonl',rows:output.filter(l=>/\[recheck\]|"without"|"outcome"/.test(l)),verdict:'retired'}
+  const dir=key==='after'?'attempt-1/after':key
+  const source=dir+'/result.json'
+  const raw=fs.readFileSync(path.join(base,source),'utf8')
+  const result=JSON.parse(raw)
+  const rows=raw.split(/\r?\n/).filter(l=>/^  "(status|reason)":/.test(l))
+  if(!rows.length)throw Error('Missing result lines: '+source)
+  const receipts=[]
+  if(key==='after'){
+    for(const [file,pattern] of [['provenance.json',/^  "writer":/],['candidate.json',/^      "action": "makeFocusable"/]]){
+      const lines=fs.readFileSync(path.join(base,'attempt-1',file),'utf8').split(/\r?\n/)
+      const row=lines.find(l=>pattern.test(l))
+      if(!row)throw Error('Missing evidence: '+file)
+      receipts.push({file,row})
+    }
+  }
+  return {title:command.slice(0,3).join(' '),source,rows,receipts,verdict:result.status}
 }
 const ff = args => execFileSync('ffmpeg',['-y','-v','error',...args],{stdio:'inherit'})
 const uri = name => pathToFileURL(name).href
 const assets = Object.fromEntries(Object.entries({
-  massBefore:'a2/plates/mass-before.jpg',massAfter:'a2/plates/mass-after.jpg',
+  popupOn:'a2/plates/popup-on.png',popupOff:'a2/plates/popup-off.png',massBefore:'a2/plates/mass-before.jpg',massAfter:'a2/plates/mass-after.jpg',
   meridiano:'a2/plates/meridiano.jpg',munich:'a2/plates/munich.jpg',report:'plates/owner-report.png',contrastOff:'plates/contrast-off.png',contrastOn:'plates/contrast-on.png'
 }).map(([name,file])=>[name,uri(path.join(launch,'film',file))]))
 async function main(){
@@ -38,13 +66,27 @@ async function main(){
     await page.goto(uri(path.join(__dirname,'stage.html')))
     await page.evaluate(async ({assets,cues})=>{window.cues=cues;await loadFilm(assets)},{assets,cues:read(path.join(__dirname,'speech.json'))})
     const segments=[]
-    for(const shot of edit.filter(s=>s.start>=75)){
+    for(const shot of edit.filter(s=>s.start<15||s.start>=75)){
       const folder=path.join(work,shot.id)
       fs.mkdirSync(folder)
-      const slot=pending.find(s=>s.id===shot.id)
+      const slot=popupShots.find(s=>s.id===shot.id)
       const incoming=slot&&path.join(root,slot.path)
+      const deliveredSlot=delivered[shot.id]
+      const replayFrames=[]
+      if(deliveredSlot){
+        for(const [key,start,duration,label] of shopReplays[shot.id]){
+          const replayFolder=path.join(folder,key)
+          fs.mkdirSync(replayFolder)
+          ff(['-ss',String(start),'-i',path.join(root,deliveredSlot.kaneRecordings[key]),'-t',String(duration),'-vf','fps=30','-q:v','2',path.join(replayFolder,'%04d.jpg')])
+          const names=fs.readdirSync(replayFolder).sort()
+          if(names.length!==duration*30)throw Error('Short Kane recording: '+key)
+          const evidence=evidencePage(shot.id,key)
+          replayFrames.push(...names.map((name,index)=>({url:uri(path.join(replayFolder,name)),label,evidence,time:index/30})))
+        }
+        if(replayFrames.length!==shot.duration*30)throw Error('Replay duration mismatch: '+shot.id)
+      }
       let source,offset=0
-      if(incoming&&fs.existsSync(incoming)){
+      if(incoming){
         source=incoming
         shot.incoming=true
       }else if(reels[shot.id]){
@@ -58,7 +100,7 @@ async function main(){
         if(frames.length!==shot.duration*30)throw Error('Expected '+shot.duration*30+' frames for '+shot.id+', got '+frames.length)
       }
       const stream=path.join(folder,'picture.h264')
-      const encoded=await page.evaluate(async ({shot,frames})=>{
+      const encoded=await page.evaluate(async ({shot,frames,replayFrames})=>{
         const chunks=[]
         let error
         const enc=new VideoEncoder({output:chunk=>{const bytes=new Uint8Array(chunk.byteLength);chunk.copyTo(bytes);chunks.push(bytes)},error:e=>{error=String(e)}})
@@ -66,7 +108,12 @@ async function main(){
         try{
           for(let i=0;i<shot.duration*30;i++){
             const recording=frames?await img(frames[i]):null
-            await drawShot(shot,i/30,recording)
+            if(replayFrames.length){
+              const replay=replayFrames[i]
+              drawShopRun(await img(replay.url),replay)
+            }else{
+              await drawShot(shot,i/30,recording)
+            }
             const frame=new VideoFrame(canvas,{timestamp:Math.round(i*1000000/30),duration:Math.round(1000000/30)})
             enc.encode(frame,{keyFrame:i%60===0});frame.close()
             if(enc.encodeQueueSize>5)await enc.flush()
@@ -76,11 +123,11 @@ async function main(){
         }finally{enc.close()}
         const blob=new Blob(chunks)
         return await new Promise(resolve=>{const r=new FileReader();r.onload=()=>resolve(r.result.split(',')[1]);r.readAsDataURL(blob)})
-      },{shot,frames})
+      },{shot,frames,replayFrames})
       fs.writeFileSync(stream,Buffer.from(encoded,'base64'))
       const segment=path.join(work,shot.id+'.mp4')
-      ff(['-r','30','-i',stream,'-c:v','copy','-video_track_timescale','30000',segment])
-      segments.push(segment)
+      ff(['-r','30','-i',stream,'-c:v','copy','-video_track_timescale','15360',segment])
+      if(shot.start>=75)segments.push(segment)
       fs.rmSync(folder,{recursive:true,force:true})
       console.log(shot.id,shot.duration)
     }
@@ -88,9 +135,17 @@ async function main(){
     fs.writeFileSync(list,segments.map(s=>"file '"+s.replaceAll("'","'\\''")+"'").join('\n')+'\n')
     const master=path.join(work,'master.mp4')
     ff(['-f','concat','-safe','0','-i',list,'-an','-c:v','libx264','-preset','fast','-crf','19','-threads','5','-bf','0','-pix_fmt','yuv420p','-force_key_frames','15,75',master])
-    const opening=path.join(work,'opening.mp4')
-    ff(['-i',path.join(launch,'curbcut-launch.mp4'),'-map','0:v:0','-an','-c:v','copy',opening])
-    fs.writeFileSync(list,"file 'opening.mp4'\nduration 75\nfile 'master.mp4'\n")
+    const approved=path.join(launch,'curbcut-launch.mp4')
+    const middle=path.join(work,'middle.mp4')
+    ff(['-ss','15','-i',approved,'-t','60','-map','0:v','-c','copy',middle])
+    const refs=['lost.mp4','found.mp4','middle.mp4','master.mp4']
+    for(const [count,duration,name,caption] of [[2,15,'curbcut-launch-15s','teaser'],[3,75,'curbcut-launch','launch']]){
+      fs.writeFileSync(list,refs.slice(0,count).map(file=>"file '"+file+"'").join('\n')+'\n')
+      const out=path.join(work,name+'.mp4')
+      ff(['-f','concat','-safe','0','-i',list,'-i',path.join(launch,name+'.mp4'),'-i',path.join(launch,'captions',caption+'.vtt'),'-map','0:v','-map','1:a','-map','2:s','-c','copy','-c:s','mov_text','-t',String(duration),'-movflags','+faststart',out])
+      fs.copyFileSync(out,path.join(target,name+'.mp4'))
+    }
+    fs.writeFileSync(list,refs.map(file=>"file '"+file+"'").join('\n')+'\n')
     const seconds=edit.at(-1).start+edit.at(-1).duration
     ff(['-f','concat','-safe','0','-i',list,'-i',path.join(launch,'audio/demo.m4a'),'-i',path.join(launch,'captions/demo.vtt'),'-map','0:v:0','-map','1:a:0','-map','2:s:0','-t',String(seconds),'-c:v','copy','-c:a','copy','-c:s','mov_text','-metadata:s:s:0','language=eng','-movflags','+faststart',path.join(target,'curbcut-demo.mp4')])
   }finally{
