@@ -144,6 +144,7 @@ function installRule(node, rule) {
     case 'makeFocusable':
       if (node.tabIndex < 0 || node.hasAttribute('tabindex') || !node.matches('a[href],button,input,select,textarea,summary,iframe,[contenteditable]:not([contenteditable=false])')) attribute('tabindex','0')
       break
+    case 'setContrast':
     case 'injectCSS':
       for (const [name,value] of Object.entries(rule.value)) style(name,value)
       break
@@ -193,15 +194,19 @@ export function apply(patch,onRuleMatch) {
       const targetSelector=rule.target??rule.list
       function sync() {
         const anchors=[...document.querySelectorAll(selector)]
+        const scoped=['setAltText','setContrast','setLang'].includes(rule.action) || Boolean(patch.evaluation)
+        const applicable=scoped && (anchors.length!==1 ||
+          rule.action==='setAltText' && anchors[0]?.localName!=='img' ||
+          rule.action==='setLang' && anchors[0]!==document.documentElement)?[]:anchors
         const targets=targetSelector?[...document.querySelectorAll(targetSelector)]:null
         for(const [node,binding] of elements) {
-          if(!node.isConnected || (widget && (!anchors.includes(node) || (targets && (anchors.length!==1 || targets.length>1 || targets[0]!==binding.target))))) {
+          if(!node.isConnected || (scoped && !applicable.includes(node)) || (widget && (!anchors.includes(node) || (targets && (anchors.length!==1 || targets.length>1 || targets[0]!==binding.target))))) {
             binding.remove()
             elements.delete(node)
           } else binding.sync()
         }
         if(targets && (anchors.length!==1 || targets.length>1)) return
-        for(const node of anchors) {
+        for(const node of applicable) {
           if(elements.has(node)) continue
           const binding=widget?installWidgetRule(node,rule,targets?.[0]):installRule(node,rule)
           elements.set(node,binding)

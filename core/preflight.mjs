@@ -22,13 +22,14 @@ export async function checkKaneAccess(browser,task,persona) {
   } finally {await client.close()}
 }
 
-export async function preflight(data) {
+export async function preflight(data,{navigationTimeout}={}) {
   const task=await normalizeTask(data)
   const lanes=[]
-  for(const persona of [task.persona,'control']) {
+  const personas=task.persona==='document-language'?['control']:[task.persona,'control']
+  for(const persona of personas) {
     let browser
     try {
-      browser=await session(task,persona,null,tmpdir(),{gate:true})
+      browser=await session(task,persona,null,tmpdir(),{gate:true,local:Boolean(navigationTimeout),navigationTimeout})
       lanes.push(await checkKaneAccess(browser,task,persona))
     } catch(error) {
       if(!(error instanceof BlockedPage)) throw error

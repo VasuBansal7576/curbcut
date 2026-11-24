@@ -83,6 +83,7 @@ const instructions={
  'keyboard-only':'Use only keyboard input. Use Tab or Shift+Tab to move focus and Enter or Space to activate the exact control. Move in whichever direction is shorter. Group repeated Tab presses if supported, checking focus frequently. Do not click, focus elements directly, use JavaScript, or navigate directly to the destination.',
  'screen-reader-view':'Work exclusively inside the Reading view dialog. Use the exact listed role and name for the requested control.',
  'low-vision':'Use the locked 320 CSS pixel viewport and scroll vertically only.',
+ 'low-contrast-simulation':'Use only the visible screenshot to read the requested text under the low contrast sensitivity simulation. Do not use DOM, accessibility text, page source, zoom, or controls to reveal unreadable text. Report the exact text if legible. Otherwise fail the task and report that it is unreadable.',
  'color-blind':'Keep the color simulation active.',
  control:'Use the normal visual page and a pointer.'
 }
@@ -90,6 +91,7 @@ const limits={
   'keyboard-only':{maxSteps:50,timeout:360},
   'screen-reader-view':{maxSteps:24,timeout:250},
   'low-vision':{maxSteps:26,timeout:360},
+  'low-contrast-simulation':{maxSteps:8,timeout:120},
   'color-blind':{maxSteps:24,timeout:250},
   control:{maxSteps:22,timeout:300}
 }
@@ -97,7 +99,7 @@ function kaneLimits(task,persona,options={}) {
   const defaults=limits[persona]
   const maxSteps=options.maxSteps??Number(process.env.CURBCUT_KANE_MAX_STEPS??defaults.maxSteps)
   return {maxSteps,timeout:options.timeout??Math.max(defaults.timeout,maxSteps*6),
-    assertionMode:options.assertionMode??(task.probe || persona!=='low-vision'?'dom':'visual')}
+    assertionMode:options.assertionMode??(persona==='low-contrast-simulation' || task.evaluation?.category==='low-contrast' || !task.probe && persona==='low-vision'?'visual':'dom')}
 }
 
 async function keyboardHint(page,task) {
@@ -254,6 +256,7 @@ export function judgeProbe({task,persona,events,inspection,checks,kaneStatus}) {
 }
 
 export async function runKane(task,persona,patch,directory,options={}) {
+  if(task.persona==='document-language') throw new Error('Document language uses local measurement.')
   const {maxSteps,timeout,assertionMode}=kaneLimits(task,persona,options)
   if(!Number.isInteger(maxSteps) || maxSteps<1 || maxSteps>70) throw new Error('Kane max steps must be an integer from 1 to 70.')
   if(!Number.isInteger(timeout) || timeout<1 || timeout>900) throw new Error('Kane timeout must be an integer from 1 to 900 seconds.')
@@ -333,6 +336,20 @@ export async function runKane(task,persona,patch,directory,options={}) {
       (persona==='low-vision' && (inspection.width!==320 || inspection.harness.maxWidth!==320 || (!task.probe && (inspection.harness.horizontalScroll ||
         events.some(event=>event.type==='horizontal' && event.top)))))) {
       record('Could not confirm the persona and repair state on the recorded outcome page.')
+    }
+    if(!result.integrity && task.evaluation?.role) {
+      const {role,name}=task.evaluation
+      const row=inspection?.target?.reader
+      const hit=events.some(event=>event.targetMatches && (persona==='control'?event.type==='coverage-pointer':
+        event.type==='reader-activate' && event.role===role && event.name===name))
+      if(result.status==='pass' && !hit) record('The recording does not show the requested target being identified.')
+      if(result.status==='fail' && persona==='screen-reader-view' && !patch && (!inspection?.target?.visible || row?.name)) {
+        record('The recording does not establish that the visible target lacked an accessible name.')
+      }
+    }
+    if(!result.integrity && task.evaluation?.category==='low-contrast' && result.status==='pass') {
+      const actual=JSON.stringify([result.summary,result.reason,result.steps]).toLowerCase()
+      if(!actual.includes(task.evaluation.text.toLowerCase())) record('Kane did not report the exact registered text.')
     }
     if(task.outcomeChecks) {
       const checks=await outcomeChecks(page,task,persona)

@@ -36,7 +36,7 @@ export async function guardRequests(context,task,{discovery=false,extension=fals
   await context.routeWebSocket('**/*',socket=>socket.close())
 }
 
-export async function session(task,persona,patch,output,{local=false,gate=false,discovery=false}={}) {
+export async function session(task,persona,patch,output,{local=false,gate=false,discovery=false,navigationTimeout}={}) {
   const profile=await mkdtemp(path.join(tmpdir(),'curbcut-chrome-'))
   await mkdir(output,{recursive:true})
   const width=persona==='low-vision'?320:1280
@@ -94,6 +94,17 @@ export async function session(task,persona,patch,output,{local=false,gate=false,
       }
       const state=CurbCut.enforce(persona,report,{topLevel})
       state.documentId=documentId
+      if(topLevel && ['link','button','img'].includes(task.evaluation?.role)) {
+        state.coverageSelector=task.observedSelector
+        window.addEventListener('submit',event=>{event.preventDefault();event.stopImmediatePropagation()},true)
+        window.addEventListener('click',event=>{
+          const node=event.composedPath()[0]
+          if(node.closest?.('[data-curbcut-reader]')) return
+          if(event.isTrusted) report('coverage-pointer',node)
+          event.preventDefault()
+          event.stopImmediatePropagation()
+        },true)
+      }
       report('document')
       const quote=task.probe?.action==='read' && task.outcomeChecks?.find(check=>check.kind==='contains' && check.selector===task.observedSelector)?.equals
       if(topLevel && quote) CurbCut.observePassage(task.observedSelector,quote,report)
@@ -191,7 +202,7 @@ export async function session(task,persona,patch,output,{local=false,gate=false,
     const endpoint='http://127.0.0.1:'+port
     if(!local && persona==='low-vision') viewport=await lockViewport(endpoint,width,800)
     let response
-    try {response=await page.goto(task.url,{waitUntil:'domcontentloaded',timeout:discovery?8500:local?15000:30000})}
+    try {response=await page.goto(task.url,{waitUntil:'domcontentloaded',timeout:navigationTimeout??(discovery?8500:local?15000:30000)})}
     catch(error) {throw new BlockedPage(error.message.split('\n')[0])}
     if(gate) {
       const blocked=await pageBlock(page,response)

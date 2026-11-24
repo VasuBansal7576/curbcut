@@ -1,8 +1,11 @@
 import {computeAccessibleName, getRole, isInaccessible} from 'dom-accessibility-api'
+import {discoverCoverage,coverageObservation} from './coverage-browser.js'
 import {apply,match} from './engine.js'
 import {keyboardVisibility,observePassage,widthEvidence} from './geometry.js'
 import {isMirroredHoverEvent,observedHoverRules} from './hover.js'
 import {inspectRuleSelectors} from './selectors.js'
+
+export const lowContrastFilter='grayscale(1) contrast(0.22)'
 
 const selectors='a[href],button,summary,input,textarea,select,h1,h2,h3,h4,h5,h6,p,li,img[alt],main,nav,header,footer,[role],[tabindex],div[class],div[id],article,section,table,td,form,b,strong,em,output'
 const textRoles=['paragraph','text','status','alert','listitem','strong','emphasis']
@@ -32,7 +35,7 @@ function neighborhood(element) {
   return [element,parent,element.previousElementSibling,element.nextElementSibling,
     ...[...element.children].slice(0,5),parent?.parentElement].filter(Boolean)
 }
-function exactSelector(element) {
+export function exactSelector(element) {
   if(element.getRootNode()!==document) return identify(element)
   const parts=[]
   for(let node=element;node;node=node.parentElement) {
@@ -123,7 +126,8 @@ function reader(report=()=>{}) {
   const mappings=new Map()
   function rowFor(el,info) {
     const editable=['textbox','searchbox'].includes(info.role) && el.matches('textarea,input:not([type=password])')
-    const activatable=['link','button','checkbox','radio','tab','switch','menuitem','option'].includes(info.role)
+    const reportable=info.role==='img' && state?.coverageSelector && el.matches(state.coverageSelector)
+    const activatable=reportable || ['link','button','checkbox','radio','tab','switch','menuitem','option'].includes(info.role)
     const row=document.createElement(editable?'label':activatable?'button':'div')
     row.tabIndex=0
     row.style.cssText='display:block;box-sizing:border-box;width:100%;max-width:850px;text-align:left;color:inherit;background:transparent;border:0;border-bottom:1px solid #445853;padding:7px 4px;font:inherit'
@@ -162,7 +166,7 @@ function reader(report=()=>{}) {
       row.addEventListener('click',event=>{
         if(!el.matches(':disabled,[aria-disabled=true]')) {
           if(event.isTrusted) report('reader-activate',el,info)
-          el.click()
+          if(!reportable) el.click()
           render()
         }
       })
@@ -299,6 +303,14 @@ function enforce(persona,report=()=>{}, {topLevel=true}={}) {
       if(Math.abs(scrollX)>1 && !state.horizontalScroll) {state.horizontalScroll=true;report('horizontal')}
     },true)
   }
+  if(topLevel && persona==='low-contrast-simulation') {
+    const start=()=>{
+      document.documentElement.style.setProperty('filter',lowContrastFilter,'important')
+      state.simulationFilter=lowContrastFilter
+    }
+    if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start,{once:true})
+    else start()
+  }
   if(topLevel && (persona==='screen-reader-view' || persona==='color-blind')) {
     const start=()=>{
       if(persona==='screen-reader-view') reader(report)
@@ -316,4 +328,4 @@ function enforce(persona,report=()=>{}, {topLevel=true}={}) {
   }
   return state
 }
-globalThis.CurbCut=Object.freeze({apply,match,snapshot,reader,readerRow,enforce,keyboardVisibility,inspectRuleSelectors,observePassage,widthEvidence})
+globalThis.CurbCut=Object.freeze({apply,match,snapshot,reader,readerRow,enforce,exactSelector,discoverCoverage:()=>discoverCoverage(exactSelector),coverageObservation,keyboardVisibility,inspectRuleSelectors,observePassage,widthEvidence})

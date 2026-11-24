@@ -8,7 +8,7 @@ const journeyKeys=new Set(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Home'
 const validSelector=value=>typeof value==='string' && value.trim().length>0 && value.length<=280
 const restrictedAction=/(?:^|[^a-z])(?:log ?(?:in|out)|sign ?(?:in|up|out)|checkout|pay(?:ment)?|register|subscribe|purchase|book now|account|submit|send|order|donate)(?:$|[^a-z])/i
 export const forbiddenJourneyAction=value=>restrictedAction.test(value)
-const personas=new Set(['keyboard-only','low-vision','screen-reader-view','color-blind'])
+const personas=new Set(['keyboard-only','low-vision','screen-reader-view','color-blind','low-contrast-simulation','document-language'])
 const restricted=/(?:^|[/?&=_-])(?:log[-_]?in|sign[-_]?(?:up|in)|checkout|payment|register|oauth|password|account)(?:[/?&=_.-]|$)/i
 const restrictedHost=/^(?:accounts?|auth|checkout|login|oauth|payments?|signin|sso)$/i
 export function fixtureURL(url) {return url.origin==='http://127.0.0.1:4317' && url.pathname.startsWith('/fixtures/shop/')}
@@ -101,5 +101,14 @@ export async function normalizeTask(data) {
         ...(reader?{reader:{role:reader.role,name:reader.name.trim()}}:{}),...(checks?{checks}:{})}
     })
   }
-  return {id,url:url.href,persona:data.persona,task,...(controlTask?{controlTask}:{}),...(observedSelector?{observedSelector}:{}),...(requiredName?{requiredName}:{}),...(successSelector?{successSelector}:{}),...(outcomeChecks?{outcomeChecks}:{}),...(minimumTabPresses?{minimumTabPresses}:{}),...(keyboardEvidence?{keyboardEvidence}:{}),...(probe?{probe}:{}),...(barrierClass?{barrierClass}:{}),...(relatedSelectors?{relatedSelectors}:{}),...(journey?{journey}:{})}
+  let evaluation
+  if(data.evaluation!==undefined) {
+    const {category,text,role,name}=data.evaluation??{}
+    if(!observedSelector || !['missing-alt','empty-link','empty-button','low-contrast','missing-language'].includes(category) ||
+      (text!==undefined && (typeof text!=='string' || !text.trim() || text.length>240)) ||
+      (role!==undefined && !['img','link','button'].includes(role)) ||
+      (name!==undefined && (typeof name!=='string' || name.length>240))) throw new Error('Invalid coverage evaluation')
+    evaluation={category,...(text?{text}:{}),...(role?{role}:{}),...(name!==undefined?{name}:{})}
+  }
+  return {id,url:url.href,persona:data.persona,task,...(controlTask?{controlTask}:{}),...(observedSelector?{observedSelector}:{}),...(requiredName?{requiredName}:{}),...(successSelector?{successSelector}:{}),...(outcomeChecks?{outcomeChecks}:{}),...(minimumTabPresses?{minimumTabPresses}:{}),...(keyboardEvidence?{keyboardEvidence}:{}),...(probe?{probe}:{}),...(barrierClass?{barrierClass}:{}),...(relatedSelectors?{relatedSelectors}:{}),...(journey?{journey}:{}),...(evaluation?{evaluation}:{})}
 }
