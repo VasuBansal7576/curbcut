@@ -1,0 +1,115 @@
+{
+  "status": "inconclusive",
+  "runId": "3422c4f9-e978-47dc-814c-ab7d6a7314c1",
+  "credits": null,
+  "exitCode": null,
+  "exitSignal": "SIGKILL",
+  "steps": [],
+  "preflight": {
+    "persona": "screen-reader-view",
+    "status": "pass",
+    "url": "https://www.tvb.com/",
+    "httpStatus": 200,
+    "width": 1280,
+    "browser": "159.0.8154.6"
+  },
+  "objective": "Work exclusively inside the Reading view dialog. Use the exact listed role and name for the requested control. Stay on this public site. Do not sign in, register, pay, send or submit anything, or interact with a CAPTCHA or access challenge. Leave fixture settings unchanged. Use visible controls only. Check Reading view for the link named “玫瑰戰爭”. If found, click that exact named row and report that you found it. If absent, report “target absent” and finish the check. Do not guess from unnamed rows.",
+  "kaneStatus": "inconclusive",
+  "limits": {
+    "maxSteps": 10,
+    "timeout": 160,
+    "assertionMode": "dom"
+  },
+  "evidenceError": "No sealed Kane pack was found in the session.",
+  "integrity": "Kane exited on SIGKILL before producing validated evidence.",
+  "runner": "kane",
+  "recordingTrail": [
+    {
+      "index": 0,
+      "events": [
+        {
+          "type": "document",
+          "documentId": "3428d516-503b-45d6-b8fc-9a8eb764c3c8",
+          "url": "https://www.tvb.com/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "document",
+          "documentId": "a8202abd-4dcf-4e4d-a49b-4e56bc3b1a35",
+          "url": "https://0f0b3101d15019aa5e399bef0e3a76ea.safeframe.googlesyndication.com/safeframe/1-0-45/html/container.html",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": false
+        },
+        {
+          "type": "document",
+          "documentId": "594aca59-30a5-47d6-953d-73951c467e2b",
+          "url": "https://cm.g.doubleclick.net/partnerpixels",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": false
+        },
+        {
+          "type": "document",
+          "documentId": "9aa6766f-b167-414a-b306-2d53bbaad8ea",
+          "url": "https://platform.twitter.com/widgets/widget_iframe.1227a5674072e080ffb1ba14ac0c1079.html",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": false
+        },
+        {
+          "type": "document",
+          "documentId": "d30637b9-e692-48cd-ae01-a18dc2ca01ab",
+          "url": "https://0f0b3101d15019aa5e399bef0e3a76ea.safeframe.googlesyndication.com/safeframe/1-0-45/html/container.html",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": false
+        },
+        {
+          "type": "document",
+          "documentId": "d42482d7-7028-4fff-be46-b09dc33729be",
+          "url": "https://googleads.g.doubleclick.net/pagead/drt/s",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": false
+        },
+        {
+          "type": "document",
+          "documentId": "c3c1d54a-eb9c-43bd-a151-b0e3c81932c9",
+          "url": "https://googleads.g.doubleclick.net/pagead/drt/si",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": false
+        },
+        {
+          "type": "document",
+          "documentId": "9c9d391f-375e-476f-9746-f028899ee75d",
+          "url": "https://gumi.criteo.com/syncframe",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": false
+        },
+        {
+          "type": "document",
+          "documentId": "19624d1a-5913-4ad5-8b06-c976d3035dc7",
+          "url": "https://ep2.adtrafficquality.google/sodar/sodar2/257/runner.html",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": false
+        },
+        {
+          "type": "document",
+          "documentId": "2ead3a7c-04ba-4bf8-9542-80f496efee99",
+          "url": "https://www.google.com/recaptcha/api2/aframe",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": false
+        }
+      ]
+    }
+  ],
+  "inspection": null,
+  "video": "proof/heldout-v6/kane/v6-79371afdc7b5746797be/before-2/recording.mp4"
+}

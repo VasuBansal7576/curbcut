@@ -1,0 +1,552 @@
+{
+  "runner": "kane",
+  "selection": {
+    "commit": "55b70abea0006894f7599fbdc90caa45599651ce",
+    "blob": "17ad97ed791285114701ba45de6000717c3e6a2b"
+  },
+  "startedAt": "2026-11-24T13:31:55.202Z",
+  "studyInitialBalance": 3392.1428,
+  "startingBalance": 3238.1495,
+  "threshold": 2142.1428,
+  "cases": [
+    {
+      "id": "v6-4818349050c56dca7fee",
+      "category": "missing-alt",
+      "phases": {
+        "before": [
+          {
+            "status": "fail",
+            "runId": "c10382a7-4107-4ad5-a320-089d24d15f3a",
+            "recording": "proof/heldout-v6/kane/v6-4818349050c56dca7fee/before-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-4818349050c56dca7fee/before-1"
+          }
+        ],
+        "control": [
+          {
+            "status": "inconclusive",
+            "runId": "2f65a0fe-acca-421d-9922-09dd2ee3acc3",
+            "recording": "proof/heldout-v6/kane/v6-4818349050c56dca7fee/control-1/recording.mp4",
+            "reason": "The recording does not show the requested target being identified.",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-4818349050c56dca7fee/control-1"
+          },
+          {
+            "status": "inconclusive",
+            "runId": "66a410cb-718c-43bf-8c00-e096f9e374b8",
+            "recording": "proof/heldout-v6/kane/v6-4818349050c56dca7fee/control-2/recording.mp4",
+            "reason": "The recording does not show the requested target being identified.",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-4818349050c56dca7fee/control-2"
+          }
+        ]
+      },
+      "verified": false
+    },
+    {
+      "id": "v6-5d6a06db450ef73285c8",
+      "category": "empty-button",
+      "phases": {
+        "before": [
+          {
+            "status": "fail",
+            "runId": "3095c8be-8f96-4a5a-9111-c51893f2a558",
+            "recording": "proof/heldout-v6/kane/v6-5d6a06db450ef73285c8/before-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-5d6a06db450ef73285c8/before-1"
+          }
+        ],
+        "control": [
+          {
+            "status": "inconclusive",
+            "runId": "aeb9c8e6-3181-4a16-a4fe-6debb18259ed",
+            "recording": "proof/heldout-v6/kane/v6-5d6a06db450ef73285c8/control-1/recording.mp4",
+            "reason": "The recording does not show the requested target being identified.",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-5d6a06db450ef73285c8/control-1"
+          },
+          {
+            "status": "pass",
+            "runId": "4e162886-61e0-4690-a77c-b8bbfeeea93f",
+            "recording": "proof/heldout-v6/kane/v6-5d6a06db450ef73285c8/control-2/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-5d6a06db450ef73285c8/control-2"
+          }
+        ],
+        "after": [
+          {
+            "status": "pass",
+            "runId": "3ec46e90-791c-4174-9fc2-19994a7c5b01",
+            "recording": "proof/heldout-v6/kane/v6-5d6a06db450ef73285c8/after-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-5d6a06db450ef73285c8/after-1"
+          }
+        ]
+      },
+      "verified": true
+    },
+    {
+      "id": "v6-79371afdc7b5746797be",
+      "category": "empty-link",
+      "phases": {
+        "before": [
+          {
+            "status": "inconclusive",
+            "runId": "3c4ff479-fdd0-499e-96f1-b07bcdd396aa",
+            "recording": "proof/heldout-v6/kane/v6-79371afdc7b5746797be/before-1/recording.mp4",
+            "reason": "Child agent failed: Target absent: Reading view has no link with the exact name “玫瑰戰爭”.",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-79371afdc7b5746797be/before-1"
+          },
+          {
+            "status": "inconclusive",
+            "runId": "3422c4f9-e978-47dc-814c-ab7d6a7314c1",
+            "recording": "proof/heldout-v6/kane/v6-79371afdc7b5746797be/before-2/recording.mp4",
+            "reason": "Kane exited on SIGKILL before producing validated evidence.",
+            "evidenceValid": false,
+            "artifact": "proof/heldout-v6/kane/v6-79371afdc7b5746797be/before-2"
+          }
+        ]
+      },
+      "verified": false
+    },
+    {
+      "id": "v6-41954d7e34405f63bbb0",
+      "category": "missing-alt",
+      "phases": {
+        "before": [
+          {
+            "status": "fail",
+            "runId": "4f7b8d0e-9561-4c33-8f44-244408c851d4",
+            "recording": "proof/heldout-v6/kane/v6-41954d7e34405f63bbb0/before-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-41954d7e34405f63bbb0/before-1"
+          }
+        ],
+        "control": [
+          {
+            "status": "pass",
+            "runId": "9925c8d5-b487-4bf9-8b0e-27b26ecb95a9",
+            "recording": "proof/heldout-v6/kane/v6-41954d7e34405f63bbb0/control-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-41954d7e34405f63bbb0/control-1"
+          }
+        ],
+        "after": [
+          {
+            "status": "pass",
+            "runId": "ae52216d-a118-46a0-a544-3d94df74378f",
+            "recording": "proof/heldout-v6/kane/v6-41954d7e34405f63bbb0/after-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-41954d7e34405f63bbb0/after-1"
+          }
+        ]
+      },
+      "verified": true
+    },
+    {
+      "id": "v6-1c713d1e1e5115a94c06",
+      "category": "empty-link",
+      "phases": {
+        "before": [
+          {
+            "status": "fail",
+            "runId": "0987c1c9-cbb5-4da2-bdfe-4162ea464cc2",
+            "recording": "proof/heldout-v6/kane/v6-1c713d1e1e5115a94c06/before-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-1c713d1e1e5115a94c06/before-1"
+          }
+        ],
+        "control": [
+          {
+            "status": "pass",
+            "runId": "c515cbbf-17f3-4fdb-8696-cdc123900412",
+            "recording": "proof/heldout-v6/kane/v6-1c713d1e1e5115a94c06/control-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-1c713d1e1e5115a94c06/control-1"
+          }
+        ],
+        "after": [
+          {
+            "status": "pass",
+            "runId": "f37baf6e-4ba0-4dba-b622-990c3bb02e67",
+            "recording": "proof/heldout-v6/kane/v6-1c713d1e1e5115a94c06/after-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-1c713d1e1e5115a94c06/after-1"
+          }
+        ]
+      },
+      "verified": true
+    },
+    {
+      "id": "v6-12e4125597bb81b2ad18",
+      "category": "empty-button",
+      "phases": {
+        "before": [
+          {
+            "status": "fail",
+            "runId": "e104a7d6-f794-479d-be3f-c835e96e6c63",
+            "recording": "proof/heldout-v6/kane/v6-12e4125597bb81b2ad18/before-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-12e4125597bb81b2ad18/before-1"
+          }
+        ],
+        "control": [
+          {
+            "status": "fail",
+            "runId": "605219a5-744e-409b-abc3-8f236d43ba19",
+            "recording": "proof/heldout-v6/kane/v6-12e4125597bb81b2ad18/control-1/recording.mp4",
+            "reason": "The cookie-consent overlay covers the visible search button, and dismissing it would change fixture settings.",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-12e4125597bb81b2ad18/control-1"
+          }
+        ]
+      },
+      "verified": false
+    },
+    {
+      "id": "v6-0999798a6977696a4287",
+      "category": "missing-alt",
+      "phases": {
+        "before": [
+          {
+            "status": "inconclusive",
+            "runId": "26378b7a-3990-4b32-8c3f-914ff0f722c6",
+            "recording": "proof/heldout-v6/kane/v6-0999798a6977696a4287/before-1/recording.mp4",
+            "reason": "The recording does not show the requested target being identified.",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-0999798a6977696a4287/before-1"
+          },
+          {
+            "status": "inconclusive",
+            "runId": "d3e5c16a-af66-4133-a18c-2409451f3b0a",
+            "recording": "proof/heldout-v6/kane/v6-0999798a6977696a4287/before-2/recording.mp4",
+            "reason": "The recording does not show the requested target being identified.",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-0999798a6977696a4287/before-2"
+          }
+        ]
+      },
+      "verified": false
+    },
+    {
+      "id": "v6-5193be8805ece27f858e",
+      "category": "empty-button",
+      "phases": {
+        "before": [
+          {
+            "status": "fail",
+            "runId": "202ffe74-912a-4024-891b-bdc89843b09f",
+            "recording": "proof/heldout-v6/kane/v6-5193be8805ece27f858e/before-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-5193be8805ece27f858e/before-1"
+          }
+        ],
+        "control": [
+          {
+            "status": "pass",
+            "runId": "69a8e744-2326-4319-a7ff-4fe2c73a63a8",
+            "recording": "proof/heldout-v6/kane/v6-5193be8805ece27f858e/control-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-5193be8805ece27f858e/control-1"
+          }
+        ],
+        "after": [
+          {
+            "status": "pass",
+            "runId": "c07671ed-c4cc-4f38-8003-42d0b452c033",
+            "recording": "proof/heldout-v6/kane/v6-5193be8805ece27f858e/after-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-5193be8805ece27f858e/after-1"
+          }
+        ]
+      },
+      "verified": true
+    },
+    {
+      "id": "v6-fc998d15b07df6493256",
+      "category": "empty-link",
+      "phases": {
+        "before": [
+          {
+            "status": "fail",
+            "runId": "df366d8f-719a-45a2-853c-bef4f950e557",
+            "recording": "proof/heldout-v6/kane/v6-fc998d15b07df6493256/before-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-fc998d15b07df6493256/before-1"
+          }
+        ],
+        "control": [
+          {
+            "status": "inconclusive",
+            "runId": "e5b89e83-089a-49e0-ae04-9d3638d8373d",
+            "recording": "proof/heldout-v6/kane/v6-fc998d15b07df6493256/control-1/recording.mp4",
+            "reason": "Maximum steps exceeded (11/10)",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-fc998d15b07df6493256/control-1"
+          },
+          {
+            "status": "inconclusive",
+            "runId": "7f092840-ef65-4976-adc1-9ef75bf0b84a",
+            "recording": "proof/heldout-v6/kane/v6-fc998d15b07df6493256/control-2/recording.mp4",
+            "reason": "The recording does not show the requested target being identified.",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-fc998d15b07df6493256/control-2"
+          }
+        ]
+      },
+      "verified": false
+    },
+    {
+      "id": "v6-79a3b611312d99c4a01e",
+      "category": "missing-alt",
+      "phases": {
+        "before": [
+          {
+            "status": "fail",
+            "runId": "9d820fb9-854d-4405-8f75-87eeebf03307",
+            "recording": "proof/heldout-v6/kane/v6-79a3b611312d99c4a01e/before-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-79a3b611312d99c4a01e/before-1"
+          }
+        ],
+        "control": [
+          {
+            "status": "pass",
+            "runId": "b4ce8258-e9c8-4968-a056-5cd298f32059",
+            "recording": "proof/heldout-v6/kane/v6-79a3b611312d99c4a01e/control-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-79a3b611312d99c4a01e/control-1"
+          }
+        ],
+        "after": [
+          {
+            "status": "pass",
+            "runId": "25c1b77a-39f4-4d17-98d0-7d501299d514",
+            "recording": "proof/heldout-v6/kane/v6-79a3b611312d99c4a01e/after-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-79a3b611312d99c4a01e/after-1"
+          }
+        ]
+      },
+      "verified": true
+    },
+    {
+      "id": "v6-879d7ffe4f5af2c8daf4",
+      "category": "empty-link",
+      "phases": {
+        "before": [
+          {
+            "status": "fail",
+            "runId": "7c16649c-1b96-4b35-ba1d-926d76274f54",
+            "recording": "proof/heldout-v6/kane/v6-879d7ffe4f5af2c8daf4/before-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-879d7ffe4f5af2c8daf4/before-1"
+          }
+        ],
+        "control": [
+          {
+            "status": "inconclusive",
+            "runId": "d441bd17-d934-4e0e-ae15-bb427d1401f6",
+            "recording": "proof/heldout-v6/kane/v6-879d7ffe4f5af2c8daf4/control-1/recording.mp4",
+            "reason": "The recording does not show the requested target being identified.",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-879d7ffe4f5af2c8daf4/control-1"
+          },
+          {
+            "status": "inconclusive",
+            "runId": "fa064a91-542a-4130-9966-f0d12f6de374",
+            "recording": "proof/heldout-v6/kane/v6-879d7ffe4f5af2c8daf4/control-2/recording.mp4",
+            "reason": "The recording does not show the requested target being identified.",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-879d7ffe4f5af2c8daf4/control-2"
+          }
+        ]
+      },
+      "verified": false
+    },
+    {
+      "id": "v6-c797af64f6d31d425708",
+      "category": "empty-button",
+      "phases": {
+        "before": [
+          {
+            "status": "inconclusive",
+            "runId": "ee5ab8f1-db15-4d16-a747-60540643ac18",
+            "recording": "proof/heldout-v6/kane/v6-c797af64f6d31d425708/before-1/recording.mp4",
+            "reason": "The recording does not show the requested target being identified.",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-c797af64f6d31d425708/before-1"
+          },
+          {
+            "status": "inconclusive",
+            "runId": "0d0f982a-2f1f-4c4d-b345-d9b8d7891323",
+            "recording": "proof/heldout-v6/kane/v6-c797af64f6d31d425708/before-2/recording.mp4",
+            "reason": "The recording does not show the requested target being identified.",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-c797af64f6d31d425708/before-2"
+          }
+        ]
+      },
+      "verified": false
+    },
+    {
+      "id": "v6-170c2d7431ef79a6a7f9",
+      "category": "missing-alt",
+      "phases": {
+        "before": [
+          {
+            "status": "fail",
+            "runId": "66d6e2c7-7532-414e-abb9-1bb331b801d9",
+            "recording": "proof/heldout-v6/kane/v6-170c2d7431ef79a6a7f9/before-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-170c2d7431ef79a6a7f9/before-1"
+          }
+        ],
+        "control": [
+          {
+            "status": "pass",
+            "runId": "d6c34f9d-7b42-42a3-af75-41125ce502e1",
+            "recording": "proof/heldout-v6/kane/v6-170c2d7431ef79a6a7f9/control-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-170c2d7431ef79a6a7f9/control-1"
+          }
+        ],
+        "after": [
+          {
+            "status": "pass",
+            "runId": "55917917-125f-44e7-b16b-60c61540f910",
+            "recording": "proof/heldout-v6/kane/v6-170c2d7431ef79a6a7f9/after-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-170c2d7431ef79a6a7f9/after-1"
+          }
+        ]
+      },
+      "verified": true
+    },
+    {
+      "id": "v6-6631495303224e7a36cd",
+      "category": "empty-button",
+      "phases": {
+        "before": [
+          {
+            "status": "fail",
+            "runId": "c0685be1-5f69-474d-94d6-1a6236e544e5",
+            "recording": "proof/heldout-v6/kane/v6-6631495303224e7a36cd/before-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-6631495303224e7a36cd/before-1"
+          }
+        ],
+        "control": [
+          {
+            "status": "pass",
+            "runId": "64450ade-d225-46a7-aff9-0dcbd850931c",
+            "recording": "proof/heldout-v6/kane/v6-6631495303224e7a36cd/control-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-6631495303224e7a36cd/control-1"
+          }
+        ],
+        "after": [
+          {
+            "status": "pass",
+            "runId": "4341d5dd-5b75-462d-8dee-11c7515ce98b",
+            "recording": "proof/heldout-v6/kane/v6-6631495303224e7a36cd/after-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-6631495303224e7a36cd/after-1"
+          }
+        ]
+      },
+      "verified": true
+    },
+    {
+      "id": "v6-5d96a00e96eca9c57e46",
+      "category": "empty-link",
+      "phases": {
+        "before": [
+          {
+            "status": "fail",
+            "runId": "e6445c12-906e-43cb-bf1b-aafb15e0f331",
+            "recording": "proof/heldout-v6/kane/v6-5d96a00e96eca9c57e46/before-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-5d96a00e96eca9c57e46/before-1"
+          }
+        ],
+        "control": [
+          {
+            "status": "pass",
+            "runId": "53ca02cc-dfcb-41bc-8e83-c7553343542e",
+            "recording": "proof/heldout-v6/kane/v6-5d96a00e96eca9c57e46/control-1/recording.mp4",
+            "reason": "Objective completed",
+            "evidenceValid": true,
+            "artifact": "proof/heldout-v6/kane/v6-5d96a00e96eca9c57e46/control-1"
+          }
+        ],
+        "after": [
+          {
+            "status": "inconclusive",
+            "runId": "7a1a25eb-7325-45d5-94cc-c566c0fb4bc7",
+            "recording": "proof/heldout-v6/kane/v6-5d96a00e96eca9c57e46/after-1/recording.mp4",
+            "reason": "Kane exited on SIGKILL before producing validated evidence.",
+            "evidenceValid": false,
+            "artifact": "proof/heldout-v6/kane/v6-5d96a00e96eca9c57e46/after-1"
+          },
+          {
+            "status": "inconclusive",
+            "runId": "6d6382e1-691c-4cc6-b9fc-7849cf22253c",
+            "recording": "proof/heldout-v6/kane/v6-5d96a00e96eca9c57e46/after-2/recording.mp4",
+            "reason": "Kane exited on SIGKILL before producing validated evidence.",
+            "evidenceValid": false,
+            "artifact": "proof/heldout-v6/kane/v6-5d96a00e96eca9c57e46/after-2"
+          }
+        ]
+      },
+      "verified": false
+    }
+  ],
+  "finalBalance": 2340.327,
+  "finishedAt": "2026-11-24T14:10:28.063Z",
+  "studyCreditsUsed": 1051.8158,
+  "byCategory": {
+    "missing-alt": {
+      "selected": 5,
+      "started": 5,
+      "verified": 3
+    },
+    "empty-link": {
+      "selected": 5,
+      "started": 5,
+      "verified": 1
+    },
+    "empty-button": {
+      "selected": 5,
+      "started": 5,
+      "verified": 3
+    }
+  }
+}
