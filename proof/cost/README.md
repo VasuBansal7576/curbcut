@@ -46,6 +46,31 @@ The 11 labeling near misses accounted for 27 candidate trials. All 27 passed the
 
 The live study used zero Kane credits and made zero agent calls, including diff calls. Two attempts to run the fixture suite lost a shared loopback server. All 71 tests passed when a fixture server was held open for the full suite. The build and v4, v5, and v6 integrity checks also passed.
 
+## Live Grok template diffs
+
+The study gave Grok 4.5 one request for each of the 11 labeling near misses. It used the highest-ranked attempted template from the live inheritance run, the recorded oracle failure reason, and the fixed diff reply instructions. It supplied no DOM snapshot, expected label, or full task description. Valid diffs had to pass the schema, repeat, and live selector checks before running the four browser lanes. The script made no fallback proposals. [Per-task diff evidence](diff-results.json)
+
+Both token columns estimate visible text by rounding up UTF-8 bytes divided by four for each prompt and response. The full-agent column reconstructs the untrimmed prompt using archived observations and counts each saved response for the same task, including retries. The archived full agent was Codex. These figures compare request and response size. They do not measure billed tokens or model reasoning.
+
+| Task | Diff outcome | Grok diff tokens (est.) | Archived full-agent tokens (est.) | Archived attempts |
+| --- | --- | ---: | ---: | ---: |
+| `asme-org-tr2` | Not fixed, invalid patch | 158 | 10,982 | 1 |
+| `cato-org-tr2` | Not fixed, invalid patch | 151 | 11,074 | 1 |
+| `poets-org-tr2` | Not fixed, invalid patch | 139 | 10,801 | 1 |
+| `sanantonio-library-reader` | Not fixed, name check failed | 168 | 10,369 | 1 |
+| `unglobalcompact-org-tr2` | Not fixed, invalid patch | 139 | 10,454 | 1 |
+| `v5-c46d9e085415a2e891b3` | Not fixed, invalid patch | 147 | 14,331 | 2 |
+| `v5-cf5e31bb10aecd3af383` | Not fixed, invalid patch | 142 | 13,777 | 2 |
+| `v5-da5c14f912fb3f74fbbb` | Not fixed, invalid patch | 173 | 8,613 | 1 |
+| `v5-e35e95e464a0b456fb7a` | Not fixed, invalid patch | 158 | 12,722 | 2 |
+| `v5-fcd52c5a5920e388762d` | Not fixed, repeated rules | 161 | 18,416 | 3 |
+| `v5-fcff2ddd132fff0edeae` | Not fixed, invalid patch | 166 | 6,919 | 1 |
+| Total | 0 fixed, 11 not fixed | 1,702 | 128,458 | 16 |
+
+Grok averaged **155 estimated tokens per diff**. The archived full-agent path averaged **11,678 estimated tokens per task**, or 8,029 per saved attempt. Nine replies produced invalid patches, and one repeated the inherited rule. The one valid patch passed the patched pointer lane and failed the patched Reading view role-and-name check. The experiment spent zero Kane credits.
+
+Run `CURBCUT_AGENT=grok node proof/cost/diff.mjs` for the live trials and `CURBCUT_AGENT=grok node proof/cost/diff-baseline.mjs` for the offline baseline and rejection checks. The installed Grok CLI rejected two invocations that combined `--single` with `--prompt-file`. The live trials used `--prompt-file` alone after that correction.
+
 ## Running the cost controls
 
 - Run `curbcut cost` to summarize the JSON records written to `.curbcut/cost/` by `check`, `fix`, and `gate`. The per-run record includes the before and after Kane balance, the balance difference, and the token counting method. A missing balance yields an unknown total. Estimated prompt savings, skipped calls, and step budget changes are recorded separately from the observed balance.
