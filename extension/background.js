@@ -5,8 +5,10 @@ importScripts(
   "lib/select.js",
   "lib/sensitive.js",
   "jev-runtime.js",
+  "jev-decisions-runtime.js",
   "lib/jev-config.js",
-  "instant-background.js"
+  "instant-background.js",
+  "naming-background.js"
 );
 
 const Ext = globalThis.CurbCutExt;
@@ -261,6 +263,14 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
     }
 
     switch (message.type) {
+      case "LIVE_NAMES_REQUEST": {
+        sendResponse(await nameVisibleTab(_sender, message.token));
+        return;
+      }
+      case "GET_LIVE_NAMES": {
+        sendResponse(await sendToActiveTab({ type: "LIVE_NAMES_STATUS" }, message.capturedTabId));
+        return;
+      }
       case "GET_STATE": {
         const state = await getState();
         sendResponse({ ok: true, state });

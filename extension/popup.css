@@ -157,7 +157,8 @@ input:disabled, button:disabled { opacity: .65; cursor: default; }
   background: var(--paint);
   color: var(--asphalt);
   text-align: center;
-  font: 700 1.5rem/1.4 var(--mono);
+  font: 700 1.5rem/1.4 var(--display);
+  font-variant-numeric: lining-nums tabular-nums;
 }
 
 .patch-list { list-style: none; margin: 0; padding: 0; }

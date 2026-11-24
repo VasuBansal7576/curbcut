@@ -8,6 +8,7 @@ import {fix,withLock} from './loop.mjs'
 import {requireKane} from './kane.mjs'
 import {normalizeTask,allowedHost,acceptableURL,fixtureURL} from './task.mjs'
 import {chooseInstant} from './jev-policy.js'
+import {chooseNames,chooseLanguage} from './jev-decisions.js'
 import {jevKey} from './jev.mjs'
 import {enqueueInstant} from './jev-queue.mjs'
 const types={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.json':'application/json','.mp4':'video/mp4','.md':'text/plain','.txt':'text/plain','.svg':'image/svg+xml','.png':'image/png','.woff2':'font/woff2','.vtt':'text/vtt'}
@@ -19,7 +20,7 @@ export function serve(port=4317) {
     try {
       if(req.headers.host!=='127.0.0.1:'+port && req.headers.host!=='localhost:'+port) return json(403,{error:'Local host required'})
       const url=new URL(req.url,'http://127.0.0.1:'+port)
-      if(['OPTIONS','POST'].includes(req.method) && ['/instant/decide','/instant/queue'].includes(url.pathname)) {
+      if(['OPTIONS','POST'].includes(req.method) && ['/instant/decide','/instant/queue','/instant/name','/instant/language'].includes(url.pathname)) {
         const origin=req.headers.origin
         if(origin && !/^chrome-extension:\/\/[a-p]{32}$/.test(origin)) return json(403,{error:'Extension only'})
         if(origin) res.setHeader('Access-Control-Allow-Origin',origin)
@@ -38,12 +39,21 @@ export function serve(port=4317) {
         }
         const data=JSON.parse(Buffer.concat(parts))
         if(url.pathname.endsWith('/queue')) return json(202,await enqueueInstant(data))
-        const page=new URL(data.state?.url)
+        const page=new URL(data.state?.url??data.url)
         if(!acceptableURL(page) || page.search || page.hash || (!fixtureURL(page) && !await allowedHost(page.hostname))) {
           return json(400,{error:'Use a public HTTPS page or the local fixture.'})
         }
         const key=await jevKey()
-        return key?json(200,await chooseInstant(key,data.state,data.screenshot)):json(503,{error:'Jev is not configured.'})
+        if(!key) return json(503,{error:'Jev is not configured.'})
+        if(url.pathname.endsWith('/name')) {
+          if(!Array.isArray(data.pairs) || !data.pairs.length || data.pairs.length>4) return json(400,{error:'Invalid naming batch'})
+          return json(200,await chooseNames(key,data.pairs,data.language))
+        }
+        if(url.pathname.endsWith('/language')) {
+          if(typeof data.sample!=='string') return json(400,{error:'Invalid language sample'})
+          return json(200,await chooseLanguage(key,data.sample.slice(0,2048)))
+        }
+        return json(200,await chooseInstant(key,data.state,data.screenshot))
       }
       const jobMatch=/^\/tasks\/([a-f0-9-]{36})$/.exec(url.pathname)
       if(jobMatch && req.method==='GET') {

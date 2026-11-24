@@ -18,6 +18,7 @@ import { createReport } from './lib/report.js';
     fixtureToggle: document.getElementById("fixture-preview-toggle"),
     activeList: document.getElementById("active-patches"),
     activeEmpty: document.getElementById("active-empty"),
+    liveNames: document.getElementById("live-names-status"),
     activeCount: document.getElementById("active-count"),
     persona: document.getElementById("persona-select"),
     taskInput: document.getElementById("task-input"),
@@ -204,6 +205,9 @@ import { createReport } from './lib/report.js';
       pagePaused ? "Fixes are paused for this page." :
         page.available ? "No known fix for this page." : "Fixes aren’t available on this tab.";
     renderActive(active, emptyMessage);
+    const names = page.liveNames || [];
+    els.liveNames.hidden = !state.enabled || pagePaused || !names.length;
+    els.liveNames.textContent = names.length ? `${names.length} named by Jev · unverified` : "";
     els.instantPanel.hidden = state.instantEnabled !== true || !state.enabled || pagePaused ||
       !page.available || page.sensitive || page.isFixture || active.length > 0 || !pageKey?.startsWith("https://");
   }
@@ -218,6 +222,7 @@ import { createReport } from './lib/report.js';
       ? result.active.filter(patch => patch.matchedRules?.length || patch.unverified)
       : [];
     page.sensitive = Boolean(result?.sensitive);
+    page.liveNames = result?.ok ? (await chrome.runtime.sendMessage({ type: "GET_LIVE_NAMES", capturedTabId }))?.names : [];
   }
 
   async function load() {

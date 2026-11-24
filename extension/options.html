@@ -27,6 +27,15 @@
       </div>
       <p id="jev-enabled-status" class="status" role="status"></p>
     </section>
+    <section class="options-section" aria-labelledby="naming-heading">
+      <h2 id="naming-heading">Live names</h2>
+      <label class="row-toggle" for="live-names">
+        <span><strong>Name visible controls and images with Jev.</strong> Experimental and off by default.</span>
+        <input id="live-names" type="checkbox" role="switch" disabled>
+      </label>
+      <p class="hint">On public HTTPS pages, TypeSafe receives crops of unnamed controls and images, nearby text and clues about their purpose. It may also receive a visible text sample to identify the language. Names are temporary and unverified. Turn this off or pause the page to remove them.</p>
+      <p id="live-names-status" class="status" role="status"></p>
+    </section>
     <section class="options-section" aria-labelledby="connection-heading">
       <h2 id="connection-heading">TypeSafe connection</h2>
       <p class="hint">With a personal key, the extension sends requests directly to TypeSafe. With an empty key, it sends the capture and candidate selectors to the local Curb Cut server at 127.0.0.1:4317. Both routes keep the candidate selectors out of the TypeSafe request.</p>

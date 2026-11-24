@@ -1,3 +1,4 @@
+import {collectNames,visibleLanguageSample,applyLiveName} from './jev-naming-browser.js'
 import {computeAccessibleName, getRole, isInaccessible} from 'dom-accessibility-api'
 import {discoverCoverage,coverageObservation} from './coverage-browser.js'
 import {apply,match} from './engine.js'
@@ -329,4 +330,4 @@ function enforce(persona,report=()=>{}, {topLevel=true}={}) {
   }
   return state
 }
-globalThis.CurbCut=Object.freeze({apply,match,snapshot,reader,readerRow,enforce,exactSelector,discoverCoverage:()=>discoverCoverage(exactSelector),coverageObservation,keyboardVisibility,inspectRuleSelectors,observePassage,widthEvidence,instantPrivacy,collectInstantState:()=>collectInstantState(exactSelector)})
+globalThis.CurbCut=Object.freeze({collectNames:()=>collectNames(exactSelector),visibleLanguageSample,applyLiveName,apply,match,snapshot,reader,readerRow,enforce,exactSelector,discoverCoverage:()=>discoverCoverage(exactSelector),coverageObservation,keyboardVisibility,inspectRuleSelectors,observePassage,widthEvidence,instantPrivacy,collectInstantState:()=>collectInstantState(exactSelector)})

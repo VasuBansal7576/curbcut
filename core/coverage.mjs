@@ -26,8 +26,9 @@ export function verdict(evaluation,observation,enabled) {
     if(!observation.lang?.trim()) return 'fail'
     return observation.lang===name?'pass':'inconclusive'
   }
-  if(!observation.visible || observation.role!==role) return 'inconclusive'
+  if(!observation.visible) return 'inconclusive'
   if(role==='img' && enabled && name==='') return observation.alt==='' && !observation.name?'pass':'fail'
+  if(observation.role!==role) return 'inconclusive'
   return observation.name===name && name?'pass':!observation.name?'fail':'inconclusive'
 }
 
