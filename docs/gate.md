@@ -48,7 +48,7 @@ Copy the [Stop hook example](../examples/claude/settings.json) into your app’s
         "hooks": [
           {
             "type": "command",
-            "command": "curbcut gate --local --config curbcut.gate.json"
+            "command": "curbcut gate --local --config curbcut.gate.json >&2 || exit 2"
           }
         ]
       }
@@ -57,7 +57,7 @@ Copy the [Stop hook example](../examples/claude/settings.json) into your app’s
 }
 ```
 
-On a non-zero exit, read the FAIL blocks and change the source for those selectors. Re-run the Stop hook until the gate passes.
+The command sends Gate output to stderr and returns exit code 2 on failure, so Claude Code receives the FAIL blocks and can fix the corresponding source.
 
 ## CI
 

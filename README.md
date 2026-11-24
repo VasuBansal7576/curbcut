@@ -31,7 +31,7 @@ Use Node.js 22 or newer. Run `npm ci` and `npm link` to install the CLI, or run 
 - `curbcut gate --config curbcut.gate.json` prints failing selectors and reasons so a coding agent can fix the source. Add `--local` to Check or Gate for Playwright without Kane credits. The [Claude Code Stop hook](docs/gate.md#claude-code-stop-hook) runs Gate after edits.
 - The [PR bot](docs/pr-bot.md) runs Gate against a preview URL, posts one updated comment, and uploads Kane recordings.
 - `curbcut cost` summarizes recorded tokens and Kane balance changes. Recipes and inherited rules get a local replay before a full agent proposal. The family policy samples eligible inherited fixes for Kane. [Cost proof and policy](proof/cost/README.md)
-- `curbcut census <url-list-file> --limit N` estimates recipe-pattern reach from public pages. [Census](proof/census/README.md)
+- `curbcut census <url-list-file> --limit N` estimates recipe-pattern reach from public pages. The limit caps the input sample. The command also visits separate calibration pages. [Census](proof/census/README.md)
 
 ## Browser extension
 

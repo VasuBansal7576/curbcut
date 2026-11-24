@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "curbcut gate --local --config curbcut.gate.json"
+            "command": "curbcut gate --local --config curbcut.gate.json >&2 || exit 2"
           }
         ]
       }
