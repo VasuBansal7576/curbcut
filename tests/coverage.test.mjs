@@ -121,24 +121,24 @@ test('installed popup copies and downloads the CLI report without submitting it'
     const worker=context.serviceWorkers()[0]??await context.waitForEvent('serviceworker')
     const page=context.pages()[0]??await context.newPage()
     await page.goto(patch.match)
-    const popup=await context.newPage()
-    const popupUrl=new URL('popup.html',worker.url()).href
-    await popup.goto(popupUrl)
-    const ready=await popup.evaluate(async url=>{
+    const ready=await worker.evaluate(async url=>{
       const tabs=await chrome.tabs.query({})
       const tab=tabs.find(tab=>tab.url===url)
       if(!tab) return false
-      await chrome.storage.local.set({pendingStuck:true,capturedTabId:tab.id})
       const deadline=Date.now()+5000
       while(Date.now()<deadline) {
-        const result=await chrome.runtime.sendMessage({type:'QUERY_ACTIVE',capturedTabId:tab.id,includeMatches:true})
-        if(result.active?.some(item=>item.matchedRules?.length)) return true
+        const result=await chrome.tabs.sendMessage(tab.id,{type:'GET_ACTIVE',includeMatches:true}).catch(()=>null)
+        if(result?.active?.some(item=>item.matchedRules?.length && item.selectorMatches?.every(({count})=>count>0))) {
+          await chrome.storage.local.set({pendingStuck:true,capturedTabId:tab.id})
+          return true
+        }
         await new Promise(resolve=>setTimeout(resolve,100))
       }
       return false
     },patch.match)
     assert(ready,'The installed patch matched the page')
-    await popup.reload()
+    const popup=await context.newPage()
+    await popup.goto(new URL('popup.html',worker.url()).href)
     const panel=popup.locator('[data-patch-id="'+id+'"]')
     await panel.getByText('Send the fix to the site owner').click()
     await panel.getByRole('button',{name:'Copy Markdown'}).click()
