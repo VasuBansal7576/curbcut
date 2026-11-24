@@ -4,6 +4,7 @@ import {mkdtemp,readFile,rm} from 'node:fs/promises'
 import {tmpdir} from 'node:os'
 import path from 'node:path'
 import {setTimeout as delay} from 'node:timers/promises'
+import {observeCoverage} from '../core/coverage.mjs'
 import {BlockedPage,pageBlock} from '../core/access.mjs'
 import {guardRequests} from '../core/chrome.mjs'
 import {wwwTwin} from '../core/engine.js'
@@ -16,8 +17,9 @@ const runtime=await readFile(path.join(extension,'runtime.js'),'utf8')
 const bundleBytes=await readFile(path.join(extension,'bundled.json'))
 const bundled=JSON.parse(bundleBytes)
 const output=path.join(ROOT,'proof/reliability/extension-e2e.json')
-const requested=new Set(process.argv.slice(2))
-const patches=requested.size?bundled.filter(patch=>requested.has(patch.id)):bundled
+const v6Only=process.argv[2]==='--v6'
+const requested=new Set(v6Only?process.argv.slice(3):process.argv.slice(2))
+const patches=requested.size?bundled.filter(patch=>requested.has(patch.id)):v6Only?bundled.filter(patch=>patch.evaluation):bundled
 if(!patches.length || requested.size && patches.length!==requested.size) throw new Error('A requested audit patch is absent from the bundle.')
 const sample=await readJSON(path.join(ROOT,'proof/heldout-v5/kane-sample-20/summary.json')).catch(error=>{
   if(error.code==='ENOENT') return null
@@ -78,7 +80,8 @@ async function audit(patch,url,{twin=false}={}) {
       task.outcomeChecks.push({selector,kind:'text',equals:'Match taxa'},{selector,kind:'focused'})
     }
     const replayProbe=Boolean(task.probe && sampleRepairs.has(task.id))
-    const replay=Boolean(task.journey) || replayProbe
+    const coverage=Boolean(task.evaluation)
+    const replay=Boolean(task.journey) || replayProbe || coverage
     if(replayProbe) row.probeAction=task.probe.action
     profile=await mkdtemp(path.join(tmpdir(),'curbcut-extension-'))
     context=await chromium.launchPersistentContext(profile,{channel:'chromium',headless:true,acceptDownloads:false,
@@ -87,7 +90,8 @@ async function audit(patch,url,{twin=false}={}) {
     await guardRequests(context,task,{extension:true})
     const worker=context.serviceWorkers().find(worker=>worker.url().startsWith('chrome-extension:'))??
       await context.waitForEvent('serviceworker',{predicate:worker=>worker.url().startsWith('chrome-extension:'),timeout:8000})
-    if(replay) {
+    if(coverage) await context.addInitScript({content:runtime})
+    else if(replay) {
       const settings=JSON.stringify({persona:task.persona,site:siteKey(new URL(task.url))})
       await context.addInitScript({content:runtime+'\n;('+function({persona,site}) {
         if(location.protocol==='https:' && (location.hostname===site || location.hostname.endsWith('.'+site))) CurbCut.enforce(persona)
@@ -154,7 +158,8 @@ async function audit(patch,url,{twin=false}={}) {
             const pages=context.pages().filter(candidate=>taskDestination(task,new URL(candidate.url())))
             return pages.find(candidate=>candidate.url()===expected)??pages.at(-1)
           }}
-          if(task.journey) journey=await journeyLane(browser,task,task.persona,{onDOM:enabled?observe:undefined})
+          if(coverage) probe=await observeCoverage(page,task,{enabled})
+          else if(task.journey) journey=await journeyLane(browser,task,task.persona,{onDOM:enabled?observe:undefined})
           else {
             probe=await replayInstalledProbe(browser,task)
             delete probe.snapshot
@@ -211,6 +216,7 @@ for(const patch of patches) {
   results.push(row)
   console.error(results.length+'/'+patches.length,patch.id,row.status,row.reason??'')
   await pause()
+  if(v6Only) continue
   const twin=await auditTwin(patch,url)
   twinResults.push(twin)
   console.error('  www twin',twin.status,twin.reason??twin.probe?.reason??'')
@@ -224,7 +230,11 @@ const summary={runner:'playwright-extension',checkedAt:instant(),bundleSha256:cr
   total:results.length,passed:counts.pass??0,counts,journeys:{total:journeys.length,passed:journeys.filter(row=>row.status==='pass').length},results,
   probes:{total:probes.length,passed:probes.filter(row=>row.status==='pass').length},
   twins:{total:twinResults.length,serving:twinResults.filter(row=>row.probe?.status==='serving').length,passed:twinCounts.pass??0,counts:twinCounts,results:twinResults}}
-if(requested.size) console.log(JSON.stringify(summary,null,2))
+if(v6Only) {
+  await saveJSON(path.join(ROOT,'proof/heldout-v6/extension-e2e.json'),summary)
+  console.log(summary.passed+'/'+summary.total+' v6 fixes passed in the installed extension.')
+  if(summary.passed!==summary.total) process.exitCode=1
+} else if(requested.size) console.log(JSON.stringify(summary,null,2))
 else {
   await saveJSON(output,summary)
   console.log(summary.passed+'/'+summary.total+' bundled fixes passed the extension audit.')

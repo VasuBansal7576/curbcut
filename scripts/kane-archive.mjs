@@ -5,7 +5,7 @@ import {parseRun} from '../core/kane.mjs'
 
 export async function archiveKane() {
   const roots=['proof/kane','proof/heldout-v3/runs','proof/hard-v4/kane','proof/hard-v4/kane-objective-pilot',
-    'proof/heldout-v5/kane','proof/heldout-v5/kane-rerun-50','proof/heldout-v5/kane-sample-20']
+    'proof/heldout-v5/kane','proof/heldout-v5/kane-rerun-50','proof/heldout-v5/kane-sample-20','proof/heldout-v6/kane','proof/heldout-v6/calibration']
   const entries=(await Promise.all(roots.map(async root=>{
     const files=await readdir(path.join(ROOT,root),{recursive:true}).catch(error=>{
       if(error.code==='ENOENT') return []
@@ -24,7 +24,7 @@ export async function archiveKane() {
       (parsed.status===result.status || result.browserVerdict?.status===result.status)
     const status=agrees?result.status:'inconclusive'
     return {
-      taskId:file.split(path.sep)[0], phase:path.basename(directory), sessionId:result.runId??null, status,
+      taskId:file.split(path.sep)[0], phase:path.basename(directory).replace(/^(before|control|after)-[12]$/,'$1'), sessionId:result.runId??null, status,
       ...(status!==result.status?{recordedStatus:result.status}:{}),
       reason:result.integrity??result.reason??null, credits:result.credits??null,
       result:resultFile, recording:result.video??null, evidencePack:result.evidencePack??null
