@@ -46,10 +46,11 @@ test('codex args keep exec, read-only sandbox, and the answer file',()=>{
 })
 
 test('grok args use single-turn prompt file, model, and read-only sandbox',()=>{
-  const args=agentArgs({id:'grok',model:'grok-4.5'},{dir:'/tmp/x',answer:'/tmp/x/answer.json',promptFile:'/tmp/x/prompt.txt'})
-  assert.equal(args[0],'-p')
-  assert.equal(args[1],'--prompt-file')
-  assert.equal(args[2],'/tmp/x/prompt.txt')
+  const args=agentArgs({id:'grok',model:'grok-4.5'},{dir:'/tmp/x',answer:'/tmp/x/answer.json',promptFile:'/tmp/x/prompt.txt',disableTools:true})
+  assert.equal(args[0],'--prompt-file')
+  assert.equal(args[1],'/tmp/x/prompt.txt')
+  assert.ok(!args.includes('-p'))
+  assert.equal(args[args.indexOf('--tools')+1],'')
   assert.ok(args.includes('-m') && args.includes('grok-4.5'))
   assert.ok(args.includes('--sandbox') && args.includes('read-only'))
   assert.ok(args.includes('--output-format') && args.includes('plain'))
@@ -97,7 +98,7 @@ test('a stubbed grok backend reads stdout, keeps the JSON contract, and records 
   const {patch,calls,provenance,answer}=await stubbedPropose('grok',proposal)
   assert.equal(calls.length,1)
   assert.match(calls[0].executable,/grok$/)
-  assert.equal(calls[0].args[0],'-p')
+  assert.equal(calls[0].args[0],'--prompt-file')
   assert.equal(calls[0].options.timeout,150000)
   assert.equal(calls[0].options.processGroup,true)
   assert.equal(calls[0].options.input,undefined)
@@ -127,4 +128,39 @@ test('stubbed coverage naming records the selected backend',async()=>{
     assert.equal(grok.writer,'grok')
     assert.equal(grok.model,'grok-4.5')
   } finally {restoreAgentEnv(previous)}
+})
+
+test('a template correction sends the patch schema and retries a schema error once',async()=>{
+  const previous={CURBCUT_AGENT:process.env.CURBCUT_AGENT,CURBCUT_MODEL:process.env.CURBCUT_MODEL,CURBCUT_GROK:process.env.CURBCUT_GROK}
+  const directory=await mkdtemp(path.join(tmpdir(),'curbcut-template-correction-'))
+  const calls=[]
+  const inherited=original.rules.slice(0,1)
+  process.env.CURBCUT_AGENT='grok'
+  try {
+    const patch=await propose({...task,observedSelector:inherited[0].selector},{
+      nearMiss:{patch:{rules:inherited},reason:'The expected name was absent.'},
+      snapshot:{repair:{visibleText:'Find items',labels:['Search catalog']}}
+    },inherited,directory,{
+      validateSelectors:async()=>({ok:true,matches:[]}),
+      run:async(_,args)=>{
+        const prompt=await readFile(args[1],'utf8')
+        const [,schema,data]=prompt.split('\n')
+        assert.deepEqual(JSON.parse(schema),await readJSON('schemas/patch.json'))
+        calls.push(JSON.parse(data))
+        return {code:0,stdout:calls.length===1?'{"barrier":"Missing name","rules":[]}':proposal,stderr:''}
+      }
+    })
+    assert.equal(calls.length,2)
+    for(const call of calls) {
+      assert.deepEqual(call.inheritedRules,inherited)
+      assert.equal(call.reason,'The expected name was absent.')
+      assert.deepEqual(call.target,{selector:inherited[0].selector,visibleText:'Find items',labelCandidates:['Search catalog']})
+    }
+    assert.equal(calls[0].validatorMessage,undefined)
+    assert.match(calls[1].validatorMessage,/\/rules.*minItems/)
+    assert.deepEqual(patch.rules,original.rules)
+  } finally {
+    restoreAgentEnv(previous)
+    await rm(directory,{recursive:true,force:true})
+  }
 })
