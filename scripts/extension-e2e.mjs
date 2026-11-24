@@ -210,17 +210,31 @@ async function auditTwin(patch,address) {
 }
 
 const results=[],twinResults=[]
-for(const patch of patches) {
+let audited=0
+async function check(patch,index) {
   const url=patch.url??patch.match.replace(/\*$/,'')
   const row=await audit(patch,url)
-  results.push(row)
-  console.error(results.length+'/'+patches.length,patch.id,row.status,row.reason??'')
+  results[index]=row
+  console.error(++audited+'/'+patches.length,patch.id,row.status,row.reason??'')
   await pause()
-  if(v6Only) continue
+  if(v6Only) return
   const twin=await auditTwin(patch,url)
   twinResults.push(twin)
   console.error('  www twin',twin.status,twin.reason??twin.probe?.reason??'')
-  if(results.length<patches.length) await pause()
+  if(audited<patches.length) await pause()
+}
+
+if(v6Only) {
+  const queue=Object.values(Object.groupBy(patches.map((patch,index)=>({patch,index})),({patch})=>siteKey(new URL(patch.match))))
+  async function worker() {
+    while(queue.length) {
+      const rows=queue.shift()
+      for(const {patch,index} of rows) await check(patch,index)
+    }
+  }
+  await Promise.all([worker(),worker()])
+} else {
+  for(const [index,patch] of patches.entries()) await check(patch,index)
 }
 const countStatuses=rows=>Object.fromEntries(Object.entries(Object.groupBy(rows,row=>row.status)).map(([status,group])=>[status,group.length]))
 const counts=countStatuses(results),twinCounts=countStatuses(twinResults)
