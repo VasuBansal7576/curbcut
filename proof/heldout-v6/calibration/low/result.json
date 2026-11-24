@@ -1,0 +1,320 @@
+{
+  "status": "pass",
+  "runId": "a878ac72-6d3e-4967-8ccc-40e26ec182b7",
+  "reason": "Objective completed",
+  "summary": "Read the three-part printed reference shown below “Read the printed reference below” on the public page.\nReported the exact reference as “moss cedar 8147.”",
+  "resultCode": 100,
+  "reasonCode": "success.complete",
+  "finalUrl": "http://127.0.0.1:4317/fixtures/shop/v6/low.html",
+  "credits": 16.669294999999998,
+  "exitCode": 0,
+  "exitSignal": null,
+  "steps": [
+    "navigate: Navigate to http://127.0.0.1:4317/fixtures/shop/v6/low.html",
+    "analyze: ANALYZE(textual_visual, 'the exact three-part printed reference below “Read the ",
+    "wait: Waiting after saving the printed reference"
+  ],
+  "preflight": {
+    "persona": "low-contrast-simulation",
+    "status": "pass",
+    "url": "http://127.0.0.1:4317/fixtures/shop/v6/low.html",
+    "httpStatus": 200,
+    "width": 1280,
+    "browser": "159.0.8154.6"
+  },
+  "objective": "Use only the visible screenshot to read the requested text under the low contrast sensitivity simulation. Do not use DOM, accessibility text, page source, zoom, or controls to reveal unreadable text. Report the exact text if legible. Otherwise fail the task and report that it is unreadable. Stay on this public site. Do not sign in, register, pay, send or submit anything, or interact with a CAPTCHA or access challenge. Leave fixture settings unchanged. Use visible controls only. Report the exact three-part printed reference below “Read the printed reference below.” Use the screenshot only. If you cannot read every part, report the task as failed.",
+  "kaneStatus": "pass",
+  "limits": {
+    "maxSteps": 6,
+    "timeout": 100,
+    "assertionMode": "visual"
+  },
+  "evidencePack": "proof/heldout-v6/calibration/low/45eb145b-3fe6-4d89-91d9-c889febc1326.evidence",
+  "evidenceValid": true,
+  "runner": "kane",
+  "recordingTrail": [
+    {
+      "index": 0,
+      "events": [
+        {
+          "type": "document",
+          "documentId": "ca357438-8b3c-4a25-b0c9-ad481a229c6d",
+          "url": "http://127.0.0.1:4317/fixtures/shop/v6/low.html",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "document",
+          "documentId": "6028551a-311c-4f8e-b1fa-96d4606955df",
+          "url": "http://127.0.0.1:4317/fixtures/shop/v6/low.html",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        }
+      ]
+    }
+  ],
+  "inspection": {
+    "harness": {
+      "persona": "low-contrast-simulation",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920,
+      "documentId": "6028551a-311c-4f8e-b1fa-96d4606955df",
+      "simulationFilter": "grayscale(1) contrast(0.22)"
+    },
+    "readerVisible": false,
+    "width": 1280,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "http://127.0.0.1:4317/fixtures/shop/v6/low.html",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#reference",
+          "parent": "main",
+          "tag": "p",
+          "attributes": {
+            "id": "reference"
+          },
+          "hoverHandlers": [],
+          "text": "moss cedar 8147",
+          "children": [],
+          "box": [
+            60,
+            177,
+            1160,
+            21
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "main",
+          "parent": "body",
+          "tag": "main",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "h1",
+            "p",
+            "#reference"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            276
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "body",
+          "parent": "html",
+          "tag": "body",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "main"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            276
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "html",
+          "tag": "html",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "head",
+            "body"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            276
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": []
+    },
+    "nodes": [
+      {
+        "selector": "#reference",
+        "role": "text",
+        "name": "moss cedar 8147",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 60,
+        "width": 1160
+      },
+      {
+        "selector": "main",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tag": "main",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Read the printed reference below.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 60,
+        "width": 1160
+      },
+      {
+        "selector": "body",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Contrast calibration",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 60,
+        "width": 1160
+      }
+    ]
+  },
+  "video": "proof/heldout-v6/calibration/low/recording.mp4"
+}
