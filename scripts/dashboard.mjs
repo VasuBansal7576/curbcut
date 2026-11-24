@@ -1,9 +1,13 @@
+import {execFile} from 'node:child_process'
+import {promisify} from 'node:util'
 import path from 'node:path'
 import {cp, mkdir, writeFile} from 'node:fs/promises'
 import {build} from 'esbuild'
-import {opening, reader, contrast, curb, dotField, mark, icon} from './landing-scenes.mjs'
+import {focusStory} from './focus-story.mjs'
+import {dotField, mark} from './landing-scenes.mjs'
 import {ROOT, readJSON} from '../core/io.mjs'
 
+const execFileAsync = promisify(execFile)
 const repo = 'https://github.com/VasuBansal7576/curbcut'
 const raw = 'https://raw.githubusercontent.com/VasuBansal7576/curbcut/main/'
 const proof = file => readJSON(path.join(ROOT, 'proof', file + '.json'))
@@ -75,11 +79,10 @@ const featured = [
 function replayCard([slug, id, name, task], entries) {
   const entry = entries.find(row => row.patch.id === id)
   const [before,,after] = entry.recordings
-  return `<article class="replay" data-preview-before="assets/previews/${slug}-before.mp4" data-preview-after="assets/previews/${slug}-after.mp4"><h3>${name}</h3><div class="still">
-    ${videoLink(entry,after,`<img src="assets/${slug}.jpg" width="680" height="372" alt="" loading="lazy"><span class="play" aria-hidden="true">▶</span><span class="sr">Play repaired run</span>`)}
-    <video muted playsinline preload="none" aria-hidden="true"></video></div>
-    <p>${task}</p><div class="replay-actions">${videoLink(entry,before,'<b>×</b> Before','verdict fail')}
-    ${videoLink(entry,after,'<b>✓</b> After','verdict pass')} ${proofLink(after.pack,'Pack '+arrow)}</div></article>`
+  return `<article id="replay-${slug}" class="replay" data-preview-before="assets/previews/${slug}-before.mp4" data-preview-after="assets/previews/${slug}-after.mp4"><h3>${name}</h3>
+    <video class="site-recording" muted controls playsinline preload="none" poster="assets/${slug}.jpg" src="${link(after.file)}" aria-label="${name} repaired run"></video>
+    <p>${task}</p><div class="replay-actions">${videoLink(entry,before,'Play before','verdict fail')}
+    ${videoLink(entry,after,'Play after','verdict pass')} ${proofLink(after.pack,'Evidence pack '+arrow)}</div></article>`
 }
 function select(name, label, values) {
   return `<label><span>${label}</span><select name="${name}"><option value="">All ${label === 'Proof' ? 'proof' : label.toLowerCase()+'s'}</option>${[...new Set(values)].sort().map(value => `<option>${esc(value)}</option>`).join('')}</select></label>`
@@ -115,33 +118,45 @@ export async function buildDashboard({bundled, v5Local, v5Sample, v6Local, v6Kan
   await Promise.all([build({entryPoints:[path.join(ROOT,'scripts/landing-motion.mjs')],bundle:true,minify:true,legalComments:'eof',outfile:path.join(assets,'story.js')}),
     ...[['launch/curbcut-launch-thumbnail.png','curbcut-launch-thumbnail.png'],['launch/captions/launch.vtt','launch.vtt'],
       ['extension/icons/icon32.png','icon.png']].map(([source,name])=>cp(path.join(ROOT,source),path.join(assets,name)))])
-  const download = repo+'/releases/tag/v1.0'
+  const download = 'assets/curbcut-extension.zip'
+  await execFileAsync('python3', ['-c', `
+from pathlib import Path
+from sys import argv
+from zipfile import ZipFile, ZIP_DEFLATED
+root = Path(argv[1])
+with ZipFile(argv[2], 'w', ZIP_DEFLATED) as archive:
+    for file in sorted(root.rglob('*')):
+        name = file.relative_to(root)
+        if file.is_file() and all(not part.startswith('.') for part in name.parts):
+            archive.write(file, name)
+`, path.join(ROOT, 'extension'), path.join(assets, 'curbcut-extension.zip')])
   const mass = entries.find(entry=>entry.patch.id===featured[0][1])
-  const review = jev.pages.flatMap(page=>page.names??[]).find(name=>name.choice==='paste' && name.judgment==='correct')
   const percent = webAim.homePagesWithDetectedFailuresPercent
   const steps = [
-    ['before','Keyboard','The menu stays shut.','Arrow Down reaches About, but its links stay hidden.','13-0-13'],
+    ['before','Keyboard','The menu stays shut.','Step 2 failed: Arrow Down left About focused and no visible or accessible “The DHE” control appeared.','13-0-13'],
     ['control','Mouse','The pointer gets through.','With a mouse, Kane follows The DHE to its destination.','7-0-8'],
     ['fix','Repair','Give focus the same behavior.','The scoped rule opens the submenu when its parent receives keyboard focus.'],
     ['after','Keyboard','This time it opens.','Kane repeats the task with the repair and reaches The DHE.','13-0-13']
   ]
-  const protocol = steps.map(([phase,input,title,caption,frame])=>{
+  const protocol = steps.map(([phase,input,title,caption])=>{
     const run = mass.recordings.find(item=>item.phase===phase)
-    const verdict = mass.patch.evidence.kaneVerdicts[phase]?.toUpperCase() ?? 'FIX'
-    const rule = mass.patch.rules[0]
-    const visual = run ? `<img src="assets/protocol-${phase}.jpg" alt="${esc(caption)}" width="900" height="525" loading="lazy">` :
-      `<div class="patch-code"><span>Scoped rule</span><strong>${esc(rule.action)}</strong><code>${esc(rule.selector)}</code></div>`
-    return `<figure class="proof-frame" id="run-${phase}"><div class="proof-bar mono"><span>mass.edu</span><b class="${verdict.toLowerCase()}">${input} / ${verdict}</b></div>${visual}<figcaption><strong>${title}</strong><p>${caption}</p><small>${run ? proofLink(run.pack,'Evidence pack · frame '+frame+' '+arrow) : proofLink('patches/'+mass.patch.id+'.json','Read the patch '+arrow)}</small></figcaption></figure>`
+    const verdict = mass.patch.evidence.kaneVerdicts[phase]?.toUpperCase() ?? 'RULE'
+    const subject = run ? input+' / '+verdict : mass.patch.rules[0].action
+    return `<article class="run" id="run-${phase}" data-phase="${phase}">
+      <h3><span data-subject>${esc(subject)}</span></h3><p>${esc(caption)}</p>
+      ${run ? `<video muted playsinline preload="none" poster="assets/protocol-${phase}.jpg" data-src="assets/previews/kane-${phase}.mp4" aria-label="${esc(title)}"></video><div>${videoLink(mass,run,'Play complete run')} · ${proofLink(run.pack,'Evidence pack')}</div>` :
+        `<pre>${esc(JSON.stringify(mass.patch.rules[0],null,2))}</pre>${proofLink('patches/'+mass.patch.id+'.json','Open the scoped repair')}`}
+    </article>`
   }).join('')
   const html = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#2340FF"><title>Curb Cut — Accessibility fixes for the web</title><meta name="description" content="A Chrome extension that fixes keyboard, screen reader and low-vision barriers on real websites. Explore the evidence for every shipped fix.">
+<meta name="theme-color" content="#161419"><title>Curb Cut — Accessibility fixes for the web</title><meta name="description" content="A Chrome extension that fixes keyboard, screen reader and low-vision barriers on real websites. Explore the evidence for every shipped fix.">
 <link rel="icon" href="assets/icon.png"><link rel="preload" href="assets/fonts/inter-tight.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="style.css"><script defer src="dashboard.js"></script><script defer src="assets/story.js"></script></head>
 <body><a href="#main" class="skip">Skip to content</a><header class="mast"><div class="frame"><a class="wordmark" href="#opening" aria-label="Curb Cut home">${mark}Curb Cut</a><nav aria-label="Sections"><a href="#protocol">How it works</a><a href="#evidence">Evidence</a><a href="${download}">Get extension ↗</a></nav></div></header>
-<main id="main">${opening(download)}${reader()}${contrast()}${curb()}
-<section class="protocol scene" id="protocol"><div class="frame protocol-sticky"><div class="protocol-intro"><p class="kicker"><i class="signal"></i> The Kane protocol</p><h2>No fix ships<br>on a <em>guess.</em></h2><p class="intro">One real task at Mass.edu. Watch Kane try to reach “The DHE” through the About menu.</p>
-<div class="step-buttons" hidden role="group" aria-label="Select a protocol step">${steps.map(([phase,input],i)=>`<button type="button" aria-controls="run-${phase}"><small>0${i+1}</small> ${['Keyboard fails','Mouse passes','Apply fix','Keyboard passes'][i]}<span aria-hidden="true">↗</span></button>`).join('')}</div></div><div class="proof-projector">${protocol}</div></div></section>
-<section class="scale paper scene" id="results"><div class="frame"><p class="kicker"><i class="signal"></i> The scale</p><div class="scale-grid"><div><h2><span class="stat">${percent}<em>%</em></span><span class="stat-title">of home pages</span></h2><p class="intro">had detectable WCAG failures in the <a href="${webAim.source}">WebAIM Million ${webAim.year}</a>.</p></div><figure class="dot-figure">${dotField(percent)}<figcaption class="mono">${Math.round(percent*10)} of 1,000 · normalized sample</figcaption></figure></div>
+<div id="travel-ring" hidden aria-hidden="true"></div><main id="main">${focusStory()}
+<section class="protocol scene" id="protocol"><div class="frame"><p class="kicker">Mass.edu / Kane CLI</p><h2>One menu. Three runs.</h2><p class="intro">Follow the same destination through a keyboard failure, a pointer control and a repaired keyboard run.</p></div>
+<div class="run-track"><div class="run-stage"><div class="phase-tabs" hidden role="group" aria-label="Select a Kane phase">${steps.map(([phase],i)=>`<button aria-controls="run-${phase}">${['Keyboard','Pointer','Agent rule','Re-run'][i]}</button>`).join('')}</div>${protocol}</div></div></section>
+<section class="scale paper scene" id="results"><div class="frame"><p class="kicker"><i class="signal"></i> The scale</p><div class="scale-grid"><div><h2><span class="stat">${percent}%</span><span class="stat-title">of home pages</span></h2><p class="intro">had detectable WCAG failures in the <a href="${webAim.source}">WebAIM Million ${webAim.year}</a>.</p></div><figure class="dot-figure">${dotField(percent)}<figcaption class="mono">${Math.round(percent*10)} of 1,000 · normalized sample</figcaption></figure></div>
 <div class="inventory"><div><strong aria-hidden="true" data-total="${entries.length}">${entries.length}</strong><span><span class="sr">${entries.length} </span>fixes live in the extension</span></div><p><b>${kaneCount}</b> Kane-verified<br><b>${entries.length-kaneCount}</b> with local proof</p></div>
 <details class="studies-more"><summary>Explore the study results</summary><div class="study-grid"><div class="coverage"><h3>Six common failure types</h3>
 <p>Share of home pages in the <a href="${webAim.source}">WebAIM Million ${webAim.year}</a>. Repair rates use our registered tasks.</p>
@@ -149,16 +164,18 @@ export async function buildDashboard({bundled, v5Local, v5Sample, v6Local, v6Kan
 <p class="footnote">Language also passed on ${proofLink('proof/heldout-v6/development-language/summary.json',tally(languageDev.rows,row=>row.status==='locally-fixed')+' development pages')}. Kane rates cover sampled tasks.</p></div>
 <div class="studies"><h3>Held-out studies</h3>${studies.map(([version,sites,local,kane,sample,note])=>`<article><header><span class="version">${version}</span><a href="${link('proof/heldout-'+version+'/README.md')}">${sites.toLocaleString('en-US')} sites scouted ${arrow}</a></header>
 <div class="study-numbers"><div><strong>${local}</strong><span>Local repairs</span></div><div><strong>${kane}</strong><span>Kane · ${sample}</span></div></div><p>${note}</p></article>`).join('')}</div></div></details></div></section>
-<section class="recordings scene" id="recordings"><div class="frame"><p class="kicker"><i class="signal"></i> Real recordings</p><h2>See the <em>difference.</em></h2><p class="intro">Play either run to follow the same task before and after its repair.</p><div class="replays">${featured.map(item=>replayCard(item,entries)).join('')}</div></div></section>
-<section class="ledger paper scene" id="evidence"><div class="frame"><p class="kicker"><i class="signal"></i> Evidence ledger</p><h2>Every <em>fix.</em></h2><p class="intro">Search all ${entries.length} shipped fixes. Open a row for the task, patch, and proof.</p>
+<section class="recordings scene" id="recordings"><div class="frame"><p class="kicker"><i class="signal"></i> Real recordings</p><h2>See the difference.</h2><p class="intro">Play either run to follow the same task before and after its repair.</p><div class="phase-tabs site-switcher" hidden role="group" aria-label="Choose a recorded site">${featured.map(([slug,,name])=>`<button type="button" aria-controls="replay-${slug}">${name}</button>`).join('')}</div><div class="replays">${featured.map(item=>replayCard(item,entries)).join('')}</div></div></section>
+<section class="ledger paper scene" id="evidence"><div class="frame"><p class="kicker"><i class="signal"></i> Evidence ledger</p><h2>Every fix.</h2><p class="intro">Search all ${entries.length} shipped fixes. Open a row for the task, patch, and proof.</p>
 <form id="filters" role="search" aria-label="Filter evidence"><label class="search"><span>Site</span><input name="site" type="search" placeholder="Search by domain" autocomplete="off"></label>
 ${select('barrier','Barrier',entries.map(r=>r.barrier))}${select('persona','Persona',entries.map(r=>r.persona))}${select('proof','Proof',entries.map(r=>r.proofType))}</form>
 <noscript><p>${proofLink('patches/index.json','Open the complete fix index')} to inspect all fixes.</p></noscript>
 <table class="ledger-table"><caption class="sr">Bundled fixes and supporting evidence</caption><thead><tr><th scope="col">Site</th><th scope="col">Barrier</th><th class="persona" scope="col">Persona</th><th scope="col">Proof</th></tr></thead>
 ${entries.map(ledgerRow).join('\n')}</table><p id="empty" hidden>No matching fixes. <button type="button" id="clear">Clear filters</button></p>
 <div class="pager"><span id="count" role="status" aria-live="polite"></span><div><button id="prev" type="button" aria-label="Previous page">← Previous</button><button id="next" type="button" aria-label="Next page">Next →</button></div></div></div></section>
-<section class="experiment scene" id="jev"><div class="frame jev-grid"><div><p class="kicker"><i class="signal"></i> Experimental · opt-in</p><h2>A name,<br>given <em>live.</em></h2><p class="intro">Jev proposes names for unlabeled controls as you browse. In a ${jev.summary.attemptedSites}-site run, it named ${jev.summary.appliedNames} of ${jev.summary.unnamedControls} unnamed controls.</p>${proofLink('proof/jev/live-naming-real-sites.json','Read the manual review '+arrow)}</div><div class="jev-proof"><div class="label-sheet"><span class="mono">Jev / live naming</span><strong>${jev.adjudication.correct}<em>/</em>${jev.summary.appliedNames}</strong><span>names judged correct</span></div><div class="label-result">${icon('clipboard')}<span><small>Reviewed example</small>${esc(review.name)}</span></div></div></div></section>
-<section class="ending blue scene" id="download"><div class="frame end-grid"><div><p class="kicker"><i class="signal"></i> Curb Cut for Chrome</p><h2>Take it<br><em>with</em> you.</h2><div class="end-actions"><a class="primary" href="${download}">Download extension ↗</a><a href="${repo}">GitHub ↗</a></div></div><figure class="film"><video id="film" controls playsinline preload="none" poster="assets/curbcut-launch-thumbnail.png" src="${process.env.CURBCUT_PAGES==='1'?raw+'launch/curbcut-launch.mp4':link('launch/curbcut-launch.mp4')}" aria-label="Curb Cut launch film"><track kind="captions" src="assets/launch.vtt" srclang="en" label="English"></video>
+<section class="experiment scene" id="jev"><div class="frame jev-grid"><div><p class="kicker"><i class="signal"></i> Experimental · opt-in</p><h2>A name,<br>given live.</h2><p class="intro">Jev proposes names for unlabeled controls as you browse. In a ${jev.summary.attemptedSites}-site run, it named ${jev.summary.appliedNames} of ${jev.summary.unnamedControls} unnamed controls.</p>${proofLink('proof/jev/live-naming-real-sites.json','Read the manual review '+arrow)}</div><div class="jev-proof"><div class="label-sheet"><span class="mono">Jev / live naming</span><strong>${jev.adjudication.correct}/${jev.summary.appliedNames}</strong><span>names judged correct</span></div></div></div></section>
+<section class="scene"><div class="frame"><p class="kicker">Kane for developers</p><h2>Replay the failure.</h2><p class="intro">Kane records the blocked task, checks the pointer control, gives the coding agent the failed run, and repeats the task with the proposed fix.</p><div><pre data-subject>curbcut check &lt;url&gt; "&lt;task&gt;"
+curbcut gate</pre></div></div></section>
+<section class="ending blue scene" id="download"><div class="frame end-grid"><div><p class="kicker"><i class="signal"></i> Curb Cut for Chrome</p><h2>Take it<br>with you.</h2><ol><li>Download and unzip the extension.</li><li>Open chrome://extensions and enable Developer mode.</li><li>Choose Load unpacked and select the extracted extension folder.</li></ol><div class="end-actions"><a class="primary" data-subject href="${download}">Download extension ↗</a><a href="${repo}">GitHub ↗</a></div></div><figure class="film"><video id="film" controls playsinline preload="none" poster="assets/focus-film.jpg" src="${process.env.CURBCUT_PAGES==='1'?raw+'launch/curbcut-launch.mp4':link('launch/curbcut-launch.mp4')}" aria-label="Curb Cut launch film"><track kind="captions" src="assets/launch.vtt" srclang="en" label="English"></video>
 <figcaption><button type="button" id="start-film" hidden>▶ Watch the film</button><span>English captions · CC</span></figcaption></figure></div></section>
 </main><footer><div class="frame"><a href="#opening" class="wordmark">${mark}Curb Cut</a><div><h2>Verify locally</h2><code>npm test &amp;&amp; npm run build</code><br><code>node scripts/verify-evidence.mjs</code></div><nav aria-label="Documentation"><a href="${repo}/blob/main/README.md">README ↗</a> ${proofLink('proof/README.md','Proof index '+arrow)}</nav></div></footer>
 <dialog id="player" aria-labelledby="player-title"><div class="player-head"><h2 id="player-title">Kane recording</h2><button type="button" id="close">Close ×</button></div><video controls playsinline preload="none" aria-labelledby="player-title"></video><a id="original">Open original recording ${arrow}</a></dialog>
