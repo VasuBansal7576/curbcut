@@ -23,7 +23,12 @@ const rows=Object.values(cuts).flat().map(shot=>({...shot,beats:beats.filter(b=>
 
 function assets(shot){
   const plates={}
-  for(const {asset} of shot.beats){
+  const sources=shot.beats.map(b=>b.asset)
+  for(const asset of [...sources]){
+    const detail=index[asset]?.magnifierSource
+    if(detail)sources.push(detail)
+  }
+  for(const asset of sources){
     if(!asset||plates[asset])continue
     const record=index[asset],source=path.join(root,'film/plates',record.file)
     if(record.file.endsWith('.mp4')){

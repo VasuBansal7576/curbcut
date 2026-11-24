@@ -13,6 +13,7 @@ DEST = Path(os.environ.get("FILM_OUTPUT", LAUNCH))
 
 def contacts():
     rows = []
+    seconds = []
     cuts = json.loads((LAUNCH/"film/word-times.json").read_text())
     font = ImageFont.truetype(str(LAUNCH/"film/fonts/JetBrainsMono.ttf"), 16)
     for cut, movie in [("master", "curbcut-launch.mp4"), ("teaser", "curbcut-launch-15s.mp4")]:
@@ -21,7 +22,10 @@ def contacts():
         subprocess.run(["ffmpeg","-v","error","-y","-i",DEST/movie,"-vf",r"select=not(mod(n\,15)),scale=960:540:flags=lanczos","-fps_mode","vfr","-q:v","2",folder/"%04d.jpg"],check=True)
         count = math.ceil(sum(s["frames"] for s in cuts[cut])/15)
         for i in range(count):
-            rows.append((folder/f"{i+1:04d}.jpg",f"{cut}   {i//120}:{(i//2)%60:02d}.{5*(i%2)}"))
+            row = (folder/f"{i+1:04d}.jpg",f"{cut}   {i//120}:{(i//2)%60:02d}.{5*(i%2)}")
+            rows.append(row)
+            if i%2==0:
+                seconds.append(row)
     def sheet(subset, columns, width, path):
         height = width*9//16
         contact = Image.new("RGB",(width*columns,(height+26)*math.ceil(len(subset)/columns)),"#202020")
@@ -34,6 +38,7 @@ def contacts():
         contact.save(path)
     (DEST/"out").mkdir(exist_ok=True)
     sheet(rows,5,320,DEST/"out/contact.png")
+    sheet(seconds,4,400,DEST/"out/contact-1fps.png")
     for i in range(0,len(rows),12):
         sheet(rows[i:i+12],3,510,WORK/f"inspection-{i//12:02d}.jpg")
     return len(rows)

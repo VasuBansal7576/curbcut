@@ -58,6 +58,14 @@ def levels(video):
                 highpass_300Hz_mean_dBFS=high, difference_dB=round(high - full, 1))
 
 
+def check_motion(video):
+    _, log = run(["ffmpeg", "-hide_banner", "-nostats", "-i", video, "-an", "-vf",
+                  "scale=480:270,freezedetect=n=-57dB:d=1.5", "-f", "null", "-"])
+    intervals = re.findall(r"lavfi.freezedetect.freeze_start: ([0-9.]+)", log)
+    assert not intervals, (video.name, intervals)
+    return {"minimum_hold_seconds": 1.5, "noise_tolerance_dB": -57, "detected_holds": 0}
+
+
 def words(text):
     text = text.lower().replace("’", "'").replace("%", " percent").replace("homepages", "home pages")
     variants = {
@@ -136,6 +144,7 @@ def main():
         assert lines==[cue["text"] for s in cuts[name] for cue in s["cues"]]
         track = LAUNCH/"captions"/("launch.vtt" if name=="master" else "teaser.vtt")
         assert track.read_text().strip().split("\n\n")[1:]==[f"{stamp(s['frame']/30+c['start'])} --> {stamp(s['frame']/30+c['end'])}\n{c['text']}" for s in cuts[name] for c in s["cues"]]
+        settings["motion_check"] = check_motion(movie)
         settings["transcript"] = transcript(movie,OUT/("transcript" if name=="master" else "teaser-transcript"),script)
         settings["sha256"] = hashlib.sha256(movie.read_bytes()).hexdigest()
         report[name] = settings

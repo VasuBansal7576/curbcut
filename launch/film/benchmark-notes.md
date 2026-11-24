@@ -13,3 +13,7 @@ At storyboard size the first version’s pointer and naming beats were nearly id
 ## Comparison after the cobalt render
 
 The first cobalt edit held the percentage and its denominator together for nearly six seconds. Following Granola’s shifts in type hierarchy, the number now lands alone and the denominator enters on “top.” The teaser now cuts from the closed menu to the installed extension changing state and returns to the same menu. In the Kane replay, the title names the exact task, “Open About.” The closing card pairs the ramp mark with a spoken Chrome invitation and the release repository address.
+
+## Product close-ups
+
+On the one-frame-per-second review the first cobalt edit made the viewer divide attention between large headlines and small interface details. The revised frames devote 63–66% of the screen to the browser. Four real Reading view rows establish which names change. The Kane replay pairs the archive with a magnified About control from the same public menu. Its destination label changes on the recorded navigation frame. The statistic fills 959 of 1,000 dots, and the 105-fix line travels through the actual popup to its proof links.

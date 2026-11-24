@@ -1,7 +1,7 @@
 function rail(x,y,w,color=lime){roundBox(x,y,w,6,3,color)}
 function typeFrame(lines,size,age,emphasis,sub=''){
   ground()
-  const x=122+48*(1-at(age,0,.34))
+  const x=122+48*(1-at(age,0,.34))+32*travel(age)
   const baseline=(lines.length===1?635:485)+40*(1-at(age,0,.42))
   typeLines(lines,x,baseline,size,white,1670,.91,emphasis)
   if(sub)print(sub,x+5,baseline+108,65,lime,'Tight',620)
@@ -19,7 +19,7 @@ function brandFrame(state,age){
     print('Curb Cut',110,415,236,white)
     return
   }
-  curbObject(1402,761,.80,age+1)
+  curbObject(1435-50*travel(age),808-68*travel(age),.72+.10*travel(age),age+1)
   typeLines(['Right in','your browser.'],111,484,190,white,1080,.96,'browser')
 }
 function browserFrame(x,y,w,h,host){
@@ -48,92 +48,119 @@ function corners(r,color,t){
     ctx.beginPath();ctx.moveTo(xx+n*dx,yy);ctx.lineTo(xx,yy);ctx.lineTo(xx,yy+n*dy);ctx.stroke()
   }
 }
-function menuShot(a,open,age){
+function travel(t){return smooth(t/window.beatLength)}
+function hero(title,host,t,options={}){
   ground()
-  const x=870,y=185+12*(1-at(age,0,.35)),w=933,h=470,z=.86+.035*at(age,0,1.1)
-  browserFrame(x,y,w,h,'mass.edu')
-  const project=plate(a,x,y+74,w,h,0,528,z)
-  corners(project(a.letters.trigger.bounds),open?lime:coral,age)
-  label('Keyboard',110,235,34,white)
-  typeLines(open?['Menu','open.']:['Menu','closed.'],104,480,175,open?lime:white,720,.88,open?'open':'closed')
-  if(!open)rect(114,708,214,10,coral)
-  else rail(114,700,300)
+  const {x=90,y=193,w=1740,h=706,category='',status=''}=options
+  print(title,x-5,144,105,white,'Tight',800,status?1000:1390)
+  if(category){
+    face(37,'Mono',600)
+    print(category,x+w-ctx.measureText(category).width,137,37,lime,'Mono',600)
+  }
+  if(status){
+    const col=status==='FAIL'?coral:lime
+    roundBox(x+w-293,60,293,100,19,col)
+    print(status,x+w-257,138,78,ink,'Mono',780)
+  }
+  browserFrame(x,y,w,h,host)
+  return {x,y:y+74,w,h,p:travel(t)}
+}
+function menuShot(a,open,t){
+  const v=hero(open?'Menu open.':'Menu closed.','mass.edu',t,{category:'Keyboard'})
+  const target=a.letters.trigger.bounds
+  const z=.72+.23*v.p
+  const project=plate(a,v.x,v.y,v.w,v.h,0,target[1]-82+12*v.p,z)
+  corners(project(target),open?lime:coral,t)
 }
 function readingShot(state,a,t){
-  ground()
-  const spanish=state.startsWith('jev')
-  const named=state==='reader-on'||state==='jev-on'
-  const headline=spanish?(state==='jev-off'?'An unfamiliar page.':state==='jev'?'Meet Jev.':'Buttons with names.'):(named?'Previous slide.':'Just “button.”')
-  const x=138,w=1644,headerY=spanish?401:418,h=spanish?332:165
-  label(spanish?'Live naming':'Screen reader',137,128,34,white)
-  typeLines([headline],126,322,157,named?lime:white,1660,.95,spanish?'names':(named?'slide':'button'))
-  browserFrame(x,headerY,w,h,spanish?'meridiano.net  /  Reading view':'munich-airport.de  /  Reading view')
-  const target=a.targets[0],z=1.045+.023*at(t,0,1.0)
-  const project=plate(a,x,headerY+74,w,h,target.words[0]-56/z,target.rect[1]-(h/z-(spanish?2:1)*target.rect[3])/2,z)
+  const spanish=state.startsWith('jev'),named=state==='reader-on'||state==='jev-on'
+  const title=spanish?(state==='jev-off'?'An unfamiliar page.':state==='jev'?'Meet Jev.':'Buttons with names.'):(named?'Previous slide.':'Just “button.”')
+  const v=hero(title,spanish?'meridiano.net  /  Reading view':'munich-airport.de  /  Reading view',t,{category:spanish?'Live naming':'Screen reader'})
+  const row=a.targets[0],z=1.13+.11*v.p
+  const project=plate(a,v.x,v.y,v.w,v.h,row.words[0]-(94-18*v.p)/z,row.rect[1]-row.rect[3]-(v.h/z-row.rect[3]*4)/2,z)
   for(const target of a.targets){
-    const [xx,yy,ww,hh]=project(target.words)
-    line(xx,yy+hh+4,xx+ww*at(t+.1,0,.35),yy+hh+4,named?cobalt:coral,5)
+    const [x,y,w,h]=project(target.words)
+    roundBox(x-24,y-11,w+48,h+22,12,alpha(named?cobalt:coral,.085))
+    line(x,y+h+7,x+w*at(t+.15,0,.48),y+h+7,named?cobalt:coral,6)
   }
 }
 function contrastShot(a,ok,t){
-  ground()
-  label('Low vision',113,224,34,white)
-  typeLines(ok?['Made','readable.']:['Too','faint.'],106,475,177,ok?lime:white,750,.95,ok?'readable':'faint')
-  const x=886,y=306,w=822,h=185,z=1.21+.025*at(t,0,.68)
-  browserFrame(x,y,w,h,'extremeterrain.com')
-  const [sx,sy,sw,sh]=a.rect
-  const targetX=x+(w-sw*z)/2,targetY=y+74+(h-sh*z)/2
-  const sample=a.img.getContext('2d').getImageData(sx-2,sy+2,1,1).data
-  rect(x,y+74,w,h,'rgb('+Array.from(sample.slice(0,3)).join(',')+')')
-  ctx.drawImage(a.img,sx,sy,sw,sh,targetX,targetY,sw*z,sh*z)
-  window.sourceScale=Math.max(window.sourceScale,z)
-  corners([targetX,targetY,sw*z,sh*z],ok?lime:coral,t)
+  const v=hero(ok?'Made readable.':'Too faint.','extremeterrain.com',t,{category:'Low vision'})
+  const [sx,sy,sw,sh]=a.rect,z=.34+.056*v.p
+  const project=plate(a,v.x,v.y,v.w,v.h,sx+sw/2-v.w*.56/z,0,z)
+  const [xx,yy,ww,hh]=project(a.rect)
+  corners([xx,yy,ww,hh],white,t)
+  const x=v.x+v.w*.48,y=v.y+212-20*v.p,w=765,h=310
+  line(xx+ww/2,yy+hh+12,x+124,y,ink,9)
+  line(xx+ww/2,yy+hh+12,x+124,y,white,4)
+  ctx.save();ctx.shadowColor=alpha(ink,.36);ctx.shadowBlur=35;ctx.shadowOffsetY=14
+  roundBox(x-5,y-5,w+10,h+10,21,white);ctx.restore()
+  const shade=a.img.getContext('2d').getImageData(sx-2,sy+2,1,1).data[0]
+  roundBox(x,y,w,h,17,'rgb('+[shade,shade,shade].join(',')+')')
+  const detail=1.10+.14*v.p,dx=x+(w-sw*detail)/2,dy=y+(h-sh*detail)/2
+  ctx.drawImage(a.img,sx,sy,sw,sh,dx,dy,sw*detail,sh*detail)
+  window.sourceScale=Math.max(window.sourceScale,detail)
+  corners([dx,dy,sw*detail,sh*detail],ok?lime:coral,t)
 }
-function kaneShot(a,state,t){
-  ground()
-  const pass=state==='passed'||state==='record'
-  const title={replay:['Open','About.'],failed:['FAIL'],passed:['PASS'],record:['That’s','the proof.']}[state]
-  const x=815,y=318,w=998,h=state==='record'?152:pass?132:160
-  const color=state==='failed'?coral:pass?lime:white
-  if(state==='failed'||state==='passed'){
-    roundBox(111,423,650,237,24,color);print(state==='failed'?'FAIL':'PASS',143,604,172,ink,'Mono',780,584)
-  }else typeLines(title,110,507,146,white,654,.96,state==='record'?'proof':'About')
-  browserFrame(x,y,w,h,'mass.edu  /  Replay')
-  if(a.clip){
-    const [,,sw,sh]=a.clip.crop,idx=Math.min(29,Math.floor(t*12))
-    ctx.drawImage(a.img,(idx%5)*sw,Math.floor(idx/5)*sh,sw,sh,x,y+74,w,h)
-    window.sourceScale=Math.max(window.sourceScale,w/sw,h/sh)
+function kaneShot(a,state,t,detail){
+  const fail=state==='failed',pass=state==='passed',movie=state==='record'
+  const v=hero(movie?'That’s the proof.':pass?'Destination reached.':'Open About.','mass.edu  /  Kane replay',t,{x:172,w:1576,h:760,y:180,status:fail?'FAIL':pass?'PASS':''})
+  if(movie){
+    const [,,sw,sh]=a.clip.crop,idx=Math.min(29,Math.floor(t*12)),z=v.w/sw+.016*v.p
+    const cropW=v.w/z,cropH=v.h/z
+    ctx.drawImage(a.img,(idx%5)*sw+(sw-cropW)/2,Math.floor(idx/5)*sh+24,cropW,cropH,v.x,v.y,v.w,v.h)
+    window.sourceScale=Math.max(window.sourceScale,z)
+    const label=idx<a.clip.destinationFrame?'About → The DHE':'About the Department of Higher Education'
+    face(54,'Tight',720)
+    const boxWidth=ctx.measureText(label).width+100
+    roundBox(v.x+45,v.y+v.h-142,boxWidth,98,13,ink)
+    rect(v.x+65,v.y+v.h-118,7,52,lime)
+    print(label,v.x+91,v.y+v.h-73,54,white,'Tight',720)
   }else{
-    const z=1.19+.035*at(t,0,.8)
-    const project=plate(a,x,y+74,w,h,pass?445:906,pass?211:37,z)
-    corners(project(pass?[470,237,609,36]:[1086,87,78,30]),color,t)
+    const rect=pass?[470,237,609,36]:[1086,87,78,30]
+    const z=(pass?1.14:1.02)+(pass?.104:.22)*v.p
+    const project=plate(a,v.x,v.y,v.w,v.h,rect[0]-(pass?200:870)/z,pass?88:18,z)
+    const [x,y,w,h]=project(rect)
+    corners([x,y,w,h],fail?coral:pass?lime:white,t)
+    if(!pass){
+      const xx=v.x+v.w*.47,yy=v.y+270-22*v.p,ww=366,hh=186
+      line(x+w/2,y+h+12,xx+ww*.46,yy,white,5)
+      roundBox(xx-7,yy-7,ww+14,hh+14,10,white)
+      const box=detail.letters.trigger.bounds,k=1.08+.15*v.p
+      const inner=plate(detail,xx,yy,ww,hh,box[0]-(ww/k-box[2])/2,box[1]-(hh/k-box[3])/2,k)
+      corners(inner(box),fail?coral:white,t)
+    }
   }
-  const start=x+40,end=x+w-40,track=y+h+113
-  rect(start,track,end-start,4,toned(ink,white,0.25))
-  rect(start,track,(end-start)*(.22+.55*at(t,0,1.3)),4,color)
-  disk(start+(end-start)*(.22+.55*at(t,0,1.3)),track+2,7,color)
+  const track=v.y+v.h-10
+  rect(v.x,track,v.w,10,ink)
+  rect(v.x,track,v.w*(.08+.89*v.p),10,fail?coral:lime)
 }
-function popupShot(a,proof,t){
-  ground()
-  if(proof){
-    typeLines(['See the','proof.'],116,470,184,white,692,.93,'proof')
-    print('A replay or a measurement.',122,787,49,white,'Tight',550,706)
-  }
-  else{
-    print('105',105,645,410,lime,'Mono',780,707)
-    print('fixes live today',128,759,75,white,'Tight',670)
-  }
-  const x=887,y=proof?364:280,z=1.12+.035*at(t,0,.8)
-  const w=proof?800:863,h=proof?148:395
-  browserFrame(x,y,w,h,'Curb Cut  /  Extension')
-  plate(a,x,y+74,w,h,proof?Math.max(0,a.rect[0]-20):0,proof?Math.max(0,a.rect[1]-12):0,z)
+function popupShot(a,state,t){
+  const proof=state==='popup-proof',inventory=state==='inventory'
+  const title=inventory?'105 fixes live today.':proof?'See the proof.':state==='switch-off'?'Turn it on.':'Curb Cut is on.'
+  const v=hero(title,'Curb Cut  /  Chrome extension',t,{category:proof?'Evidence':'Chrome extension'})
+  const [sx,sy,sw,sh]=a.rect,p=v.p
+  const z=inventory||proof?.91+.085*p:.896+.031*p,focus=sx+sw/2
+  let top=61+22*p
+  if(inventory)top=680+550*p
+  if(proof)top=sy-225+60*p
+  plate(a,v.x,v.y,v.w,v.h,focus-v.w/z/2,top,z)
 }
 function reportShot(a,t){
+  const v=hero('For the site owner.','Curb Cut  /  Site report',t)
+  const z=1.09+.055*v.p
+  plate(a,v.x,v.y,v.w,v.h,35*v.p,32*v.p,z)
+}
+function populationShot(state,t){
+  const p=travel(t),number=state==='percent',filled=Math.round(959*(number?.43*p:.43+.57*p))
   ground()
-  typeLines(['For the','site owner.'],110,456,163,white,720)
-  const x=880,y=254,w=948,h=450,z=w/a.img.width
-  browserFrame(x,y,w,h,'Curb Cut  /  Site report')
-  plate(a,x,y+74,w,h,0,0,z)
+  print('95.9%',96,684,320,lime,'Tight',820,933)
+  for(let n=0;n<1000;n++){
+    const row=Math.floor(n/40),col=n%40
+    disk(1097+col*17.1,265+row*18.5,n<filled?6.2:3.6,n<filled?lime:alpha(white,.43))
+  }
+  rect(124,782,1662,4,alpha(white,.4))
+  if(!number)print('of the top million home pages have barriers.',124,903,68,white,'Tight',640)
 }
 function paint(state,age,assets,assetKey){
   const a=assets[assetKey]
@@ -141,40 +168,28 @@ function paint(state,age,assets,assetKey){
     case 'key':case 'same-key':
       ground()
       typeLines(state==='key'?['Press','Tab.']:['Same','keys.'],117,467,218,white,780,.83)
-      keycap(1302,553,1.37,age)
+      keycap(1302,553+(state==='same-key'?62*Math.sin(Math.PI*travel(age)):0),1.37,age)
       break
-    case 'switch-off':case 'switch-on':
-      ground()
-      label('Chrome extension',112,231,36,white)
-      typeLines(state==='switch-off'?['Turn it','on.']:['Curb Cut','is on.'],103,484,169,white,725,.98,'on')
-      browserFrame(895,286,852,387,'Curb Cut  /  Extension')
-      plate(a,895,360,852,387,0,0,1.11)
-      break
+    case 'switch-off':case 'switch-on':case 'inventory':case 'popup-proof':popupShot(a,state,age);break
     case 'key-hit':
       ground()
       keycap(977,547,2.12,age)
       break
     case 'closed':case 'opened':menuShot(a,state==='opened',age);break
     case 'millions':typeFrame(['For millions,','this is the web.'],166,age,'millions');break
-    case 'mouse':ground();typeLines(['Mouse','only.'],114,481,201,white);pointerObject(1140,241,420,age);break
+    case 'mouse':ground();typeLines(['Mouse','only.'],114,481,201,white);pointerObject(1180-120*travel(age),286-76*travel(age),408+21*travel(age),age);break
     case 'anonymous':ground();typeLines(['No','name.'],114,481,201,white);blankTag(1360,518,1.1,age);break
     case 'faint-word':ground();print('Too',117,482,230,white);print('faint.',112,706,269,toned(ink,white,.56+.14*at(age,0,.9)));rail(132,783,248,coral);break
-    case 'percent':case 'population':
-      ground()
-      print('95.9%',93,743+(state==='percent'?36*(1-at(age,0,.48)):0),560,lime,'Tight',820,1650)
-      rect(127,802,1450*(state==='percent'?at(age,0,1.18):1),5,white)
-      if(state==='population')print('of the top million home pages have barriers.',124+16*(1-at(age,0,.25)),903,62,white,'Tight',640)
-      break
-    case 'years':ground();curbObject(1300,724,1.14,age,false);typeLines(['Years','to fix.'],105,466,209,white,754);break
+    case 'percent':case 'population':populationShot(state,age);break
+    case 'years':ground();curbObject(1240,724,1.10,age,false);typeLines(['Years','to fix.'],105,466,209,white,754);break
     case 'cant-wait':typeFrame(['People','can’t wait.'],218,age,'wait');break
     case 'sign':brandStamp(age);break
     case 'brand':case 'now':case 'end':case 'end-line':case 'thumbnail':brandFrame(state,age);break
     case 'reader-off':case 'reader-on':case 'jev-off':case 'jev':case 'jev-on':readingShot(state,a,age);break
     case 'contrast-off':case 'contrast-on':contrastShot(a,state==='contrast-on',age);break
     case 'guess':typeFrame(['No guessing.'],224,age,'guessing');break
-    case 'kane':typeFrame(['Kane'],298,age,'','An AI tester');break
-    case 'replay':case 'failed':case 'passed':case 'record':kaneShot(a,state,age);break
-    case 'inventory':case 'popup-proof':popupShot(a,state==='popup-proof',age);break
+    case 'kane':ground();print('Kane',116,540,298,white);print('An AI tester.',126+68*(1-travel(age)),752,154,lime,'Tight',760);break
+    case 'replay':case 'failed':case 'passed':case 'record':kaneShot(a,state,age,assets[a.magnifierSource]);break
     case 'quiet':typeFrame(['Unsure?','Stay quiet.'],192,age,'quiet');break
     case 'paper':typeFrame(['Pass it on.'],235,age,'on');break
     case 'report':reportShot(a,age);break

@@ -20,7 +20,7 @@ window.startShot=async(shot,plates={})=>{
   canvas.hidden=false
   for(const [key,a] of Object.entries(plates)){
     const img=new Image();img.src=a.imageUrl;await img.decode()
-    a.img=/^(reader-|jev-|popup-|owner-report)/.test(key)?img:monochrome(img)
+    a.img=(a.clip?.seconds||/^(reader-|jev-|popup-|owner-report)/.test(key))?img:monochrome(img)
   }
   window.current={shot,plates}
 }
@@ -28,6 +28,8 @@ window.frame=(n,format='jpeg')=>{
   const {shot,plates}=window.current,t=n/30
   const b=shot.beats.findLast(beat=>beat.local<=t+1e-8)??shot.beats[0]
   const age=t-b.local
+  const next=shot.beats[shot.beats.indexOf(b)+1]
+  window.beatLength=Math.max(.1,(next?.local??(shot.frames??90)/30)-b.local)
   window.sourceScale=0
   ctx.save()
   paint(b.state,age,plates,b.asset)

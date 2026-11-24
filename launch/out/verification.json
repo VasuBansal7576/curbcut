@@ -9,6 +9,11 @@
     "full_mean_dBFS": -19.4,
     "highpass_300Hz_mean_dBFS": -21.4,
     "difference_dB": -2.0,
+    "motion_check": {
+      "minimum_hold_seconds": 1.5,
+      "noise_tolerance_dB": -57,
+      "detected_holds": 0
+    },
     "transcript": {
       "script_words": 192,
       "matched_words": 188,
@@ -35,7 +40,7 @@
         "replace | every one → everyone"
       ]
     },
-    "sha256": "82a7de1054780409562f3c668fad03c2658558df14b2c8e68748644c687b466f"
+    "sha256": "538e847604da4311b1dec3068414be969e8c17d699df07f0691c1e84418bb3f0"
   },
   "teaser": {
     "duration": 15.0,
@@ -47,6 +52,11 @@
     "full_mean_dBFS": -19.4,
     "highpass_300Hz_mean_dBFS": -21.6,
     "difference_dB": -2.2,
+    "motion_check": {
+      "minimum_hold_seconds": 1.5,
+      "noise_tolerance_dB": -57,
+      "detected_holds": 0
+    },
     "transcript": {
       "script_words": 37,
       "matched_words": 37,
@@ -60,14 +70,14 @@
       },
       "differences": []
     },
-    "sha256": "0a9fb013e591ac8f511b1dec43f244f78efd7258abb3c3a3ec580893bdb8682e"
+    "sha256": "2e3ceddb93667d5b3eb635eb288089fc43b822c9c5598127094ebc04c258b353"
   },
   "spoken_live": "/laɪv/",
   "verified_kane_frames": [
     "efcfdd9f-13",
     "cb96e3af-17"
   ],
-  "maximum_source_scale": 1.235,
+  "maximum_source_scale": 1.24724,
   "half_second_frames": 181,
   "palette": {
     "maximum_unexpected_saturated_interior_percent": 0.0455

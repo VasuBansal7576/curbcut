@@ -37,10 +37,10 @@ function keycap(x,y,k,t,legend='Tab'){
   ctx.restore()
 }
 function curbObject(x,y,k,t,opened=true){
-  const turn=.04*Math.sin(t*.9)
+  const turn=.15*Math.sin(t*.85)
   const project=(u,v,h)=>[x+k*(u+v*(.68+turn)),y+k*(v*-.55+u*.14-h)]
   const shape=(pts,color)=>poly(pts.map(p=>project(...p)),color)
-  const h=126, sl=opened?smooth(t/.82):0, shoulder=-52+sl*246
+  const h=opened?126:48+90*smooth(t/2.85), sl=opened?smooth(t/1.42):0, shoulder=-52+sl*246
   const profile=[[-400,h],[-55,h],[shoulder,20],[335,20]]
   ctx.save()
   ctx.shadowColor='rgba(0,0,0,.5)';ctx.shadowBlur=42*k;ctx.shadowOffsetY=46*k
@@ -74,8 +74,10 @@ function blankTag(x,y,k,t){
 }
 function brandStamp(t){
   ground()
+  curbObject(1474+52*travel(t),660-65*travel(t),.62+.08*travel(t),t)
   curbMark(127,174,1.45,lime)
   print('Curb Cut',285,226,65,white)
   typeLines(['Get Curb Cut','for Chrome.'],116,513,184,white,1650,.93,'chrome')
   print('github.com/VasuBansal7576/curbcut',128,914,51,lime,'Mono',650,1640)
+  rect(128,944,1014*travel(t),4,lime)
 }

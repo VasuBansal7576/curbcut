@@ -37,7 +37,7 @@ for(const enabled of [false,true]){
     const box=await link.boundingBox()
     const id='contrast-'+(enabled?'on':'off')
     const file=id+'.png'
-    const clip={x:Math.floor(box.x-24),y:Math.max(0,Math.floor(box.y-12)),width:Math.ceil(box.width+48),height:Math.ceil(box.height+24)}
+    const clip={x:0,y:0,width:1080,height:440}
     await page.screenshot({path:path.join(plates,file),clip,animations:'disabled'})
     updates[id]={file,source:'proof/heldout-v6/extension-e2e.json',patch:patch.id,enabled,url:page.url(),selector:patch.observedSelector,deviceScaleFactor:dpr,pageRect:box,clip,size:[clip.width*dpr,clip.height*dpr],rect:[box.x-clip.x,box.y-clip.y,box.width,box.height].map(x=>x*dpr),measurement}
     console.log(id,measurement.ratio,box)
