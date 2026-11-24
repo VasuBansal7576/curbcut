@@ -1,4 +1,6 @@
 import path from 'node:path'
+import stepLimits from './step-limits.json' with {type:'json'}
+import {recordCost} from './cost.mjs'
 import {homedir} from 'node:os'
 import {copyFile,writeFile,mkdir,readdir} from 'node:fs/promises'
 import {session} from './chrome.mjs'
@@ -97,7 +99,9 @@ const limits={
 }
 export function kaneLimits(task,persona,options={}) {
   const defaults=limits[persona]
-  const maxSteps=options.maxSteps??Number(process.env.CURBCUT_KANE_MAX_STEPS??defaults.maxSteps)
+  const type=persona==='control'?persona:task.evaluation?.category??task.barrierClass??task.probe?.action??persona
+  const archived=stepLimits[type]?.maxSteps??defaults.maxSteps
+  const maxSteps=options.maxSteps??Number(process.env.CURBCUT_KANE_MAX_STEPS??Math.min(archived,defaults.maxSteps))
   return {maxSteps,timeout:options.timeout??Math.max(defaults.timeout,maxSteps*6),
     assertionMode:options.assertionMode??(persona==='low-contrast-simulation' || task.evaluation?.category==='low-contrast' || !task.probe && persona==='low-vision'?'visual':'dom')}
 }
@@ -268,6 +272,7 @@ export function judgeProbe({task,persona,events,inspection,checks,kaneStatus}) {
 export async function runKane(task,persona,patch,directory,options={}) {
   if(task.persona==='document-language') throw new Error('Document language uses local measurement.')
   const {maxSteps,timeout,assertionMode}=kaneLimits(task,persona,options)
+  recordCost('archive-step-limit',{maxSteps,estimatedMaxStepsAvoided:Math.max(0,limits[persona].maxSteps-maxSteps)})
   if(!Number.isInteger(maxSteps) || maxSteps<1 || maxSteps>70) throw new Error('Kane max steps must be an integer from 1 to 70.')
   if(!Number.isInteger(timeout) || timeout<1 || timeout>900) throw new Error('Kane timeout must be an integer from 1 to 900 seconds.')
   await mkdir(directory,{recursive:true})

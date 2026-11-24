@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import {readJSON} from './core/io.mjs'
-import {catalog,fix,recheck,withLock} from './core/loop.mjs'
+import {catalog,fix,fixBatch,recheck,withLock} from './core/loop.mjs'
 import {requireKane} from './core/kane.mjs'
 import {serve} from './core/server.mjs'
 import {recheckLocal} from './core/recheck-local.mjs'
@@ -9,6 +9,7 @@ import {visualPreflight} from './core/jev-preflight.mjs'
 import {verifyQueue} from './core/jev-queue.mjs'
 import {checkPage} from './core/check.mjs'
 import {runGate} from './core/gate.mjs'
+import {meter,summarizeCost} from './core/cost.mjs'
 import {createReport} from './extension/lib/report.js'
 
 const usage='curbcut serve | curbcut verify-queue | curbcut report <patch-id> | curbcut fix <task.json> | curbcut check <url> "<task>" [--persona keyboard-only|screen-reader-view|low-vision] [--local] [--dry-run] | curbcut gate [--config curbcut.gate.json] [--local] [--dry-run] | curbcut preflight <task.json> | curbcut visual-preflight <task.json> | curbcut recheck [patch-id|--public|--local [patch-id]]'
@@ -28,8 +29,9 @@ function parseArgv(argv) {
 }
 
 const {action,rest,flags}=parseArgv(process.argv.slice(2))
-try {
-  if(action==='serve') {await serve();console.log('Curb Cut · http://127.0.0.1:4317/site/')}
+async function main() {
+  if(action==='cost') console.log(JSON.stringify(await summarizeCost(),null,2))
+  else if(action==='serve') {await serve();console.log('Curb Cut · http://127.0.0.1:4317/site/')}
   else if(action==='verify-queue') console.log(JSON.stringify(await verifyQueue(),null,2))
   else if(action==='report' && rest[0]) {
     const patch=(await catalog()).find(patch=>patch.id===rest[0])
@@ -38,9 +40,9 @@ try {
   } else if(action==='fix' && rest[0]) {
     const task=await readJSON(rest[0])
     await requireKane()
-    const result=await withLock(()=>fix(task))
+    const result=await withLock(()=>Array.isArray(task)?fixBatch(task):fix(task))
     console.log(JSON.stringify(result,null,2))
-    if(!['already-accessible','verified'].includes(result.status)) process.exitCode=1
+    if([result].flat().some(row=>!['already-accessible','verified','locally-fixed'].includes(row.status))) process.exitCode=1
   } else if(action==='check' && rest[0] && rest[1]) {
     if(!flags.local && !flags['dry-run']) await requireKane()
     const result=flags['dry-run']?await checkPage({url:rest[0],task:rest[1],persona:flags.persona,local:flags.local,dryRun:true}):
@@ -60,5 +62,11 @@ try {
     if(result.status!=='pass') process.exitCode=1
   } else if(action==='recheck' && flags.local) console.log(JSON.stringify(await withLock(()=>recheckLocal(rest[0])),null,2))
   else if(action==='recheck') console.log(JSON.stringify(await withLock(()=>recheck(flags.public?'--public':rest[0])),null,2))
-  else console.log(usage)
+  else console.log(usage+' | curbcut cost')
+}
+try {
+  if(['check','fix','gate'].includes(action)) await meter(action,{
+    balance:action!=='fix' && (flags.local || flags['dry-run'])?null:requireKane
+  },main)
+  else await main()
 } catch(error) {console.error(error.message);process.exitCode=2}

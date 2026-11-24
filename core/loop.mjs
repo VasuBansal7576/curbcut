@@ -7,6 +7,12 @@ import {preflight} from './preflight.mjs'
 import {propose,ProposalRejected,rejectRepeated} from './agent.mjs'
 import {oracle,replayLane} from './probe.mjs'
 import validate from './validate.generated.cjs'
+import {recipes,inherited,bundledTemplates,digest} from './recipes.mjs'
+import {recordCost} from './cost.mjs'
+import {botPreflight} from './jev-preflight.mjs'
+import {batchRepairs} from './repair-batch.mjs'
+import {pageControl} from './kane-control.mjs'
+import familyPolicy from './cost-policy.json' with {type:'json'}
 import {match} from './engine.js'
 const folder=path.join(ROOT,'patches')
 const patchFile=id=>path.join(folder,id+'.json')
@@ -39,7 +45,7 @@ export async function withLock(fn) {
 }
 const measured=result=>({status:result.status,reason:result.reason,steps:result.steps,checks:result.checks,geometry:result.geometry})
 
-export async function repairLocally(data,{base,replay=replayLane,write=propose,attempts=5}={}) {
+export async function repairLocally(data,{base,replay=replayLane,write=propose,attempts=5,templates=bundledTemplates}={}) {
   if(!Number.isInteger(attempts) || attempts<1 || attempts>5) throw new Error('Use between one and five local patch proposals.')
   const task=await normalizeTask(data)
   const phases=[]
@@ -62,14 +68,36 @@ export async function repairLocally(data,{base,replay=replayLane,write=propose,a
     for(const node of control.snapshot.nodes) if(!bySelector.has(node.selector)) bySelector.set(node.selector,node)
     return {...snapshot,nodes:[...bySelector.values()],pointerContext:control.snapshot.interactionContext??control.snapshot.context}
   }
+  const snapshot=withPointerContext(before.snapshot)
+  let nearMiss
+  const eligible=await templates()
+  for(const [index,patch] of [...inherited(task,snapshot,eligible),...recipes(task,snapshot)].entries()) {
+    const directory='fast-'+(index+1)
+    const after=await run(directory+'/after',task.persona,patch)
+    if(after.status==='pass') {
+      const pointer=await run(directory+'/control-with-patch','control',patch)
+      if(pointer.status==='pass') {
+        recordCost(patch.evidence.repairMethod,{agentCallsAvoided:1})
+        patch.evidence.localOracle={before:'fail',control:'pass',after:'pass'}
+        await saveJSON(path.join(base,directory,'candidate.json'),patch)
+        return result('locally-fixed',after.reason,patch,relative(path.join(base,directory)))
+      }
+      if(patch.evidence.templateId) nearMiss??={patch,reason:'Pointer replay: '+pointer.reason}
+    } else if(patch.evidence.templateId) nearMiss??={patch,reason:after.reason}
+  }
   let failure={...before,snapshot:withPointerContext(before.snapshot)},previous=null
   const previousAttempts=[]
   const infrastructure=new Map()
+  const small=process.env.CURBCUT_MODEL_SMALL
   for(let index=1;index<=attempts;index++) {
     const proposal=path.join(base,'attempt-'+index)
     let patch
     try {
-      patch=await write(task,{...failure,previousAttempts:[...previousAttempts]},previous,proposal,{retryInvalid:false})
+      const diff=nearMiss && index===1
+      patch=await write(task,{...failure,nearMiss:diff?nearMiss:undefined,previousAttempts:[...previousAttempts]},previous,proposal,
+        {retryInvalid:false,model:index===1?small:undefined})
+      if(diff) patch.evidence={repairMethod:'agent-diff',templateId:nearMiss.patch.evidence.templateId,'inherited-from':nearMiss.patch.evidence['inherited-from']}
+      else patch.evidence={...patch.evidence,repairMethod:'full-agent'}
       if(!validate(patch) || patch.status!=='candidate' || !match(patch,task.url) || patch.id!==task.id) {
         throw new ProposalRejected('Invalid candidate for the registered task.',patch?.rules)
       }
@@ -98,7 +126,11 @@ export async function repairLocally(data,{base,replay=replayLane,write=propose,a
     if(after.status!=='pass') continue
     const pointer=await run('attempt-'+index+'/control-with-patch','control',patch,index)
     attempt.pointer=measured(pointer)
-    if(pointer.status==='pass') return result('locally-fixed',after.reason,patch,relative(proposal))
+    if(pointer.status==='pass') {
+      if(small && index===1) recordCost('small-model',{largeCallsAvoided:1})
+      await saveJSON(path.join(proposal,'candidate.json'),patch)
+      return result('locally-fixed',after.reason,patch,relative(proposal))
+    }
     failure={...failure,reason:'The pointer replay with the patch '+pointer.status+'. '+pointer.reason}
   }
   return result('unresolved',failure.validationError??failure.reason)
@@ -106,15 +138,15 @@ export async function repairLocally(data,{base,replay=replayLane,write=propose,a
 
 async function verifyRegisteredCandidate(task,patch,{dir,run,persist,progress,provenance}) {
   if(!validate(patch) || patch.status!=='candidate' || !match(patch,task.url) ||
-    !['id','url','task','persona'].every(key=>task[key]===patch[key]) || !provenance?.priorAgentProposal || !provenance.sourceLocalRun) {
+    !['id','url','task','persona'].every(key=>task[key]===patch[key]) || !(provenance?.priorAgentProposal || patch.evidence?.repairMethod) || !provenance.sourceLocalRun) {
     throw new Error('The repair did not match its registered task and proposal.')
   }
   await progress('reproducing')
   const before=await run(task,task.persona,null,path.join(dir,'before'))
-  if(before.status==='blocked') return {status:'blocked',before}
+  if(before.status!=='fail') return {status:before.status==='pass'?'already-accessible':before.status==='blocked'?'blocked':'inconclusive',before}
   await progress('checking-control',before)
-  const control=await run(task,'control',null,path.join(dir,'control'))
-  if(control.status==='blocked') return {status:'blocked',before,control}
+  const control=await pageControl(run,task,path.join(dir,'control'),{localControl:provenance.localOracle?.control==='pass'})
+  if(control.status!=='pass') return {status:control.status==='blocked'?'blocked':'inconclusive',before,control}
   const iteration=path.join(dir,'attempt-1')
   await saveJSON(path.join(iteration,'candidate.json'),patch)
   await saveJSON(path.join(iteration,'provenance.json'),provenance)
@@ -127,16 +159,33 @@ async function verifyRegisteredCandidate(task,patch,{dir,run,persist,progress,pr
     return {status:before.status==='pass'?'already-accessible':after.status==='fail'?'unresolved':'inconclusive',before,control,after}
   }
   const at=instant()
-  const verified={...patch,status:'verified',evidence:{before:before.video,control:control.video,after:after.video,
+  const verified={...patch,status:'verified',evidence:{...patch.evidence,before:before.video,control:control.video,after:after.video,
     verifiedAt:at,kaneRunIds:lanes.map(result=>result.runId),kaneVerdicts:{before:'fail',control:'pass',after:'pass'},
+    ...(control.reused?{controlSourceTask:control.sourceTask}:{}),
     ...(provenance.localOracle===null?{}:{localOracle:{before:'fail',control:'pass',after:'pass'}})},
-    history:[{at,event:'verified',before:before.runId,control:control.runId,after:after.runId}]}
+    history:[...(provenance.priorHistory??[]),{at,event:provenance.repatch?'re-patched':'verified',before:before.runId,control:control.runId,after:after.runId}]}
   await progress('publishing',after)
   await persist(verified)
   return {status:'verified',patch:verified,before,control,after}
 }
 
-export async function fix(data,{run=runKane,write=propose,persist=publish,check=oracle,base=undefined,prior=null,progress=async()=>{},attempts=3,registeredCandidate=null,provenance=null}={}) {
+async function familyDecision(task,patch,policy) {
+  const templateId=patch.evidence.templateId
+  if(!templateId || patch.evidence.repairMethod!=='inheritance') return null
+  if(!Number.isSafeInteger(policy.minimumVerified) || policy.minimumVerified<1 ||
+    !Number.isSafeInteger(policy.oneIn) || policy.oneIn<1 || typeof policy.seed!=='string' || !policy.seed) {
+    throw new Error('The family policy requires positive verification and sample counts and a seed.')
+  }
+  const file=path.join(ROOT,'.curbcut','families',templateId+'.json')
+  const state=await readJSON(file).catch(error=>{if(error.code==='ENOENT') return {verified:[digest(['source',patch.evidence['inherited-from']])]};throw error})
+  const instance=digest([task.url,task.id])
+  const mature=!state.failed && state.verified.length>=policy.minimumVerified
+  const selected=parseInt(digest([policy.seed,templateId,instance]).slice(0,8),16)%policy.oneIn===0
+  return {file,state,instance,evidence:{...policy,verifiedInstances:state.verified.length,
+    mode:mature?selected?'sampled':'local-sample-bypass':'full'}}
+}
+
+export async function fix(data,{run=runKane,write=propose,persist=publish,check=oracle,base=undefined,prior=null,progress=async()=>{},attempts=3,registeredCandidate=null,provenance=null,replay,templates,policy=familyPolicy,verify=work=>work()}={}) {
   if(!Number.isInteger(attempts) || attempts<1 || attempts>3) throw new Error('Use between one and three patch proposals.')
   const task=await normalizeTask(data)
   const dir=base??newDirectory(task.id)
@@ -144,7 +193,8 @@ export async function fix(data,{run=runKane,write=propose,persist=publish,check=
     if(run!==runKane) return null
     const access=await preflight(task)
     await saveJSON(path.join(dir,'preflight.json'),access)
-    return access.status==='pass'?null:{status:'blocked',preflight:access}
+    if(access.status!=='pass') return {status:'blocked',preflight:access}
+    return botPreflight(task,dir)
   }
   if(registeredCandidate) {
     const blocked=await checkAccess()
@@ -154,6 +204,42 @@ export async function fix(data,{run=runKane,write=propose,persist=publish,check=
     const existing=(await catalog()).find(p=>p.id===task.id)
     if(existing && (existing.site!==new URL(task.url).hostname || existing.task!==task.task || existing.persona!==task.persona)) throw new Error('Task id already belongs to another task')
     prior=existing
+  }
+  if((task.probe || task.journey || task.evaluation) && (check===oracle || replay)) {
+    const evidenceDir=base && run===runKane?newDirectory(task.id):dir
+    const localDir=path.join(evidenceDir,'local')
+    const local=await repairLocally(task,{base:localDir,write,attempts,replay,templates})
+    if(local.status!=='locally-fixed') return local
+    return verify(async()=>{
+      const {patch}=local
+      const family=await familyDecision(task,patch,policy)
+      if(family) {
+        patch.evidence.verificationPolicy=family.evidence
+        if(family.evidence.mode==='local-sample-bypass') {
+          recordCost('family-sampling',{kaneRunsAvoided:3})
+          const file=path.join(evidenceDir,'local-repair.json')
+          const verifiedAt=instant()
+          const verified={...patch,status:'locally-verified',
+            evidence:{...patch.evidence,verifiedAt,localMeasurement:relative(file)},
+            history:[...(prior?.history??[]),{at:verifiedAt,event:'local-verified'}]}
+          await saveJSON(file,{id:task.id,rules:patch.rules,policy:family.evidence,phases:local.phases})
+          await persist(verified)
+          return {...local,patch:verified}
+        }
+      }
+      const blocked=await checkAccess()
+      if(blocked) return {...blocked,local}
+      const result=await verifyRegisteredCandidate(task,patch,{dir:evidenceDir,run,persist,progress,provenance:{
+        sourceLocalRun:relative(path.join(localDir,'before.json')),repairDirectory:local.proposal,
+        priorHistory:prior?.history,repatch:prior?.status==='broken',localOracle:{before:'fail',control:'pass',after:'pass'}
+      }})
+      if(family) {
+        if(result.status==='verified' && !family.state.verified.includes(family.instance)) family.state.verified.push(family.instance)
+        if(result.status!=='verified' && family.evidence.mode==='sampled') family.state.failed=true
+        await saveJSON(family.file,family.state)
+      }
+      return result
+    })
   }
   const local=task.probe && check?await check(task,null):null
   if(local) {
@@ -232,6 +318,19 @@ export async function fix(data,{run=runKane,write=propose,persist=publish,check=
   if(unverified) return {status:'locally-fixed',patch:unverified.patch,after:unverified.after,local}
   return {status:'unresolved',failure:last,reason:validationError}
 }
+export async function fixBatch(tasks) {
+  const normalized=await Promise.all(tasks.map(normalizeTask))
+  if(new Set(normalized.map(task=>task.id)).size!==normalized.length) throw new Error('Batch task IDs must be unique.')
+  const persist=serialPublisher()
+  let verification=Promise.resolve()
+  function verify(work) {
+    const next=verification.then(work)
+    verification=next.catch(()=>{})
+    return next
+  }
+  return batchRepairs(normalized,(task,write)=>fix(task,{write,persist,verify}))
+}
+
 export async function checkPatch(patch,{run=runKane,persist=publish,repair=fix,base=undefined,objective}={}) {
   const task=await normalizeTask({...patch,url:patch.url??patch.match.replace(/\*$/,''),...objective})
   const dir=base??newDirectory(task.id)

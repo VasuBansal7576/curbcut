@@ -1,3 +1,4 @@
+import {botPreflight} from './jev-preflight.mjs'
 import {mkdir} from 'node:fs/promises'
 import path from 'node:path'
 import {ROOT,instant,readJSON} from './io.mjs'
@@ -53,7 +54,8 @@ export async function runGate({config,local=false,dryRun=false}={}) {
     try {
       const task=await deriveTask(row)
       if(!local) {
-        const measured=await runKane(task,row.persona,null,path.join(dir,task.id+'-'+row.persona))
+        const directory=path.join(dir,task.id+'-'+row.persona)
+        const measured=await botPreflight(task,directory)??await runKane(task,row.persona,null,directory)
         findings.push({...row,id:task.id,status:measured.status==='pass'?'pass':'fail',reason:measured.reason??measured.integrity??measured.status,
           control:null,dom:compactDOM(measured.snapshot,task.observedSelector)})
         continue

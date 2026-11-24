@@ -72,7 +72,22 @@ for(const patch of recorded) {
   const localRetirements=patch.history.filter(entry=>entry.event==='local-retired' && entry.evidence).map(entry=>
     '- [Local regression and retirement]('+videoLink(entry.evidence)+') · '+entry.reason)
   let proposal
-  if(patch.evaluation) {
+  if(patch.evidence.repairMethod) {
+    const attempt=path.dirname(path.dirname(patch.evidence.after))
+    const provenancePath=attempt+'/provenance.json'
+    const provenance=await read(provenancePath,null)
+    const candidate=await read(attempt+'/candidate.json',null)
+    const before=provenance?.sourceLocalRun && await read(provenance.sourceLocalRun,null)
+    const after=provenance?.repairDirectory && await read(provenance.repairDirectory+'/after.json',null)
+    const pointer=provenance?.repairDirectory && await read(provenance.repairDirectory+'/control-with-patch.json',null)
+    if(before?.runner!=='playwright' || before.status!=='fail' || after?.runner!=='playwright' || after.status!=='pass' ||
+      pointer?.runner!=='playwright' || pointer.status!=='pass' || !isDeepStrictEqual(candidate?.rules,patch.rules) ||
+      !isDeepStrictEqual(candidate?.evidence?.repairMethod,patch.evidence.repairMethod)) {
+      throw new Error('Unconfirmed local repair '+patch.id)
+    }
+    proposal='[Local failure]('+videoLink(provenance.sourceLocalRun)+') · [Local replay]('+videoLink(provenance.repairDirectory+'/after.json')+
+      ') · [Repair provenance]('+videoLink(provenancePath)+')'
+  } else if(patch.evaluation) {
     const measured=v6Local?.rows.find(row=>row.id===patch.id && row.status==='locally-fixed')
     const recorded=v6Kane?.cases.find(row=>row.id===patch.id && row.verified)
     const measurement=patch.evidence.localMeasurement
@@ -127,6 +142,19 @@ for(const patch of recorded) {
   }
   const report=['# '+patch.site,patch.task,'**Persona** '+patch.persona,'**Observed barrier** '+patch.barrier,'**Patch status** '+patch.status,'## Recorded runs',...phases,...rechecks,...localRetirements,proposal,'## Source repair and relevant WCAG criteria','A passing task captures one interaction under the recorded conditions.',...recommendations.map(r=>'- '+r),'Verified '+patch.evidence.verifiedAt].join('\n\n')
   await mkdir(folder,{recursive:true});await writeFile(path.join(folder,'report.md'),report+'\n')
+}
+for(const patch of locallyVerified.filter(patch=>patch.evidence.verificationPolicy?.mode==='local-sample-bypass')) {
+  const record=await read(patch.evidence.localMeasurement,null)
+  const phases=await Promise.all((record?.phases??[]).map(async phase=>{
+    const result=await read(phase.file,null)
+    return {...phase,status:result?.runner==='playwright'?result.status:null}
+  }))
+  const after=phases.find(phase=>phase.name.endsWith('/after') && phase.status==='pass' &&
+    phases.some(pointer=>pointer.name===phase.name.replace(/after$/,'control-with-patch') && pointer.status==='pass'))
+  if(record?.id!==patch.id || !isDeepStrictEqual(record.rules,patch.rules) ||
+    !isDeepStrictEqual(record.policy,patch.evidence.verificationPolicy) || !after ||
+    !phases.some(phase=>phase.name==='before' && phase.status==='fail') ||
+    !phases.some(phase=>phase.name==='control' && phase.status==='pass')) throw new Error('Unconfirmed sampled repair '+patch.id)
 }
 await saveJSON(path.join(ROOT,'patches/index.json'),bundled)
 await saveJSON(path.join(ROOT,'extension/bundled.json'),bundled)
