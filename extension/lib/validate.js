@@ -116,6 +116,7 @@
     };
     if ("evidence" in patch) engine.evidence = patch.evidence;
     if ("evaluation" in patch) engine.evaluation = patch.evaluation;
+    if ("observedSelector" in patch) engine.observedSelector = patch.observedSelector;
     if ("history" in patch) engine.history = patch.history;
     const checked = validatePatch(engine);
     return checked.ok ? checked.patch : null;

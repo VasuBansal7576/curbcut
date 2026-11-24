@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
+import {runInNewContext} from 'node:vm'
 import {mkdtemp,readFile,rm} from 'node:fs/promises'
 import {tmpdir} from 'node:os'
 import path from 'node:path'
@@ -102,6 +103,9 @@ test('CLI uses the same Markdown formatter as the popup and links archived Kane 
     rules:[{selector:'#contrast',action:'setContrast',value:{color:'#767676'}}],
     evidence:{verifiedAt:'2026-11-24',localMeasurement:'proof/heldout-v6/task.json'}}
   assert(validate(local))
+  const extension={}
+  for(const file of ['constants','validate']) runInNewContext(await readFile('extension/lib/'+file+'.js','utf8'),extension)
+  assert(validate(extension.CurbCutExt.toEnginePatch(local)))
   const report=createReport(local)
   assert.match(report,/1\.4\.3 Contrast/)
   assert.match(report,/color: #767676;/)
