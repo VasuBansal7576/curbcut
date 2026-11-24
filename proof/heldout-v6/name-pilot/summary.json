@@ -1,0 +1,87 @@
+{
+  "finishedAt": "2026-11-24T13:17:08.204Z",
+  "publicLanes": [
+    {
+      "url": "https://www.mass.edu/",
+      "runner": "playwright",
+      "names": [
+        {
+          "category": "empty-button",
+          "selector": "div.eventsnav > button:nth-of-type(1)",
+          "role": "button"
+        },
+        {
+          "category": "missing-alt",
+          "selector": "#desktopmenu > div:nth-of-type(1) > header:nth-of-type(1) > a:nth-of-type(1)",
+          "role": "link"
+        }
+      ],
+      "contrast": true,
+      "language": false
+    },
+    {
+      "url": "https://csc.gov.in/",
+      "runner": "playwright",
+      "names": [],
+      "contrast": true,
+      "language": false
+    },
+    {
+      "url": "https://marinespecies.org/",
+      "runner": "playwright",
+      "names": [
+        {
+          "category": "missing-alt",
+          "selector": "a.navbar-left",
+          "role": "link"
+        },
+        {
+          "category": "empty-button",
+          "selector": "button.btn.btn-default",
+          "role": "button"
+        }
+      ],
+      "contrast": false,
+      "language": false
+    }
+  ],
+  "proposal": {
+    "writer": "codex exec",
+    "model": "gpt-6.2-sol",
+    "entries": [
+      {
+        "index": 0,
+        "name": "Site navigation menu",
+        "basis": "The button shows a three-line menu icon and controls the site navigation."
+      }
+    ]
+  },
+  "fixturePassed": false,
+  "lanes": [
+    {
+      "phase": "before",
+      "expected": "fail",
+      "status": "inconclusive",
+      "reason": "Child agent failed: The child objective explicitly requires marking the task as failed.",
+      "runId": "4dd6bc2f-9607-43d5-8f19-e3d63dc37df0",
+      "video": "proof/heldout-v6/name-pilot/before/recording.mp4"
+    },
+    {
+      "phase": "control",
+      "expected": "pass",
+      "status": "pass",
+      "reason": "Objective completed",
+      "runId": "39795ce7-c5b3-47bb-8d06-7cc63dc645f1",
+      "video": "proof/heldout-v6/name-pilot/control/recording.mp4"
+    },
+    {
+      "phase": "after",
+      "expected": "pass",
+      "status": "pass",
+      "reason": "Objective completed",
+      "runId": "61f7596c-66af-491f-912d-e3f9aef4328c",
+      "video": "proof/heldout-v6/name-pilot/after/recording.mp4"
+    }
+  ],
+  "finalBalance": 3266.8653
+}

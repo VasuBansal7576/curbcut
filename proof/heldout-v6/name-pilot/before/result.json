@@ -1,0 +1,371 @@
+{
+  "status": "inconclusive",
+  "runId": "4dd6bc2f-9607-43d5-8f19-e3d63dc37df0",
+  "reason": "Child agent failed: The child objective explicitly requires marking the task as failed.",
+  "summary": "The agent found the button was missing but did not follow the instruction to mark the task as failed in that situation.\nUpdate the agent flow so that, after confirming a required control is missing, it immediately records the task as failed rather than ending with an error.",
+  "resultCode": 440,
+  "reasonCode": "agent_error.child_failed",
+  "credits": 18.411502499999997,
+  "exitCode": 1,
+  "exitSignal": null,
+  "steps": [
+    "navigate: Navigate to http://127.0.0.1:4317/fixtures/shop/v6-name-pilot.html",
+    "analyze: The button named “Site navigation menu” is missing.",
+    "wait: Waiting mark the task as failed"
+  ],
+  "preflight": {
+    "persona": "screen-reader-view",
+    "status": "pass",
+    "url": "http://127.0.0.1:4317/fixtures/shop/v6-name-pilot.html",
+    "httpStatus": 200,
+    "width": 1280,
+    "browser": "159.0.8154.6"
+  },
+  "objective": "Work exclusively inside the Reading view dialog. Use the exact listed role and name for the requested control. Stay on this public site. Do not sign in, register, pay, send or submit anything, or interact with a CAPTCHA or access challenge. Leave fixture settings unchanged. Use visible controls only. In Reading view, find the button named “Site navigation menu” and choose the named row to report it. If it is missing, mark the task as failed.",
+  "kaneStatus": "inconclusive",
+  "limits": {
+    "maxSteps": 7,
+    "timeout": 105,
+    "assertionMode": "dom"
+  },
+  "evidencePack": "proof/heldout-v6/name-pilot/before/88b31b1f-27f3-4c6b-8856-caaef4705145.evidence",
+  "evidenceValid": true,
+  "runner": "kane",
+  "recordingTrail": [
+    {
+      "index": 0,
+      "events": [
+        {
+          "type": "document",
+          "documentId": "f2852322-8dc5-4c96-a88d-38d5a44470df",
+          "url": "http://127.0.0.1:4317/fixtures/shop/v6-name-pilot.html",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "document",
+          "documentId": "5552b4f4-2d12-43ea-8ff1-1e470a373edc",
+          "url": "http://127.0.0.1:4317/fixtures/shop/v6-name-pilot.html",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        }
+      ]
+    }
+  ],
+  "inspection": {
+    "harness": {
+      "persona": "screen-reader-view",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920,
+      "documentId": "5552b4f4-2d12-43ea-8ff1-1e470a373edc",
+      "coverageSelector": "#menu",
+      "readerInputs": 0
+    },
+    "readerVisible": true,
+    "width": 1280,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "http://127.0.0.1:4317/fixtures/shop/v6-name-pilot.html",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "dialog",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#menu",
+          "parent": "header",
+          "tag": "button",
+          "attributes": {
+            "id": "menu",
+            "aria-controls": "site-nav"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "svg"
+          ],
+          "box": [
+            30,
+            47,
+            56,
+            57
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "header",
+          "parent": "body",
+          "tag": "header",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu",
+            "h1"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            151
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "body",
+          "parent": "html",
+          "tag": "body",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "header",
+            "#site-nav",
+            "dialog"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            151
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "html",
+          "tag": "html",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "head",
+            "body"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            151
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": []
+    },
+    "nodes": [
+      {
+        "selector": "#menu",
+        "role": "button",
+        "name": "",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": "site-nav",
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 30,
+        "width": 56
+      },
+      {
+        "selector": "header",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Public library",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 104,
+        "width": 218
+      },
+      {
+        "selector": "svg",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "svg",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hasHref": false,
+        "display": "inline",
+        "left": 45,
+        "width": 26
+      },
+      {
+        "selector": "body",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "dialog",
+        "role": "dialog",
+        "name": "Curb Cut reading view",
+        "state": "",
+        "tag": "dialog",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#site-nav",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": true,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Reading view",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "div",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "html",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      }
+    ]
+  },
+  "video": "proof/heldout-v6/name-pilot/before/recording.mp4"
+}
