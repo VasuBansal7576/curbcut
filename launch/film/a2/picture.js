@@ -137,8 +137,9 @@ function jev(id,t,d){
   })
   if(side){
     mono('TYPESAFE JEV  /  PUBLIC REVIEW',44,68)
-    text('13 of 15',36,180,127);text('names correct.',40,326,77)
-    lines(['Names applied on seven sites.','Two decisions were too vague.'],47,514,34)
+    const score=t>=3.1&&t<5.95
+    text(score?'13 of 15':t<3.1?'Seven sites.':'Two names',36,180,score?127:94);text(score?'names correct.':t<3.1?'Live naming.':'too vague.',40,326,77)
+    rule(46,514,540);fill(46,512,540*t/d,4,pink)
   }else{
     gradient(240,H);let speech=window.cues.filter(s=>s.shot==='jev'),span=speech.filter(s=>s.voice!=='af_heart'),word=t>=(span.at(-1)?.start??62)-54?'Buscar.':t>=(span[0]?.start??60)-54?'Menú.':'button.'
     mono('MERIDIANO  /  LIVE NAMING',49,494,19,paper);text(word,39,547,151,paper,670)
@@ -195,12 +196,37 @@ function chapterEnd(id,t,d,frame){
   text(id==='chapter'?'How it works.':'Try the next key.',41,530,116,paper,670)
   if(id==='install')mono('github.com/VasuBansal7576/curbcut',50,720,24,paper)
 }
-function drawShopRun(terminal,replay,label){
+function drawShopRun(image,replay){
+  const {evidence,label,time}=replay
   g.setTransform(4/3,0,0,4/3,0,0)
-  photo(terminal,0,0,W,H)
-  const x=835,y=496,w=555,h=281
-  mono('KANE REPLAY   /   '+label,x,y-30,17,paper)
-  photo(replay,x,y,w,h,0,0,replay.width,replay.width*h/w)
+  fill(0,0,W,H,ink)
+  const split=684
+  fill(split,55,1,700,'#66636a')
+  mono('TERMINAL',34,84,17,paper)
+  text(evidence.title,32,120,50,paper)
+  mono(evidence.source,35,194,19,paper)
+  mono('KANE RECORDING',710,84,17,paper)
+  text(label,707,120,44,paper)
+  const w=702,h=w*image.height/image.width,y=(H-h)/2
+  photo(image,710,y,w,h)
+  let cursor=252
+  for(const line of evidence.rows){
+    const parts=line.match(/.{1,47}(?:\s|$)|.{1,47}/g)||[]
+    for(const part of parts){
+      mono(part,35,cursor,21,paper)
+      cursor+=29
+    }
+    cursor+=9
+  }
+  for(const {file,row} of evidence.receipts||[]){
+    mono(file,35,cursor+10,17,'#c9c6ca');mono(row,35,cursor+40,21,paper);cursor+=90
+  }
+  const pulse=3*Math.exp(-2*time)*Math.sin(time*9)
+  const alpha=.6+.4*Math.exp(-time)
+  ring(708,y-3,w+5,h+6,alpha,pulse)
+  const width=200
+  ring(36,688,width,59,alpha,pulse)
+  mono(evidence.verdict,54,701,29,paper)
 }
 function pending(id,t,d,frame){
   const material={

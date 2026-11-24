@@ -24,6 +24,31 @@ const shopReplays = {
   gate:[['fail',115,6,'Keyboard · original source'],['pass',116,5,'Keyboard · source fixed']],
   retire:[['without',54,8,'Keyboard · patch disabled']]
 }
+function evidencePage(id,key){
+  const base=path.join(root,delivered[id].sourceRun)
+  const terminal=id==='gate'?key+'/terminal.jsonl':'terminal.jsonl'
+  const events=fs.readFileSync(path.join(base,terminal),'utf8').trim().split('\n').map(line=>JSON.parse(line))
+  const output=events.filter(e=>e.kind==='out').flatMap(e=>e.data.split(/\r?\n/))
+  const command=events.find(e=>e.kind==='start').data.argv
+  if(id==='gate')return {title:command.slice(0,3).join(' '),source:'terminal.jsonl',rows:output.filter(Boolean),verdict:output.find(l=>/^(FAIL|PASS) /.test(l)).split(' ')[0]}
+  if(id==='retire')return {title:command.slice(0,3).join(' '),source:'terminal.jsonl',rows:output.filter(l=>/\[recheck\]|"without"|"outcome"/.test(l)),verdict:'retired'}
+  const dir=key==='after'?'attempt-1/after':key
+  const source=dir+'/result.json'
+  const raw=fs.readFileSync(path.join(base,source),'utf8')
+  const result=JSON.parse(raw)
+  const rows=raw.split(/\r?\n/).filter(l=>/^  "(status|reason)":/.test(l))
+  if(!rows.length)throw Error('Missing result lines: '+source)
+  const receipts=[]
+  if(key==='after'){
+    for(const [file,pattern] of [['provenance.json',/^  "writer":/],['candidate.json',/^      "action": "makeFocusable"/]]){
+      const lines=fs.readFileSync(path.join(base,'attempt-1',file),'utf8').split(/\r?\n/)
+      const row=lines.find(l=>pattern.test(l))
+      if(!row)throw Error('Missing evidence: '+file)
+      receipts.push({file,row})
+    }
+  }
+  return {title:command.slice(0,3).join(' '),source,rows,receipts,verdict:result.status}
+}
 const ff = args => execFileSync('ffmpeg',['-y','-v','error',...args],{stdio:'inherit'})
 const uri = name => pathToFileURL(name).href
 const assets = Object.fromEntries(Object.entries({
@@ -55,14 +80,13 @@ async function main(){
           ff(['-ss',String(start),'-i',path.join(root,deliveredSlot.kaneRecordings[key]),'-t',String(duration),'-vf','fps=30','-q:v','2',path.join(replayFolder,'%04d.jpg')])
           const names=fs.readdirSync(replayFolder).sort()
           if(names.length!==duration*30)throw Error('Short Kane recording: '+key)
-          replayFrames.push(...names.map(name=>({url:uri(path.join(replayFolder,name)),label})))
+          const evidence=evidencePage(shot.id,key)
+          replayFrames.push(...names.map((name,index)=>({url:uri(path.join(replayFolder,name)),label,evidence,time:index/30})))
         }
         if(replayFrames.length!==shot.duration*30)throw Error('Replay duration mismatch: '+shot.id)
       }
       let source,offset=0
-      if(deliveredSlot){
-        source=path.join(root,deliveredSlot.file)
-      }else if(incoming&&fs.existsSync(incoming)){
+      if(incoming&&fs.existsSync(incoming)){
         source=incoming
         shot.incoming=true
       }else if(reels[shot.id]){
@@ -86,7 +110,7 @@ async function main(){
             const recording=frames?await img(frames[i]):null
             if(replayFrames.length){
               const replay=replayFrames[i]
-              drawShopRun(recording,await img(replay.url),replay.label)
+              drawShopRun(await img(replay.url),replay)
             }else{
               await drawShot(shot,i/30,recording)
             }
