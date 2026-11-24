@@ -1,0 +1,91 @@
+{
+  "before": {
+    "status": "fail",
+    "measurement": {
+      "lang": null
+    }
+  },
+  "after": {
+    "status": "pass",
+    "measurement": {
+      "lang": "en"
+    }
+  },
+  "restored": {
+    "status": "fail",
+    "measurement": {
+      "lang": null
+    }
+  },
+  "language": {
+    "tag": "en",
+    "method": "franc-min 6.2.0, full sample and both halves agree, margin 0.006",
+    "ranks": [
+      [
+        [
+          "eng",
+          1
+        ],
+        [
+          "fra",
+          0.9742543730861194
+        ]
+      ],
+      [
+        [
+          "eng",
+          1
+        ],
+        [
+          "fra",
+          0.939498352652152
+        ]
+      ],
+      [
+        [
+          "eng",
+          1
+        ],
+        [
+          "fra",
+          0.9739794700405825
+        ]
+      ]
+    ]
+  },
+  "sampleLength": 2048,
+  "sampleSha256": "45add4adb670f33430085fee533b9408a71e63118f8377f47cc66080c9062b1e",
+  "patch": {
+    "id": "v6-dev-lang-4b1499ed6395c7f5bd4c",
+    "url": "https://www.norvig.com/sudoku.html",
+    "site": "www.norvig.com",
+    "match": "https://www.norvig.com/sudoku.html",
+    "persona": "document-language",
+    "task": "Declare the language of the primary visible text.",
+    "barrier": "The document element omits the primary language.",
+    "observedSelector": "html",
+    "rules": [
+      {
+        "selector": "html",
+        "action": "setLang",
+        "value": "en"
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "localMeasurement": "proof/heldout-v6/development-language/v6-dev-lang-4b1499ed6395c7f5bd4c.json",
+      "verifiedAt": "2026-11-24T13:29:44.938Z"
+    },
+    "evaluation": {
+      "category": "missing-language",
+      "name": "en"
+    },
+    "history": [
+      {
+        "at": "2026-11-24T13:29:44.938Z",
+        "event": "locally-verified",
+        "study": "Known development page, outside the held-out sample"
+      }
+    ]
+  }
+}

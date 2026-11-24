@@ -1,0 +1,91 @@
+{
+  "before": {
+    "status": "fail",
+    "measurement": {
+      "lang": null
+    }
+  },
+  "after": {
+    "status": "pass",
+    "measurement": {
+      "lang": "en"
+    }
+  },
+  "restored": {
+    "status": "fail",
+    "measurement": {
+      "lang": null
+    }
+  },
+  "language": {
+    "tag": "en",
+    "method": "franc-min 6.2.0, full sample and both halves agree, margin 0.006",
+    "ranks": [
+      [
+        [
+          "eng",
+          1
+        ],
+        [
+          "fra",
+          0.98273493771291
+        ]
+      ],
+      [
+        [
+          "eng",
+          1
+        ],
+        [
+          "fra",
+          0.945974269822989
+        ]
+      ],
+      [
+        [
+          "eng",
+          1
+        ],
+        [
+          "fra",
+          0.9622466781378454
+        ]
+      ]
+    ]
+  },
+  "sampleLength": 2048,
+  "sampleSha256": "e20fa95c732ead5e5c8f8ca33ad736a5d4db45cda18d0cb9bc1b78c275accb18",
+  "patch": {
+    "id": "v6-dev-lang-284c7c99ab280efb2a3e",
+    "url": "https://www.berkshirehathaway.com/letters/1999htm.html",
+    "site": "www.berkshirehathaway.com",
+    "match": "https://www.berkshirehathaway.com/letters/1999htm.html",
+    "persona": "document-language",
+    "task": "Declare the language of the primary visible text.",
+    "barrier": "The document element omits the primary language.",
+    "observedSelector": "html",
+    "rules": [
+      {
+        "selector": "html",
+        "action": "setLang",
+        "value": "en"
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "localMeasurement": "proof/heldout-v6/development-language/v6-dev-lang-284c7c99ab280efb2a3e.json",
+      "verifiedAt": "2026-11-24T13:29:41.008Z"
+    },
+    "evaluation": {
+      "category": "missing-language",
+      "name": "en"
+    },
+    "history": [
+      {
+        "at": "2026-11-24T13:29:41.008Z",
+        "event": "locally-verified",
+        "study": "Known development page, outside the held-out sample"
+      }
+    ]
+  }
+}

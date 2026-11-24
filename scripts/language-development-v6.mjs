@@ -63,7 +63,7 @@ async function measure() {
         const after=await observeCoverage(page,patch,{enabled:true})
         await page.evaluate(()=>globalThis.undoDevelopmentLanguage())
         const restored=await observeCoverage(page,patch)
-        const result={before,after,restored,language,sample,patch}
+        const result={before,after,restored,language,sampleLength:sample.length,sampleSha256:sha256(sample),patch}
         const fixed=before.status==='fail' && after.status==='pass' && restored.status==='fail'
         await saveJSON(path.join(ROOT,evidence),result)
         rows.push({url,id,status:fixed?'locally-fixed':'unresolved',evidence})
