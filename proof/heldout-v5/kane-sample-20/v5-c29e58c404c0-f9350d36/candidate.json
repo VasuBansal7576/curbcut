@@ -1,0 +1,77 @@
+{
+  "id": "v5-c29e58c404c0-f9350d36",
+  "url": "https://www.snhu.edu/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, hover “Academic Programs”, click “Associate Degrees” and confirm /online-degrees/associate.",
+  "controlTask": "Hover “Academic Programs”, click “Associate Degrees” and confirm /online-degrees/associate.",
+  "observedSelector": "#menu > ul > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/online-degrees/associate"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menu > ul > li:nth-of-type(1)",
+    "#menu > ul > li:nth-of-type(1) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#menu > ul > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu > ul > li:nth-of-type(1) > ul > li:nth-of-type(3) > ul:nth-of-type(2) > li:nth-of-type(2) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.snhu.edu",
+  "match": "https://www.snhu.edu/",
+  "barrier": "At 320 CSS pixels, the Academic Programs submenu stays hidden because its hover-opening rule applies only at widths of 992 pixels or more. The Associate Degrees link has no rendered box after ArrowDown.",
+  "rules": [
+    {
+      "selector": "#menu.collapse.navbar-collapse",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child > a.nav-link.d-none.d-lg-block",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child > ul.dropdown-menu > li.row, #menu > ul.navbar-nav > li.nav-menuItem:first-child:is(:hover, :focus-within) > ul.dropdown-menu",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child > ul.dropdown-menu > li.row > ul:nth-of-type(2) > li:nth-of-type(2) > a.dropdown-item",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "normal"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

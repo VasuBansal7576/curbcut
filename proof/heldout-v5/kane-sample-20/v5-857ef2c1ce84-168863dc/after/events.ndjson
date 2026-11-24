@@ -1,0 +1,35 @@
+{"type":"stream_start","cli_version":"0.10.7","surface":"run","pid":78227,"v":1,"ts":"2026-11-24T10:53:20.933Z"}
+{"type":"recording_state","enabled":true,"session_id":"0735c0b5-a287-4250-9fdb-2f0400215354","persist":false,"v":1,"ts":"2026-11-24T10:53:20.945Z"}
+{"type":"update_available","current":"0.10.7","latest":"0.10.8","severity":"patch","v":1,"ts":"2026-11-24T10:53:21.425Z"}
+{"type":"skill_update_available","current":null,"latest":"0.1.4","install_cmd":"kane-cli install skill","v":1,"ts":"2026-11-24T10:53:21.425Z"}
+{"type":"bifurcation","flows":["Navigate to https://www.crictracker.com/ then Use only keyboard input.\nUse Tab or Shift+Tab to move focus and Enter or Space to activate the exact control.\nMove in whichever direction is shorter.\nGroup repeated Tab presses if supported, checking focus frequently.\nDo not click, focus elements directly, use JavaScript, or navigate directly to the destination.\nComplete the registered journey in order and check each requested outcome.\nUse the declared arrow keys and Escape as needed.\nDo not use a substitute destination or control.\nStay on this public site.\nDo not sign in, register, pay, send or submit anything, or interact with a CAPTCHA or access challenge.\nLeave fixture settings unchanged.\nUse visible controls only.\nOpen “NEWS” using the keyboard and read “Cricket News”."],"count":1,"v":1,"ts":"2026-11-24T10:53:26.577Z"}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-24T10:53:27.527Z"}
+{"step":2,"status":"done","remark":"navigate: Navigate to https://www.crictracker.com/","v":1,"ts":"2026-11-24T10:53:27.533Z"}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-24T10:53:31.251Z"}
+{"step":3,"status":"done","remark":"press_key: PRIMARY: press the Escape key","v":1,"ts":"2026-11-24T10:53:37.587Z"}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-24T10:53:38.488Z"}
+{"step":4,"status":"done","remark":"press_key: PRIMARY: press the Tab key","v":1,"ts":"2026-11-24T10:53:44.151Z"}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-24T10:53:44.984Z"}
+{"step":5,"status":"done","remark":"press_key: PRIMARY: press the Enter key","v":1,"ts":"2026-11-24T10:53:50.427Z"}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-24T10:53:51.276Z"}
+{"step":6,"status":"done","remark":"press_key: PRIMARY: press the Tab key","v":1,"ts":"2026-11-24T10:53:58.180Z"}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-24T10:53:59.098Z"}
+{"step":7,"status":"done","remark":"press_key: PRIMARY: press the Tab key","v":1,"ts":"2026-11-24T10:54:04.564Z"}
+{"step":8,"status":"running","remark":"Step 7","v":1,"ts":"2026-11-24T10:54:05.374Z"}
+{"step":8,"status":"done","remark":"press_key: PRIMARY: press the Tab key","v":1,"ts":"2026-11-24T10:54:13.450Z"}
+{"step":9,"status":"running","remark":"Step 8","v":1,"ts":"2026-11-24T10:54:14.287Z"}
+{"step":9,"status":"done","remark":"press_key: PRIMARY: press the Tab key","v":1,"ts":"2026-11-24T10:54:19.894Z"}
+{"step":10,"status":"running","remark":"Step 9","v":1,"ts":"2026-11-24T10:54:20.694Z"}
+{"step":10,"status":"done","remark":"press_key: PRIMARY: press the Tab key","v":1,"ts":"2026-11-24T10:54:26.328Z"}
+{"step":11,"status":"running","remark":"Step 10","v":1,"ts":"2026-11-24T10:54:27.173Z"}
+{"step":11,"status":"done","remark":"press_key: PRIMARY: press the Tab key","v":1,"ts":"2026-11-24T10:54:31.966Z"}
+{"step":12,"status":"running","remark":"Step 11","v":1,"ts":"2026-11-24T10:54:32.775Z"}
+{"step":12,"status":"done","remark":"press_key: PRIMARY: press the Tab key","v":1,"ts":"2026-11-24T10:54:38.051Z"}
+{"step":13,"status":"running","remark":"Step 12","v":1,"ts":"2026-11-24T10:54:38.900Z"}
+{"step":13,"status":"done","remark":"press_key: PRIMARY: press the Tab key","v":1,"ts":"2026-11-24T10:54:44.028Z"}
+{"step":14,"status":"running","remark":"Step 13","v":1,"ts":"2026-11-24T10:54:44.837Z"}
+{"step":14,"status":"done","remark":"press_key: PRIMARY: Open “NEWS”; role=button; text=\"NEWS\" | HINTS: container=header navigat","v":1,"ts":"2026-11-24T10:54:50.499Z"}
+{"step":15,"status":"running","remark":"Step 14","v":1,"ts":"2026-11-24T10:54:51.336Z"}
+{"step":15,"status":"done","remark":"wait: Waiting confirm “Cricket News” is visible in the open NEWS menu","v":1,"ts":"2026-11-24T10:54:56.359Z"}
+{"type":"coverage","status":"skipped","reason":"not_assurance_project","pack":"/Users/vasu/.testmuai/kaneai/sessions/0735c0b5-a287-4250-9fdb-2f0400215354/evidence/d03d8753-1011-48eb-b899-61f033b75af3.evidence","v":1,"ts":"2026-11-24T10:55:00.059Z"}
+{"type":"run_end","status":"passed","summary":"The requested task was to open the NEWS section using only the keyboard and read “Cricket News.”\nThe NEWS control was opened and the Cricket News content was read.\nThe task was completed on CricTracker without changing site settings or submitting any information.","one_liner":"opened Cricket News on CricTracker","final_state":{"url":"https://www.crictracker.com/"},"reason":"Objective completed","duration":96.1,"bifurcated":false,"total_runs":1,"context":{"memory":{},"variables":{},"pointer":"(passed) opened Cricket News on CricTracker"},"credits_consumed":32.7916775,"session_dir":"/Users/vasu/.testmuai/kaneai/sessions/0735c0b5-a287-4250-9fdb-2f0400215354","run_dir":"/Users/vasu/.testmuai/kaneai/sessions/0735c0b5-a287-4250-9fdb-2f0400215354/runs/0","result_code":100,"reason_code":"success.complete","per_flow_metadata":[{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"The requested task was to open the NEWS section using only the keyboard and read “Cricket News.”\nThe NEWS control was opened and the Cricket News content was read.\nThe task was completed on CricTracker without changing site settings or submitting any information.","one_liner":"opened Cricket News on CricTracker","credits_consumed":32.7916775}],"run_id":"run-0","coverage":{"status":"skipped"},"v":1,"ts":"2026-11-24T10:55:00.060Z"}

@@ -1,0 +1,34 @@
+{
+  "id": "v5-cf5e31bb10aecd3af383",
+  "url": "https://uindex.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search torrents...” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search torrents...” field and type test without submitting.",
+  "observedSelector": "#search",
+  "requiredName": "Search torrents...",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#search",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "uindex.org",
+  "match": "https://uindex.org/",
+  "barrier": "The native textbox #search has no accessible name, so it cannot be found by its expected name in Reading view.",
+  "rules": [
+    {
+      "selector": "#searchform > input#search",
+      "action": "addLabel",
+      "value": "Search torrents..."
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

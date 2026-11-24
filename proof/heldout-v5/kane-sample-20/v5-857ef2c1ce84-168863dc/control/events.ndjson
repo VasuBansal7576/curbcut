@@ -1,0 +1,17 @@
+{"type":"stream_start","cli_version":"0.10.7","surface":"run","pid":77884,"v":1,"ts":"2026-11-24T10:51:52.743Z"}
+{"type":"recording_state","enabled":true,"session_id":"fd3aef21-8d5f-46a4-be81-788dae481929","persist":false,"v":1,"ts":"2026-11-24T10:51:52.755Z"}
+{"type":"update_available","current":"0.10.7","latest":"0.10.8","severity":"patch","v":1,"ts":"2026-11-24T10:51:53.282Z"}
+{"type":"skill_update_available","current":null,"latest":"0.1.4","install_cmd":"kane-cli install skill","v":1,"ts":"2026-11-24T10:51:53.282Z"}
+{"type":"bifurcation","flows":["Navigate to https://www.crictracker.com/ then Use the normal visual page and a pointer.\nComplete the registered journey in order and check each requested outcome.\nDo not use a substitute destination or control.\nStay on this public site.\nDo not sign in, register, pay, send or submit anything, or interact with a CAPTCHA or access challenge.\nLeave fixture settings unchanged.\nUse visible controls only.\nClick “NEWS” and read “Cricket News”."],"count":1,"v":1,"ts":"2026-11-24T10:51:57.539Z"}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-24T10:51:58.324Z"}
+{"step":2,"status":"done","remark":"navigate: Navigate to https://www.crictracker.com/","v":1,"ts":"2026-11-24T10:51:58.325Z"}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-24T10:52:00.887Z"}
+{"step":3,"status":"done","remark":"click: Clicking NEWS in the top navigation bar","v":1,"ts":"2026-11-24T10:52:04.815Z"}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-24T10:52:05.797Z"}
+{"step":4,"status":"done","remark":"click: Clicking Cricket News in the top navigation menu","v":1,"ts":"2026-11-24T10:52:09.851Z"}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-24T10:52:10.621Z"}
+{"step":5,"status":"done","remark":"wait: PRIMARY: wait for the Cricket News page heading to be visible","v":1,"ts":"2026-11-24T10:52:22.548Z"}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-24T10:52:23.334Z"}
+{"step":6,"status":"done","remark":"wait: Waiting Cricket News page is visible","v":1,"ts":"2026-11-24T10:52:27.438Z"}
+{"type":"coverage","status":"skipped","reason":"not_assurance_project","pack":"/Users/vasu/.testmuai/kaneai/sessions/fd3aef21-8d5f-46a4-be81-788dae481929/evidence/f5ee6397-d79a-43ab-9ef1-db9f028aad7a.evidence","v":1,"ts":"2026-11-24T10:52:31.162Z"}
+{"type":"run_end","status":"passed","summary":"Opened the site’s NEWS section to view Cricket News.\nThe Cricket News page was reached successfully.","one_liner":"opened Cricket News on CricTracker","final_state":{"url":"https://www.crictracker.com/cricket-news/?ref=hm","page":"Cricket News"},"reason":"Objective completed","duration":35.3,"bifurcated":false,"total_runs":1,"context":{"memory":{},"variables":{},"pointer":"(passed) opened Cricket News on CricTracker"},"credits_consumed":12.996255000000001,"session_dir":"/Users/vasu/.testmuai/kaneai/sessions/fd3aef21-8d5f-46a4-be81-788dae481929","run_dir":"/Users/vasu/.testmuai/kaneai/sessions/fd3aef21-8d5f-46a4-be81-788dae481929/runs/0","result_code":100,"reason_code":"success.complete","per_flow_metadata":[{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"Opened the site’s NEWS section to view Cricket News.\nThe Cricket News page was reached successfully.","one_liner":"opened Cricket News on CricTracker","credits_consumed":12.996255000000001}],"run_id":"run-0","coverage":{"status":"skipped"},"v":1,"ts":"2026-11-24T10:52:31.162Z"}

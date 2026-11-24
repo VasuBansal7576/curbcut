@@ -1,0 +1,22 @@
+{
+  "runner": "playwright-cdp",
+  "status": "pass",
+  "lanes": [
+    {
+      "persona": "low-vision",
+      "status": "pass",
+      "url": "https://trackjs.com/",
+      "httpStatus": 200,
+      "width": 320,
+      "browser": "159.0.8154.6"
+    },
+    {
+      "persona": "control",
+      "status": "pass",
+      "url": "https://trackjs.com/",
+      "httpStatus": 200,
+      "width": 1280,
+      "browser": "159.0.8154.6"
+    }
+  ]
+}

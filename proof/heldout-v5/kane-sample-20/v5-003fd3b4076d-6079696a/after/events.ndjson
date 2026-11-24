@@ -1,0 +1,49 @@
+{"type":"stream_start","cli_version":"0.10.7","surface":"run","pid":83505,"v":1,"ts":"2026-11-24T11:26:59.757Z"}
+{"type":"recording_state","enabled":true,"session_id":"a2544cae-fe8a-46e5-a09e-320c8988ea83","persist":false,"v":1,"ts":"2026-11-24T11:26:59.769Z"}
+{"type":"update_available","current":"0.10.7","latest":"0.10.8","severity":"patch","v":1,"ts":"2026-11-24T11:27:00.499Z"}
+{"type":"skill_update_available","current":null,"latest":"0.1.4","install_cmd":"kane-cli install skill","v":1,"ts":"2026-11-24T11:27:00.499Z"}
+{"type":"bifurcation","flows":["Navigate to https://www.freedommortgage.com/ then Use only keyboard input.\nUse Tab or Shift+Tab to move focus and Enter or Space to activate the exact control.\nMove in whichever direction is shorter.\nGroup repeated Tab presses if supported, checking focus frequently.\nDo not click, focus elements directly, use JavaScript, or navigate directly to the destination.\nComplete the registered journey in order and check each requested outcome.\nUse the declared arrow keys and Escape as needed.\nDo not use a substitute destination or control.\nStay on this public site.\nDo not sign in, register, pay, send or submit anything, or interact with a CAPTCHA or access challenge.\nLeave fixture settings unchanged.\nUse visible controls only.\nOpen “Buy and Sell” using the keyboard and read “Buy a Home”.\nGet the visible “Buy a Home” text and save it as {{buy_a_home_text}}."],"count":1,"v":1,"ts":"2026-11-24T11:27:06.262Z"}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-24T11:27:10.575Z"}
+{"step":2,"status":"done","remark":"navigate: Navigate to https://www.freedommortgage.com/","v":1,"ts":"2026-11-24T11:27:10.577Z"}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-24T11:27:12.058Z"}
+{"step":3,"status":"done","remark":"press_key: PRIMARY: press the Tab key","v":1,"ts":"2026-11-24T11:27:15.448Z"}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-24T11:27:16.149Z"}
+{"step":4,"status":"done","remark":"press_key: PRIMARY: press the Tab key","v":1,"ts":"2026-11-24T11:27:23.959Z"}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-24T11:27:24.611Z"}
+{"step":5,"status":"done","remark":"wait: queued plan (2 steps): press_key \"More information on our Terms of Use, opens in","v":1,"ts":"2026-11-24T11:27:30.392Z"}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-24T11:27:31.102Z"}
+{"step":6,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-24T11:27:31.109Z"}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-24T11:27:31.728Z"}
+{"step":7,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-24T11:27:31.736Z"}
+{"step":8,"status":"running","remark":"Step 7","v":1,"ts":"2026-11-24T11:27:32.426Z"}
+{"step":8,"status":"done","remark":"wait: queued plan (2 steps): press_key \"Reject Optional Cookies\"; press_key \"Reject Op","v":1,"ts":"2026-11-24T11:27:37.422Z"}
+{"step":9,"status":"running","remark":"Step 8","v":1,"ts":"2026-11-24T11:27:38.078Z"}
+{"step":9,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-24T11:27:38.085Z"}
+{"step":10,"status":"running","remark":"Step 9","v":1,"ts":"2026-11-24T11:27:38.751Z"}
+{"step":10,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-24T11:27:38.758Z"}
+{"step":11,"status":"running","remark":"Step 10","v":1,"ts":"2026-11-24T11:27:39.412Z"}
+{"step":11,"status":"done","remark":"press_key: PRIMARY: press the Enter key to activate the privacy dialog Close button","v":1,"ts":"2026-11-24T11:27:44.564Z"}
+{"step":12,"status":"running","remark":"Step 11","v":1,"ts":"2026-11-24T11:27:45.262Z"}
+{"step":12,"status":"done","remark":"press_key: PRIMARY: press the Space key to activate the privacy dialog Close button","v":1,"ts":"2026-11-24T11:27:50.474Z"}
+{"step":13,"status":"running","remark":"Step 12","v":1,"ts":"2026-11-24T11:27:51.142Z"}
+{"step":13,"status":"done","remark":"press_key: PRIMARY: press the Escape key to dismiss the privacy dialog","v":1,"ts":"2026-11-24T11:27:57.536Z"}
+{"step":14,"status":"running","remark":"Step 13","v":1,"ts":"2026-11-24T11:27:58.190Z"}
+{"step":14,"status":"done","remark":"wait: queued plan (2 steps): press_key \"learn\"; press_key \"learn\"","v":1,"ts":"2026-11-24T11:28:03.520Z"}
+{"step":15,"status":"running","remark":"Step 14","v":1,"ts":"2026-11-24T11:28:04.215Z"}
+{"step":15,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-24T11:28:04.223Z"}
+{"step":16,"status":"running","remark":"Step 15","v":1,"ts":"2026-11-24T11:28:04.861Z"}
+{"step":16,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-24T11:28:04.868Z"}
+{"step":17,"status":"running","remark":"Step 16","v":1,"ts":"2026-11-24T11:28:05.556Z"}
+{"step":17,"status":"done","remark":"press_key: PRIMARY: press the Tab key","v":1,"ts":"2026-11-24T11:28:11.390Z"}
+{"step":18,"status":"running","remark":"Step 17","v":1,"ts":"2026-11-24T11:28:12.050Z"}
+{"step":18,"status":"done","remark":"press_key: PRIMARY: Open “Buy and Sell” using the keyboard; role=button; text=\"Buy and Sell","v":1,"ts":"2026-11-24T11:28:17.178Z"}
+{"step":19,"status":"running","remark":"Step 18","v":1,"ts":"2026-11-24T11:28:17.884Z"}
+{"step":19,"status":"done","remark":"press_key: PRIMARY: press the Tab key to read “Buy a Home” in the registered journey order","v":1,"ts":"2026-11-24T11:28:22.171Z"}
+{"step":20,"status":"running","remark":"Step 19","v":1,"ts":"2026-11-24T11:28:22.829Z"}
+{"step":20,"status":"done","remark":"wait: PRIMARY: read “Buy a Home” in the registered journey order; role=link; text=\"Buy","v":1,"ts":"2026-11-24T11:28:29.730Z"}
+{"step":21,"status":"running","remark":"Step 20","v":1,"ts":"2026-11-24T11:28:30.389Z"}
+{"step":21,"status":"done","remark":"analyze: ANALYZE(textual_visual, 'The visible “Buy a Home” text is saved as {{buy_a_home_","v":1,"ts":"2026-11-24T11:28:38.553Z"}
+{"step":22,"status":"running","remark":"Step 21","v":1,"ts":"2026-11-24T11:28:39.213Z"}
+{"step":22,"status":"done","remark":"wait: Waiting after saving the visible “Buy a Home” text","v":1,"ts":"2026-11-24T11:28:41.983Z"}
+{"type":"coverage","status":"skipped","reason":"not_assurance_project","pack":"/Users/vasu/.testmuai/kaneai/sessions/a2544cae-fe8a-46e5-a09e-320c8988ea83/evidence/beb8f9a4-a529-4c7d-8086-c7a6ac793f49.evidence","v":1,"ts":"2026-11-24T11:28:45.523Z"}
+{"type":"run_end","status":"passed","summary":"Opened the “Buy and Sell” section using only keyboard controls.\nRead and saved the visible “Buy a Home” text.\nCompleted the requested task on the Freedom Mortgage homepage.","one_liner":"Opened Buy and Sell and read Buy a Home on freedommortgage.com","final_state":{"url":"https://www.freedommortgage.com/","buy_a_home_text":"Buy a Home"},"reason":"Objective completed","duration":102.6,"bifurcated":false,"total_runs":1,"context":{"memory":{"buy_a_home_text":{"extracted_value":"Buy a Home","operator":"equals","transforms":["strip"],"json_path":null,"reasoning":"value: 'Buy a Home' (stored, no comparison)","analyzer_type":"textual_visual","step":20,"query":"the visible Buy a Home link text in the Buy and Sell navigation region","condition":"The visible “Buy a Home” text is saved as {{buy_a_home_text}}.","human_description":"Extracting the visible Buy a Home text","expected_value":"","code_js":"el(19).innerText.trim()","wrapped_js":"(els) => {\n  const __m = {19: 0};\n  const el = (i) => els[__m[i]];\n  const __v = (el(19).innerText.trim());\n  return (typeof __v === 'boolean' ? String(__v) : __v);\n}","locators":["internal:label=\"Buy and Sell\"i >> internal:role=link[name=\"Buy a Home\"i]"],"needs_unit_conversion":false}},"variables":{"buy_a_home_text":{"syntax":"{{buy_a_home_text}}","value":"Buy a Home","type":"memory","secret":false,"source":"runtime"}},"pointer":"(passed) Opened Buy and Sell and read Buy a Home on freedommortgage.com"},"credits_consumed":33.35812,"session_dir":"/Users/vasu/.testmuai/kaneai/sessions/a2544cae-fe8a-46e5-a09e-320c8988ea83","run_dir":"/Users/vasu/.testmuai/kaneai/sessions/a2544cae-fe8a-46e5-a09e-320c8988ea83/runs/0","result_code":100,"reason_code":"success.complete","per_flow_metadata":[{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"Opened the “Buy and Sell” section using only keyboard controls.\nRead and saved the visible “Buy a Home” text.\nCompleted the requested task on the Freedom Mortgage homepage.","one_liner":"Opened Buy and Sell and read Buy a Home on freedommortgage.com","credits_consumed":33.35812}],"run_id":"run-0","coverage":{"status":"skipped"},"v":1,"ts":"2026-11-24T11:28:45.523Z"}
