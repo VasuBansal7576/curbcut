@@ -1,4 +1,4 @@
-import {createReport} from './lib/report.js';
+import { createReport } from './lib/report.js';
 
 (() => {
   const Ext = globalThis.CurbCutExt;
@@ -6,6 +6,13 @@ import {createReport} from './lib/report.js';
   const els = {
     globalToggle: document.getElementById("global-toggle"),
     globalStatus: document.getElementById("global-toggle-status"),
+    pageToggle: document.getElementById("page-toggle"),
+    pageToggleRow: document.getElementById("page-toggle-row"),
+    stuck: document.getElementById("stuck"),
+    instantPanel: document.getElementById("instant-panel"),
+    instantFix: document.getElementById("instant-fix"),
+    instantStatus: document.getElementById("instant-status"),
+    instantSettings: document.getElementById("instant-settings"),
     readerToggle: document.getElementById("reader-toggle"),
     fixtureRow: document.getElementById("fixture-preview-row"),
     fixtureToggle: document.getElementById("fixture-preview-toggle"),
@@ -33,6 +40,7 @@ import {createReport} from './lib/report.js';
     isFixture: false,
     active: [],
     sensitive: false,
+    available: false,
     snapshot: null,
   };
 
@@ -60,11 +68,31 @@ import {createReport} from './lib/report.js';
     if (report) setTaskStatus(reportLabels[report.phase || report.status], "is-ok");
   }
 
-  function renderActive(active) {
+  const personaLabels = {
+    "keyboard-only": "Keyboard",
+    "low-vision": "Low vision",
+    "screen-reader-view": "Screen reader",
+    "color-blind": "Color vision",
+    "low-contrast-simulation": "Low vision",
+    "document-language": "Screen reader",
+  };
+
+  function proofLink(href, label) {
+    const anchor = document.createElement("a");
+    anchor.href = href;
+    anchor.target = "_blank";
+    anchor.rel = "noopener noreferrer";
+    anchor.textContent = label;
+    return anchor;
+  }
+
+  function renderActive(active, emptyMessage) {
     els.activeList.replaceChildren();
     const items = Array.isArray(active) ? active : [];
     els.activeCount.textContent = String(items.length);
+    els.activeCount.setAttribute("aria-label", `${items.length} active ${items.length === 1 ? "fix" : "fixes"}`);
     els.activeEmpty.hidden = items.length > 0;
+    els.activeEmpty.textContent = emptyMessage;
 
     for (const patch of items) {
       const li = document.createElement("li");
@@ -73,61 +101,51 @@ import {createReport} from './lib/report.js';
 
       const top = document.createElement("div");
       top.className = "patch-item-top";
-
-      const name = document.createElement("div");
-      name.className = "patch-name";
-      name.textContent = patch.id;
+      const persona = document.createElement("span");
+      persona.className = "persona";
+      persona.textContent = personaLabels[patch.persona] || patch.persona;
 
       const badge = document.createElement("span");
-      badge.className = "badge " + (patch.unverified ? "unverified" : "verified");
-      badge.textContent = patch.unverified ? "Unverified" : patch.status === "locally-verified" ? "Local proof" : "Kane verified";
+      const local = patch.status === "locally-verified";
+      badge.className = "badge " + (patch.unverified ? "unverified" : local ? "local" : "verified");
+      badge.textContent = patch.unverified ? "Unverified" : local ? "Local proof" : "Kane verified";
 
-      top.append(name, badge);
+      const name = document.createElement("p");
+      name.className = "patch-name";
+      name.textContent = patch.barrier;
 
-      const links = document.createElement("div");
-      links.className = "evidence-links";
-      const before = Ext.evidenceHref(patch.evidence && patch.evidence.before);
-      const after = Ext.evidenceHref(patch.evidence && patch.evidence.after);
-      if (before) {
-        const a = document.createElement("a");
-        a.href = before;
-        a.target = "_blank";
-        a.rel = "noopener noreferrer";
-        a.textContent = "Before";
-        links.append(a);
-      }
-      if (after) {
-        const a = document.createElement("a");
-        a.href = after;
-        a.target = "_blank";
-        a.rel = "noopener noreferrer";
-        a.textContent = "After";
-        links.append(a);
-      }
-      if (patch.status === "locally-verified") {
-        const a = document.createElement("a");
-        a.href = Ext.evidenceHref(patch.evidence.localMeasurement);
-        a.target = "_blank";
-        a.rel = "noopener noreferrer";
-        a.textContent = "Measurements";
-        links.append(a);
-      } else if (!before && !after) {
-        const span = document.createElement("span");
-        span.className = "meta";
-        span.textContent = "Evidence pending";
-        links.append(span);
+      top.append(badge, persona);
+      li.append(top, name);
+
+      const before = Ext.evidenceHref(patch.evidence?.before);
+      const after = Ext.evidenceHref(patch.evidence?.after);
+      const measurement = Ext.evidenceHref(patch.evidence?.localMeasurement);
+      if (local && measurement) {
+        const link = proofLink(measurement, "View measurements");
+        link.className = "measurement";
+        li.append(link);
+      } else if (before || after) {
+        const proof = document.createElement("details");
+        const title = document.createElement("summary");
+        title.textContent = "Watch proof";
+        const links = document.createElement("div");
+        links.className = "evidence-links";
+        if (before) links.append(proofLink(before, "Before recording"));
+        if (after) links.append(proofLink(after, "After recording"));
+        proof.append(title, links);
+        li.append(proof);
       }
 
-      li.append(top, links);
       if (!patch.unverified && patch.matchedRules?.length && patch.selectorMatches?.every(({ count }) => count > 0)) {
         const report = document.createElement("details");
         const title = document.createElement("summary");
-        title.textContent = "Send the fix to the site owner";
+        title.textContent = "Send fix to site owner";
         const copy = document.createElement("button");
         copy.type = "button";
         copy.className = "ghost";
         copy.textContent = "Copy Markdown";
         const status = document.createElement("span");
+        status.className = "status";
         status.setAttribute("role", "status");
         const download = document.createElement("button");
         download.type = "button";
@@ -161,9 +179,13 @@ import {createReport} from './lib/report.js';
   }
 
   function renderState() {
+    const pageKey = Ext.pageKey(page.url);
+    const pagePaused = Ext.isPagePaused(page.url, state);
     els.globalToggle.checked = Boolean(state.enabled);
-    els.globalToggle.setAttribute("aria-checked", String(Boolean(state.enabled)));
-    els.globalStatus.textContent = state.enabled ? "Applying verified patches" : "Paused";
+    els.globalStatus.textContent = state.enabled ? "ON" : "OFF";
+    els.pageToggleRow.hidden = !page.available || !pageKey;
+    els.pageToggle.checked = state.enabled && !pagePaused;
+    els.pageToggle.disabled = !state.enabled;
     els.readerToggle.checked = Boolean(state.readerEnabled);
     els.fixtureToggle.checked = Boolean(state.fixturePreview);
     els.fixtureRow.hidden = !page.isFixture;
@@ -175,27 +197,27 @@ import {createReport} from './lib/report.js';
     els.feedStatus.textContent = state.feedError
       ? `${count} verified cached · last refresh ${stamp} · ${state.feedError}`
       : `${count} verified cached · last refresh ${stamp}`;
-    els.pageUrl.textContent = page.url || "No active tab";
+    els.pageUrl.textContent = pageKey ? pageKey.replace(/^https?:\/\//, "") : "No web page selected";
     els.proofLink.href = Ext.PROOF_URL;
-    renderActive(page.active);
+    const active = state.enabled && !pagePaused ? page.active : [];
+    const emptyMessage = !state.enabled ? "Fixes are paused on all pages." :
+      pagePaused ? "Fixes are paused for this page." :
+        page.available ? "No known fix for this page." : "Fixes aren’t available on this tab.";
+    renderActive(active, emptyMessage);
+    els.instantPanel.hidden = state.instantEnabled !== true || !state.enabled || pagePaused ||
+      !page.available || page.sensitive || page.isFixture || active.length > 0 || !pageKey?.startsWith("https://");
   }
 
   async function refreshPageContext() {
     const result = await chrome.runtime.sendMessage({ type: "QUERY_ACTIVE", capturedTabId, includeMatches: true });
-    if (result && result.ok) {
-      page.url = result.url || "";
-      page.isFixture = Boolean(result.isFixture);
-      page.active = Array.isArray(result.active) ? result.active : [];
-      page.sensitive = Boolean(result.sensitive);
-    } else if (state.enabled) {
-      const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-      page.url = (tab && tab.url) || "";
-      page.isFixture = Ext.isFixtureShopUrl(page.url);
-      page.active = Ext.selectActivePatches(page.url, state);
-      page.sensitive = Ext.urlLooksSensitive(page.url);
-    } else {
-      page.active = [];
-    }
+    if (result?.url !== page.url) page.snapshot = null;
+    page.available = Boolean(result?.ok);
+    page.url = result?.url || result?.tab?.url || "";
+    page.isFixture = Boolean(result?.isFixture);
+    page.active = Array.isArray(result?.active)
+      ? result.active.filter(patch => patch.matchedRules?.length || patch.unverified)
+      : [];
+    page.sensitive = Boolean(result?.sensitive);
   }
 
   async function load() {
@@ -204,10 +226,12 @@ import {createReport} from './lib/report.js';
     capturedTabId = state.pendingStuck ? state.capturedTabId : undefined;
     await refreshPageContext();
     if (state.pendingStuck) {
+      els.stuck.open = true;
       setTaskStatus("Hotkey capture ready. Confirm and send your task.", "is-ok");
       await chrome.runtime.sendMessage({ type: "CLEAR_PENDING_STUCK" });
       state.pendingStuck = false;
     } else renderReport(state.report);
+    els.globalToggle.disabled = false;
     renderState();
   }
 
@@ -226,11 +250,13 @@ import {createReport} from './lib/report.js';
     setTaskStatus("");
     if (!els.taskConfirm.checked) {
       setTaskStatus("Confirm this is a public page before sending.", "is-error");
+      els.taskConfirm.focus();
       return;
     }
     const task = els.taskInput.value.trim();
     if (!task) {
       setTaskStatus("Enter a one-line task.", "is-error");
+      els.taskInput.focus();
       return;
     }
     if (page.sensitive || Ext.urlLooksSensitive(page.url)) {
@@ -275,14 +301,50 @@ import {createReport} from './lib/report.js';
     setTaskStatus("Task sent to local loop.", "is-ok");
   }
 
-  els.globalToggle.addEventListener("change", async () => {
-    const response = await chrome.runtime.sendMessage({
-      type: "SET_ENABLED",
-      enabled: els.globalToggle.checked,
-    });
-    if (response && response.ok) state = response.state;
-    await refreshPageContext();
-    renderState();
+  let changingFixes = false;
+  async function toggleFixes(message) {
+    if (changingFixes) {
+      els.globalToggle.checked = Boolean(state.enabled);
+      els.pageToggle.checked = state.enabled && !Ext.isPagePaused(page.url, state);
+      return;
+    }
+    changingFixes = true;
+    try {
+      const response = await chrome.runtime.sendMessage(message);
+      if (!response?.ok) throw new Error("Could not change fix settings.");
+      state = response.state;
+      await refreshPageContext();
+    } catch {
+      setTaskStatus("Could not change fix settings. Reopen the popup to try again.", "is-error");
+    } finally {
+      changingFixes = false;
+      renderState();
+    }
+  }
+
+  els.globalToggle.addEventListener("change", () => toggleFixes({
+    type: "SET_ENABLED",
+    enabled: els.globalToggle.checked,
+  }));
+  els.pageToggle.addEventListener("change", () => toggleFixes({
+    type: "SET_PAGE_ENABLED",
+    capturedTabId,
+    pageKey: Ext.pageKey(page.url),
+    enabled: els.pageToggle.checked,
+  }));
+
+  els.instantSettings.addEventListener("click", () => chrome.runtime.openOptionsPage());
+  els.instantFix.addEventListener("click", async () => {
+    els.instantFix.disabled = true;
+    els.instantStatus.textContent = "Looking for a fix…";
+    try {
+      const result = await chrome.runtime.sendMessage({ type: "RUN_INSTANT", capturedTabId });
+      els.instantStatus.textContent = result?.ok ? "Temporary fix applied. Press Escape on the page to undo." : "Can’t fix this one yet.";
+    } catch {
+      els.instantStatus.textContent = "Can’t fix this one yet.";
+    } finally {
+      els.instantFix.disabled = false;
+    }
   });
 
   els.readerToggle.addEventListener("change", async () => {
@@ -328,8 +390,13 @@ import {createReport} from './lib/report.js';
   els.sendTask.addEventListener("click", () => submit("send"));
   els.downloadTask.addEventListener("click", () => submit("download"));
 
-  chrome.storage.onChanged.addListener(async ({ report }, area) => {
-    if (area !== "local" || !report?.newValue) return;
+  chrome.storage.onChanged.addListener(async ({ report, instantEnabled }, area) => {
+    if (area !== "local") return;
+    if (instantEnabled) {
+      state.instantEnabled = instantEnabled.newValue;
+      renderState();
+    }
+    if (!report?.newValue) return;
     state.report = report.newValue;
     renderReport(state.report);
     if (state.report.status === "verified") {

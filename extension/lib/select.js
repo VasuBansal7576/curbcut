@@ -1,9 +1,21 @@
 (() => {
   const root = globalThis.CurbCutExt || (globalThis.CurbCutExt = {});
 
+  function pageKey(url) {
+    try {
+      const parsed = new URL(url);
+      if (["https:", "http:"].includes(parsed.protocol)) return parsed.origin + parsed.pathname;
+    } catch {}
+    return null;
+  }
+
+  function isPagePaused(url, state) {
+    return Array.isArray(state.pausedPages) && state.pausedPages.includes(pageKey(url));
+  }
+
   function selectActivePatches(url, state) {
     if (!state || state.enabled === false) return [];
-    if (typeof url !== "string" || !url) return [];
+    if (!url || isPagePaused(url, state)) return [];
 
     const verified = root
       .sanitizePatchArray(state.patches, { statuses: ["verified", "locally-verified"] })
@@ -44,6 +56,8 @@
     } catch { return null; }
   }
 
+  root.pageKey = pageKey;
+  root.isPagePaused = isPagePaused;
   root.selectActivePatches = selectActivePatches;
   root.evidenceHref = evidenceHref;
 })();

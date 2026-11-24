@@ -1,3 +1,21 @@
+const enabled = document.querySelector("#jev-enabled");
+const enabledStatus = document.querySelector("#jev-enabled-status");
+chrome.storage.local.get("instantEnabled").then(settings => {
+  enabled.checked = settings.instantEnabled === true;
+  enabled.disabled = false;
+}).catch(() => { enabledStatus.textContent = "Could not load the instant fix setting."; });
+
+enabled.addEventListener("change", async () => {
+  const checked = enabled.checked;
+  try {
+    await chrome.storage.local.set({ instantEnabled: checked });
+    enabledStatus.textContent = checked ? "Instant fix enabled." : "Instant fix disabled.";
+  } catch {
+    enabled.checked = !checked;
+    enabledStatus.textContent = "Could not save the instant fix setting.";
+  }
+});
+
 const form = document.querySelector("#jev-form");
 const input = document.querySelector("#jev-key");
 const status = document.querySelector("#jev-status");

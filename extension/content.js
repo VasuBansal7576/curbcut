@@ -83,7 +83,7 @@
     pendingApply = pendingApply.catch(() => {}).then(async () => {
       const state = await readState();
       applyList(Ext.selectActivePatches(location.href, state));
-      syncReader(Boolean(state.enabled && state.readerEnabled));
+      syncReader(Boolean(state.enabled && state.readerEnabled && !Ext.isPagePaused(location.href, state)));
       return lastActive;
     });
     return pendingApply;
@@ -169,6 +169,7 @@
     if (area !== "local") return;
     if (
       changes.enabled ||
+      changes.pausedPages ||
       changes.readerEnabled ||
       changes.fixturePreview ||
       changes.patches ||

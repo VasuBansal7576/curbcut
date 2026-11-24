@@ -150,7 +150,7 @@ test('installed popup copies and downloads the CLI report without submitting it'
     const popup=await context.newPage()
     await popup.goto(new URL('popup.html',worker.url()).href)
     const panel=popup.locator('[data-patch-id="'+id+'"]')
-    await panel.getByText('Send the fix to the site owner').click()
+    await panel.getByText('Send fix to site owner').click()
     await panel.getByRole('button',{name:'Copy Markdown'}).click()
     await panel.getByText('Copied.',{exact:true}).waitFor()
     const [download]=await Promise.all([popup.waitForEvent('download'),

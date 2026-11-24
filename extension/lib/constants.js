@@ -45,6 +45,8 @@
   root.DEFAULT_STATE = Object.freeze({
     enabled: true,
     readerEnabled: false,
+    pausedPages: [],
+    instantEnabled: false,
     fixturePreview: false,
     feedUrl: "",
     patches: [],

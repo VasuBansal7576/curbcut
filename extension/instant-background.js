@@ -82,13 +82,18 @@ chrome.alarms.onAlarm.addListener(alarm => {
 });
 chrome.runtime.onStartup.addListener(() => flushInstantQueue().catch(() => {}));
 
+async function instantEnabledFor(url) {
+  const state = await chrome.storage.local.get(["instantEnabled", "enabled", "pausedPages"]);
+  return state.instantEnabled === true && state.enabled !== false && !CurbCutExt.isPagePaused(url, state);
+}
+
 function instantFix(tabId) {
   if (tabId == null) return Promise.resolve({ ok: false });
   if (instantJobs.has(tabId)) return instantJobs.get(tabId);
   const job = (async () => {
     const start = performance.now();
     const tab = await chrome.tabs.get(tabId);
-    if (!tab.active || !publicInstantUrl(tab.url)) return { ok: false };
+    if (!tab.active || !publicInstantUrl(tab.url) || !await instantEnabledFor(tab.url)) return { ok: false };
     const send = (message, documentId) => chrome.tabs.sendMessage(tabId, message, documentId ? { documentId } : { frameId: 0 });
     let captured, phase = "capture";
     try {
@@ -102,6 +107,7 @@ function instantFix(tabId) {
       const screenshot = await captureInstantScreenshot(tab.windowId);
       const after = (await chrome.tabs.query({ active: true, windowId: tab.windowId }))[0];
       if (after?.id !== tabId || after.url !== tab.url || activation !== activations.get(tab.windowId)) return { ok: false };
+      if (!await instantEnabledFor(tab.url)) return { ok: false, reason: "disabled" };
       const confirmed = await send({ type: "INSTANT_CONFIRM", token: captured.token });
       if (!confirmed?.ok || confirmed.url !== after.url) return { ok: false };
       phase = "decision";
@@ -110,6 +116,7 @@ function instantFix(tabId) {
         ? await CurbCutJev.chooseInstant(key, captured.state, screenshot)
         : await instantPost("/decide", { state: captured.state, screenshot });
       if (!decision.rules || !(decision.confidence >= CurbCutJev.threshold)) return { ok: false, reason: decision.reason ?? "confidence", confidence: decision.confidence, providerMs: decision.providerMs };
+      if (!await instantEnabledFor(tab.url)) return { ok: false, reason: "disabled" };
       phase = "apply";
       const patch = CurbCutJev.instantPatch(captured.state.url, decision);
       const applied = await send({ type: "INSTANT_APPLY", token: captured.token, patch });

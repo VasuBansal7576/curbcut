@@ -50,6 +50,12 @@
       "description": "Capture an accessibility barrier"
     }
   },
+  "web_accessible_resources": [
+    {
+      "resources": ["fonts/Overpass.ttf"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
   "content_scripts": [
     {
       "matches": [

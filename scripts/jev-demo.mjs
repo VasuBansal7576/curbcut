@@ -37,6 +37,7 @@ try {
     args:['--disable-extensions-except='+extension,'--load-extension='+extension,'--disable-background-networking','--window-size=1920,1080']})
   await guardRequests(context,task,{extension:true,instantBridge:true})
   const worker=context.serviceWorkers()[0]??await context.waitForEvent('serviceworker',{timeout:8000})
+  await worker.evaluate(()=>chrome.storage.local.set({instantEnabled:true}))
   const page=context.pages()[0]??await context.newPage()
   video=page.video()
   const result=await page.goto(task.url,{waitUntil:'domcontentloaded',timeout:16000})

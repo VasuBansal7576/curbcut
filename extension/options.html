@@ -3,23 +3,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Curb Cut instant fix settings</title>
+  <title>Curb Cut settings</title>
   <link rel="stylesheet" href="popup.css">
 </head>
-<body>
+<body class="options">
   <main class="shell">
-    <section class="panel" aria-labelledby="jev-heading">
-      <h1 id="jev-heading">Instant fix settings</h1>
-      <p>When you press Alt+Shift+F or choose “I’m stuck — fix this page”, Curb Cut sends TypeSafe Jev a visible-tab screenshot and a short description of nearby page elements, including labels, layout, and the page path. Use instant fixes on public pages. A page with a populated editable field or sign-in form is skipped.</p>
-      <p>Repairs apply to the current tab. Press Escape to undo. Curb Cut queues the temporary rules and a generated task with your local Curb Cut server for Kane verification.</p>
+    <header class="brand">
+      <span class="mark" aria-hidden="true"></span>
+      <h1>Curb Cut settings</h1>
+      <span class="paving" aria-hidden="true"></span>
+    </header>
+    <section class="options-section" aria-labelledby="instant-heading">
+      <h2 id="instant-heading">Instant fix</h2>
+      <label class="row-toggle" for="jev-enabled">
+        <span><strong>Experimental instant fix (TypeSafe Jev).</strong> Measured: fixes some hover menus; 3 of 142 held-out barriers.</span>
+        <input id="jev-enabled" type="checkbox" role="switch" disabled>
+      </label>
+      <div class="options-copy">
+        <p>Off by default. When enabled, press Alt+Shift+F or choose “Try experimental instant fix” in the popup. Curb Cut checks the page and looks for repair candidates before capturing a JPEG of the visible tab.</p>
+        <p>TypeSafe receives the screenshot, page origin and path, title, viewport size and zoom, and details about the focused element, nearby controls and up to 16 repair candidates. Those details include accessible names or visible text, element types, positions and candidate repairs.</p>
+        <p>Use this on public HTTPS pages. Curb Cut skips sensitive URLs, sign-in and payment forms, and visible text fields containing values. A proposed fix applies temporarily in the current tab. Press Escape or choose Undo to remove it.</p>
+        <p>After applying a fix, Curb Cut sends the rule, its task description, the model and confidence to the local verification queue. If the server is unavailable, the extension saves that entry locally and retries. The screenshot stays out of the queue.</p>
+      </div>
+      <p id="jev-enabled-status" class="status" role="status"></p>
+    </section>
+    <section class="options-section" aria-labelledby="connection-heading">
+      <h2 id="connection-heading">TypeSafe connection</h2>
+      <p class="hint">With a personal key, the extension sends requests directly to TypeSafe. With an empty key, it sends the capture and candidate selectors to the local Curb Cut server at 127.0.0.1:4317. Both routes keep the candidate selectors out of the TypeSafe request.</p>
       <form id="jev-form">
         <label class="field" for="jev-key">
           <span>TypeSafe API key</span>
           <input id="jev-key" type="password" autocomplete="off" placeholder="Leave blank to use the local server">
         </label>
-        <button type="submit" class="primary">Save</button>
+        <button type="submit" class="primary">Save key</button>
       </form>
-      <p id="jev-status" role="status"></p>
+      <p id="jev-status" class="status" role="status"></p>
     </section>
   </main>
   <script src="lib/jev-config.js"></script>

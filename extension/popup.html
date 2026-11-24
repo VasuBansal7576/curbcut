@@ -6,105 +6,102 @@
   <title>Curb Cut</title>
   <link rel="stylesheet" href="popup.css">
 </head>
-<body>
+<body class="popup">
   <main id="popup-root" class="shell">
-    <header class="hero">
-      <div class="brand">
-        <span class="mark" aria-hidden="true"></span>
-        <div>
-          <h1>Curb Cut</h1>
-          <p class="tagline">Fixes with proof</p>
-        </div>
-      </div>
-      <label class="switch" id="global-toggle-label" for="global-toggle">
-        <input id="global-toggle" type="checkbox" role="switch" aria-checked="false">
-        <span class="track" aria-hidden="true"><span class="thumb"></span></span>
-        <span class="switch-copy">
-          <span class="switch-title">Patches on</span>
-          <span id="global-toggle-status" class="switch-status">Loading…</span>
-        </span>
-      </label>
+    <header class="brand">
+      <span class="mark" aria-hidden="true"></span>
+      <h1>Curb Cut</h1>
+      <span class="paving" aria-hidden="true"></span>
     </header>
 
-    <section class="panel" aria-labelledby="active-heading">
-      <div class="panel-head">
-        <h2 id="active-heading">Active on this page</h2>
-        <span id="active-count" class="pill">0</span>
+    <label class="master" for="global-toggle">
+      <span class="master-copy">
+        <span id="global-toggle-title">Apply fixes</span>
+        <span class="meta">All pages</span>
+      </span>
+      <input id="global-toggle" type="checkbox" role="switch" aria-labelledby="global-toggle-title" disabled>
+      <span id="global-toggle-status" class="signal" aria-hidden="true">…</span>
+    </label>
+
+    <section class="page-panel" aria-labelledby="active-heading">
+      <div class="page-head">
+        <div>
+          <h2 id="active-heading">Fixes on this page</h2>
+          <p id="page-url" class="page-address"></p>
+        </div>
+        <span id="active-count" class="count" role="status" aria-label="Loading fixes">—</span>
       </div>
       <ul id="active-patches" class="patch-list"></ul>
-      <p id="active-empty" class="empty" hidden>No matching patches for this page.</p>
-    </section>
-
-    <section class="panel controls" aria-label="View controls">
-      <label class="row-toggle" for="reader-toggle">
-        <span>
-          <span class="row-title">Screen reader view</span>
-          <span class="row-sub">Linearized accessibility tree</span>
-        </span>
-        <input id="reader-toggle" type="checkbox" role="switch">
-        <span class="mini-track" aria-hidden="true"><span class="mini-thumb"></span></span>
-      </label>
-      <label class="row-toggle" id="fixture-preview-row" for="fixture-preview-toggle" hidden>
-        <span>
-          <span class="row-title">Fixture preview</span>
-          <span class="row-sub">Show unverified demo candidates</span>
-        </span>
-        <input id="fixture-preview-toggle" type="checkbox" role="switch">
-        <span class="mini-track" aria-hidden="true"><span class="mini-thumb"></span></span>
+      <p id="active-empty" class="empty" hidden></p>
+      <label id="page-toggle-row" class="row-toggle" for="page-toggle" hidden>
+        <span>Apply fixes on this page</span>
+        <input id="page-toggle" type="checkbox" role="switch">
       </label>
     </section>
 
-    <section class="panel" aria-labelledby="stuck-heading">
-      <div class="panel-head">
-        <h2 id="stuck-heading">I’m stuck</h2>
-        <kbd class="hotkey">Ctrl+Shift+U</kbd>
+    <section class="help" aria-label="Report a barrier or try a fix">
+      <details id="stuck" class="disclosure">
+        <summary><span>I’m stuck</span><kbd class="hotkey" aria-hidden="true">Ctrl+Shift+U</kbd></summary>
+        <div class="detail-body">
+          <p class="hint">Report a barrier on a public page. Curb Cut captures a page snapshot without a screenshot.</p>
+          <label class="field" for="persona-select">
+            <span>How were you using the page?</span>
+            <select id="persona-select">
+              <option value="keyboard-only">Keyboard only</option>
+              <option value="low-vision">Low vision</option>
+              <option value="screen-reader-view">Screen reader view</option>
+              <option value="color-blind">Color blind</option>
+            </select>
+          </label>
+          <label class="field" for="task-input">
+            <span>What were you trying to do?</span>
+            <input id="task-input" type="text" maxlength="240" placeholder="Open the site search with Tab">
+          </label>
+          <label class="confirm" for="task-confirm">
+            <input id="task-confirm" type="checkbox">
+            <span>I confirm this is a public page and the task may be sent for patching.</span>
+          </label>
+          <div class="actions">
+            <button id="send-task" type="button" class="primary">Send to local loop</button>
+            <button id="download-task" type="button">Download task</button>
+          </div>
+        </div>
+      </details>
+      <p id="task-status" class="status" role="status"></p>
+      <div id="instant-panel" class="instant-panel" hidden>
+        <button id="instant-fix" type="button">Try experimental instant fix</button>
+        <kbd class="hotkey" aria-hidden="true">Alt+Shift+F</kbd>
+        <p class="hint">Shares a screenshot and page details with TypeSafe.</p>
       </div>
-      <button id="instant-fix" type="button" class="primary wide">I’m stuck — fix this page</button>
-      <p class="hint">Alt+Shift+F shares a screenshot and nearby page elements with TypeSafe.
-        <button id="instant-settings" type="button" class="text-btn">Instant fix settings</button>
-      </p>
       <p id="instant-status" class="status" role="status"></p>
-      <p class="hint">Public pages only. Snapshot skips passwords, login, and checkout.</p>
-      <label class="field" for="persona-select">
-        <span>Persona</span>
-        <select id="persona-select">
-          <option value="keyboard-only">Keyboard only</option>
-          <option value="low-vision">Low vision</option>
-          <option value="screen-reader-view">Screen reader view</option>
-          <option value="color-blind">Color blind</option>
-        </select>
-      </label>
-      <label class="field" for="task-input">
-        <span>What were you trying to do?</span>
-        <input id="task-input" type="text" maxlength="240" placeholder="Example: open the site search with Tab">
-      </label>
-      <label class="confirm" for="task-confirm">
-        <input id="task-confirm" type="checkbox">
-        <span>I confirm this is a public page and the task may be sent for patching.</span>
-      </label>
-      <div class="actions">
-        <button id="send-task" type="button" class="primary">Send to local loop</button>
-        <button id="download-task" type="button" class="ghost">Download task</button>
-      </div>
-      <p id="task-status" class="status" role="status" aria-live="polite"></p>
     </section>
 
-    <section class="panel" aria-labelledby="feed-heading">
-      <div class="panel-head">
-        <h2 id="feed-heading">Patch feed</h2>
-        <button id="refresh-feed" type="button" class="text-btn">Refresh</button>
+    <details class="disclosure tools">
+      <summary>Reading view and patch feed</summary>
+      <div class="detail-body">
+        <label class="row-toggle" for="reader-toggle">
+          <span>Screen reader view</span>
+          <input id="reader-toggle" type="checkbox" role="switch">
+        </label>
+        <label class="row-toggle" id="fixture-preview-row" for="fixture-preview-toggle" hidden>
+          <span>Preview unverified fixtures</span>
+          <input id="fixture-preview-toggle" type="checkbox" role="switch">
+        </label>
+        <label class="field" for="feed-url">
+          <span>Optional verified feed URL</span>
+          <input id="feed-url" type="url" placeholder="https://example.com/patches/index.json">
+        </label>
+        <div class="actions">
+          <button id="save-feed" type="button">Save feed</button>
+          <button id="refresh-feed" type="button">Refresh feed</button>
+        </div>
+        <p id="feed-status" class="meta" role="status"></p>
       </div>
-      <label class="field" for="feed-url">
-        <span>Optional verified feed URL</span>
-        <input id="feed-url" type="url" placeholder="https://example.com/patches/index.json">
-      </label>
-      <button id="save-feed" type="button" class="ghost wide">Save feed</button>
-      <p id="feed-status" class="meta"></p>
-    </section>
+    </details>
 
     <footer class="footer">
-      <a id="proof-link" href="http://127.0.0.1:4317/site/#evidence" target="_blank" rel="noopener noreferrer">Open proof</a>
-      <span id="page-url" class="meta truncate"></span>
+      <a id="proof-link" target="_blank" rel="noopener noreferrer">Evidence archive</a>
+      <button id="instant-settings" type="button" class="text-button">Settings</button>
     </footer>
   </main>
   <script src="lib/constants.js"></script>
@@ -113,6 +110,5 @@
   <script src="lib/select.js"></script>
   <script src="lib/sensitive.js"></script>
   <script type="module" src="popup.js"></script>
-  <script type="module" src="instant-popup.js"></script>
 </body>
 </html>

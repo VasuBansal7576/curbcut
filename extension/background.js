@@ -10,6 +10,7 @@ importScripts(
 );
 
 const Ext = globalThis.CurbCutExt;
+let pageUpdate = Promise.resolve();
 const jobAlarm = "curbcut-report-status";
 
 async function readJsonAsset(path) {
@@ -271,6 +272,28 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
         sendResponse({ ok: true, state });
         return;
       }
+      case "SET_PAGE_ENABLED": {
+        const tab = message.capturedTabId == null
+          ? (await chrome.tabs.query({ active: true, currentWindow: true }))[0]
+          : await chrome.tabs.get(message.capturedTabId);
+        const key = Ext.pageKey(tab?.url);
+        if (!key || key !== message.pageKey) {
+          sendResponse({ ok: false, reason: "page-changed" });
+          return;
+        }
+        const update = pageUpdate.catch(() => {}).then(async () => {
+          const { pausedPages } = await getState();
+          const pages = new Set(pausedPages);
+          if (message.enabled) pages.delete(key);
+          else pages.add(key);
+          return setState({ pausedPages: [...pages] });
+        });
+        pageUpdate = update;
+        const state = await update;
+        await broadcast("STATE_UPDATED", { state });
+        sendResponse({ ok: true, state });
+        return;
+      }
       case "SET_READER": {
         const state = await setState({
           readerEnabled: Boolean(message.readerEnabled),
@@ -322,6 +345,10 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
         return;
       }
       case "RUN_INSTANT": {
+        if ((await chrome.storage.local.get("instantEnabled")).instantEnabled !== true) {
+          sendResponse({ ok: false, reason: "disabled" });
+          return;
+        }
         const fromPage = _sender.tab && /^https?:/.test(_sender.url ?? "");
         const tabId = fromPage ? _sender.tab.id : message.capturedTabId ??
           (await chrome.tabs.query({ active: true, currentWindow: true }))[0]?.id;
