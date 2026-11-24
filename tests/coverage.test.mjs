@@ -73,6 +73,12 @@ test('rendered discovery and the declarative rules run and revert in Chromium',a
       await page.evaluate(()=>window.restore())
       assert.equal((await observeCoverage(page,patch)).status,'fail')
     }
+    const decorative={...draft,rules:[{selector:'#photo',action:'setAltText',value:''}]}
+    assert(validate(decorative))
+    await page.evaluate(patch=>{window.restore=CurbCut.apply(patch)},decorative)
+    assert.equal(await page.locator('#photo').getAttribute('alt'),'')
+    await page.evaluate(()=>window.restore())
+    assert.equal(await page.locator('#photo').getAttribute('alt'),null)
     const invalid={...draft,rules:[{selector:'#contrast',action:'setContrast',value:{color:'red'}}]}
     assert(!validate(invalid))
     const scoped={...draft,rules:[{selector:'p',action:'setContrast',value:{color:'#767676'}}]}
