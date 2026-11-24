@@ -76,6 +76,38 @@ export function wcagCriteria(patch) {
   return ids.map(id=>({id,name:criteria[id][0],who:criteria[id][1]}))
 }
 
+export function sourceChange(rule) {
+  return source(rule)
+}
+
+function quoteFromTask(task) {
+  return task?.match(/[“"'‘]([^”"'’]{2,80})[”"'’]/)?.[1]
+}
+
+export function inferSourceRules(finding) {
+  const node=(finding.dom??[]).find(item=>item.selector)??null
+  const selector=node?.selector||finding.observedSelector||'the failing control'
+  if(finding.persona==='screen-reader-view') {
+    const value=finding.requiredName||quoteFromTask(finding.task)||node?.name||'descriptive name'
+    return [{selector,action:'addLabel',value}]
+  }
+  if(finding.persona==='low-vision') {
+    return [{selector,action:'injectCSS',value:{'max-width':'100%'}}]
+  }
+  const rules=[{selector,action:'makeFocusable'}]
+  if(!node?.role || node.role==='generic' || node.tag==='div' || node.tag==='span' || /tabIndex|Tab traversal|tab order|not reach/i.test(finding.reason??'')) {
+    rules.push({selector,action:'setRole',value:'button'})
+    rules.push({selector,action:'bindEnterToClick'})
+  }
+  rules.push({selector,action:'restoreFocusOutline'})
+  return rules
+}
+
+export function recommendRepair(finding) {
+  const rules=inferSourceRules(finding)
+  return {wcag:wcagCriteria({persona:finding.persona,rules}),source:rules.map(source),rules}
+}
+
 export function createReport(patch) {
   if(!['verified','locally-verified'].includes(patch.status)) throw new Error('A verified patch is required.')
   const local=patch.status==='locally-verified'

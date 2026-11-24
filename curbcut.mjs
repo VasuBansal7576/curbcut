@@ -8,21 +8,22 @@ import {preflight} from './core/preflight.mjs'
 import {visualPreflight} from './core/jev-preflight.mjs'
 import {verifyQueue} from './core/jev-queue.mjs'
 import {checkPage} from './core/check.mjs'
-import {runGate} from './core/gate.mjs'
+import {runGate,serializeGate} from './core/gate.mjs'
 import {meter,summarizeCost} from './core/cost.mjs'
 import {createReport} from './extension/lib/report.js'
 
-const usage='curbcut serve | curbcut verify-queue | curbcut report <patch-id> | curbcut fix <task.json> | curbcut check <url> "<task>" [--persona keyboard-only|screen-reader-view|low-vision] [--local] [--dry-run] | curbcut gate [--config curbcut.gate.json] [--local] [--dry-run] | curbcut preflight <task.json> | curbcut visual-preflight <task.json> | curbcut recheck [patch-id|--public|--local [patch-id]]'
+const usage='curbcut serve | curbcut verify-queue | curbcut report <patch-id> | curbcut fix <task.json> | curbcut check <url> "<task>" [--persona keyboard-only|screen-reader-view|low-vision] [--local] [--dry-run] | curbcut gate [--config curbcut.gate.json] [--url <preview>] [--local] [--dry-run] [--json] | curbcut cost [--json] | curbcut preflight <task.json> | curbcut visual-preflight <task.json> | curbcut recheck [patch-id|--public|--local [patch-id]]'
 
 function parseArgv(argv) {
   const flags={}
   const rest=[]
   for(let i=0;i<argv.length;i++) {
     const arg=argv[i]
-    if(arg==='--local' || arg==='--dry-run' || arg==='--public') flags[arg.slice(2)]=true
-    else if(arg==='--persona' || arg==='--config') flags[arg.slice(2)]=argv[++i]
+    if(arg==='--local' || arg==='--dry-run' || arg==='--public' || arg==='--json') flags[arg.slice(2)]=true
+    else if(arg==='--persona' || arg==='--config' || arg==='--url') flags[arg.slice(2)]=argv[++i]
     else if(arg.startsWith('--persona=')) flags.persona=arg.slice(10)
     else if(arg.startsWith('--config=')) flags.config=arg.slice(9)
+    else if(arg.startsWith('--url=')) flags.url=arg.slice(6)
     else rest.push(arg)
   }
   return {action:rest[0],rest:rest.slice(1),flags}
@@ -51,8 +52,8 @@ async function main() {
     if(!result.ok) process.exitCode=1
   } else if(action==='gate') {
     if(!flags.local && !flags['dry-run']) await requireKane()
-    const result=await runGate({config:flags.config,local:flags.local,dryRun:flags['dry-run']})
-    process.stdout.write(result.text)
+    const result=await runGate({config:flags.config,local:flags.local,dryRun:flags['dry-run'],url:flags.url})
+    process.stdout.write(flags.json?JSON.stringify(serializeGate(result),null,2)+'\n':result.text)
     process.exitCode=result.exitCode
   } else if(action==='visual-preflight' && rest[0]) {
     console.log(JSON.stringify(await visualPreflight(await readJSON(rest[0])),null,2))

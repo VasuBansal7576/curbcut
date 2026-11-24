@@ -29,6 +29,8 @@ flowchart LR
 
 The repair agent is selected with `CURBCUT_AGENT` (`codex`, the default, or `grok`). `check` derives a task from a URL and plain English, then runs the local oracle and the `fix` loop. `gate` replays configured tasks against a developer’s running app and prints failures for a coding agent to fix in source. Tasks with a declarative objective try inherited templates and deterministic recipes before requesting an agent proposal. Passing local repairs proceed to Kane verification or publish with local evidence under the family sampling policy. Tasks without a local objective use the Kane baseline to collect the failure. [Live loop](core/loop.mjs) · [Cost policy and replay](proof/cost/README.md)
 
+The pull request action waits for a preview URL, runs the gate, uploads Kane recordings, and posts one sticky comment. [PR bot](docs/pr-bot.md)
+
 The live naming path gathers crops from the active viewport and combines them with a fixed vocabulary and page-specific candidates. It verifies the tab, document and target before attaching a temporary name. The keyboard-help check sends a bounded allowlist of navigation keys, anonymous focus IDs, roles, visibility, timing and interaction effects. It offers a known rule or a one-time naming pass after a confident result. [Decision evidence](proof/jev/README.md)
 
 ## Patch DSL
@@ -67,7 +69,7 @@ The nightly local recheck retires a verified rule when the original task passes 
 | [`tasks/`](tasks/) and [`patches/`](patches/) | Task inputs and patch catalog |
 | [`proof/`](proof/) and [`evidence/`](evidence/) | Study inputs, results, recordings, Kane packs and site-owner reports |
 | [`scripts/`](scripts/) and [`tests/`](tests/) | Study runners, release builds, verification and tests |
-| [`fixtures/`](fixtures/) and [`examples/`](examples/) | Local test pages and example nightly schedule |
+| [`fixtures/`](fixtures/) and [`examples/`](examples/) | Local test pages, example nightly schedule, and pull request workflow |
 | [`site/`](site/) and [`launch/`](launch/) | Evidence dashboard, film, screenshots and launch copy |
-| [`docs/`](docs/) and [`.github/`](.github/) | Original build brief, agent gate, and Pages workflow |
+| [`docs/`](docs/) and [`.github/`](.github/) | Original build brief, agent gate, pull request bot, and Pages workflow |
 | [`curbcut.mjs`](curbcut.mjs) | CLI entry point: `fix`, `check`, `gate`, `cost`, `report`, `recheck` |

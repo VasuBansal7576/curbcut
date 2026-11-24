@@ -67,7 +67,7 @@ On a non-zero exit, read the FAIL blocks and change the source for those selecto
   working-directory: .
 ```
 
-Serve the app first, or set `url` in `curbcut.gate.json` to the preview URL. Use `--local` in inner-loop CI if Kane credits are not available. Keep Kane for a nightly or pre-merge job when you want recorded proof.
+Serve the app first, or set `url` in `curbcut.gate.json` to the preview URL. Use `--local` in inner-loop CI if Kane credits are not available. Keep Kane for a nightly or pre-merge job when you want recorded proof. `--json` writes the structured findings. A reusable GitHub Action posts Kane’s verdict on a pull request. [Pull request bot](pr-bot.md)
 
 ## Cursor and other coding agents
 
