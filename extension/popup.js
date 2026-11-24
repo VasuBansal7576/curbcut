@@ -19,6 +19,13 @@ import { createReport } from './lib/report.js';
     activeList: document.getElementById("active-patches"),
     activeEmpty: document.getElementById("active-empty"),
     liveNames: document.getElementById("live-names-status"),
+    visualState: document.getElementById("visual-state-status"),
+    glancePanel: document.getElementById("glance-panel"),
+    glance: document.getElementById("glance"),
+    glanceStatus: document.getElementById("glance-status"),
+    finderPanel: document.getElementById("finder-panel"),
+    findService: document.getElementById("find-service"),
+    finderStatus: document.getElementById("finder-status"),
     activeCount: document.getElementById("active-count"),
     siteFixed: document.getElementById("site-fixed"),
     retiredList: document.getElementById("retired-patches"),
@@ -284,8 +291,13 @@ import { createReport } from './lib/report.js';
     const names = page.liveNames || [];
     els.liveNames.hidden = true;
     els.liveNames.textContent = names.length ? `${names.length} named by Jev · unverified` : "";
-    els.instantPanel.hidden = state.instantEnabled !== true || !state.enabled || pagePaused ||
-      !page.available || page.sensitive || page.isFixture || active.length > 0 || !pageKey?.startsWith("https://");
+    const states = page.visualStates || [];
+    els.visualState.hidden = !states.length;
+    els.visualState.textContent = states.length ? `${states.length} visual states synced · unverified` : "";
+    const jevReady = state.enabled && !pagePaused && page.available && !page.sensitive && !page.isFixture && pageKey?.startsWith("https://");
+    els.instantPanel.hidden = state.instantEnabled !== true || !jevReady || active.length > 0;
+    els.glancePanel.hidden = state.glanceEnabled !== true || !jevReady;
+    els.finderPanel.hidden = state.finderEnabled !== true || !jevReady;
   }
 
   async function refreshPageContext() {
@@ -301,6 +313,7 @@ import { createReport } from './lib/report.js';
     page.instantPatch = result?.instantPatch || null;
     page.retired = Ext.selectRetiredPatches(page.url, state);
     page.liveNames = result?.ok ? (await chrome.runtime.sendMessage({ type: "GET_LIVE_NAMES", capturedTabId }))?.names : [];
+    page.visualStates = result?.ok ? (await chrome.runtime.sendMessage({ type: "GET_VISUAL_STATE", capturedTabId }))?.states : [];
   }
 
   async function load() {
@@ -432,6 +445,32 @@ import { createReport } from './lib/report.js';
     }
   });
 
+  els.glance.addEventListener("click", async () => {
+    els.glance.disabled = true;
+    els.glanceStatus.textContent = "Looking at the page…";
+    try {
+      const result = await chrome.runtime.sendMessage({ type: "RUN_GLANCE", capturedTabId });
+      els.glanceStatus.textContent = result?.ok ? "Glance is on the page." : "Glance is unavailable on this page.";
+    } catch {
+      els.glanceStatus.textContent = "Glance is unavailable on this page.";
+    } finally {
+      els.glance.disabled = false;
+    }
+  });
+
+  els.findService.addEventListener("click", async () => {
+    els.findService.disabled = true;
+    els.finderStatus.textContent = "Opening search…";
+    try {
+      const result = await chrome.runtime.sendMessage({ type: "RUN_FINDER", capturedTabId });
+      els.finderStatus.textContent = result?.ok ? "Search is on the page." : "Find a service is unavailable on this page.";
+    } catch {
+      els.finderStatus.textContent = "Find a service is unavailable on this page.";
+    } finally {
+      els.findService.disabled = false;
+    }
+  });
+
   els.readerToggle.addEventListener("change", async () => {
     const response = await chrome.runtime.sendMessage({
       type: "SET_READER",
@@ -475,12 +514,13 @@ import { createReport } from './lib/report.js';
   els.sendTask.addEventListener("click", () => submit("send"));
   els.downloadTask.addEventListener("click", () => submit("download"));
 
-  chrome.storage.onChanged.addListener(async ({ report, instantEnabled }, area) => {
+  chrome.storage.onChanged.addListener(async ({ report, instantEnabled, glanceEnabled, finderEnabled, visualStateEnabled }, area) => {
     if (area !== "local") return;
-    if (instantEnabled) {
-      state.instantEnabled = instantEnabled.newValue;
-      renderState();
-    }
+    if (instantEnabled) state.instantEnabled = instantEnabled.newValue;
+    if (glanceEnabled) state.glanceEnabled = glanceEnabled.newValue;
+    if (finderEnabled) state.finderEnabled = finderEnabled.newValue;
+    if (visualStateEnabled) state.visualStateEnabled = visualStateEnabled.newValue;
+    if (instantEnabled || glanceEnabled || finderEnabled || visualStateEnabled) renderState();
     if (!report?.newValue) return;
     state.report = report.newValue;
     renderReport(state.report);

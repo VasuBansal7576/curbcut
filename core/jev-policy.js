@@ -23,11 +23,12 @@ export function imageAsset(data) {
   return {id,asset:{type:'image',format:match[1]==='jpeg'?'jpg':'png',data_base64:match[2]}}
 }
 
-export async function askJev(key,request) {
+export const box=instructions=>({type:'box',instructions})
+export async function askJev(key,request,options={}) {
   if(!key) throw new Error('Jev is not configured.')
   const start=performance.now()
   const response=await fetch(endpoint,{
-    method:'POST',redirect:'error',credentials:'omit',signal:AbortSignal.timeout(8000),
+    method:'POST',redirect:'error',credentials:'omit',signal:AbortSignal.timeout(options.timeout??8000),
     headers:{Authorization:'Bearer '+key,'Content-Type':'application/json','TypeSafe-Danger-Zone-Images':'true',
       'TypeSafe-Danger-Zone-Long-Context':'true'},
     body:JSON.stringify({model,...request})

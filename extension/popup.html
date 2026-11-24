@@ -34,6 +34,7 @@
       <p id="site-fixed" class="site-fixed" role="status" hidden></p>
       <ul id="retired-patches" class="patch-list" hidden></ul>
       <p id="live-names-status" class="status" role="status" hidden></p>
+      <p id="visual-state-status" class="status" role="status" hidden></p>
       <ul id="active-patches" class="patch-list"></ul>
       <p id="active-empty" class="empty" hidden></p>
       <label id="page-toggle-row" class="row-toggle" for="page-toggle" hidden>
@@ -82,6 +83,18 @@
         <p class="hint">Shares a screenshot and page details with TypeSafe.</p>
       </div>
       <p id="instant-status" class="status" role="status"></p>
+      <div id="glance-panel" class="instant-panel" hidden>
+        <button id="glance" type="button">Glance at this page</button>
+        <kbd class="hotkey" aria-hidden="true">Alt+Shift+G</kbd>
+        <p class="hint">Shares a screenshot of the visible tab with TypeSafe.</p>
+      </div>
+      <p id="glance-status" class="status" role="status"></p>
+      <div id="finder-panel" class="instant-panel" hidden>
+        <button id="find-service" type="button">Find a service</button>
+        <kbd class="hotkey" aria-hidden="true">Alt+Shift+S</kbd>
+        <p class="hint">Searches this page’s links. Jev is asked only when a literal search returns nothing.</p>
+      </div>
+      <p id="finder-status" class="status" role="status"></p>
     </section>
 
     <details class="disclosure tools">

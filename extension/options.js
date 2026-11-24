@@ -55,6 +55,9 @@ function bindSwitch(id, key, label) {
 }
 bindSwitch("live-names", "liveNamesEnabled", "Live naming");
 bindSwitch("stuck-detection", "stuckEnabled", "Keyboard help");
+bindSwitch("visual-state", "visualStateEnabled", "Visual state sync");
+bindSwitch("glance", "glanceEnabled", "Glance");
+bindSwitch("finder", "finderEnabled", "Find a service");
 
 const evidenceForm = document.querySelector("#evidence-form");
 const evidenceInput = document.querySelector("#evidence-base");

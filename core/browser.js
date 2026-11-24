@@ -7,6 +7,7 @@ import {keyboardVisibility,observePassage,widthEvidence} from './geometry.js'
 import {isMirroredHoverEvent,observedHoverRules} from './hover.js'
 import {inspectRuleSelectors} from './selectors.js'
 import {collectInstantState,instantPrivacy} from './jev-browser.js'
+import {applyVisualState,collectPageLinks,collectVisualState,finderCandidates,focusFromBox,literalFind} from './jev-state-browser.js'
 
 export const lowContrastFilter='grayscale(1) contrast(0.22)'
 
@@ -349,4 +350,4 @@ function enforce(persona,report=()=>{}, {topLevel=true}={}) {
   }
   return state
 }
-globalThis.CurbCut=Object.freeze({collectNames:()=>collectNames(exactSelector),visibleLanguageSample,applyLiveName,apply,match,snapshot,reader,readerRow,enforce,exactSelector,discoverCoverage:()=>discoverCoverage(exactSelector),coverageObservation,keyboardVisibility,inspectRuleSelectors,observePassage,widthEvidence,instantPrivacy,collectInstantState:()=>collectInstantState(exactSelector)})
+globalThis.CurbCut=Object.freeze({collectNames:()=>collectNames(exactSelector),visibleLanguageSample,applyLiveName,apply,match,snapshot,reader,readerRow,enforce,exactSelector,discoverCoverage:()=>discoverCoverage(exactSelector),coverageObservation,keyboardVisibility,inspectRuleSelectors,observePassage,widthEvidence,instantPrivacy,collectInstantState:()=>collectInstantState(exactSelector),collectVisualState:()=>collectVisualState(exactSelector),applyVisualState,collectPageLinks:()=>collectPageLinks(exactSelector),literalFind,finderCandidates,focusFromBox})
