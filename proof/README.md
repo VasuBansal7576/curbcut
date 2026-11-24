@@ -2,6 +2,10 @@
 
 Start with [Mass.edu before](hard-v4/kane/v4-86f207deeb57-7bc09a21/before/recording.mp4) and [after](hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/recording.mp4). The same keyboard task opens About and follows “The DHE” with the repair. [Pointer control](hard-v4/kane/v4-86f207deeb57-7bc09a21/control/recording.mp4) · [Kane evidence pack](hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/70a47b25-b707-443b-98dd-d8849884cec2.evidence)
 
+## Held-out v7
+
+The v7 draw registered 14 naming tasks and one document-language task from 100 new Tranco sites. Jev confirmed 6 of 10 accepted names and repaired the one missing language in the local oracle. The median viewport naming time was 666 ms across 11 pages. Kane independently verified 2 of 5 seeded live-naming cases. [Protocol and results](heldout-v7/README.md) · [Registration](heldout-v7/registration.json) · [Local outcomes](heldout-v7/local-summary.json) · [Kane run ledger](heldout-v7/kane-summary.json)
+
 ## Held-out v6
 
 | Claim | Result | Evidence |
@@ -46,7 +50,11 @@ The [Kane session ledger](kane/ledger.json) indexes archived sessions across coh
 | Report to repair | ColorHexa’s color picker became keyboard-reachable in the reporting tab | [Live report recording and Kane sessions](live/README.md) · [Site-owner report](../evidence/report-d6870c43f8831c2d3b/report.md) |
 | Local harness | Three fixture tasks recorded fail, pass with the rule, and pass after a native fix | [Fixture evidence](local.json) · [Replay instructions](methodology/README.md#local-demo) |
 
-## TypeSafe Jev experiment
+## TypeSafe Jev experiments
+
+[Decision-model results](jev/README.md) · [Reading view demo before](jev/live-naming-demo/before.png) · [After](jev/live-naming-demo/after.png) · [Names and confidence JSON](jev/live-naming-demo/capture.json)
+
+### Original instant repair and archive experiment
 
 | Claim | Result | Evidence |
 | --- | --- | --- |

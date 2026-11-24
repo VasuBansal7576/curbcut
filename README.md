@@ -17,7 +17,7 @@ A menu that opens only on hover can shut out keyboard users. An unnamed search f
 | Missing form labels | 51% | Name the input | 19/20 v5 | 6/6 sampled |
 | Empty links | 46.3% | Name the link by its purpose | 12/12 v6 | 1/5 sampled |
 | Empty buttons | 30.6% | Name the control by its function | 9/12 v6 | 3/5 sampled |
-| Missing document language | 13.5% | Set the language when detection agrees | 0/20 v6, 3/3 development | Local proof |
+| Missing document language | 13.5% | Set the language when detection agrees | 1/1 v7, 0/20 v6, 3/3 development | Local proof |
 
 [Cohort evidence and recordings](proof/README.md)
 
@@ -61,4 +61,6 @@ With Playwright Chromium installed, `node scripts/extension-e2e.mjs` rechecks th
 
 ## Limits
 
-Each result covers a recorded task. Reading view models DOM roles and names, and screen reader parity remains untested. Kane can hit its step limit or return an inconclusive result. The opt-in TypeSafe Jev experiment repaired **3/142** held-out barriers, all hover menus. [Jev benchmark](proof/jev/benchmark.json)
+Each result covers a recorded task. Reading view models DOM roles and names, and screen reader parity remains untested. Kane can hit its step limit or return an inconclusive result.
+
+Opt-in TypeSafe Jev live naming confirmed **6/10** accepted names on v7, with **10/14** coverage and **666 ms** median viewport latency. Kane verified **2/5** sampled naming cases. The language decision fixed **1/1** v7 task in the local oracle. [Jev decision evidence](proof/heldout-v7/README.md)

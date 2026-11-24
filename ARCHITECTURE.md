@@ -12,6 +12,13 @@ flowchart LR
     bundle --> recheck["Nightly local recheck<br/>Retire or mark broken"]
     recheck -->|"Update feed"| bundle
     bundle --> owner["Site-owner Markdown report"]
+    keys["Opt-in keyboard help<br/>Navigation keys and anonymous focus"] --> detect["TypeSafe Jev<br/>Stuck yes/no"]
+    detect -->|Above threshold| offer["Ask whether to fix this page"]
+    offer -->|User accepts| names
+    visible["Opt-in live naming<br/>Visible unnamed controls"] --> names["TypeSafe Jev<br/>Cropped icons and fixed label choices"]
+    names -->|Above threshold| temporary["Names in this tab<br/>Unverified"]
+    text["Visible prose"] --> language["TypeSafe Jev<br/>Language choice"]
+    language --> langproof["Local setLang replay"]
     hotkey["Opt-in Alt+Shift+F"] --> jev["TypeSafe Jev<br/>Visible-tab screenshot and candidate state"]
     jev --> temp["Temporary patch<br/>Current tab, Escape to undo"]
     temp --> queue["Local verification queue"]
@@ -19,6 +26,8 @@ flowchart LR
 ```
 
 The current live `fix` loop runs Kane’s baseline and pointer control before requesting a repair. The frozen v4 and v5 studies produced candidates with local persona and pointer replays before sending selected repairs to Kane. V6 replayed contrast and language locally before, during and after applying the rule. [Live loop](core/loop.mjs) · [V6 evidence](proof/heldout-v6/README.md)
+
+The live naming path gathers crops from the active viewport and combines them with a fixed vocabulary and page-specific candidates. It verifies the tab, document and target before attaching a temporary name. The keyboard-help check sends a bounded allowlist of navigation keys, anonymous focus IDs, roles, visibility, timing and interaction effects. It offers a known rule or a one-time naming pass after a confident result. [Decision evidence](proof/jev/README.md)
 
 ## Patch DSL
 
@@ -41,7 +50,9 @@ The extension and replay browser share one engine. The schema bounds actions and
 
 ## Proof protocol
 
-Freeze the workflow, pin the sampling source and seed, and commit the site draw before scouting and the eligible tasks before repair. Record blocked, unresolved and inconclusive outcomes against the registered denominators. Seeded Kane selections record which locally repaired tasks are eligible, along with run limits. Evidence ledgers link the original browser results, recordings, sealed Kane packs and session IDs. The integrity scripts reconstruct frozen Git trees and verify recorded input hashes. The v6 verifier also checks shipped patch bytes. [V4 integrity](proof/hard-v4/verify-integrity.mjs) · [V5 integrity](scripts/verify-v5.mjs) · [V6 integrity](scripts/verify-v6.mjs)
+The optional visual preflight classifies a fresh, isolated start screenshot before case selection. Confident blocker classifications are marked for review. The registered Kane runner uses the original study protocol. [Preflight backtest](proof/jev/preflight-backtest.json)
+
+Freeze the workflow, pin the sampling source and seed, and commit the site draw before scouting and the eligible tasks before repair. Record blocked, unresolved and inconclusive outcomes against the registered denominators. Seeded Kane selections record which locally repaired tasks are eligible, along with run limits. Evidence ledgers link the original browser results, recordings, sealed Kane packs and session IDs. The integrity scripts reconstruct frozen Git trees and verify recorded input hashes. The v6 verifier also checks shipped patch bytes. [V4 integrity](proof/hard-v4/verify-integrity.mjs) · [V5 integrity](scripts/verify-v5.mjs) · [V6 integrity](scripts/verify-v6.mjs) · [V7 integrity](scripts/verify-v7.mjs)
 
 The nightly local recheck retires a verified rule when the original task passes and marks a rule broken when the patched task fails. Inconclusive checks retain its prior status. The separate Kane recheck can invoke the repair loop. The popup and CLI export the WCAG criterion, applicable rule and linked evidence. [Recheck code](core/recheck-local.mjs) · [Example cron](examples/curbcut.cron) · [Example report](evidence/v4-86f207deeb57-7bc09a21/report.md)
 

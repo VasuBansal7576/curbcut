@@ -1,4 +1,31 @@
-# Instant accessibility repairs with TypeSafe Jev
+# TypeSafe Jev decision experiments
+
+Jev takes structured state and returns typed choices, yes/no probabilities, scores or image boxes against a declared answer space. Live naming asks it to select among common control functions and candidates drawn from the element. Document language uses the same approach with ISO 639-1 codes. Keyboard help asks for a yes/no probability over a short trace. [Frozen v7 sample and protocol](../heldout-v7/README.md)
+
+## Decision results
+
+| Use | Disposition | Measurement |
+| --- | --- | --- |
+| A. Live names | Keep, opt-in | 6/10 accepted names confirmed on v7, from 14 registered targets. Median 666 ms across 11 viewports. |
+| B. Document language | Keep for local proof | 1/1 v7 and 3/3 development tasks passed the `setLang` replay. |
+| F. Keyboard help | Keep, experimental and opt-in | Four synthetic development traces gave 3/3 true alerts and 0/1 false alerts at 0.75. The archive produced zero alerts on 154 screened traces, including 96 scorable traces. Precision was undefined and recall was 0/140. |
+| C. Real barrier check | Drop as a Kane gate | At 0.07, the archive proxy skipped 3/19 passing baselines and lost zero verified cases. It skipped neither of the two passing baselines from the v5 random sample. Local screenshots yielded zero passing baselines skipped on 13 recoverable journeys. |
+| D. Start screenshot | Keep as an advisory preflight | At 0.98, 5 inconclusive sessions flagged and zero decisive sessions flagged. Three flags matched archived bot challenges. |
+| E. Persona simulator | Drop as a discovery tool | 0/5 decisive in the hard-v4 development pilot. Agreement was undefined. |
+
+[Held-out naming and language](../heldout-v7/README.md) · [Language development](language-development.json) · [Keyboard archive](stuck-backtest.json) · [Keyboard development](stuck-development.json) · [Barrier archive proxy](barrier-backtest.json) · [Local journey frames](barrier-local.json) · [Screenshot preflight backtest](preflight-backtest.json)
+
+The naming demo captures a development fixture in Reading view at 1920×1080. Two buttons and one link begin unnamed. The observed names and scores were “catalog search” 0.90, “Menu” 0.55 and “Instagram” 0.98. [Before](live-naming-demo/before.png) · [After](live-naming-demo/after.png) · [Capture JSON](live-naming-demo/capture.json)
+
+The keyboard archive compares task verdicts with the most recent key window from Kane events and local oracle steps. Many archived sessions omit intermediate focus identities or timestamps. The live experiment includes those signals when available, represented as temporary IDs and a named/unnamed flag. A high score offers a choice to reapply a known rule or ask Jev to name controls once. The extension waits for user consent before either action.
+
+The barrier archive proxy used recorded Kane screenshots for 103 of 117 before sessions with decisive verdicts. The local replay separately sampled the original persona state and journey steps on 13 sites with reconstructable tasks. Archive labels and local site visits are recorded separately. The 0.07 threshold filtered one additional failing old baseline and saved an estimated 78.67 credits over the three old passing baselines. The trial applies no Kane gate.
+
+The start-screen experiment scored 395 of 466 archived sessions using only the first available image and the task. The older archive selected the 0.98 cutoff. All five flags came from that older archive. The later v5/v6 archive had zero flags at that cutoff. Run `node curbcut.mjs visual-preflight <task.json>` for an advisory classification before selecting a case. This command uses isolated Chromium and makes no Kane request. [Screenshot results and threshold sweep](preflight-backtest.json)
+
+The optional simulator let Jev choose each next key from the current screenshot and recent actions. The five archived tasks had decisive Kane verdicts, and the local oracle was rerun separately. Four Jev runs selected an activation outside the registered public targets, and the fifth reached the 14-key limit. No paired Jev verdicts were available for agreement. [Persona pilot](persona-pilot.json)
+
+## Original instant repair experiment
 
 Enable **Experimental instant fix (TypeSafe Jev)** in Curb Cut settings, then press **Alt+Shift+F** or choose **Try experimental instant fix** in the popup. The extension collects the focused element and surrounding controls, offers up to 16 repair candidates, and sends a visible-tab screenshot. One request asks Jev for a repair family, target, safety probability, and an accessible name when there are supported names to choose from. The extension applies only predefined Curb Cut actions against the original candidate. The decision score is the minimum of the relevant returned probabilities. The application threshold is **0.50** and was set during development before the full v5 replay.
 
