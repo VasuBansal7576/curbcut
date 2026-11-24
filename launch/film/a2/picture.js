@@ -41,9 +41,7 @@ function follow(image,scale,ax,ay,dx=0,dy=0){
   return (box)=>[x+box[0]*scale,y+box[1]*scale,box[2]*scale,box[3]*scale]
 }
 function popup(t,visible){
-  const x=1072+390*(1-visible), y=50
-  round(x,y,333,162,14,paper);mark(x+22,y+23,.78);mono('www.mass.edu',x+22,y+73,16);rule(x+20,y+102,293,'#ccc')
-  text('Apply fixes',x+22,y+117,23);round(x+255,y+115,59,32,16,t?pink:'#777');round(x+(t?284:259),y+119,24,24,12,paper)
+  photo(t?images.popupOn:images.popupOff,1040+410*(1-visible),32,390,177.5)
 }
 function opening(id,t,d){
   let fixed=id==='found', asset=fixed&&t>=1.1?'massAfter':'massBefore'

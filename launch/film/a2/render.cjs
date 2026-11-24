@@ -8,7 +8,7 @@ const root = path.resolve(__dirname,'../../..')
 const launch = path.join(root,'launch')
 const read = file => JSON.parse(fs.readFileSync(file,'utf8'))
 const edit = read(path.join(__dirname,'edit.json'))
-const pending = read(path.join(launch,'film/pending.json')).shots
+const popupShots = read(path.join(launch,'film/pending.json')).recorded
 const calculator = 'proof/kane/calculator-net-add-days/'
 const delivered = read(path.join(launch,'footage/manifest.json')).slots
 const worms = 'proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/'
@@ -52,7 +52,7 @@ function evidencePage(id,key){
 const ff = args => execFileSync('ffmpeg',['-y','-v','error',...args],{stdio:'inherit'})
 const uri = name => pathToFileURL(name).href
 const assets = Object.fromEntries(Object.entries({
-  massBefore:'a2/plates/mass-before.jpg',massAfter:'a2/plates/mass-after.jpg',
+  popupOn:'a2/plates/popup-on.png',popupOff:'a2/plates/popup-off.png',massBefore:'a2/plates/mass-before.jpg',massAfter:'a2/plates/mass-after.jpg',
   meridiano:'a2/plates/meridiano.jpg',munich:'a2/plates/munich.jpg',report:'plates/owner-report.png',contrastOff:'plates/contrast-off.png',contrastOn:'plates/contrast-on.png'
 }).map(([name,file])=>[name,uri(path.join(launch,'film',file))]))
 async function main(){
@@ -66,10 +66,10 @@ async function main(){
     await page.goto(uri(path.join(__dirname,'stage.html')))
     await page.evaluate(async ({assets,cues})=>{window.cues=cues;await loadFilm(assets)},{assets,cues:read(path.join(__dirname,'speech.json'))})
     const segments=[]
-    for(const shot of edit.filter(s=>s.start>=75)){
+    for(const shot of edit.filter(s=>s.start<15||s.start>=75)){
       const folder=path.join(work,shot.id)
       fs.mkdirSync(folder)
-      const slot=pending.find(s=>s.id===shot.id)
+      const slot=popupShots.find(s=>s.id===shot.id)
       const incoming=slot&&path.join(root,slot.path)
       const deliveredSlot=delivered[shot.id]
       const replayFrames=[]
@@ -86,7 +86,7 @@ async function main(){
         if(replayFrames.length!==shot.duration*30)throw Error('Replay duration mismatch: '+shot.id)
       }
       let source,offset=0
-      if(incoming&&fs.existsSync(incoming)){
+      if(incoming){
         source=incoming
         shot.incoming=true
       }else if(reels[shot.id]){
@@ -126,8 +126,8 @@ async function main(){
       },{shot,frames,replayFrames})
       fs.writeFileSync(stream,Buffer.from(encoded,'base64'))
       const segment=path.join(work,shot.id+'.mp4')
-      ff(['-r','30','-i',stream,'-c:v','copy','-video_track_timescale','30000',segment])
-      segments.push(segment)
+      ff(['-r','30','-i',stream,'-c:v','copy','-video_track_timescale','15360',segment])
+      if(shot.start>=75)segments.push(segment)
       fs.rmSync(folder,{recursive:true,force:true})
       console.log(shot.id,shot.duration)
     }
@@ -135,9 +135,17 @@ async function main(){
     fs.writeFileSync(list,segments.map(s=>"file '"+s.replaceAll("'","'\\''")+"'").join('\n')+'\n')
     const master=path.join(work,'master.mp4')
     ff(['-f','concat','-safe','0','-i',list,'-an','-c:v','libx264','-preset','fast','-crf','19','-threads','5','-bf','0','-pix_fmt','yuv420p','-force_key_frames','15,75',master])
-    const opening=path.join(work,'opening.mp4')
-    ff(['-i',path.join(launch,'curbcut-launch.mp4'),'-map','0:v:0','-an','-c:v','copy',opening])
-    fs.writeFileSync(list,"file 'opening.mp4'\nduration 75\nfile 'master.mp4'\n")
+    const approved=path.join(launch,'curbcut-launch.mp4')
+    const middle=path.join(work,'middle.mp4')
+    ff(['-ss','15','-i',approved,'-t','60','-map','0:v','-c','copy',middle])
+    const refs=['lost.mp4','found.mp4','middle.mp4','master.mp4']
+    for(const [count,duration,name,caption] of [[2,15,'curbcut-launch-15s','teaser'],[3,75,'curbcut-launch','launch']]){
+      fs.writeFileSync(list,refs.slice(0,count).map(file=>"file '"+file+"'").join('\n')+'\n')
+      const out=path.join(work,name+'.mp4')
+      ff(['-f','concat','-safe','0','-i',list,'-i',path.join(launch,name+'.mp4'),'-i',path.join(launch,'captions',caption+'.vtt'),'-map','0:v','-map','1:a','-map','2:s','-c','copy','-c:s','mov_text','-t',String(duration),'-movflags','+faststart',out])
+      fs.copyFileSync(out,path.join(target,name+'.mp4'))
+    }
+    fs.writeFileSync(list,refs.map(file=>"file '"+file+"'").join('\n')+'\n')
     const seconds=edit.at(-1).start+edit.at(-1).duration
     ff(['-f','concat','-safe','0','-i',list,'-i',path.join(launch,'audio/demo.m4a'),'-i',path.join(launch,'captions/demo.vtt'),'-map','0:v:0','-map','1:a:0','-map','2:s:0','-t',String(seconds),'-c:v','copy','-c:a','copy','-c:s','mov_text','-metadata:s:s:0','language=eng','-movflags','+faststart',path.join(target,'curbcut-demo.mp4')])
   }finally{
