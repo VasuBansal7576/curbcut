@@ -52,7 +52,7 @@ node curbcut.mjs check <url> "<task>" --persona keyboard-only --dry-run
 node curbcut.mjs gate --local --config examples/curbcut.gate.json
 ```
 
-`check` turns a URL and a plain-English task into a declarative objective, runs the local oracle, then the repair loop. `--local` uses Playwright only. `--dry-run` prints the derived checks and the Kane credit estimate. `gate` reads `curbcut.gate.json` and runs each task as the keyboard and screen-reader personas against a running app. Failures print a reason and a compact DOM snippet for a coding agent to fix in source. [Gate setup](docs/gate.md)
+`check` turns a URL and a plain-English task into a declarative objective, runs the local oracle, then the repair loop. `--local` uses Playwright only. `--dry-run` prints the derived checks and the Kane credit estimate. `gate` reads `curbcut.gate.json` and runs each task as the keyboard and screen-reader personas against a running app. Failures print a reason and a compact DOM snippet for a coding agent to fix in source. `--json` writes the same result as JSON. [Gate setup](docs/gate.md) · [Pull request bot](docs/pr-bot.md)
 
 The repair agent defaults to `codex exec`. Set `CURBCUT_AGENT=grok` to use the Grok CLI at `~/.grok/bin/grok`. `CURBCUT_MODEL` selects the model for the chosen backend.
 

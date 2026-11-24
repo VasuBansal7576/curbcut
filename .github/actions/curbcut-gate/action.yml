@@ -1,0 +1,117 @@
+name: Curb Cut gate
+description: Run curbcut gate against a pull request preview and post one sticky comment with Kane's verdict
+author: Curb Cut
+inputs:
+  preview-url:
+    description: Preview URL for this pull request
+    required: true
+  config:
+    description: Path to curbcut.gate.json in the caller repository
+    required: false
+    default: curbcut.gate.json
+  github-token:
+    description: Token used to post or update the sticky pull request comment
+    required: false
+    default: ${{ github.token }}
+  kane-username:
+    description: Kane CLI username. Pass from a repository secret. Never echoed.
+    required: false
+  kane-access-key:
+    description: Kane CLI access key. Pass from a repository secret. Never echoed.
+    required: false
+  local:
+    description: Use the Playwright oracle and spend no Kane credits
+    required: false
+    default: 'false'
+  wait-timeout:
+    description: Seconds to wait for the preview URL to respond
+    required: false
+    default: '180'
+outputs:
+  ok:
+    description: true when every gate case passed
+    value: ${{ steps.gate.outputs.ok }}
+  exit-code:
+    description: Process exit code from curbcut gate
+    value: ${{ steps.gate.outputs.exit-code }}
+  comment-file:
+    description: Path to the sticky comment markdown
+    value: ${{ steps.gate.outputs.comment-file }}
+  json-file:
+    description: Path to the gate JSON
+    value: ${{ steps.gate.outputs.json-file }}
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v6
+      with:
+        node-version: '22'
+    - name: Install Curb Cut
+      shell: bash
+      working-directory: ${{ github.action_path }}/../../..
+      run: npm ci
+    - name: Install Chromium
+      shell: bash
+      working-directory: ${{ github.action_path }}/../../..
+      run: npx playwright install --with-deps chromium
+    - name: Mask Kane credentials
+      shell: bash
+      env:
+        KANE_USERNAME: ${{ inputs.kane-username }}
+        KANE_ACCESS_KEY: ${{ inputs.kane-access-key }}
+      run: |
+        set +x
+        if [ -n "$KANE_USERNAME" ]; then echo "::add-mask::$KANE_USERNAME"; fi
+        if [ -n "$KANE_ACCESS_KEY" ]; then echo "::add-mask::$KANE_ACCESS_KEY"; fi
+    - name: Kane login
+      if: inputs.local != 'true'
+      shell: bash
+      env:
+        KANE_USERNAME: ${{ inputs.kane-username }}
+        KANE_ACCESS_KEY: ${{ inputs.kane-access-key }}
+      run: |
+        set +x
+        if [ -z "$KANE_USERNAME" ] || [ -z "$KANE_ACCESS_KEY" ]; then
+          echo "kane-username and kane-access-key are required unless local is true"
+          exit 1
+        fi
+        sudo apt-get update
+        sudo apt-get install -y ffmpeg
+        npm install -g @testmuai/kane-cli@0.10.7
+        kane-cli login --username "$KANE_USERNAME" --access-key "$KANE_ACCESS_KEY" >/tmp/curbcut-kane-login.log 2>&1
+        status=$?
+        rm -f /tmp/curbcut-kane-login.log
+        if [ "$status" -ne 0 ]; then
+          echo "Kane login failed"
+          exit 1
+        fi
+    - name: Run Curb Cut gate
+      id: gate
+      shell: bash
+      working-directory: ${{ github.workspace }}
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+        PREVIEW_URL: ${{ inputs.preview-url }}
+        GATE_CONFIG: ${{ github.workspace }}/${{ inputs.config }}
+        CURBCUT_ROOT: ${{ github.action_path }}/../../..
+        LOCAL: ${{ inputs.local }}
+        WAIT_TIMEOUT: ${{ inputs.wait-timeout }}
+        RUNNER_TEMP: ${{ runner.temp }}
+      run: |
+        set +x
+        extra=()
+        if [ "$LOCAL" = "true" ]; then extra+=(--local); fi
+        node "$CURBCUT_ROOT/.github/actions/curbcut-gate/run.mjs" \
+          --url "$PREVIEW_URL" \
+          --config "$GATE_CONFIG" \
+          --json-out "$RUNNER_TEMP/curbcut-gate.json" \
+          --comment-out "$RUNNER_TEMP/curbcut-comment.md" \
+          --timeout "$WAIT_TIMEOUT" \
+          --post \
+          "${extra[@]}"
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: curbcut-gate
+        path: ${{ github.action_path }}/../../../.curbcut/gate
+        if-no-files-found: ignore
