@@ -2,7 +2,7 @@
 
 Curb Cut uses Kane to reproduce accessibility barriers, verify repairs, and ship browser fixes with replayable evidence.
 
-**Launch film on YouTube — link pending.** [Watch the launch cut](launch/curbcut-launch.mp4) · [Full demo](launch/curbcut-demo.mp4)
+[Watch the launch cut](launch/curbcut-launch.mp4) · [Full demo](launch/curbcut-demo.mp4)
 
 ## Install in Chrome
 
@@ -12,7 +12,7 @@ Curb Cut uses Kane to reproduce accessibility barriers, verify repairs, and ship
 
 ## Try it in 60 seconds
 
-Open [Mass.edu](https://www.mass.edu/), Tab to **About**, and use the keyboard to reach **The DHE**. Open Curb Cut’s popup to see the applied menu fix, toggle it off to compare, and open the evidence for the recorded runs. [Before, pointer control, and after](proof/README.md)
+Open [Mass.edu](https://www.mass.edu/), Tab to **About**, press **Arrow Down**, and use **Tab** to reach **The DHE**. Open Curb Cut’s popup to see the applied menu fix, toggle it off to compare, and open the evidence for the recorded runs. [Before, pointer control, and after](proof/README.md)
 
 ```mermaid
 flowchart LR
@@ -25,9 +25,9 @@ flowchart LR
 
 ## For developers
 
-Run `npm ci` and `npm link` to install the CLI, or run `node curbcut.mjs` directly.
+Use Node.js 22 or newer. Run `npm ci` and `npm link` to install the CLI, or run `node curbcut.mjs` directly. Run `npx playwright install chromium` before running local browser checks or the test suite.
 
-- `curbcut check <url> "<task>"` runs the repair loop for a plain-English task. Set `CURBCUT_AGENT=grok` or `CURBCUT_AGENT=codex` (default) to select the repair agent.
+- `curbcut check <url> "<task>"` runs the repair loop for a plain-English task. Run with `--dry-run` first to see the estimated Kane credit cost. Live runs require an authenticated Kane CLI and the selected coding agent CLI on your PATH. Set `CURBCUT_AGENT=grok` or `CURBCUT_AGENT=codex` (default) to select the repair agent.
 - `curbcut gate --config curbcut.gate.json` prints failing selectors and reasons so a coding agent can fix the source. Add `--local` to Check or Gate for Playwright without Kane credits. The [Claude Code Stop hook](docs/gate.md#claude-code-stop-hook) runs Gate after edits.
 - The [PR bot](docs/pr-bot.md) runs Gate against a preview URL, posts one updated comment, and uploads Kane recordings.
 - `curbcut cost` summarizes recorded tokens and Kane balance changes. Recipes and inherited rules get a local replay before a full agent proposal. The family policy samples eligible inherited fixes for Kane. [Cost proof and policy](proof/cost/README.md)
@@ -46,7 +46,7 @@ The popup shows applied repairs, provenance, and retired fixes. Report a barrier
 
 ## Measured results
 
-- **105 active fixes**, with **61 Kane-verified** and **44 with local proof**. [Catalog](extension/bundled.json)
+- **105 bundled fixes**, with **61 Kane-verified** and **44 with local proof**. The latest installed-extension audit recorded **98/105 primary passes**, with seven unconfirmed. [Catalog](extension/bundled.json) · [Live audit](proof/reliability/submission-extension-e2e.json)
 - V7 confirmed 6/10 accepted names and 1/1 language fix locally. Kane verified 2/5 live-naming cases. V6 fixed 76/118 locally and Kane verified 7/15 sampled names. V5 fixed 99/142 locally, including 51/89 journeys. Its Kane samples verified 11/20, 0/4, and 1/2 in the 50-step rerun. Hard v4 fixed 64/102 locally and Kane verified 2/21. Kane verified 10/23 in v3, 13/39 started in v2, and 0/26 in the original holdout. [Study details](proof/README.md)
 - Cost replay reproduced 99/142 v5 fixes at 19,905 versus 31,949 estimated tokens per fix and 76/118 v6 fixes, including 47 recipes. Both cohorts had zero confirmed inheritance or diff hits. Live recipes fixed 18/89 journeys. Live inheritance had 0 hits, 11 near misses, and 0 false matches across 34 tasks. Grok 4.5 corrected 0/11 near misses at about 155 estimated tokens per task. The bounded Grok 4.6 retry corrected 9/11 at about 3,554 estimated tokens per task versus 11,678 for the archived full-agent path. Two were unconfirmed after oracle timeouts. [Cost studies](proof/cost/README.md)
 - Match mouse found 1/22 held-out matches, with zero wrong matches or pointer regressions in the one repair. Kane verified 0/1. The development replay also found 1/22. [DOM parity](proof/mirror-dom/README.md)
