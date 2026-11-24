@@ -11,7 +11,10 @@ importScripts(
   "instant-background.js",
   "mirror-background.js",
   "naming-background.js",
-  "stuck-background.js"
+  "stuck-background.js",
+  "state-background.js",
+  "glance-background.js",
+  "finder-background.js"
 );
 
 const Ext = globalThis.CurbCutExt;
@@ -395,6 +398,8 @@ async function handleCommand(command, tab) {
   if (tab) await ensureTab(tab);
   if (command === "im-stuck") return openCapture(tab?.id);
   if (command === "instant-fix") return instantFix(tab?.id);
+  if (command === "glance") return runGlance(tab?.id);
+  if (command === "find-service") return openFinder(tab?.id);
   return { ok: false, reason: "unknown-command" };
 }
 
@@ -424,6 +429,36 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
       }
       case "GET_LIVE_NAMES": {
         sendResponse(await sendToActiveTab({ type: "LIVE_NAMES_STATUS" }, message.capturedTabId));
+        return;
+      }
+      case "VISUAL_STATE_REQUEST": {
+        sendResponse(await syncVisibleState(_sender, message.token));
+        return;
+      }
+      case "GET_VISUAL_STATE": {
+        sendResponse(await sendToActiveTab({ type: "VISUAL_STATE_STATUS" }, message.capturedTabId));
+        return;
+      }
+      case "UNDO_VISUAL_STATE": {
+        sendResponse(await sendToActiveTab({ type: "VISUAL_STATE_UNDO" }, message.capturedTabId));
+        return;
+      }
+      case "RUN_GLANCE": {
+        const fromPage = _sender.tab && /^https?:/.test(_sender.url ?? "");
+        const tabId = fromPage ? _sender.tab.id : message.capturedTabId ??
+          (await chrome.tabs.query({ active: true, currentWindow: true }))[0]?.id;
+        sendResponse(await runGlance(tabId));
+        return;
+      }
+      case "RUN_FINDER": {
+        const fromPage = _sender.tab && /^https?:/.test(_sender.url ?? "");
+        const tabId = fromPage ? _sender.tab.id : message.capturedTabId ??
+          (await chrome.tabs.query({ active: true, currentWindow: true }))[0]?.id;
+        sendResponse(await openFinder(tabId));
+        return;
+      }
+      case "FINDER_REQUEST": {
+        sendResponse(await runFinder(_sender, message.query, message.candidates));
         return;
       }
       case "GET_STATE": {

@@ -45,6 +45,33 @@
       <p class="hint">TypeSafe receives recent navigation keys, timing and anonymous focus signals. Typed text, page text, URLs and screenshots stay out of this check. Curb Cut asks before applying a fix.</p>
       <p id="stuck-detection-status" class="status" role="status"></p>
     </section>
+    <section class="options-section" aria-labelledby="visual-state-heading">
+      <h2 id="visual-state-heading">Visual state</h2>
+      <label class="row-toggle" for="visual-state">
+        <span><strong>Sync visible selected, expanded, checked, disabled and invalid state to ARIA.</strong> Experimental and off by default.</span>
+        <input id="visual-state" type="checkbox" role="switch" disabled>
+      </label>
+      <p class="hint">With Reading view closed on a public HTTPS page, TypeSafe receives crops of visible controls and nearby error text. Curb Cut applies ARIA only where the DOM disagrees and confidence is high. Existing correct ARIA stays. Undo restores the originals. Turn this off or pause the page to remove the changes.</p>
+      <p id="visual-state-status" class="status" role="status"></p>
+    </section>
+    <section class="options-section" aria-labelledby="glance-heading">
+      <h2 id="glance-heading">Glance</h2>
+      <label class="row-toggle" for="glance">
+        <span><strong>Hear what is visible on the page.</strong> Experimental and off by default. Shortcut Alt+Shift+G.</span>
+        <input id="glance" type="checkbox" role="switch" disabled>
+      </label>
+      <p class="hint">TypeSafe receives a screenshot of the visible tab and answers whether a dialog, cookie banner or error is visible. Jump targets use the page’s main landmark or largest article-like region. The same privacy gate as live naming applies.</p>
+      <p id="glance-status" class="status" role="status"></p>
+    </section>
+    <section class="options-section" aria-labelledby="finder-heading">
+      <h2 id="finder-heading">Find a service</h2>
+      <label class="row-toggle" for="finder">
+        <span><strong>Search this page’s links, including collapsed menus.</strong> Experimental and off by default. Shortcut Alt+Shift+S.</span>
+        <input id="finder" type="checkbox" role="switch" disabled>
+      </label>
+      <p class="hint">Curb Cut searches the page’s own links first. If nothing matches, TypeSafe receives the typed question and candidate link texts and addresses, then chooses or abstains. Enter follows the chosen link. No screenshot is sent.</p>
+      <p id="finder-status" class="status" role="status"></p>
+    </section>
     <section class="options-section" aria-labelledby="evidence-heading">
       <h2 id="evidence-heading">Proof recordings</h2>
       <p class="hint">Kane-verified fixes in the popup link to before and after recordings. Leave this blank to use the GitHub archive, or set a base URL for hosted evidence files.</p>

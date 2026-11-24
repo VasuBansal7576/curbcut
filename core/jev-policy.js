@@ -23,6 +23,7 @@ export function imageAsset(data) {
   return {id,asset:{type:'image',format:match[1]==='jpeg'?'jpg':'png',data_base64:match[2]}}
 }
 
+export const box=instructions=>({type:'box',instructions})
 export async function askJev(key,request,{timeout=8000}={}) {
   if(!key) throw new Error('Jev is not configured.')
   const start=performance.now()

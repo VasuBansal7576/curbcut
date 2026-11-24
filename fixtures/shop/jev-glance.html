@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Permit counter</title>
+  <style>
+    body { font: 20px/1.4 system-ui; margin: 0; background: #fff; color: #111; }
+    header { padding: 16px 24px; border-bottom: 1px solid #ccc; }
+    main { padding: 24px; }
+    .banner { position: sticky; bottom: 0; background: #111; color: #fff; padding: 16px 24px; }
+    dialog { border: 2px solid #111; padding: 24px; }
+    .alert { background: #fdecea; color: #8a1f11; padding: 12px; margin: 12px 0; }
+    .go { background: #111; color: #fff; padding: 12px 20px; border: 0; font: inherit; }
+  </style>
+</head>
+<body>
+  <header><p>City of Example</p></header>
+  <main>
+    <h1>Renew a permit</h1>
+    <p class="alert" id="renew-error" role="alert">The permit expired last month.</p>
+    <p>Use the counter form to renew a street-use permit.</p>
+    <button class="go" id="renew" type="button">Renew permit</button>
+  </main>
+  <div class="banner" id="cookie">This site uses cookies to remember your city. <button type="button">OK</button></div>
+  <dialog id="hours-dialog" open>
+    <p>The counter is open until 4 p.m.</p>
+    <button type="button" id="dismiss">Close</button>
+  </dialog>
+</body>
+</html>

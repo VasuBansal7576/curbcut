@@ -54,6 +54,14 @@
     "match-mouse": {
       "suggested_key": { "default": "Alt+Shift+M" },
       "description": "Try matching a hover menu with the keyboard"
+    },
+    "glance": {
+      "suggested_key": { "default": "Alt+Shift+G" },
+      "description": "Hear what is visible on the page"
+    },
+    "find-service": {
+      "suggested_key": { "default": "Alt+Shift+S" },
+      "description": "Find a service among this page’s links"
     }
   },
   "web_accessible_resources": [
@@ -78,7 +86,10 @@
         "content.js",
         "instant-content.js",
         "naming-content.js",
-        "stuck-content.js"
+        "stuck-content.js",
+        "state-content.js",
+        "glance-content.js",
+        "finder-content.js"
       ],
       "run_at": "document_start",
       "all_frames": false

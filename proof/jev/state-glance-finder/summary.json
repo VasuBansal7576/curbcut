@@ -1,0 +1,139 @@
+{
+  "generatedAt": "2026-11-24T18:40:07.886Z",
+  "finishedAt": "2026-11-24T18:43:03.379Z",
+  "seed": "curbcut-jev-state-glance-finder-v1",
+  "thresholds": {
+    "visualState": {
+      "selected": 0.9,
+      "expanded": 0.85,
+      "checked": 0.85,
+      "disabled": 0.88,
+      "invalid": 0.85,
+      "error": 0.8
+    },
+    "glance": {
+      "noul": 0.8,
+      "box": 0.7
+    },
+    "finder": 0.8
+  },
+  "state": {
+    "correct": 3,
+    "wrong": 0,
+    "abstained": 677,
+    "wrongSelected": 0
+  },
+  "glance": {
+    "dialog": {
+      "n": 16,
+      "correct": 14,
+      "wrong": 2,
+      "abstained": 0
+    },
+    "cookie": {
+      "n": 16,
+      "correct": 15,
+      "wrong": 0,
+      "abstained": 1
+    },
+    "error": {
+      "n": 16,
+      "correct": 15,
+      "wrong": 0,
+      "abstained": 1
+    },
+    "main": {
+      "n": 16,
+      "correct": 2,
+      "wrong": 0,
+      "abstained": 14
+    },
+    "action": {
+      "n": 16,
+      "correct": 0,
+      "wrong": 3,
+      "abstained": 13
+    }
+  },
+  "glanceShips": ["dialog", "cookie", "error"],
+  "glanceDropped": {
+    "kinds": ["main", "action"],
+    "reason": "Jev box answers were unusable on the public run (main 2/16, primary action 0/16 with 3 wrong). Glance ships the three yes/no items. Jumps use the DOM main landmark. Primary action is not shipped."
+  },
+  "finder": {
+    "questions": 24,
+    "literal": 11,
+    "jev": 6,
+    "abstained": 7,
+    "wrong": 0,
+    "errors": 0
+  },
+  "latency": {
+    "state": [
+      1781,
+      1070,
+      1138,
+      1677,
+      927,
+      0,
+      1612,
+      947,
+      830,
+      1625,
+      1194,
+      0,
+      2445,
+      328,
+      796,
+      1115
+    ],
+    "glance": [
+      424,
+      714,
+      466,
+      535,
+      441,
+      404,
+      537,
+      466,
+      363,
+      964,
+      347,
+      690,
+      1031,
+      343,
+      360,
+      379
+    ],
+    "finder": [
+      326,
+      274,
+      320,
+      295,
+      291,
+      287,
+      336,
+      293,
+      322,
+      292,
+      274,
+      311,
+      284
+    ],
+    "p50": {
+      "state": 1070,
+      "glance": 441,
+      "finder": 293
+    },
+    "p95": {
+      "state": 2445,
+      "glance": 1031,
+      "finder": 336
+    }
+  },
+  "kane": {
+    "ran": false,
+    "available": 1604.6401,
+    "reason": "Kane was not started. The repair engine has no aria-selected action, so an after run would not apply visual state sync. Balance 1604.6401 stayed above the 1,300 floor."
+  }
+}

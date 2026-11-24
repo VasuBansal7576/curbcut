@@ -8,7 +8,7 @@ import {fix,withLock} from './loop.mjs'
 import {requireKane} from './kane.mjs'
 import {normalizeTask,allowedHost,acceptableURL,fixtureURL} from './task.mjs'
 import {chooseInstant} from './jev-policy.js'
-import {chooseNames,chooseLanguage} from './jev-decisions.js'
+import {askFinder,askGlance,askVisualState,chooseNames,chooseLanguage} from './jev-decisions.js'
 import {chooseStuck} from './jev-stuck.js'
 import {jevKey} from './jev.mjs'
 import {enqueueInstant,enqueueDraft} from './jev-queue.mjs'
@@ -21,7 +21,7 @@ export function serve(port=4317) {
     try {
       if(req.headers.host!=='127.0.0.1:'+port && req.headers.host!=='localhost:'+port) return json(403,{error:'Local host required'})
       const url=new URL(req.url,'http://127.0.0.1:'+port)
-      if(['OPTIONS','POST'].includes(req.method) && ['/instant/decide','/instant/queue','/instant/name','/instant/language','/instant/stuck'].includes(url.pathname)) {
+      if(['OPTIONS','POST'].includes(req.method) && ['/instant/decide','/instant/queue','/instant/name','/instant/language','/instant/stuck','/instant/state','/instant/glance','/instant/finder'].includes(url.pathname)) {
         const origin=req.headers.origin
         if(origin && !/^chrome-extension:\/\/[a-p]{32}$/.test(origin)) return json(403,{error:'Extension only'})
         if(origin) res.setHeader('Access-Control-Allow-Origin',origin)
@@ -57,6 +57,20 @@ export function serve(port=4317) {
         if(url.pathname.endsWith('/language')) {
           if(typeof data.sample!=='string') return json(400,{error:'Invalid language sample'})
           return json(200,await chooseLanguage(key,data.sample.slice(0,2048)))
+        }
+        if(url.pathname.endsWith('/state')) {
+          if(!Array.isArray(data.pairs) || !data.pairs.length || data.pairs.length>6) return json(400,{error:'Invalid state batch'})
+          return json(200,await askVisualState(key,data.pairs))
+        }
+        if(url.pathname.endsWith('/glance')) {
+          if(typeof data.screenshot!=='string') return json(400,{error:'Invalid screenshot'})
+          return json(200,await askGlance(key,data.screenshot))
+        }
+        if(url.pathname.endsWith('/finder')) {
+          if(typeof data.query!=='string' || !Array.isArray(data.candidates) || !data.candidates.length || data.candidates.length>24) {
+            return json(400,{error:'Invalid finder request'})
+          }
+          return json(200,await askFinder(key,data.query.trim(),data.candidates))
         }
         return json(200,await chooseInstant(key,data.state,data.screenshot))
       }

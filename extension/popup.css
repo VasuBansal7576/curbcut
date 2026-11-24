@@ -1,5 +1,3 @@
-@import url("brand.css");
-
 @font-face {
   font-family: "Inter Tight";
   src: url("fonts/InterTight.ttf") format("truetype");
@@ -7,25 +5,19 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("fonts/JetBrainsMono.ttf") format("truetype");
-  font-weight: 100 800;
-  font-display: swap;
-}
-
 :root {
   color-scheme: light;
-  --paper: var(--brand-text);
-  --panel: color-mix(in srgb, var(--brand-surface) 5%, var(--brand-text));
-  --primary: var(--brand-surface);
-  --foreground: var(--brand-ink);
-  --danger: var(--brand-failure);
-  --muted: color-mix(in srgb, var(--brand-ink) 74%, var(--brand-text));
-  --line: color-mix(in srgb, var(--brand-ink) 23%, var(--brand-text));
-  --control-line: color-mix(in srgb, var(--brand-ink) 54%, var(--brand-text));
+  --paper: #ffffff;
+  --panel: #ffffff;
+  --primary: #161419;
+  --foreground: #161419;
+  --ring: #FA4698;
+  --danger: #161419;
+  --muted: #4a474c;
+  --line: #d4d2d6;
+  --control-line: #161419;
   --display: "Inter Tight", system-ui, sans-serif;
-  --mono: "JetBrains Mono", monospace;
+  --mono: "Inter Tight", system-ui, sans-serif;
   background: var(--paper);
   color: var(--foreground);
   font: 15px/1.45 "Inter Tight", system-ui, sans-serif;
@@ -45,7 +37,7 @@ p, a, .patch-name, .row-toggle { overflow-wrap: anywhere; }
   align-items: center;
   gap: 12px;
   padding-block: 0 18px;
-  border-bottom: 3px solid var(--primary);
+  border-bottom: 1px solid var(--line);
 }
 
 .brand h1 {
@@ -55,11 +47,14 @@ p, a, .patch-name, .row-toggle { overflow-wrap: anywhere; }
 }
 
 .mark {
-  width: 38px;
-  height: 15px;
+  width: 22px;
+  height: 22px;
   flex: 0 0 auto;
-  background: var(--primary);
-  clip-path: polygon(0 0, 37% 0, 66% 71%, 100% 71%, 100% 100%, 61% 100%, 31% 29%, 0 29%);
+  border: 3px solid var(--ring);
+  border-radius: 50%;
+  border-right-color: transparent;
+  transform: rotate(-28deg);
+  background: transparent;
   forced-color-adjust: none;
 }
 
@@ -89,10 +84,10 @@ p, a, .patch-name, .row-toggle { overflow-wrap: anywhere; }
   min-width: 3ch;
   font: 700 .8rem/1 var(--mono);
 }
-.master:has(input:checked) .signal { color: var(--primary); }
-.master:has(input:enabled:not(:checked)) { box-shadow: inset 3px 0 var(--danger); }
+.master:has(input:checked) .signal { color: var(--foreground); }
+.master:has(input:enabled:not(:checked)) { box-shadow: inset 3px 0 var(--foreground); }
 
-input[type="checkbox"] { accent-color: var(--primary); }
+input[type="checkbox"] { accent-color: var(--foreground); }
 input[role="switch"] {
   appearance: none;
   display: grid;
@@ -117,8 +112,8 @@ input[role="switch"]::before {
 
 input[role="switch"]:checked {
   place-items: center end;
-  border-color: var(--primary);
-  background: var(--primary);
+  border-color: var(--foreground);
+  background: var(--foreground);
   color: var(--paper);
 }
 
@@ -168,10 +163,10 @@ input:disabled, button:disabled { opacity: .65; cursor: default; }
   text-transform: uppercase;
 }
 
-.badge.verified { background: var(--brand-accent); color: var(--foreground); border-color: var(--foreground); }
+.badge.verified { background: var(--foreground); color: var(--paper); border-color: var(--foreground); }
 .badge.local { background: var(--panel); color: var(--foreground); border-color: var(--foreground); }
-.badge.unverified { border-color: var(--danger); color: var(--foreground); }
-.badge.retired { border-color: var(--primary); color: var(--primary); }
+.badge.unverified { border-color: var(--foreground); color: var(--foreground); }
+.badge.retired { border-color: var(--foreground); color: var(--foreground); }
 .patch-item details { margin-top: 2px; font-size: .9rem; }
 .patch-item summary { min-height: 24px; }
 .patch-item details:first-of-type, .measurement { margin-top: 6px; }
@@ -244,19 +239,19 @@ button {
   color: var(--foreground);
   border: 1px solid var(--control-line);
   border-radius: 0;
-  font: 700 .88rem/1.25 Overpass, system-ui, sans-serif;
+  font: 700 .88rem/1.25 "Inter Tight", system-ui, sans-serif;
   cursor: pointer;
 }
 
 .primary { background: var(--primary); color: var(--paper); border-color: var(--primary); }
 button:hover:not(:disabled) { text-decoration: underline; }
 a, .text-button { color: var(--foreground); text-decoration: underline; text-underline-offset: 3px; }
-a:hover, .text-button:hover { color: var(--primary); }
+a:hover, .text-button:hover { color: var(--foreground); }
 .measurement { display: inline-block; font-size: .9rem; }
 .text-button { border: 0; background: transparent; padding-inline: 0; }
 
 :where(a, button, input, select, summary):focus-visible {
-  outline: 2px solid var(--primary);
+  outline: 2px solid var(--ring);
   outline-offset: 3px;
 }
 
