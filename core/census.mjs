@@ -111,6 +111,11 @@ async function visit(entry,recipes,patches,key,context) {
     const response=await page.goto(entry.url,{waitUntil:'domcontentloaded',timeout:12000})
     await delay(400)
     const finalUrl=page.url()
+    let final
+    try {final=new URL(finalUrl)} catch {return {url:entry.url,finalUrl,set:entry.set,status:'blocked',reason:'Invalid URL',checkedAt:instant()}}
+    if(!acceptableURL(final) || !await allowedHost(final.hostname).catch(()=>false)) {
+      return {url:entry.url,finalUrl,site:siteKey(final),set:entry.set,status:'blocked',reason:'Left public HTTPS',checkedAt:instant()}
+    }
     const inspected=await inspectPage(page,response,recipes)
     const labels=entry.labels??labelsForUrl(finalUrl,patches,recipes)
     if(inspected.status!=='observed') {
@@ -130,12 +135,26 @@ async function visit(entry,recipes,patches,key,context) {
   } finally {await page.close().catch(()=>{})}
 }
 
+function contextClosed(reason) {
+  return /has been closed|Target closed|Browser closed|context.*closed/i.test(reason||'')
+}
+
+async function refreshBrowser(browser) {
+  await browser.context?.close().catch(()=>{})
+  if(browser.profile) await rm(browser.profile,{recursive:true,force:true})
+  browser.profile=await mkdtemp(path.join(tmpdir(),'curbcut-census-'))
+  browser.context=await openCensusBrowser(browser.profile)
+  browser.visits=0
+}
+
 async function visitWithRetry(entry,recipes,patches,key,browser) {
   const first=await visit(entry,recipes,patches,key,browser.context)
-  if(first.status==='observed' && !first.jevError) return first
+  if(first.status==='observed' && !first.jevError) {browser.visits=(browser.visits||0)+1;return first}
   if(first.status==='blocked') return first
+  if(contextClosed(first.reason)) await refreshBrowser(browser)
   const retry=await visit(entry,recipes,patches,key,browser.context)
-  if(retry.status==='observed' && !retry.jevError) return retry
+  if(retry.status==='observed' && !retry.jevError) {browser.visits=(browser.visits||0)+1;return retry}
+  if(contextClosed(retry.reason) && !contextClosed(first.reason)) await refreshBrowser(browser)
   if(first.status===retry.status && first.reason===retry.reason) return {...retry,retried:true}
   if(retry.jevError && first.jevError===retry.jevError) return {...retry,retried:true}
   return retry.jevError && first.status==='observed'?first:retry
@@ -157,26 +176,30 @@ export async function runCensus(listFile,{limit,calibrate=true,directory=outDir}
   }
   const ledgerFile=path.join(directory,'run.jsonl')
   const done=await loadLedger(ledgerFile)
-  const profile=await mkdtemp(path.join(tmpdir(),'curbcut-census-'))
-  const browser={context:await openCensusBrowser(profile)}
+  const browser={visits:0}
+  await refreshBrowser(browser)
   let last=0,processed=done.size
   try {
     for(const entry of queue) {
       if(done.has(entry.url) && (done.get(entry.url).status==='observed' && !done.get(entry.url).jevError || done.get(entry.url).status==='blocked')) continue
+      if((browser.visits||0)>=15) await refreshBrowser(browser)
       const wait=pauseMs-(Date.now()-last)
       if(wait>0) await delay(wait)
       last=Date.now()
       let row
       try {row=await visitWithRetry(entry,recipes,patches,key,browser)}
-      catch(error) {row={url:entry.url,set:entry.set,status:'failed',reason:error.message.split('\n')[0],checkedAt:instant()}}
+      catch(error) {
+        if(contextClosed(error.message)) await refreshBrowser(browser)
+        row={url:entry.url,set:entry.set,status:'failed',reason:error.message.split('\n')[0],checkedAt:instant()}
+      }
       done.set(entry.url,row)
       await appendFile(ledgerFile,JSON.stringify(row)+'\n')
       processed++
       if(processed%10===0) console.error(processed+'/'+queue.length)
     }
   } finally {
-    await browser.context.close().catch(()=>{})
-    await rm(profile,{recursive:true,force:true})
+    await browser.context?.close().catch(()=>{})
+    if(browser.profile) await rm(browser.profile,{recursive:true,force:true})
   }
   const pages=[...done.values()]
   const summary=summarize(pages,recipes)
