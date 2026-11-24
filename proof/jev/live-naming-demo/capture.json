@@ -1,0 +1,88 @@
+{
+  "checkedAt": "2026-11-24T14:28:54.599Z",
+  "runner": "playwright",
+  "source": "controlled development fixture",
+  "width": 1920,
+  "height": 1080,
+  "before": [
+    "button · (unnamed)",
+    "button · (unnamed)",
+    "link · (unnamed)"
+  ],
+  "after": [
+    "button · catalog search",
+    "button · Menu",
+    "link · Instagram"
+  ],
+  "decisions": [
+    {
+      "selector": "#catalog-search",
+      "role": "button",
+      "choice": "context0",
+      "proposed": "catalog search",
+      "confidence": 0.9,
+      "decoration": 0,
+      "providerMs": 467,
+      "model": "jev-1.14.0",
+      "name": "catalog search"
+    },
+    {
+      "selector": "#site-menu",
+      "role": "button",
+      "choice": "menu",
+      "proposed": "Menu",
+      "confidence": 0.55,
+      "decoration": 0,
+      "providerMs": 467,
+      "model": "jev-1.14.0",
+      "name": "Menu"
+    },
+    {
+      "selector": "#instagram",
+      "role": "link",
+      "choice": "brand1",
+      "proposed": "Instagram",
+      "confidence": 0.98,
+      "decoration": 0,
+      "providerMs": 467,
+      "model": "jev-1.14.0",
+      "name": "Instagram"
+    }
+  ],
+  "elapsedMs": 539,
+  "namingThresholds": {
+    "name": 0.55,
+    "decorative": 0.9
+  },
+  "languageThreshold": 0.75,
+  "language": [
+    {
+      "expected": "en",
+      "tag": "en",
+      "confidence": 1,
+      "providerMs": 297,
+      "model": "jev-1.14.0"
+    },
+    {
+      "expected": "es",
+      "tag": "es",
+      "confidence": 1,
+      "providerMs": 298,
+      "model": "jev-1.14.0"
+    },
+    {
+      "expected": "ja",
+      "tag": "ja",
+      "confidence": 1,
+      "providerMs": 308,
+      "model": "jev-1.14.0"
+    },
+    {
+      "expected": "fr",
+      "tag": "fr",
+      "confidence": 1,
+      "providerMs": 283,
+      "model": "jev-1.14.0"
+    }
+  ]
+}

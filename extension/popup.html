@@ -31,6 +31,7 @@
         </div>
         <span id="active-count" class="count" role="status" aria-label="Loading fixes">—</span>
       </div>
+      <p id="live-names-status" class="status" role="status" hidden></p>
       <ul id="active-patches" class="patch-list"></ul>
       <p id="active-empty" class="empty" hidden></p>
       <label id="page-toggle-row" class="row-toggle" for="page-toggle" hidden>
@@ -42,8 +43,7 @@
     <section class="help" aria-label="Report a barrier or try a fix">
       <details id="stuck" class="disclosure">
         <summary><span>I’m stuck</span><kbd class="hotkey" aria-hidden="true">Ctrl+Shift+U</kbd></summary>
-        <p id="live-names-status" class="status" role="status" hidden></p>
-      <div class="detail-body">
+        <div class="detail-body">
           <p class="hint">Report a barrier on a public page. Curb Cut captures a page snapshot without a screenshot.</p>
           <label class="field" for="persona-select">
             <span>How were you using the page?</span>
