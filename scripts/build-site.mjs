@@ -50,7 +50,7 @@ const [v6Scout,v6Local,v6Kane]=await Promise.all(['scouting.json','local-summary
 const v6Section=(v6Local?'<section class="section"><h2>Held-out v6</h2><p>'+v6Scout.attempted+
   ' scouted sites with up to three preregistered tasks per site.</p><table><caption>V6 coverage by failure type</caption><thead><tr><th scope="col">Failure type</th><th scope="col">Local fixed / registered</th><th scope="col">Kane verified / selected</th></tr></thead><tbody>'+
   categories.map(category=>{
-    const local=v6Local.byCategory[category],kane=v6Kane?.byCategory[category]
+    const local=v6Local.byCategory[category],kane=v6Kane?.byCategory?.[category]
     return '<tr><th scope="row">'+esc(coverageLabels[category])+'</th><td>'+local.fixed+' / '+local.total+'</td><td>'+
       (kane?kane.verified+' / '+kane.selected:category==='missing-language' || category==='low-contrast'?'Local proof':'Pending')+'</td></tr>'
   }).join('')+'</tbody></table><p><a href="../proof/heldout-v6/README.md">V6 protocol and results</a></p></section>':'')+
