@@ -91,6 +91,11 @@ try {
   if(selection) {
     const calibration=registered['calibration/summary.json']
     assert.equal(selection.calibrationPassed,calibration.passed)
+    const evidenceRunner=['scripts/run-kane-v6.mjs','scripts/kane-evidence-v6.mjs']
+    assert.deepEqual(Object.keys(selection.evidenceRunner),evidenceRunner)
+    for(const file of evidenceRunner) {
+      assert.equal(git('hash-object','--no-filters',new URL('../'+file,import.meta.url).pathname),selection.evidenceRunner[file])
+    }
     const categories=['missing-alt','empty-link','empty-button',...(calibration.passed?['low-contrast']:[])]
     assert.deepEqual(Object.keys(selection.targets),categories)
     for(const category of categories) {

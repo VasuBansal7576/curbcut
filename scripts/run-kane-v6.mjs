@@ -30,12 +30,14 @@ if(process.argv[2]==='seal') {
     evidenceRunner[file]=await git(['rev-parse','HEAD:'+file])
     assert.equal(await git(['hash-object','--no-filters',file]),evidenceRunner[file])
   }
-  await save(selectionFile,{...selection,evidenceRunner})
+  await save(selectionFile,{...selection,phaseReserve:125,evidenceRunner})
 } else if(process.argv[2]==='run') {
   const selectionInput=await input('kane-selection.json')
-  const selection=await read('kane-selection.json')
+  const selection=await read(selectionFile)
+  const tasks=await read('registration.json')
   assert.deepEqual(selection.targets,collect(selection.seed))
   assert.deepEqual(selection.localInput,localInput)
+  assert.deepEqual(Object.keys(selection.evidenceRunner),evidenceFiles)
   for(const [file,digest] of Object.entries(selection.evidenceRunner)) {
     assert.equal(await git(['rev-parse','HEAD:'+file]),digest)
     assert.equal(await git(['hash-object','--no-filters',file]),digest)
@@ -53,8 +55,7 @@ if(process.argv[2]==='seal') {
     const row={id:target.id,category,phases:{},verified:false}
     let work=patch
     if(patch.evaluation.role) {
-      const registrationFile=await read('registration.json')
-      const {detail}=registrationFile.tasks.find(item=>item.task.id===target.id)
+      const {detail}=tasks.tasks.find(item=>item.task.id===target.id)
       const context=detail.heading?' A nearby heading is “'+detail.heading+'”.':''
       const visual=patch.evaluation.role==='link' && detail.targetTitle?' The destination title is “'+detail.targetTitle+'”.':''
       work={...patch,controlTask:patch.controlTask+context+visual}
