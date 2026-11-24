@@ -6,9 +6,11 @@ importScripts(
   "lib/sensitive.js",
   "jev-runtime.js",
   "jev-decisions-runtime.js",
+  "jev-stuck-runtime.js",
   "lib/jev-config.js",
   "instant-background.js",
-  "naming-background.js"
+  "naming-background.js",
+  "stuck-background.js"
 );
 
 const Ext = globalThis.CurbCutExt;
@@ -263,8 +265,16 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
     }
 
     switch (message.type) {
+      case "STUCK_EVALUATE": {
+        sendResponse(await evaluateStuck(_sender, message.trace));
+        return;
+      }
+      case "STUCK_ACCEPT": {
+        sendResponse(await acceptStuck(_sender));
+        return;
+      }
       case "LIVE_NAMES_REQUEST": {
-        sendResponse(await nameVisibleTab(_sender, message.token));
+        sendResponse(await nameVisibleTab(_sender, message.token, message.once === true));
         return;
       }
       case "GET_LIVE_NAMES": {

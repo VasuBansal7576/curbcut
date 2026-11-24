@@ -12,6 +12,12 @@ import {ROOT,instant,readJSON,saveJSON} from '../core/io.mjs'
 import {journeyLane,replayInstalledProbe} from '../core/probe.mjs'
 import {acceptableURL,allowedHost,normalizeTask,siteKey,taskDestination} from '../core/task.mjs'
 
+if(process.argv[2]==='--jev') {
+  await import('./jev-live-extension-e2e.mjs')
+  await import('./jev-stuck-extension-e2e.mjs')
+  process.exit(0)
+}
+
 const extension=path.join(ROOT,'extension')
 const runtime=await readFile(path.join(extension,'runtime.js'),'utf8')
 const bundleBytes=await readFile(path.join(extension,'bundled.json'))

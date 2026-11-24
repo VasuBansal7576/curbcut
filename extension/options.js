@@ -35,19 +35,23 @@ form.addEventListener("submit", async event => {
   } catch { status.textContent = "Could not save settings."; }
 });
 
-const liveNames = document.querySelector("#live-names");
-const liveNamesStatus = document.querySelector("#live-names-status");
-chrome.storage.local.get("liveNamesEnabled").then(settings => {
-  liveNames.checked = settings.liveNamesEnabled === true;
-  liveNames.disabled = false;
-}).catch(() => { liveNamesStatus.textContent = "Could not load the live naming setting."; });
-liveNames.addEventListener("change", async () => {
-  const checked = liveNames.checked;
-  try {
-    await chrome.storage.local.set({ liveNamesEnabled: checked });
-    liveNamesStatus.textContent = checked ? "Live naming enabled." : "Live naming disabled.";
-  } catch {
-    liveNames.checked = !checked;
-    liveNamesStatus.textContent = "Could not save the live naming setting.";
-  }
-});
+function bindSwitch(id, key, label) {
+  const toggle = document.querySelector("#" + id);
+  const feedback = document.querySelector("#" + id + "-status");
+  chrome.storage.local.get(key).then(settings => {
+    toggle.checked = settings[key] === true;
+    toggle.disabled = false;
+  }).catch(() => { feedback.textContent = "Could not load the setting."; });
+  toggle.addEventListener("change", async () => {
+    const checked = toggle.checked;
+    try {
+      await chrome.storage.local.set({ [key]: checked });
+      feedback.textContent = label + (checked ? " enabled." : " disabled.");
+    } catch {
+      toggle.checked = !checked;
+      feedback.textContent = "Could not save the setting.";
+    }
+  });
+}
+bindSwitch("live-names", "liveNamesEnabled", "Live naming");
+bindSwitch("stuck-detection", "stuckEnabled", "Keyboard help");

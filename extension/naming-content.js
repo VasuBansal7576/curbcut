@@ -1,15 +1,21 @@
 (() => {
-  const keys = ["liveNamesEnabled", "enabled", "pausedPages", "readerEnabled"];
+  const keys = ["liveNamesEnabled", "enabled", "pausedPages", "readerEnabled", "stuckEnabled"];
   const settings = {};
   const applied = new Map();
   let attempted = new WeakSet();
   let page = location.href;
   let pending, timer;
+  let once = false;
+  let authorizedPage;
   let expires = 0;
 
+  function pageEnabled() {
+    return settings.enabled !== false && !CurbCutExt.isPagePaused(location.href, settings) &&
+      location.protocol === "https:";
+  }
+
   function enabled() {
-    return settings.liveNamesEnabled === true && settings.enabled !== false &&
-      !CurbCutExt.isPagePaused(location.href, settings) && location.protocol === "https:";
+    return pageEnabled() && (settings.liveNamesEnabled === true || once && settings.stuckEnabled === true);
   }
 
   function permitted() {
@@ -19,6 +25,7 @@
 
   function clear() {
     pending = null;
+    authorizedPage = undefined;
     attempted = new WeakSet();
     for (const { cleanup } of applied.values()) cleanup();
     applied.clear();
@@ -26,6 +33,10 @@
 
   function schedule() {
     clearTimeout(timer);
+    if (page !== location.href) {
+      clear();
+      page = location.href;
+    }
     if (!enabled() || pending || document.hidden) return;
     timer = setTimeout(request, Math.max(400, expires - Date.now()));
   }
@@ -35,20 +46,20 @@
       clear();
       page = location.href;
     }
-    if (!permitted() || pending) return;
+    if (!permitted() || pending) return { ok: false };
     const state = CurbCut.collectNames();
     const targets = state.targets.flatMap(target => {
       const node = document.querySelector(target.selector);
       return node && !attempted.has(node) ? [{ target, node }] : [];
     });
-    if (!targets.length) return;
+    if (!targets.length) return { ok: false };
     const token = crypto.randomUUID();
     pending = { token, targets, url: location.href, state };
     expires = Date.now() + 1200;
     try {
-      await chrome.runtime.sendMessage({ type: "LIVE_NAMES_REQUEST", token });
+      return await chrome.runtime.sendMessage({ type: "LIVE_NAMES_REQUEST", token, once });
     } catch {
-      return;
+      return { ok: false };
     } finally {
       if (pending?.token === token) pending = null;
     }
@@ -65,6 +76,20 @@
   }
 
   chrome.runtime.onMessage.addListener((message, _sender, reply) => {
+    if (message?.type === "LIVE_NAMES_ONCE") {
+      if (!pageEnabled() || settings.stuckEnabled !== true || pending || once) {
+        reply({ ok: false });
+        return false;
+      }
+      const currentPage = location.href;
+      once = true;
+      attempted = new WeakSet();
+      request().then(result => {
+        if (result?.ok && result.count && currentPage === location.href) authorizedPage = currentPage;
+        reply({ ok: Boolean(result?.ok && result.count) });
+      }).catch(() => reply({ ok: false })).finally(() => { once = false; });
+      return true;
+    }
     if (message?.type === "LIVE_NAMES_STATUS") {
       reply({ names: [...applied].flatMap(([node, value]) =>
         node.isConnected && (node.getAttribute(node.matches("img") ? "alt" : "aria-label") === value.name)
@@ -112,7 +137,8 @@
   chrome.storage.onChanged.addListener((changes, area) => {
     if (area !== "local") return;
     for (const key of keys) if (key in changes) settings[key] = changes[key].newValue;
-    if (!enabled()) clear();
+    if (!pageEnabled() || settings.liveNamesEnabled !== true &&
+        (settings.stuckEnabled !== true || !once && authorizedPage !== location.href)) clear();
     else if (keys.some(key => key in changes)) schedule();
   });
   window.addEventListener("scroll", schedule, { passive: true });

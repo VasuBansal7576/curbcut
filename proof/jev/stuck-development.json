@@ -1,0 +1,427 @@
+{
+  "source": "Synthetic development traces",
+  "checkedAt": "2026-11-24T14:32:34.012Z",
+  "threshold": 0.75,
+  "rows": [
+    {
+      "type": "cycle",
+      "expected": true,
+      "alert": true,
+      "p": 0.75,
+      "providerMs": 352,
+      "model": "jev-1.14.0",
+      "trace": [
+        {
+          "key": "Tab",
+          "focus": 0,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 500,
+          "effect": "focus-change",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 1,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 500,
+          "effect": "focus-change",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 0,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 500,
+          "effect": "focus-change",
+          "revisited": true
+        },
+        {
+          "key": "Tab",
+          "focus": 1,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 500,
+          "effect": "focus-change",
+          "revisited": true
+        },
+        {
+          "key": "Tab",
+          "focus": 0,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 500,
+          "effect": "focus-change",
+          "revisited": true
+        },
+        {
+          "key": "Tab",
+          "focus": 1,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 500,
+          "effect": "focus-change",
+          "revisited": true
+        },
+        {
+          "key": "Tab",
+          "focus": 0,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 500,
+          "effect": "focus-change",
+          "revisited": true
+        },
+        {
+          "key": "Tab",
+          "focus": 1,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 500,
+          "effect": "focus-change",
+          "revisited": true
+        },
+        {
+          "key": "Tab",
+          "focus": 0,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 500,
+          "effect": "focus-change",
+          "revisited": true
+        },
+        {
+          "key": "Tab",
+          "focus": 1,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 500,
+          "effect": "focus-change",
+          "revisited": true
+        },
+        {
+          "key": "Tab",
+          "focus": 0,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 500,
+          "effect": "focus-change",
+          "revisited": true
+        },
+        {
+          "key": "Tab",
+          "focus": 1,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 500,
+          "effect": "focus-change",
+          "revisited": true
+        }
+      ]
+    },
+    {
+      "type": "noEffect",
+      "expected": true,
+      "alert": true,
+      "p": 0.87,
+      "providerMs": 284,
+      "model": "jev-1.14.0",
+      "trace": [
+        {
+          "key": "Enter",
+          "focus": 0,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 700,
+          "effect": "unchanged",
+          "revisited": true
+        },
+        {
+          "key": "Enter",
+          "focus": 0,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 700,
+          "effect": "unchanged",
+          "revisited": true
+        },
+        {
+          "key": "Enter",
+          "focus": 0,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 700,
+          "effect": "unchanged",
+          "revisited": true
+        },
+        {
+          "key": "Enter",
+          "focus": 0,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 700,
+          "effect": "unchanged",
+          "revisited": true
+        },
+        {
+          "key": "Enter",
+          "focus": 0,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 700,
+          "effect": "unchanged",
+          "revisited": true
+        },
+        {
+          "key": "Enter",
+          "focus": 0,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 700,
+          "effect": "unchanged",
+          "revisited": true
+        },
+        {
+          "key": "Enter",
+          "focus": 0,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 700,
+          "effect": "unchanged",
+          "revisited": true
+        },
+        {
+          "key": "Enter",
+          "focus": 0,
+          "role": "button",
+          "named": true,
+          "visible": true,
+          "gapMs": 700,
+          "effect": "unchanged",
+          "revisited": true
+        }
+      ]
+    },
+    {
+      "type": "progress",
+      "expected": false,
+      "alert": false,
+      "p": 0.07,
+      "providerMs": 281,
+      "model": "jev-1.14.0",
+      "trace": [
+        {
+          "key": "Tab",
+          "focus": 0,
+          "role": "link",
+          "named": true,
+          "visible": true,
+          "gapMs": 600,
+          "effect": "focus-change",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 1,
+          "role": "link",
+          "named": true,
+          "visible": true,
+          "gapMs": 600,
+          "effect": "focus-change",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 2,
+          "role": "link",
+          "named": true,
+          "visible": true,
+          "gapMs": 600,
+          "effect": "focus-change",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 3,
+          "role": "link",
+          "named": true,
+          "visible": true,
+          "gapMs": 600,
+          "effect": "focus-change",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 4,
+          "role": "link",
+          "named": true,
+          "visible": true,
+          "gapMs": 600,
+          "effect": "focus-change",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 5,
+          "role": "link",
+          "named": true,
+          "visible": true,
+          "gapMs": 600,
+          "effect": "focus-change",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 6,
+          "role": "link",
+          "named": true,
+          "visible": true,
+          "gapMs": 600,
+          "effect": "focus-change",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 7,
+          "role": "link",
+          "named": true,
+          "visible": true,
+          "gapMs": 600,
+          "effect": "focus-change",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 8,
+          "role": "link",
+          "named": true,
+          "visible": true,
+          "gapMs": 600,
+          "effect": "focus-change",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 9,
+          "role": "link",
+          "named": true,
+          "visible": true,
+          "gapMs": 600,
+          "effect": "focus-change",
+          "revisited": false
+        }
+      ]
+    },
+    {
+      "type": "invisible",
+      "expected": true,
+      "alert": true,
+      "p": 0.89,
+      "providerMs": 288,
+      "model": "jev-1.14.0",
+      "trace": [
+        {
+          "key": "Tab",
+          "focus": 0,
+          "role": "button",
+          "named": false,
+          "visible": false,
+          "gapMs": 700,
+          "effect": "unchanged",
+          "revisited": false
+        },
+        {
+          "key": "Enter",
+          "focus": 1,
+          "role": "button",
+          "named": false,
+          "visible": false,
+          "gapMs": 700,
+          "effect": "unchanged",
+          "revisited": false
+        },
+        {
+          "key": "Tab",
+          "focus": 0,
+          "role": "button",
+          "named": false,
+          "visible": false,
+          "gapMs": 700,
+          "effect": "unchanged",
+          "revisited": true
+        },
+        {
+          "key": "Enter",
+          "focus": 1,
+          "role": "button",
+          "named": false,
+          "visible": false,
+          "gapMs": 700,
+          "effect": "unchanged",
+          "revisited": true
+        },
+        {
+          "key": "Tab",
+          "focus": 0,
+          "role": "button",
+          "named": false,
+          "visible": false,
+          "gapMs": 700,
+          "effect": "unchanged",
+          "revisited": true
+        },
+        {
+          "key": "Enter",
+          "focus": 1,
+          "role": "button",
+          "named": false,
+          "visible": false,
+          "gapMs": 700,
+          "effect": "unchanged",
+          "revisited": true
+        },
+        {
+          "key": "Tab",
+          "focus": 0,
+          "role": "button",
+          "named": false,
+          "visible": false,
+          "gapMs": 700,
+          "effect": "unchanged",
+          "revisited": true
+        },
+        {
+          "key": "Enter",
+          "focus": 1,
+          "role": "button",
+          "named": false,
+          "visible": false,
+          "gapMs": 700,
+          "effect": "unchanged",
+          "revisited": true
+        }
+      ]
+    }
+  ]
+}
