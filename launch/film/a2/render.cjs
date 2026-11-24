@@ -9,13 +9,17 @@ const launch = path.join(root,'launch')
 const read = file => JSON.parse(fs.readFileSync(file,'utf8'))
 const edit = read(path.join(__dirname,'edit.json'))
 const pending = read(path.join(launch,'film/pending.json')).shots
-const mass = 'proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/'
-const unit = 'proof/kane/unitconverters-length/'
+const calculator = 'proof/kane/calculator-net-add-days/'
+const airport = 'proof/heldout-v6/kane/v6-5193be8805ece27f858e/'
+const worms = 'proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/'
 const reels = {
-  mouse:[mass+'control',60],fail:[mass+'before',92],keyboard:[mass+'before',88],
-  pointer:[mass+'control',59],keyboardpass:[mass+'attempt-1/after',79],
-  unitfail:[unit+'2026-11-22T10-52-45.985Z/recheck-without',14],
-  unitpass:[unit+'2026-11-22T11-06-33.087Z/attempt-1/after',17]
+  chapter:[calculator+'2026-11-21T19-46-40.781Z/control',3],
+  calcMouse:[calculator+'2026-11-21T19-46-40.781Z/control',9],
+  calcKeys:[calculator+'runtime-replay/attempt-1/after',62],
+  check:[airport+'before-1',11],gate:[airport+'control-1',18],
+  trust:[worms+'after',60],shortcut:[worms+'before',68],
+  retire:[calculator+'2026-11-22T10-42-44.839Z/recheck-with',10],
+  install:[worms+'after',66]
 }
 const ff = args => execFileSync('ffmpeg',['-y','-v','error',...args],{stdio:'inherit'})
 const uri = name => pathToFileURL(name).href
@@ -34,7 +38,7 @@ async function main(){
     await page.goto(uri(path.join(__dirname,'stage.html')))
     await page.evaluate(async ({assets,cues})=>{window.cues=cues;await loadFilm(assets)},{assets,cues:read(path.join(__dirname,'speech.json'))})
     const segments=[]
-    for(const shot of edit){
+    for(const shot of edit.filter(s=>s.start>=75)){
       const folder=path.join(work,shot.id)
       fs.mkdirSync(folder)
       const slot=pending.find(s=>s.id===shot.id)
@@ -84,9 +88,11 @@ async function main(){
     fs.writeFileSync(list,segments.map(s=>"file '"+s.replaceAll("'","'\\''")+"'").join('\n')+'\n')
     const master=path.join(work,'master.mp4')
     ff(['-f','concat','-safe','0','-i',list,'-an','-c:v','libx264','-preset','fast','-crf','19','-threads','5','-bf','0','-pix_fmt','yuv420p','-force_key_frames','15,75',master])
-    for(const [name,cap,duration] of [['curbcut-demo','demo',edit.reduce((sum,shot)=>sum+shot.duration,0)],['curbcut-launch','launch',75],['curbcut-launch-15s','teaser',15]]){
-      ff(['-i',master,'-i',path.join(launch,'audio/demo.m4a'),'-i',path.join(launch,'captions',cap+'.vtt'),'-map','0:v:0','-map','1:a:0','-map','2:s:0','-t',String(duration),'-c:v','copy','-c:a','copy','-c:s','mov_text','-metadata:s:s:0','language=eng','-movflags','+faststart',path.join(target,name+'.mp4')])
-    }
+    const opening=path.join(work,'opening.mp4')
+    ff(['-i',path.join(launch,'curbcut-launch.mp4'),'-map','0:v:0','-an','-c:v','copy',opening])
+    fs.writeFileSync(list,"file 'opening.mp4'\nduration 75\nfile 'master.mp4'\n")
+    const seconds=edit.at(-1).start+edit.at(-1).duration
+    ff(['-f','concat','-safe','0','-i',list,'-i',path.join(launch,'audio/demo.m4a'),'-i',path.join(launch,'captions/demo.vtt'),'-map','0:v:0','-map','1:a:0','-map','2:s:0','-t',String(seconds),'-c:v','copy','-c:a','copy','-c:s','mov_text','-metadata:s:s:0','language=eng','-movflags','+faststart',path.join(target,'curbcut-demo.mp4')])
   }finally{
     if(context)await context.close()
     fs.rmSync(work,{recursive:true,force:true})

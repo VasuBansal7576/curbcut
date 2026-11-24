@@ -167,41 +167,48 @@ function closing(id,t,d){
   }
   const z=1+.06*v;g.save();g.translate(51,696);g.scale(z,z);ring(0,0,588,68,1,1.3*Math.sin(t*2)**2);mono('github.com/VasuBansal7576/curbcut',23,22,24,paper);g.restore()
 }
-function task(t,d){
-  editorial('MASS.EDU   /   REGISTERED TASK')
-  text('Find the department.',39,123,90)
-  const z=.92+.1*t/d
-  clip(52,280,1334,442,()=>photo(images.massAfter,52,210,1440*z,900*z))
-  ring(52+17*z,210+204.625*z,161.58*z,26*z,1,2*Math.sin(t*2)**2)
-  mono('Expected destination   /   /about/aboutdhe.asp',54,749,21)
+function recordedPage(frame,t,d,focusX=.35,focusY=.25,push=.13){
+  const z=1+push*t/d
+  const x=W*focusX*(1-z),y=H*focusY*(1-z)
+  photo(frame,x,y,W*z,H*z,0,0,frame.width,frame.width*9/16)
+  return (px,py,w,h)=>[x+px*W/800*z,y+py*W/800*z,w*W/800*z,h*W/800*z]
 }
-function nightly(t,d){
-  editorial('RECHECK   /   PUBLIC EVIDENCE',false);text('Try it without the rule.',39,145,92,paper)
-  const rows=[['10','still verified'],['7','inconclusive'],['1','re-patched']]
-  rows.forEach(([n,label],i)=>{let x=49+i*460;rule(x,340,420,'#777');text(n,x,375,133,paper);text(label,x,539,43,paper)})
-  ring(44+460*clamp(t/(d*.85))*2,327,422,284,.82)
-  mono('18 public rechecks   /   prior status preserved on inconclusive evidence',52,716,20,paper)
-}
-function pending(id,t,d){
-  const table={
-    check:[['curbcut check'],['Kane fails the task','Agent receives the reason','Kane tests the revision']],
-    gate:[['curbcut gate'],['Stop hook runs','Failing task returns','Agent edits the source']],
-    trust:[['Open the proof.'],['Inspect the status','Play the recording','Follow the destination']],
-    shortcut:[['Report a barrier.'],['Press the shortcut','Capture the task','Review the report']],
-    retire:[['Retire the rule.'],['Site repairs its source','Unpatched task passes','Extension drops the fix']]
-  },[title,steps]=table[id]
-  editorial('RECORDING PENDING   /   '+id.toUpperCase(),false)
-  text(title[0],38,167,111,paper,650)
-  mono('EXPECTED CAPTURE   /   '+d+' seconds',51,313,20,'#cccccc')
-  g.save();g.translate(-8*t/d,-10*t/d);g.scale(1+.035*t/d,1+.035*t/d)
-  const v=t/d,index=Math.min(2,Math.floor(v*3))
-  for(let i=0;i<3;i++){
-    const y=402+i*104
-    mono('0'+(i+1),51,y+13,23,i===index?pink:'#bcbcbc')
-    text(steps[i],122,y,45,i===index?paper:'#bcbcbc',540)
+function calculatorReplay(id,t,d,frame){
+  const mouse=id==='calcMouse'
+  const map=recordedPage(frame,t,d,.29,.14,.42)
+  gradient(385,H)
+  if(mouse){
+    mono('KANE RECORDING   /   POINTER CONTROL',48,565,18,paper)
+    const result=t>=12.5
+    text(result?'November 24.':'Add two days.',42,605,89,paper)
+    if(result)ring(...map(166,39,120,23),ease((t-12.5)/.4),2)
+  }else{
+    mono('KANE RECORDING   /   READING VIEW',48,565,18,paper)
+    text(t<12?'Find the named field.':'Days to add: 2',42,605,83,paper)
+    if(t>=12.4)ring(...map(39,145,303,26),ease((t-12.4)/.6),1.4)
   }
-  const y=386+104*(ease((t-d/3+.27)/.55)+ease((t-2*d/3+.27)/.55))
-  ring(37,y,Math.min(1070,800+70*v),78,.95,1,8*Math.sin(Math.PI*(v*3%1)));g.restore()
+}
+function chapterEnd(id,t,d,frame){
+  recordedPage(frame,t,d)
+  gradient(145,H)
+  mono(id==='chapter'?'THE DEMO   /   KANE CLI':'CURB CUT   /   CHROME EXTENSION',50,477,21,paper)
+  text(id==='chapter'?'How it works.':'Try the next key.',41,530,116,paper,670)
+  if(id==='install')mono('github.com/VasuBansal7576/curbcut',50,720,24,paper)
+}
+function pending(id,t,d,frame){
+  const material={
+    check:['curbcut check','A failed task goes back to the agent.','Munich Airport · Reading view'],
+    gate:['curbcut gate','A failed check keeps the agent working.','Munich Airport · pointer control'],
+    trust:['Open the proof.','Play the recording behind the verdict.','World Register of Marine Species · repaired run'],
+    shortcut:['Report a barrier.','Open the report from the keyboard.','World Register of Marine Species · keyboard run'],
+    retire:['Retire the fix.','The original page completes the task.','Calculator.net · public recheck']
+  }[id]
+  recordedPage(frame,t,d)
+  gradient(180,H)
+  tag('Recording pending',50,405,true)
+  text(material[0],43,465,94,paper,660)
+  text(material[1],49,590,42,paper)
+  mono('Reference replay  /  '+material[2],51,739,18,paper)
 }
 function contrast(t,d){
   const on=t>2.9,plate=on?images.contrastOn:images.contrastOff
@@ -225,9 +232,9 @@ async function drawShot(shot,t,recording){
   else if(id==='reader')announcements(t,d)
   else if(id==='jev'||id==='jevdetail')jev(id,t,d)
   else if(id==='report'||id==='owner')report(id,t,d)
-  else if(id==='release'||id==='install')closing(id,t,d)
-  else if(id==='task')task(t,d)
+  else if(id==='release')closing(id,t,d)
+  else if(id==='chapter'||id==='install')chapterEnd(id,t,d,recording)
+  else if(id==='calcMouse'||id==='calcKeys')calculatorReplay(id,t,d,recording)
   else if(id==='contrast')contrast(t,d)
-  else if(id==='night')nightly(t,d)
-  else pending(id,t,d)
+  else pending(id,t,d,recording)
 }
