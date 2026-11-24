@@ -11,6 +11,7 @@
     "injectCSS",
     "extendTimeout",
     "setLang",
+    "setContrast",
     "mirrorHoverToFocus",
     "mirrorHoverEventToFocus",
     "toggleOnActivate",
@@ -23,17 +24,20 @@
     "low-vision",
     "screen-reader-view",
     "color-blind",
+    "low-contrast-simulation",
+    "document-language",
   ]);
   root.ALLOWED_STATUSES = Object.freeze([
     "candidate",
     "verified",
+    "locally-verified",
     "broken",
     "retired",
   ]);
   root.LOCAL_FEED_URL = "http://127.0.0.1:4317/patches/index.json";
   root.TASKS_URL = "http://127.0.0.1:4317/tasks";
-  root.PROOF_URL = "http://127.0.0.1:4317/site/#evidence";
-  root.EVIDENCE_BASE = "http://127.0.0.1:4317/";
+  root.PROOF_URL = "https://vasubansal7576.github.io/curbcut/#evidence";
+  root.EVIDENCE_BASE = "https://github.com/VasuBansal7576/curbcut/raw/main/";
   root.FIXTURE_ORIGIN = "http://127.0.0.1:4317";
   root.FIXTURE_PREFIX = "/fixtures/shop/";
   root.FEED_ALARM = "curbcut-feed-refresh";

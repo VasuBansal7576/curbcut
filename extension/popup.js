@@ -1,3 +1,5 @@
+import {createReport} from './lib/report.js';
+
 (() => {
   const Ext = globalThis.CurbCutExt;
 
@@ -78,7 +80,7 @@
 
       const badge = document.createElement("span");
       badge.className = "badge " + (patch.unverified ? "unverified" : "verified");
-      badge.textContent = patch.unverified ? "Unverified" : "Verified";
+      badge.textContent = patch.unverified ? "Unverified" : patch.status === "locally-verified" ? "Local proof" : "Kane verified";
 
       top.append(name, badge);
 
@@ -102,7 +104,14 @@
         a.textContent = "After";
         links.append(a);
       }
-      if (!before && !after) {
+      if (patch.status === "locally-verified") {
+        const a = document.createElement("a");
+        a.href = Ext.evidenceHref(patch.evidence.localMeasurement);
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.textContent = "Measurements";
+        links.append(a);
+      } else if (!before && !after) {
         const span = document.createElement("span");
         span.className = "meta";
         span.textContent = "Evidence pending";
@@ -110,6 +119,43 @@
       }
 
       li.append(top, links);
+      if (!patch.unverified && patch.matchedRules?.length) {
+        const report = document.createElement("details");
+        const title = document.createElement("summary");
+        title.textContent = "Send the fix to the site owner";
+        const copy = document.createElement("button");
+        copy.type = "button";
+        copy.className = "ghost";
+        copy.textContent = "Copy Markdown";
+        const status = document.createElement("span");
+        status.setAttribute("role", "status");
+        const download = document.createElement("button");
+        download.type = "button";
+        download.className = "ghost";
+        download.textContent = "Download .md";
+        copy.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(createReport(patch));
+            status.textContent = "Copied.";
+          } catch {
+            status.textContent = "Copy failed. Download the report instead.";
+          }
+        });
+        download.addEventListener("click", () => {
+          const file = new Blob([createReport(patch)], { type: "text/markdown;charset=utf-8" });
+          const url = URL.createObjectURL(file);
+          const link = document.createElement("a");
+          link.href = url;
+          link.download = patch.id + ".md";
+          link.click();
+          setTimeout(() => URL.revokeObjectURL(url), 1000);
+        });
+        const controls = document.createElement("div");
+        controls.className = "report-actions";
+        controls.append(copy, download, status);
+        report.append(title, controls);
+        li.append(report);
+      }
       els.activeList.append(li);
     }
   }
@@ -135,7 +181,7 @@
   }
 
   async function refreshPageContext() {
-    const result = await chrome.runtime.sendMessage({ type: "QUERY_ACTIVE", capturedTabId });
+    const result = await chrome.runtime.sendMessage({ type: "QUERY_ACTIVE", capturedTabId, includeMatches: true });
     if (result && result.ok) {
       page.url = result.url || "";
       page.isFixture = Boolean(result.isFixture);

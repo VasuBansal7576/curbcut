@@ -36,7 +36,7 @@ async function setState(patch) {
 async function loadBundledPatches() {
   const bundled = await readJsonAsset("bundled.json");
   const demo = await readJsonAsset("demo.json");
-  const patches = Ext.sanitizePatchArray(bundled, { statuses: ["verified"] });
+  const patches = Ext.sanitizePatchArray(bundled, { statuses: ["verified", "locally-verified"] });
   const demoPatches = Ext.sanitizePatchArray(demo, { statuses: ["candidate"] });
   return { patches, demoPatches };
 }
@@ -51,7 +51,7 @@ async function fetchFeed(url) {
     const response = await fetch(url, { cache: "no-store", credentials: "omit" });
     if (!response.ok) return { ok: false, reason: `http-${response.status}` };
     const data = await response.json();
-    const patches = Ext.sanitizePatchArray(data, { statuses: ["verified"] });
+    const patches = Ext.sanitizePatchArray(data, { statuses: ["verified", "locally-verified"] });
     const evidenceBase = new URL("../", response.url);
     for (const patch of patches) {
       const evidence = patch.evidence || {};

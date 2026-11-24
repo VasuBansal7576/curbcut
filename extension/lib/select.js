@@ -6,7 +6,7 @@
     if (typeof url !== "string" || !url) return [];
 
     const verified = root
-      .sanitizePatchArray(state.patches, { statuses: ["verified"] })
+      .sanitizePatchArray(state.patches, { statuses: ["verified", "locally-verified"] })
       .filter((patch) => root.matchPatch(patch, url))
       .map((patch) => ({
         ...patch,

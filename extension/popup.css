@@ -449,3 +449,19 @@ button:disabled {
     transition: none !important;
   }
 }
+
+.patch-item details {
+  margin-top: 8px;
+}
+
+.patch-item summary {
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.report-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}

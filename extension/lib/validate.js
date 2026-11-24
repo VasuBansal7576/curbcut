@@ -115,6 +115,7 @@
       status: patch.status,
     };
     if ("evidence" in patch) engine.evidence = patch.evidence;
+    if ("evaluation" in patch) engine.evaluation = patch.evaluation;
     if ("history" in patch) engine.history = patch.history;
     const checked = validatePatch(engine);
     return checked.ok ? checked.patch : null;
