@@ -37,7 +37,10 @@ const directory = await mkdtemp(path.join(tmpdir(),'mirror-dom-kane-'))
 try {
   sample: for (const row of selected) {
     const {patch} = row.trial.detected
-    const task = await normalizeTask(patch)
+    const link = row.trial.detected.reference.find(node => node.href)
+    const target = link ? ' The submenu contains a link to '+new URL(link.href).pathname+'.' : ''
+    const stop = ' Stop once the submenu is visible. Do not click, activate, or follow any link.'
+    const task = await normalizeTask({...patch,task:patch.task+target+stop,controlTask:patch.controlTask+target+stop})
     const entry = {site:row.site,runs:[],verified:false}
     result.cases.push(entry)
     for (const [phase,persona,repair,expected] of [
