@@ -1,123 +1,73 @@
 # Curb Cut
 
-Curb Cut repairs an accessibility barrier in the browser, records the task before and after, and rechecks whether the site still needs the patch. The same declarative engine runs in the Chrome extension and the browser attached to Kane.
+Curb Cut is a Chrome extension that fixes accessibility barriers on public websites and shows the Kane CLI recordings for each fix.
 
-Watch the [launch film](launch/curbcut-launch.mp4), open the [evidence dashboard](site/index.html), or inspect the [Kane results](proof/kane/README.md) and [local fixture results](proof/local.json).
+[![Watch the Curb Cut launch film](launch/curbcut-launch-thumbnail.png)](launch/curbcut-launch.mp4)
 
-## Held-out v5 results
+[Watch the 2-minute film](launch/curbcut-launch.mp4) · [Watch the 15-second cut](launch/curbcut-launch-15s.mp4)\
+Watch on YouTube: (link coming)
 
-**Local Playwright** confirmed **99 of 142 repairs (69.7%)**, including **51 of 89 multi-step journeys**, from 2,050 preregistered public sites. [Results by barrier and persona](proof/heldout-v5/README.md)
+## The problem
 
-**Kane** verified **0 of 4 selected** tasks and agreed with the local before and after verdicts on **0 of 3 assessed pairs**. Three cases started, and the credit guard blocked the fourth. Kane used **306.4143 credits** and ended at **227.4750**. [Kane sessions and credit ledger](proof/heldout-v5/kane-summary.json)
+A menu that opens only on hover can block keyboard users, and an unlabeled search box can leave screen reader users guessing. People who zoom can lose text and controls off the edge of the page. In 2026, WebAIM detected WCAG failures on 95.9% of the million home pages it tested. [WebAIM Million](https://webaim.org/projects/million/)
 
-The separate **50-step Kane rerun** verified **1 of 2 cases**. WoRMS failed unpatched and passed with its repair at the amended limit. The shipped repair lets keyboard users open Tools and reach “Match taxa.” Both TikFinity runs were inconclusive. [Rerun results](proof/heldout-v5/README.md#post-amendment-kane-rerun) · [WoRMS patch evidence](evidence/v5-c22b9bdca86b-71a63d77/report.md)
+## How it works
 
-All **43 active fixes** passed the installed extension audit. All **9 independently serving `www` twins** also passed. Three original keyboard journeys and two twin journeys failed with the extension off and passed with it on. The previous nightly recheck reconfirmed 38 tasks, recorded four inconclusive results and retired one patch. [Extension audit](proof/reliability/extension-e2e.json) · [Nightly recheck](proof/reliability/nightly.json)
+1. Kane tries a task with the keyboard and records where it fails.
+2. Kane repeats the task with a mouse. A pass isolates the barrier to keyboard use.
+3. A Codex agent writes declarative JSON rules for the browser to apply.
+4. Kane passes the keyboard replay with the rules in place. The extension ships the verified fix.
 
-Run `node scripts/verify-v5.mjs` to verify the frozen source and committed study inputs in any Git history. [V5 freeze receipt](proof/heldout-v5/freeze-integrity.json) · [Registration receipt](proof/heldout-v5/registration-integrity.json) · [Kane selection receipt](proof/heldout-v5/kane-selection-integrity.json)
+[Verification protocol](proof/methodology/README.md) · [Session ledger](proof/kane/ledger.json)
 
-Earlier cohorts recorded 64/102 local repairs and 2/21 Kane verifications in v4, then earlier Kane results of 10/23 in v3, 13/39 in v2, and 0/26 in the original test. [V4](proof/hard-v4/README.md) · [V3](proof/heldout-v3/README.md) · [V2](proof/heldout-v2/README.md) · [Original](proof/heldout/README.md)
+## Results
 
-## Run the local demo
+| Check | Result | Proof |
+| --- | --- | --- |
+| Held-out v5 | With the code frozen, local Playwright scouted 2,050 preregistered sites and confirmed **99 of 142 repairs (69.7%)**, including **51 of 89 multi-step journeys (57.3%)**. | [Results by barrier class and persona](proof/heldout-v5/README.md#local-playwright-results) |
+| Kane sample | **0 of 4** verified in the original sample. The 50-step rerun verified **1 of 2**, WoRMS. | [Original sample](proof/heldout-v5/README.md#kane-verification) · [50-step rerun](proof/heldout-v5/README.md#post-amendment-kane-rerun) |
+| Live fixes | Each shipped fix has Kane evidence. The installed extension audit passed **43 of 43** fixes and all 9 independently serving `www` twins. San Antonio Public Library can be slow to load. | [Extension audit](proof/reliability/extension-e2e.json) · [Kane sessions](proof/kane/README.md#verified-public-repairs) |
 
-Use Node 22 or later, npm, and ffmpeg on your PATH. Playwright installs its own Chromium and recording binary.
+In the original Kane sample, WoRMS and TikFinity hit the step limit, Kaizheng Law lacked evidence of the full task, and the credit guard stopped Mordor Intelligence before it ran. In the rerun, TikFinity’s baseline missed the required Arrow Down and its patched run ended with an agent error. [Session and credit ledger](proof/heldout-v5/kane-summary.json) · [Rerun ledger](proof/heldout-v5/kane-rerun-50/summary.json)
+
+## See it yourself
+
+- **mass.edu.** Open About with the keyboard and follow “The DHE.” [Before](proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/before/recording.mp4) · [After](proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/recording.mp4)
+- **csc.gov.in.** Open ABOUT with the keyboard and follow “About MeitY.” [Before](proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/before/recording.mp4) · [After](proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/attempt-1/after/recording.mp4)
+- **WoRMS.** Tab to Tools, open it and reach “Match taxa.” [Before](proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/before/recording.mp4) · [After](proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/after/recording.mp4)
+
+[Evidence dashboard](site/index.html) · [Recorded live report](proof/live/README.md)
+
+## Try it
+
+Run these commands from the repository root with Node 22 or later.
 
 ```sh
 npm ci
-npx playwright install chromium
-npm run build
 npm test
-npm run demo
-node scripts/toggle-proof.mjs
 npm run build
-npm run serve
 ```
 
-With the server stopped, run `node scripts/verify-evidence.mjs` to check dashboard links, 320px layout bounds and video metadata.
+1. In Chrome, open `chrome://extensions`.
+2. Turn on **Developer mode**.
+3. Click **Load unpacked** and select [`extension/`](extension/).
+4. Open one of the sites above and use the Curb Cut popup to turn the fix off and on while you repeat the task.
 
-Open **http://127.0.0.1:4317/site/** while the server is running. The fixture is at **http://127.0.0.1:4317/fixtures/shop/**. The local demo starts the server when needed, uses the recorded CLI-agent proposals, and writes fresh videos and observations under `proof/local/`. To generate fresh proposals from new local failures, run `node scripts/local-proof.mjs --agent` with an authenticated Codex CLI. The default model is `gpt-6.2-sol`. Set `CURBCUT_MODEL` to select another available Codex model.
+For the fixture demo, install Chromium with `npx playwright install chromium`, then run `npm run demo`. Run `npm run serve` to open the dashboard at `http://127.0.0.1:4317/site/`. [Local replay and Kane commands](proof/methodology/README.md#local-demo)
 
-For the extension, open `chrome://extensions`, enable Developer mode, choose **Load unpacked**, and select `extension/`. Open the fixture and turn on **Fixture preview** in the popup. Try the global switch while tabbing to Add to cart. Preview is opt-in and restricted to the exact local fixture origin. The popup indicates which repairs apply and links to their evidence.
+## Check our numbers
 
-**Ctrl+Shift+U** opens “I’m stuck”. Enter the task, select the persona, and confirm the page is public. Download the task JSON or send it to the local loop. Jobs live in `.curbcut/jobs/`; each job records its result or the specific blocker. The extension refreshes the verified feed periodically and on demand. The reader toggle presents a navigable, linearized DOM view of roles, accessible names and state. Its buttons and text proxies act on the underlying page. It covers the supported controls in this demo and has not been tested for parity with a screen reader.
+- `node scripts/verify-v5.mjs` reconstructs the frozen Git objects and checks the hashes for the preregistered site sample, task registration and Kane selection. [Freeze and registration](proof/heldout-v5/README.md#sample-and-registration)
+- `node scripts/verify-evidence.mjs` checks dashboard links, layout at 320px and recording metadata. Run it with the demo server stopped and Chromium and ffmpeg installed.
+- `node scripts/extension-e2e.mjs` audits the installed rules against live pages in isolated Chromium. It also replays the recorded keyboard checks for three original URLs and two twins. [Extension audit](proof/reliability/extension-e2e.json)
 
-## Local Playwright results
+## Limits
 
-| Fixture task | Unpatched persona | Normal control | CLI-generated patch | Native repair, unpatched |
-| --- | --- | --- | --- | --- |
-| Search for headphones and add them by keyboard | Fail | Pass | Pass | Pass → retire |
-| Add Porch Speaker without horizontal scrolling at 320px | Fail | Pass | Pass | Pass → retire |
-| Find the named searchbox in reading view and search for speaker | Fail | Pass | Pass | Pass → retire |
+Local Playwright confirmed 3 of 11 modal fixes and 5 of 14 tab and carousel fixes. Kane can hit its step limit or return an agent error before it can verify a task. The reading view uses the page’s DOM and has yet to be tested for screen reader parity. Each result covers a specific task under the recorded conditions. [Local and Kane results](proof/heldout-v5/README.md)
 
-Each [fixture proof folder](proof/local/) contains the measured state, recordings, the actual `codex exec` response and the retirement decision. The [extension recording](proof/local/toggle.mp4) shows the installed popup alongside the fixture.
+## Earlier cohorts
 
-| Public page and local reading task | Rightmost text edge before → after at 320px | Evidence |
-| --- | --- | --- |
-| Paul Graham, opening of *Beating the Averages* | 528px → 309px | [Before](proof/public/graham-essay/before.mp4) · [After](proof/public/graham-essay/after.mp4) |
-| Peter Norvig, cross-product definitions in *Solving Every Sudoku Puzzle* | 698px → 308px | [Before](proof/public/norvig-sudoku/before.mp4) · [After](proof/public/norvig-sudoku/after.mp4) |
-| Berkshire Hathaway, opening financial-results paragraph of the 1999 letter | 513px → 300px | [Before](proof/public/berkshire-letter/before.mp4) · [After](proof/public/berkshire-letter/after.mp4) |
-
-The public replays used hand-authored candidate rules and separate fresh Chrome sessions. Each includes a passing 1280px control, text bounds, zero horizontal scroll at measurement and a matching passage digest in all three runs. These results apply to the selected passage. Run `node scripts/public-replays.mjs` to revisit the three public pages, or append one task ID from the evidence table’s folder names. Public content can change.
-
-## Recorded live report
-
-The installed extension captured a keyboard barrier on ColorHexa. Kane reproduced it, Codex wrote a repair, and Kane passed the repaired replay. The extension applied the verified feed update to the same open tab. Shift+Tab and Enter then opened the color picker.
-
-[Chrome and extension recordings, terminal transcript and Kane sessions](proof/live/README.md)
-
-## Kane proof and nightly recheck
-
-Kane CLI 0.10.7 performed the live verification. The [Kane results table](proof/kane/README.md) gives the exact sessions for each failed baseline, passing pointer control, passing repair, and unpatched retirement. Its [session ledger](proof/kane/ledger.json) also records incomplete runs and the harness smoke test. The [dashboard](site/index.html) displays verified repairs and open findings. Each verified report links to the runtime proposal, viewport recordings, and sealed evidence packs. Some repair replays reused the baseline and pointer control from an earlier attempt at the same task. Recent run results include the exact replay instructions in `objective`.
-
-Run `node curbcut.mjs recheck --local` for a Playwright regression check of the active catalog and `node scripts/extension-e2e.mjs` to audit its installed rules in isolated Chromium. [Nightly recheck](proof/reliability/nightly.json) · [Extension audit](proof/reliability/extension-e2e.json)
-
-The familiar-site scout produced one Kane-verified repair on the National Weather Service radar. CNN and Spotify reached inconclusive baselines when their public content failed to load in the recorded browser. [Scout and Kane results](proof/famous/README.md)
-
-The three Stillroom fixture tasks reached fail → repair → pass → retire in Kane. The public low-vision tasks used a locked 320 CSS pixel viewport, the reflow width equivalent to 400% zoom at a 1280px starting width. The public reading-view tasks exercised named controls in Curb Cut’s own DOM-based view. The results table lists the public keyboard repairs and the tasks still open.
-
-With an already authenticated Kane CLI and Codex CLI, start the fixture server, then run in a second terminal:
-
-```sh
-kane-cli balance
-node curbcut.mjs fix tasks/keyboard-only.json
-node curbcut.mjs fix tasks/low-vision.json
-node curbcut.mjs fix tasks/screen-reader-view.json
-```
-
-Public Kane task definitions are under `tasks/public/kane/` and use the same entry point. For example, run `CURBCUT_KANE_MAX_STEPS=55 node curbcut.mjs fix tasks/public/kane/online-conversion-length.json`. The earlier essay and letter tasks under `tasks/public/` have local replay evidence. The optional balance threshold is checked before every Kane phase.
-
-Run `node curbcut.mjs preflight <task.json>` to check access in both personas with the same isolated browser and CDP attachment used by Kane. The preflight uses no Kane credits.
-
-1. Launch Chromium with a temporary profile and inject the extension runtime before site scripts. Connect `kane-cli run --headless --agent` to that browser using `--cdp-endpoint`. The keyboard harness blocks pointer input and records trusted keypresses. The low-vision harness locks a 320 CSS pixel reflow viewport and clips horizontal scroll. The reader harness displays a modal list of accessible roles, names and state. The optional color persona applies a deuteranopia simulation.
-2. Record an unpatched failure, then run a normal-browser control. Exit without publishing if the control fails, Kane returns an uncertain result, or the task already passes.
-3. Give Kane’s observed steps, failure and DOM/accessibility snapshot to `codex exec` in a temporary read-only directory. The CLI proposes a barrier and rules. The app supplies scope and status, validates the JSON schema, restricts proposed selectors to the observed snapshot, and accepts only enumerated CSS properties and values.
-4. Replay with the candidate. A successful, recorded task with its Kane session identifier can publish the patch. A failed replay or invalid proposal gives the agent feedback within the same three-proposal limit. Raw NDJSON, observations, sealed Kane evidence packs and viewport recordings live under `proof/kane/<id>/`. Source-level reports live under `evidence/<id>/`. The dashboard and extension feed rebuild on publication.
-5. Recheck unpatched first. A pass retires the patch. If both unpatched and patched checks fail, mark the patch broken and invoke the fix loop. An inconclusive recheck stays in history without retiring the patch.
-
-Kane’s sealed evidence pack provides its step screenshots and logs. Curb Cut records video of the same Kane-controlled Chrome tab. The adapter checks the process exit code, terminal NDJSON result, session ID, validated Kane pack, and active persona and patch. `kane-cli evidence validate --json <pack>` checks a saved pack. `kane-cli evidence serve <pack>` opens Kane’s local evidence viewer. The adapter uses Kane’s local mode for evidence retention on this machine. [Kane CLI documentation](https://www.testmuai.com/docs/kane-cli-introduction) · [Kane agent output and evidence contract](https://www.testmuai.com/docs/kane-cli-agent-mode)
-
-To reproduce the fixture retirements, first publish the three fixture patches with the commands above. Stop the normal server and run `CURBCUT_FIXTURE_NATIVE=1 npm run serve`, which enables the site’s native repair for fresh profiles. Then recheck the fixture tasks in the other terminal.
-
-```sh
-node curbcut.mjs recheck keyboard-add-headphones
-node curbcut.mjs recheck low-vision-shop-speaker
-node curbcut.mjs recheck reader-search-products
-```
-
-The local demo exercises the same retirement decision through the deterministic `?fixed=1` variant. An [example cron entry](examples/curbcut.cron) is supplied for local installation at your discretion.
-
-## Launch assets
-
-```sh
-node launch/scripts/render.mjs check
-node launch/scripts/render.mjs
-node launch/scripts/render.mjs verify
-```
-
-The [launch guide](launch/README.md) documents the source footage, Kane sessions, offline render, and delivery checks. The film combines Chromium captures with Kane’s recorded task footage and uses an original synthesized score. [Launch film](launch/curbcut-launch.mp4) · [WebVTT captions](launch/captions/launch.vtt) · [Draft HN, X and LinkedIn posts](launch/posts.md). Opening figures come from the [WebAIM Million 2026](https://webaim.org/projects/million/).
-
-## Scope and ethics
-
-Work on publicly readable pages in fresh browser profiles. Stop before login, payment or signup. Curb Cut records task-level outcomes and does not certify a site’s overall accessibility. The hosted Kane and Codex services receive the inputs needed for an explicitly started live run. Local replays with saved candidates need neither service. The reports and posts in this repository are local drafts.
-
-The extension ships no remote JavaScript. Patch data uses a fixed action set. Site-specific repairs such as extending a timeout require a matching page mechanism, and the Escape repair supports native dialogs or an identifiable close control. Candidate public repairs stay out of the shared feed until they have Kane evidence.
+- V4 recorded 64/102 local repairs and 2/21 Kane verifications. [V4 proof](proof/hard-v4/README.md)
+- V3 recorded 10/23 Kane verifications. [V3 proof](proof/heldout-v3/README.md)
+- V2 recorded 13/39 Kane verifications. [V2 proof](proof/heldout-v2/README.md)
+- The original test recorded 0/26 Kane verifications. [Original proof](proof/heldout/README.md)
