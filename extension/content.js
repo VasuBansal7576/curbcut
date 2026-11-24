@@ -1,4 +1,6 @@
 (() => {
+  if (globalThis.__curbcutMain) return;
+  globalThis.__curbcutMain = true;
   const Ext = globalThis.CurbCutExt;
   const cleanups = [];
   const observedRules = new Map();
@@ -44,6 +46,7 @@
       return lastActive;
     }
     for (const entry of patches) {
+      if (entry.status === "retired") continue;
       const enginePatch = Ext.toEnginePatch(entry);
       if (!enginePatch) continue;
       try {
@@ -89,6 +92,49 @@
     return pendingApply;
   }
 
+  function focusedBarrier(node) {
+    if (!node || node === document.body || node === document.documentElement) return null;
+    const explicit = node.getAttribute("role");
+    const native = node.matches("a[href]")
+      ? "link"
+      : node.matches("button,summary,[type=button]")
+        ? "button"
+        : node.localName;
+    const labelled = node.getAttribute("aria-label") || "";
+    const name = (
+      labelled ||
+      (node.matches("input,textarea,select")
+        ? node.getAttribute("placeholder") || node.getAttribute("name") || ""
+        : node.innerText || node.getAttribute("title") || "")
+    )
+      .trim()
+      .slice(0, 120);
+    const selector =
+      globalThis.CurbCut && typeof globalThis.CurbCut.exactSelector === "function"
+        ? globalThis.CurbCut.exactSelector(node)
+        : node.id
+          ? "#" + CSS.escape(node.id)
+          : node.localName;
+    return { role: explicit || native, name, selector };
+  }
+
+  function captureBarrier() {
+    const gate = Ext.canCapturePage(location.href, document);
+    if (!gate.ok) return { ok: false, reason: gate.reason };
+    if (globalThis.CurbCut && typeof globalThis.CurbCut.instantPrivacy === "function" && !globalThis.CurbCut.instantPrivacy()) {
+      return { ok: false, reason: "sensitive-document" };
+    }
+    return {
+      ok: true,
+      report: {
+        url: location.href,
+        title: document.title || "",
+        focus: focusedBarrier(document.activeElement),
+        keys: Array.isArray(globalThis.__curbcutRecentKeys) ? globalThis.__curbcutRecentKeys.slice(-16) : [],
+      },
+    };
+  }
+
   function captureSnapshot() {
     const gate = Ext.canCapturePage(location.href, document);
     if (!gate.ok) {
@@ -127,6 +173,11 @@
       return true;
     }
 
+    if (message.type === "PING") {
+      sendResponse({ ok: true, url: location.href });
+      return false;
+    }
+
     if (message.type === "GET_ACTIVE") {
       const active = message.includeMatches ? lastActive.map((patch) => ({
         ...patch,
@@ -138,6 +189,7 @@
         url: location.href,
         isFixture: Ext.isFixtureShopUrl(location.href),
         active,
+        instantPatch: globalThis.__curbcutInstantPatch || null,
         sensitive: !Ext.canCapturePage(location.href, document).ok,
       });
       return false;
@@ -150,9 +202,20 @@
       return false;
     }
 
+    if (message.type === "CAPTURE_BARRIER") {
+      sendResponse(captureBarrier());
+      return false;
+    }
+
     if (message.type === "PREPARE_STUCK") {
       preparedCapture = captureSnapshot();
-      sendResponse({ ok: preparedCapture.ok, prepared: preparedCapture.ok });
+      const barrier = captureBarrier();
+      sendResponse({
+        ok: barrier.ok,
+        prepared: preparedCapture.ok,
+        report: barrier.ok ? barrier.report : null,
+        reason: barrier.ok ? undefined : barrier.reason,
+      });
       return false;
     }
 

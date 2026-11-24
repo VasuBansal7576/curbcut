@@ -1,4 +1,6 @@
 (() => {
+  if (globalThis.__curbcutStuck) return;
+  globalThis.__curbcutStuck = true;
   const settingKeys = ["stuckEnabled", "enabled", "pausedPages"];
   const settings = {};
   const allowedKeys = new Set(["Tab", "Enter", " ", "Escape", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Home", "End"]);
@@ -14,10 +16,19 @@
   let returnFocus;
   let pending = false;
 
+  function privatePage() {
+    return document.hidden || !/^https?:$/.test(location.protocol) ||
+      !CurbCutExt.canCapturePage(location.href, document).ok ||
+      (globalThis.CurbCut && typeof CurbCut.instantPrivacy === "function" && !CurbCut.instantPrivacy());
+  }
+
+  function jevHelp() {
+    return settings.stuckEnabled === true && settings.enabled !== false &&
+      !CurbCutExt.isPagePaused(location.href, settings) && location.protocol === "https:" && !privatePage();
+  }
+
   function permitted() {
-    return settings.stuckEnabled === true && settings.enabled !== false && !document.hidden &&
-      location.protocol === "https:" && !CurbCutExt.isPagePaused(location.href, settings) &&
-      CurbCutExt.canCapturePage(location.href, document).ok && CurbCut.instantPrivacy();
+    return jevHelp();
   }
 
   function reset() {
@@ -132,7 +143,7 @@
     if (!event.isTrusted || event.repeat || event.ctrlKey || event.metaKey || event.altKey ||
         !allowedKeys.has(event.key) || event.shiftKey && event.key !== "Tab" ||
         event.composedPath().some(node => node.closest?.(editable + ",[data-curbcut-offer],[data-curbcut-reader]"))) return;
-    if (!permitted()) { reset(); return; }
+    if (privatePage()) { reset(); globalThis.__curbcutRecentKeys = []; return; }
     const time = performance.now();
     if (previous && (time - previous.time > 10000 || previous.url !== location.href)) reset();
     const gapMs = previous ? time - previous.time : null;
@@ -142,13 +153,16 @@
     const key = event.key === " " ? "Space" : event.shiftKey ? "Shift+Tab" : event.key;
     const url = location.href;
     setTimeout(() => {
-      if (!permitted() || location.href !== url || document.activeElement?.closest(editable)) return;
+      if (privatePage() || location.href !== url || document.activeElement?.closest(editable)) return;
       const node = document.activeElement;
       const focus = focusState(node);
       const effect = fingerprint(initial) !== prior ? "progress" : initial !== node ? "focus-change" : "unchanged";
       trace.push({ key, ...focus, gapMs, effect, revisited: focus.focus != null && trace.slice(-9).some(step => step.focus === focus.focus) });
       trace = trace.slice(-16);
-      void evaluate();
+      globalThis.__curbcutRecentKeys = trace.map(({ key, focus, role, named, visible, gapMs, effect, revisited }) => ({
+        key, focus, role, named, visible, gapMs, effect, revisited,
+      }));
+      if (jevHelp()) void evaluate();
     }, key === "Enter" || key === "Space" ? 110 : 0);
   }, true);
 
@@ -156,7 +170,7 @@
   chrome.storage.onChanged.addListener((changes, area) => {
     if (area !== "local") return;
     for (const name of settingKeys) if (name in changes) settings[name] = changes[name].newValue;
-    if (!permitted()) { dismiss(); reset(); }
+    if (privatePage()) { dismiss(); reset(); globalThis.__curbcutRecentKeys = []; }
   });
-  window.addEventListener("pagehide", () => { dismiss(); reset(); });
+  window.addEventListener("pagehide", () => { dismiss(); reset(); globalThis.__curbcutRecentKeys = []; });
 })();

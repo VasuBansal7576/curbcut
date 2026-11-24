@@ -16,6 +16,20 @@
     }
   }
 
+  function populatedEditable(node) {
+    if (!node || typeof node.matches !== "function") return false;
+    if (node.matches("input[type=checkbox],input[type=radio],input[type=range],input[type=button],input[type=submit],input[type=reset],input[type=hidden]")) {
+      return false;
+    }
+    try {
+      if (typeof node.getClientRects === "function" && !node.getClientRects().length) return false;
+    } catch {
+      return false;
+    }
+    if (node.isContentEditable) return Boolean(node.textContent && node.textContent.trim());
+    return Boolean(node.value);
+  }
+
   function documentLooksSensitive(doc) {
     if (!doc || !doc.querySelector) return true;
     const password = doc.querySelector('input[type="password"]');
@@ -28,7 +42,11 @@
       'input[autocomplete="current-password"], input[autocomplete="new-password"], input[autocomplete="cc-number"]'
     );
     if (autocomplete) return true;
-    return false;
+    if (doc.designMode === "on") return true;
+    if (/\b(?:verify (?:that )?you are (?:a )?human|security check|access denied|checking your browser)\b/i.test(doc.title || "")) {
+      return true;
+    }
+    return [...doc.querySelectorAll("input,textarea,[contenteditable=true]")].some(populatedEditable);
   }
 
   function canCapturePage(url, doc) {

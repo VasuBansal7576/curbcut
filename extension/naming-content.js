@@ -1,4 +1,6 @@
 (() => {
+  if (globalThis.__curbcutNaming) return;
+  globalThis.__curbcutNaming = true;
   const keys = ["liveNamesEnabled", "enabled", "pausedPages", "readerEnabled", "stuckEnabled"];
   const settings = {};
   const applied = new Map();
