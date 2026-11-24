@@ -8,6 +8,7 @@ import {contrastRepair,measureContrast,rgb} from '../core/contrast.js'
 import {detectLanguage,observeCoverage} from '../core/coverage.mjs'
 import validate from '../core/validate.generated.cjs'
 import {command,readJSON} from '../core/io.mjs'
+import {recordedAbsence} from '../scripts/kane-evidence-v6.mjs'
 import {createReport} from '../extension/lib/report.js'
 
 const url='https://coverage.example/'
@@ -150,4 +151,19 @@ test('installed popup copies and downloads the CLI report without submitting it'
     await context?.close()
     await rm(profile,{recursive:true,force:true})
   }
+})
+
+
+test('a sealed Reading view absence needs both the replay report and an unnamed target',()=>{
+  const task={observedSelector:'#menu',evaluation:{role:'button',name:'Site navigation'}}
+  const recorded={kaneStatus:'pass',status:'inconclusive',evidenceValid:true,video:'recording.mp4',
+    integrity:'The recording does not show the requested target being identified.',
+    inspection:{harness:{persona:'screen-reader-view'},readerVisible:true},
+    snapshot:{nodes:[{selector:'#menu',width:28,display:'block',role:'button',name:''}]},
+    summary:'Target absent',steps:[]}
+  assert(recordedAbsence(task,recorded))
+  assert(!recordedAbsence(task,{...recorded,kaneStatus:'inconclusive'}))
+  assert(!recordedAbsence(task,{...recorded,summary:'Found Site navigation'}))
+  recorded.snapshot.nodes[0].name='Site navigation'
+  assert(!recordedAbsence(task,recorded))
 })
