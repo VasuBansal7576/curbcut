@@ -25,7 +25,9 @@ test('npm run package writes a root-level Chrome extension zip without private o
     assert.ok(!name.endsWith('.map'),name)
   }
   const packaged=members.find(member=>member.name==='manifest.json')
-  assert.equal(JSON.parse(packaged.data.toString('utf8')).version,manifest.version)
+  const packagedManifest=JSON.parse(packaged.data.toString('utf8'))
+  assert.equal(packagedManifest.version,manifest.version)
+  assert.ok(Object.values(packagedManifest.commands??{}).filter(command=>command.suggested_key).length<=4)
   for(const member of members) {
     const source=await readFile(path.join('extension',member.name))
     assert.ok(source.equals(member.data),member.name)

@@ -57,21 +57,21 @@ try{
  const local=(await readJSON('proof/local.json')).runs
  const external=(await readJSON('proof/public.json')).runs
  const kane=(await catalog()).filter(p=>['verified','broken','retired'].includes(p.status) && p.evidence.kaneRunIds).flatMap(p=>[p.evidence.before,p.evidence.control,p.evidence.after,...p.history.filter(h=>h.event==='retired').map(h=>h.video)])
- const files=[...new Set([...kane,...meta.previews.map(file=>'site/'+file),...local.flatMap(r=>Object.values(r.videos)),...external.flatMap(r=>Object.values(r.phases).map(p=>p.video)),'proof/local/toggle.mp4','launch/curbcut-launch.mp4'])]
+ const cuts=await readJSON('launch/out/demo-verification.json')
+ const files=[...new Set([...kane,...meta.previews.map(file=>'site/'+file),...local.flatMap(r=>Object.values(r.videos)),...external.flatMap(r=>Object.values(r.phases).map(p=>p.video)),'proof/local/toggle.mp4',...Object.keys(cuts).map(cut=>'launch/'+cut+'.mp4')])]
  const recordings=[]
  for(const file of files){
-   const result=await command('ffprobe',['-v','error','-show_entries','format=duration:stream=codec_name,width,height','-of','json',file])
+   const result=await command('ffprobe',['-v','error','-show_entries','format=duration:stream=codec_name,width,height,nb_frames','-of','json',file])
    assert.equal(result.code,0,file)
    const probe=JSON.parse(result.stdout)
    const seconds=Number(probe.format.duration)
    assert(seconds>0)
    if(file.startsWith('launch/')){
-     const {master}=await readJSON('launch/film/word-times.json')
-     const authoredSeconds=master.reduce((sum,scene)=>sum+scene.frames,0)/30
-     assert((seconds>=90 && seconds<=150) || (seconds>=70 && seconds<=85),'Unexpected launch cut duration')
-     assert(Math.abs(seconds-authoredSeconds)<1/30,'Launch recording disagrees with the authored cut')
-     assert.equal(probe.streams[0].width,1920)
-     assert.equal(probe.streams[0].height,1080)
+     const cut=cuts[file.split('/').at(-1).replace('.mp4','')]
+     const video=probe.streams.find(stream=>stream.width && stream.height)
+     assert(Math.abs(seconds-cut.seconds)<1/cut.fps,file+' duration')
+     assert.equal(Number(video.nb_frames),cut.frames,file+' frame count')
+     assert.deepEqual([video.width,video.height],cut.size,file+' dimensions')
    }
    recordings.push({file,seconds,...probe.streams[0]})
  }

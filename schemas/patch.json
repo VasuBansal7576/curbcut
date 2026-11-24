@@ -1112,6 +1112,7 @@
   },
   "$defs": {
     "localDisposition": {
+      "type": "object",
       "properties": {
         "status": {
           "enum": [
@@ -1120,6 +1121,7 @@
           ]
         },
         "evidence": {
+          "type": "object",
           "not": {
             "required": [
               "kaneRunIds"
@@ -1127,7 +1129,9 @@
           }
         },
         "history": {
+          "type": "array",
           "contains": {
+            "type": "object",
             "required": [
               "event",
               "runner"

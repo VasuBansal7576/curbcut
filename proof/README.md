@@ -73,4 +73,4 @@ The [Kane session ledger](kane/ledger.json) indexes archived sessions across coh
 - [Match mouse](mirror-dom/README.md) records the 200-site draw, the 22 eligible hover barriers, and the failed Kane verification.
 - [Jev mirror backtest](jev/mirror-backtest/README.md) records the preregistered bar and the frozen result.
 - [CLI demo runs](demo/README.md) links the original Kane sessions and terminal footage for Check, Gate, and retirement.
-- [Submission recheck](reliability/submission-recheck.json) records the seven targeted local outcomes and preserves the original release audit above.
+- [Submission recheck](reliability/submission-recheck.json) records the seven targeted local outcomes and preserves the original release audit above. The [submission extension audit](reliability/submission-extension-e2e.json) captures 98/105 primary passes and 18/18 serving www passes.

@@ -2,7 +2,7 @@
 
 Curb Cut uses Kane to reproduce accessibility barriers, verify repairs, and ship browser fixes with replayable evidence.
 
-**Launch film on YouTube — link pending.**
+**Launch film on YouTube — link pending.** [Watch the launch cut](launch/curbcut-launch.mp4) · [Full demo](launch/curbcut-demo.mp4)
 
 ## Install in Chrome
 
@@ -35,7 +35,7 @@ Run `npm ci` and `npm link` to install the CLI, or run `node curbcut.mjs` direct
 
 ## Browser extension
 
-The popup shows applied repairs, provenance, and retired fixes. Report a barrier from the popup or via the configurable shortcut, then share the source-change report with the site owner. Reading view, low-vision tools, opt-in Jev naming, and experimental Match mouse can help on pages without a bundled fix. [Evidence dashboard](site/index.html) · [Match mouse](proof/mirror-dom/README.md)
+The popup shows applied repairs, provenance, and retired fixes. Report a barrier from the popup or via the configurable shortcut, then share the source-change report with the site owner. Reading view, low-vision tools, opt-in Jev naming, visual state sync, Glance, and Find a service, plus experimental Match mouse can help on pages without a bundled fix. [Evidence dashboard](site/index.html) · [Match mouse](proof/mirror-dom/README.md)
 
 ## Four uses of Kane
 
@@ -52,6 +52,7 @@ The popup shows applied repairs, provenance, and retired fixes. Report a barrier
 - Match mouse found 1/22 held-out matches, with zero wrong matches or pointer regressions in the one repair. Kane verified 0/1. The development replay also found 1/22. [DOM parity](proof/mirror-dom/README.md)
 - The Jev mirror backtest missed its pre-set bar of 95% precision at 50% recall in development. On 95 test pairs it reached 75.0% precision, 40.5% recall, and 0.753 AUROC. The original instant repair study fixed 2/102 development and 3/142 held-out tasks, with zero Kane follow-ups after three cases qualified against a minimum of five. [Mirror backtest](proof/jev/mirror-backtest/README.md) · [Jev studies](proof/jev/README.md)
 - Live Jev naming applied 15/35 names across 19 public sites. Manual review found 13 correct and two vague, with names applied on 7/13 sites that exposed unnamed controls. Median time to the first name was 1.14 seconds. The archive predictor scored 427 sessions and the frame auditor flagged 37/49 packs. [Live naming review](proof/jev/live-naming-real-sites.json) · [Archive studies](proof/jev/README.md)
+- Find a service scored 24 civic queries. Eleven matched literally, Jev found six more, and seven abstained. The study scored zero unrelated destinations using term overlap. Glance’s yes/no questions scored 14/16 for dialogs, 15/16 for cookie banners, and 15/16 for errors. Its measured main-content and primary-action boxes scored 2/16 and 0/16 and were dropped. Glance jumps using the page’s DOM main region. Experimental visual state sync made 3 changes deemed correct by the page-state heuristic, 0 wrong, and 677 abstentions. Median decision times were 293 ms for Finder’s Jev calls, 441 ms for Glance, and 1,070 ms for state sync. [Protocol and results](proof/jev/state-glance-finder/README.md)
 - Census observed 103/200 pages, with 77 blocked and 20 failed. Jev’s observed shares included hover-only menus at 67.0%, unnamed fields and reflow overflow at 51.5% each, and low contrast at 29.1%. These are reach upper bounds based on apparent pattern presence. The 100 calibration labels were positives only, so the study reports recall. [All twelve recipe shares](proof/census/README.md)
 - Archived demo Kane sessions recorded Check fail, pointer pass, and after pass (`f0760ff2-f04f-4de2-88b8-915b609b7e02`, `8987d2d8-c2c7-47b0-955a-1617d9c5327b`, `d942c3ca-79a9-4d2e-8c3b-0c7a18f5265b`), Gate fail and pass (`2f63df68-fe0f-47b5-8f34-918444b55049`, `2d512cc4-756e-4a96-bcfb-bec5ea33773a`), and retirement (`0c6e7186-06cc-4a75-8744-dbf3c5be066b`). [Demo ledger and footage](proof/demo/README.md)
 
