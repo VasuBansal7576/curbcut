@@ -3,7 +3,7 @@
 ```mermaid
 flowchart LR
     scout["Scout or user report"] --> task["Barrier task"]
-    task --> agent["Repair agent (Codex)"]
+    task --> agent["Repair agent (Codex or Grok)"]
     agent --> patch["Declarative JSON patch"]
     patch --> local["Local oracle<br/>Persona and pointer control"]
     local --> kane["Kane recordings<br/>Before, control, after"]
@@ -25,7 +25,7 @@ flowchart LR
     queue -->|"verify-queue"| task
 ```
 
-The current live `fix` loop runs Kane’s baseline and pointer control before requesting a repair. The frozen v4 and v5 studies produced candidates with local persona and pointer replays before sending selected repairs to Kane. V6 replayed contrast and language locally before, during and after applying the rule. [Live loop](core/loop.mjs) · [V6 evidence](proof/heldout-v6/README.md)
+The repair agent is selected with `CURBCUT_AGENT` (`codex`, the default, or `grok`). `check` derives a task from a URL and plain English, then runs the local oracle and the `fix` loop. `gate` replays configured tasks against a developer’s running app and prints failures for a coding agent to fix in source. The current live `fix` loop runs Kane’s baseline and pointer control before requesting a repair. The frozen v4 and v5 studies produced candidates with local persona and pointer replays before sending selected repairs to Kane. V6 replayed contrast and language locally before, during and after applying the rule. [Live loop](core/loop.mjs) · [V6 evidence](proof/heldout-v6/README.md)
 
 The live naming path gathers crops from the active viewport and combines them with a fixed vocabulary and page-specific candidates. It verifies the tab, document and target before attaching a temporary name. The keyboard-help check sends a bounded allowlist of navigation keys, anonymous focus IDs, roles, visibility, timing and interaction effects. It offers a known rule or a one-time naming pass after a confident result. [Decision evidence](proof/jev/README.md)
 
@@ -67,5 +67,5 @@ The nightly local recheck retires a verified rule when the original task passes 
 | [`scripts/`](scripts/) and [`tests/`](tests/) | Study runners, release builds, verification and tests |
 | [`fixtures/`](fixtures/) and [`examples/`](examples/) | Local test pages and example nightly schedule |
 | [`site/`](site/) and [`launch/`](launch/) | Evidence dashboard, film, screenshots and launch copy |
-| [`docs/`](docs/) and [`.github/`](.github/) | Original build brief and Pages workflow |
-| [`curbcut.mjs`](curbcut.mjs) | CLI entry point |
+| [`docs/`](docs/) and [`.github/`](.github/) | Original build brief, agent gate, and Pages workflow |
+| [`curbcut.mjs`](curbcut.mjs) | CLI entry point: `fix`, `check`, `gate`, `report`, `recheck` |

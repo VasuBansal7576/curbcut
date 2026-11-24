@@ -95,11 +95,21 @@ const limits={
   'color-blind':{maxSteps:24,timeout:250},
   control:{maxSteps:22,timeout:300}
 }
-function kaneLimits(task,persona,options={}) {
+export function kaneLimits(task,persona,options={}) {
   const defaults=limits[persona]
   const maxSteps=options.maxSteps??Number(process.env.CURBCUT_KANE_MAX_STEPS??defaults.maxSteps)
   return {maxSteps,timeout:options.timeout??Math.max(defaults.timeout,maxSteps*6),
     assertionMode:options.assertionMode??(persona==='low-contrast-simulation' || task.evaluation?.category==='low-contrast' || !task.probe && persona==='low-vision'?'visual':'dom')}
+}
+
+export function estimateKanePlan(task,{attempts=3,repair=true}={}) {
+  const before=kaneLimits(task,task.persona)
+  const control=kaneLimits(task,'control')
+  const after=kaneLimits(task,task.persona)
+  const phases=[{name:'before',persona:task.persona,...before},{name:'control',persona:'control',...control}]
+  if(repair) for(let index=1;index<=attempts;index++) phases.push({name:'after-'+index,persona:task.persona,...after})
+  const maxSteps=phases.reduce((sum,phase)=>sum+phase.maxSteps,0)
+  return {phases,runs:phases.length,maxSteps,estimatedCredits:maxSteps,attempts:repair?attempts:0}
 }
 
 async function keyboardHint(page,task) {

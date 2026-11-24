@@ -1,7 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import {chromium} from 'playwright'
-import {serve} from '../core/server.mjs'
+import {fixtureServer} from './fixture-server.mjs'
 import {guardRequests,session} from '../core/chrome.mjs'
 import {preflight} from '../core/preflight.mjs'
 import {readJSON} from '../core/io.mjs'
@@ -21,7 +21,7 @@ test('request callbacks handle rejections from a closed page inside the guard',a
 })
 
 test('the free access preflight uses the recorded profile and rejects a blocked document',async()=>{
- const server=await serve()
+ const server=await fixtureServer()
  try {
   const task=await readJSON('tasks/low-vision.json')
   const accessible=await preflight(task)
@@ -35,7 +35,7 @@ test('the free access preflight uses the recorded profile and rejects a blocked 
 })
 test('a second CDP client sees the injected keyboard guard, balanced bindings and repairs after navigation',async()=>{
  let server
- try {server=await serve()} catch(e){if(e.code!=='EADDRINUSE')throw e}
+ try {server=await fixtureServer()} catch(e){if(e.code!=='EADDRINUSE')throw e}
  const dir=await mkdtemp(path.join(tmpdir(),'curbcut-test-'))
  let browser
  try{
@@ -87,7 +87,7 @@ test('a second CDP client sees the injected keyboard guard, balanced bindings an
 })
 test('the Kane attachment holds the 320px viewport through resizes, scrolling and disconnect',async()=>{
  let server,browser,client
- try{server=await serve()}catch(e){if(e.code!=='EADDRINUSE')throw e}
+ try{server=await fixtureServer()}catch(e){if(e.code!=='EADDRINUSE')throw e}
  const dir=await mkdtemp(path.join(tmpdir(),'curbcut-viewport-test-'))
  try{
   const task=await readJSON('tasks/low-vision.json')
@@ -107,7 +107,7 @@ test('the Kane attachment holds the 320px viewport through resizes, scrolling an
 })
 test('dialog escape and data-backed timeout repairs release cleanly',async()=>{
  let server,browser
- try{server=await serve()}catch(e){if(e.code!=='EADDRINUSE')throw e}
+ try{server=await fixtureServer()}catch(e){if(e.code!=='EADDRINUSE')throw e}
  const dir=await mkdtemp(path.join(tmpdir(),'curbcut-dialog-test-'))
  try{
   const task=await readJSON('tasks/keyboard-only.json')
@@ -132,7 +132,7 @@ test('dialog escape and data-backed timeout repairs release cleanly',async()=>{
 })
 test('trusted activation survives a document transition and follows the focused recorded popup',{timeout:12000},async()=>{
  let server
- try{server=await serve()}catch(error){if(error.code!=='EADDRINUSE')throw error}
+ try{server=await fixtureServer()}catch(error){if(error.code!=='EADDRINUSE')throw error}
  const dir=await mkdtemp(path.join(tmpdir(),'curbcut-navigation-test-'))
  let browser
  try{
@@ -158,7 +158,7 @@ test('trusted activation survives a document transition and follows the focused 
 })
 
 test('a real Tab move records target focus while locator focus alone does not',async()=>{
- const server=await serve()
+ const server=await fixtureServer()
  let browser
  try {
   const task={...await readJSON('tasks/keyboard-only.json'),observedSelector:'#shipping'}
@@ -174,7 +174,7 @@ test('a real Tab move records target focus while locator focus alone does not',a
 })
 
 test('invisible keyboard targets cannot activate and a focus-revealed link can',async()=>{
- const server=await serve()
+ const server=await fixtureServer()
  let browser
  try {
   const task={...await readJSON('tasks/keyboard-only.json'),observedSelector:'[data-visibility-test]'}
@@ -218,7 +218,7 @@ test('invisible keyboard targets cannot activate and a focus-revealed link can',
 })
 
 test('a reflow witness distinguishes a reached clipped passage from wrapped text',async()=>{
- const server=await serve()
+ const server=await fixtureServer()
  let browser
  try {
   const observedSelector='#trial-passage'
@@ -253,7 +253,7 @@ test('a reflow witness distinguishes a reached clipped passage from wrapped text
 test('hard-barrier fixture journeys fail unpatched and pass with repairs and pointer controls',async t=>{
   const {confirmBarrier,replayLane}=await import('../core/probe.mjs')
   const {normalizeTask}=await import('../core/task.mjs')
-  const server=await serve()
+  const server=await fixtureServer()
   try {
     for(const {rules,...definition} of await readJSON('fixtures/shop/journeys.json')) await t.test(definition.id,async()=>{
       const task=await normalizeTask({...definition,url:'http://127.0.0.1:4317/fixtures/shop/journeys.html'})
@@ -272,7 +272,7 @@ test('hard-barrier fixture journeys fail unpatched and pass with repairs and poi
 
 test('repair observations include hidden targets, ancestors, hover rules and live selector matches',async()=>{
   const {replayLane,validateLiveSelectors}=await import('../core/probe.mjs')
-  const server=await serve()
+  const server=await fixtureServer()
   try {
     const url='http://127.0.0.1:4317/fixtures/shop/journeys.html'
     const [{rules,...definition}]=await readJSON('fixtures/shop/journeys.json')
@@ -297,7 +297,7 @@ test('common widget specimens are discovered and work with patched keyboard and 
   const {confirmBarrier,replayLane}=await import('../core/probe.mjs')
   const {normalizeTask}=await import('../core/task.mjs')
   const {candidatesFor,inspectPage}=await import('../scripts/scout-v4.mjs')
-  const server=await serve()
+  const server=await fixtureServer()
   try {
     for(const {specimen,rules,...definition} of await readJSON('fixtures/shop/widgets.json')) await t.test(specimen,async()=>{
       const task=await normalizeTask({...definition,url:'http://127.0.0.1:4317/fixtures/shop/widgets.html?specimen='+specimen})
@@ -321,7 +321,7 @@ test('common widget specimens are discovered and work with patched keyboard and 
 })
 
 test('dialog traps both Tab directions and a replaced widget is repaired and released cleanly',async()=>{
-  const server=await serve()
+  const server=await fixtureServer()
   let browser
   try {
     const url='http://127.0.0.1:4317/fixtures/shop/journeys.html'

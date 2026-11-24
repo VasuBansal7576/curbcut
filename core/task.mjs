@@ -12,24 +12,31 @@ const personas=new Set(['keyboard-only','low-vision','screen-reader-view','color
 const restricted=/(?:^|[/?&=_-])(?:log[-_]?in|sign[-_]?(?:up|in)|checkout|payment|register|oauth|password|account)(?:[/?&=_.-]|$)/i
 const restrictedHost=/^(?:accounts?|auth|checkout|login|oauth|payments?|signin|sso)$/i
 export function fixtureURL(url) {return url.origin==='http://127.0.0.1:4317' && url.pathname.startsWith('/fixtures/shop/')}
+export function loopbackHost(hostname) {
+  return ['127.0.0.1','localhost','::1'].includes(hostname.replace(/^\[|\]$/g,'').toLowerCase())
+}
+export function localAppURL(url) {
+  return url.protocol==='http:' && loopbackHost(url.hostname) && !url.username && !url.password
+}
 function publicAddress(value) {
   try {return ipaddr.process(value).range()==='unicast'} catch {return false}
 }
 export async function allowedHost(hostname) {
   const host=hostname.replace(/^\[|\]$/g,'')
+  if(loopbackHost(host)) return true
   if(isIP(host)) return publicAddress(host)
   const ips=await lookup(host,{all:true})
   return ips.length>0 && ips.every(item=>publicAddress(item.address))
 }
 export function acceptableURL(url) {
   if(url.username || url.password || restricted.test(decodeURIComponent(url.pathname+url.search)) || url.hostname.split('.').slice(0,-2).some(label=>restrictedHost.test(label))) return false
-  return fixtureURL(url) || url.protocol==='https:' && !url.port
+  return fixtureURL(url) || localAppURL(url) || url.protocol==='https:' && !url.port
 }
 export function siteKey(url) {
   return getDomain(url.hostname,{allowPrivateDomains:true})??url.hostname
 }
 export function taskNavigation(base,url) {
-  return acceptableURL(url) && (fixtureURL(base)?fixtureURL(url):url.protocol==='https:' && siteKey(base)===siteKey(url))
+  return acceptableURL(url) && (fixtureURL(base)?fixtureURL(url):localAppURL(base)?localAppURL(url) && url.origin===base.origin:url.protocol==='https:' && siteKey(base)===siteKey(url))
 }
 export function journeyPaths(task) {
   const checks=[...(task.outcomeChecks??[]),...(task.journey??[]).flatMap(step=>step.checks??[])]
@@ -51,7 +58,7 @@ function normalizeChecks(checks) {
 }
 export async function normalizeTask(data) {
   const url=new URL(data.url)
-  if(!acceptableURL(url) || (!fixtureURL(url) && !await allowedHost(url.hostname))) throw new Error('Use a public HTTPS page or the local fixture.')
+  if(!acceptableURL(url) || (!fixtureURL(url) && !localAppURL(url) && !await allowedHost(url.hostname))) throw new Error('Use a public HTTPS page, a local app, or the local fixture.')
   const task=data.task?.trim()
   if(!task || task.length>1400 || !personas.has(data.persona)) throw new Error('A persona and a task of 1–1400 characters are required.')
   const id=data.id ?? 'report-'+createHash('sha256').update([url.href,data.persona,task].join('\n')).digest('hex').slice(0,18)
