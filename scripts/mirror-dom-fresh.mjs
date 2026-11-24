@@ -31,10 +31,12 @@ const diff = (before,after) => {
 
 async function profile(url, installed, work) {
   const dir = await mkdtemp(path.join(tmpdir(),'mirror-dom-'))
-  let context
+  let context,timer
   try {
     context = await chromium.launchPersistentContext(dir,{channel:'chromium',headless:true,viewport:{width:1280,height:900},
       args:installed ? ['--disable-extensions-except='+extension,'--load-extension='+extension] : []})
+    timer = setTimeout(() => { void context.close({reason:'site time limit exceeded'}).catch(() => {}) },25000)
+    context.setDefaultTimeout(1800)
     await guardRequests(context,{url},{extension:installed})
     await context.addInitScript({content:runtime})
     const page = context.pages()[0]
@@ -54,6 +56,7 @@ async function profile(url, installed, work) {
     })
     return await work(page,context)
   } finally {
+    clearTimeout(timer)
     await context?.close()
     await rm(dir,{recursive:true,force:true})
   }
