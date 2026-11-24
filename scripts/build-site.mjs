@@ -6,10 +6,9 @@ import {ROOT,readJSON,saveJSON} from '../core/io.mjs'
 import {catalog} from '../core/loop.mjs'
 import {fixtureURL} from '../core/task.mjs'
 import {archiveKane} from './kane-archive.mjs'
-import {categories,labels as coverageLabels} from '../core/coverage.mjs'
+import {buildDashboard} from './dashboard.mjs'
 import {publicMetrics} from './public-metrics.mjs'
 const read=async(file,fallback)=>{try{return await readJSON(path.join(ROOT,file))}catch(e){if(e.code==='ENOENT')return fallback;throw e}}
-const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))
 const patchList=await catalog()
 const recorded=patchList.filter(p=>['verified','broken','retired'].includes(p.status))
 const active=recorded.filter(p=>p.status==='verified')
@@ -18,101 +17,14 @@ const bundled=[...active,...locallyVerified]
 const isFixture=patch=>fixtureURL(new URL(patch.url??patch.match))
 const fixtureRepairs=recorded.filter(isFixture)
 const publicRepairs=recorded.filter(patch=>!isFixture(patch))
-const local=(await read('proof/local.json',{runs:[]})).runs
-const scout=(await read('proof/scouting.json',{sites:[]})).sites
-const publicRuns=(await read('proof/public.json',{runs:[]})).runs.filter(r=>r.status==='locally-reproduced')
 const labels={'keyboard-only':'Keyboard only','low-vision':'320px reflow','screen-reader-view':'Screen-reader view','color-blind':'Color simulation','low-contrast-simulation':'Low contrast sensitivity simulation','document-language':'Document language'}
-const url=file=>'../'+file.split('/').map(encodeURIComponent).join('/')
 const archive=await archiveKane()
 const publicTasks=await Promise.all((await readdir(path.join(ROOT,'tasks/public/kane'))).filter(file=>file.endsWith('.json')).sort().map(file=>read('tasks/public/kane/'+file,null)))
-const counts=await publicMetrics({patches:publicRepairs,kaneTasks:publicTasks,archive})
-const [rechecked,heldout,heldoutV2,heldoutV3,live,hardScout,hardLocal,hardKane,localRecheck,v5Scout,v5Local,v5Kane,v5Rerun,v5Sample,extensionAudit,sampleAudit,nightly]=await Promise.all([
-  read('proof/recheck/summary.json',null),
-  read('proof/heldout/summary.json',null),
-  read('proof/heldout-v2/summary.json',null),
-  read('proof/heldout-v3/summary.json',null),
-  read('proof/live/live-loop.json',null),
-  read('proof/hard-v4/scouting.json',null),
-  read('proof/hard-v4/local-summary.json',null),
-  read('proof/hard-v4/kane-summary.json',null),
-  read('proof/hard-v4/regression-summary.json',null),
-  read('proof/heldout-v5/scouting.json',null),
-  read('proof/heldout-v5/local-summary.json',null),
-  read('proof/heldout-v5/kane-summary.json',null),
-  read('proof/heldout-v5/kane-rerun-50/summary.json',null),
-  read('proof/heldout-v5/kane-sample-20/summary.json',null),
-  read('proof/reliability/extension-e2e.json',null),
-  read('proof/heldout-v5/kane-sample-20/extension-e2e.json',null),
-  read('proof/reliability/nightly.json',null)
-])
-const [v6Scout,v6Local,v6Kane]=await Promise.all(['scouting.json','local-summary.json','kane-summary.json']
-  .map(file=>read('proof/heldout-v6/'+file,null)))
-const v6Section=(v6Local?'<section class="section"><h2>Held-out v6</h2><p>'+v6Scout.attempted+
-  ' scouted sites with up to three preregistered tasks per site.</p><table><caption>V6 coverage by failure type</caption><thead><tr><th scope="col">Failure type</th><th scope="col">Local fixed / registered</th><th scope="col">Kane verified / selected</th></tr></thead><tbody>'+
-  categories.map(category=>{
-    const local=v6Local.byCategory[category],kane=v6Kane?.byCategory?.[category]
-    return '<tr><th scope="row">'+esc(coverageLabels[category])+'</th><td>'+local.fixed+' / '+local.total+'</td><td>'+
-      (kane?kane.verified+' / '+kane.selected:category==='missing-language' || category==='low-contrast'?'Local proof':'Pending')+'</td></tr>'
-  }).join('')+'</tbody></table><p><a href="../proof/heldout-v6/README.md">V6 protocol and results</a></p></section>':'')+
-  (locallyVerified.length?'<section class="section"><h2>Local proof</h2><p>Chromium measured these contrast and language repairs with the rule off and on.</p>'+
-  locallyVerified.map(p=>'<article class="scout"><strong>'+esc(p.site)+'</strong><span>Local proof</span><p>'+
-    esc(coverageLabels[p.evaluation.category])+'</p><a href="'+url(p.evidence.localMeasurement)+'">Before and after measurements</a></article>').join('')+'</section>':'')
-const hardClasses={1:'Hover navigation',2:'Disclosures',3:'Tabs and carousels',4:'Modal dialogs',5:'Custom listboxes',6:'Other multi-step journeys'}
-const scoreCell=score=>score?score.fixed+' / '+score.total:'0 / 0'
-const compareRows=(groups,current,prior)=>Object.entries(groups).map(([key,label])=>
-  '<tr><th scope="row">'+esc(label)+'</th><td>'+scoreCell(prior[key])+'</td><td>'+scoreCell(current[key])+'</td></tr>').join('')
-const comparisonTable=(caption,title,rows)=>'<table><caption>'+caption+'</caption><thead><tr><th scope="col">'+title+
-  '</th><th scope="col">V4 fixed / registered</th><th scope="col">V5 fixed / registered</th></tr></thead><tbody>'+rows+'</tbody></table>'
-const v5Classes={...hardClasses,'single-control':'Single-control objectives'}
-const v5Personas=Object.fromEntries(Object.entries(labels).filter(([persona])=>v5Local?.byPersona[persona]))
-const v5Section=v5Scout && v5Local?'<section class="section"><h2>Held-out v5</h2><p><strong>'+v5Local.fixed+' / '+v5Local.total+
-  ' tasks repaired in local Playwright</strong> across '+v5Scout.summary.attempted.toLocaleString('en-US')+' scouted sites.</p>'+
-  (v5Kane?'<p>In the original study, Kane verified '+v5Kane.fixed+' / '+v5Kane.selected+' selected, with '+v5Kane.started+' started. Before and after verdicts agreed on '+
-    v5Kane.agreement.matched+' / '+v5Kane.agreement.paired+' assessed pairs. '+v5Kane.spent+' credits used.</p>':'')+
-  (v5Rerun?'<p>The 50-step Kane rerun verified '+v5Rerun.kaneVerified+' / '+v5Rerun.cases.length+' cases.</p>':'')+
-  (v5Sample?.finishedAt?'<p>Kane verified '+v5Sample.kaneVerified+' of '+v5Sample.started+
-    ' started cases from the seeded held-out sample. <a href="../proof/heldout-v5/README.md#seeded-kane-sample">Sample results and evidence</a></p>':'')+
-  comparisonTable('Local repairs by barrier','Barrier',compareRows(v5Classes,v5Local.byClass,v5Local.v4.byClass))+
-  comparisonTable('Local repairs by persona','Persona',compareRows(v5Personas,v5Local.byPersona,v5Local.v4.byPersona))+
-  '<p><a href="../proof/heldout-v5/README.md">Read the registration, results, and session evidence</a></p></section>':''
-const hardRows=hardLocal?Object.entries(hardLocal.byClass).filter(([kind])=>hardClasses[kind]).map(([kind,score])=>{
-  const kane=hardKane?.results.filter(row=>row.task.barrierClass===Number(kind) && row.phases.some(phase=>phase.runner==='kane'))
-  return '<tr><th scope="row">'+hardClasses[kind]+'</th><td>'+score.fixed+' / '+score.total+'</td><td>'+
-    (kane?.length?kane.filter(row=>row.status==='verified').length+' / '+kane.length:'—')+'</td></tr>'
-}).join(''):''
-const hardSection=v5Section || (hardScout && hardLocal?'<section class="section"><h2>Hard accessibility barriers</h2><p>'+
-  hardScout.summary.sites+' preregistered sites · '+hardLocal.fixed+' / '+hardLocal.total+' tasks repaired in local Playwright · '+
-  (hardKane?hardKane.fixed+' / '+hardKane.selected+' Kane-verified in the random subset':'Kane verification pending')+
-  '</p><table><caption>Repairs by barrier class</caption><thead><tr><th scope="col">Barrier</th><th scope="col">Local Playwright</th><th scope="col">Kane verified / started</th></tr></thead><tbody>'+
-  hardRows+'</tbody></table><p><a href="../proof/hard-v4/README.md">Read the cohort, credit use and individual outcomes</a></p></section>':'')
-const installed=new Map([...(extensionAudit?.results??[]),...(sampleAudit?.results??[])].map(row=>[row.id,row]))
-const installedPasses=active.filter(patch=>installed.get(patch.id)?.status==='pass')
-const localRecheckSection=nightly && extensionAudit?'<section class="section"><h2>Shipped fix reliability</h2><p>'+installedPasses.length+' / '+active.length+
-  ' active patches passed the installed extension audit. '+installedPasses.filter(patch=>patch.journey).length+' recorded journeys passed the extension off and on comparison.</p><p>'+
-  (nightly.counts['still-verified']??0)+' tasks passed the local nightly recheck. '+(nightly.dispositions?.length??0)+' retired and '+
-  (nightly.counts.inconclusive??0)+' inconclusive.</p><p><a href="../proof/reliability/extension-e2e.json">Original installed extension audit</a> · '+
-  (sampleAudit?'<a href="../proof/heldout-v5/kane-sample-20/extension-e2e.json">New installed extension audit</a> · ':'')+
-  '<a href="../proof/reliability/nightly.json">Local nightly findings</a></p></section>':localRecheck?'<section class="section"><h2>Local regression recheck</h2><p>'+localRecheck.total+' patch objectives · '+
-  Object.entries(localRecheck.counts).map(([status,count])=>count+' '+esc(status)).join(' · ')+
-  '</p><p><a href="../proof/hard-v4/regression-summary.json">Per-patch local recheck evidence</a></p></section>':''
-const heldoutV3Table=heldoutV3?'<section class="section"><h2>Held-out v3</h2><p><strong>Held-out v3: '+
-  heldoutV3.fixed+' of '+heldoutV3.total+' fixed automatically</strong></p><p>'+
-  Object.entries(heldoutV3.byPersona).map(([persona,score])=>esc(labels[persona]??persona)+' '+score.fixed+'/'+score.total).join(' · ')+
-  '</p><p>'+Object.entries(heldoutV3.counts).map(([status,count])=>count+' '+esc(status)).join(' · ')+
-  '</p><p><a href="../proof/heldout-v3/README.md">Preregistered objectives and freeze audit</a></p><details><summary>Kane sessions by site</summary>'+
-  heldoutV3.results.map(row=>'<div class="scout"><strong>'+esc(new URL(row.url).hostname)+'</strong><span>'+esc(row.outcome)+'</span><p>'+
-    esc(labels[row.persona]??row.persona)+' · '+esc(row.task)+'</p><p>'+
-    row.phases.map(phase=>'<a href="'+url(phase.result)+'">'+esc(phase.stage)+' '+esc(phase.status)+' · '+
-      esc(phase.sessionId??phase.runner)+'</a>').join('<br>')+'</p></div>').join('')+'</details></section>':''
-const heldoutV2Table=heldoutV2?'<section class="section"><h2>Held-out v2</h2><p><strong>'+
-  (heldoutV2.finishedAt?'Held-out v2: '+heldoutV2.fixed+' of '+heldoutV2.total+' fixed automatically':'Held-out v2 in progress · '+heldoutV2.registered+' registered tasks')+
-  '</strong></p><p>'+Object.entries(heldoutV2.counts).map(([status,count])=>count+' '+esc(status)).join(' · ')+
-  '</p><p><a href="../proof/heldout-v2/README.md">Preregistered objectives, all outcomes and Kane sessions</a></p></section>':''
-const heldoutTable=heldout?' <section class="section"><h2>Original held-out test</h2><p><strong>'+heldout.fixed+' of '+heldout.total+' fixed automatically</strong></p><p><a href="../proof/heldout/README.md">Task list and Kane sessions</a></p></section>':''
-const recheckLabels={'still-verified':'Still verified','re-patched':'Re-patched','broken':'Broken','retired':'Retired','inconclusive':'Inconclusive','error':'Error'}
-const recheckSection=rechecked?'<section class="section"><h2>Public patch recheck</h2><p>'+Object.entries(recheckLabels).map(([status,label])=>(rechecked.counts[status]??0)+' '+label.toLowerCase()).join(' · ')+'</p>'+rechecked.results.map(row=>'<div class="scout"><strong>'+esc(row.id)+'</strong><span>'+esc(recheckLabels[row.outcome])+'</span></div>').join('')+'<p><a href="../proof/recheck/README.md">Recheck outcomes and Kane sessions</a></p></section>':''
-const liveSection=live?'<section class="section"><h2>Live repair from the extension</h2><p>A ColorHexa keyboard report went from hotkey to verified repair in the same open browser tab.</p><p><a href="../proof/live/README.md">Recordings, terminal transcript and Kane sessions</a></p></section>':''
-const taskMillion='<section class="section"><h2>Task Million</h2><p>'+counts.tested+' public tasks probed · '+counts.blocked+' with recorded barriers · '+counts.fixed+' Kane-verified fixes · '+counts.open+' open findings</p><p>'+Object.entries(counts.blockedByPersona).map(([persona,count])=>esc(labels[persona]??persona)+' '+count).join(' · ')+'</p><p><a href="../proof/public-metrics.json">Task count and source ledger</a></p></section>'
+await publicMetrics({patches:publicRepairs,kaneTasks:publicTasks,archive})
+const [hardLocal,v5Local,v5Rerun,v5Sample,v6Local,v6Kane]=await Promise.all([
+  'hard-v4/local-summary','heldout-v5/local-summary','heldout-v5/kane-rerun-50/summary',
+  'heldout-v5/kane-sample-20/summary','heldout-v6/local-summary','heldout-v6/kane-summary'
+].map(file=>readJSON(path.join(ROOT,'proof',file+'.json'))))
 const knownRepairs=new Set(recorded.map(patch=>patch.id))
 const openTasks=publicTasks.filter(task=>!knownRepairs.has(task.id)).flatMap(task=>{
   const runs=archive.filter(run=>run.taskId===task.id)
@@ -122,7 +34,6 @@ const openTasks=publicTasks.filter(task=>!knownRepairs.has(task.id)).flatMap(tas
   const status=baseline?.status==='pass'?'Baseline passed':baseline?.status==='fail'?'Baseline failed · repair open':'Inconclusive'
   return [{site:new URL(task.url).hostname,task,latest,status}]
 })
-const findings=openTasks.map(({site,latest,status})=>'<div class="scout"><strong>'+esc(site)+'</strong><span>'+status+'</span><p>'+esc(latest.reason)+'</p><a href="'+url(latest.result)+'">'+esc(latest.phase)+' run · '+esc(latest.sessionId??'no session ID')+'</a></div>').join('')
 const corrections={
  setContrast:['1.4.3 Contrast (Minimum)','Set the measured color on this source selector.'],
  makeFocusable:['2.1.1 Keyboard','Use a native interactive element in the normal tab order.'],bindEnterToClick:['2.1.1 Keyboard','Prefer a native button with built-in keyboard activation.'],setRole:['4.1.2 Name, Role, Value','Choose a semantic HTML element matching the interaction.'],addLabel:['4.1.2 Name, Role, Value','Associate a persistent label with the control in the source.'],restoreFocusOutline:['2.4.7 Focus Visible','Style :focus-visible with a clearly visible outline.'],removeFocusTrap:['2.1.2 No Keyboard Trap','Provide a keyboard-operable close control and restore focus.'],setAltText:['1.1.1 Non-text Content','Supply appropriate alternative text in the source.'],injectCSS:['1.4.10 Reflow','Review the applied style in its layout context and fix the responsive stylesheet.'],extendTimeout:['2.2.1 Timing Adjustable','Provide user control over timing and warn before expiry.'],setLang:['3.1.1 Language of Page','Declare the correct language on the document element.'],
@@ -257,21 +168,5 @@ const archiveReport=[
   ''
 ].join('\n')
 await writeFile(path.join(ROOT,'proof/kane/README.md'),archiveReport)
-const pair=(before,after)=>'<div class="pair">'+[['Before repair',before],['With repair',after]].map(([label,file])=>'<figure><video preload="none" controls playsinline aria-label="'+label+'" src="'+url(file)+'#t=0.1"></video><figcaption>'+label+'</figcaption></figure>').join('')+'</div>'
-const cases=local.map(r=>'<article class="case"><h3>'+esc(labels[r.persona])+'</h3><p>'+esc(r.task)+'</p>'+pair(r.videos.before,r.videos.after)+'<div class="links"><a href="'+url(r.videos.control)+'">Pointer control</a><a href="'+url(r.videos.retirement)+'">Native fix recheck</a><a href="../proof/local/'+esc(r.persona)+'/before/result.json">Run observations</a></div></article>').join('')
-const verified=recorded.map(p=>'<article class="case"><h3>'+esc(p.site==='127.0.0.1'?'Stillroom fixture':p.site)+'</h3><p>'+esc(labels[p.persona])+' · '+esc(p.status)+'</p><p>'+esc(p.task)+'</p>'+pair(p.evidence.before,p.evidence.after)+'<a href="../evidence/'+esc(p.id)+'/report.md">Evidence report and Kane session IDs</a></article>').join('')
-const publicCases=publicRuns.map(r=>'<article class="case"><h3>'+esc(new URL(r.url).hostname)+'</h3><p>'+esc(r.task)+'</p><p>Rightmost text edge at 320px: '+r.phases.before.right+'px before, '+r.phases.after.right+'px after. The wide control passed with the same passage digest.</p>'+pair(r.phases.before.video,r.phases.after.video)+'<div class="links"><a href="'+url(r.phases.control.video)+'">Wide control</a><a href="../proof/public/'+esc(r.id)+'/observations.json">Measurements</a><a href="../proof/public/'+esc(r.id)+'/candidate.json">Candidate rules</a></div></article>').join('')
-const localFixed=local.filter(r=>r.before==='fail'&&r.control==='pass'&&r.after==='pass').length
-const metrics=[[active.length,'Active Kane repairs'],[locallyVerified.length,'Active local repairs'],[fixtureRepairs.length,'Kane-verified fixture tasks'],[publicRepairs.length,'Kane-verified public tasks'],[recorded.filter(p=>p.status==='retired').length,'Retired patches']]
-const history=patchList.flatMap(p=>p.history)
-const result=`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Curb Cut · Task evidence</title><link rel="stylesheet" href="./style.css"></head><body><a class="skip" href="#main">Skip to results</a><div class="wrap"><nav><strong><span class="logo" aria-hidden="true"></span>Curb Cut</strong><a href="#evidence">Evidence ledger ↓</a></nav><main id="main"><header class="hero"><div><h1>Make the task possible.</h1><p>Curb Cut applies accessibility repairs in your browser. See the Kane task recordings or local measurements for each active repair.</p><a class="button" href="../fixtures/shop/">Try the fixture shop ↗</a> <a class="film-link" href="../launch/curbcut-launch.mp4">Watch the film</a></div><div class="figure"><strong>Task evidence</strong><div class="ramp" aria-hidden="true"></div><p>Original page → browser repair → native fix</p></div></header><div class="metrics">${metrics.map(([n,label])=>'<div><b>'+n+'</b><span>'+label+'</span></div>').join('')}</div>${v6Section}${hardSection}${liveSection}${taskMillion}${heldoutV3Table}${heldoutV2Table}${heldoutTable}${recheckSection}${localRecheckSection}<section class="section" id="evidence"><h2>Kane verification</h2><p class="desc">${recorded.length?'Each task includes before and after recordings, the control, and the corresponding Kane session identifiers.':'Kane task repairs verified so far: 0.'}</p>${verified}<p>${patchList.filter(p=>p.status==='broken').length} broken · ${history.filter(h=>h.event==='re-patched').length} re-patched · ${patchList.filter(p=>p.status==='retired').length} retired</p><p><a href="../proof/kane/ledger.json">Kane session ledger</a></p></section>${findings?'<section class="section"><h2>Public Kane findings</h2><p class="desc">These attempts have no published repair. Each entry links to a recorded Kane result.</p>'+findings+'</section>':''}<section class="section"><h2>Local fixture replays</h2><p class="desc">Recorded in local Chrome with Playwright. Each task has a baseline, a pointer control, a patched replay, and an unpatched replay of the native fix.</p>${cases}</section><section class="section"><h2>Local public-page replays</h2><p class="desc">Measured in local Chrome. Each recording covers one reading task on the named page. The candidate rules remain outside the verified feed.</p>${publicCases}</section><section class="section"><h2>Public-site scouting</h2><p class="desc">Each observation covers the page and conditions in the <a href="../proof/scouting.json">scout log</a>. The <a href="../proof/scouting-keyboard.json">keyboard scout</a> and <a href="../proof/scouting-keyboard-followup.json">follow-up</a> contain additional local observations. The <a href="../proof/famous/README.md">familiar-site report</a> links the Grok scout and Kane trials. See the <a href="../proof/local-keyboard-findings.json">open local keyboard findings</a> for the date picker and hover menu. A candidate needs a task-level replay before it can enter the verified list.</p>${scout.map(s=>'<div class="scout"><strong>'+esc(s.site)+'</strong><span>'+esc(s.status.replaceAll('_',' '))+'</span><p>'+esc(s.observation||s.accessReason||(s.barriers?.length?s.barriers.map(b=>b.kind.replaceAll('_',' ')).join(' · '):s.task))+'</p></div>').join('')}</section></main><footer><span class="brand">Curb Cut</span><a href="../patches/index.json">Verified patch feed ↗</a></footer></div></body></html>`
-const repo='https://github.com/VasuBansal7576/curbcut'
-const deploy=process.env.CURBCUT_PAGES==='1'
-const html=deploy?result.replace(/(href|src)="\.\.\/([^"]+)"/g,(_,attribute,file)=>{
-  if(file==='fixtures/shop/') return 'href="'+repo+'/releases/tag/v1.0"'
-  if(/\.mp4(?:[?#]|$)/.test(file)) return attribute+'="'+repo+'/raw/main/'+file+'"'
-  const kind=file.endsWith('/')?'tree':'blob'
-  return attribute+'="'+repo+'/'+kind+'/main/'+file+'"'
-}).replace('Try the fixture shop ↗','Get the extension'):result
-await writeFile(path.join(ROOT,'site/index.html'),html+'\n')
-console.log(`Built dashboard: ${active.length} active Kane repairs · ${recorded.length} Kane-verified tasks · ${locallyVerified.length} active local repairs · ${localFixed} local fixture fixes`)
+await buildDashboard({bundled,v5Local,v5Sample,v6Local,v6Kane})
+console.log(`Built dashboard: ${bundled.length} fixes · ${active.length} Kane-verified · ${locallyVerified.length} with local proof`)
