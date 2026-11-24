@@ -1,0 +1,3574 @@
+{
+  "draw": "d764df9",
+  "implementationCommit": "e710e14",
+  "runnerCommit": "42d50a8",
+  "summary": {
+    "scouted": 200,
+    "eligible": 22,
+    "stop": "200-site cap",
+    "sourcedFrom": {
+      "proof/heldout-finder/sample.json": 32,
+      "proof/heldout-finder-release/sample.json": 40,
+      "proof/heldout-v5/sample.json": 128
+    },
+    "notEligible": {
+      "no navigation trigger": 38,
+      "page unavailable": 106,
+      "no bounded keyboard gap": 34
+    },
+    "match": 1,
+    "noMatch": 21,
+    "wrongMatch": 0,
+    "trialErrors": 0,
+    "independentlyChecked": 1,
+    "pointerRegressions": 0,
+    "pointerChecks": 1,
+    "timeToFixMs": [
+      4498
+    ],
+    "medianNoMatchDecisionMs": 540,
+    "noMatchReasons": {
+      "probe interrupted": 10,
+      "page did not reset": 7,
+      "no-bounded-hover-outcome": 1,
+      "Cannot read properties of null (reading 'map')": 2,
+      "no-trigger": 1
+    },
+    "npmTest": {
+      "passed": 60,
+      "total": 60,
+      "concurrency": 1
+    },
+    "build": "passed"
+  },
+  "rows": [
+    {
+      "site": "hamiltontn.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://hamiltontn.gov/",
+      "scout": {
+        "eligible": true,
+        "url": "https://hamiltontn.gov/",
+        "selector": "ul.sf-menu.sf-js-enabled > li:nth-of-type(3) > a:nth-of-type(1)",
+        "pointer": [
+          {
+            "selector": "li.sfHover > a:nth-of-type(1)",
+            "href": "https://hamiltontn.gov/Directory.aspx",
+            "focused": false
+          },
+          {
+            "selector": "li.sfHover > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://hamiltontn.gov/Directory.aspx#representatives",
+            "focused": false
+          },
+          {
+            "selector": "li.sfHover > ul:nth-of-type(1) > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://hamiltontn.gov/Directory.aspx#alphabetical_listing",
+            "focused": false
+          },
+          {
+            "selector": "li.sfHover > ul:nth-of-type(1) > li:nth-of-type(3) > a:nth-of-type(1)",
+            "href": "https://hamiltontn.gov/Directory.aspx#municipalities",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": [
+          {
+            "selector": "ul.sf-menu.sf-js-enabled > li:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://hamiltontn.gov/Directory.aspx#representatives",
+            "focused": true
+          },
+          {
+            "selector": "ul.sf-menu.sf-js-enabled > li:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://hamiltontn.gov/Directory.aspx#alphabetical_listing",
+            "focused": true
+          },
+          {
+            "selector": "ul.sf-menu.sf-js-enabled > li:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(3) > a:nth-of-type(1)",
+            "href": "https://hamiltontn.gov/Directory.aspx#municipalities",
+            "focused": true
+          },
+          {
+            "selector": "li.sfHover > a:nth-of-type(1)",
+            "href": "https://hamiltontn.gov/Courts.aspx",
+            "focused": true
+          },
+          {
+            "selector": "li.sfHover > a:nth-of-type(1)",
+            "href": "http://parks.hamiltontn.gov/",
+            "focused": true
+          },
+          {
+            "selector": "li.last_one.sfHover > a:nth-of-type(1)",
+            "href": "https://hamiltontn.gov/Search.aspx",
+            "focused": true
+          }
+        ]
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "elapsedMs": 427,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "beaufortcountysc.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://beaufortcountysc.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "herriman.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://herriman.gov/",
+      "scout": {
+        "eligible": true,
+        "url": "https://www.herriman.gov/",
+        "selector": "ul.rd-navbar-nav > li:nth-of-type(2) > a:nth-of-type(1)",
+        "pointer": [
+          {
+            "selector": "div.dynamic_dropdown.col-1 > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://www.herriman.gov/licenses",
+            "focused": false
+          },
+          {
+            "selector": "div.dynamic_dropdown.col-1 > ul:nth-of-type(1) > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://www.herriman.gov/economic-development",
+            "focused": false
+          },
+          {
+            "selector": "div.dynamic_dropdown.col-1 > ul:nth-of-type(1) > li:nth-of-type(3) > a:nth-of-type(1)",
+            "href": "https://www.herriman.gov/shop-local",
+            "focused": false
+          },
+          {
+            "selector": "div.dynamic_dropdown.col-1 > ul:nth-of-type(1) > li:nth-of-type(4) > a:nth-of-type(1)",
+            "href": "https://www.herriman.gov/planning",
+            "focused": false
+          },
+          {
+            "selector": "div.dynamic_dropdown.col-1 > ul:nth-of-type(1) > li:nth-of-type(5) > a:nth-of-type(1)",
+            "href": "https://www.herriman.gov/event-sponsorships",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": []
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "page did not reset"
+        },
+        "elapsedMs": 893,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "fortsmithar.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://fortsmithar.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "cityoflancasterpa.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://cityoflancasterpa.gov/",
+      "scout": {
+        "eligible": true,
+        "url": "https://www.cityoflancasterpa.gov/",
+        "selector": "#mega-menu-item-35 > a:nth-of-type(1)",
+        "pointer": [
+          {
+            "selector": "#mega-menu-item-30808 > a:nth-of-type(1)",
+            "href": "https://www.cityoflancasterpa.gov/neighborhoods/love-your-block/",
+            "focused": false
+          },
+          {
+            "selector": "#mega-menu-item-30811 > a:nth-of-type(1)",
+            "href": "https://www.cityoflancasterpa.gov/neighborhoods/neighborhood-leaders-academy/",
+            "focused": false
+          },
+          {
+            "selector": "#mega-menu-item-30813 > a:nth-of-type(1)",
+            "href": "https://engage.cityoflancasterpa.gov/",
+            "focused": false
+          },
+          {
+            "selector": "#mega-menu-item-30961 > a:nth-of-type(1)",
+            "href": "https://www.cityoflancasterpa.gov/who-to-call/",
+            "focused": false
+          },
+          {
+            "selector": "#mega-menu-item-32619 > a:nth-of-type(1)",
+            "href": "https://www.cityoflancasterpa.gov/neighborhoods/neighborhood-art-project/",
+            "focused": false
+          },
+          {
+            "selector": "#mega-menu-item-34123 > a:nth-of-type(1)",
+            "href": "https://www.cityoflancasterpa.gov/welcome/welcoming-week/",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": []
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "page did not reset"
+        },
+        "elapsedMs": 824,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "appletonwi.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://appletonwi.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "catawbacountync.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://catawbacountync.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://catawbacountync.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://catawbacountync.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "edgewaterco.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://edgewaterco.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "yorkcountysc.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://yorkcountysc.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "hamiltoncountyohio.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://hamiltoncountyohio.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "everettwa.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://everettwa.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "cityofirondaleal.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://cityofirondaleal.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "yuba.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://yuba.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "asheboronc.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://asheboronc.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "tompkinscountyny.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://tompkinscountyny.gov/",
+      "scout": {
+        "eligible": true,
+        "url": "https://www.tompkinscountyny.gov/Home",
+        "selector": "li.nav-section-quarters-1.first-item > a:nth-of-type(1)",
+        "pointer": [
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-1 > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://www.tompkinscountyny.gov/Resident-Services/211-Information-Referral",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-1 > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://www.tompkinscountyny.gov/Resident-Services/Assistance-Programs",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-1 > li:nth-of-type(3) > a:nth-of-type(1)",
+            "href": "https://www.tompkinscountyny.gov/Resident-Services/Careers-and-Skills",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-1 > li:nth-of-type(4) > a:nth-of-type(1)",
+            "href": "https://www.tompkinscountyny.gov/Resident-Services/Flood-Information",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-1 > li:nth-of-type(5) > a:nth-of-type(1)",
+            "href": "https://www.tompkinscountyny.gov/Resident-Services/Health-and-Wellness",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-1 > li:nth-of-type(6) > a:nth-of-type(1)",
+            "href": "https://www.tompkinscountyny.gov/Resident-Services/Public-Safety",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-1 > li:nth-of-type(7) > a:nth-of-type(1)",
+            "href": "https://www.tompkinscountyny.gov/Resident-Services/Ithaca-Tompkins-International-Airport",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-1 > li:nth-of-type(8) > a:nth-of-type(1)",
+            "href": "https://www.tompkinscountyny.gov/Resident-Services/Soil-and-Water-Conservation-District",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-1 > li:nth-of-type(9) > a:nth-of-type(1)",
+            "href": "https://www.tompkinscountyny.gov/Resident-Services/Tompkins-County-Public-Library",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": [
+          {
+            "selector": "li.nav-section-quarters-1.first-item > button:nth-of-type(1)",
+            "href": "",
+            "focused": true
+          },
+          {
+            "selector": "li.nav-section-quarters-2.nav-item-seq-2 > button:nth-of-type(1)",
+            "href": "",
+            "focused": true
+          },
+          {
+            "selector": "li.nav-section-quarters-3.nav-item-seq-3 > button:nth-of-type(1)",
+            "href": "",
+            "focused": true
+          }
+        ]
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "page did not reset"
+        },
+        "elapsedMs": 875,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "bethlehem-pa.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://bethlehem-pa.gov/",
+      "scout": {
+        "eligible": true,
+        "url": "https://bethlehem-pa.gov/",
+        "selector": "div.nav-container.desktop8 > ul:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > a:nth-of-type(1)",
+        "pointer": [
+          {
+            "selector": "div.nav-container.desktop8 > ul:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > section:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://bethlehem-pa.gov/Online-Services/Bethlehem-Service-Center",
+            "focused": false
+          },
+          {
+            "selector": "div.nav-container.desktop8 > ul:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > section:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://bethlehem-pa.gov/Online-Services/Forms-and-Permits",
+            "focused": false
+          },
+          {
+            "selector": "div.nav-container.desktop8 > ul:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > section:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > a:nth-of-type(1)",
+            "href": "https://archive.bethlehem-pa.gov/egov-plus/entity/login_main.aspx",
+            "focused": false
+          },
+          {
+            "selector": "div.nav-container.desktop8 > ul:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > section:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(4) > a:nth-of-type(1)",
+            "href": "https://visitor.r20.constantcontact.com/manage/optin?v=001d9v5vt1G8OuKlfP3QhXFgCaiiCo-u74psIMkTjz3Ey1_xyrJmkhV_WFC34_6UgTEpc8eeZLLyqJtFhe_v0hL45n2kXZL-etB1se3c4lka04NStiNe21WX-UwDBLJ_PAYIzkyo2kEDGUX2uXunpG5IGSrAGzNrpWqMXJJeM9m0G0%3D+",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": []
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "page did not reset"
+        },
+        "elapsedMs": 566,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "sccwi.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://sccwi.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://sccwi.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://sccwi.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "bouldercounty.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://bouldercounty.gov/",
+      "scout": {
+        "eligible": true,
+        "url": "https://bouldercounty.gov/",
+        "selector": "#menu-item-1716 > a:nth-of-type(1)",
+        "pointer": [
+          {
+            "selector": "button.nav-skip-button.expanded",
+            "href": "",
+            "focused": false
+          },
+          {
+            "selector": "#menu-item-17236 > a:nth-of-type(1)",
+            "href": "https://bouldercounty.gov/open-space/activities/",
+            "focused": false
+          },
+          {
+            "selector": "#menu-item-17237 > a:nth-of-type(1)",
+            "href": "https://bouldercounty.gov/open-space/education/",
+            "focused": false
+          },
+          {
+            "selector": "#menu-item-28807 > a:nth-of-type(1)",
+            "href": "https://bouldercounty.gov/open-space/fairgrounds/",
+            "focused": false
+          },
+          {
+            "selector": "#menu-item-17239 > a:nth-of-type(1)",
+            "href": "https://bouldercounty.gov/open-space/get-involved/",
+            "focused": false
+          },
+          {
+            "selector": "#menu-item-17246 > a:nth-of-type(1)",
+            "href": "https://bouldercounty.gov/open-space/maps/",
+            "focused": false
+          },
+          {
+            "selector": "#menu-item-17257 > a:nth-of-type(1)",
+            "href": "https://bouldercounty.gov/open-space/management/",
+            "focused": false
+          },
+          {
+            "selector": "#menu-item-17255 > a:nth-of-type(1)",
+            "href": "https://bouldercounty.gov/open-space/parks-and-trails/",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": [
+          {
+            "selector": "#menu-item-1716 > button:nth-of-type(1)",
+            "href": "",
+            "focused": true
+          }
+        ]
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "page did not reset"
+        },
+        "elapsedMs": 983,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "chapelhillnc.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://chapelhillnc.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 8,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "dedham-ma.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://dedham-ma.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "belmont.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://belmont.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "leesburgflorida.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://leesburgflorida.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "stmaryscountymd.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://stmaryscountymd.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://stmaryscountymd.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://stmaryscountymd.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "dorchestercountysc.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://dorchestercountysc.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "shorelinewa.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://shorelinewa.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "cityofredding.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://cityofredding.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "maricopa.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://maricopa.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "smyrnaga.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://smyrnaga.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "fayettevillenc.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://fayettevillenc.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 3,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "redlands.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://redlands.gov/",
+      "scout": {
+        "eligible": true,
+        "url": "https://www.redlands.gov/",
+        "selector": "#nav-menu-item-10447 > a:nth-of-type(1)",
+        "pointer": [
+          {
+            "selector": "#nav-menu-item-10448 > a:nth-of-type(1)",
+            "href": "https://www.redlands.gov/shop-redlands/",
+            "focused": false
+          },
+          {
+            "selector": "#nav-menu-item-10449 > a:nth-of-type(1)",
+            "href": "https://www.redlands.gov/redlands-tourism/",
+            "focused": false
+          },
+          {
+            "selector": "#nav-menu-item-10454 > a:nth-of-type(1)",
+            "href": "https://www.redlands.gov/redlands-best/",
+            "focused": false
+          },
+          {
+            "selector": "#nav-menu-item-10455 > a:nth-of-type(1)",
+            "href": "https://www.redlands.gov/stay/",
+            "focused": false
+          },
+          {
+            "selector": "#nav-menu-item-10456 > a:nth-of-type(1)",
+            "href": "https://www.redlands.gov/parks-and-recreation/",
+            "focused": false
+          },
+          {
+            "selector": "#nav-menu-item-10471 > a:nth-of-type(1)",
+            "href": "https://www.redlands.gov/senior-services/",
+            "focused": false
+          },
+          {
+            "selector": "#nav-menu-item-10479 > a:nth-of-type(1)",
+            "href": "https://www.redlands.gov/market/",
+            "focused": false
+          },
+          {
+            "selector": "#nav-menu-item-10480 > a:nth-of-type(1)",
+            "href": "https://www.redlands.gov/get-involved/",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": [
+          {
+            "selector": "#nav-menu-item-10482 > a:nth-of-type(1)",
+            "href": "https://www.redlands.gov/survey/",
+            "focused": true
+          }
+        ]
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "elapsedMs": 244,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "williamsoncounty-tn.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://williamsoncounty-tn.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://williamsoncounty-tn.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://williamsoncounty-tn.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "kennesaw-ga.gov",
+      "source": "proof/heldout-finder/sample.json",
+      "url": "https://kennesaw-ga.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://kennesaw-ga.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://kennesaw-ga.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "gahanna.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://gahanna.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://gahanna.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://gahanna.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "thewoodlandstownship-tx.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://thewoodlandstownship-tx.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 8,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "arlingtontx.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://arlingtontx.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 8,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "newportoregon.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://newportoregon.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 8,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "templetx.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://templetx.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "jeffparish.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://jeffparish.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "yavapaiaz.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://yavapaiaz.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 8,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "wakeforestnc.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://wakeforestnc.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 6,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "victoriatx.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://victoriatx.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://victoriatx.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://victoriatx.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "spokanecounty.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://spokanecounty.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "frederickcountymd.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://frederickcountymd.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://frederickcountymd.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://frederickcountymd.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "gardnerkansas.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://gardnerkansas.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "burnsvillemn.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://burnsvillemn.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://burnsvillemn.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://burnsvillemn.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "locustgrove-ga.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://locustgrove-ga.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "needhamma.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://needhamma.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://needhamma.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://needhamma.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "monroviaca.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://monroviaca.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "guilfordcountync.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://guilfordcountync.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 3,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "greenecountymo.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://greenecountymo.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "kentcountyde.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://kentcountyde.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 8,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "lawrenceks.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://lawrenceks.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 2,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "franklincountyohio.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://franklincountyohio.gov/",
+      "scout": {
+        "eligible": true,
+        "url": "https://www.franklincountyohio.gov/Home",
+        "selector": "li.nav-section-quarters-3.nav-item-seq-3 > a:nth-of-type(1)",
+        "pointer": [
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-3 > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://www.franklincountyohio.gov/Safety-Justice/Courts",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-3 > li:nth-of-type(1) > button:nth-of-type(1)",
+            "href": "",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-3 > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://www.franklincountyohio.gov/Safety-Justice/Reentry-Assistance",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-3 > li:nth-of-type(2) > button:nth-of-type(1)",
+            "href": "",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-3 > li:nth-of-type(3) > a:nth-of-type(1)",
+            "href": "https://www.franklincountyohio.gov/Safety-Justice/Sheriff",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-3 > li:nth-of-type(4) > a:nth-of-type(1)",
+            "href": "https://www.franklincountyohio.gov/Safety-Justice/Corrections",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-3 > li:nth-of-type(4) > button:nth-of-type(1)",
+            "href": "",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-3 > li:nth-of-type(5) > a:nth-of-type(1)",
+            "href": "https://www.franklincountyohio.gov/Safety-Justice/Emergency-Management",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-3 > li:nth-of-type(5) > button:nth-of-type(1)",
+            "href": "",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-3 > li:nth-of-type(6) > a:nth-of-type(1)",
+            "href": "https://www.franklincountyohio.gov/Safety-Justice/Coroner",
+            "focused": false
+          },
+          {
+            "selector": "#sc-menu-second-level-nav-item-seq-3 > li:nth-of-type(7) > a:nth-of-type(1)",
+            "href": "https://www.franklincountyohio.gov/Safety-Justice/Adult-Protective-Services",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": [
+          {
+            "selector": "li.nav-section-quarters-3.nav-item-seq-3 > button:nth-of-type(1)",
+            "href": "",
+            "focused": true
+          },
+          {
+            "selector": "li.nav-section-quarters-4.nav-item-seq-4 > button:nth-of-type(1)",
+            "href": "",
+            "focused": true
+          }
+        ]
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "page did not reset"
+        },
+        "elapsedMs": 825,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "davie-fl.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://davie-fl.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "newcastlede.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://newcastlede.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "burlingtonnc.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://burlingtonnc.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://burlingtonnc.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://burlingtonnc.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "delraybeachfl.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://delraybeachfl.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "belleislefl.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://belleislefl.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://belleislefl.gov/\nCall log:\n\u001b[2m  - navigating to \"https://belleislefl.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://belleislefl.gov/\nCall log:\n\u001b[2m  - navigating to \"https://belleislefl.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "newbraunfels.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://newbraunfels.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://newbraunfels.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://newbraunfels.gov/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "dunwoodyga.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://dunwoodyga.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "cookcountyclerkil.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://cookcountyclerkil.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 1,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "danversma.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://danversma.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "encinitasca.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://encinitasca.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "portlandmaine.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://portlandmaine.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "spanishfork.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://spanishfork.gov/",
+      "scout": {
+        "eligible": true,
+        "url": "https://www.spanishfork.gov/",
+        "selector": "ul.sf-js-enabled > li:nth-of-type(2) > span:nth-of-type(1) > a:nth-of-type(1)",
+        "pointer": [
+          {
+            "selector": "ul.sf-js-enabled > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://www.spanishfork.gov/recreation-parks-and-culture/arts/",
+            "focused": false
+          },
+          {
+            "selector": "ul.sf-js-enabled > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://www.spanishfork.gov/recreation-parks-and-culture/events-and-festivals/",
+            "focused": false
+          },
+          {
+            "selector": "ul.sf-js-enabled > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > a:nth-of-type(1)",
+            "href": "https://www.spanishfork.gov/recreation-parks-and-culture/fairgrounds/",
+            "focused": false
+          },
+          {
+            "selector": "ul.sf-js-enabled > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(4) > a:nth-of-type(1)",
+            "href": "https://www.spanishfork.gov/recreation-parks-and-culture/fitcity-center/",
+            "focused": false
+          },
+          {
+            "selector": "ul.sf-js-enabled > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(2) > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://www.spanishfork.gov/recreation-parks-and-culture/gun-club/",
+            "focused": false
+          },
+          {
+            "selector": "ul.sf-js-enabled > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(2) > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://www.spanishfork.gov/recreation-parks-and-culture/library/",
+            "focused": false
+          },
+          {
+            "selector": "ul.sf-js-enabled > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(2) > li:nth-of-type(3) > a:nth-of-type(1)",
+            "href": "https://www.spanishfork.gov/recreation-parks-and-culture/the-oaks-at-spanish-fork/",
+            "focused": false
+          },
+          {
+            "selector": "ul.sf-js-enabled > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(2) > li:nth-of-type(4) > a:nth-of-type(1)",
+            "href": "https://www.spanishfork.gov/recreation-parks-and-culture/parks-trails-camping-and-facilities/",
+            "focused": false
+          },
+          {
+            "selector": "ul.sf-js-enabled > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(3) > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://www.spanishfork.gov/recreation-parks-and-culture/recreation-and-sports/",
+            "focused": false
+          },
+          {
+            "selector": "ul.sf-js-enabled > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(3) > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://www.spanishfork.gov/recreation-parks-and-culture/rap-program/",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": []
+      },
+      "trial": {
+        "detected": {
+          "reason": "no-bounded-hover-outcome"
+        },
+        "elapsedMs": 698,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "douglascountynv.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://douglascountynv.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 7,
+        "hovered": 2
+      }
+    },
+    {
+      "site": "peoriaaz.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://peoriaaz.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "richlandcenterwi.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://richlandcenterwi.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "littlerock.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://littlerock.gov/",
+      "scout": {
+        "eligible": true,
+        "url": "https://littlerock.gov/",
+        "selector": "#menu-item-2331 > a:nth-of-type(1)",
+        "pointer": [
+          {
+            "selector": "#menu-item-14756 > a:nth-of-type(1)",
+            "href": "https://littlerock.gov/e-news/",
+            "focused": false
+          },
+          {
+            "selector": "#menu-item-32812 > a:nth-of-type(1)",
+            "href": "https://littlerock.gov/News/events/",
+            "focused": false
+          },
+          {
+            "selector": "#menu-item-26070 > a:nth-of-type(1)",
+            "href": "https://littlerock.gov/parks-and-recreation/rentals/",
+            "focused": false
+          },
+          {
+            "selector": "div._ImageIconWrapper_12uxa_28 > button:nth-of-type(1)",
+            "href": "",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": []
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "Cannot read properties of null (reading 'map')"
+        },
+        "elapsedMs": 233,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "jacksoncountyor.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://jacksoncountyor.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "tualatinoregon.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://tualatinoregon.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 6,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "adamscountyco.gov",
+      "source": "proof/heldout-finder-release/sample.json",
+      "url": "https://adamscountyco.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 1,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "vkontakte.ru",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://vkontakte.ru/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "ipaddress.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://ipaddress.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "th.gl",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://th.gl/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 4,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "good.is",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://good.is/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 2,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "awsdns-49.net",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://awsdns-49.net/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND awsdns-49.net"
+        ]
+      }
+    },
+    {
+      "site": "eurid.eu",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://eurid.eu/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 1,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "fas.org",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://fas.org/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 4,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "shangjin88.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://shangjin88.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://shangjin88.com/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://shangjin88.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "247-inc.net",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://247-inc.net/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND 247-inc.net"
+        ]
+      }
+    },
+    {
+      "site": "band.us",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://band.us/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "lite-host.in",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://lite-host.in/",
+      "scout": {
+        "eligible": true,
+        "url": "https://lite.llc/",
+        "selector": "li.dropdown.menu-language > a:nth-of-type(1)",
+        "pointer": [
+          {
+            "selector": "ul.nav.navbar-nav > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://lite.llc/#",
+            "focused": false
+          },
+          {
+            "selector": "ul.nav.navbar-nav > li:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://lite.llc/hosting/dlya-razrabotchikov",
+            "focused": false
+          },
+          {
+            "selector": "ul.nav.navbar-nav > li:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://lite.llc/hosting/dlya-biznesa",
+            "focused": false
+          },
+          {
+            "selector": "ul.nav.navbar-nav > li:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(3) > a:nth-of-type(1)",
+            "href": "https://lite.llc/hosting/educational",
+            "focused": false
+          },
+          {
+            "selector": "ul.nav.navbar-nav > li:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(4) > a:nth-of-type(1)",
+            "href": "https://lite.llc/#",
+            "focused": false
+          },
+          {
+            "selector": "ul.nav.navbar-nav > li:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(5) > a:nth-of-type(1)",
+            "href": "https://lite.llc/#",
+            "focused": false
+          },
+          {
+            "selector": "li.dropdown.menu-language > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://lite.llc/kz",
+            "focused": false
+          },
+          {
+            "selector": "li.dropdown.menu-language > ul:nth-of-type(1) > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://lite.llc/en",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": [
+          {
+            "selector": "li.dropdown.menu-language > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://lite.llc/kz",
+            "focused": true
+          },
+          {
+            "selector": "li.dropdown.menu-language > ul:nth-of-type(1) > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://lite.llc/en",
+            "focused": true
+          }
+        ]
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "elapsedMs": 1591,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "facer.io",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://facer.io/",
+      "scout": {
+        "eligible": true,
+        "url": "https://www.facer.io/",
+        "selector": "a.dropdown-toggle",
+        "pointer": [
+          {
+            "selector": "a.app-header__logo-link",
+            "href": "https://www.facer.io/",
+            "focused": false
+          },
+          {
+            "selector": "ul.dropdown-menu > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://apps.apple.com/us/app/watch-faces-by-facer/id1057071179?pt=117330004&mt=8&ct=facer_app_download.home.header_get_app",
+            "focused": false
+          },
+          {
+            "selector": "ul.dropdown-menu > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://play.google.com/store/apps/details?id=com.jeremysteckling.facerrel&referrer=utm_source%3Dfacer_web%26utm_medium%3Dapp_download%26utm_campaign%3Dfacer_app_download%26utm_content%3Dhome.header_get_app",
+            "focused": false
+          },
+          {
+            "selector": "div.footer__store-links > a:nth-of-type(1)",
+            "href": "https://apps.apple.com/us/app/watch-faces-by-facer/id1057071179?pt=117330004&mt=8&ct=facer_app_download.home.footer",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": [
+          {
+            "selector": "ul.dropdown-menu > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://apps.apple.com/us/app/watch-faces-by-facer/id1057071179?pt=117330004&mt=8&ct=facer_app_download.home.header_get_app",
+            "focused": true
+          },
+          {
+            "selector": "ul.dropdown-menu > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://play.google.com/store/apps/details?id=com.jeremysteckling.facerrel&referrer=utm_source%3Dfacer_web%26utm_medium%3Dapp_download%26utm_campaign%3Dfacer_app_download%26utm_content%3Dhome.header_get_app",
+            "focused": true
+          }
+        ]
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "elapsedMs": 279,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "daily.dev",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://daily.dev/",
+      "scout": {
+        "eligible": true,
+        "url": "https://daily.dev/",
+        "selector": "div.flex.h-16 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "pointer": [
+          {
+            "selector": "div.flex.w-\\[210px\\] > a:nth-of-type(1)",
+            "href": "https://business.daily.dev/?ref=daily-header",
+            "focused": false
+          },
+          {
+            "selector": "div.flex.w-\\[210px\\] > a:nth-of-type(2)",
+            "href": "https://business.daily.dev/customers/?ref=daily-header",
+            "focused": false
+          },
+          {
+            "selector": "a.CTA.group\\/cs",
+            "href": "https://business.daily.dev/schedule/?ref=daily-header",
+            "focused": false
+          },
+          {
+            "selector": "div.flex.w-\\[218px\\] > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1)",
+            "href": "",
+            "focused": false
+          },
+          {
+            "selector": "div.flex.w-\\[218px\\] > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2)",
+            "href": "",
+            "focused": false
+          },
+          {
+            "selector": "a.CTA.group\\/bs",
+            "href": "https://business.daily.dev/customers/postmark/?ref=daily-header",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": [
+          {
+            "selector": "div.flex.h-16 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://business.daily.dev/?ref=daily-header&_gl=1*1l6q5v0*_ga*NTgwMjM3NjgyLjE3OTU1NDQ1MzA.*_ga_88PBR8PHX0*czE3OTU1NDQ1MzAkbzEkZzAkdDE3OTU1NDQ1MzEkajU5JGwwJGgw",
+            "focused": true
+          },
+          {
+            "selector": "div.flex.w-\\[210px\\] > a:nth-of-type(1)",
+            "href": "https://business.daily.dev/?ref=daily-header&_gl=1*1l6q5v0*_ga*NTgwMjM3NjgyLjE3OTU1NDQ1MzA.*_ga_88PBR8PHX0*czE3OTU1NDQ1MzAkbzEkZzAkdDE3OTU1NDQ1MzEkajU5JGwwJGgw",
+            "focused": true
+          },
+          {
+            "selector": "div.flex.w-\\[210px\\] > a:nth-of-type(2)",
+            "href": "https://business.daily.dev/customers/?ref=daily-header&_gl=1*1l6q5v0*_ga*NTgwMjM3NjgyLjE3OTU1NDQ1MzA.*_ga_88PBR8PHX0*czE3OTU1NDQ1MzAkbzEkZzAkdDE3OTU1NDQ1MzEkajU5JGwwJGgw",
+            "focused": true
+          },
+          {
+            "selector": "a.CTA.group\\/cs",
+            "href": "https://business.daily.dev/schedule/?ref=daily-header&_gl=1*1l6q5v0*_ga*NTgwMjM3NjgyLjE3OTU1NDQ1MzA.*_ga_88PBR8PHX0*czE3OTU1NDQ1MzAkbzEkZzAkdDE3OTU1NDQ1MzEkajU5JGwwJGgw",
+            "focused": true
+          },
+          {
+            "selector": "div.flex.w-\\[218px\\] > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(1)",
+            "href": "",
+            "focused": true
+          },
+          {
+            "selector": "div.flex.w-\\[218px\\] > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2)",
+            "href": "",
+            "focused": true
+          },
+          {
+            "selector": "a.CTA.group\\/bs",
+            "href": "https://business.daily.dev/customers/postmark/?ref=daily-header&_gl=1*1l6q5v0*_ga*NTgwMjM3NjgyLjE3OTU1NDQ1MzA.*_ga_88PBR8PHX0*czE3OTU1NDQ1MzAkbzEkZzAkdDE3OTU1NDQ1MzEkajU5JGwwJGgw",
+            "focused": true
+          },
+          {
+            "selector": "div.flex.h-16 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://docs.daily.dev/?_gl=1*1l6q5v0*_ga*NTgwMjM3NjgyLjE3OTU1NDQ1MzA.*_ga_88PBR8PHX0*czE3OTU1NDQ1MzAkbzEkZzAkdDE3OTU1NDQ1MzEkajU5JGwwJGgw",
+            "focused": true
+          },
+          {
+            "selector": "div.flex.h-16 > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://docs.daily.dev/?_gl=1*1l6q5v0*_ga*NTgwMjM3NjgyLjE3OTU1NDQ1MzA.*_ga_88PBR8PHX0*czE3OTU1NDQ1MzAkbzEkZzAkdDE3OTU1NDQ1MzEkajU5JGwwJGgw",
+            "focused": true
+          }
+        ]
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "elapsedMs": 677,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "engagently.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://engagently.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "slack-edge.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://slack-edge.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND slack-edge.com"
+        ]
+      }
+    },
+    {
+      "site": "feeder.co",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://feeder.co/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 3,
+        "hovered": 2
+      }
+    },
+    {
+      "site": "uls.co.za",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://uls.co.za/",
+      "scout": {
+        "eligible": true,
+        "url": "https://www.uls.co.za/",
+        "selector": "ul.nav1 > li:nth-of-type(3) > a:nth-of-type(1)",
+        "pointer": [
+          {
+            "selector": "li.nav2 > a:nth-of-type(1)",
+            "href": "https://www.uls.co.za/services/linuxserversolutions/",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": []
+      },
+      "trial": {
+        "detected": {
+          "matched": true,
+          "patch": {
+            "id": "instant-222e630c-e387-456f-92a0-2c9ac1450004",
+            "url": "https://www.uls.co.za/",
+            "site": "www.uls.co.za",
+            "match": "https://www.uls.co.za/",
+            "persona": "keyboard-only",
+            "task": "Focus the menu trigger and check that its controls appear.",
+            "controlTask": "Hover over the menu trigger and check that its controls appear.",
+            "barrier": "Hover reveals controls that the keyboard cannot reach.",
+            "status": "candidate",
+            "evidence": {},
+            "history": [],
+            "rules": [
+              {
+                "selector": "ul.nav1 > li:nth-of-type(3)",
+                "action": "mirrorHoverToFocus"
+              }
+            ],
+            "observedSelector": "ul.nav1 > li:nth-of-type(3) > a:nth-of-type(1)",
+            "barrierClass": 1,
+            "journey": [
+              {
+                "selector": "ul.nav1 > li:nth-of-type(3) > a:nth-of-type(1)",
+                "action": "focus",
+                "pointer": {
+                  "action": "hover"
+                }
+              },
+              {
+                "selector": "li.nav2 > a:nth-of-type(1)",
+                "action": "observe"
+              }
+            ],
+            "outcomeChecks": [
+              {
+                "selector": "li.nav2 > a:nth-of-type(1)",
+                "kind": "visible"
+              }
+            ]
+          },
+          "reference": [
+            {
+              "focused": false,
+              "href": "https://www.uls.co.za/services/linuxserversolutions/",
+              "selector": "li.nav2 > a:nth-of-type(1)"
+            }
+          ]
+        },
+        "elapsedMs": 4498,
+        "status": "match",
+        "pointerRegression": false,
+        "pointer": [
+          {
+            "selector": "li.nav2 > a:nth-of-type(1)",
+            "href": "https://www.uls.co.za/services/linuxserversolutions/",
+            "focused": false
+          }
+        ],
+        "reached": [
+          {
+            "selector": "li.nav2 > a:nth-of-type(1)",
+            "href": "https://www.uls.co.za/services/linuxserversolutions/",
+            "focused": true
+          }
+        ],
+        "oracle": {
+          "control": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "keyboard-only": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      }
+    },
+    {
+      "site": "is.fi",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://is.fi/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "spaceship.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://spaceship.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "ftcdn.net",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://ftcdn.net/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND ftcdn.net"
+        ]
+      }
+    },
+    {
+      "site": "jfrog.io",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://jfrog.io/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 5,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "tiktokglobalshop.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://tiktokglobalshop.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "infoplease.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://infoplease.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "agl002.online",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://agl002.online/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND agl002.online"
+        ]
+      }
+    },
+    {
+      "site": "protonpro.xyz",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://protonpro.xyz/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND protonpro.xyz"
+        ]
+      }
+    },
+    {
+      "site": "appdomain.cloud",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://appdomain.cloud/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND appdomain.cloud"
+        ]
+      }
+    },
+    {
+      "site": "rzhevnews.ru",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://rzhevnews.ru/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "courtlistener.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://courtlistener.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "washburn.edu",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://washburn.edu/",
+      "scout": {
+        "eligible": true,
+        "url": "https://www.washburn.edu/index.html",
+        "selector": "ul.nav.navbar-nav > li:nth-of-type(2) > span:nth-of-type(1) > a:nth-of-type(1)",
+        "pointer": [
+          {
+            "selector": "ul.nav.navbar-nav > li:nth-of-type(1) > span:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://www.washburn.edu/about/index.html",
+            "focused": false
+          },
+          {
+            "selector": "li.dropdownNav.open > span:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://www.washburn.edu/academics/index.html",
+            "focused": false
+          },
+          {
+            "selector": "#dropMenu2 > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://www.washburn.edu/academics/aos/index.html",
+            "focused": false
+          },
+          {
+            "selector": "#dropMenu2 > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://www.washburn.edu/academics/course-schedule/index.html",
+            "focused": false
+          },
+          {
+            "selector": "#dropMenu2 > li:nth-of-type(3) > a:nth-of-type(1)",
+            "href": "https://www.washburn.edu/library/index.html",
+            "focused": false
+          },
+          {
+            "selector": "#dropMenu2 > li:nth-of-type(4) > a:nth-of-type(1)",
+            "href": "https://www.washburn.edu/academics/academic-affairs.html",
+            "focused": false
+          },
+          {
+            "selector": "#dropMenu2 > li:nth-of-type(5) > a:nth-of-type(1)",
+            "href": "https://www.washburn.edu/academics/academic-catalog/index.html",
+            "focused": false
+          },
+          {
+            "selector": "#dropMenu22 > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "http://washburnlaw.edu/",
+            "focused": false
+          },
+          {
+            "selector": "#dropMenu22 > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "http://washburntech.edu/",
+            "focused": false
+          },
+          {
+            "selector": "#dropMenu23 > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://www.washburn.edu/academics/center-student-success/index.html",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": [
+          {
+            "selector": "ul.nav.navbar-nav > li:nth-of-type(2) > span:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://www.washburn.edu/academics/index.html",
+            "focused": true
+          }
+        ]
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "page did not reset"
+        },
+        "elapsedMs": 828,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "timenote.info",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://timenote.info/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "st-note.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://st-note.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND st-note.com"
+        ]
+      }
+    },
+    {
+      "site": "iis.net",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://iis.net/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 1,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "playground.ru",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://playground.ru/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://playground.ru/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://playground.ru/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "anduril.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://anduril.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "scopelypv.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://scopelypv.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND scopelypv.com"
+        ]
+      }
+    },
+    {
+      "site": "uam.mx",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://uam.mx/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND uam.mx"
+        ]
+      }
+    },
+    {
+      "site": "sacred-texts.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://sacred-texts.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 2,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "stackoverflow.co",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://stackoverflow.co/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 2,
+        "hovered": 1
+      }
+    },
+    {
+      "site": "chargebee.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://chargebee.com/",
+      "scout": {
+        "eligible": true,
+        "url": "https://www.chargebee.com/",
+        "selector": "#navigation-trigger-login-desktop",
+        "pointer": [
+          {
+            "selector": "div.cb-panel.cb-panel--login > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://app.chargebee.com/login",
+            "focused": false
+          },
+          {
+            "selector": "div.cb-panel.cb-panel--login > ul:nth-of-type(1) > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://receivables.chargebee.com/login/",
+            "focused": false
+          },
+          {
+            "selector": "div.cb-panel.cb-panel--login > ul:nth-of-type(1) > li:nth-of-type(3) > a:nth-of-type(1)",
+            "href": "https://app.revrec.chargebee.com/",
+            "focused": false
+          },
+          {
+            "selector": "div.cb-panel.cb-panel--login > ul:nth-of-type(1) > li:nth-of-type(4) > a:nth-of-type(1)",
+            "href": "https://app.retention.chargebee.com/company/sign-in",
+            "focused": false
+          },
+          {
+            "selector": "div.cb-panel.cb-panel--login > ul:nth-of-type(1) > li:nth-of-type(5) > a:nth-of-type(1)",
+            "href": "https://app.reveal.chargebee.com/login",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": [
+          {
+            "selector": "div.cb-panel.cb-panel--login > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://app.chargebee.com/login?_gl=1*39h01r*_gcl_au*NTUxMzQwMjUuMTc5NTU0NDY1MC4tLi0uMTc5NTU0NDY1MC43MjMyMTk4MTIuMTc5NTU0NDY1MC4xNzk1NTQ0NjUw",
+            "focused": true
+          },
+          {
+            "selector": "div.cb-panel.cb-panel--login > ul:nth-of-type(1) > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://receivables.chargebee.com/login/?_gl=1*39h01r*_gcl_au*NTUxMzQwMjUuMTc5NTU0NDY1MC4tLi0uMTc5NTU0NDY1MC43MjMyMTk4MTIuMTc5NTU0NDY1MC4xNzk1NTQ0NjUw",
+            "focused": true
+          },
+          {
+            "selector": "div.cb-panel.cb-panel--login > ul:nth-of-type(1) > li:nth-of-type(3) > a:nth-of-type(1)",
+            "href": "https://app.revrec.chargebee.com/?_gl=1*39h01r*_gcl_au*NTUxMzQwMjUuMTc5NTU0NDY1MC4tLi0uMTc5NTU0NDY1MC43MjMyMTk4MTIuMTc5NTU0NDY1MC4xNzk1NTQ0NjUw",
+            "focused": true
+          },
+          {
+            "selector": "div.cb-panel.cb-panel--login > ul:nth-of-type(1) > li:nth-of-type(4) > a:nth-of-type(1)",
+            "href": "https://app.retention.chargebee.com/company/sign-in?_gl=1*39h01r*_gcl_au*NTUxMzQwMjUuMTc5NTU0NDY1MC4tLi0uMTc5NTU0NDY1MC43MjMyMTk4MTIuMTc5NTU0NDY1MC4xNzk1NTQ0NjUw",
+            "focused": true
+          },
+          {
+            "selector": "div.cb-panel.cb-panel--login > ul:nth-of-type(1) > li:nth-of-type(5) > a:nth-of-type(1)",
+            "href": "https://app.reveal.chargebee.com/login?_gl=1*39h01r*_gcl_au*NTUxMzQwMjUuMTc5NTU0NDY1MC4tLi0uMTc5NTU0NDY1MC43MjMyMTk4MTIuMTc5NTU0NDY1MC4xNzk1NTQ0NjUw",
+            "focused": true
+          },
+          {
+            "selector": "div.sh-sigs > div:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://www.chargebee.com/billing/usage-based/build-outcome-based-pricing-recipe/",
+            "focused": true
+          }
+        ]
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "elapsedMs": 540,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "citex.info",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://citex.info/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "editions-harmattan.fr",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://editions-harmattan.fr/",
+      "scout": {
+        "eligible": true,
+        "url": "https://www.editions-harmattan.fr/",
+        "selector": "#navbarDropdownCatalogue1",
+        "pointer": [
+          {
+            "selector": "ul.navbar-nav > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://www.editions-harmattan.fr/catalogue/thematique/arts-et-spectacles-industries-culturelles/1",
+            "focused": false
+          },
+          {
+            "selector": "ul.navbar-nav > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://www.editions-harmattan.fr/catalogue/thematique/histoire/241",
+            "focused": false
+          },
+          {
+            "selector": "ul.navbar-nav > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > a:nth-of-type(1)",
+            "href": "https://www.editions-harmattan.fr/catalogue/thematique/philosophie/307",
+            "focused": false
+          },
+          {
+            "selector": "ul.navbar-nav > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(4) > a:nth-of-type(1)",
+            "href": "https://www.editions-harmattan.fr/catalogue/thematique/psychologie-et-psychanalyse/314",
+            "focused": false
+          },
+          {
+            "selector": "ul.navbar-nav > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(5) > a:nth-of-type(1)",
+            "href": "https://www.editions-harmattan.fr/catalogue/thematique/religions-et-spiritualites/322",
+            "focused": false
+          },
+          {
+            "selector": "ul.navbar-nav > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(6) > a:nth-of-type(1)",
+            "href": "https://www.editions-harmattan.fr/catalogue/thematique/sciences-de-leducation/332",
+            "focused": false
+          },
+          {
+            "selector": "ul.navbar-nav > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(7) > a:nth-of-type(1)",
+            "href": "https://www.editions-harmattan.fr/catalogue/thematique/sciences-du-langage/343",
+            "focused": false
+          },
+          {
+            "selector": "ul.navbar-nav > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(8) > a:nth-of-type(1)",
+            "href": "https://www.editions-harmattan.fr/catalogue/thematique/sociologie-et-questions-de-societe/349",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": []
+      },
+      "trial": {
+        "detected": {
+          "reason": "no-trigger"
+        },
+        "elapsedMs": 9,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "iterocloud.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://iterocloud.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND iterocloud.com"
+        ]
+      }
+    },
+    {
+      "site": "reedsy.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://reedsy.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "ramp.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://ramp.com/",
+      "scout": {
+        "eligible": true,
+        "url": "https://ramp.com/en-gb/",
+        "selector": "#radix-_r_3_-trigger-Products",
+        "pointer": [
+          {
+            "selector": "div.hidden.w-full > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://ramp.com/en-gb",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": []
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "elapsedMs": 69,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "sng.link",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://sng.link/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND sng.link"
+        ]
+      }
+    },
+    {
+      "site": "shopify.dev",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://shopify.dev/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 2,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "gitkraken.dev",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://gitkraken.dev/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "hostido.net.pl",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://hostido.net.pl/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "asylum94.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://asylum94.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "dominos.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://dominos.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "redirect out of scope",
+          "redirect out of scope"
+        ]
+      }
+    },
+    {
+      "site": "eudemon365.net",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://eudemon365.net/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://eudemon365.net/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://eudemon365.net/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "hufs.ac.kr",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://hufs.ac.kr/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "wavecdn.net",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://wavecdn.net/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND wavecdn.net"
+        ]
+      }
+    },
+    {
+      "site": "lobure.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://lobure.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 522",
+          "HTTP 522"
+        ]
+      }
+    },
+    {
+      "site": "tcnj.edu",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://tcnj.edu/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "cbse.gov.in",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://cbse.gov.in/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "babble.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://babble.com/",
+      "scout": {
+        "eligible": true,
+        "url": "https://www.disney.com/",
+        "selector": "#Disney\\+-control-desktop",
+        "pointer": [
+          {
+            "selector": "#Disney\\+-region-desktop > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://www.disneyplus.com/explore?cid=DTCI-Synergy-Disneycom-Site-Acquisition-NA-US-DisneyPlus-NA-EN-DropdownNav-Disneycom_ExploreDisneyPlus_DropDownNav_Desktop-NA",
+            "focused": false
+          },
+          {
+            "selector": "#Disney\\+-region-desktop > ul:nth-of-type(1) > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://www.disneyplus.com/welcome/disney-hulu-espn-bundle?cid=DTCI-Synergy-Disneycom-Site-Acquisition-Bundle-US-DisneyPlus-NA-EN-DropdownNav-Disneycom_Bundle_DropDownNav_Desktop-NA",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": []
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "elapsedMs": 224,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "11freunde.de",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://11freunde.de/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "meteoprog.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://meteoprog.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "indilogic.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://indilogic.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://indilogic.com/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://indilogic.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "blinq.me",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://blinq.me/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "ryanurharmless.buzz",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://ryanurharmless.buzz/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: net::ERR_CONNECTION_CLOSED at https://ryanurharmless.buzz/\nCall log:\n\u001b[2m  - navigating to \"https://ryanurharmless.buzz/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: net::ERR_CONNECTION_CLOSED at https://ryanurharmless.buzz/\nCall log:\n\u001b[2m  - navigating to \"https://ryanurharmless.buzz/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "ganjingworld.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://ganjingworld.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "suremdm.io",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://suremdm.io/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND suremdm.io"
+        ]
+      }
+    },
+    {
+      "site": "fciis.net",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://fciis.net/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND fciis.net"
+        ]
+      }
+    },
+    {
+      "site": "easyhost.be",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://easyhost.be/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 1,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "hoster.by",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://hoster.by/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "filmyzilla75.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://filmyzilla75.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "nitropay.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://nitropay.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "document360.io",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://document360.io/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 4,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "getglobaldata.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://getglobaldata.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "dbpia.co.kr",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://dbpia.co.kr/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 5,
+        "hovered": 3
+      }
+    },
+    {
+      "site": "dailytelegraph.com.au",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://dailytelegraph.com.au/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "paylution.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://paylution.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "contentabc.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://contentabc.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND contentabc.com"
+        ]
+      }
+    },
+    {
+      "site": "att-idns.net",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://att-idns.net/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND att-idns.net"
+        ]
+      }
+    },
+    {
+      "site": "joker.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://joker.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "genie.co.kr",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://genie.co.kr/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "trashbox.ru",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://trashbox.ru/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "melaleuca.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://melaleuca.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 8,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "groupe-sncf.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://groupe-sncf.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "nyc.mn",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://nyc.mn/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: net::ERR_SSL_PROTOCOL_ERROR at https://nyc.mn/\nCall log:\n\u001b[2m  - navigating to \"https://nyc.mn/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: net::ERR_SSL_PROTOCOL_ERROR at https://nyc.mn/\nCall log:\n\u001b[2m  - navigating to \"https://nyc.mn/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "keepassxc.org",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://keepassxc.org/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "d-library.jp",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://d-library.jp/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND d-library.jp"
+        ]
+      }
+    },
+    {
+      "site": "identitynow.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://identitynow.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: net::ERR_CONNECTION_CLOSED at https://identitynow.com/\nCall log:\n\u001b[2m  - navigating to \"https://identitynow.com/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: net::ERR_CONNECTION_CLOSED at https://identitynow.com/\nCall log:\n\u001b[2m  - navigating to \"https://identitynow.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "eb.mil.br",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://eb.mil.br/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND eb.mil.br"
+        ]
+      }
+    },
+    {
+      "site": "santacruzsentinel.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://santacruzsentinel.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "adidas-group.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://adidas-group.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://adidas-group.com/\nCall log:\n\u001b[2m  - navigating to \"https://adidas-group.com/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://adidas-group.com/\nCall log:\n\u001b[2m  - navigating to \"https://adidas-group.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "webcaster.pro",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://webcaster.pro/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://webcaster.pro/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://webcaster.pro/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "webhostingpad.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://webhostingpad.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "gecwalmart.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://gecwalmart.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND gecwalmart.com"
+        ]
+      }
+    },
+    {
+      "site": "ahgora.com.br",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://ahgora.com.br/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 402",
+          "HTTP 402"
+        ]
+      }
+    },
+    {
+      "site": "primelocation.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://primelocation.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "bcferries.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://bcferries.com/",
+      "scout": {
+        "eligible": true,
+        "url": "https://www.bcferries.com/",
+        "selector": "ul.nav.navbar-nav > li:nth-of-type(3) > a:nth-of-type(1)",
+        "pointer": [
+          {
+            "selector": "div.col-md-9 > a:nth-of-type(1)",
+            "href": "https://www.bcferries.com/cookie-policy",
+            "focused": false
+          },
+          {
+            "selector": "#cAccept",
+            "href": "",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": [
+          {
+            "selector": "ul.nav.navbar-nav > li:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://www.bcferries.com/travel-boarding",
+            "focused": true
+          },
+          {
+            "selector": "ul.nav.navbar-nav > li:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://www.bcferries.com/travel-boarding/travel-tips",
+            "focused": true
+          },
+          {
+            "selector": "ul.nav.navbar-nav > li:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://www.bcferries.com/travel-boarding/terminal-directions-parking-food",
+            "focused": true
+          },
+          {
+            "selector": "ul.nav.navbar-nav > li:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(3) > a:nth-of-type(1)",
+            "href": "https://www.bcferries.com/travel-boarding/coach-bus-shuttle",
+            "focused": true
+          }
+        ]
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "Cannot read properties of null (reading 'map')"
+        },
+        "elapsedMs": 250,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "ultraseno4d.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://ultraseno4d.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "seg-social.gob.es",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://seg-social.gob.es/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND seg-social.gob.es"
+        ]
+      }
+    },
+    {
+      "site": "wiki2.org",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://wiki2.org/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "tct-rom.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://tct-rom.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://tct-rom.com/\nCall log:\n\u001b[2m  - navigating to \"https://tct-rom.com/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://tct-rom.com/\nCall log:\n\u001b[2m  - navigating to \"https://tct-rom.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "shp.ee",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://shp.ee/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 404",
+          "HTTP 404"
+        ]
+      }
+    },
+    {
+      "site": "okx.ac",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://okx.ac/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 1,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "replocdn.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://replocdn.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "imsowiwiwiwiwi.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://imsowiwiwiwiwi.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://imsowiwiwiwiwi.com/\nCall log:\n\u001b[2m  - navigating to \"https://imsowiwiwiwiwi.com/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://imsowiwiwiwiwi.com/\nCall log:\n\u001b[2m  - navigating to \"https://imsowiwiwiwiwi.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "usaid.gov",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://usaid.gov/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "Access challenge: Just a moment...",
+          "Access challenge: Just a moment..."
+        ]
+      }
+    },
+    {
+      "site": "4dex.io",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://4dex.io/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND 4dex.io"
+        ]
+      }
+    },
+    {
+      "site": "abo.fi",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://abo.fi/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 1,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "fecyt.es",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://fecyt.es/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "telekom.rs",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://telekom.rs/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 8,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "finviz.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://finviz.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "asos-media.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://asos-media.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://asos-media.com/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://asos-media.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "akiads.net",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://akiads.net/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "mrf.io",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://mrf.io/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 500",
+          "HTTP 500"
+        ]
+      }
+    },
+    {
+      "site": "nfhsnetwork.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://nfhsnetwork.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 1,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "mezamashi.media",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://mezamashi.media/",
+      "scout": {
+        "eligible": true,
+        "url": "https://mezamashi.media/",
+        "selector": "a.g-nav-main-link.--entertainment",
+        "pointer": [
+          {
+            "selector": "ul.g-nav-sub-wrap.--entertainment > li:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://mezamashi.media/subcategory/variety",
+            "focused": false
+          },
+          {
+            "selector": "ul.g-nav-sub-wrap.--entertainment > li:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://mezamashi.media/subcategory/movie",
+            "focused": false
+          },
+          {
+            "selector": "ul.g-nav-sub-wrap.--entertainment > li:nth-of-type(3) > a:nth-of-type(1)",
+            "href": "https://mezamashi.media/subcategory/stage",
+            "focused": false
+          },
+          {
+            "selector": "ul.g-nav-sub-wrap.--entertainment > li:nth-of-type(4) > a:nth-of-type(1)",
+            "href": "https://mezamashi.media/subcategory/interview",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": []
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "elapsedMs": 220,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "itmedia.co.jp",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://itmedia.co.jp/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "newfold.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://newfold.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "dishaccess.tv",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://dishaccess.tv/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://dishaccess.tv/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://dishaccess.tv/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "betteruptime.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://betteruptime.com/",
+      "scout": {
+        "eligible": true,
+        "url": "https://betterstack.com/uptime",
+        "selector": "button.pl-3.py-3",
+        "pointer": [
+          {
+            "selector": "#platform-menu",
+            "href": "",
+            "focused": false
+          },
+          {
+            "selector": "#platform-menu > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://betterstack.com/ai-sre",
+            "focused": false
+          },
+          {
+            "selector": "#platform-menu > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(2)",
+            "href": "https://betterstack.com/incident-management",
+            "focused": false
+          },
+          {
+            "selector": "#platform-menu > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(3)",
+            "href": "https://betterstack.com/status-page",
+            "focused": false
+          },
+          {
+            "selector": "#platform-menu > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > a:nth-of-type(1)",
+            "href": "https://betterstack.com/tracing",
+            "focused": false
+          },
+          {
+            "selector": "#platform-menu > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > a:nth-of-type(2)",
+            "href": "https://betterstack.com/log-management",
+            "focused": false
+          },
+          {
+            "selector": "#platform-menu > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > a:nth-of-type(3)",
+            "href": "https://betterstack.com/infrastructure-monitoring",
+            "focused": false
+          },
+          {
+            "selector": "#platform-menu > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > a:nth-of-type(1)",
+            "href": "https://betterstack.com/uptime",
+            "focused": false
+          },
+          {
+            "selector": "#platform-menu > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > a:nth-of-type(2)",
+            "href": "https://betterstack.com/real-user-monitoring",
+            "focused": false
+          },
+          {
+            "selector": "#platform-menu > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > a:nth-of-type(3)",
+            "href": "https://betterstack.com/error-tracking",
+            "focused": false
+          }
+        ],
+        "baselineKeyboard": [
+          {
+            "selector": "#uptime-monitoring > div:nth-of-type(1) > a:nth-of-type(1)",
+            "href": "https://betterstack.com/website-monitoring",
+            "focused": true
+          }
+        ]
+      },
+      "trial": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "elapsedMs": 41,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "cel.ro",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://cel.ro/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://cel.ro/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+          "page.goto: Timeout 11000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://cel.ro/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        ]
+      }
+    },
+    {
+      "site": "evtrust.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://evtrust.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "e-gov.go.jp",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://e-gov.go.jp/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND e-gov.go.jp"
+        ]
+      }
+    },
+    {
+      "site": "kawasaki.jp",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://kawasaki.jp/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND kawasaki.jp"
+        ]
+      }
+    },
+    {
+      "site": "businessresearchinsights.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://businessresearchinsights.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "tripadvisor.com.mx",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://tripadvisor.com.mx/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "bitbucket.io",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://bitbucket.io/",
+      "scout": {
+        "eligible": false,
+        "reason": "no navigation trigger",
+        "triggers": 0,
+        "hovered": 0
+      }
+    },
+    {
+      "site": "pcigdc.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://pcigdc.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "getaddrinfo ENOTFOUND pcigdc.com"
+        ]
+      }
+    },
+    {
+      "site": "king.com",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://king.com/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 1,
+        "hovered": 1
+      }
+    },
+    {
+      "site": "returntoschoolroadmap.org",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://returntoschoolroadmap.org/",
+      "scout": {
+        "eligible": false,
+        "reason": "page unavailable",
+        "errors": [
+          "HTTP 403",
+          "HTTP 403"
+        ]
+      }
+    },
+    {
+      "site": "rampf-gruppe.de",
+      "source": "proof/heldout-v5/sample.json",
+      "url": "https://rampf-gruppe.de/",
+      "scout": {
+        "eligible": false,
+        "reason": "no bounded keyboard gap",
+        "triggers": 6,
+        "hovered": 0
+      }
+    }
+  ]
+}
