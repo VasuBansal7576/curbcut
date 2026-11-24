@@ -3,6 +3,7 @@ import {appendFile,mkdir,readFile} from 'node:fs/promises'
 import {createInterface} from 'node:readline'
 import {setTimeout as delay} from 'node:timers/promises'
 import path from 'node:path'
+import {pathToFileURL} from 'node:url'
 import {ROOT,instant,readJSON} from '../core/io.mjs'
 import {siteKey} from '../core/task.mjs'
 import {withLock} from '../core/loop.mjs'
@@ -13,7 +14,7 @@ import {concurrency,count,firstInput,frozen,maximumRank,minimumRank,optional,rea
 const normalDomain=/^[a-z\d-]+(?:\.[a-z\d-]+)+$/
 const legacy='proof/hard-v4'
 
-async function historicalDomains(refs) {
+export async function historicalDomains(refs) {
   const sites=new Set()
   const pattern='https?://[A-Za-z0-9._-]+|"(site|domain|host|hostname)": *"[A-Za-z0-9._-]+"'
   for(const ref of refs) {
@@ -29,7 +30,7 @@ async function historicalDomains(refs) {
   return sites
 }
 
-async function safetyScreen(directory,allowed) {
+export async function safetyScreen(directory,allowed) {
   const pinned=await readJSON(path.join(ROOT,legacy,'safety-exclusions.json'))
   const blocked=new Map()
   for(const source of pinned.sources) {
@@ -137,7 +138,10 @@ async function scout() {
   console.log(JSON.stringify(summary,null,2))
 }
 
+if(process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {
 const [action,csv,safetyDirectory]=process.argv.slice(2)
 if(action==='sample' && csv && safetyDirectory) await sample(csv,safetyDirectory)
 else if(action==='scout') await withLock(scout)
 else throw new Error('Usage: node scripts/scout-v5.mjs sample <tranco.csv> <pinned-safety-lists> | scout')
+
+}
