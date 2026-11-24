@@ -5,6 +5,7 @@
   let attempted = new WeakSet();
   let page = location.href;
   let pending, timer;
+  let rescan = false;
   let once = false;
   let authorizedPage;
   let expires = 0;
@@ -24,7 +25,10 @@
   }
 
   function clear() {
+    clearTimeout(timer);
+    timer = undefined;
     pending = null;
+    rescan = false;
     authorizedPage = undefined;
     attempted = new WeakSet();
     for (const { cleanup } of applied.values()) cleanup();
@@ -32,13 +36,20 @@
   }
 
   function schedule() {
-    clearTimeout(timer);
     if (page !== location.href) {
       clear();
       page = location.href;
     }
-    if (!enabled() || pending || document.hidden) return;
-    timer = setTimeout(request, Math.max(400, expires - Date.now()));
+    if (settings.liveNamesEnabled !== true || !pageEnabled() || document.hidden) return;
+    if (pending) {
+      rescan = true;
+      return;
+    }
+    if (timer !== undefined) return;
+    timer = setTimeout(() => {
+      timer = undefined;
+      void request();
+    }, Math.max(400, expires - Date.now()));
   }
 
   async function request() {
@@ -47,21 +58,26 @@
       page = location.href;
     }
     if (!permitted() || pending) return { ok: false };
+    expires = Date.now() + 1200;
     const state = CurbCut.collectNames();
     const targets = state.targets.flatMap(target => {
+      if (target.role !== "link" && target.role !== "button") return [];
       const node = document.querySelector(target.selector);
       return node && !attempted.has(node) ? [{ target, node }] : [];
     });
     if (!targets.length) return { ok: false };
     const token = crypto.randomUUID();
     pending = { token, targets, url: location.href, state };
-    expires = Date.now() + 1200;
+    rescan = false;
     try {
       return await chrome.runtime.sendMessage({ type: "LIVE_NAMES_REQUEST", token, once });
     } catch {
       return { ok: false };
     } finally {
-      if (pending?.token === token) pending = null;
+      if (pending?.token === token) {
+        pending = null;
+        if (rescan) schedule();
+      }
     }
   }
 
@@ -101,17 +117,21 @@
       reply({ ok: false });
       return false;
     }
-    if (message.type === "LIVE_NAMES_CAPTURE") {
+    if (message.type === "LIVE_NAMES_PERMITTED") {
+      reply({ ok: true });
+    } else if (message.type === "LIVE_NAMES_CAPTURE") {
       const { language, viewport } = pending.state;
       const targets = pending.targets.map(({ target }) => target);
       reply({ language, viewport, targets, sample: language ? null : CurbCut.visibleLanguageSample() });
     } else if (message.type === "LIVE_NAMES_CONFIRM") {
       const current = currentTargets();
-      reply({ ok: pending.targets.every(({ target, node }) => {
+      const indices = pending.targets.flatMap(({ target, node }, index) => {
         const refreshed = current.get(target.selector);
-        return document.querySelector(target.selector) === node && sameTarget(target, refreshed) &&
-          target.box.every((value, index) => Math.abs(value - refreshed.box[index]) < 1);
-      }) });
+        const matches = document.querySelector(target.selector) === node && sameTarget(target, refreshed) &&
+          target.box.every((value, axis) => Math.abs(value - refreshed.box[axis]) < 1);
+        return matches ? [index] : [];
+      });
+      reply({ indices });
     } else if (message.type === "LIVE_NAMES_APPLY") {
       const current = currentTargets();
       if (!Array.isArray(message.results) || message.results.length !== pending.targets.length) {
@@ -119,8 +139,10 @@
         return false;
       }
       for (const [index, { target, node }] of pending.targets.entries()) {
-        const { name, confidence, error } = message.results[index];
-        if (error || document.querySelector(target.selector) !== node || !sameTarget(target, current.get(target.selector))) continue;
+        const result = message.results[index];
+        if (!result || result.error || document.querySelector(target.selector) !== node ||
+            !sameTarget(target, current.get(target.selector))) continue;
+        const { name, confidence } = result;
         attempted.add(node);
         const cleanup = CurbCut.applyLiveName(node, target.role, name);
         if (cleanup) applied.set(node, { name, confidence, cleanup });
@@ -142,7 +164,9 @@
     else if (keys.some(key => key in changes)) schedule();
   });
   window.addEventListener("scroll", schedule, { passive: true });
+  window.addEventListener("resize", schedule);
   window.addEventListener("popstate", schedule);
+  globalThis.navigation?.addEventListener("currententrychange", schedule);
   document.addEventListener("visibilitychange", schedule);
   new MutationObserver(records => {
     if (page !== location.href || records.some(record => record.type === "childList")) {

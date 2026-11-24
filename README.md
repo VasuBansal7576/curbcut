@@ -63,4 +63,6 @@ With Playwright Chromium installed, `node scripts/extension-e2e.mjs` rechecks th
 
 Each result covers a recorded task. Reading view models DOM roles and names, and screen reader parity remains untested. Kane can hit its step limit or return an inconclusive result.
 
-Opt-in TypeSafe Jev live naming confirmed **6/10** accepted names on v7, with **10/14** coverage and **666 ms** median viewport latency. Kane verified **2/5** sampled naming cases. The language decision fixed **1/1** v7 task in the local oracle. [Jev decision evidence](proof/heldout-v7/README.md)
+In the installed extension, opt-in TypeSafe Jev live naming applied **15/35** unnamed links and buttons across a 19-site public run. Manual review found **13/15 correct (86.7%)** and two vague. At least one name appeared on **7 of 13** sites with unnamed controls. The median time to the first applied name was **1.14 s**. [Public-site results](proof/jev/live-naming-real-sites.json) · [Meridiano demo](proof/jev/live-naming-demo/capture.json)
+
+At Mass.edu, Tab cycles reproduced the About submenu barrier. A populated email field triggered the privacy gate and no keyboard help offer appeared. In the earlier v7 study, Kane verified **2/5** naming cases and the language decision fixed **1/1** task in the local oracle. [Keyboard replay](proof/jev/stuck-live-mass-edu.json) · [Held-out v7 study](proof/heldout-v7/README.md)

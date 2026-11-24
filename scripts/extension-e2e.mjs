@@ -13,7 +13,8 @@ import {journeyLane,replayInstalledProbe} from '../core/probe.mjs'
 import {acceptableURL,allowedHost,normalizeTask,siteKey,taskDestination} from '../core/task.mjs'
 
 if(process.argv[2]==='--jev') {
-  await import('./jev-live-extension-e2e.mjs')
+  const {runLiveNamingE2e}=await import('./jev-live-extension-e2e.mjs')
+  await runLiveNamingE2e(process.argv.slice(3))
   await import('./jev-stuck-extension-e2e.mjs')
   process.exit(0)
 }

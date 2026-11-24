@@ -6,7 +6,7 @@ Jev takes structured state and returns typed choices, yes/no probabilities, scor
 
 | Use | Disposition | Measurement |
 | --- | --- | --- |
-| A. Live names | Keep, opt-in | 6/10 accepted names confirmed on v7, from 14 registered targets. Median 666 ms across 11 viewports. |
+| A. Live names | Keep, opt-in | In the installed extension, 13/15 applied names correct (86.7%), from 35 unnamed links and buttons. The median time to the first name was 1,137 ms on 7 sites. |
 | B. Document language | Keep for local proof | 1/1 v7 and 3/3 development tasks passed the `setLang` replay. |
 | F. Keyboard help | Keep, experimental and opt-in | Four synthetic development traces gave 3/3 true alerts and 0/1 false alerts at 0.75. The archive produced zero alerts on 154 screened traces, including 96 scorable traces. Precision was undefined and recall was 0/140. |
 | C. Real barrier check | Drop as a Kane gate | At 0.07, the archive proxy skipped 3/19 passing baselines and lost zero verified cases. It skipped neither of the two passing baselines from the v5 random sample. Local screenshots yielded zero passing baselines skipped on 13 recoverable journeys. |
@@ -15,7 +15,25 @@ Jev takes structured state and returns typed choices, yes/no probabilities, scor
 
 [Held-out naming and language](../heldout-v7/README.md) · [Language development](language-development.json) · [Keyboard archive](stuck-backtest.json) · [Keyboard development](stuck-development.json) · [Barrier archive proxy](barrier-backtest.json) · [Local journey frames](barrier-local.json) · [Screenshot preflight backtest](preflight-backtest.json)
 
-The naming demo captures a development fixture in Reading view at 1920×1080. Two buttons and one link begin unnamed. The observed names and scores were “catalog search” 0.90, “Menu” 0.55 and “Instagram” 0.98. [Before](live-naming-demo/before.png) · [After](live-naming-demo/after.png) · [Capture JSON](live-naming-demo/capture.json)
+## Public extension replay
+
+Headless Chromium loaded the installed extension and visited 19 public sites drawn from earlier audits. Seventeen served their pages and 13 exposed 35 unnamed links or buttons in the sampled viewports. Two of those sites had populated fields, leaving 33 controls on 11 privacy-eligible sites. The extension named 15 controls on seven sites. First-name latency from enabling live naming on the loaded page was 1,137 ms median and 1,864 ms p95 across those seven sites.
+
+Manual review found 13 correct, zero wrong and two vague names. The vague names were “stormhealth” and “quora.com.” The installed extension now applies a 0.80 confidence floor and scopes naming to links and buttons. Jev can use filenames, IDs and CSS classes as evidence. Candidate names come from common functions and destination or page text. The JSON includes every applied name, confidence, judgment, evidence, timing and per-page Reading view captures. [Public-site results](live-naming-real-sites.json)
+
+Live naming captures the active viewport with Reading view closed. Opening Reading view shows the applied names. The Meridiano demo shows the adjacent menu and search buttons before and after naming at 1920×1080. Jev chose “Menú” at 0.92 and “Buscar” at 1.00. [Before](live-naming-demo/before.png) · [After](live-naming-demo/after.png) · [Capture JSON](live-naming-demo/capture.json)
+
+On Mass.edu, with zero Curb Cut repairs active, keyboard focus and Arrow Down left The DHE link hidden, while pointer hover opened the submenu. Four Tab and Shift+Tab cycles around About produced no offer. A populated email field triggered the privacy gate before any Jev request. [Keyboard replay](stuck-live-mass-edu.json)
+
+With Playwright Chromium installed and `CURBCUT_JEV_KEY_FILE` pointing to a Jev key file, run the public checks below. Use a fresh output directory to keep the adjudicated run and its screenshots.
+
+```sh
+npm run build
+CURBCUT_JEV_PROOF_DIR=/tmp/curbcut-jev-replay node scripts/jev-live-extension-e2e.mjs
+CURBCUT_JEV_PROOF_DIR=/tmp/curbcut-jev-replay node scripts/jev-stuck-live.mjs
+```
+
+## Earlier experiments
 
 The keyboard archive compares task verdicts with the most recent key window from Kane events and local oracle steps. Many archived sessions omit intermediate focus identities or timestamps. The live experiment includes those signals when available, represented as temporary IDs and a named/unnamed flag. A high score offers a choice to reapply a known rule or ask Jev to name controls once. The extension waits for user consent before either action.
 

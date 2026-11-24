@@ -52,7 +52,7 @@ export function serve(port=4317) {
         if(!key) return json(503,{error:'Jev is not configured.'})
         if(url.pathname.endsWith('/name')) {
           if(!Array.isArray(data.pairs) || !data.pairs.length || data.pairs.length>4) return json(400,{error:'Invalid naming batch'})
-          return json(200,await chooseNames(key,data.pairs,data.language))
+          return json(200,await chooseNames(key,data.pairs,data.language,{live:true}))
         }
         if(url.pathname.endsWith('/language')) {
           if(typeof data.sample!=='string') return json(400,{error:'Invalid language sample'})

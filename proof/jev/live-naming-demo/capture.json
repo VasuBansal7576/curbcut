@@ -1,88 +1,210 @@
 {
-  "checkedAt": "2026-11-24T14:28:54.599Z",
-  "runner": "playwright",
-  "source": "controlled development fixture",
-  "width": 1920,
-  "height": 1080,
-  "before": [
-    "button · (unnamed)",
-    "button · (unnamed)",
-    "link · (unnamed)"
-  ],
-  "after": [
-    "button · catalog search",
-    "button · Menu",
-    "link · Instagram"
-  ],
-  "decisions": [
-    {
-      "selector": "#catalog-search",
-      "role": "button",
-      "choice": "context0",
-      "proposed": "catalog search",
-      "confidence": 0.9,
-      "decoration": 0,
-      "providerMs": 467,
-      "model": "jev-1.14.0",
-      "name": "catalog search"
-    },
-    {
-      "selector": "#site-menu",
-      "role": "button",
-      "choice": "menu",
-      "proposed": "Menu",
-      "confidence": 0.55,
-      "decoration": 0,
-      "providerMs": 467,
-      "model": "jev-1.14.0",
-      "name": "Menu"
-    },
-    {
-      "selector": "#instagram",
-      "role": "link",
-      "choice": "brand1",
-      "proposed": "Instagram",
-      "confidence": 0.98,
-      "decoration": 0,
-      "providerMs": 467,
-      "model": "jev-1.14.0",
-      "name": "Instagram"
-    }
-  ],
-  "elapsedMs": 539,
-  "namingThresholds": {
-    "name": 0.55,
-    "decorative": 0.9
+  "checkedAt": "2026-11-24T14:57:04.186Z",
+  "runner": "Playwright headless Chromium with installed Curb Cut extension",
+  "latencyDefinition": "Time from enabling live naming on the loaded page to the first completed application.",
+  "publicPages": true,
+  "decisionModel": "jev-1.14.0",
+  "liveNamingThreshold": 0.8,
+  "url": "https://meridiano.net/",
+  "finalUrl": "https://meridiano.net/",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
   },
-  "languageThreshold": 0.75,
-  "language": [
+  "language": "es",
+  "privacy": {
+    "ok": true,
+    "instantPrivacy": true
+  },
+  "candidates": [
     {
-      "expected": "en",
-      "tag": "en",
-      "confidence": 1,
-      "providerMs": 297,
-      "model": "jev-1.14.0"
+      "role": "link",
+      "selector": "a.link.icono",
+      "href": "https://meridiano.net/beisbol/beisbol-venezolano",
+      "source": "https://pxcdn.meridiano.net/651ae6881ef066001f9b2891/1696261915073.png",
+      "iconTitle": "",
+      "iconId": "",
+      "attributes": {
+        "class": "link icono"
+      },
+      "controlled": "",
+      "caption": "",
+      "heading": "",
+      "targetTitle": "Beisbol Venezolano",
+      "box": [
+        758.8125,
+        150.5,
+        808.8125,
+        190.5
+      ]
     },
     {
-      "expected": "es",
-      "tag": "es",
-      "confidence": 1,
-      "providerMs": 298,
-      "model": "jev-1.14.0"
+      "role": "button",
+      "selector": "#open-sidebar",
+      "href": null,
+      "source": null,
+      "iconTitle": "",
+      "iconId": "",
+      "attributes": {
+        "id": "open-sidebar",
+        "class": "open-sidebar"
+      },
+      "controlled": "",
+      "caption": "",
+      "heading": "",
+      "targetTitle": null,
+      "box": [
+        380,
+        65,
+        404,
+        89
+      ]
     },
     {
-      "expected": "ja",
-      "tag": "ja",
-      "confidence": 1,
-      "providerMs": 308,
-      "model": "jev-1.14.0"
-    },
-    {
-      "expected": "fr",
-      "tag": "fr",
-      "confidence": 1,
-      "providerMs": 283,
-      "model": "jev-1.14.0"
+      "role": "button",
+      "selector": "a.btn-buscar",
+      "href": "https://meridiano.net/buscar",
+      "source": null,
+      "iconTitle": "",
+      "iconId": "",
+      "attributes": {
+        "id": "search-icon",
+        "class": "btn-buscar"
+      },
+      "controlled": "",
+      "caption": "",
+      "heading": "",
+      "targetTitle": "Buscar",
+      "box": [
+        420,
+        64,
+        440,
+        90
+      ]
     }
-  ]
+  ],
+  "screenshots": {
+    "before": "proof/jev/live-naming-demo/before.png",
+    "after": "proof/jev/live-naming-demo/after.png",
+    "beforeScrollTop": 21026,
+    "afterScrollTop": 21065
+  },
+  "latencyMs": 1128,
+  "attempts": [
+    {
+      "startedAfterMs": 414,
+      "durationMs": 714,
+      "targets": 3,
+      "confirmed": 3,
+      "providerErrors": [],
+      "appliedCount": 3
+    }
+  ],
+  "names": [
+    {
+      "role": "link",
+      "selector": "a.link.icono",
+      "href": "https://meridiano.net/beisbol/beisbol-venezolano",
+      "source": "https://pxcdn.meridiano.net/651ae6881ef066001f9b2891/1696261915073.png",
+      "iconTitle": "",
+      "iconId": "",
+      "attributes": {
+        "class": "link icono"
+      },
+      "controlled": "",
+      "caption": "",
+      "heading": "",
+      "targetTitle": "Beisbol Venezolano",
+      "box": [
+        758.8125,
+        150.5,
+        808.8125,
+        190.5
+      ],
+      "attr": "aria-label",
+      "name": "Beisbol Venezolano",
+      "confidence": 0.97,
+      "choice": "context0",
+      "model": "jev-1.14.0",
+      "providerMs": 507,
+      "appliedAfterMs": 1128,
+      "before": "link · (unnamed)",
+      "after": "link · Beisbol Venezolano",
+      "visibleInBefore": false,
+      "visibleInAfter": false,
+      "judgment": "correct",
+      "judgmentEvidence": "The baseball category artwork links to the Beisbol Venezolano section."
+    },
+    {
+      "role": "button",
+      "selector": "#open-sidebar",
+      "href": null,
+      "source": null,
+      "iconTitle": "",
+      "iconId": "",
+      "attributes": {
+        "id": "open-sidebar",
+        "class": "open-sidebar"
+      },
+      "controlled": "",
+      "caption": "",
+      "heading": "",
+      "targetTitle": null,
+      "box": [
+        380,
+        65,
+        404,
+        89
+      ],
+      "attr": "aria-label",
+      "name": "Menú",
+      "confidence": 0.92,
+      "choice": "menu",
+      "model": "jev-1.14.0",
+      "providerMs": 507,
+      "appliedAfterMs": 1128,
+      "before": "button · (unnamed) · expanded false",
+      "after": "button · Menú · expanded false",
+      "visibleInBefore": true,
+      "visibleInAfter": true,
+      "judgment": "correct",
+      "judgmentEvidence": "The hamburger button toggles the site sidebar and exposes an expanded state."
+    },
+    {
+      "role": "button",
+      "selector": "a.btn-buscar",
+      "href": "https://meridiano.net/buscar",
+      "source": null,
+      "iconTitle": "",
+      "iconId": "",
+      "attributes": {
+        "id": "search-icon",
+        "class": "btn-buscar"
+      },
+      "controlled": "",
+      "caption": "",
+      "heading": "",
+      "targetTitle": "Buscar",
+      "box": [
+        420,
+        64,
+        440,
+        90
+      ],
+      "attr": "aria-label",
+      "name": "Buscar",
+      "confidence": 1,
+      "choice": "search",
+      "model": "jev-1.14.0",
+      "providerMs": 507,
+      "appliedAfterMs": 1128,
+      "before": "button · (unnamed)",
+      "after": "button · Buscar",
+      "visibleInBefore": true,
+      "visibleInAfter": true,
+      "judgment": "correct",
+      "judgmentEvidence": "The magnifier and /buscar destination identify site search."
+    }
+  ],
+  "source": "https://meridiano.net/"
 }

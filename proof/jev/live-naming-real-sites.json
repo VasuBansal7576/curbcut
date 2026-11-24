@@ -1,0 +1,2015 @@
+{
+  "checkedAt": "2026-11-24T14:57:29.990Z",
+  "runner": "Playwright headless Chromium with installed Curb Cut extension",
+  "latencyDefinition": "Time from enabling live naming on the loaded page to the first completed application.",
+  "publicPages": true,
+  "decisionModel": "jev-1.14.0",
+  "liveNamingThreshold": 0.8,
+  "summary": {
+    "attemptedSites": 19,
+    "loadedSites": 17,
+    "sitesWithUnnamedControls": 13,
+    "privacyEligibleSites": 11,
+    "sitesWithNames": 7,
+    "unnamedControls": 35,
+    "privacyEligibleControls": 33,
+    "appliedNames": 15,
+    "medianLatencyMs": 1137,
+    "p95LatencyMs": 1864
+  },
+  "adjudication": {
+    "method": "Manual review of exact DOM targets, Reading view rows, destination URLs, and the page’s artwork or icon hints. Vague and wrong both count against precision.",
+    "correct": 13,
+    "vague": 2,
+    "wrong": 0,
+    "precision": 0.8666666666666667
+  },
+  "pages": [
+    {
+      "url": "https://www.munich-airport.de/",
+      "finalUrl": "https://www.munich-airport.de/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "de",
+      "privacy": {
+        "ok": true,
+        "instantPrivacy": false
+      },
+      "candidates": [
+        {
+          "role": "button",
+          "selector": "ul.keyvisual-direction-nav > li:nth-of-type(2) > button:nth-of-type(1)",
+          "href": null,
+          "source": null,
+          "iconTitle": "",
+          "iconId": "icon-chevron-right",
+          "attributes": {
+            "class": "btn btn-square btn-secondary icon icon-chevron-right"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "9.000 Mitarbeitende – ein Arbeitgeber",
+          "targetTitle": null,
+          "box": [
+            1316,
+            335,
+            1366,
+            385
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/www.munich-airport.de/before.png",
+        "after": "proof/jev/live-naming-real-sites/www.munich-airport.de/after.png",
+        "scrollTop": 971
+      },
+      "latencyMs": null,
+      "attempts": [],
+      "names": []
+    },
+    {
+      "url": "https://mollygram.com/",
+      "finalUrl": "https://mollygram.com/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "en",
+      "privacy": {
+        "ok": true,
+        "instantPrivacy": true
+      },
+      "candidates": [
+        {
+          "role": "img",
+          "selector": "#navbarDropdownMenuLang > img:nth-of-type(1)",
+          "href": null,
+          "source": "https://mollygram.com/assets/img/flags/en.svg",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "lang-menu me-1 my-auto"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            1089.546875,
+            29.859375,
+            1105.546875,
+            40.515625
+          ]
+        },
+        {
+          "role": "button",
+          "selector": "#paste",
+          "href": null,
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "id": "paste",
+            "class": "btn-tooltip mb-0 border-0 bg-white text-dark"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "Anonymous Instagram Story Viewer by Mollygram ❤️ View Insta Stories",
+          "targetTitle": null,
+          "box": [
+            877.328125,
+            482,
+            903.328125,
+            506.40625
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/mollygram.com/before.png",
+        "after": "proof/jev/live-naming-real-sites/mollygram.com/after.png",
+        "scrollTop": 525
+      },
+      "latencyMs": 847,
+      "attempts": [
+        {
+          "startedAfterMs": 404,
+          "durationMs": 443,
+          "targets": 1,
+          "confirmed": 1,
+          "providerErrors": [],
+          "appliedCount": 1
+        }
+      ],
+      "names": [
+        {
+          "role": "button",
+          "selector": "#paste",
+          "href": null,
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "id": "paste",
+            "class": "btn-tooltip mb-0 border-0 bg-white text-dark"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "Anonymous Instagram Story Viewer by Mollygram ❤️ View Insta Stories",
+          "targetTitle": null,
+          "box": [
+            877.328125,
+            482,
+            903.328125,
+            506.40625
+          ],
+          "attr": "aria-label",
+          "name": "Paste from clipboard",
+          "confidence": 1,
+          "choice": "paste",
+          "model": "jev-1.14.0",
+          "providerMs": 364,
+          "appliedAfterMs": 847,
+          "before": "button · (unnamed)",
+          "after": "button · Paste from clipboard",
+          "judgment": "correct",
+          "judgmentEvidence": "The clipboard icon, paste button ID and adjacent URL field identify the action."
+        }
+      ]
+    },
+    {
+      "url": "https://meridiano.net/",
+      "finalUrl": "https://meridiano.net/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "es",
+      "privacy": {
+        "ok": true,
+        "instantPrivacy": true
+      },
+      "candidates": [
+        {
+          "role": "button",
+          "selector": "#open-sidebar",
+          "href": null,
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "id": "open-sidebar",
+            "class": "open-sidebar"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            103,
+            65,
+            127,
+            89
+          ]
+        },
+        {
+          "role": "button",
+          "selector": "a.btn-buscar",
+          "href": "https://meridiano.net/buscar",
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "id": "search-icon",
+            "class": "btn-buscar"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "Buscar",
+          "box": [
+            143,
+            64,
+            163,
+            90
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/meridiano.net/before.png",
+        "after": "proof/jev/live-naming-real-sites/meridiano.net/after.png",
+        "scrollTop": 20646
+      },
+      "latencyMs": 1137,
+      "attempts": [
+        {
+          "startedAfterMs": 434,
+          "durationMs": 703,
+          "targets": 2,
+          "confirmed": 2,
+          "providerErrors": [],
+          "appliedCount": 2
+        }
+      ],
+      "names": [
+        {
+          "role": "button",
+          "selector": "#open-sidebar",
+          "href": null,
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "id": "open-sidebar",
+            "class": "open-sidebar"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            103,
+            65,
+            127,
+            89
+          ],
+          "attr": "aria-label",
+          "name": "Menú",
+          "confidence": 0.88,
+          "choice": "menu",
+          "model": "jev-1.14.0",
+          "providerMs": 524,
+          "appliedAfterMs": 1137,
+          "before": "button · (unnamed) · expanded false",
+          "after": "button · Menú · expanded false",
+          "judgment": "correct",
+          "judgmentEvidence": "The hamburger button toggles the site sidebar and exposes an expanded state."
+        },
+        {
+          "role": "button",
+          "selector": "a.btn-buscar",
+          "href": "https://meridiano.net/buscar",
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "id": "search-icon",
+            "class": "btn-buscar"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "Buscar",
+          "box": [
+            143,
+            64,
+            163,
+            90
+          ],
+          "attr": "aria-label",
+          "name": "Buscar",
+          "confidence": 1,
+          "choice": "search",
+          "model": "jev-1.14.0",
+          "providerMs": 524,
+          "appliedAfterMs": 1137,
+          "before": "button · (unnamed)",
+          "after": "button · Buscar",
+          "judgment": "correct",
+          "judgmentEvidence": "The magnifier and /buscar destination identify site search."
+        }
+      ]
+    },
+    {
+      "url": "https://www.futbolfantasy.com/",
+      "finalUrl": "https://www.futbolfantasy.com/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "es",
+      "privacy": {
+        "ok": true,
+        "instantPrivacy": true
+      },
+      "candidates": [
+        {
+          "role": "link",
+          "selector": "div.logo.d-none > a:nth-of-type(1)",
+          "href": "https://www.futbolfantasy.com/",
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "navbar-brand"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "Alineaciones probables - FútbolFantasy",
+          "box": [
+            244.0625,
+            11.5,
+            338.0625,
+            53.5
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/www.futbolfantasy.com/before.png",
+        "after": "proof/jev/live-naming-real-sites/www.futbolfantasy.com/after.png",
+        "scrollTop": 0
+      },
+      "latencyMs": null,
+      "attempts": [
+        {
+          "startedAfterMs": 407,
+          "durationMs": 44,
+          "targets": 1,
+          "confirmed": 0,
+          "providerErrors": [],
+          "appliedCount": null
+        },
+        {
+          "startedAfterMs": 1616,
+          "durationMs": 460,
+          "targets": 1,
+          "confirmed": 1,
+          "providerErrors": [],
+          "appliedCount": 0
+        }
+      ],
+      "names": []
+    },
+    {
+      "url": "https://www.samcart.com/",
+      "finalUrl": "https://www.samcart.com/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "en",
+      "privacy": {
+        "ok": true,
+        "instantPrivacy": true
+      },
+      "candidates": [
+        {
+          "role": "link",
+          "selector": "a.framer-tpjn24.framer-1vdc97x",
+          "href": "https://www.samcart.com/",
+          "source": "https://framerusercontent.com/images/PILwuxQYyienS0Zrgme1ebJw.svg",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "framer-tpjn24 framer-1vdc97x"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "SamCart | Sell Digital Products. Make Every Sale Worth More.",
+          "box": [
+            40,
+            88,
+            180,
+            112
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/www.samcart.com/before.png",
+        "after": "proof/jev/live-naming-real-sites/www.samcart.com/after.png",
+        "scrollTop": 0
+      },
+      "latencyMs": 965,
+      "attempts": [
+        {
+          "startedAfterMs": 403,
+          "durationMs": 562,
+          "targets": 1,
+          "confirmed": 1,
+          "providerErrors": [],
+          "appliedCount": 1
+        }
+      ],
+      "names": [
+        {
+          "role": "link",
+          "selector": "a.framer-tpjn24.framer-1vdc97x",
+          "href": "https://www.samcart.com/",
+          "source": "https://framerusercontent.com/images/PILwuxQYyienS0Zrgme1ebJw.svg",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "framer-tpjn24 framer-1vdc97x"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "SamCart | Sell Digital Products. Make Every Sale Worth More.",
+          "box": [
+            40,
+            88,
+            180,
+            112
+          ],
+          "attr": "aria-label",
+          "name": "SamCart",
+          "confidence": 0.98,
+          "choice": "context0",
+          "model": "jev-1.14.0",
+          "providerMs": 333,
+          "appliedAfterMs": 965,
+          "before": "link · (unnamed)",
+          "after": "link · SamCart",
+          "judgment": "correct",
+          "judgmentEvidence": "The SamCart logo links to the SamCart homepage."
+        }
+      ]
+    },
+    {
+      "url": "https://www.vedantu.com/",
+      "finalUrl": "https://www.vedantu.com/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "en",
+      "privacy": {
+        "ok": true,
+        "instantPrivacy": true
+      },
+      "candidates": [
+        {
+          "role": "img",
+          "selector": "div.flex.gap-16 > div:nth-of-type(1) > a:nth-of-type(1) > img:nth-of-type(1)",
+          "href": null,
+          "source": "https://vmkt.vedantu.com/vmkt/PROD/svg%2Bxml/3bf6f173-d389-438a-be15-769f9f64613f-1682411152290-4102418410874681.svg%2Bxml",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "mb-2"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            161,
+            501,
+            201,
+            541
+          ]
+        },
+        {
+          "role": "img",
+          "selector": "div.flex.gap-16 > div:nth-of-type(2) > a:nth-of-type(1) > img:nth-of-type(1)",
+          "href": null,
+          "source": "https://vmkt.vedantu.com/vmkt/PROD/svg%2Bxml/821a08ef-daaf-4d8e-961d-1804aac64c77-1682411124172-4102418410874681.svg%2Bxml",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "mb-2"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            341,
+            501,
+            381,
+            541
+          ]
+        },
+        {
+          "role": "img",
+          "selector": "div.flex.gap-16 > div:nth-of-type(3) > a:nth-of-type(1) > img:nth-of-type(1)",
+          "href": null,
+          "source": "https://vmkt.vedantu.com/vmkt/PROD/svg%2Bxml/c73a29df-1d72-4d87-83b9-548fd32ab20f-1682411185877-4102418410874681.svg%2Bxml",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "mb-2"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            521,
+            501,
+            561,
+            541
+          ]
+        },
+        {
+          "role": "img",
+          "selector": "div.flex.gap-16 > div:nth-of-type(4) > a:nth-of-type(1) > img:nth-of-type(1)",
+          "href": null,
+          "source": "https://vmkt.vedantu.com/vmkt/PROD/svg%2Bxml/5d86bcba-2443-4044-b97d-107d61c0da79-1682411094804-4102418410874681.svg%2Bxml",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "mb-2"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            701,
+            501,
+            741,
+            540.015625
+          ]
+        },
+        {
+          "role": "img",
+          "selector": "div.flex.gap-16 > div:nth-of-type(5) > a:nth-of-type(1) > img:nth-of-type(1)",
+          "href": null,
+          "source": "https://vmkt.vedantu.com/vmkt/PROD/png/df232556-42ab-483a-860c-2c7c549ba897-1696348393825-4102515828415223.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "mb-2"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            881,
+            501,
+            921,
+            541
+          ]
+        },
+        {
+          "role": "img",
+          "selector": "div.flex.gap-16 > div:nth-of-type(6) > a:nth-of-type(1) > img:nth-of-type(1)",
+          "href": null,
+          "source": "https://vmkt.vedantu.com/vmkt/PROD/svg%2Bxml/95a720d0-b5c1-4fcc-8a55-769a33bbaed0-1691483030590-4102515828415223.svg%2Bxml",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "mb-2"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            1061,
+            501,
+            1101,
+            538.765625
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "a.floatWhatsAppWATICTA",
+          "href": "https://api.whatsapp.com/send",
+          "source": "https://www.vedantu.com/seo/content-images/27303c35-900f-4d5a-b0df-519a3c111be1.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "floatWhatsAppWATICTA"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "box": [
+            1306,
+            770,
+            1356,
+            820
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "#floatingPhoneButtonV2CTA",
+          "href": null,
+          "source": "https://www.vedantu.com/seo/content-images/52eb63b4-bd3f-4aff-8d07-1a9b50d5eeb3.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "id": "floatingPhoneButtonV2CTA",
+            "class": "floatPhoneCTA"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            1306,
+            710,
+            1356,
+            760
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/www.vedantu.com/before.png",
+        "after": "proof/jev/live-naming-real-sites/www.vedantu.com/after.png",
+        "scrollTop": 0
+      },
+      "latencyMs": 1124,
+      "attempts": [
+        {
+          "startedAfterMs": 415,
+          "durationMs": 709,
+          "targets": 2,
+          "confirmed": 2,
+          "providerErrors": [],
+          "appliedCount": 1
+        }
+      ],
+      "names": [
+        {
+          "role": "link",
+          "selector": "a.floatWhatsAppWATICTA",
+          "href": "https://api.whatsapp.com/send",
+          "source": "https://www.vedantu.com/seo/content-images/27303c35-900f-4d5a-b0df-519a3c111be1.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "floatWhatsAppWATICTA"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "box": [
+            1306,
+            770,
+            1356,
+            820
+          ],
+          "attr": "aria-label",
+          "name": "WhatsApp",
+          "confidence": 0.81,
+          "choice": "brand12",
+          "model": "jev-1.14.0",
+          "providerMs": 575,
+          "appliedAfterMs": 1124,
+          "before": null,
+          "after": "link · WhatsApp",
+          "judgment": "correct",
+          "judgmentEvidence": "The floating WhatsApp icon links to the WhatsApp Send endpoint. The control loaded after the first Reading view capture."
+        }
+      ]
+    },
+    {
+      "url": "https://www.ndtv.com/",
+      "error": "Public page returned HTTP 403"
+    },
+    {
+      "url": "https://www.allrecipes.com/",
+      "error": "Public page returned HTTP 402"
+    },
+    {
+      "url": "https://lesscss.org/",
+      "finalUrl": "https://lesscss.org/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "en",
+      "privacy": {
+        "ok": true,
+        "instantPrivacy": true
+      },
+      "candidates": [
+        {
+          "role": "img",
+          "selector": "img",
+          "href": null,
+          "source": "https://lesscss.org/public/img/less_logo.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            551,
+            233.984375,
+            815,
+            350.984375
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/lesscss.org/before.png",
+        "after": "proof/jev/live-naming-real-sites/lesscss.org/after.png",
+        "scrollTop": 0
+      },
+      "latencyMs": null,
+      "attempts": [],
+      "names": []
+    },
+    {
+      "url": "https://www.storm.mg/",
+      "finalUrl": "https://www.storm.mg/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "zh-Hant-TW",
+      "privacy": {
+        "ok": true,
+        "instantPrivacy": true
+      },
+      "candidates": [
+        {
+          "role": "link",
+          "selector": "div.relative.mx-auto > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+          "href": "https://new7.storm.mg/",
+          "source": "https://www.storm.mg/img/logo-the-journalist.svg",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "新新聞",
+          "box": [
+            83,
+            298,
+            173.171875,
+            323.96875
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "div.relative.mx-auto > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(2)",
+          "href": "https://onepercent.storm.mg/",
+          "source": "https://www.storm.mg/img/logo-one-percent-2.svg",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "1% STYLE",
+          "box": [
+            189.171875,
+            302.484375,
+            284.171875,
+            319.484375
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "div.relative.mx-auto > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(3)",
+          "href": "https://www.storm.mg/stormhealth/",
+          "source": "https://www.storm.mg/img/logo-storm-health.svg",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "box": [
+            300.171875,
+            298,
+            396.546875,
+            323.96875
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "a.block.my-2\\.5",
+          "href": "https://www.storm.mg/",
+          "source": "https://www.storm.mg/img/logo-storm.svg",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "block my-2.5 smg-tablet:mx-auto print:mx-auto smg-desktop:my-6 smg-tablet:my-6 print:mb-0 print:mt-8"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "風傳媒｜Storm.mg",
+          "box": [
+            605,
+            306,
+            761,
+            354
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "div.relative.mx-auto > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > a:nth-of-type(1)",
+          "href": "https://www.storm.mg/member/premium-plan",
+          "source": "https://www.storm.mg/img/wsj-sub.svg",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "rounded-full bg-smg-gradient-07-skeuomorph p-2 shadow-smg-button hover:shadow-smg-button-golden"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "華爾街日報訂閱",
+          "box": [
+            883.96875,
+            291,
+            1025.96875,
+            333
+          ]
+        },
+        {
+          "role": "button",
+          "selector": "div.relative.mx-auto > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > button:nth-of-type(1)",
+          "href": null,
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "button flex items-center justify-center"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            1195,
+            296,
+            1235,
+            328
+          ]
+        },
+        {
+          "role": "button",
+          "selector": "div.relative.mx-auto > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(3) > div:nth-of-type(1) > button:nth-of-type(1)",
+          "href": null,
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "memberMenu ml-4"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            1251,
+            296,
+            1283,
+            328
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "div.smg-desktop\\:pb-4.smg-tablet\\:static > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > a:nth-of-type(1)",
+          "href": "https://www.storm.mg/article/11184773",
+          "source": "https://images.storm.mg/cloud/c092c78d14bb95f6ba78f8158fd513f1e12dd581.webp",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "圖解》習近平大清洗？上海市委書記陳吉寧落馬！曾被視為接班人，涉違紀違法遭到調查",
+          "box": [
+            83,
+            494,
+            859,
+            900
+          ]
+        },
+        {
+          "role": "button",
+          "selector": "#SectionTwoColWithSwiperBannerNavPrev-0",
+          "href": null,
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "id": "SectionTwoColWithSwiperBannerNavPrev-0",
+            "class": "navBtn navBtnLeft"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            88,
+            692.25,
+            128,
+            732.25
+          ]
+        },
+        {
+          "role": "button",
+          "selector": "#SectionTwoColWithSwiperBannerNavNext-0",
+          "href": null,
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "id": "SectionTwoColWithSwiperBannerNavNext-0",
+            "class": "navBtn navBtnRight"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            814,
+            692.25,
+            854,
+            732.25
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "div.hidden.bg-top > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+          "href": "https://www.storm.mg/article/11184261",
+          "source": "https://images.storm.mg/cloud/8760b4d0818d6a0b72b8fbca5d3b2b317a91b70e.webp",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "articleGeneralCover relative block h-auto w-full"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "華爾街日報》詹姆士龐德手腕空空，引發腕錶業爭奪戰",
+          "box": [
+            83,
+            801.296875,
+            331,
+            900
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "div.hidden.bg-top > div:nth-of-type(1) > div:nth-of-type(2) > a:nth-of-type(1)",
+          "href": "https://www.storm.mg/article/11184509",
+          "source": "https://images.storm.mg/cloud/432e86a0d65b95dd0532db95210b58b6a7e6df38.webp",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "articleGeneralCover relative block h-auto w-full"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "黃仁勳回鍋執行長，還有國會這關要過！共和黨議員質疑「憑什麼說沒國安風險」，民主黨連川普也要查",
+          "box": [
+            347,
+            801.296875,
+            595,
+            900
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "div.hidden.bg-top > div:nth-of-type(1) > div:nth-of-type(3) > a:nth-of-type(1)",
+          "href": "https://www.storm.mg/article/5577759",
+          "source": "https://images.storm.mg/cloud/b7365814e5df29a5e363983d20e307e1f84d0ee8.webp",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "articleGeneralCover relative block h-auto w-full"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "【新新聞】沈伯洋喊共享機車納入TPASS 免費10分鐘誰買單？從下班缺車看通勤補助的三筆帳",
+          "box": [
+            611,
+            801.296875,
+            859,
+            900
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/www.storm.mg/before.png",
+        "after": "proof/jev/live-naming-real-sites/www.storm.mg/after.png",
+        "scrollTop": 0
+      },
+      "latencyMs": 1394,
+      "attempts": [
+        {
+          "startedAfterMs": 425,
+          "durationMs": 969,
+          "targets": 10,
+          "confirmed": 10,
+          "providerErrors": [],
+          "appliedCount": 6
+        }
+      ],
+      "names": [
+        {
+          "role": "link",
+          "selector": "div.relative.mx-auto > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+          "href": "https://new7.storm.mg/",
+          "source": "https://www.storm.mg/img/logo-the-journalist.svg",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "新新聞",
+          "box": [
+            83,
+            298,
+            173.171875,
+            323.96875
+          ],
+          "attr": "aria-label",
+          "name": "新新聞",
+          "confidence": 0.95,
+          "choice": "context0",
+          "model": "jev-1.14.0",
+          "providerMs": 532,
+          "appliedAfterMs": 1394,
+          "before": "link · (unnamed)",
+          "after": "link · 新新聞",
+          "judgment": "correct",
+          "judgmentEvidence": "The logo link points to the site’s 新新聞 publication and repeats an existing name for the same destination."
+        },
+        {
+          "role": "link",
+          "selector": "div.relative.mx-auto > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(2)",
+          "href": "https://onepercent.storm.mg/",
+          "source": "https://www.storm.mg/img/logo-one-percent-2.svg",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "1% STYLE",
+          "box": [
+            189.171875,
+            302.484375,
+            284.171875,
+            319.484375
+          ],
+          "attr": "aria-label",
+          "name": "1% STYLE",
+          "confidence": 0.83,
+          "choice": "context0",
+          "model": "jev-1.14.0",
+          "providerMs": 532,
+          "appliedAfterMs": 1394,
+          "before": "link · (unnamed)",
+          "after": "link · 1% STYLE",
+          "judgment": "correct",
+          "judgmentEvidence": "The logo link points to the 1% STYLE publication and repeats the name of the same destination."
+        },
+        {
+          "role": "link",
+          "selector": "div.relative.mx-auto > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(3)",
+          "href": "https://www.storm.mg/stormhealth/",
+          "source": "https://www.storm.mg/img/logo-storm-health.svg",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "box": [
+            300.171875,
+            298,
+            396.546875,
+            323.96875
+          ],
+          "attr": "aria-label",
+          "name": "stormhealth",
+          "confidence": 0.98,
+          "choice": "context0",
+          "model": "jev-1.14.0",
+          "providerMs": 532,
+          "appliedAfterMs": 1394,
+          "before": "link · (unnamed)",
+          "after": "link · stormhealth",
+          "judgment": "vague",
+          "judgmentEvidence": "The destination serves the Storm Health publication. The unsegmented URL slug is weaker than the readable publication name shown by the logo."
+        },
+        {
+          "role": "link",
+          "selector": "a.block.my-2\\.5",
+          "href": "https://www.storm.mg/",
+          "source": "https://www.storm.mg/img/logo-storm.svg",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "block my-2.5 smg-tablet:mx-auto print:mx-auto smg-desktop:my-6 smg-tablet:my-6 print:mb-0 print:mt-8"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "風傳媒｜Storm.mg",
+          "box": [
+            605,
+            306,
+            761,
+            354
+          ],
+          "attr": "aria-label",
+          "name": "風傳媒",
+          "confidence": 1,
+          "choice": "context0",
+          "model": "jev-1.14.0",
+          "providerMs": 532,
+          "appliedAfterMs": 1394,
+          "before": "link · (unnamed)",
+          "after": "link · 風傳媒",
+          "judgment": "correct",
+          "judgmentEvidence": "The logo links to the 風傳媒 homepage."
+        },
+        {
+          "role": "link",
+          "selector": "div.relative.mx-auto > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > a:nth-of-type(1)",
+          "href": "https://www.storm.mg/member/premium-plan",
+          "source": "https://www.storm.mg/img/wsj-sub.svg",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "rounded-full bg-smg-gradient-07-skeuomorph p-2 shadow-smg-button hover:shadow-smg-button-golden"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "華爾街日報訂閱",
+          "box": [
+            883.96875,
+            291,
+            1025.96875,
+            333
+          ],
+          "attr": "aria-label",
+          "name": "華爾街日報訂閱",
+          "confidence": 0.91,
+          "choice": "context0",
+          "model": "jev-1.14.0",
+          "providerMs": 680,
+          "appliedAfterMs": 1394,
+          "before": "link · (unnamed)",
+          "after": "link · 華爾街日報訂閱",
+          "judgment": "correct",
+          "judgmentEvidence": "The WSJ artwork and matching destination text identify the Wall Street Journal subscription."
+        },
+        {
+          "role": "link",
+          "selector": "div.smg-desktop\\:pb-4.smg-tablet\\:static > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > a:nth-of-type(1)",
+          "href": "https://www.storm.mg/article/11184773",
+          "source": "https://images.storm.mg/cloud/c092c78d14bb95f6ba78f8158fd513f1e12dd581.webp",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "圖解》習近平大清洗？上海市委書記陳吉寧落馬！曾被視為接班人，涉違紀違法遭到調查",
+          "box": [
+            83,
+            494,
+            859,
+            900
+          ],
+          "attr": "aria-label",
+          "name": "圖解》習近平大清洗？上海市委書記陳吉寧落馬！曾被視為接班人，涉違紀違法遭到調查",
+          "confidence": 0.85,
+          "choice": "context0",
+          "model": "jev-1.14.0",
+          "providerMs": 680,
+          "appliedAfterMs": 1394,
+          "before": "link · (unnamed)",
+          "after": "link · 圖解》習近平大清洗？上海市委書記陳吉寧落馬！曾被視為接班人，涉違紀違法遭到調查",
+          "judgment": "correct",
+          "judgmentEvidence": "The link leads to the same article as the adjacent named headline."
+        }
+      ]
+    },
+    {
+      "url": "https://www.woah.org/en/home/",
+      "finalUrl": "https://www.woah.org/en/home/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "en-GB",
+      "privacy": {
+        "ok": true,
+        "instantPrivacy": true
+      },
+      "candidates": [
+        {
+          "role": "link",
+          "selector": "div.header__logo > a:nth-of-type(1)",
+          "href": "https://www.woah.org/en/home/",
+          "source": "https://www.woah.org/app/uploads/2025/01/woah-primary-logo-english-orange-black.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "Search",
+          "box": [
+            61,
+            60,
+            326,
+            128
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/www.woah.org/before.png",
+        "after": "proof/jev/live-naming-real-sites/www.woah.org/after.png",
+        "scrollTop": 0
+      },
+      "latencyMs": null,
+      "attempts": [
+        {
+          "startedAfterMs": 410,
+          "durationMs": 438,
+          "targets": 1,
+          "confirmed": 1,
+          "providerErrors": [],
+          "appliedCount": 0
+        }
+      ],
+      "names": []
+    },
+    {
+      "url": "https://medcitynews.com/",
+      "finalUrl": "https://medcitynews.com/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "en-US",
+      "privacy": {
+        "ok": true,
+        "instantPrivacy": true
+      },
+      "candidates": [
+        {
+          "role": "link",
+          "selector": "#post-151210 > figure:nth-of-type(1) > a:nth-of-type(1)",
+          "href": "https://medcitynews.com/2026/11/data-quality-in-practice-the-one-question-worth-remembering/",
+          "source": "https://medcitynews.com/wp-content/uploads/sites/7/2026/06/GettyImages-2226074175-360x200.jpg",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "post-card__thumbnail-link"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "Data Quality in Practice: The One Question Worth Remembering",
+          "box": [
+            165,
+            666.1875,
+            494.328125,
+            863.78125
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/medcitynews.com/before.png",
+        "after": "proof/jev/live-naming-real-sites/medcitynews.com/after.png",
+        "scrollTop": 812
+      },
+      "latencyMs": null,
+      "attempts": [
+        {
+          "startedAfterMs": 441,
+          "durationMs": 505,
+          "targets": 1,
+          "confirmed": 1,
+          "providerErrors": [],
+          "appliedCount": 0
+        }
+      ],
+      "names": []
+    },
+    {
+      "url": "https://wiki.selfhtml.org/",
+      "finalUrl": "https://wiki.selfhtml.org/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "de-x-formal",
+      "privacy": {
+        "ok": true,
+        "instantPrivacy": true
+      },
+      "candidates": [
+        {
+          "role": "link",
+          "selector": "ul.cards-list > li:nth-of-type(3) > div:nth-of-type(3) > a:nth-of-type(1)",
+          "href": "https://blog.selfhtml.org/",
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "external text"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "Blog",
+          "box": [
+            990.90625,
+            345.546875,
+            1331.734375,
+            687.90625
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "ul.cards-list > li:nth-of-type(5) > div:nth-of-type(3) > a:nth-of-type(1)",
+          "href": "https://bildung.social/@SELFHTML",
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "external text"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "box": [
+            270.46875,
+            708.296875,
+            611.296875,
+            900
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "ul.cards-list > li:nth-of-type(6) > div:nth-of-type(3) > a:nth-of-type(1)",
+          "href": "https://forum.selfhtml.org/self/2025/nov/03/stammtisch-am-mittwoch/1822671",
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "external text"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "box": [
+            630.6875,
+            708.296875,
+            971.515625,
+            900
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "li.qa-askForum > a:nth-of-type(1)",
+          "href": "https://forum.selfhtml.org/self/new",
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "im Selfhtml-Forum fragen!",
+          "box": [
+            1334.734375,
+            230.71875,
+            1366,
+            261.984375
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "li.qa-extSearch > a:nth-of-type(1)",
+          "href": "https://wiki.selfhtml.org/wiki/Spezial:Suche",
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "erweiterte Suche",
+          "box": [
+            1334.734375,
+            284.375,
+            1366,
+            315.640625
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "li.qa-toTop > a:nth-of-type(1)",
+          "href": "https://wiki.selfhtml.org/",
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "SELFHTML-Wiki",
+          "box": [
+            1334.734375,
+            338.03125,
+            1366,
+            369.296875
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/wiki.selfhtml.org/before.png",
+        "after": "proof/jev/live-naming-real-sites/wiki.selfhtml.org/after.png",
+        "scrollTop": 269
+      },
+      "latencyMs": 1273,
+      "attempts": [
+        {
+          "startedAfterMs": 402,
+          "durationMs": 871,
+          "targets": 3,
+          "confirmed": 3,
+          "providerErrors": [],
+          "appliedCount": 1
+        },
+        {
+          "startedAfterMs": 1677,
+          "durationMs": 556,
+          "targets": 3,
+          "confirmed": 3,
+          "providerErrors": [],
+          "appliedCount": 2
+        }
+      ],
+      "names": [
+        {
+          "role": "link",
+          "selector": "ul.cards-list > li:nth-of-type(6) > div:nth-of-type(3) > a:nth-of-type(1)",
+          "href": "https://forum.selfhtml.org/self/2025/nov/03/stammtisch-am-mittwoch/1822671",
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "external text"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "box": [
+            630.6875,
+            708.296875,
+            971.515625,
+            900
+          ],
+          "attr": "aria-label",
+          "name": "stammtisch am mittwoch",
+          "confidence": 0.85,
+          "choice": "context0",
+          "model": "jev-1.14.0",
+          "providerMs": 766,
+          "appliedAfterMs": 1273,
+          "before": "link · (unnamed)",
+          "after": "link · stammtisch am mittwoch",
+          "judgment": "correct",
+          "judgmentEvidence": "The link identifies the specific Wednesday Stammtisch forum discussion in its destination path."
+        },
+        {
+          "role": "link",
+          "selector": "li.qa-askForum > a:nth-of-type(1)",
+          "href": "https://forum.selfhtml.org/self/new",
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "im Selfhtml-Forum fragen!",
+          "box": [
+            1334.734375,
+            230.71875,
+            1366,
+            261.984375
+          ],
+          "attr": "aria-label",
+          "name": "im Selfhtml-Forum fragen!",
+          "confidence": 0.97,
+          "choice": "context0",
+          "model": "jev-1.14.0",
+          "providerMs": 468,
+          "appliedAfterMs": 2233,
+          "before": null,
+          "after": "link · im Selfhtml-Forum fragen!",
+          "judgment": "correct",
+          "judgmentEvidence": "The link points to the forum’s new-question composer and matches the named link to the same destination. The control loaded after the first Reading view capture."
+        }
+      ]
+    },
+    {
+      "url": "https://crushblocks.com/",
+      "finalUrl": "https://crushblocks.com/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "en",
+      "privacy": {
+        "ok": true,
+        "instantPrivacy": true
+      },
+      "candidates": [
+        {
+          "role": "img",
+          "selector": "div.project-container.game-item-list > div:nth-of-type(1) > img:nth-of-type(1)",
+          "href": null,
+          "source": "https://crushblocks.com/assets/game-nova-block.773cab23.webp",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            99.15625,
+            785.40625,
+            468.15625,
+            900
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/crushblocks.com/before.png",
+        "after": "proof/jev/live-naming-real-sites/crushblocks.com/after.png",
+        "scrollTop": 0
+      },
+      "latencyMs": null,
+      "attempts": [],
+      "names": []
+    },
+    {
+      "url": "https://www.demandsage.com/",
+      "finalUrl": "https://www.demandsage.com/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "en-US",
+      "privacy": {
+        "ok": true,
+        "instantPrivacy": true
+      },
+      "candidates": [
+        {
+          "role": "link",
+          "selector": "div.wp-block-uagb-image.uagb-block-55c0c78e > figure:nth-of-type(1) > a:nth-of-type(1)",
+          "href": "https://www.youtube.com/channel/UCohey7N8acouP5-K6OerCcg",
+          "source": "https://www.demandsage.com/wp-content/uploads/2023/10/youtube.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "YouTube",
+          "box": [
+            96.5,
+            508,
+            126.5,
+            538
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "div.wp-block-uagb-image.uagb-block-0a64e07b > figure:nth-of-type(1) > a:nth-of-type(1)",
+          "href": "https://www.reddit.com/user/demandsage",
+          "source": "https://www.demandsage.com/wp-content/uploads/2023/10/reddit.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "box": [
+            146.5,
+            508,
+            176.5,
+            538
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "div.wp-block-uagb-image.uagb-block-6d7f54e6 > figure:nth-of-type(1) > a:nth-of-type(1)",
+          "href": "https://www.quora.com/profile/Demand-Sage-1",
+          "source": "https://www.demandsage.com/wp-content/uploads/2023/10/qoura.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "box": [
+            196.5,
+            508,
+            226.5,
+            538
+          ]
+        },
+        {
+          "role": "link",
+          "selector": "div.wp-block-uagb-container.social-icon-hover > div:nth-of-type(4) > figure:nth-of-type(1) > a:nth-of-type(1)",
+          "href": "https://twitter.com/DemandSage",
+          "source": "https://www.demandsage.com/wp-content/uploads/2023/08/twiiter.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "Twitter",
+          "box": [
+            246.5,
+            508,
+            276.5,
+            538
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/www.demandsage.com/before.png",
+        "after": "proof/jev/live-naming-real-sites/www.demandsage.com/after.png",
+        "scrollTop": 33
+      },
+      "latencyMs": 1864,
+      "attempts": [
+        {
+          "startedAfterMs": 406,
+          "durationMs": 1458,
+          "targets": 4,
+          "confirmed": 4,
+          "providerErrors": [],
+          "appliedCount": 2
+        }
+      ],
+      "names": [
+        {
+          "role": "link",
+          "selector": "div.wp-block-uagb-image.uagb-block-55c0c78e > figure:nth-of-type(1) > a:nth-of-type(1)",
+          "href": "https://www.youtube.com/channel/UCohey7N8acouP5-K6OerCcg",
+          "source": "https://www.demandsage.com/wp-content/uploads/2023/10/youtube.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "YouTube",
+          "box": [
+            96.5,
+            508,
+            126.5,
+            538
+          ],
+          "attr": "aria-label",
+          "name": "YouTube",
+          "confidence": 0.94,
+          "choice": "brand3",
+          "model": "jev-1.14.0",
+          "providerMs": 1345,
+          "appliedAfterMs": 1864,
+          "before": "link · (unnamed)",
+          "after": "link · YouTube",
+          "judgment": "correct",
+          "judgmentEvidence": "The YouTube icon points to the site’s YouTube channel from its social links."
+        },
+        {
+          "role": "link",
+          "selector": "div.wp-block-uagb-image.uagb-block-6d7f54e6 > figure:nth-of-type(1) > a:nth-of-type(1)",
+          "href": "https://www.quora.com/profile/Demand-Sage-1",
+          "source": "https://www.demandsage.com/wp-content/uploads/2023/10/qoura.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "box": [
+            196.5,
+            508,
+            226.5,
+            538
+          ],
+          "attr": "aria-label",
+          "name": "quora.com",
+          "confidence": 0.99,
+          "choice": "context2",
+          "model": "jev-1.14.0",
+          "providerMs": 1345,
+          "appliedAfterMs": 1864,
+          "before": "link · (unnamed)",
+          "after": "link · quora.com",
+          "judgment": "vague",
+          "judgmentEvidence": "The link opens the DemandSage profile. The raw domain omits the profile and reads like a link to the platform homepage."
+        }
+      ]
+    },
+    {
+      "url": "https://bitcore.io/",
+      "finalUrl": "https://bitcore.io/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "en",
+      "privacy": {
+        "ok": true,
+        "instantPrivacy": true
+      },
+      "candidates": [
+        {
+          "role": "img",
+          "selector": "img.m-t-lg.m-b",
+          "href": null,
+          "source": "https://bitcore.io/images/home-logo.626a6645.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "m-t-lg m-b fade-in-down home-logo"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            608,
+            169.24920654296875,
+            758,
+            379.24920654296875
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/bitcore.io/before.png",
+        "after": "proof/jev/live-naming-real-sites/bitcore.io/after.png",
+        "scrollTop": 0
+      },
+      "latencyMs": null,
+      "attempts": [],
+      "names": []
+    },
+    {
+      "url": "https://www.independent.com/",
+      "finalUrl": "https://www.independent.com/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "en-US",
+      "privacy": {
+        "ok": false,
+        "reason": "sensitive-document",
+        "instantPrivacy": false
+      },
+      "candidates": [
+        {
+          "role": "button",
+          "selector": "div.main-nav-bar > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2)",
+          "href": null,
+          "source": null,
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "search-toggle"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            83.71875,
+            364.0625,
+            105.71875,
+            387.0625
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/www.independent.com/before.png",
+        "after": "proof/jev/live-naming-real-sites/www.independent.com/after.png",
+        "scrollTop": 0
+      },
+      "latencyMs": null,
+      "attempts": [],
+      "names": []
+    },
+    {
+      "url": "https://www.cgsecurity.org/",
+      "finalUrl": "https://www.cgsecurity.org/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "en",
+      "privacy": {
+        "ok": true,
+        "instantPrivacy": true
+      },
+      "candidates": [
+        {
+          "role": "img",
+          "selector": "div.mw-content-ltr.mw-parser-output > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(1) > td:nth-of-type(1) > span:nth-of-type(1) > a:nth-of-type(1) > img:nth-of-type(1)",
+          "href": null,
+          "source": "https://www.cgsecurity.org/mw/images/thumb/Testdisklogo_clear_100.png/50px-Testdisklogo_clear_100.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "mw-file-element"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            204,
+            276.53125,
+            254,
+            326.53125
+          ]
+        },
+        {
+          "role": "img",
+          "selector": "div.mw-content-ltr.mw-parser-output > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(2) > td:nth-of-type(1) > span:nth-of-type(1) > a:nth-of-type(1) > img:nth-of-type(1)",
+          "href": null,
+          "source": "https://www.cgsecurity.org/mw/images/thumb/Photorec_64x64.png/50px-Photorec_64x64.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "mw-file-element"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            204,
+            346.125,
+            254,
+            396.125
+          ]
+        },
+        {
+          "role": "img",
+          "selector": "span.mw-default-size > a:nth-of-type(1) > img:nth-of-type(1)",
+          "href": null,
+          "source": "https://www.cgsecurity.org/mw/images/Cmospwd.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "mw-file-element"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            204,
+            458.25,
+            244,
+            498.25
+          ]
+        },
+        {
+          "role": "img",
+          "selector": "div.mw-content-ltr.mw-parser-output > table:nth-of-type(3) > tbody:nth-of-type(1) > tr:nth-of-type(1) > td:nth-of-type(1) > span:nth-of-type(1) > a:nth-of-type(1) > img:nth-of-type(1)",
+          "href": null,
+          "source": "https://www.cgsecurity.org/mw/images/thumb/Tux.png/50px-Tux.png",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {
+            "class": "mw-file-element"
+          },
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": null,
+          "box": [
+            204,
+            560.375,
+            254,
+            619.375
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/www.cgsecurity.org/before.png",
+        "after": "proof/jev/live-naming-real-sites/www.cgsecurity.org/after.png",
+        "scrollTop": 0
+      },
+      "latencyMs": null,
+      "attempts": [],
+      "names": []
+    },
+    {
+      "url": "https://bitcointalk.org/",
+      "finalUrl": "https://bitcointalk.org/",
+      "viewport": {
+        "width": 1366,
+        "height": 900
+      },
+      "language": "",
+      "privacy": {
+        "ok": true,
+        "instantPrivacy": true
+      },
+      "candidates": [
+        {
+          "role": "link",
+          "selector": "form > a:nth-of-type(1)",
+          "href": "https://bitcointalk.org/index.php",
+          "source": "https://bitcointalk.org/Themes/custom1/images/filter.gif",
+          "iconTitle": "",
+          "iconId": "",
+          "attributes": {},
+          "controlled": "",
+          "caption": "",
+          "heading": "",
+          "targetTitle": "[More Stats]",
+          "box": [
+            1013.9375,
+            123,
+            1042.09375,
+            139
+          ]
+        }
+      ],
+      "screenshots": {
+        "before": "proof/jev/live-naming-real-sites/bitcointalk.org/before.png",
+        "after": "proof/jev/live-naming-real-sites/bitcointalk.org/after.png",
+        "scrollTop": 9
+      },
+      "latencyMs": null,
+      "attempts": [
+        {
+          "startedAfterMs": 405,
+          "durationMs": 698,
+          "targets": 1,
+          "confirmed": 1,
+          "providerErrors": [],
+          "appliedCount": 0
+        }
+      ],
+      "names": []
+    }
+  ]
+}
