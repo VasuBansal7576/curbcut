@@ -1,0 +1,1432 @@
+{
+  "runner": "playwright",
+  "registration": {
+    "commit": "fe8f40d944c4c867d3f00edfbd45d20f02b7f295",
+    "blob": "41db349973ee18f9337e73b114608b0a1623ccfa"
+  },
+  "frozenCommit": "90147f5d6c2e4ff1b17cbc3dba8674afc4c39d67",
+  "model": "jev-1.14.0",
+  "namingThresholds": {
+    "name": 0.55,
+    "decorative": 0.9
+  },
+  "languageThreshold": 0.75,
+  "timing": {
+    "pages": 11,
+    "medianMs": 666,
+    "p95Ms": 1085
+  },
+  "counts": {
+    "empty-link": {
+      "registered": 8,
+      "accepted": 6,
+      "correct": 4,
+      "incorrect": 2,
+      "unresolved": 0
+    },
+    "missing-alt": {
+      "registered": 5,
+      "accepted": 4,
+      "correct": 2,
+      "incorrect": 2,
+      "unresolved": 0
+    },
+    "empty-button": {
+      "registered": 1,
+      "accepted": 0,
+      "correct": 0,
+      "incorrect": 0,
+      "unresolved": 0
+    },
+    "missing-language": {
+      "registered": 1,
+      "accepted": 1,
+      "localFixed": 1
+    }
+  },
+  "latency": [
+    {
+      "url": "https://bitcore.io/",
+      "targets": 1,
+      "named": 1,
+      "failedRequests": 0,
+      "collectionToDecisionsMs": 375,
+      "collectionToInstallationMs": 416
+    },
+    {
+      "url": "https://conac.cn/",
+      "targets": 6,
+      "named": 5,
+      "failedRequests": 0,
+      "collectionToDecisionsMs": 1049,
+      "collectionToInstallationMs": 1055
+    },
+    {
+      "url": "https://lesscss.org/",
+      "targets": 1,
+      "named": 1,
+      "failedRequests": 0,
+      "collectionToDecisionsMs": 665,
+      "collectionToInstallationMs": 666
+    },
+    {
+      "url": "https://medcitynews.com/",
+      "targets": 1,
+      "named": 1,
+      "failedRequests": 0,
+      "collectionToDecisionsMs": 485,
+      "collectionToInstallationMs": 505
+    },
+    {
+      "url": "https://wiki.selfhtml.org/",
+      "targets": 3,
+      "named": 3,
+      "failedRequests": 0,
+      "collectionToDecisionsMs": 689,
+      "collectionToInstallationMs": 691
+    },
+    {
+      "url": "https://www.airbaltic.com/en/index",
+      "targets": 1,
+      "named": 0,
+      "failedRequests": 0,
+      "collectionToDecisionsMs": 532,
+      "collectionToInstallationMs": 533
+    },
+    {
+      "url": "https://www.demandsage.com/",
+      "targets": 4,
+      "named": 4,
+      "failedRequests": 0,
+      "collectionToDecisionsMs": 858,
+      "collectionToInstallationMs": 859
+    },
+    {
+      "url": "https://www.samcart.com/",
+      "targets": 1,
+      "named": 1,
+      "failedRequests": 0,
+      "collectionToDecisionsMs": 643,
+      "collectionToInstallationMs": 643
+    },
+    {
+      "url": "https://www.storm.mg/",
+      "targets": 7,
+      "named": 5,
+      "failedRequests": 0,
+      "collectionToDecisionsMs": 1071,
+      "collectionToInstallationMs": 1085
+    },
+    {
+      "url": "https://www.vedantu.com/",
+      "targets": 6,
+      "named": 6,
+      "failedRequests": 0,
+      "collectionToDecisionsMs": 912,
+      "collectionToInstallationMs": 913
+    },
+    {
+      "url": "https://www.woah.org/en/home/",
+      "targets": 1,
+      "named": 1,
+      "failedRequests": 0,
+      "collectionToDecisionsMs": 419,
+      "collectionToInstallationMs": 427
+    }
+  ],
+  "rows": [
+    {
+      "id": "v7-aeb1dba283605e040703",
+      "category": "empty-link",
+      "status": "locally-fixed",
+      "decision": {
+        "choice": "context0",
+        "proposed": "SamCart | Sell Digital Products. Make Every Sale Worth More.",
+        "confidence": 0.94,
+        "decoration": 0,
+        "providerMs": 310,
+        "model": "jev-1.14.0",
+        "name": "SamCart | Sell Digital Products. Make Every Sale Worth More."
+      },
+      "reference": {
+        "id": "v7-aeb1dba283605e040703",
+        "index": 0,
+        "name": "SamCart home",
+        "basis": "The SamCart wordmark and destination title identify the homepage."
+      },
+      "referenceProof": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "link",
+            "name": "SamCart home",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "replay": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "link",
+            "name": "SamCart | Sell Digital Products. Make Every Sale Worth More.",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "patch": {
+        "id": "v7-aeb1dba283605e040703",
+        "url": "https://www.samcart.com/",
+        "persona": "screen-reader-view",
+        "task": "Find the link identified by “SamCart | Sell Digital Products. Make Every Sale Worth More.” in Reading view.",
+        "observedSelector": "a.framer-tpjn24.framer-1vdc97x",
+        "evaluation": {
+          "category": "empty-link",
+          "role": "link",
+          "name": "SamCart | Sell Digital Products. Make Every Sale Worth More."
+        },
+        "controlTask": "In the normal visual page, find the link identified by “SamCart | Sell Digital Products. Make Every Sale Worth More.” and click that exact target once. The harness suppresses activation. The destination is “SamCart | Sell Digital Products. Make Every Sale Worth More.”.",
+        "site": "www.samcart.com",
+        "match": "https://www.samcart.com/",
+        "barrier": "The visible link has no accessible name.",
+        "rules": [
+          {
+            "selector": "a.framer-tpjn24.framer-1vdc97x",
+            "action": "addLabel",
+            "value": "SamCart | Sell Digital Products. Make Every Sale Worth More."
+          }
+        ],
+        "status": "candidate",
+        "history": [],
+        "evidence": {}
+      },
+      "correctness": "correct",
+      "adjudication": {
+        "id": "v7-aeb1dba283605e040703",
+        "expected": 0,
+        "chosen": 0
+      }
+    },
+    {
+      "id": "v7-f6738051380d5c2bdd7a",
+      "category": "missing-alt",
+      "status": "locally-fixed",
+      "decision": {
+        "choice": "context1",
+        "proposed": "less logo",
+        "confidence": 0.95,
+        "decoration": 0.07,
+        "providerMs": 621,
+        "model": "jev-1.14.0",
+        "name": "less logo"
+      },
+      "reference": {
+        "id": "v7-f6738051380d5c2bdd7a",
+        "index": 1,
+        "name": "Less logo",
+        "basis": "The image shows the Less wordmark in curly braces."
+      },
+      "referenceProof": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "img",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "img",
+            "name": "Less logo",
+            "alt": "Less logo",
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "img",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "replay": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "img",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "img",
+            "name": "less logo",
+            "alt": "less logo",
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "img",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "patch": {
+        "id": "v7-f6738051380d5c2bdd7a",
+        "url": "https://lesscss.org/",
+        "persona": "screen-reader-view",
+        "task": "Find the img identified by “less logo” in Reading view.",
+        "observedSelector": "img",
+        "evaluation": {
+          "category": "missing-alt",
+          "role": "img",
+          "name": "less logo"
+        },
+        "controlTask": "In the normal visual page, find the img identified by “less logo” and click that exact target once. The harness suppresses activation.",
+        "site": "lesscss.org",
+        "match": "https://lesscss.org/",
+        "barrier": "The visible img has no accessible name.",
+        "rules": [
+          {
+            "selector": "img",
+            "action": "setAltText",
+            "value": "less logo"
+          }
+        ],
+        "status": "candidate",
+        "history": [],
+        "evidence": {}
+      },
+      "correctness": "correct"
+    },
+    {
+      "id": "v7-26962c402e1b9a9ad1ed",
+      "category": "empty-link",
+      "status": "locally-fixed",
+      "decision": {
+        "choice": "context0",
+        "proposed": "新新聞",
+        "confidence": 0.75,
+        "decoration": 0,
+        "providerMs": 416,
+        "model": "jev-1.14.0",
+        "name": "新新聞"
+      },
+      "reference": {
+        "id": "v7-26962c402e1b9a9ad1ed",
+        "index": 2,
+        "name": "新新聞首頁",
+        "basis": "The masthead and destination title identify the 新新聞 homepage."
+      },
+      "referenceProof": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "link",
+            "name": "新新聞首頁",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "replay": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "link",
+            "name": "新新聞",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "patch": {
+        "id": "v7-26962c402e1b9a9ad1ed",
+        "url": "https://www.storm.mg/",
+        "persona": "screen-reader-view",
+        "task": "Find the link identified by “新新聞” in Reading view.",
+        "observedSelector": "div.relative.mx-auto > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "evaluation": {
+          "category": "empty-link",
+          "role": "link",
+          "name": "新新聞"
+        },
+        "controlTask": "In the normal visual page, find the link identified by “新新聞” and click that exact target once. The harness suppresses activation. The destination is “新新聞”.",
+        "site": "www.storm.mg",
+        "match": "https://www.storm.mg/",
+        "barrier": "The visible link has no accessible name.",
+        "rules": [
+          {
+            "selector": "div.relative.mx-auto > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+            "action": "addLabel",
+            "value": "新新聞"
+          }
+        ],
+        "status": "candidate",
+        "history": [],
+        "evidence": {}
+      },
+      "correctness": "correct",
+      "adjudication": {
+        "id": "v7-26962c402e1b9a9ad1ed",
+        "expected": 2,
+        "chosen": 2
+      }
+    },
+    {
+      "id": "v7-73b1a7c12002de45e199",
+      "category": "empty-button",
+      "status": "abstained",
+      "decision": {
+        "choice": "none",
+        "proposed": null,
+        "confidence": 0.95,
+        "decoration": 0,
+        "providerMs": 397,
+        "model": "jev-1.14.0",
+        "name": null
+      },
+      "reference": {
+        "id": "v7-73b1a7c12002de45e199",
+        "index": 3,
+        "name": "搜尋",
+        "basis": "The button shows a magnifying-glass icon in the site header."
+      },
+      "referenceProof": {
+        "status": "before-inconclusive",
+        "before": {
+          "status": "inconclusive",
+          "measurement": null
+        }
+      }
+    },
+    {
+      "id": "v7-4139e213aa59c443274a",
+      "category": "empty-link",
+      "status": "locally-fixed",
+      "decision": {
+        "choice": "context1",
+        "proposed": "woah primary logo english orange black",
+        "confidence": 0.65,
+        "decoration": 0,
+        "providerMs": 324,
+        "model": "jev-1.14.0",
+        "name": "woah primary logo english orange black"
+      },
+      "reference": {
+        "id": "v7-4139e213aa59c443274a",
+        "index": 4,
+        "name": "World Organisation for Animal Health home",
+        "basis": "The logo spells out the organisation’s name and the link points to its English homepage."
+      },
+      "referenceProof": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "link",
+            "name": "World Organisation for Animal Health home",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "replay": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "link",
+            "name": "woah primary logo english orange black",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "patch": {
+        "id": "v7-4139e213aa59c443274a",
+        "url": "https://www.woah.org/en/home/",
+        "persona": "screen-reader-view",
+        "task": "Find the link identified by “woah primary logo english orange black” in Reading view.",
+        "observedSelector": "div.header__logo > a:nth-of-type(1)",
+        "evaluation": {
+          "category": "empty-link",
+          "role": "link",
+          "name": "woah primary logo english orange black"
+        },
+        "controlTask": "In the normal visual page, find the link identified by “woah primary logo english orange black” and click that exact target once. The harness suppresses activation. The destination is “Search”.",
+        "site": "www.woah.org",
+        "match": "https://www.woah.org/en/home/",
+        "barrier": "The visible link has no accessible name.",
+        "rules": [
+          {
+            "selector": "div.header__logo > a:nth-of-type(1)",
+            "action": "addLabel",
+            "value": "woah primary logo english orange black"
+          }
+        ],
+        "status": "candidate",
+        "history": [],
+        "evidence": {}
+      },
+      "correctness": "incorrect",
+      "adjudication": {
+        "id": "v7-4139e213aa59c443274a",
+        "expected": 0,
+        "chosen": -1
+      }
+    },
+    {
+      "id": "v7-8bfcb6540beaa627618a",
+      "category": "empty-link",
+      "status": "locally-fixed",
+      "decision": {
+        "choice": "context3",
+        "proposed": "post card thumbnail link",
+        "confidence": 0.81,
+        "decoration": 0,
+        "providerMs": 317,
+        "model": "jev-1.14.0",
+        "name": "post card thumbnail link"
+      },
+      "reference": {
+        "id": "v7-8bfcb6540beaa627618a",
+        "index": 5,
+        "name": "Data Quality in Practice: The One Question Worth Remembering",
+        "basis": "The destination title identifies the article linked from the thumbnail."
+      },
+      "referenceProof": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "link",
+            "name": "Data Quality in Practice: The One Question Worth Remembering",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "replay": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "link",
+            "name": "post card thumbnail link",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "patch": {
+        "id": "v7-8bfcb6540beaa627618a",
+        "url": "https://medcitynews.com/",
+        "persona": "screen-reader-view",
+        "task": "Find the link identified by “post card thumbnail link” in Reading view.",
+        "observedSelector": "#post-151210 > figure:nth-of-type(1) > a:nth-of-type(1)",
+        "evaluation": {
+          "category": "empty-link",
+          "role": "link",
+          "name": "post card thumbnail link"
+        },
+        "controlTask": "In the normal visual page, find the link identified by “post card thumbnail link” and click that exact target once. The harness suppresses activation. The destination is “Data Quality in Practice: The One Question Worth Remembering”.",
+        "site": "medcitynews.com",
+        "match": "https://medcitynews.com/",
+        "barrier": "The visible link has no accessible name.",
+        "rules": [
+          {
+            "selector": "#post-151210 > figure:nth-of-type(1) > a:nth-of-type(1)",
+            "action": "addLabel",
+            "value": "post card thumbnail link"
+          }
+        ],
+        "status": "candidate",
+        "history": [],
+        "evidence": {}
+      },
+      "correctness": "incorrect",
+      "adjudication": {
+        "id": "v7-8bfcb6540beaa627618a",
+        "expected": 0,
+        "chosen": -1
+      }
+    },
+    {
+      "id": "v7-976d89e9251f0ecbf62a",
+      "category": "empty-link",
+      "status": "abstained",
+      "decision": {
+        "choice": "context2",
+        "proposed": "Black Friday deals!",
+        "confidence": 0.48,
+        "decoration": 0,
+        "providerMs": 363,
+        "model": "jev-1.14.0",
+        "name": null
+      },
+      "reference": {
+        "id": "v7-976d89e9251f0ecbf62a",
+        "index": 6,
+        "name": "airBaltic Black Friday deals",
+        "basis": "The banner headline names the promotion and the link points to airBaltic’s sale page."
+      },
+      "referenceProof": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "link",
+            "name": "airBaltic Black Friday deals",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "reading": true
+      }
+    },
+    {
+      "id": "v7-edd3f516587791f51b6f",
+      "category": "empty-link",
+      "status": "locally-fixed",
+      "decision": {
+        "choice": "context0",
+        "proposed": "Blog",
+        "confidence": 0.56,
+        "decoration": 0,
+        "providerMs": 506,
+        "model": "jev-1.14.0",
+        "name": "Blog"
+      },
+      "reference": {
+        "id": "v7-edd3f516587791f51b6f",
+        "index": 7,
+        "name": "SELFHTML-Blog",
+        "basis": "The German panel heading and link destination identify the SELFHTML blog."
+      },
+      "referenceProof": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "link",
+            "name": "SELFHTML-Blog",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "replay": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "link",
+            "name": "Blog",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "patch": {
+        "id": "v7-edd3f516587791f51b6f",
+        "url": "https://wiki.selfhtml.org/",
+        "persona": "screen-reader-view",
+        "task": "Find the link identified by “Blog” in Reading view.",
+        "observedSelector": "ul.cards-list > li:nth-of-type(3) > div:nth-of-type(3) > a:nth-of-type(1)",
+        "evaluation": {
+          "category": "empty-link",
+          "role": "link",
+          "name": "Blog"
+        },
+        "controlTask": "In the normal visual page, find the link identified by “Blog” and click that exact target once. The harness suppresses activation. The destination is “Blog”.",
+        "site": "wiki.selfhtml.org",
+        "match": "https://wiki.selfhtml.org/",
+        "barrier": "The visible link has no accessible name.",
+        "rules": [
+          {
+            "selector": "ul.cards-list > li:nth-of-type(3) > div:nth-of-type(3) > a:nth-of-type(1)",
+            "action": "addLabel",
+            "value": "Blog"
+          }
+        ],
+        "status": "candidate",
+        "history": [],
+        "evidence": {}
+      },
+      "correctness": "correct",
+      "adjudication": {
+        "id": "v7-edd3f516587791f51b6f",
+        "expected": 0,
+        "chosen": 0
+      }
+    },
+    {
+      "id": "v7-ca1f23128dbd40e62e31",
+      "category": "missing-alt",
+      "status": "locally-fixed",
+      "decision": {
+        "choice": "context0",
+        "proposed": "2-Year JEE",
+        "confidence": 0.86,
+        "decoration": 0.33,
+        "providerMs": 694,
+        "model": "jev-1.14.0",
+        "name": "2-Year JEE"
+      },
+      "reference": {
+        "id": "v7-ca1f23128dbd40e62e31",
+        "index": 0,
+        "name": "2-Year JEE",
+        "basis": "The stopwatch icon accompanies the adjacent 2-Year JEE label."
+      },
+      "referenceProof": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "img",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "img",
+            "name": "2-Year JEE",
+            "alt": "2-Year JEE",
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "img",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "replay": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "img",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "img",
+            "name": "2-Year JEE",
+            "alt": "2-Year JEE",
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "img",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "patch": {
+        "id": "v7-ca1f23128dbd40e62e31",
+        "url": "https://www.vedantu.com/",
+        "persona": "screen-reader-view",
+        "task": "Find the img identified by “2-Year JEE” in Reading view.",
+        "observedSelector": "div.flex.gap-16 > div:nth-of-type(1) > a:nth-of-type(1) > img:nth-of-type(1)",
+        "evaluation": {
+          "category": "missing-alt",
+          "role": "img",
+          "name": "2-Year JEE"
+        },
+        "controlTask": "In the normal visual page, find the img identified by “2-Year JEE” and click that exact target once. The harness suppresses activation.",
+        "site": "www.vedantu.com",
+        "match": "https://www.vedantu.com/",
+        "barrier": "The visible img has no accessible name.",
+        "rules": [
+          {
+            "selector": "div.flex.gap-16 > div:nth-of-type(1) > a:nth-of-type(1) > img:nth-of-type(1)",
+            "action": "setAltText",
+            "value": "2-Year JEE"
+          }
+        ],
+        "status": "candidate",
+        "history": [],
+        "evidence": {}
+      },
+      "correctness": "correct"
+    },
+    {
+      "id": "v7-bd42880c1bb8cc53a161",
+      "category": "missing-alt",
+      "status": "unavailable",
+      "reason": "page.goto: Timeout 8500ms exceeded."
+    },
+    {
+      "id": "v7-29ed750cf125eefd9ba1",
+      "category": "empty-link",
+      "status": "locally-fixed",
+      "decision": {
+        "choice": "brand3",
+        "proposed": "YouTube",
+        "confidence": 0.96,
+        "decoration": 0,
+        "providerMs": 766,
+        "model": "jev-1.14.0",
+        "name": "YouTube"
+      },
+      "reference": {
+        "id": "v7-29ed750cf125eefd9ba1",
+        "index": 2,
+        "name": "YouTube channel",
+        "basis": "The YouTube icon links to a YouTube channel URL."
+      },
+      "referenceProof": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "link",
+            "name": "YouTube channel",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "replay": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "link",
+            "name": "YouTube",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "link",
+            "name": "",
+            "alt": "",
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "patch": {
+        "id": "v7-29ed750cf125eefd9ba1",
+        "url": "https://www.demandsage.com/",
+        "persona": "screen-reader-view",
+        "task": "Find the link identified by “YouTube” in Reading view.",
+        "observedSelector": "div.wp-block-uagb-image.uagb-block-55c0c78e > figure:nth-of-type(1) > a:nth-of-type(1)",
+        "evaluation": {
+          "category": "empty-link",
+          "role": "link",
+          "name": "YouTube"
+        },
+        "controlTask": "In the normal visual page, find the link identified by “YouTube” and click that exact target once. The harness suppresses activation. The destination is “YouTube”.",
+        "site": "www.demandsage.com",
+        "match": "https://www.demandsage.com/",
+        "barrier": "The visible link has no accessible name.",
+        "rules": [
+          {
+            "selector": "div.wp-block-uagb-image.uagb-block-55c0c78e > figure:nth-of-type(1) > a:nth-of-type(1)",
+            "action": "addLabel",
+            "value": "YouTube"
+          }
+        ],
+        "status": "candidate",
+        "history": [],
+        "evidence": {}
+      },
+      "correctness": "correct",
+      "adjudication": {
+        "id": "v7-29ed750cf125eefd9ba1",
+        "expected": 2,
+        "chosen": 2
+      }
+    },
+    {
+      "id": "v7-4c841cd1bdce6b1b10d1",
+      "category": "missing-alt",
+      "status": "locally-fixed",
+      "decision": {
+        "choice": "context0",
+        "proposed": "20220725banner",
+        "confidence": 0.8,
+        "decoration": 0.14,
+        "providerMs": 534,
+        "model": "jev-1.14.0",
+        "name": "20220725banner"
+      },
+      "reference": {
+        "id": "v7-4c841cd1bdce6b1b10d1",
+        "index": 3,
+        "name": "政务和公益机构域名注册管理中心",
+        "basis": "横幅上的红色文字显示了机构全称。"
+      },
+      "referenceProof": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "img",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "img",
+            "name": "政务和公益机构域名注册管理中心",
+            "alt": "政务和公益机构域名注册管理中心",
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "img",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "replay": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "img",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "img",
+            "name": "20220725banner",
+            "alt": "20220725banner",
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "img",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "patch": {
+        "id": "v7-4c841cd1bdce6b1b10d1",
+        "url": "https://conac.cn/",
+        "persona": "screen-reader-view",
+        "task": "Find the img identified by “20220725banner” in Reading view.",
+        "observedSelector": "div.top-banner-logo > img:nth-of-type(1)",
+        "evaluation": {
+          "category": "missing-alt",
+          "role": "img",
+          "name": "20220725banner"
+        },
+        "controlTask": "In the normal visual page, find the img identified by “20220725banner” and click that exact target once. The harness suppresses activation.",
+        "site": "conac.cn",
+        "match": "https://conac.cn/",
+        "barrier": "The visible img has no accessible name.",
+        "rules": [
+          {
+            "selector": "div.top-banner-logo > img:nth-of-type(1)",
+            "action": "setAltText",
+            "value": "20220725banner"
+          }
+        ],
+        "status": "candidate",
+        "history": [],
+        "evidence": {}
+      },
+      "correctness": "incorrect",
+      "adjudication": {
+        "id": "v7-4c841cd1bdce6b1b10d1",
+        "expected": 1,
+        "chosen": -1
+      }
+    },
+    {
+      "id": "v7-865d45a98e97896da0c6",
+      "category": "empty-link",
+      "status": "abstained",
+      "decision": {
+        "choice": "context0",
+        "proposed": "shenbao.conac.cn",
+        "confidence": 0.5,
+        "decoration": 0,
+        "providerMs": 534,
+        "model": "jev-1.14.0",
+        "name": null
+      },
+      "reference": {
+        "id": "v7-865d45a98e97896da0c6",
+        "index": 4,
+        "name": null,
+        "basis": "截图中没有可辨认的文字，也未提供目标页面标题。"
+      },
+      "referenceProof": null
+    },
+    {
+      "id": "v7-f83da0f77372816d4f0b",
+      "category": "missing-language",
+      "status": "locally-fixed",
+      "before": {
+        "status": "fail",
+        "measurement": {
+          "lang": null
+        }
+      },
+      "after": {
+        "status": "pass",
+        "measurement": {
+          "lang": "zh"
+        }
+      },
+      "restored": {
+        "status": "fail",
+        "measurement": {
+          "lang": null
+        }
+      },
+      "language": {
+        "tag": "zh",
+        "confidence": 1,
+        "providerMs": 357,
+        "model": "jev-1.14.0"
+      },
+      "reference": {
+        "id": "v7-f83da0f77372816d4f0b",
+        "tag": "zh"
+      },
+      "patch": {
+        "id": "v7-f83da0f77372816d4f0b",
+        "url": "https://conac.cn/",
+        "persona": "document-language",
+        "task": "Identify the primary language of visible text.",
+        "observedSelector": "html",
+        "evaluation": {
+          "category": "missing-language",
+          "name": "zh"
+        },
+        "site": "conac.cn",
+        "match": "https://conac.cn/",
+        "barrier": "The document is missing its primary language.",
+        "rules": [
+          {
+            "selector": "html",
+            "action": "setLang",
+            "value": "zh"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      }
+    },
+    {
+      "id": "v7-25fafd1877b35fc3b629",
+      "category": "missing-alt",
+      "status": "locally-fixed",
+      "decision": {
+        "choice": "context5",
+        "proposed": "home logo",
+        "confidence": 0.71,
+        "decoration": 0.06,
+        "providerMs": 339,
+        "model": "jev-1.14.0",
+        "name": "home logo"
+      },
+      "reference": {
+        "id": "v7-25fafd1877b35fc3b629",
+        "index": 5,
+        "name": "Bitcore",
+        "basis": "The logo includes the Bitcore wordmark."
+      },
+      "referenceProof": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "img",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "img",
+            "name": "Bitcore",
+            "alt": "Bitcore",
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "img",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "replay": {
+        "status": "locally-fixed",
+        "before": {
+          "status": "fail",
+          "measurement": {
+            "role": "img",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "after": {
+          "status": "pass",
+          "measurement": {
+            "role": "img",
+            "name": "home logo",
+            "alt": "home logo",
+            "visible": true
+          }
+        },
+        "restored": {
+          "status": "fail",
+          "measurement": {
+            "role": "img",
+            "name": "",
+            "alt": null,
+            "visible": true
+          }
+        },
+        "reading": true
+      },
+      "patch": {
+        "id": "v7-25fafd1877b35fc3b629",
+        "url": "https://bitcore.io/",
+        "persona": "screen-reader-view",
+        "task": "Find the img identified by “home logo” in Reading view.",
+        "observedSelector": "img.m-t-lg.m-b",
+        "evaluation": {
+          "category": "missing-alt",
+          "role": "img",
+          "name": "home logo"
+        },
+        "controlTask": "In the normal visual page, find the img identified by “home logo” and click that exact target once. The harness suppresses activation.",
+        "site": "bitcore.io",
+        "match": "https://bitcore.io/",
+        "barrier": "The visible img has no accessible name.",
+        "rules": [
+          {
+            "selector": "img.m-t-lg.m-b",
+            "action": "setAltText",
+            "value": "home logo"
+          }
+        ],
+        "status": "candidate",
+        "history": [],
+        "evidence": {}
+      },
+      "correctness": "incorrect",
+      "adjudication": {
+        "id": "v7-25fafd1877b35fc3b629",
+        "expected": 0,
+        "chosen": -1
+      }
+    }
+  ],
+  "finishedAt": "2026-11-24T14:33:14.618Z"
+}
