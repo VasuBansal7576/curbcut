@@ -1,0 +1,40 @@
+{
+  "finishedAt": "2026-11-24T14:03:38.338Z",
+  "source": "Committed evidence packs, result.json, and event streams",
+  "archiveFiles": 427,
+  "labeledFiles": 427,
+  "uniqueSessions": 427,
+  "eligible": 58,
+  "selected": 51,
+  "attempted": 51,
+  "scored": 49,
+  "flagged": 37,
+  "labeled": 38,
+  "knownFalsePasses": 5,
+  "knownFlags": 28,
+  "trueFlags": 2,
+  "precision": 0.07142857142857142,
+  "tikfinity": [
+    {
+      "runId": "e8a912e6-698c-474c-9583-4e66dec41448",
+      "file": "proof/heldout-v5/kane-rerun-50/v5-39c81de4ef43-33ae7f34/before/result.json",
+      "taskId": "v5-39c81de4ef43-33ae7f34",
+      "status": "inconclusive",
+      "decisive": false,
+      "calibration": false,
+      "steps": 38,
+      "completed": 38,
+      "credits": 27.721092499999997,
+      "knownFalsePass": true,
+      "frame": 0.98,
+      "sequence": 0.82,
+      "frames": [
+        35,
+        37
+      ],
+      "flags": [],
+      "model": "jev-1.14.0",
+      "providerMs": 620
+    }
+  ]
+}

@@ -1,0 +1,3178 @@
+{
+  "threshold": 0.5,
+  "rows": [
+    {
+      "id": "v4-594deefe0f5fc9dd026c",
+      "persona": "low-vision",
+      "class": "reflow",
+      "registeredClass": "single-control",
+      "candidates": 16,
+      "patch": {
+        "id": "v4-594deefe0f5fc9dd026c",
+        "url": "https://www.vg247.com/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels, read the passage beginning “Psst! Explore our new \"For you\" section and get personalised recommendations about” and confirm it fits without horizontal scrolling.",
+        "controlTask": "Read the passage beginning “Psst! Explore our new \"For you\" section and get personalised recommendations about” at normal width.",
+        "observedSelector": "#content_above > div:nth-of-type(1) > main > div:nth-of-type(1) > p",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "#content_above > div:nth-of-type(1) > main > div:nth-of-type(1) > p",
+            "equals": "Psst! Explore our new \"For you\" section and get personalised recommendations about"
+          },
+          {
+            "kind": "fits-width",
+            "selector": "#content_above > div:nth-of-type(1) > main > div:nth-of-type(1) > p"
+          }
+        ],
+        "probe": {
+          "action": "read"
+        },
+        "site": "www.vg247.com",
+        "match": "https://www.vg247.com/",
+        "barrier": "Jev suggested reflow for main.",
+        "rules": [
+          {
+            "selector": "main",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 102,
+      "decisionLatencyMs": 1535,
+      "before": {
+        "status": "fail",
+        "reason": "The target does not fit the visible width."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c0",
+        "confidence": 0.19,
+        "providerMs": 846,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 3494,
+          "output_tokens": 206
+        },
+        "rules": [
+          {
+            "selector": "main",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box"
+            }
+          }
+        ],
+        "label": "main"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-ccd5ecc06c3c85e70808",
+      "persona": "low-vision",
+      "class": "reflow",
+      "registeredClass": "single-control",
+      "candidates": 5,
+      "patch": {
+        "id": "v4-ccd5ecc06c3c85e70808",
+        "url": "https://polyfill-fastly.io/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels, read the passage beginning “https://polyfill-fastly.io/v3/polyfill.min.js” and confirm it fits without horizontal scrolling.",
+        "controlTask": "Read the passage beginning “https://polyfill-fastly.io/v3/polyfill.min.js” at normal width.",
+        "observedSelector": "main > form > label:nth-of-type(1) > output > pre",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "main > form > label:nth-of-type(1) > output > pre",
+            "equals": "https://polyfill-fastly.io/v3/polyfill.min.js"
+          },
+          {
+            "kind": "fits-width",
+            "selector": "main > form > label:nth-of-type(1) > output > pre"
+          }
+        ],
+        "probe": {
+          "action": "read"
+        },
+        "site": "polyfill-fastly.io",
+        "match": "https://polyfill-fastly.io/",
+        "barrier": "Jev suggested reflow for https://polyfill-fastly.io/v3/polyfill.min.js.",
+        "rules": [
+          {
+            "selector": "#polyfill-bundle-url",
+            "action": "injectCSS",
+            "value": {
+              "white-space": "pre-wrap",
+              "overflow-wrap": "anywhere"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 19,
+      "decisionLatencyMs": 624,
+      "before": {
+        "status": "fail",
+        "reason": "The target does not fit the visible width."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c1",
+        "confidence": 0.4,
+        "providerMs": 344,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 2213,
+          "output_tokens": 150
+        },
+        "rules": [
+          {
+            "selector": "#polyfill-bundle-url",
+            "action": "injectCSS",
+            "value": {
+              "white-space": "pre-wrap",
+              "overflow-wrap": "anywhere"
+            }
+          }
+        ],
+        "label": "https://polyfill-fastly.io/v3/polyfill.min.js"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-3b3f029309779f5896cf",
+      "persona": "low-vision",
+      "class": "reflow",
+      "registeredClass": "single-control",
+      "candidates": 16,
+      "patch": {
+        "id": "v4-3b3f029309779f5896cf",
+        "url": "https://www.vpngate.net/en/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels, read the passage beginning “Free Access to World Knowledge Beyond Government's Firewall.” and confirm it fits without horizontal scrolling.",
+        "controlTask": "Read the passage beginning “Free Access to World Knowledge Beyond Government's Firewall.” at normal width.",
+        "observedSelector": "#vpngate_inner_contents_td > p:nth-of-type(3)",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "#vpngate_inner_contents_td > p:nth-of-type(3)",
+            "equals": "Free Access to World Knowledge Beyond Government's Firewall."
+          },
+          {
+            "kind": "fits-width",
+            "selector": "#vpngate_inner_contents_td > p:nth-of-type(3)"
+          }
+        ],
+        "probe": {
+          "action": "read"
+        },
+        "site": "www.vpngate.net",
+        "match": "https://www.vpngate.net/en/",
+        "barrier": "Jev suggested reflow for table.",
+        "rules": [
+          {
+            "selector": "#vpngate_main_table",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box",
+              "overflow-wrap": "anywhere"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 71,
+      "decisionLatencyMs": 558,
+      "before": {
+        "status": "fail",
+        "reason": "The target does not fit the visible width."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c8",
+        "confidence": 0.21,
+        "providerMs": 376,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 3576,
+          "output_tokens": 219
+        },
+        "rules": [
+          {
+            "selector": "#vpngate_main_table",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box",
+              "overflow-wrap": "anywhere"
+            }
+          }
+        ],
+        "label": "table"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-ba264ae39f65-dc282b08",
+      "persona": "low-vision",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 2,
+      "patch": {
+        "id": "v4-ba264ae39f65-dc282b08",
+        "url": "https://bogos.io/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels with vertical scrolling only, hover “Feature”, click “View all features→” and confirm /all-features/.",
+        "controlTask": "Hover “Feature”, click “View all features→” and confirm /all-features/.",
+        "observedSelector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/all-features/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ],
+        "site": "bogos.io",
+        "match": "https://bogos.io/",
+        "barrier": "Jev suggested reflow for div.",
+        "rules": [
+          {
+            "selector": "section.mt-\\[50px\\].md\\:mt-\\[80px\\] > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(6)",
+            "action": "injectCSS",
+            "value": {
+              "flex-wrap": "wrap"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 128,
+      "decisionLatencyMs": 677,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c1",
+        "confidence": 0.19,
+        "providerMs": 364,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 1657,
+          "output_tokens": 88
+        },
+        "rules": [
+          {
+            "selector": "section.mt-\\[50px\\].md\\:mt-\\[80px\\] > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(6)",
+            "action": "injectCSS",
+            "value": {
+              "flex-wrap": "wrap"
+            }
+          }
+        ],
+        "label": "div"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-b35dcf923211-caeef8bd",
+      "persona": "keyboard-only",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 8,
+      "patch": {
+        "id": "v4-b35dcf923211-caeef8bd",
+        "url": "https://snort.org/",
+        "persona": "keyboard-only",
+        "task": "Open “Downloads” from keyboard focus or with Arrow Down and follow “Snort”. Confirm the public destination /downloads.",
+        "controlTask": "Hover “Downloads”, click “Snort” and confirm /downloads.",
+        "observedSelector": "#nav_dropdown_download",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/downloads"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > ul > li:nth-of-type(2)",
+          "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > ul > li:nth-of-type(2) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#nav_dropdown_download",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#nav_dropdown_download",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ],
+        "site": "snort.org",
+        "match": "https://snort.org/",
+        "barrier": "Jev suggested mirrorHoverToFocus for Downloads.",
+        "rules": [
+          {
+            "selector": "li.download.dropdown",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 61,
+      "decisionLatencyMs": 1827,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "decision": {
+        "family": "mirrorHoverToFocus",
+        "target": "c0",
+        "confidence": 0.38,
+        "providerMs": 769,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 4710,
+          "output_tokens": 183
+        },
+        "rules": [
+          {
+            "selector": "li.download.dropdown",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "label": "Downloads"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-d14950f24a8c-24c68b67",
+      "persona": "keyboard-only",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 2,
+      "patch": {
+        "id": "v4-d14950f24a8c-24c68b67",
+        "url": "https://www.outsystems.com/",
+        "persona": "keyboard-only",
+        "task": "Open “Platform” from keyboard focus or with Arrow Down and follow “Agentic Systems EngineeringBuild with Mentor or any agentic coding tool”. Confirm the public destination /platform/agentic-systems-engineering.",
+        "controlTask": "Hover “Platform”, click “Agentic Systems EngineeringBuild with Mentor or any agentic coding tool” and confirm /platform/agentic-systems-engineering.",
+        "observedSelector": "#w-dropdown-toggle-1",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/platform/agentic-systems-engineering"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "div > div:nth-of-type(2) > div:nth-of-type(3) > div > nav > div:nth-of-type(1) > div:nth-of-type(1)",
+          "#w-dropdown-list-1"
+        ],
+        "journey": [
+          {
+            "selector": "#w-dropdown-toggle-1",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-toggle-1",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-node-_7fd0a54d-c089-af38-c8b9-5e546296b9c9-6296b9b3 > a:nth-of-type(2)",
+            "action": "activate"
+          }
+        ],
+        "site": "www.outsystems.com",
+        "match": "https://www.outsystems.com/",
+        "barrier": "Jev suggested addLabel for onetrust banner sdk.",
+        "rules": [
+          {
+            "selector": "#onetrust-banner-sdk",
+            "action": "addLabel",
+            "value": "onetrust banner sdk"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 21,
+      "decisionLatencyMs": 854,
+      "before": {
+        "status": "fail",
+        "reason": "Tab traversal missed journey step 1."
+      },
+      "decision": {
+        "family": "addLabel",
+        "target": "c0",
+        "confidence": 0.14,
+        "providerMs": 746,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 3857,
+          "output_tokens": 127
+        },
+        "rules": [
+          {
+            "selector": "#onetrust-banner-sdk",
+            "action": "addLabel",
+            "value": "onetrust banner sdk"
+          }
+        ],
+        "label": "onetrust banner sdk"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-7bdf9ab9e9af-32363b5e",
+      "persona": "keyboard-only",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 6,
+      "patch": {
+        "id": "v4-7bdf9ab9e9af-32363b5e",
+        "url": "https://www.atlanticcouncil.org/",
+        "persona": "keyboard-only",
+        "task": "Open “INSIGHT” from keyboard focus or with Arrow Down and follow “Issue briefs and reports”. Confirm the public destination /in-depth-research-reports/.",
+        "controlTask": "Hover “INSIGHT”, click “Issue briefs and reports” and confirm /in-depth-research-reports/.",
+        "observedSelector": "#primary-nav > li:nth-of-type(1) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/in-depth-research-reports/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#primary-nav > li:nth-of-type(1)",
+          "#primary-nav > li:nth-of-type(1) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#primary-nav > li:nth-of-type(1) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#primary-nav > li:nth-of-type(1) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#primary-nav > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ],
+        "site": "www.atlanticcouncil.org",
+        "match": "https://www.atlanticcouncil.org/",
+        "barrier": "Jev suggested mirrorHoverToFocus for Insight.",
+        "rules": [
+          {
+            "selector": "#primary-nav > li:nth-of-type(1)",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 25,
+      "decisionLatencyMs": 788,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "decision": {
+        "family": "mirrorHoverToFocus",
+        "target": "c0",
+        "confidence": 0.51,
+        "providerMs": 533,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 4389,
+          "output_tokens": 130
+        },
+        "rules": [
+          {
+            "selector": "#primary-nav > li:nth-of-type(1)",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "label": "Insight"
+      },
+      "accepted": true,
+      "status": "timed"
+    },
+    {
+      "id": "v4-c8b6f7999e25-95d28215",
+      "persona": "keyboard-only",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 3,
+      "patch": {
+        "id": "v4-c8b6f7999e25-95d28215",
+        "url": "https://medex.com.bd/",
+        "persona": "keyboard-only",
+        "task": "Open “BROWSE” from keyboard focus or with Arrow Down and follow “Brand Names (Allopathic)”. Confirm the public destination /brands.",
+        "controlTask": "Hover “BROWSE”, click “Brand Names (Allopathic)” and confirm /brands.",
+        "observedSelector": "#nav-menu-catalogue > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/brands"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#nav-menu-catalogue",
+          "#nav-menu-catalogue > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#nav-menu-catalogue > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#nav-menu-catalogue > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#nav-menu-brands > a",
+            "action": "activate"
+          }
+        ],
+        "site": "medex.com.bd",
+        "match": "https://medex.com.bd/",
+        "barrier": "Jev suggested mirrorHoverToFocus for Browse.",
+        "rules": [
+          {
+            "selector": "#nav-menu-catalogue",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 28,
+      "decisionLatencyMs": 1035,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "decision": {
+        "family": "mirrorHoverToFocus",
+        "target": "c0",
+        "confidence": 0.39,
+        "providerMs": 825,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 4109,
+          "output_tokens": 151
+        },
+        "rules": [
+          {
+            "selector": "#nav-menu-catalogue",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "label": "Browse"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-358d06a5be14-68acbc65",
+      "persona": "keyboard-only",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 6,
+      "patch": {
+        "id": "v4-358d06a5be14-68acbc65",
+        "url": "https://kavirtire.ir/",
+        "persona": "keyboard-only",
+        "task": "Open “محصولات” from keyboard focus or with Arrow Down and follow “کاتالوگ محصولات”. Confirm the public destination /upload/files/2025/05/catalog-fa.pdf.",
+        "controlTask": "Hover “محصولات”, click “کاتالوگ محصولات” and confirm /upload/files/2025/05/catalog-fa.pdf.",
+        "observedSelector": "#primary-navigation > ul > li:nth-of-type(2) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/upload/files/2025/05/catalog-fa.pdf"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#primary-navigation > ul > li:nth-of-type(2)",
+          "#primary-navigation > ul > li:nth-of-type(2) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#primary-navigation > ul > li:nth-of-type(2) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#primary-navigation > ul > li:nth-of-type(2) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#primary-navigation > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ],
+        "site": "kavirtire.ir",
+        "match": "https://kavirtire.ir/",
+        "barrier": "Jev suggested mirrorHoverToFocus for محصولات.",
+        "rules": [
+          {
+            "selector": "#primary-navigation > ul:nth-of-type(1) > li:nth-of-type(2)",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 64,
+      "decisionLatencyMs": 1193,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "decision": {
+        "family": "mirrorHoverToFocus",
+        "target": "c0",
+        "confidence": 0.56,
+        "providerMs": 802,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 4778,
+          "output_tokens": 130
+        },
+        "rules": [
+          {
+            "selector": "#primary-navigation > ul:nth-of-type(1) > li:nth-of-type(2)",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "label": "محصولات"
+      },
+      "accepted": true,
+      "status": "timed"
+    },
+    {
+      "id": "v4-7c78a1b1784e8c6f99d8",
+      "persona": "low-vision",
+      "class": "reflow",
+      "registeredClass": "single-control",
+      "candidates": 7,
+      "patch": {
+        "id": "v4-7c78a1b1784e8c6f99d8",
+        "url": "https://dolyame.ru/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels, read the passage beginning “Откладывайте оплату, а не шопинг” and confirm it fits without horizontal scrolling.",
+        "controlTask": "Read the passage beginning “Откладывайте оплату, а не шопинг” at normal width.",
+        "observedSelector": "div:nth-of-type(1) > div > div:nth-of-type(2) > div > div > h1 > p",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "div:nth-of-type(1) > div > div:nth-of-type(2) > div > div > h1 > p",
+            "equals": "Откладывайте оплату, а не шопинг"
+          },
+          {
+            "kind": "fits-width",
+            "selector": "div:nth-of-type(1) > div > div:nth-of-type(2) > div > div > h1 > p"
+          }
+        ],
+        "probe": {
+          "action": "read"
+        },
+        "site": "dolyame.ru",
+        "match": "https://dolyame.ru/",
+        "barrier": "Jev suggested reflow for Откладывайте оплату, а не шопинг.",
+        "rules": [
+          {
+            "selector": "h1.cb1aj5rZH > p:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box",
+              "overflow-wrap": "anywhere"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 34,
+      "decisionLatencyMs": 925,
+      "before": {
+        "status": "fail",
+        "reason": "The target does not fit the visible width."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c0",
+        "confidence": 0.28,
+        "providerMs": 781,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 2718,
+          "output_tokens": 166
+        },
+        "rules": [
+          {
+            "selector": "h1.cb1aj5rZH > p:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box",
+              "overflow-wrap": "anywhere"
+            }
+          }
+        ],
+        "label": "Откладывайте оплату, а не шопинг"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-cc24dd9e10e4-3d3faa5f",
+      "persona": "keyboard-only",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 6,
+      "patch": {
+        "id": "v4-cc24dd9e10e4-3d3faa5f",
+        "url": "https://www.um-surabaya.ac.id/",
+        "persona": "keyboard-only",
+        "task": "Open “TENTANG UMSURA” from keyboard focus or with Arrow Down and follow “Penghargaan dan Prestasi”. Confirm the public destination /about/penghargaan.",
+        "controlTask": "Hover “TENTANG UMSURA”, click “Penghargaan dan Prestasi” and confirm /about/penghargaan.",
+        "observedSelector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/about/penghargaan"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#desktop-nav > ul > li:nth-of-type(1)",
+          "#desktop-nav > ul > li:nth-of-type(1) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#desktop-nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a:nth-of-type(5)",
+            "action": "activate"
+          }
+        ],
+        "site": "www.um-surabaya.ac.id",
+        "match": "https://www.um-surabaya.ac.id/",
+        "barrier": "Jev suggested mirrorHoverToFocus for Tentang UMSURA.",
+        "rules": [
+          {
+            "selector": "#desktop-nav > ul:nth-of-type(1) > li:nth-of-type(1)",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 28,
+      "decisionLatencyMs": 1058,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "decision": {
+        "family": "mirrorHoverToFocus",
+        "target": "c0",
+        "confidence": 0.52,
+        "providerMs": 888,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 4394,
+          "output_tokens": 130
+        },
+        "rules": [
+          {
+            "selector": "#desktop-nav > ul:nth-of-type(1) > li:nth-of-type(1)",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "label": "Tentang UMSURA"
+      },
+      "accepted": true,
+      "status": "timed"
+    },
+    {
+      "id": "v4-81c8d80db2ce6c1d1ff0",
+      "persona": "screen-reader-view",
+      "class": "single-control",
+      "registeredClass": "single-control",
+      "candidates": 7,
+      "patch": {
+        "id": "v4-81c8d80db2ce6c1d1ff0",
+        "url": "https://suzuri.jp/",
+        "persona": "screen-reader-view",
+        "task": "In Reading view, find the “Search” searchbox and type test without submitting.",
+        "controlTask": "Click the visible “Search” field and type test without submitting.",
+        "observedSelector": "#layout > header > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2) > form > div > div > input",
+        "requiredName": "Search",
+        "outcomeChecks": [
+          {
+            "kind": "value",
+            "selector": "#layout > header > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2) > form > div > div > input",
+            "equals": "test"
+          }
+        ],
+        "probe": {
+          "action": "type",
+          "value": "test",
+          "role": "searchbox"
+        },
+        "site": "suzuri.jp",
+        "match": "https://suzuri.jp/",
+        "barrier": "Jev suggested addLabel for Search.",
+        "rules": [
+          {
+            "selector": "input.js-search-textfield.js-search-balloon-input",
+            "action": "addLabel",
+            "value": "Search"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 595,
+      "decisionLatencyMs": 4421,
+      "before": {
+        "status": "inconclusive",
+        "reason": "locator.evaluate: Timeout 1000ms exceeded."
+      },
+      "decision": {
+        "family": "addLabel",
+        "target": "c0",
+        "confidence": 0.25,
+        "providerMs": 637,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 5358,
+          "output_tokens": 240
+        },
+        "rules": [
+          {
+            "selector": "input.js-search-textfield.js-search-balloon-input",
+            "action": "addLabel",
+            "value": "Search"
+          }
+        ],
+        "label": "Search"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-d6e539b7f1e2-f9d079ea",
+      "persona": "low-vision",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 8,
+      "patch": {
+        "id": "v4-d6e539b7f1e2-f9d079ea",
+        "url": "https://www.ukulele-tabs.com/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels with vertical scrolling only, hover “CHORDS CHART +”, click “Soprano” and confirm /chords-chart/soprano-1.html.",
+        "controlTask": "Hover “CHORDS CHART +”, click “Soprano” and confirm /chords-chart/soprano-1.html.",
+        "observedSelector": "#page > nav > ul > li:nth-of-type(3) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/chords-chart/soprano-1.html"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#page > nav > ul > li:nth-of-type(3)",
+          "#page > nav > ul > li:nth-of-type(3) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#page > nav > ul > li:nth-of-type(3) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#page > nav > ul > li:nth-of-type(3) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#page > nav > ul > li:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ],
+        "site": "www.ukulele-tabs.com",
+        "match": "https://www.ukulele-tabs.com/",
+        "barrier": "Jev suggested reflow for Beginner tabs.",
+        "rules": [
+          {
+            "selector": "#dmiss > div:nth-of-type(1) > a:nth-of-type(1) > div:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "white-space": "normal",
+              "overflow-wrap": "anywhere"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 49,
+      "decisionLatencyMs": 1236,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c2",
+        "confidence": 0.19,
+        "providerMs": 403,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 3038,
+          "output_tokens": 270
+        },
+        "rules": [
+          {
+            "selector": "#dmiss > div:nth-of-type(1) > a:nth-of-type(1) > div:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "white-space": "normal",
+              "overflow-wrap": "anywhere"
+            }
+          }
+        ],
+        "label": "Beginner tabs"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-a2c44b1b92d5-916d2c8a",
+      "persona": "keyboard-only",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 6,
+      "patch": {
+        "id": "v4-a2c44b1b92d5-916d2c8a",
+        "url": "https://raptortech.com/",
+        "persona": "keyboard-only",
+        "task": "Open “Products” from keyboard focus or with Arrow Down and follow “Emergency Alerting & Management Emergency Management Software Prepare staff, coordinate response, and recover after a crisis.”. Confirm the public destination /protect-your-school/raptor-emergency-management-system/.",
+        "controlTask": "Hover “Products”, click “Emergency Alerting & Management Emergency Management Software Prepare staff, coordinate response, and recover after a crisis.” and confirm /protect-your-school/raptor-emergency-management-system/.",
+        "observedSelector": "#products-link",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/protect-your-school/raptor-emergency-management-system/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#primary-nav > li:nth-of-type(2)",
+          "#primary-nav > li:nth-of-type(2) > div"
+        ],
+        "journey": [
+          {
+            "selector": "#products-link",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#products-link",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#emergency-management > div > div:nth-of-type(1) > a:nth-of-type(1)",
+            "action": "activate"
+          }
+        ],
+        "site": "raptortech.com",
+        "match": "https://raptortech.com/",
+        "barrier": "Jev suggested addLabel for elementor popup modal 90396.",
+        "rules": [
+          {
+            "selector": "#elementor-popup-modal-90396",
+            "action": "addLabel",
+            "value": "elementor popup modal 90396"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 49,
+      "decisionLatencyMs": 1779,
+      "before": {
+        "status": "inconclusive",
+        "reason": "locator.evaluate: Error: strict mode violation: locator('#products-link') resolved to 2 elements:"
+      },
+      "decision": {
+        "family": "addLabel",
+        "target": "c0",
+        "confidence": 0.28,
+        "providerMs": 591,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 4501,
+          "output_tokens": 172
+        },
+        "rules": [
+          {
+            "selector": "#elementor-popup-modal-90396",
+            "action": "addLabel",
+            "value": "elementor popup modal 90396"
+          }
+        ],
+        "label": "elementor popup modal 90396"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-ba021600979c7523de0e",
+      "persona": "low-vision",
+      "class": "reflow",
+      "registeredClass": "single-control",
+      "candidates": 3,
+      "patch": {
+        "id": "v4-ba021600979c7523de0e",
+        "url": "https://www.quantumleafstudio.com/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels, read the passage beginning “If you see this page, the nginx web server is successfully installed” and confirm it fits without horizontal scrolling.",
+        "controlTask": "Read the passage beginning “If you see this page, the nginx web server is successfully installed” at normal width.",
+        "observedSelector": "p:nth-of-type(1)",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "p:nth-of-type(1)",
+            "equals": "If you see this page, the nginx web server is successfully installed"
+          },
+          {
+            "kind": "fits-width",
+            "selector": "p:nth-of-type(1)"
+          }
+        ],
+        "probe": {
+          "action": "read"
+        },
+        "site": "www.quantumleafstudio.com",
+        "match": "https://www.quantumleafstudio.com/",
+        "barrier": "Jev suggested reflow for If you see this page, the nginx web server is successfully installed and working.",
+        "rules": [
+          {
+            "selector": "body > p:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box",
+              "overflow-wrap": "anywhere"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 9,
+      "decisionLatencyMs": 538,
+      "before": {
+        "status": "fail",
+        "reason": "The target does not fit the visible width."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c0",
+        "confidence": 0.53,
+        "providerMs": 400,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 1833,
+          "output_tokens": 96
+        },
+        "rules": [
+          {
+            "selector": "body > p:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box",
+              "overflow-wrap": "anywhere"
+            }
+          }
+        ],
+        "label": "If you see this page, the nginx web server is successfully installed and working"
+      },
+      "accepted": true,
+      "status": "timed"
+    },
+    {
+      "id": "v4-5bfc1f759db965ccf1a8",
+      "persona": "screen-reader-view",
+      "class": "single-control",
+      "registeredClass": "single-control",
+      "candidates": 6,
+      "patch": {
+        "id": "v4-5bfc1f759db965ccf1a8",
+        "url": "https://netshort.com/",
+        "persona": "screen-reader-view",
+        "task": "In Reading view, find the “Search” searchbox and type test without submitting.",
+        "controlTask": "Click the visible “Search” field and type test without submitting.",
+        "observedSelector": "div:nth-of-type(2) > div:nth-of-type(3) > header > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > input",
+        "requiredName": "Search",
+        "outcomeChecks": [
+          {
+            "kind": "value",
+            "selector": "div:nth-of-type(2) > div:nth-of-type(3) > header > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > input",
+            "equals": "test"
+          }
+        ],
+        "probe": {
+          "action": "type",
+          "value": "test",
+          "role": "searchbox"
+        },
+        "site": "netshort.com",
+        "match": "https://netshort.com/",
+        "barrier": "Jev suggested addLabel for Search.",
+        "rules": [
+          {
+            "selector": "input.search-input.w-full",
+            "action": "addLabel",
+            "value": "Search"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 451,
+      "decisionLatencyMs": 3223,
+      "before": {
+        "status": "inconclusive",
+        "reason": "locator.evaluate: Timeout 1000ms exceeded."
+      },
+      "decision": {
+        "family": "addLabel",
+        "target": "c5",
+        "confidence": 0.31,
+        "providerMs": 894,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 4668,
+          "output_tokens": 164
+        },
+        "rules": [
+          {
+            "selector": "input.search-input.w-full",
+            "action": "addLabel",
+            "value": "Search"
+          }
+        ],
+        "label": "Search"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-0a57adb0d3db-c95f0ca7",
+      "persona": "keyboard-only",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 9,
+      "patch": {
+        "id": "v4-0a57adb0d3db-c95f0ca7",
+        "url": "https://www.first.org/",
+        "persona": "keyboard-only",
+        "task": "Open “About FIRST” from keyboard focus or with Arrow Down and follow “Mission Statement”. Confirm the public destination /about/mission.",
+        "controlTask": "Hover “About FIRST”, click “Mission Statement” and confirm /about/mission.",
+        "observedSelector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/about/mission"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1)",
+          "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ],
+        "site": "www.first.org",
+        "match": "https://www.first.org/",
+        "barrier": "Jev suggested mirrorHoverToFocus for About FIRST.",
+        "rules": [
+          {
+            "selector": "ul.navbar > li:nth-of-type(1)",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 31,
+      "decisionLatencyMs": 765,
+      "before": {
+        "status": "inconclusive",
+        "reason": "locator.evaluate: Error: strict mode violation: locator('#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > a') resolved to 2 elements:"
+      },
+      "decision": {
+        "family": "mirrorHoverToFocus",
+        "target": "c0",
+        "confidence": 0.55,
+        "providerMs": 591,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 4761,
+          "output_tokens": 162
+        },
+        "rules": [
+          {
+            "selector": "ul.navbar > li:nth-of-type(1)",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "label": "About FIRST"
+      },
+      "accepted": true,
+      "status": "timed"
+    },
+    {
+      "id": "v4-719c31e107dae52fa9e6",
+      "persona": "screen-reader-view",
+      "class": "single-control",
+      "registeredClass": "single-control",
+      "candidates": 5,
+      "decisionLatencyMs": 856,
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "decision": {
+        "family": "addLabel",
+        "target": "c0",
+        "confidence": 0.19,
+        "providerMs": 431,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 4643,
+          "output_tokens": 215
+        },
+        "reason": "unsupported-decision"
+      },
+      "status": "abstained",
+      "reason": "unsupported-decision"
+    },
+    {
+      "id": "v4-d24b0515c551f4dafef4",
+      "persona": "low-vision",
+      "class": "reflow",
+      "registeredClass": "single-control",
+      "candidates": 16,
+      "patch": {
+        "id": "v4-d24b0515c551f4dafef4",
+        "url": "https://org.ru/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels, read the passage beginning “ICANN опубликовала обновленный список заявок на новые домены” and confirm it fits without horizontal scrolling.",
+        "controlTask": "Read the passage beginning “ICANN опубликовала обновленный список заявок на новые домены” at normal width.",
+        "observedSelector": "#wrapper > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > div > div:nth-of-type(2) > p:nth-of-type(1)",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "#wrapper > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > div > div:nth-of-type(2) > p:nth-of-type(1)",
+            "equals": "ICANN опубликовала обновленный список заявок на новые домены"
+          },
+          {
+            "kind": "fits-width",
+            "selector": "#wrapper > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > div > div:nth-of-type(2) > p:nth-of-type(1)"
+          }
+        ],
+        "probe": {
+          "action": "read"
+        },
+        "site": "org.ru",
+        "match": "https://org.ru/",
+        "barrier": "Jev suggested reflow for div.",
+        "rules": [
+          {
+            "selector": "#wrapper",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 64,
+      "decisionLatencyMs": 1662,
+      "before": {
+        "status": "fail",
+        "reason": "The target does not fit the visible width."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c0",
+        "confidence": 0.53,
+        "providerMs": 1558,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 3433,
+          "output_tokens": 206
+        },
+        "rules": [
+          {
+            "selector": "#wrapper",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box"
+            }
+          }
+        ],
+        "label": "div"
+      },
+      "accepted": true,
+      "status": "timed"
+    },
+    {
+      "id": "v4-ad4b020b3d04-da9d62f3",
+      "persona": "low-vision",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 2,
+      "patch": {
+        "id": "v4-ad4b020b3d04-da9d62f3",
+        "url": "https://www.afr.com/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels with vertical scrolling only, hover “Companies”, click “Financial Services” and confirm /companies/financial-services.",
+        "controlTask": "Hover “Companies”, click “Financial Services” and confirm /companies/financial-services.",
+        "observedSelector": "#nav > header > div:nth-of-type(3) > nav > ul > li:nth-of-type(2) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/companies/financial-services"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#nav > header > div:nth-of-type(3) > nav > ul > li:nth-of-type(2)",
+          "#nav > header > div:nth-of-type(3) > nav > ul > li:nth-of-type(2) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#nav > header > div:nth-of-type(3) > nav > ul > li:nth-of-type(2) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#nav > header > div:nth-of-type(3) > nav > ul > li:nth-of-type(2) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#nav > header > div:nth-of-type(3) > nav > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ],
+        "site": "www.afr.com",
+        "match": "https://www.afr.com/",
+        "barrier": "Jev suggested reflow for div.",
+        "rules": [
+          {
+            "selector": "#stickyLeaderboard > div:nth-of-type(1) > div:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 92,
+      "decisionLatencyMs": 2989,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c0",
+        "confidence": 0.35,
+        "providerMs": 488,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 1697,
+          "output_tokens": 88
+        },
+        "rules": [
+          {
+            "selector": "#stickyLeaderboard > div:nth-of-type(1) > div:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box"
+            }
+          }
+        ],
+        "label": "div"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-11eece5236f4-be33a635",
+      "persona": "keyboard-only",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 5,
+      "patch": {
+        "id": "v4-11eece5236f4-be33a635",
+        "url": "https://www.bluecore.com/",
+        "persona": "keyboard-only",
+        "task": "Open “Solutions” from keyboard focus or with Arrow Down and follow “Identify and convertEasily grow lists and quickly capture conversions.”. Confirm the public destination /solutions/identify-and-convert-shoppers/.",
+        "controlTask": "Hover “Solutions”, click “Identify and convertEasily grow lists and quickly capture conversions.” and confirm /solutions/identify-and-convert-shoppers/.",
+        "observedSelector": "#menu-item-14 > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/solutions/identify-and-convert-shoppers/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#menu-item-14",
+          "#menu-item-14 > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#menu-item-14 > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-item-14 > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-item-325 > a",
+            "action": "activate"
+          }
+        ],
+        "site": "www.bluecore.com",
+        "match": "https://www.bluecore.com/",
+        "barrier": "Jev suggested mirrorHoverToFocus for Solutions.",
+        "rules": [
+          {
+            "selector": "#menu-item-14",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 40,
+      "decisionLatencyMs": 619,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "decision": {
+        "family": "mirrorHoverToFocus",
+        "target": "c0",
+        "confidence": 0.43,
+        "providerMs": 442,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 4541,
+          "output_tokens": 159
+        },
+        "rules": [
+          {
+            "selector": "#menu-item-14",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "label": "Solutions"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-9e66a9a97f9c204bd650",
+      "persona": "screen-reader-view",
+      "class": "single-control",
+      "registeredClass": "single-control",
+      "candidates": 1,
+      "patch": {
+        "id": "v4-9e66a9a97f9c204bd650",
+        "url": "https://thewire.in/",
+        "persona": "screen-reader-view",
+        "task": "In Reading view, find the “Search news” searchbox and type test without submitting.",
+        "controlTask": "Click the visible “Search news” field and type test without submitting.",
+        "observedSelector": "#root > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div > input",
+        "requiredName": "Search news",
+        "outcomeChecks": [
+          {
+            "kind": "value",
+            "selector": "#root > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div > input",
+            "equals": "test"
+          }
+        ],
+        "probe": {
+          "action": "type",
+          "value": "test",
+          "role": "searchbox"
+        },
+        "site": "thewire.in",
+        "match": "https://thewire.in/",
+        "barrier": "Jev suggested addLabel for Search news.",
+        "rules": [
+          {
+            "selector": "input.wire-search-content",
+            "action": "addLabel",
+            "value": "Search news"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 143,
+      "decisionLatencyMs": 1439,
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "decision": {
+        "family": "addLabel",
+        "target": "c0",
+        "confidence": 0.46,
+        "providerMs": 493,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 3747,
+          "output_tokens": 111
+        },
+        "rules": [
+          {
+            "selector": "input.wire-search-content",
+            "action": "addLabel",
+            "value": "Search news"
+          }
+        ],
+        "label": "Search news"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-e67da2a0e371-8a199948",
+      "persona": "keyboard-only",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 8,
+      "patch": {
+        "id": "v4-e67da2a0e371-8a199948",
+        "url": "https://www.einpresswire.com/",
+        "persona": "keyboard-only",
+        "task": "Open “About” from keyboard focus or with Arrow Down and follow “EIN Presswire overview”. Confirm the public destination /ein-presswire-overview.",
+        "controlTask": "Hover “About”, click “EIN Presswire overview” and confirm /ein-presswire-overview.",
+        "observedSelector": "div:nth-of-type(1) > header > div > div:nth-of-type(2) > nav > ul > li:nth-of-type(1) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/ein-presswire-overview"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "div:nth-of-type(1) > header > div > div:nth-of-type(2) > nav > ul > li:nth-of-type(1)",
+          "div:nth-of-type(1) > header > div > div:nth-of-type(2) > nav > ul > li:nth-of-type(1) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "div:nth-of-type(1) > header > div > div:nth-of-type(2) > nav > ul > li:nth-of-type(1) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "div:nth-of-type(1) > header > div > div:nth-of-type(2) > nav > ul > li:nth-of-type(1) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "div:nth-of-type(1) > header > div > div:nth-of-type(2) > nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ],
+        "site": "www.einpresswire.com",
+        "match": "https://www.einpresswire.com/",
+        "barrier": "Jev suggested mirrorHoverToFocus for About.",
+        "rules": [
+          {
+            "selector": "ul.a-nav-top__list > li:nth-of-type(1)",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 45,
+      "decisionLatencyMs": 687,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "decision": {
+        "family": "mirrorHoverToFocus",
+        "target": "c0",
+        "confidence": 0.57,
+        "providerMs": 455,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 5083,
+          "output_tokens": 215
+        },
+        "rules": [
+          {
+            "selector": "ul.a-nav-top__list > li:nth-of-type(1)",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "label": "About"
+      },
+      "accepted": true,
+      "status": "timed"
+    },
+    {
+      "id": "v4-8f3294d8284af81ec387",
+      "persona": "screen-reader-view",
+      "class": "single-control",
+      "registeredClass": "single-control",
+      "candidates": 7,
+      "decisionLatencyMs": 758,
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "decision": {
+        "family": "addLabel",
+        "target": "c0",
+        "confidence": 0.37,
+        "providerMs": 371,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 4882,
+          "output_tokens": 239
+        },
+        "reason": "unsupported-decision"
+      },
+      "status": "abstained",
+      "reason": "unsupported-decision"
+    },
+    {
+      "id": "v4-6d69e52234b5-eb01526e",
+      "persona": "low-vision",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 16,
+      "patch": {
+        "id": "v4-6d69e52234b5-eb01526e",
+        "url": "https://www.ly.com/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels with vertical scrolling only, hover “酒店”, click “海外酒店” and confirm /international.",
+        "controlTask": "Hover “酒店”, click “海外酒店” and confirm /international.",
+        "observedSelector": "#menuNav > li:nth-of-type(2) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/international"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#menuNav > li:nth-of-type(2)",
+          "#menuNav > li:nth-of-type(2) > div"
+        ],
+        "journey": [
+          {
+            "selector": "#menuNav > li:nth-of-type(2) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menuNav > li:nth-of-type(2) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menuNav > li:nth-of-type(2) > div > a:nth-of-type(2)",
+            "action": "activate"
+          }
+        ],
+        "site": "www.ly.com",
+        "match": "https://www.ly.com/",
+        "barrier": "Jev suggested reflow for div.",
+        "rules": [
+          {
+            "selector": "div.figma-hero-content",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 560,
+      "decisionLatencyMs": 975,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 extends past the visible width."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c0",
+        "confidence": 0.55,
+        "providerMs": 310,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 3500,
+          "output_tokens": 206
+        },
+        "rules": [
+          {
+            "selector": "div.figma-hero-content",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box"
+            }
+          }
+        ],
+        "label": "div"
+      },
+      "accepted": true,
+      "status": "timed"
+    },
+    {
+      "id": "v4-d2af6285faad11b99fc5",
+      "persona": "low-vision",
+      "class": "reflow",
+      "registeredClass": "single-control",
+      "candidates": 16,
+      "patch": {
+        "id": "v4-d2af6285faad11b99fc5",
+        "url": "https://www.ukrainealarm.com/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels, read the passage beginning “Встановіть застосунок Повітряна тривога, щоб миттєво отримувати сповіщення системи цивільної оборони.” and confirm it fits without horizontal scrolling.",
+        "controlTask": "Read the passage beginning “Встановіть застосунок Повітряна тривога, щоб миттєво отримувати сповіщення системи цивільної оборони.” at normal width.",
+        "observedSelector": "#comp-ir225ikb > p",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "#comp-ir225ikb > p",
+            "equals": "Встановіть застосунок Повітряна тривога, щоб миттєво отримувати сповіщення системи цивільної оборони."
+          },
+          {
+            "kind": "fits-width",
+            "selector": "#comp-ir225ikb > p"
+          }
+        ],
+        "probe": {
+          "action": "read"
+        },
+        "site": "www.ukrainealarm.com",
+        "match": "https://www.ukrainealarm.com/",
+        "barrier": "Jev suggested reflow for Встановіть застосунок Повітряна тривога, щоб миттєво отримувати сповіщення систе.",
+        "rules": [
+          {
+            "selector": "#comp-l9siuban",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box",
+              "flex-wrap": "wrap"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 7,
+      "decisionLatencyMs": 920,
+      "before": {
+        "status": "fail",
+        "reason": "The target does not fit the visible width."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c1",
+        "confidence": 0.43,
+        "providerMs": 566,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 4383,
+          "output_tokens": 206
+        },
+        "rules": [
+          {
+            "selector": "#comp-l9siuban",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box",
+              "flex-wrap": "wrap"
+            }
+          }
+        ],
+        "label": "Встановіть застосунок Повітряна тривога, щоб миттєво отримувати сповіщення систе"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-55e7f5e4d6e57dad613e",
+      "persona": "screen-reader-view",
+      "class": "single-control",
+      "registeredClass": "single-control",
+      "candidates": 5,
+      "patch": {
+        "id": "v4-55e7f5e4d6e57dad613e",
+        "url": "https://www.webassign.net/",
+        "persona": "screen-reader-view",
+        "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+        "controlTask": "Click the visible “Search” field and type test without submitting.",
+        "observedSelector": "#menu-primary > li:nth-of-type(5) > form > input:nth-of-type(1)",
+        "requiredName": "Search",
+        "outcomeChecks": [
+          {
+            "kind": "value",
+            "selector": "#menu-primary > li:nth-of-type(5) > form > input:nth-of-type(1)",
+            "equals": "test"
+          }
+        ],
+        "probe": {
+          "action": "type",
+          "value": "test",
+          "role": "textbox"
+        },
+        "site": "www.webassign.net",
+        "match": "https://www.webassign.net/",
+        "barrier": "Jev suggested addLabel for Search.",
+        "rules": [
+          {
+            "selector": "form.search-form > input:nth-of-type(1)",
+            "action": "addLabel",
+            "value": "Search"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 14,
+      "decisionLatencyMs": 882,
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "decision": {
+        "family": "addLabel",
+        "target": "c4",
+        "confidence": 0.22,
+        "providerMs": 741,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 4441,
+          "output_tokens": 164
+        },
+        "rules": [
+          {
+            "selector": "form.search-form > input:nth-of-type(1)",
+            "action": "addLabel",
+            "value": "Search"
+          }
+        ],
+        "label": "Search"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-87fc07b51597-e72ee055",
+      "persona": "low-vision",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 4,
+      "patch": {
+        "id": "v4-87fc07b51597-e72ee055",
+        "url": "https://reshak.ru/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels with vertical scrolling only, hover “3 класс”, click “Английский” and confirm /tag/3klass_eng.html.",
+        "controlTask": "Hover “3 класс”, click “Английский” and confirm /tag/3klass_eng.html.",
+        "observedSelector": "div > header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/tag/3klass_eng.html"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "div > header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1)",
+          "div > header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > div"
+        ],
+        "journey": [
+          {
+            "selector": "div > header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "div > header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "div > header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > div > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ],
+        "site": "reshak.ru",
+        "match": "https://reshak.ru/",
+        "barrier": "Jev suggested reflow for div.",
+        "rules": [
+          {
+            "selector": "div.vsep > section:nth-of-type(1) > div:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 10,
+      "decisionLatencyMs": 605,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c0",
+        "confidence": 0.24,
+        "providerMs": 441,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 1915,
+          "output_tokens": 104
+        },
+        "rules": [
+          {
+            "selector": "div.vsep > section:nth-of-type(1) > div:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box"
+            }
+          }
+        ],
+        "label": "div"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-08ba1d025269fe12ed5c",
+      "persona": "low-vision",
+      "class": "reflow",
+      "registeredClass": "single-control",
+      "candidates": 7,
+      "patch": {
+        "id": "v4-08ba1d025269fe12ed5c",
+        "url": "https://research-panel.jp/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels, read the passage beginning “簡単なアンケートにお答えいただくだけで、ポイントが貯まります。貯めたポイントは、現金やギフト券、電子マネーに交換できます。” and confirm it fits without horizontal scrolling.",
+        "controlTask": "Read the passage beginning “簡単なアンケートにお答えいただくだけで、ポイントが貯まります。貯めたポイントは、現金やギフト券、電子マネーに交換できます。” at normal width.",
+        "observedSelector": "div:nth-of-type(2) > div:nth-of-type(2) > section:nth-of-type(1) > div > div:nth-of-type(1) > p",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "div:nth-of-type(2) > div:nth-of-type(2) > section:nth-of-type(1) > div > div:nth-of-type(1) > p",
+            "equals": "簡単なアンケートにお答えいただくだけで、ポイントが貯まります。貯めたポイントは、現金やギフト券、電子マネーに交換できます。"
+          },
+          {
+            "kind": "fits-width",
+            "selector": "div:nth-of-type(2) > div:nth-of-type(2) > section:nth-of-type(1) > div > div:nth-of-type(1) > p"
+          }
+        ],
+        "probe": {
+          "action": "read"
+        },
+        "site": "research-panel.jp",
+        "match": "https://research-panel.jp/",
+        "barrier": "Jev suggested reflow for div.",
+        "rules": [
+          {
+            "selector": "div.wrap",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 9,
+      "decisionLatencyMs": 437,
+      "before": {
+        "status": "fail",
+        "reason": "The target does not fit the visible width."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c0",
+        "confidence": 0.41,
+        "providerMs": 391,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 2568,
+          "output_tokens": 128
+        },
+        "rules": [
+          {
+            "selector": "div.wrap",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box"
+            }
+          }
+        ],
+        "label": "div"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-a8473db109e3dfbb6c0c",
+      "persona": "low-vision",
+      "class": "reflow",
+      "registeredClass": "single-control",
+      "candidates": 16,
+      "patch": {
+        "id": "v4-a8473db109e3dfbb6c0c",
+        "url": "https://www.agoravox.fr/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels, read the passage beginning “Comment décrire l’attitude du président de la République face à la crise” and confirm it fits without horizontal scrolling.",
+        "controlTask": "Read the passage beginning “Comment décrire l’attitude du président de la République face à la crise” at normal width.",
+        "observedSelector": "#col1 > div:nth-of-type(1) > div > a > p",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "#col1 > div:nth-of-type(1) > div > a > p",
+            "equals": "Comment décrire l’attitude du président de la République face à la crise"
+          },
+          {
+            "kind": "fits-width",
+            "selector": "#col1 > div:nth-of-type(1) > div > a > p"
+          }
+        ],
+        "probe": {
+          "action": "read"
+        },
+        "site": "www.agoravox.fr",
+        "match": "https://www.agoravox.fr/",
+        "barrier": "Jev suggested reflow for Comment décrire l’attitude du président de la République face à la crise lycéenn.",
+        "rules": [
+          {
+            "selector": "#col1 > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1) > p:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box",
+              "overflow-wrap": "anywhere"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 61,
+      "decisionLatencyMs": 708,
+      "before": {
+        "status": "fail",
+        "reason": "The target does not fit the visible width."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c0",
+        "confidence": 0.22,
+        "providerMs": 440,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 3690,
+          "output_tokens": 251
+        },
+        "rules": [
+          {
+            "selector": "#col1 > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1) > p:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box",
+              "overflow-wrap": "anywhere"
+            }
+          }
+        ],
+        "label": "Comment décrire l’attitude du président de la République face à la crise lycéenn"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-fa615a94b3fc-f9c8564c",
+      "persona": "low-vision",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 2,
+      "patch": {
+        "id": "v4-fa615a94b3fc-f9c8564c",
+        "url": "https://domains.lt/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels with vertical scrolling only, hover “PASLAUGOS”, click “.com, .net domenų WHOIS informacija” and confirm /paslaugos/com-net-whois/.",
+        "controlTask": "Hover “PASLAUGOS”, click “.com, .net domenų WHOIS informacija” and confirm /paslaugos/com-net-whois/.",
+        "observedSelector": "#navMenu > div > div:nth-of-type(1) > a:nth-of-type(1)",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/paslaugos/com-net-whois/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#navMenu > div > div:nth-of-type(1)",
+          "#navMenu > div > div:nth-of-type(1) > div"
+        ],
+        "journey": [
+          {
+            "selector": "#navMenu > div > div:nth-of-type(1) > a:nth-of-type(1)",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#navMenu > div > div:nth-of-type(1) > a:nth-of-type(1)",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#navMenu > div > div:nth-of-type(1) > div > a:nth-of-type(7)",
+            "action": "activate"
+          }
+        ],
+        "site": "domains.lt",
+        "match": "https://domains.lt/",
+        "barrier": "Jev suggested reflow for div.",
+        "rules": [
+          {
+            "selector": "body.is-family-exo > nav:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "flex-wrap": "wrap"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 8,
+      "decisionLatencyMs": 479,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c0",
+        "confidence": 0.6,
+        "providerMs": 444,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 1645,
+          "output_tokens": 88
+        },
+        "rules": [
+          {
+            "selector": "body.is-family-exo > nav:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "flex-wrap": "wrap"
+            }
+          }
+        ],
+        "label": "div"
+      },
+      "accepted": true,
+      "status": "timed"
+    },
+    {
+      "id": "v4-133129e4da0d-df1d4593",
+      "persona": "low-vision",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 3,
+      "patch": {
+        "id": "v4-133129e4da0d-df1d4593",
+        "url": "https://bsky.network/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels with vertical scrolling only, hover “English”, click “日本語” and confirm /ja/.",
+        "controlTask": "Hover “English”, click “日本語” and confirm /ja/.",
+        "observedSelector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/ja/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+          "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > ul > li:nth-of-type(2) > a",
+            "action": "activate"
+          }
+        ],
+        "site": "bsky.network",
+        "match": "https://bsky.network/",
+        "barrier": "Jev suggested reflow for pre.",
+        "rules": [
+          {
+            "selector": "pre.code",
+            "action": "injectCSS",
+            "value": {
+              "white-space": "pre-wrap",
+              "overflow-wrap": "anywhere"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 31,
+      "decisionLatencyMs": 854,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c1",
+        "confidence": 0.54,
+        "providerMs": 401,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 1772,
+          "output_tokens": 96
+        },
+        "rules": [
+          {
+            "selector": "pre.code",
+            "action": "injectCSS",
+            "value": {
+              "white-space": "pre-wrap",
+              "overflow-wrap": "anywhere"
+            }
+          }
+        ],
+        "label": "pre"
+      },
+      "accepted": true,
+      "status": "timed"
+    },
+    {
+      "id": "v4-463474a3e808-e2664898",
+      "persona": "low-vision",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 3,
+      "patch": {
+        "id": "v4-463474a3e808-e2664898",
+        "url": "https://www.skilljar.com/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels with vertical scrolling only, hover “Product”, click “Academy inspiration →Get best-in-class examples” and confirm /academy-inspiration.",
+        "controlTask": "Hover “Product”, click “Academy inspiration →Get best-in-class examples” and confirm /academy-inspiration.",
+        "observedSelector": "#w-dropdown-toggle-0",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/academy-inspiration"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "div:nth-of-type(1) > main > div > div > div:nth-of-type(2) > div:nth-of-type(1) > nav > div:nth-of-type(1) > div:nth-of-type(1)",
+          "#w-dropdown-list-0"
+        ],
+        "journey": [
+          {
+            "selector": "#w-dropdown-toggle-0",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-toggle-0",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-list-0 > div > div:nth-of-type(2) > div:nth-of-type(2) > a:nth-of-type(2)",
+            "action": "activate"
+          }
+        ],
+        "site": "www.skilljar.com",
+        "match": "https://www.skilljar.com/",
+        "barrier": "Jev suggested reflow for div.",
+        "rules": [
+          {
+            "selector": "div.header-logos-wrapper-tablet > div:nth-of-type(3) > div:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box",
+              "flex-wrap": "wrap"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 10,
+      "decisionLatencyMs": 435,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 1 was unavailable after the prior step."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c0",
+        "confidence": 0.38,
+        "providerMs": 336,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 1802,
+          "output_tokens": 96
+        },
+        "rules": [
+          {
+            "selector": "div.header-logos-wrapper-tablet > div:nth-of-type(3) > div:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box",
+              "flex-wrap": "wrap"
+            }
+          }
+        ],
+        "label": "div"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-22403f71540ed1161620",
+      "persona": "low-vision",
+      "class": "reflow",
+      "registeredClass": "single-control",
+      "candidates": 1,
+      "patch": {
+        "id": "v4-22403f71540ed1161620",
+        "url": "https://www.jefferson.edu/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels, read the passage beginning “Whether you're contemplating enrollment at Jefferson for a bachelor's or master’s degree,” and confirm it fits without horizontal scrolling.",
+        "controlTask": "Read the passage beginning “Whether you're contemplating enrollment at Jefferson for a bachelor's or master’s degree,” at normal width.",
+        "observedSelector": "div:nth-of-type(1) > div > main > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > p",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "div:nth-of-type(1) > div > main > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > p",
+            "equals": "Whether you're contemplating enrollment at Jefferson for a bachelor's or master’s degree,"
+          },
+          {
+            "kind": "fits-width",
+            "selector": "div:nth-of-type(1) > div > main > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > p"
+          }
+        ],
+        "probe": {
+          "action": "read"
+        },
+        "site": "www.jefferson.edu",
+        "match": "https://www.jefferson.edu/",
+        "barrier": "Jev suggested reflow for div.",
+        "rules": [
+          {
+            "selector": "div.container.text-with-featured-blocks__container > div:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "flex-wrap": "wrap"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 52,
+      "decisionLatencyMs": 619,
+      "before": {
+        "status": "fail",
+        "reason": "The target does not fit the visible width."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c0",
+        "confidence": 0.75,
+        "providerMs": 471,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 1530,
+          "output_tokens": 80
+        },
+        "rules": [
+          {
+            "selector": "div.container.text-with-featured-blocks__container > div:nth-of-type(1)",
+            "action": "injectCSS",
+            "value": {
+              "flex-wrap": "wrap"
+            }
+          }
+        ],
+        "label": "div"
+      },
+      "accepted": true,
+      "status": "timed"
+    },
+    {
+      "id": "v4-acb953224d92945f289a",
+      "persona": "low-vision",
+      "class": "reflow",
+      "registeredClass": "single-control",
+      "candidates": 15,
+      "patch": {
+        "id": "v4-acb953224d92945f289a",
+        "url": "https://www.questionai.com/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels, read the passage beginning “Our Question AI has unique features and all free, also known as” and confirm it fits without horizontal scrolling.",
+        "controlTask": "Read the passage beginning “Our Question AI has unique features and all free, also known as” at normal width.",
+        "observedSelector": "#main > div:nth-of-type(2) > main > section:nth-of-type(2) > p",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "#main > div:nth-of-type(2) > main > section:nth-of-type(2) > p",
+            "equals": "Our Question AI has unique features and all free, also known as"
+          },
+          {
+            "kind": "fits-width",
+            "selector": "#main > div:nth-of-type(2) > main > section:nth-of-type(2) > p"
+          }
+        ],
+        "probe": {
+          "action": "read"
+        },
+        "site": "www.questionai.com",
+        "match": "https://www.questionai.com/",
+        "barrier": "Jev suggested reflow for Question Answering & HomeworkHelper.",
+        "rules": [
+          {
+            "selector": "#main",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 7,
+      "decisionLatencyMs": 739,
+      "before": {
+        "status": "fail",
+        "reason": "The target does not fit the visible width."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c3",
+        "confidence": 0.2,
+        "providerMs": 551,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 3576,
+          "output_tokens": 197
+        },
+        "rules": [
+          {
+            "selector": "#main",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box"
+            }
+          }
+        ],
+        "label": "Question Answering & HomeworkHelper"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-fa767becbb4bdfebaa3a",
+      "persona": "low-vision",
+      "class": "reflow",
+      "registeredClass": "single-control",
+      "before": {
+        "status": "fail",
+        "reason": "The target does not fit the visible width."
+      },
+      "status": "capture-unavailable",
+      "reason": "page.screenshot: Timeout 5000ms exceeded."
+    },
+    {
+      "id": "v4-9fed766dd2cdb03bed43",
+      "persona": "low-vision",
+      "class": "reflow",
+      "registeredClass": "single-control",
+      "candidates": 7,
+      "patch": {
+        "id": "v4-9fed766dd2cdb03bed43",
+        "url": "https://www.chehejia.com/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels, read the passage beginning “公司地址：北京市顺义区高丽营镇恒兴路4号院1幢105室(科技创新功能区) 联系电话：4006860900 联系邮箱：press@chehejia.com” and confirm it fits without horizontal scrolling.",
+        "controlTask": "Read the passage beginning “公司地址：北京市顺义区高丽营镇恒兴路4号院1幢105室(科技创新功能区) 联系电话：4006860900 联系邮箱：press@chehejia.com” at normal width.",
+        "observedSelector": "div:nth-of-type(4) > div:nth-of-type(2) > p",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "div:nth-of-type(4) > div:nth-of-type(2) > p",
+            "equals": "公司地址：北京市顺义区高丽营镇恒兴路4号院1幢105室(科技创新功能区) 联系电话：4006860900 联系邮箱：press@chehejia.com"
+          },
+          {
+            "kind": "fits-width",
+            "selector": "div:nth-of-type(4) > div:nth-of-type(2) > p"
+          }
+        ],
+        "probe": {
+          "action": "read"
+        },
+        "site": "www.chehejia.com",
+        "match": "https://www.chehejia.com/",
+        "barrier": "Jev suggested reflow for 公司地址：北京市顺义区高丽营镇恒兴路4号院1幢105室(科技创新功能区) 联系电话：4006860900 联系邮箱：press@chehejia.com.",
+        "rules": [
+          {
+            "selector": "p.adress",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box",
+              "overflow-wrap": "anywhere"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 222,
+      "decisionLatencyMs": 2503,
+      "before": {
+        "status": "fail",
+        "reason": "The target does not fit the visible width."
+      },
+      "decision": {
+        "family": "reflow",
+        "target": "c0",
+        "confidence": 0.49,
+        "providerMs": 741,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 2660,
+          "output_tokens": 166
+        },
+        "rules": [
+          {
+            "selector": "p.adress",
+            "action": "injectCSS",
+            "value": {
+              "min-width": "0",
+              "max-width": "100%",
+              "width": "auto",
+              "box-sizing": "border-box",
+              "overflow-wrap": "anywhere"
+            }
+          }
+        ],
+        "label": "公司地址：北京市顺义区高丽营镇恒兴路4号院1幢105室(科技创新功能区) 联系电话：4006860900 联系邮箱：press@chehejia.com"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-a91e388df654-553cb250",
+      "persona": "keyboard-only",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 1,
+      "patch": {
+        "id": "v4-a91e388df654-553cb250",
+        "url": "https://cardano.org/",
+        "persona": "keyboard-only",
+        "task": "Open “English” from keyboard focus or with Arrow Down and follow “Deutsch85%”. Confirm the public destination /de/.",
+        "controlTask": "Hover “English”, click “Deutsch85%” and confirm /de/.",
+        "observedSelector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/de/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)",
+          "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(2) > a",
+            "action": "activate"
+          }
+        ],
+        "site": "cardano.org",
+        "match": "https://cardano.org/",
+        "barrier": "Jev suggested mirrorHoverToFocus for English.",
+        "rules": [
+          {
+            "selector": "div.navbar__item.dropdown",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 39,
+      "decisionLatencyMs": 561,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "decision": {
+        "family": "mirrorHoverToFocus",
+        "target": "c0",
+        "confidence": 0.41,
+        "providerMs": 437,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 3622,
+          "output_tokens": 90
+        },
+        "rules": [
+          {
+            "selector": "div.navbar__item.dropdown",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "label": "English"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-ea505998d794-7cb232c6",
+      "persona": "keyboard-only",
+      "class": 1,
+      "registeredClass": 1,
+      "candidates": 5,
+      "patch": {
+        "id": "v4-ea505998d794-7cb232c6",
+        "url": "https://www.tynker.com/",
+        "persona": "keyboard-only",
+        "task": "Open “RESOURCES” from keyboard focus or with Arrow Down and follow “Why Coding Matters”. Confirm the public destination /coding-for-kids/why-coding-matters/.",
+        "controlTask": "Hover “RESOURCES”, click “Why Coding Matters” and confirm /coding-for-kids/why-coding-matters/.",
+        "observedSelector": "#header > nav > div:nth-of-type(3) > ul > li:nth-of-type(4) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/coding-for-kids/why-coding-matters/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#header > nav > div:nth-of-type(3) > ul > li:nth-of-type(4)",
+          "#header > nav > div:nth-of-type(3) > ul > li:nth-of-type(4) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#header > nav > div:nth-of-type(3) > ul > li:nth-of-type(4) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#header > nav > div:nth-of-type(3) > ul > li:nth-of-type(4) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#header > nav > div:nth-of-type(3) > ul > li:nth-of-type(4) > ul > li:nth-of-type(2) > a",
+            "action": "activate"
+          }
+        ],
+        "site": "www.tynker.com",
+        "match": "https://www.tynker.com/",
+        "barrier": "Jev suggested mirrorHoverToFocus for Resources.",
+        "rules": [
+          {
+            "selector": "li.show-for-large.nav-item-why_code",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 120,
+      "decisionLatencyMs": 726,
+      "before": {
+        "status": "fail",
+        "reason": "Journey step 3 was unavailable after the prior step."
+      },
+      "decision": {
+        "family": "mirrorHoverToFocus",
+        "target": "c0",
+        "confidence": 0.48,
+        "providerMs": 395,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 4175,
+          "output_tokens": 122
+        },
+        "rules": [
+          {
+            "selector": "li.show-for-large.nav-item-why_code",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "label": "Resources"
+      },
+      "accepted": false,
+      "status": "timed"
+    },
+    {
+      "id": "v4-418e0a50e07e14eee037",
+      "persona": "screen-reader-view",
+      "class": "single-control",
+      "registeredClass": "single-control",
+      "candidates": 2,
+      "patch": {
+        "id": "v4-418e0a50e07e14eee037",
+        "url": "https://www.biblestudytools.com/",
+        "persona": "screen-reader-view",
+        "task": "In Reading view, find the “Search the Bible” textbox and type test without submitting.",
+        "controlTask": "Click the visible “Search the Bible” field and type test without submitting.",
+        "observedSelector": "#desktop-search-form > div > div > input",
+        "requiredName": "Search the Bible",
+        "outcomeChecks": [
+          {
+            "kind": "value",
+            "selector": "#desktop-search-form > div > div > input",
+            "equals": "test"
+          }
+        ],
+        "probe": {
+          "action": "type",
+          "value": "test",
+          "role": "textbox"
+        },
+        "site": "www.biblestudytools.com",
+        "match": "https://www.biblestudytools.com/",
+        "barrier": "Jev suggested addLabel for Search the Bible.",
+        "rules": [
+          {
+            "selector": "input.px-3.text-lg",
+            "action": "addLabel",
+            "value": "Search the Bible"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      },
+      "appliedInCapturedPage": true,
+      "applyMs": 94,
+      "decisionLatencyMs": 1578,
+      "before": {
+        "status": "inconclusive",
+        "reason": "locator.evaluate: Timeout 1000ms exceeded."
+      },
+      "decision": {
+        "family": "addLabel",
+        "target": "c1",
+        "confidence": 0.56,
+        "providerMs": 382,
+        "model": "jev-1.14.0",
+        "usage": {
+          "input_tokens": 3976,
+          "output_tokens": 135
+        },
+        "rules": [
+          {
+            "selector": "input.px-3.text-lg",
+            "action": "addLabel",
+            "value": "Search the Bible"
+          }
+        ],
+        "label": "Search the Bible"
+      },
+      "accepted": true,
+      "status": "timed"
+    }
+  ]
+}

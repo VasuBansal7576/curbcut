@@ -38,6 +38,18 @@ async function captureInstantScreenshot(windowId) {
   } finally { bitmap.close(); }
 }
 
+function publicInstantUrl(address) {
+  if (globalThis.CurbCutExt.urlLooksSensitive(address)) return false;
+  const url = new URL(address);
+  return url.protocol === "https:" && !url.port && url.hostname.includes(".") &&
+    !/^\d+(\.\d+)+$/.test(url.hostname) && !/\.(?:localhost|local|internal|lan|home|test|example|invalid)$/i.test(url.hostname.replace(/\.$/, ""));
+}
+
+async function instantQueueKeys() {
+  const stored = await chrome.storage.local.get(null);
+  return Object.keys(stored).filter(key => key.startsWith(instantQueuePrefix));
+}
+
 let flushing;
 function flushInstantQueue() {
   flushing ??= deliverInstantQueue().finally(() => { flushing = null; });
@@ -45,7 +57,7 @@ function flushInstantQueue() {
 }
 
 async function deliverInstantQueue() {
-  const keys = (await chrome.storage.local.getKeys()).filter(key => key.startsWith(instantQueuePrefix));
+  const keys = await instantQueueKeys();
   for (const key of keys) {
     const entry = (await chrome.storage.local.get(key))[key];
     if (!entry) continue;
@@ -53,7 +65,7 @@ async function deliverInstantQueue() {
     catch { return; }
     await chrome.storage.local.remove(key);
   }
-  if (!(await chrome.storage.local.getKeys()).some(key => key.startsWith(instantQueuePrefix))) {
+  if (!(await instantQueueKeys()).length) {
     await chrome.alarms.clear(instantQueueAlarm);
   }
 }
@@ -76,7 +88,7 @@ function instantFix(tabId) {
   const job = (async () => {
     const start = performance.now();
     const tab = await chrome.tabs.get(tabId);
-    if (!tab.active || globalThis.CurbCutExt.urlLooksSensitive(tab.url)) return { ok: false };
+    if (!tab.active || !publicInstantUrl(tab.url)) return { ok: false };
     const send = (message, documentId) => chrome.tabs.sendMessage(tabId, message, documentId ? { documentId } : { frameId: 0 });
     let captured, phase = "capture";
     try {
@@ -104,7 +116,7 @@ function instantFix(tabId) {
       if (!applied?.ok) return { ok: false, reason: "target-changed" };
       const endToEndMs = Math.round(performance.now() - start);
       await queueInstant({ ...patch, ...applied.objective }, decision);
-      return { ok: true, endToEndMs, providerMs: decision.providerMs, confidence: decision.confidence, family: decision.family };
+      return { ok: true, patchId: patch.id, endToEndMs, providerMs: decision.providerMs, confidence: decision.confidence, family: decision.family };
     } catch (error) {
       return { ok: false, reason: phase, ...(Number.isInteger(error.status) ? { status: error.status } : {}) };
     } finally {

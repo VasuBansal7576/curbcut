@@ -24,8 +24,8 @@ async function readJsonAsset(path) {
 }
 
 async function getState() {
-  const keys = (await chrome.storage.local.getKeys()).filter(key => !key.startsWith(instantQueuePrefix));
-  const stored = await chrome.storage.local.get(keys);
+  const stored = await chrome.storage.local.get(null);
+  for (const key of Object.keys(stored)) if (key.startsWith(instantQueuePrefix)) delete stored[key];
   return {
     ...Ext.DEFAULT_STATE,
     ...stored,

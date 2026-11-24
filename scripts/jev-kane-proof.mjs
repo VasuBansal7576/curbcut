@@ -109,9 +109,15 @@ async function reconcile(selection) {
 
 if(process.argv[2]==='select') {
   const selected=await selection()
-  assert.equal(selected.selection.length,5,'Fewer than five new cases passed the instant fix benchmark.')
-  await saveJSON(selectionPath,selected)
-  console.log(JSON.stringify(selected,null,2))
+  if(selected.selection.length<5) {
+    const report={at:instant(),status:'insufficient-eligible-cases',required:5,eligible:selected.eligible,threshold,
+      eligibleIds:selected.selection.map(item=>item.id),started:0,verified:0,creditsUsed:0}
+    await saveJSON(path.join(root,'kane-eligibility.json'),report)
+    console.log(JSON.stringify(report,null,2))
+  } else {
+    await saveJSON(selectionPath,selected)
+    console.log(JSON.stringify(selected,null,2))
+  }
 } else if(process.argv[2]==='run') {
   const sealed=await readJSON(selectionPath)
   assert.deepEqual(sealed,await selection())

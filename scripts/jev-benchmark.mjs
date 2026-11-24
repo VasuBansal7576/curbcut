@@ -12,6 +12,8 @@ const root=path.join(ROOT,'proof/jev')
 const cohorts=process.argv.slice(2).filter(arg=>!arg.startsWith('--'))
 if(!cohorts.length) cohorts.push('hard-v4','heldout-v5')
 if(cohorts.some(name=>!['hard-v4','heldout-v5'].includes(name))) throw new Error('Unknown cohort.')
+const timingOnly=process.argv.includes('--v4-timing-only')
+if(timingOnly && (cohorts.length!==1 || cohorts[0]!=='hard-v4')) throw new Error('Choose hard-v4 for the timing follow-up.')
 const limit=Number(process.argv.find(arg=>arg.startsWith('--limit='))?.split('=')[1]??Infinity)
 const key=await jevKey()
 if(!key) throw new Error('Jev is not configured.')
@@ -72,6 +74,7 @@ async function measure({task}) {
   const patch=row.patch
   if(!patch) return out('invalid-patch','Patch did not pass its schema.')
   row.accepted=decision.confidence>=threshold && row.appliedInCapturedPage
+  if(timingOnly) return out('timed')
   if(row.before.status!=='fail') return out('barrier-not-reproduced',row.before.reason)
   row.control=await lane(task,'control',null)
   if(row.control.status!=='pass') return out('control-unavailable',row.control.reason)
@@ -111,8 +114,14 @@ function summary(rows) {
 }
 const result={version:1,runner:'playwright',startedAt:instant(),threshold,cohorts:{}}
 for(const cohort of cohorts) {
-  const {tasks}=await readJSON(path.join(ROOT,'proof',cohort,'registration.json'))
-  const file=path.join(root,cohort+'-replay.json')
+  const registration=await readJSON(path.join(ROOT,'proof',cohort,'registration.json'))
+  let tasks=registration.tasks
+  if(timingOnly) {
+    const archived=await readJSON(path.join(root,'hard-v4-replay.json'))
+    const observed=new Set(archived.rows.filter(row=>row.patch && row.before.status==='fail').map(row=>row.id))
+    tasks=tasks.filter(({task})=>observed.has(task.id))
+  }
+  const file=path.join(root,timingOnly?'hard-v4-timing.json':cohort+'-replay.json')
   const prior=limit===Infinity && !process.argv.includes('--fresh')?await readJSON(file).catch(error=>{if(error.code!=='ENOENT')throw error}):null
   if(prior && prior.threshold!==threshold) throw new Error('Resume requires the same confidence threshold.')
   const rows=prior?.rows??[]
@@ -141,6 +150,6 @@ for(const cohort of cohorts) {
   await Promise.all(Array.from({length:5},worker))
   result.cohorts[cohort]={...summary(rows),registered:tasks.length,
     ...(limit===Infinity?{replay:'proof/jev/'+cohort+'-replay.json'}:{rows})}
-  if(limit===Infinity) await saveJSON(path.join(root,cohort+'-summary.json'),result.cohorts[cohort])
+  if(limit===Infinity && !timingOnly) await saveJSON(path.join(root,cohort+'-summary.json'),result.cohorts[cohort])
 }
 console.log(JSON.stringify(result,null,2))

@@ -27,6 +27,7 @@ for(const name of ['hard-v4','heldout-v5']) {
   const {tasks}=await readJSON(path.join(ROOT,'proof',name,'registration.json'))
   const baseline=await readJSON(path.join(ROOT,'proof',name,'local-summary.json'))
   const {rows}=replay
+  const timed=name==='hard-v4'?(await read('hard-v4-timing.json',null))?.rows??rows:rows
   const accepted=row=>row.patch && row.decision.confidence>=threshold && row.appliedInCapturedPage!==false
   const fixed=row=>row.oraclePass===true && accepted(row)
   const support=rows.filter(row=>row.patch)
@@ -43,8 +44,10 @@ for(const name of ['hard-v4','heldout-v5']) {
     codexCallsSavedEstimate:correct.length,byBarrier:Object.fromEntries(pairs),
     baseline:{fixed:baseline.fixed,registered:baseline.total,successRate:baseline.fixed/baseline.total,evidence:'proof/'+name+'/local-summary.json'},
     captureAndDecisionMs:percentiles(rows.filter(row=>row.applyMs===undefined).map(row=>row.decisionLatencyMs)),
-    timedThroughRuleInstallMs:percentiles(rows.filter(row=>row.appliedInCapturedPage).map(row=>row.decisionLatencyMs)),
-    fixedInstallMs:percentiles(correct.filter(row=>row.appliedInCapturedPage).map(row=>row.decisionLatencyMs)),
+    timedThroughRuleInstallMs:percentiles(timed.filter(row=>row.appliedInCapturedPage).map(row=>row.decisionLatencyMs)),
+    fixedInstallMs:percentiles(timed.filter(row=>row.appliedInCapturedPage && correct.some(fixed=>
+      fixed.id===row.id && JSON.stringify(fixed.patch.rules)===JSON.stringify(row.patch.rules))).map(row=>row.decisionLatencyMs)),
+    ...(timed!==rows?{developmentLatencyFollowup:'proof/jev/hard-v4-timing.json'}:{}),
     providerRoundTripMs:percentiles(rows.map(row=>row.decision?.providerMs)),
     calibration:[0,.3,.4,.5,.6,.7,.8,.9].map((lower,index,bounds)=>{
       const upper=bounds[index+1]??1.01

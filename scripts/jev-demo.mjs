@@ -23,7 +23,7 @@ const size={width:1920,height:1080}
 const server=await serve().catch(error=>{if(error.code!=='EADDRINUSE')throw error})
 const record=!process.argv.includes('--probe')
 let context,video,recording
-const watchdog=setTimeout(()=>{void context?.close()},45000).unref()
+const watchdog=setTimeout(()=>{void context?.close().catch(()=>{})},45000).unref()
 async function tabTo(page,selector,limit=45) {
   for(let attempt=0;attempt<limit;attempt++) {
     if(await page.locator(selector).evaluate(node=>document.activeElement===node,null,{timeout:700}).catch(()=>false)) return
@@ -60,8 +60,18 @@ try {
       catch(error) { return {ok:false,reason:"screenshot",detail:error.message} }
       return instantFix(tab.id)
     },page.url())
+    if(result.ok) {
+      if(!await page.locator(link).isVisible()) throw new Error('The submenu stayed hidden after applying the instant fix.')
+      await page.keyboard.press('Escape')
+      await page.locator('[data-curbcut-instant]').getByRole('status').filter({hasText:'Instant fix undone.'}).waitFor({timeout:4000})
+      if(await page.locator(link).isVisible()) throw new Error('The submenu stayed open after undo.')
+      result.undo='verified-with-escape'
+      await worker.evaluate(()=>flushInstantQueue())
+      const queued=await readJSON(path.join(ROOT,'.curbcut/instant-queue',result.patchId+'.json'))
+      if(queued.status!=='queued' || queued.patch.id!==result.patchId) throw new Error('The local candidate was not queued.')
+      result.queue='verified-locally'
+    } else process.exitCode=1
     console.log(JSON.stringify(result))
-    if(!result.ok) process.exitCode=1
   } else {
     await page.evaluate(()=>{
       let start
@@ -102,7 +112,7 @@ try {
   }
 } finally {
   clearTimeout(watchdog)
-  await context?.close()
+  await context?.close().catch(()=>{})
   await rm(profile,{recursive:true,force:true})
   server?.close()
 }
