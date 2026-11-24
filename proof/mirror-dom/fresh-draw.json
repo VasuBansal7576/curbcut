@@ -1,0 +1,18 @@
+{
+  "seed": "curbcut-mirror-dom-fresh-v1",
+  "finderCommit": "d5fa1ee00ec863b3e49ce304436f0dcf33395e98",
+  "target": 30,
+  "limit": 200,
+  "candidates": [],
+  "protocol": {
+    "selection": "First eligible trigger per site. Require actual Tab access to the trigger, pointer hover reveals at least one link, and ArrowDown plus bounded Tab misses at least one pointer link.",
+    "replay": "New profile. Record extension result and elapsed time. Check patched keyboard and pointer sets with independent Playwright replay and local journey oracle.",
+    "kane": {
+      "seed": "curbcut-mirror-dom-fresh-v1-kane",
+      "sample": 5,
+      "maxCredits": 200,
+      "balanceFloor": 1300,
+      "inconclusiveRetries": 1
+    }
+  }
+}
