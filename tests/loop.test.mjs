@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import {judgeJourney,parseRun} from '../core/kane.mjs'
+import {judgeJourney,parseRun,replayObjective} from '../core/kane.mjs'
 import {checkPatch,fix,repairLocally} from '../core/loop.mjs'
 import {readJSON} from '../core/io.mjs'
 import {match} from '../core/engine.js'
@@ -16,6 +16,20 @@ test('only agreeing Kane run_end and exit code can provide a verdict',()=>{
  assert.equal(parseRun({code:2,stdout:'not authenticated'}).status,'inconclusive')
  assert.equal(parseRun({code:1,stdout:JSON.stringify({type:'run_end',status:'failed',reason_code:'agent_error.child_failed'})}).status,'inconclusive')
  assert.equal(parseRun({code:1,stdout:JSON.stringify({type:'run_end',status:'failed',reason_code:'assertion_error.step_not_achievable',reason:'The run turn budget was exhausted.'})}).status,'inconclusive')
+})
+test('only the unpatched keyboard objective asks Kane to report a missing control as failed',()=>{
+ const journey={task:'Tab to “Menu” and open it.',controlTask:'Click “Menu”.',journey:[{}]}
+ const hint='The initial target is outside the Tab order.'
+ const failure='If a required control is missing, invisible, or cannot be reached, report the task as failed.'
+ const before=replayObjective(journey,'keyboard-only',{hint})
+ const control=replayObjective(journey,'control',{hint})
+ const after=replayObjective(journey,'keyboard-only',{patched:true,hint})
+ assert.ok(before.includes(failure) && before.includes(hint))
+ assert.ok(control.includes(journey.controlTask))
+ assert.doesNotMatch(control,/keyboard|inaccessible|barrier|failed|outside the Tab order/i)
+ assert.ok(after.includes(journey.task) && after.includes('Use only keyboard input.'))
+ assert.doesNotMatch(after,/inaccessible|barrier|failed|outside the Tab order/i)
+ assert.doesNotMatch(replayObjective({task:'Find the named field.',probe:{action:'type'}},'screen-reader-view',{patched:true}),/barrier|failed/i)
 })
 test('reject out-of-scope origins, unknown actions and unrestricted CSS',()=>{
  assert(match(original,task.url))

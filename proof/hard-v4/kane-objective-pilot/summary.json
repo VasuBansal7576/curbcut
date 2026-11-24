@@ -1,0 +1,162 @@
+{
+  "runner": "kane",
+  "purpose": "v4 development pilot of neutral pointer and patched objectives",
+  "startedAt": "2026-11-24T10:34:36.815Z",
+  "initialBalance": 5098.3455,
+  "maximumCredits": 200,
+  "finalBalance": 4924.4416,
+  "creditsSpent": 173.9039,
+  "cases": [
+    {
+      "id": "v4-86f207deeb57-7bc09a21",
+      "site": "www.mass.edu",
+      "candidate": "proof/hard-v4/local/v4-86f207deeb57-7bc09a21/attempt-1/candidate.json",
+      "candidateSha256": "5cc57f8893c628f90d5859002fe71280a26274d09f25c7cf69ffcebac771e116",
+      "preflight": "pass",
+      "phases": [
+        {
+          "phase": "before",
+          "balanceBefore": 5098.3455,
+          "startedAt": "2026-11-24T10:34:48.858Z",
+          "status": "fail",
+          "reason": "About focus, Arrow Down, and Space never revealed The DHE submenu link, so it cannot be reached by keyboard.",
+          "reasonCode": "assertion_error.step_not_achievable",
+          "runner": "kane",
+          "runId": "4bbdfee2-da71-463d-bdba-7dde0d9aa803",
+          "evidencePack": "proof/hard-v4/kane-objective-pilot/v4-86f207deeb57-7bc09a21/before/6bf114e0-0c19-4dcf-966a-b6fc54a8eeb7.evidence",
+          "evidenceValid": true,
+          "recording": "proof/hard-v4/kane-objective-pilot/v4-86f207deeb57-7bc09a21/before/recording.mp4",
+          "limits": {
+            "maxSteps": 50,
+            "timeout": 360,
+            "assertionMode": "dom"
+          },
+          "kaneReportedCredits": 43.038754999999995,
+          "result": "proof/hard-v4/kane-objective-pilot/v4-86f207deeb57-7bc09a21/before/result.json",
+          "balanceAfter": 5052.7841,
+          "creditsSpent": 45.5614
+        },
+        {
+          "phase": "control",
+          "balanceBefore": 5052.7841,
+          "startedAt": "2026-11-24T10:37:06.462Z",
+          "status": "pass",
+          "reason": "Objective completed",
+          "reasonCode": "success.complete",
+          "runner": "kane",
+          "runId": "ef900277-c426-4834-a752-da930e5fcd87",
+          "evidencePack": "proof/hard-v4/kane-objective-pilot/v4-86f207deeb57-7bc09a21/control/98ec2507-8bff-4cd6-b865-f2ce299b4513.evidence",
+          "evidenceValid": true,
+          "recording": "proof/hard-v4/kane-objective-pilot/v4-86f207deeb57-7bc09a21/control/recording.mp4",
+          "limits": {
+            "maxSteps": 22,
+            "timeout": 300,
+            "assertionMode": "dom"
+          },
+          "kaneReportedCredits": 16.444905,
+          "result": "proof/hard-v4/kane-objective-pilot/v4-86f207deeb57-7bc09a21/control/result.json",
+          "balanceAfter": 5032.4257,
+          "creditsSpent": 20.3584
+        },
+        {
+          "phase": "after",
+          "balanceBefore": 5032.4257,
+          "startedAt": "2026-11-24T10:38:15.559Z",
+          "status": "pass",
+          "reason": "Objective completed",
+          "reasonCode": "success.complete",
+          "runner": "kane",
+          "runId": "ea020647-67b0-482d-8053-7952c386b20e",
+          "evidencePack": "proof/hard-v4/kane-objective-pilot/v4-86f207deeb57-7bc09a21/after/184e4966-33cf-4598-becb-eace2d70a285.evidence",
+          "evidenceValid": true,
+          "recording": "proof/hard-v4/kane-objective-pilot/v4-86f207deeb57-7bc09a21/after/recording.mp4",
+          "limits": {
+            "maxSteps": 50,
+            "timeout": 360,
+            "assertionMode": "dom"
+          },
+          "kaneReportedCredits": 23.6513975,
+          "result": "proof/hard-v4/kane-objective-pilot/v4-86f207deeb57-7bc09a21/after/result.json",
+          "balanceAfter": 5005.4471,
+          "creditsSpent": 26.9786
+        }
+      ]
+    },
+    {
+      "id": "v4-27c6f312c486-51e6e4ad",
+      "site": "csc.gov.in",
+      "candidate": "proof/hard-v4/local/v4-27c6f312c486-51e6e4ad/attempt-1/candidate.json",
+      "candidateSha256": "ac4f1cc359e14a0d53f28515e4c2a3bc6aa1f854e5e57ee04478c12108fd9923",
+      "preflight": "pass",
+      "phases": [
+        {
+          "phase": "before",
+          "balanceBefore": 5005.4471,
+          "startedAt": "2026-11-24T10:40:07.751Z",
+          "status": "fail",
+          "reason": "ABOUT stayed focused but its submenu never appeared after Arrow Down and Space, so About MeitY cannot be reached keyboard-only.",
+          "reasonCode": "assertion_error.confirmed_product_bug",
+          "runner": "kane",
+          "runId": "6b71959a-8af8-4a4a-9adc-37cac2511e8a",
+          "evidencePack": "proof/hard-v4/kane-objective-pilot/v4-27c6f312c486-51e6e4ad/before/c1aa01b9-5dc2-4452-86a0-ef478c6d1f8c.evidence",
+          "evidenceValid": true,
+          "recording": "proof/hard-v4/kane-objective-pilot/v4-27c6f312c486-51e6e4ad/before/recording.mp4",
+          "limits": {
+            "maxSteps": 50,
+            "timeout": 360,
+            "assertionMode": "dom"
+          },
+          "kaneReportedCredits": 29.790354999999998,
+          "result": "proof/hard-v4/kane-objective-pilot/v4-27c6f312c486-51e6e4ad/before/result.json",
+          "balanceAfter": 4973.2231,
+          "creditsSpent": 32.224
+        },
+        {
+          "phase": "control",
+          "balanceBefore": 4973.2231,
+          "startedAt": "2026-11-24T10:42:03.817Z",
+          "status": "pass",
+          "reason": "Objective completed",
+          "reasonCode": "success.complete",
+          "runner": "kane",
+          "runId": "96cd38a0-a54d-437d-8e1a-7392e35d16c2",
+          "evidencePack": "proof/hard-v4/kane-objective-pilot/v4-27c6f312c486-51e6e4ad/control/679be870-6201-4ddb-b3c3-39eaed6e9e11.evidence",
+          "evidenceValid": true,
+          "recording": "proof/hard-v4/kane-objective-pilot/v4-27c6f312c486-51e6e4ad/control/recording.mp4",
+          "limits": {
+            "maxSteps": 22,
+            "timeout": 300,
+            "assertionMode": "dom"
+          },
+          "kaneReportedCredits": 14.9184425,
+          "result": "proof/hard-v4/kane-objective-pilot/v4-27c6f312c486-51e6e4ad/control/result.json",
+          "balanceAfter": 4954.3779,
+          "creditsSpent": 18.8452
+        },
+        {
+          "phase": "after",
+          "balanceBefore": 4954.3779,
+          "startedAt": "2026-11-24T10:43:03.568Z",
+          "status": "pass",
+          "reason": "Objective completed",
+          "reasonCode": "success.complete",
+          "runner": "kane",
+          "runId": "899c551c-adfb-46f2-b602-4ae9da78161e",
+          "evidencePack": "proof/hard-v4/kane-objective-pilot/v4-27c6f312c486-51e6e4ad/after/b9a9480d-fc78-4e44-a847-75276f68e2e0.evidence",
+          "evidenceValid": true,
+          "recording": "proof/hard-v4/kane-objective-pilot/v4-27c6f312c486-51e6e4ad/after/recording.mp4",
+          "limits": {
+            "maxSteps": 50,
+            "timeout": 360,
+            "assertionMode": "dom"
+          },
+          "kaneReportedCredits": 27.369402500000003,
+          "result": "proof/hard-v4/kane-objective-pilot/v4-27c6f312c486-51e6e4ad/after/result.json",
+          "balanceAfter": 4924.4416,
+          "creditsSpent": 29.9363
+        }
+      ]
+    }
+  ],
+  "finishedAt": "2026-11-24T10:44:53.286Z"
+}

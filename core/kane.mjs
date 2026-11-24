@@ -81,7 +81,7 @@ async function inspect(page,task,patch,frame) {
 
 const instructions={
  'keyboard-only':'Use only keyboard input. Use Tab or Shift+Tab to move focus and Enter or Space to activate the exact control. Move in whichever direction is shorter. Group repeated Tab presses if supported, checking focus frequently. Do not click, focus elements directly, use JavaScript, or navigate directly to the destination.',
- 'screen-reader-view':'Work exclusively inside the Reading view dialog. Use only its listed roles, names and controls. Report a barrier if the exact named control does not exist; an unnamed control is not a substitute.',
+ 'screen-reader-view':'Work exclusively inside the Reading view dialog. Use the exact listed role and name for the requested control.',
  'low-vision':'Use the locked 320 CSS pixel viewport and scroll vertically only.',
  'color-blind':'Keep the color simulation active.',
  control:'Use the normal visual page and a pointer.'
@@ -115,24 +115,28 @@ async function keyboardHint(page,task) {
     if(index<0 || ![document.body,document.documentElement].includes(document.activeElement)) return null
     return {forward:index+1,reverse:ordered.length-index}
   },{selector:task.observedSelector,managedKeyboardSelector}).catch(()=>null)
-  if(result?.excluded) return 'The exact visible target is outside the sequential Tab order in the initial browser state. Check this with several real focus moves, including forward Tab, then report the barrier if the target remains skipped. Do not search for a different control.'
+  if(result?.excluded) return 'The exact visible target is outside the sequential Tab order in the initial browser state. Check this with several real focus moves, including forward Tab. Do not search for a different control.'
   if(!result) return null
   const forward=result.forward<=result.reverse
   return 'Initial focus order suggests roughly '+(forward?result.forward:result.reverse)+' '+(forward?'Tab':'Shift+Tab')+' presses. Check actual focus and stop on the exact target.'
 }
 
-function replayObjective(task,persona,hint) {
+export function replayObjective(task,persona,{patched=false,hint=null}={}) {
+  const keyboard=persona==='keyboard-only'
+  const baseline=persona!=='control' && !patched
+  const journeyKeys=keyboard?' Use the declared arrow keys and Escape as needed.':''
   const guidance=task.journey?
-    'Complete the registered journey in order and check each requested outcome. For keyboard operation, use the declared arrow keys and Escape as needed. Do not use a substitute destination or control. If a required control or outcome is inaccessible, report the exact step that failed.':
+    'Complete the registered journey in order and check each requested outcome.'+journeyKeys+' Do not use a substitute destination or control.':
     task.probe?.action==='read'?
     'Find the quoted passage directly using page search or vertical scrolling. Once there, look at the start of the passage, report whether the text fits across the viewport, and stop. Do not scroll through the rest of the page.':
-    task.probe && persona==='keyboard-only'?
-      'Keep focus on the page. If you have checked both Tab directions and the exact control keeps getting skipped, report the barrier and stop. If it receives focus, activate it immediately and check the outcome once.':
+    task.probe && keyboard?
+      'Keep focus on the page. When the exact control receives focus, activate it and check the outcome once.':
       task.probe?'Test the exact target and report the outcome once.':null
-  const menu=persona==='keyboard-only' && task.barrierClass===1?
+  const menu=keyboard && task.barrierClass===1?
     'Tab to the menu opener. Use Arrow Down if focus alone does not reveal the submenu. Press Enter only on the required submenu link.' : null
-  return [instructions[persona],guidance,menu,hint,'If a required control is missing, invisible, or cannot be reached, report the task as failed.',
-    'Stay on this public site. Do not sign in, register, pay, or interact with a CAPTCHA or access challenge. Leave fixture settings unchanged. Use visible controls only.',
+  const failure=keyboard && baseline?'If a required control is missing, invisible, or cannot be reached, report the task as failed.':null
+  return [instructions[persona],guidance,menu,baseline?hint:null,failure,
+    'Stay on this public site. Do not sign in, register, pay, send or submit anything, or interact with a CAPTCHA or access challenge. Leave fixture settings unchanged. Use visible controls only.',
     persona==='control' && task.controlTask?task.controlTask:task.task].filter(Boolean).join(' ')
 }
 
@@ -259,7 +263,7 @@ export async function runKane(task,persona,patch,directory,options={}) {
   if(minimumBalance>0) {
     const balance=await requireKane()
     await writeFile(path.join(directory,'balance-before.txt'),balance)
-    const available=Number(balance.match(/Available credits:\s*([\d.]+)/)?.[1])
+    const available=Number(balance.match(/Available credits:\s*([\d,.]+)/)?.[1].replaceAll(',',''))
     if(!Number.isFinite(available) || available<minimumBalance) throw new Error('Kane balance is below the run threshold of '+minimumBalance+' credits.')
   }
   let browser,access
@@ -284,8 +288,8 @@ export async function runKane(task,persona,patch,directory,options={}) {
       await saveJSON(path.join(directory,'result.json'),result)
       return result
     }
-    const hint=persona==='keyboard-only'?await keyboardHint(browser.page,task):null
-    const objective=replayObjective(task,persona,hint)
+    const hint=persona==='keyboard-only' && !patch?await keyboardHint(browser.page,task):null
+    const objective=replayObjective(task,persona,{patched:Boolean(patch),hint})
     const args=['run','--target','desktop','--headless','--agent','--local','--global-context','/dev/null','--local-context','/dev/null','--cdp-endpoint',browser.endpoint,'--url',task.url,'--max-steps',String(maxSteps),'--timeout',String(timeout),'--final-validation',task.probe || task.journey?'off':'on','--assertion-mode',assertionMode,'--assertion-failure-mode','stop',objective]
     const processResult=await command('kane-cli',args,{timeout:(timeout+90)*1000,processGroup:true})
     await writeFile(path.join(directory,'events.ndjson'),processResult.stdout)

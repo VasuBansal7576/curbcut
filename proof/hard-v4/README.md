@@ -52,6 +52,17 @@ The updated repair agent fixed the CSS hover fixture on its first proposal. Thre
 
 The widget scout found 15 candidate tasks across six v4 development sites, including five navigation menus, five disclosures, two tab or carousel tasks, two modal tasks, and one custom select. These are discovery candidates. [Stage 4 widget discovery](widget-discovery-v5.json)
 
+### Kane objective pilot
+
+Earlier runs sent the agent instructions to report an inaccessible or missing control along with the mouse and patched objectives. The adapter used empty global and local context files and supplied no prior session context or objective variables. The pilot used neutral mouse and patched objectives, with the conditional failure instruction reserved for the unpatched keyboard baseline. Keyboard runs used 50 steps and 360 seconds. Mouse runs used 22 steps and 300 seconds.
+
+| Site | Keyboard before | Mouse control | Keyboard after |
+| --- | --- | --- | --- |
+| Massachusetts Department of Higher Education | [Fail](kane-objective-pilot/v4-86f207deeb57-7bc09a21/before/result.json) | [Pass](kane-objective-pilot/v4-86f207deeb57-7bc09a21/control/result.json) | [Pass](kane-objective-pilot/v4-86f207deeb57-7bc09a21/after/result.json) |
+| Common Services Centres | [Fail](kane-objective-pilot/v4-27c6f312c486-51e6e4ad/before/result.json) | [Pass](kane-objective-pilot/v4-27c6f312c486-51e6e4ad/control/result.json) | [Pass](kane-objective-pilot/v4-27c6f312c486-51e6e4ad/after/result.json) |
+
+All six phases had validated Kane evidence and recordings. The pilot used 173.9039 credits and ended at 4924.4416. [Pilot ledger](kane-objective-pilot/summary.json)
+
 ### Barrier classes
 
 | Barrier | Local Playwright fixed / registered | Kane verified / started |
