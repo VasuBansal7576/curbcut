@@ -1,6 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import {judgeJourney,parseRun,replayObjective} from '../core/kane.mjs'
+import {readFile} from 'node:fs/promises'
+import {judgeJourney,kaneLimits,parseRun,replayObjective} from '../core/kane.mjs'
 import {checkPatch,fix,repairLocally} from '../core/loop.mjs'
 import {readJSON} from '../core/io.mjs'
 import {match} from '../core/engine.js'
@@ -30,6 +31,18 @@ test('only the unpatched keyboard objective asks Kane to report a missing contro
  assert.ok(after.includes(journey.task) && after.includes('Use only keyboard input.'))
  assert.doesNotMatch(after,/inaccessible|barrier|failed|outside the Tab order/i)
  assert.doesNotMatch(replayObjective({task:'Find the named field.',probe:{action:'type'}},'screen-reader-view',{patched:true}),/barrier|failed/i)
+})
+test('shop Check budgets cover the archived step counts and ask for observable keyboard actions',async()=>{
+ const archived='proof/demo/check/2026-11-24T18-15-53.859Z/'
+ for(const [lane,persona] of [['before','keyboard-only'],['control','control'],['attempt-1/after','keyboard-only']]) {
+  const events=(await readFile(archived+lane+'/events.ndjson','utf8')).trim().split('\n').map(line=>JSON.parse(line))
+  const lastStep=Math.max(...events.map(event=>event.step??0))
+  assert.ok(kaneLimits(task,persona).maxSteps>lastStep)
+ }
+ const objective=replayObjective(task,'keyboard-only')
+ assert.match(objective,/Type headphones as a single text entry/)
+ assert.match(objective,/observe whether the header reads Cart \(1\)/)
+ assert.doesNotMatch(objective,/outside the sequential Tab order/)
 })
 test('reject out-of-scope origins, unknown actions and unrestricted CSS',()=>{
  assert(match(original,task.url))

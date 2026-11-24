@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import {mkdtemp,rm} from 'node:fs/promises'
 import {tmpdir} from 'node:os'
 import path from 'node:path'
-import {command,readJSON} from '../core/io.mjs'
+import {command,readJSON,saveJSON} from '../core/io.mjs'
 import {checkPage,deriveTask,similarTask} from '../core/check.mjs'
 import {fixtureURL,localAppURL} from '../core/task.mjs'
 import {fixtureServer} from './fixture-server.mjs'
@@ -83,4 +83,42 @@ test('the CLI dry-run path spends no Kane credits',async()=>{
   const result=await command(process.execPath,['curbcut.mjs','check',shop,'Search for headphones and add Field Headphones to the cart. Confirm Cart (1).','--local','--dry-run'])
   assert.equal(result.code,0,result.stderr)
   assert.match(result.stdout,/0 Kane credits/)
+})
+
+test('live Check publishes only after the agent proposal and all three sealed Kane lanes',async()=>{
+  const server=await fixtureServer()
+  const base=await mkdtemp(path.join(tmpdir(),'curbcut-check-'))
+  const lanes=[]
+  let published
+  try {
+    const result=await checkPage({
+      url:shop,
+      task:'Search for headphones and add Field Headphones to the cart. Confirm Cart (1).',
+      base,
+      write:async (task,failure,_previous,directory)=>{
+        assert.equal(failure.status,'fail')
+        const patch={...structuredClone(original),...task,status:'candidate',evidence:{},history:[]}
+        await saveJSON(path.join(directory,'provenance.json'),{writer:'grok',runner:failure.runner})
+        return patch
+      },
+      run:async (_task,persona,patch,directory)=>{
+        lanes.push([persona,Boolean(patch)])
+        return {runner:'kane',runId:'stub-'+lanes.length,evidenceValid:true,
+          status:lanes.length===1?'fail':'pass',video:path.join(directory,'recording.mp4')}
+      },
+      persist:async patch=>{
+        const provenance=await readJSON(path.join(base,'attempt-1/provenance.json'))
+        const proposal=await readJSON(path.join(provenance.repairDirectory,'candidate.json'))
+        assert.equal((await readJSON(provenance.sourceLocalRun)).status,'fail')
+        assert.deepEqual(patch.rules,proposal.rules)
+        published=patch
+      }
+    })
+    assert.equal(result.result.status,'verified')
+    assert.deepEqual(lanes,[['keyboard-only',false],['control',false],['keyboard-only',true]])
+    assert.deepEqual(published.evidence.kaneRunIds,['stub-1','stub-2','stub-3'])
+  } finally {
+    await rm(base,{recursive:true,force:true})
+    if(server) await new Promise(resolve=>server.close(resolve))
+  }
 })

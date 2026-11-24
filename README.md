@@ -12,6 +12,12 @@ Curb Cut uses Kane to reproduce accessibility barriers, verify repairs, and ship
 
 ## Try it in 60 seconds
 
+Use a shallow clone for a quick checkout. The full history carries evidence recordings.
+
+```sh
+git clone --depth 1 https://github.com/VasuBansal7576/curbcut.git
+```
+
 Open [Mass.edu](https://www.mass.edu/), Tab to **About**, press **Arrow Down**, and use **Tab** to reach **The DHE**. Open Curb Cut’s popup to see the applied menu fix, toggle it off to compare, and open the evidence for the recorded runs. [Before, pointer control, and after](proof/README.md)
 
 ```mermaid
@@ -32,6 +38,12 @@ Use Node.js 22 or newer. Run `npm ci` and `npm link` to install the CLI, or run 
 - The [PR bot](docs/pr-bot.md) runs Gate against a preview URL, posts one updated comment, and uploads Kane recordings.
 - `curbcut cost` summarizes recorded tokens and Kane balance changes. Recipes and inherited rules get a local replay before a full agent proposal. The family policy samples eligible inherited fixes for Kane. [Cost proof and policy](proof/cost/README.md)
 - `curbcut census <url-list-file> --limit N` estimates recipe-pattern reach from public pages. The limit caps the input sample. The command also visits separate calibration pages. [Census](proof/census/README.md)
+
+Run `node curbcut.mjs serve` in a separate terminal for the shop fixture.
+
+```sh
+CURBCUT_AGENT=grok node curbcut.mjs check http://127.0.0.1:4317/fixtures/shop/ "Search for headphones and add Field Headphones to the cart. Confirm Cart (1)."
+```
 
 ## Browser extension
 
@@ -57,3 +69,5 @@ The popup shows applied repairs, provenance, and retired fixes. Report a barrier
 - Archived demo Kane sessions recorded Check fail, pointer pass, and after pass (`f0760ff2-f04f-4de2-88b8-915b609b7e02`, `8987d2d8-c2c7-47b0-955a-1617d9c5327b`, `d942c3ca-79a9-4d2e-8c3b-0c7a18f5265b`), Gate fail and pass (`2f63df68-fe0f-47b5-8f34-918444b55049`, `2d512cc4-756e-4a96-bcfb-bec5ea33773a`), and retirement (`0c6e7186-06cc-4a75-8744-dbf3c5be066b`). [Demo ledger and footage](proof/demo/README.md)
 
 [Architecture](ARCHITECTURE.md) · [Proof index](proof/README.md)
+
+[LICENSE](LICENSE) (MIT)

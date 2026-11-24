@@ -152,7 +152,7 @@ export function replayObjective(task,persona,{patched=false,hint=null}={}) {
   const menu=keyboard && task.barrierClass===1?
     'Tab to the menu opener. Use Arrow Down if focus alone does not reveal the submenu. Press Enter only on the required submenu link.' : null
   const failure=keyboard && baseline?'If a required control is missing, invisible, or cannot be reached, report the task as failed.':null
-  return [instructions[persona],guidance,menu,hint,failure,
+  return [instructions[persona],guidance,menu,baseline?hint:null,failure,
     'Stay on this public site. Do not sign in, register, pay, send or submit anything, or interact with a CAPTCHA or access challenge. Leave fixture settings unchanged. Use visible controls only.',
     task.id==='keyboard-add-headphones' && keyboard && fixtureURL(new URL(task.url))?
       'Tab to the search field. Type headphones as a single text entry, then press Enter to search. Tab toward the Add to cart control in the Field Headphones result. If it receives focus, press Enter and observe whether the header reads Cart (1).':
