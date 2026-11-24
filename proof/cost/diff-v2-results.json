@@ -1,0 +1,594 @@
+{
+  "model": "grok-4.6",
+  "startedAt": "2026-11-24T18:33:39.929Z",
+  "kaneCredits": 0,
+  "agentCalls": 11,
+  "rows": [
+    {
+      "id": "asme-org-tr2",
+      "templateId": "9ba074949b29c1bc64d4",
+      "inheritedRules": [
+        {
+          "selector": "#home-search",
+          "action": "addLabel",
+          "value": "Search"
+        }
+      ],
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "status": "fixed",
+      "calls": [
+        {
+          "promptDigest": "affe892cf7850ad79e846a10b0833a2d82d0ce5f724c753cdb37e2721cdedd9c",
+          "exitCode": 0,
+          "reply": "{\"barrier\":\"The #home-search control has no accessible name in Reading view. Screen-reader users cannot identify it as Search products, events, courses, resource categories...\",\"rules\":[{\"selector\":\"#home-search\",\"action\":\"addLabel\",\"value\":\"Search products, events, courses, resource categories...\"}]}\n",
+          "tokens": 3563,
+          "tokenMethod": "estimate, ceil UTF-8 bytes / 4 per prompt and response"
+        }
+      ],
+      "invalidResponses": 0,
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "target": {
+        "selector": "#home-search",
+        "visibleText": "",
+        "labelCandidates": [
+          "Search products, events, courses, resource categories..."
+        ]
+      },
+      "correctedRules": [
+        {
+          "selector": "#home-search",
+          "action": "addLabel",
+          "value": "Search products, events, courses, resource categories..."
+        }
+      ],
+      "after": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "patchedControl": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "tokens": 3563
+    },
+    {
+      "id": "cato-org-tr2",
+      "templateId": "e855e19cb16d43af0367",
+      "inheritedRules": [
+        {
+          "selector": "#query",
+          "action": "addLabel",
+          "value": "Search products, events, courses, resource categories..."
+        }
+      ],
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "status": "not fixed",
+      "calls": [
+        {
+          "promptDigest": "215a0873a0d6e1b8ac5fe858f23439aee1443eedb66dbba65705513761f48d61",
+          "exitCode": 0,
+          "reply": "{\"barrier\":\"The search field #query has no accessible name in Reading view. Visible evidence grounds the name as Search.\",\"rules\":[{\"selector\":\"#query\",\"action\":\"addLabel\",\"value\":\"Search\"}]}\n",
+          "tokens": 3532,
+          "tokenMethod": "estimate, ceil UTF-8 bytes / 4 per prompt and response"
+        }
+      ],
+      "invalidResponses": 0,
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "target": {
+        "selector": "#query",
+        "visibleText": "",
+        "labelCandidates": [
+          "Search"
+        ]
+      },
+      "correctedRules": [
+        {
+          "selector": "#query",
+          "action": "addLabel",
+          "value": "Search"
+        }
+      ],
+      "after": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "patchedControl": {
+        "status": "blocked",
+        "reason": "page.goto: Timeout 15000ms exceeded."
+      },
+      "tokens": 3532
+    },
+    {
+      "id": "poets-org-tr2",
+      "templateId": "9ba074949b29c1bc64d4",
+      "inheritedRules": [
+        {
+          "selector": "input[placeholder=\"search\"]",
+          "action": "addLabel",
+          "value": "Search"
+        }
+      ],
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "status": "fixed",
+      "calls": [
+        {
+          "promptDigest": "c7d5843dc99aa7f986f930e4c4cebdaeed664bbb14713cd68c9840a12bee8ff4",
+          "exitCode": 0,
+          "reply": "{\"barrier\":\"The search input has no accessible name, so the expected usable control is absent from Reading view.\",\"rules\":[{\"selector\":\"input[placeholder=\\\"search\\\"]\",\"action\":\"addLabel\",\"value\":\"search\"}]}\n",
+          "tokens": 3538,
+          "tokenMethod": "estimate, ceil UTF-8 bytes / 4 per prompt and response"
+        }
+      ],
+      "invalidResponses": 0,
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "target": {
+        "selector": "input[placeholder=\"search\"]",
+        "visibleText": "",
+        "labelCandidates": [
+          "search",
+          "Submit"
+        ]
+      },
+      "correctedRules": [
+        {
+          "selector": "input[placeholder=\"search\"]",
+          "action": "addLabel",
+          "value": "search"
+        }
+      ],
+      "after": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "patchedControl": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "tokens": 3538
+    },
+    {
+      "id": "sanantonio-library-reader",
+      "templateId": "e0d4dbf62d2cf01e27b0",
+      "inheritedRules": [
+        {
+          "selector": "#searchTermsCatalog",
+          "action": "addLabel",
+          "value": "Find Meaning..."
+        }
+      ],
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "status": "fixed",
+      "calls": [
+        {
+          "promptDigest": "45a44ecc6841eefb715d9d3ce71391a77115624d32f1265df1714ee261aa6a02",
+          "exitCode": 0,
+          "reply": "{\"barrier\":\"The catalog search field #searchTermsCatalog has no accessible name in Reading view, so screen-reader users cannot identify it.\",\"rules\":[{\"selector\":\"#searchTermsCatalog\",\"action\":\"addLabel\",\"value\":\"Search Catalog\"}]}\n",
+          "tokens": 3545,
+          "tokenMethod": "estimate, ceil UTF-8 bytes / 4 per prompt and response"
+        }
+      ],
+      "invalidResponses": 0,
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "target": {
+        "selector": "#searchTermsCatalog",
+        "visibleText": "",
+        "labelCandidates": [
+          "Search Catalog",
+          "Advanced Search"
+        ]
+      },
+      "correctedRules": [
+        {
+          "selector": "#searchTermsCatalog",
+          "action": "addLabel",
+          "value": "Search Catalog"
+        }
+      ],
+      "after": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "patchedControl": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "tokens": 3545
+    },
+    {
+      "id": "unglobalcompact-org-tr2",
+      "templateId": "9a2d890309e885bc4422",
+      "inheritedRules": [
+        {
+          "selector": "#search_keywords",
+          "action": "addLabel",
+          "value": "Search Game..."
+        }
+      ],
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "status": "fixed",
+      "calls": [
+        {
+          "promptDigest": "bb7c9b85b1a1f8417939213e037be33e35fdbbae91ef49bf64c955bc19dda866",
+          "exitCode": 0,
+          "reply": "{\"barrier\":\"The search keywords field #search_keywords has no accessible name in Reading view, so screen-reader users cannot identify it. Visible evidence labels it Search.\",\"rules\":[{\"selector\":\"#search_keywords\",\"action\":\"addLabel\",\"value\":\"Search\"}]}\n",
+          "tokens": 3548,
+          "tokenMethod": "estimate, ceil UTF-8 bytes / 4 per prompt and response"
+        }
+      ],
+      "invalidResponses": 0,
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "target": {
+        "selector": "#search_keywords",
+        "visibleText": "",
+        "labelCandidates": [
+          "Search",
+          "All\nParticipants"
+        ]
+      },
+      "correctedRules": [
+        {
+          "selector": "#search_keywords",
+          "action": "addLabel",
+          "value": "Search"
+        }
+      ],
+      "after": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "patchedControl": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "tokens": 3548
+    },
+    {
+      "id": "v5-c46d9e085415a2e891b3",
+      "templateId": "beececeec90a9a6a61ce",
+      "inheritedRules": [
+        {
+          "selector": "#dictSearchText",
+          "action": "addLabel",
+          "value": "Search Catalog"
+        }
+      ],
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "status": "fixed",
+      "calls": [
+        {
+          "promptDigest": "4d13b9620f5e100b8fc40867e5497eca29c85d2c6cf89d0f1ad5cacfb7f362fb",
+          "exitCode": 0,
+          "reply": "{\"barrier\":\"The dictionary search field #dictSearchText has no accessible name in Reading view, so screen-reader users cannot tell what it is for. Visible nearby text is Find Meaning... and DICTIONARY.\",\"rules\":[{\"selector\":\"#dictSearchText\",\"action\":\"addLabel\",\"value\":\"Find Meaning...\"}]}\n",
+          "tokens": 3557,
+          "tokenMethod": "estimate, ceil UTF-8 bytes / 4 per prompt and response"
+        }
+      ],
+      "invalidResponses": 0,
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "target": {
+        "selector": "#dictSearchText",
+        "visibleText": "",
+        "labelCandidates": [
+          "Find Meaning...",
+          "DICTIONARY"
+        ]
+      },
+      "correctedRules": [
+        {
+          "selector": "#dictSearchText",
+          "action": "addLabel",
+          "value": "Find Meaning..."
+        }
+      ],
+      "after": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "patchedControl": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "tokens": 3557
+    },
+    {
+      "id": "v5-cf5e31bb10aecd3af383",
+      "templateId": "6bc34b9a7f55d5493143",
+      "inheritedRules": [
+        {
+          "selector": "#search",
+          "action": "addLabel",
+          "value": "Search"
+        }
+      ],
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "status": "fixed",
+      "calls": [
+        {
+          "promptDigest": "dcf72d708032827d9924916e5926fc289eab436b2c13bafe48be93741ea4812c",
+          "exitCode": 0,
+          "reply": "{\"barrier\":\"The #search control has no accessible name in Reading view. Visible evidence labels it Search torrents....\",\"rules\":[{\"selector\":\"#search\",\"action\":\"addLabel\",\"value\":\"Search torrents...\"}]}\n",
+          "tokens": 3541,
+          "tokenMethod": "estimate, ceil UTF-8 bytes / 4 per prompt and response"
+        }
+      ],
+      "invalidResponses": 0,
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "target": {
+        "selector": "#search",
+        "visibleText": "",
+        "labelCandidates": [
+          "Search torrents...",
+          "All\nMovies\nTV\nGames\nMusic\nApps\nXXX\nAnime\nOther"
+        ]
+      },
+      "correctedRules": [
+        {
+          "selector": "#search",
+          "action": "addLabel",
+          "value": "Search torrents..."
+        }
+      ],
+      "after": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "patchedControl": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "tokens": 3541
+    },
+    {
+      "id": "v5-da5c14f912fb3f74fbbb",
+      "templateId": "beececeec90a9a6a61ce",
+      "inheritedRules": [
+        {
+          "selector": "#__layout > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > div > div:nth-of-type(1) > input",
+          "action": "addLabel",
+          "value": "Search Catalog"
+        }
+      ],
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "status": "fixed",
+      "calls": [
+        {
+          "promptDigest": "c8337be00a2f2ff2b3e38a47cd6c26fb8548effb18d81e417f2bac05be8007e8",
+          "exitCode": 0,
+          "reply": "{\"barrier\":\"The university search input has no accessible name in reading view, so screen-reader users cannot tell what the field is for.\",\"rules\":[{\"selector\":\"#__layout > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > div > div:nth-of-type(1) > input\",\"action\":\"addLabel\",\"value\":\"Search for a university\"}]}\n",
+          "tokens": 3616,
+          "tokenMethod": "estimate, ceil UTF-8 bytes / 4 per prompt and response"
+        }
+      ],
+      "invalidResponses": 0,
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "target": {
+        "selector": "#__layout > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > div > div:nth-of-type(1) > input",
+        "visibleText": "",
+        "labelCandidates": [
+          "Search for a university"
+        ]
+      },
+      "correctedRules": [
+        {
+          "selector": "#__layout > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2) > div > div:nth-of-type(1) > input",
+          "action": "addLabel",
+          "value": "Search for a university"
+        }
+      ],
+      "after": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "patchedControl": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "tokens": 3616
+    },
+    {
+      "id": "v5-e35e95e464a0b456fb7a",
+      "templateId": "6bc34b9a7f55d5493143",
+      "inheritedRules": [
+        {
+          "selector": "#search-input",
+          "action": "addLabel",
+          "value": "Search"
+        }
+      ],
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "status": "fixed",
+      "calls": [
+        {
+          "promptDigest": "94172d862475d0e3211fb777011ce8cf4df406b461ae71576ea8ffe22bf019c6",
+          "exitCode": 0,
+          "reply": "{\"barrier\":\"The search input #search-input has no accessible name in Reading view, so screen readers cannot identify it. Visible evidence labels it Search Games.\",\"rules\":[{\"selector\":\"#search-input\",\"action\":\"addLabel\",\"value\":\"Search Games\"}]}\n",
+          "tokens": 3539,
+          "tokenMethod": "estimate, ceil UTF-8 bytes / 4 per prompt and response"
+        }
+      ],
+      "invalidResponses": 0,
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "target": {
+        "selector": "#search-input",
+        "visibleText": "",
+        "labelCandidates": [
+          "Search Games"
+        ]
+      },
+      "correctedRules": [
+        {
+          "selector": "#search-input",
+          "action": "addLabel",
+          "value": "Search Games"
+        }
+      ],
+      "after": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "patchedControl": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "tokens": 3539
+    },
+    {
+      "id": "v5-fcd52c5a5920e388762d",
+      "templateId": "6bc34b9a7f55d5493143",
+      "inheritedRules": [
+        {
+          "selector": "#txt-search1",
+          "action": "addLabel",
+          "value": "Search"
+        }
+      ],
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "status": "fixed",
+      "calls": [
+        {
+          "promptDigest": "e6b5f5adae8052f1ddaf42eb7817e38f9934c6a13ef5088412d36fa8d9c710e8",
+          "exitCode": 0,
+          "reply": "{\"barrier\":\"The search field #txt-search1 has no accessible name in Reading view, so screen readers cannot identify it. Visible evidence labels it Search Game....\",\"rules\":[{\"selector\":\"#txt-search1\",\"action\":\"addLabel\",\"value\":\"Search Game...\"}]}\n",
+          "tokens": 3539,
+          "tokenMethod": "estimate, ceil UTF-8 bytes / 4 per prompt and response"
+        }
+      ],
+      "invalidResponses": 0,
+      "before": {
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "target": {
+        "selector": "#txt-search1",
+        "visibleText": "",
+        "labelCandidates": [
+          "Search Game..."
+        ]
+      },
+      "correctedRules": [
+        {
+          "selector": "#txt-search1",
+          "action": "addLabel",
+          "value": "Search Game..."
+        }
+      ],
+      "after": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "patchedControl": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "tokens": 3539
+    },
+    {
+      "id": "v5-fcff2ddd132fff0edeae",
+      "templateId": "e855e19cb16d43af0367",
+      "inheritedRules": [
+        {
+          "selector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+          "action": "addLabel",
+          "value": "Search products, events, courses, resource categories..."
+        }
+      ],
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "status": "not fixed",
+      "calls": [
+        {
+          "promptDigest": "b6574252e4087d27d4c680ca9b5a98c0091bd2ab3a0296a8797c62d3d344ac57",
+          "exitCode": 0,
+          "reply": "{\"barrier\":\"The search input has no accessible name in Reading view, so screen-reader users cannot identify it as Search forums.\",\"rules\":[{\"selector\":\"#search > div > div:nth-of-type(1) > div > form > div > input\",\"action\":\"addLabel\",\"value\":\"Search forums\"}]}\n",
+          "tokens": 3580,
+          "tokenMethod": "estimate, ceil UTF-8 bytes / 4 per prompt and response"
+        }
+      ],
+      "invalidResponses": 0,
+      "before": {
+        "status": "blocked",
+        "reason": "page.goto: Timeout 15000ms exceeded."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "target": {
+        "selector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+        "visibleText": "",
+        "labelCandidates": [
+          "Search forums"
+        ]
+      },
+      "error": "Provider or replay infrastructure failed.",
+      "tokens": 3580
+    }
+  ],
+  "completedAt": "2026-11-24T18:40:33.027Z"
+}

@@ -103,7 +103,7 @@ function repairObservations(target,context) {
       }
     }
   }
-  return {stack,labels,explicitRole:target?.getAttribute('role'),hoverOwners:[...new Set(hoverOwners)],
+  return {stack,labels,visibleText:visibleText(target)??null,explicitRole:target?.getAttribute('role'),hoverOwners:[...new Set(hoverOwners)],
     language:document.documentElement.lang.trim()?null:visibleLanguageSample(),
     measurement:target?coverageObservation(target,{category:'low-contrast'}):null}
 }

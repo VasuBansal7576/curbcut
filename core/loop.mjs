@@ -95,7 +95,7 @@ export async function repairLocally(data,{base,replay=replayLane,write=propose,a
     try {
       const diff=nearMiss && index===1
       patch=await write(task,{...failure,nearMiss:diff?nearMiss:undefined,previousAttempts:[...previousAttempts]},previous,proposal,
-        {retryInvalid:false,model:index===1?small:undefined})
+        {retryInvalid:Boolean(diff),model:index===1?small:undefined})
       if(diff) patch.evidence={repairMethod:'agent-diff',templateId:nearMiss.patch.evidence.templateId,'inherited-from':nearMiss.patch.evidence['inherited-from']}
       else patch.evidence={...patch.evidence,repairMethod:'full-agent'}
       if(!validate(patch) || patch.status!=='candidate' || !match(patch,task.url) || patch.id!==task.id) {

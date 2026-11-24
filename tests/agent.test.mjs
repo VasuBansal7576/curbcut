@@ -129,3 +129,38 @@ test('stubbed coverage naming records the selected backend',async()=>{
     assert.equal(grok.model,'grok-4.5')
   } finally {restoreAgentEnv(previous)}
 })
+
+test('a template correction sends the patch schema and retries a schema error once',async()=>{
+  const previous={CURBCUT_AGENT:process.env.CURBCUT_AGENT,CURBCUT_MODEL:process.env.CURBCUT_MODEL,CURBCUT_GROK:process.env.CURBCUT_GROK}
+  const directory=await mkdtemp(path.join(tmpdir(),'curbcut-template-correction-'))
+  const calls=[]
+  const inherited=original.rules.slice(0,1)
+  process.env.CURBCUT_AGENT='grok'
+  try {
+    const patch=await propose({...task,observedSelector:inherited[0].selector},{
+      nearMiss:{patch:{rules:inherited},reason:'The expected name was absent.'},
+      snapshot:{repair:{visibleText:'Find items',labels:['Search catalog']}}
+    },inherited,directory,{
+      validateSelectors:async()=>({ok:true,matches:[]}),
+      run:async(_,args)=>{
+        const prompt=await readFile(args[1],'utf8')
+        const [,schema,data]=prompt.split('\n')
+        assert.deepEqual(JSON.parse(schema),await readJSON('schemas/patch.json'))
+        calls.push(JSON.parse(data))
+        return {code:0,stdout:calls.length===1?'{"barrier":"Missing name","rules":[]}':proposal,stderr:''}
+      }
+    })
+    assert.equal(calls.length,2)
+    for(const call of calls) {
+      assert.deepEqual(call.inheritedRules,inherited)
+      assert.equal(call.reason,'The expected name was absent.')
+      assert.deepEqual(call.target,{selector:inherited[0].selector,visibleText:'Find items',labelCandidates:['Search catalog']})
+    }
+    assert.equal(calls[0].validatorMessage,undefined)
+    assert.match(calls[1].validatorMessage,/\/rules.*minItems/)
+    assert.deepEqual(patch.rules,original.rules)
+  } finally {
+    restoreAgentEnv(previous)
+    await rm(directory,{recursive:true,force:true})
+  }
+})

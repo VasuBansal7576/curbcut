@@ -48,6 +48,8 @@ The live study used zero Kane credits and made zero agent calls, including diff 
 
 ## Live Grok template diffs
 
+### First attempt with Grok 4.5
+
 The study gave Grok 4.5 one request for each of the 11 labeling near misses. It used the highest-ranked attempted template from the live inheritance run, the recorded oracle failure reason, and the fixed diff reply instructions. It supplied no DOM snapshot, expected label, or full task description. Valid diffs had to pass the schema, repeat, and live selector checks before running the four browser lanes. The script made no fallback proposals. [Per-task diff evidence](diff-results.json)
 
 Both token columns estimate visible text by rounding up UTF-8 bytes divided by four for each prompt and response. The full-agent column reconstructs the untrimmed prompt using archived observations and counts each saved response for the same task, including retries. The archived full agent was Codex. These figures compare request and response size. They do not measure billed tokens or model reasoning.
@@ -69,7 +71,30 @@ Both token columns estimate visible text by rounding up UTF-8 bytes divided by f
 
 Grok averaged **155 estimated tokens per diff**. The archived full-agent path averaged **11,678 estimated tokens per task**, or 8,029 per saved attempt. Nine replies produced invalid patches, and one repeated the inherited rule. The one valid patch passed the patched pointer lane and failed the patched Reading view role-and-name check. The experiment spent zero Kane credits.
 
-Run `CURBCUT_AGENT=grok node proof/cost/diff.mjs` for the live trials and `CURBCUT_AGENT=grok node proof/cost/diff-baseline.mjs` for the offline baseline and rejection checks. The installed Grok CLI rejected two invocations that combined `--single` with `--prompt-file`. The live trials used `--prompt-file` alone after that correction.
+The first run used the scripts at commit `52f4fb1`. Its results and offline baseline are preserved in the diff evidence. The installed Grok CLI rejected two invocations that combined `--single` with `--prompt-file`. The live trials used `--prompt-file` alone after that correction.
+
+### Bounded retry with Grok 4.6
+
+The second run gave Grok the complete patch schema, the inherited rules verbatim, the recorded oracle failure text, and the live target text and nearby label candidates. Grok returned a complete corrected rule set in the proposal envelope. A schema error allowed one re-ask with the validator message. Each accepted candidate ran through the persona and pointer lanes with and without the patch. Both the model and the request changed between runs. [Per-task results and token counts](diff-v2-results.json)
+
+| Task | Outcome | Invalid responses | Grok tokens per task (est.) |
+| --- | --- | ---: | ---: |
+| `asme-org-tr2` | Fixed | 0 | 3,563 |
+| `cato-org-tr2` | Not fixed, patched pointer timed out | 0 | 3,532 |
+| `poets-org-tr2` | Fixed | 0 | 3,538 |
+| `sanantonio-library-reader` | Fixed | 0 | 3,545 |
+| `unglobalcompact-org-tr2` | Fixed | 0 | 3,548 |
+| `v5-c46d9e085415a2e891b3` | Fixed | 0 | 3,557 |
+| `v5-cf5e31bb10aecd3af383` | Fixed | 0 | 3,541 |
+| `v5-da5c14f912fb3f74fbbb` | Fixed | 0 | 3,616 |
+| `v5-e35e95e464a0b456fb7a` | Fixed | 0 | 3,539 |
+| `v5-fcd52c5a5920e388762d` | Fixed | 0 | 3,539 |
+| `v5-fcff2ddd132fff0edeae` | Not fixed, persona baseline timed out and validation did not finish | 0 | 3,580 |
+| Total | 9 fixed, 2 not fixed | 0 | 39,098 |
+
+Grok averaged **3,554 estimated tokens per task**, using the same visible-text method as the first run. All 11 replies passed schema validation, so no schema re-asks were needed. The Cato persona passed with the patch, and the patched pointer lane timed out. Forumotion timed out in the persona baseline and its valid reply did not complete live selector validation. The study stopped after 11 calls and spent zero Kane credits.
+
+Run `CURBCUT_AGENT=grok CURBCUT_MODEL=grok-4.6 node proof/cost/diff-v2.mjs` to reproduce the second run.
 
 ## Running the cost controls
 
