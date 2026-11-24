@@ -2,7 +2,7 @@
 
 Kane CLI 0.10.7 performed the live verification. The [Kane results table](../../proof/kane/README.md) gives the exact sessions for each failed baseline, passing pointer control, passing repair, and unpatched retirement. Its [session ledger](../../proof/kane/ledger.json) also records incomplete runs and the harness smoke test. The [dashboard](../../site/index.html) displays verified repairs and open findings. Each verified report links to the runtime proposal, viewport recordings, and sealed evidence packs. Some repair replays reused the baseline and pointer control from an earlier attempt at the same task. Recent run results include the exact replay instructions in `objective`.
 
-Run `node curbcut.mjs recheck --local` for a Playwright regression check of the active catalog and `node scripts/extension-e2e.mjs` to audit its installed rules in isolated Chromium. [Nightly recheck](../../proof/reliability/nightly.json) · [Extension audit](../../proof/reliability/extension-e2e.json)
+Run `node curbcut.mjs recheck --local` for a Playwright regression check of the active Kane-verified catalog and `node scripts/extension-e2e.mjs` to audit its installed rules in isolated Chromium. [Nightly recheck](../../proof/reliability/nightly.json) · [Extension audit](../../proof/reliability/extension-e2e.json)
 
 The familiar-site scout produced one Kane-verified repair on the National Weather Service radar. CNN and Spotify reached inconclusive baselines when their public content failed to load in the recorded browser. [Scout and Kane results](../../proof/famous/README.md)
 
