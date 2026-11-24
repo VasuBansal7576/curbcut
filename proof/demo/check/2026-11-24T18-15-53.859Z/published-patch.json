@@ -1,0 +1,71 @@
+{
+  "id": "keyboard-add-headphones",
+  "url": "http://127.0.0.1:4391/fixtures/shop/",
+  "persona": "keyboard-only",
+  "task": "Search for headphones and add Field Headphones to the cart. Confirm Cart (1).",
+  "controlTask": "Search for headphones, click Add to cart on Field Headphones and confirm Cart (1).",
+  "observedSelector": "div.add-to-cart",
+  "outcomeChecks": [
+    {
+      "kind": "text",
+      "selector": "#cart-status",
+      "equals": "Field Headphones added to cart."
+    }
+  ],
+  "probe": {
+    "action": "click"
+  },
+  "site": "127.0.0.1",
+  "match": "http://127.0.0.1:4391/fixtures/shop/",
+  "barrier": "Field Headphones Add to cart is a non-focusable div.add-to-cart (tabIndex -1, role text), so Tab skips it after Search",
+  "rules": [
+    {
+      "selector": "div.add-to-cart",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "div.add-to-cart",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "div.add-to-cart",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "div.add-to-cart",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": ".curbcut/check/keyboard-add-headphones/2026-11-24T18-15-53.859Z/before/recording.mp4",
+    "after": ".curbcut/check/keyboard-add-headphones/2026-11-24T18-15-53.859Z/attempt-1/after/recording.mp4",
+    "control": ".curbcut/check/keyboard-add-headphones/2026-11-24T18-15-53.859Z/control/recording.mp4",
+    "verifiedAt": "2026-11-24T18:21:23.614Z",
+    "kaneRunIds": [
+      "f0760ff2-f04f-4de2-88b8-915b609b7e02",
+      "8987d2d8-c2c7-47b0-955a-1617d9c5327b",
+      "d942c3ca-79a9-4d2e-8c3b-0c7a18f5265b"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-24T18:21:23.614Z",
+      "event": "verified",
+      "before": "f0760ff2-f04f-4de2-88b8-915b609b7e02",
+      "control": "8987d2d8-c2c7-47b0-955a-1617d9c5327b",
+      "after": "d942c3ca-79a9-4d2e-8c3b-0c7a18f5265b"
+    }
+  ]
+}

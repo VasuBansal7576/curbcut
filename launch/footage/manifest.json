@@ -1,0 +1,52 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "startingBalance": 1981.1673,
+  "finalBalance": 1604.6401,
+  "creditsUsed": 376.5272,
+  "slots": {
+    "check": {
+      "file": "launch/footage/check.mp4",
+      "durationSeconds": 12,
+      "frames": 360,
+      "sourceRun": "proof/demo/check/2026-11-24T18-15-53.859Z",
+      "kaneSessionIds": [
+        "f0760ff2-f04f-4de2-88b8-915b609b7e02",
+        "8987d2d8-c2c7-47b0-955a-1617d9c5327b",
+        "d942c3ca-79a9-4d2e-8c3b-0c7a18f5265b"
+      ],
+      "kaneRecordings": {
+        "before": "launch/footage/check-kane-before.mp4",
+        "control": "launch/footage/check-kane-control.mp4",
+        "after": "launch/footage/check-kane-after.mp4"
+      }
+    },
+    "gate": {
+      "file": "launch/footage/gate.mp4",
+      "durationSeconds": 11,
+      "frames": 330,
+      "sourceRun": "proof/demo/gate",
+      "kaneSessionIds": [
+        "2f63df68-fe0f-47b5-8f34-918444b55049",
+        "2d512cc4-756e-4a96-bcfb-bec5ea33773a"
+      ],
+      "kaneRecordings": {
+        "fail": "launch/footage/gate-kane-fail.mp4",
+        "pass": "launch/footage/gate-kane-pass.mp4"
+      }
+    },
+    "retire": {
+      "file": "launch/footage/retire.mp4",
+      "durationSeconds": 8,
+      "frames": 240,
+      "sourceRun": "proof/demo/retire",
+      "kaneSessionIds": [
+        "0c6e7186-06cc-4a75-8744-dbf3c5be066b"
+      ],
+      "kaneRecordings": {
+        "without": "launch/footage/retire-kane.mp4"
+      }
+    }
+  }
+}

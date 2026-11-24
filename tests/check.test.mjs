@@ -5,7 +5,7 @@ import {tmpdir} from 'node:os'
 import path from 'node:path'
 import {command,readJSON} from '../core/io.mjs'
 import {checkPage,deriveTask,similarTask} from '../core/check.mjs'
-import {localAppURL} from '../core/task.mjs'
+import {fixtureURL,localAppURL} from '../core/task.mjs'
 import {fixtureServer} from './fixture-server.mjs'
 
 const shop='http://127.0.0.1:4317/fixtures/shop/'
@@ -22,12 +22,17 @@ test('local app URLs are accepted on loopback HTTP',()=>{
   assert.equal(localAppURL(new URL('http://127.0.0.1:3000/app')),true)
   assert.equal(localAppURL(new URL('http://localhost:4173/')),true)
   assert.equal(localAppURL(new URL('https://example.com/')),false)
+  assert.equal(fixtureURL(new URL('http://127.0.0.1:4317/fixtures/shop/')),true)
+  assert.equal(fixtureURL(new URL('http://127.0.0.1:4391/fixtures/shop/')),true)
 })
 
 test('check derives a shop keyboard probe from plain English without a browser',async()=>{
   const task=await deriveTask({url:shop,task:'Search for headphones and add Field Headphones to the cart. Confirm Cart (1).',persona:'keyboard-only'})
+  const moved=await deriveTask({url:'http://127.0.0.1:4391/fixtures/shop/',task:'Search for headphones and add Field Headphones to the cart. Confirm Cart (1).',persona:'keyboard-only'})
+  assert.equal(moved.id,'keyboard-add-headphones')
+  assert.equal(moved.url,'http://127.0.0.1:4391/fixtures/shop/')
   assert.equal(task.id,'keyboard-add-headphones')
-  assert.equal(task.observedSelector,'div.add-to-cart')
+  assert.equal(task.observedSelector,'.add-to-cart')
   assert.equal(task.probe.action,'click')
   assert.equal(task.outcomeChecks[0].selector,'#cart-status')
 })
@@ -44,7 +49,7 @@ test('check dry-run prints the plan and a zero Kane estimate with --local',async
   assert.equal(result.ok,true)
   assert.equal(result.kane.estimatedCredits,0)
   assert.match(result.text,/0 Kane credits/)
-  assert.match(result.text,/div.add-to-cart/)
+  assert.match(result.text,/add-to-cart/)
   const billed=await checkPage({url:shop,task:'Search for headphones and add Field Headphones to the cart. Confirm Cart (1).',dryRun:true})
   assert.ok(billed.kane.estimatedCredits>0)
   assert.match(billed.text,/estimated credits: /)

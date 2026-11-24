@@ -1,0 +1,70 @@
+{
+  "id": "keyboard-add-headphones",
+  "url": "http://127.0.0.1:4391/fixtures/shop/",
+  "site": "127.0.0.1",
+  "match": "http://127.0.0.1:4391/fixtures/shop/",
+  "persona": "keyboard-only",
+  "task": "Using only the keyboard, search for headphones and add Field Headphones to the cart. Confirm Cart (1).",
+  "barrier": "The visible Add to cart control for Field Headphones is a clickable div with tabIndex -1, so Tab skips it and keyboard users cannot activate it.",
+  "rules": [
+    {
+      "selector": "div.add-to-cart",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "div.add-to-cart",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "div.add-to-cart",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "div.add-to-cart",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "retired",
+  "evidence": {
+    "before": "proof/kane/keyboard-add-headphones/2026-11-21T19-39-28.953Z/before/recording.mp4",
+    "after": "proof/kane/keyboard-add-headphones/2026-11-21T19-39-28.953Z/attempt-1/after/recording.mp4",
+    "control": "proof/kane/keyboard-add-headphones/2026-11-21T19-39-28.953Z/control/recording.mp4",
+    "verifiedAt": "2026-11-21T19:42:51.945Z",
+    "kaneRunIds": [
+      "001bf033-ff00-4be9-bbe1-d2a4672ce742",
+      "f1123b3e-9440-4c2b-9548-d24878c2fc5f",
+      "f86e31e4-4d53-4232-9580-5635cafd398b"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-21T19:42:51.945Z",
+      "event": "verified",
+      "before": "001bf033-ff00-4be9-bbe1-d2a4672ce742",
+      "control": "f1123b3e-9440-4c2b-9548-d24878c2fc5f",
+      "after": "f86e31e4-4d53-4232-9580-5635cafd398b"
+    },
+    {
+      "at": "2026-11-21T19:49:26.101Z",
+      "event": "retired",
+      "without": "pass",
+      "runId": "958f7f45-30bc-474b-850c-696ddec10ffc",
+      "video": "proof/kane/keyboard-add-headphones/2026-11-21T19-48-03.277Z/recheck-without/recording.mp4"
+    },
+    {
+      "at": "2026-11-24T18:30:58.339Z",
+      "event": "rechecked",
+      "without": "inconclusive",
+      "runId": "ef41e65c-8638-4a96-bc8a-a71066ebc918",
+      "video": "proof/kane/keyboard-add-headphones/2026-11-24T18-29-46.628Z/recheck-without/recording.mp4"
+    },
+    {
+      "at": "2026-11-24T18:32:41.362Z",
+      "event": "retired",
+      "without": "pass",
+      "runId": "0c6e7186-06cc-4a75-8744-dbf3c5be066b",
+      "video": "proof/kane/keyboard-add-headphones/2026-11-24T18-31-28.235Z/recheck-without/recording.mp4"
+    }
+  ]
+}

@@ -47,7 +47,7 @@ export function agentArgs(backend,{dir,answer,promptFile,images=[]}) {
       '-c','features.shell_tool=false','-c','features.plugins=false','-c','features.apps=false',
       '-c','model_reasoning_effort="low"','-m',backend.model,'-C',dir,'-o',answer,...images.flatMap(file=>['-i',file]),'-']
   }
-  return ['-p','--prompt-file',promptFile,'-m',backend.model,'--cwd',dir,'--sandbox','read-only','--verbatim',
+  return ['--prompt-file',promptFile,'-m',backend.model,'--cwd',dir,'--sandbox','read-only','--verbatim',
     '--disable-web-search','--no-subagents','--no-memory','--permission-mode','dontAsk','--output-format','plain']
 }
 

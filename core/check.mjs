@@ -24,6 +24,7 @@ function samePage(left,right) {
   try {
     const a=new URL(left),b=new URL(right)
     const trail=value=>value.pathname.replace(/\/$/,'')||'/'
+    if(fixtureURL(a) && fixtureURL(b)) return trail(a)===trail(b)
     return a.origin===b.origin && trail(a)===trail(b)
   } catch {return false}
 }
@@ -80,7 +81,7 @@ function shopObjective(task,persona) {
       outcomeChecks:[{selector:'#search',kind:'value',equals:value}]}
   }
   if(persona==='screen-reader-view') {
-    return {...task,observedSelector:task.observedSelector||'div.add-to-cart',requiredName:task.requiredName||'Add to cart',
+    return {...task,observedSelector:task.observedSelector||'.add-to-cart',requiredName:task.requiredName||'Add to cart',
       probe:{action:'click',role:'button'},
       outcomeChecks:task.outcomeChecks??[{selector:'#cart-status',kind:'text',equals:'Field Headphones added to cart.'}]}
   }
@@ -89,7 +90,7 @@ function shopObjective(task,persona) {
       outcomeChecks:task.outcomeChecks??[{selector:'#cart-status',kind:'text',equals:'Porch Speaker added to cart.'}]}
   }
   if(task.id==='keyboard-add-headphones' || /field headphones|add to cart/i.test(text)) {
-    return {...task,observedSelector:task.observedSelector||'div.add-to-cart',probe:{action:'click'},
+    return {...task,observedSelector:task.observedSelector||'.add-to-cart',probe:{action:'click'},
       outcomeChecks:task.outcomeChecks??[{selector:'#cart-status',kind:'text',equals:'Field Headphones added to cart.'}]}
   }
   return withProbe(task,persona)
