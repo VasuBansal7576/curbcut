@@ -49,6 +49,24 @@ test('the privacy gate blocks sign-in pages and populated fields',async()=>{
   }).ok,false)
 })
 
+test('both capture gates distinguish author defaults from edits and always block passwords',async()=>{
+  const browser=await chromium.launch({channel:'chromium',headless:true})
+  try {
+    const page=await browser.newPage()
+    await page.setContent('<input type="email" value="Your Email Address"><textarea placeholder="Describe">Default text</textarea>')
+    for(const file of ['extension/runtime.js','extension/lib/sensitive.js']) await page.addScriptTag({path:path.join(ROOT,file)})
+    const gates=()=>page.evaluate(()=>[CurbCut.instantPrivacy(),CurbCutExt.canCapturePage('https://www.mass.edu/',document).ok])
+    assert.deepEqual(await gates(),[true,true])
+    await page.locator('textarea').fill('Describe')
+    assert.deepEqual(await gates(),[true,true])
+    await page.locator('input').fill('user@example.org')
+    assert.deepEqual(await gates(),[false,false])
+    await page.locator('input').fill('')
+    await page.evaluate(()=>{document.querySelector('input').type='password'})
+    assert.deepEqual(await gates(),[false,false])
+  } finally { await browser.close() }
+})
+
 test('a barrier draft is stored on the local verification queue',async()=>{
   const queued=await enqueueDraft({
     url:'http://127.0.0.1:4317/fixtures/shop/',
@@ -69,7 +87,10 @@ test('a barrier draft is stored on the local verification queue',async()=>{
 
 test('popup lists retired site-fixed notices, Kane proof, and saves a barrier draft without a Jev key',async()=>{
   let server
-  try {server=await serve()} catch(error) {if(error.code!=='EADDRINUSE') throw error}
+  try {server=await serve()} catch(error) {
+    if(error.code!=='EADDRINUSE') throw error
+    server=await serve(0)
+  }
   const profile=await mkdtemp(path.join(tmpdir(),'curbcut-trust-'))
   const extension=path.resolve('extension')
   const shop='http://127.0.0.1:4317/fixtures/shop/'
@@ -81,6 +102,7 @@ test('popup lists retired site-fixed notices, Kane proof, and saves a barrier dr
       args:['--disable-extensions-except='+extension,'--load-extension='+extension,'--disable-background-networking']})
     const worker=context.serviceWorkers().find(item=>item.url().startsWith('chrome-extension:'))??
       await context.waitForEvent('serviceworker',{predicate:item=>item.url().startsWith('chrome-extension:'),timeout:8000})
+    await worker.evaluate(port=>{CurbCutExt.TASKS_DRAFT_URL='http://127.0.0.1:'+port+'/tasks/draft'},server.address().port)
     const emptyKey=await worker.evaluate(async()=> {
       if(!globalThis.CurbCutJevConfig) return true
       return (await CurbCutJevConfig.get())==null

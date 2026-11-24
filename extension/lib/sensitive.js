@@ -27,7 +27,7 @@
       return false;
     }
     if (node.isContentEditable) return Boolean(node.textContent && node.textContent.trim());
-    return Boolean(node.value);
+    return Boolean(node.value) && node.value !== node.defaultValue && node.value !== node.placeholder;
   }
 
   function documentLooksSensitive(doc) {

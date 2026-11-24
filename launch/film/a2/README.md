@@ -4,7 +4,7 @@ The full demo runs 3:05. Its opening 75 seconds form the launch film. Its first 
 
 ## Edit and recording slots
 
-Read [the edit](edit.json) for scene order and narration. Each row has a start time and duration in seconds. [The recording manifest](../pending.json) lists both delivered popup shots. Mass.edu opens its linked After recording. The film cuts to the matching repository MP4. Example Domain uses the installed extension’s im-stuck handler and shows the draft saved in extension storage. Both recordings use the extension built at 93ce171. The intro uses crops of its actual Apply fixes switch.
+Read [the edit](edit.json) for scene order and narration. Each row has a start time and duration in seconds. [The recording manifest](../pending.json) lists both delivered popup shots. Mass.edu opens its linked After recording. The film cuts to the matching repository MP4. The report shot uses the installed extension’s im-stuck handler on Mass.edu with focus on About. It shows the captured address, control and navigation keys, then the draft saved to the local verification queue. The trust recording uses the extension built at 93ce171. The intro uses crops of its actual Apply fixes switch.
 
 From the repository root, install the locked Node dependencies and Playwright Chromium, then run:
 

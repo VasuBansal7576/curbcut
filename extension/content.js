@@ -160,7 +160,13 @@
   }
 
   chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
-    if (message?.type?.startsWith("INSTANT_") || message?.type?.startsWith("LIVE_NAMES_")) return false;
+    if (
+      message?.type?.startsWith("INSTANT_") ||
+      message?.type?.startsWith("LIVE_NAMES_") ||
+      message?.type?.startsWith("VISUAL_STATE_") ||
+      message?.type?.startsWith("GLANCE_") ||
+      message?.type?.startsWith("FINDER_")
+    ) return false;
     if (!message || typeof message !== "object") {
       sendResponse({ ok: false, reason: "invalid-message" });
       return false;

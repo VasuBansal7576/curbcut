@@ -24,7 +24,7 @@ Manual review found 13 correct, zero wrong and two vague names. The vague names 
 
 Live naming captures the active viewport with Reading view closed. Opening Reading view shows the applied names. The Meridiano demo shows the adjacent menu and search buttons before and after naming at 1920×1080. Jev chose “Menú” at 0.92 and “Buscar” at 1.00. [Before](live-naming-demo/before.png) · [After](live-naming-demo/after.png) · [Capture JSON](live-naming-demo/capture.json)
 
-On Mass.edu, with zero Curb Cut repairs active, keyboard focus and Arrow Down left The DHE link hidden, while pointer hover opened the submenu. Four Tab and Shift+Tab cycles around About produced no offer. A populated email field triggered the privacy gate before any Jev request. [Keyboard replay](stuck-live-mass-edu.json)
+On Mass.edu, with zero Curb Cut repairs active, keyboard focus and Arrow Down left The DHE link hidden, while pointer hover opened the submenu. Four Tab and Shift+Tab cycles around About produced no offer. Both privacy checks allowed capture. Jev returned a stuck probability of 0.10, below the 0.75 threshold for offering help. [Keyboard replay](stuck-live-mass-edu.json)
 
 With Playwright Chromium installed and `CURBCUT_JEV_KEY_FILE` pointing to a Jev key file, run the public checks below. Use a fresh output directory to keep the adjudicated run and its screenshots.
 
