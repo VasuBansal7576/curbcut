@@ -1,6 +1,6 @@
 const mirrorRuns = new Set();
 
-async function matchMouse(tab) {
+async function matchMouse(tab, diagnostics) {
   const id = tab?.id;
   const state = await getState();
   if (!id || !tab.active || mirrorRuns.has(id) || state.enabled === false ||
@@ -65,6 +65,7 @@ async function matchMouse(tab) {
       await move({x:-1,y:-1});
       return call('snapshot');
     };
+    if (diagnostics) diagnostics.stage = "mouse-reference";
     const baseline = signature(await reset());
     const mouse = async () => {
       const before = await reset();
@@ -77,8 +78,10 @@ async function matchMouse(tab) {
     const reference = await mouse();
     if (!reference.revealed.length || reference.revealed.length > 12) return {reason:'no-bounded-hover-outcome'};
     const known = new Set(JSON.parse(baseline));
-    const keyboard = async (rules = []) => {
+    let recipeRules = [];
+    const keyboard = async (rules = [], deriveRecipes = false) => {
       if (signature(await reset()) !== baseline) throw Error('page did not reset');
+      if (deriveRecipes) recipeRules = await call('recipeCandidates',reference.revealed.map(node => node.selector)) ?? [];
       await call('focus');
       await wait();
       const reached = new Map();
@@ -101,8 +104,10 @@ async function matchMouse(tab) {
       return signature([...reached.values()]);
     };
     const expected = signature(reference.revealed);
-    if (await keyboard() === expected) return {reason:'already-matches'};
+    if (diagnostics) diagnostics.stage = "keyboard-reference";
+    if (await keyboard([],true) === expected) return {reason:'already-matches'};
 
+    if (diagnostics) diagnostics.stage = "enumeration";
     const candidates = scope.css.map(selector => [{selector,action:'mirrorHoverToFocus'}]);
     for (const selector of scope.owners) {
       const {result} = await send('Runtime.evaluate', {expression:'document.querySelector('+JSON.stringify(selector)+')',objectGroup:'mirror'});
@@ -121,7 +126,19 @@ async function matchMouse(tab) {
       candidates.push(...candidates.slice(0,3).map(rules => [...rules,arrows]));
     }
 
-    for (const rules of candidates.slice(0,8)) {
+    const existing = new Set(candidates.map(rules => JSON.stringify(rules)));
+    const added = recipeRules.map(rule => [rule]).filter(rules => !existing.has(JSON.stringify(rules))).slice(0,3);
+    const trials = [...added,...candidates.slice(0,8)];
+    if (diagnostics) {
+      diagnostics.recipeRules = recipeRules;
+      diagnostics.recipeAdded = added.length;
+      diagnostics.stage = "candidates";
+      diagnostics.generated = candidates.length + added.length;
+      diagnostics.attempts = [];
+    }
+    for (const rules of trials) {
+      const attempt = {rules,outcome:"interrupted"};
+      diagnostics?.attempts.push(attempt);
       if (signature(await reset()) !== baseline) throw Error('page did not reset');
       const patch = {
         id:'instant-'+crypto.randomUUID(), url:new URL(tab.url).origin+new URL(tab.url).pathname, site:new URL(tab.url).hostname,
@@ -137,8 +154,12 @@ async function matchMouse(tab) {
           {selector:reference.revealed[0].selector,action:'observe'}],
         outcomeChecks:reference.revealed.slice(0,4).map(({selector}) => ({selector,kind:'visible'})),
       };
-      if (await call('apply',patch) && await keyboard(rules) === expected &&
-          signature((await mouse()).after) === signature(reference.after)) {
+      const applied = await call('apply',patch);
+      const keySet = applied ? await keyboard(rules) : null;
+      const pointerSet = keySet === expected ? signature((await mouse()).after) : null;
+      attempt.outcome = !applied ? 'rule did not apply' : keySet !== expected ? 'keyboard set differed' :
+        pointerSet !== signature(reference.after) ? 'mouse lane changed' : 'matched';
+      if (attempt.outcome === 'matched') {
         if (signature(await reset()) !== baseline) throw Error('page did not reset');
         await check();
         await queueInstant(patch,{confidence:1,model:'dom-parity'});

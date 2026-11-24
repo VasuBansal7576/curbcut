@@ -1,0 +1,437 @@
+{
+  "mode": "recipes",
+  "heldOutCommit": "25e19c4",
+  "results": [
+    {
+      "site": "hamiltontn.gov",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "no-bounded-hover-outcome"
+        },
+        "diagnostics": {
+          "stage": "mouse-reference"
+        },
+        "elapsedMs": 630,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "herriman.gov",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "page did not reset"
+        },
+        "diagnostics": {
+          "stage": "keyboard-reference"
+        },
+        "elapsedMs": 822,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "cityoflancasterpa.gov",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "page did not reset"
+        },
+        "diagnostics": {
+          "stage": "keyboard-reference"
+        },
+        "elapsedMs": 813,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "tompkinscountyny.gov",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "page did not reset"
+        },
+        "diagnostics": {
+          "stage": "keyboard-reference"
+        },
+        "elapsedMs": 851,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "bethlehem-pa.gov",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "page did not reset"
+        },
+        "diagnostics": {
+          "stage": "keyboard-reference"
+        },
+        "elapsedMs": 875,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "bouldercounty.gov",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "diagnostics": {
+          "stage": "mouse-reference"
+        },
+        "elapsedMs": 49,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "redlands.gov",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "page did not reset"
+        },
+        "diagnostics": {
+          "stage": "keyboard-reference"
+        },
+        "elapsedMs": 827,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "franklincountyohio.gov",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "page did not reset"
+        },
+        "diagnostics": {
+          "stage": "keyboard-reference"
+        },
+        "elapsedMs": 837,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "spanishfork.gov",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "no-bounded-hover-outcome"
+        },
+        "diagnostics": {
+          "stage": "mouse-reference"
+        },
+        "elapsedMs": 667,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "littlerock.gov",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "Cannot read properties of null (reading 'map')"
+        },
+        "diagnostics": {
+          "stage": "mouse-reference"
+        },
+        "elapsedMs": 229,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "lite-host.in",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "already-matches"
+        },
+        "diagnostics": {
+          "stage": "keyboard-reference"
+        },
+        "elapsedMs": 1777,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "facer.io",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "diagnostics": {
+          "stage": "mouse-reference"
+        },
+        "elapsedMs": 477,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "daily.dev",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "diagnostics": {
+          "stage": "keyboard-reference"
+        },
+        "elapsedMs": 680,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "uls.co.za",
+      "heldOut": "match",
+      "replay": {
+        "detected": {
+          "matched": true,
+          "patch": {
+            "id": "instant-164fe2bd-32f0-4723-955d-cf897469a842",
+            "url": "https://www.uls.co.za/",
+            "site": "www.uls.co.za",
+            "match": "https://www.uls.co.za/",
+            "persona": "keyboard-only",
+            "task": "Focus the menu trigger and check that its controls appear.",
+            "controlTask": "Hover over the menu trigger and check that its controls appear.",
+            "barrier": "Hover reveals controls that the keyboard cannot reach.",
+            "status": "candidate",
+            "evidence": {},
+            "history": [],
+            "rules": [
+              {
+                "action": "mirrorHoverToFocus",
+                "selector": "ul.nav1 > li:nth-of-type(3)"
+              }
+            ],
+            "observedSelector": "ul.nav1 > li:nth-of-type(3) > a:nth-of-type(1)",
+            "barrierClass": 1,
+            "journey": [
+              {
+                "selector": "ul.nav1 > li:nth-of-type(3) > a:nth-of-type(1)",
+                "action": "focus",
+                "pointer": {
+                  "action": "hover"
+                }
+              },
+              {
+                "selector": "li.nav2 > a:nth-of-type(1)",
+                "action": "observe"
+              }
+            ],
+            "outcomeChecks": [
+              {
+                "selector": "li.nav2 > a:nth-of-type(1)",
+                "kind": "visible"
+              }
+            ]
+          },
+          "reference": [
+            {
+              "focused": false,
+              "href": "https://www.uls.co.za/services/linuxserversolutions/",
+              "selector": "li.nav2 > a:nth-of-type(1)"
+            }
+          ]
+        },
+        "diagnostics": {
+          "stage": "candidates",
+          "recipeRules": [
+            {
+              "action": "mirrorHoverToFocus",
+              "selector": "ul.nav1 > li:nth-of-type(3)"
+            }
+          ],
+          "recipeAdded": 1,
+          "generated": 5,
+          "attempts": [
+            {
+              "rules": [
+                {
+                  "action": "mirrorHoverToFocus",
+                  "selector": "ul.nav1 > li:nth-of-type(3)"
+                }
+              ],
+              "outcome": "matched"
+            }
+          ]
+        },
+        "elapsedMs": 3268,
+        "status": "match",
+        "pointerRegression": false,
+        "pointer": [
+          {
+            "selector": "li.nav2 > a:nth-of-type(1)",
+            "href": "https://www.uls.co.za/services/linuxserversolutions/",
+            "focused": false
+          }
+        ],
+        "reached": [
+          {
+            "selector": "li.nav2 > a:nth-of-type(1)",
+            "href": "https://www.uls.co.za/services/linuxserversolutions/",
+            "focused": true
+          }
+        ],
+        "oracle": {
+          "control": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          "keyboard-only": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          }
+        }
+      }
+    },
+    {
+      "site": "washburn.edu",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "page did not reset"
+        },
+        "diagnostics": {
+          "stage": "keyboard-reference"
+        },
+        "elapsedMs": 859,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "chargebee.com",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "diagnostics": {
+          "stage": "mouse-reference"
+        },
+        "elapsedMs": 486,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "editions-harmattan.fr",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "no-trigger"
+        },
+        "diagnostics": {
+          "stage": "setup"
+        },
+        "elapsedMs": 6,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "ramp.com",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "diagnostics": {
+          "stage": "mouse-reference"
+        },
+        "elapsedMs": 230,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "babble.com",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "diagnostics": {
+          "stage": "mouse-reference"
+        },
+        "elapsedMs": 255,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "bcferries.com",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "Cannot read properties of null (reading 'map')"
+        },
+        "diagnostics": {
+          "stage": "mouse-reference"
+        },
+        "elapsedMs": 248,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "mezamashi.media",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "diagnostics": {
+          "stage": "mouse-reference"
+        },
+        "elapsedMs": 259,
+        "status": "no-match"
+      }
+    },
+    {
+      "site": "betteruptime.com",
+      "heldOut": "no-match",
+      "replay": {
+        "detected": {
+          "reason": "interrupted",
+          "detail": "probe interrupted"
+        },
+        "diagnostics": {
+          "stage": "mouse-reference"
+        },
+        "elapsedMs": 232,
+        "status": "no-match"
+      }
+    }
+  ],
+  "summary": {
+    "tunedOnSameSites": true,
+    "replayed": 22,
+    "matched": 1,
+    "noMatch": 21,
+    "wrongMatch": 0,
+    "pointerRegressions": 0,
+    "pointerChecks": 1,
+    "timeToFixMs": 3268,
+    "newKaneRuns": 0,
+    "tests": {
+      "passed": 77,
+      "total": 77
+    }
+  }
+}

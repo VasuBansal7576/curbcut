@@ -27,6 +27,16 @@ The seeded sample included the sole independent match, uls.co.za. Kane verified 
 
 Kane reported **59.183 credits** for the three runs. The shared balance fell by **122.7171 credits**, including concurrent work. The lowest observed balance was **1,604.6401 credits**. All three outcomes were decisive, so no retry was used. [Kane run ledger](kane-results.json)
 
+## Development replay on the same 22 sites
+
+We tuned Match mouse on the held-out sites after the trial. The original **1 of 22** remains the held-out result.
+
+The instrumented baseline replay covered all 21 original misses before the recipe replay. None reached candidate enumeration. Twelve stopped while measuring the mouse reference, eight stopped while measuring the keyboard reference, and one stopped during setup. The baseline therefore produced zero examples of a candidate changing the keyboard or pointer set. [Per-site baseline diagnoses](development-baseline.json)
+
+The extension now uses the deterministic CSS hover recipe from the CLI. It derives selectors from ancestors shared by the trigger and controls revealed on hover, then tests the resulting rules alongside the existing candidates.
+
+The development replay matched **1 of 22**, with 21 no matches, zero wrong matches, and zero pointer regressions in the one accepted repair. The added recipe proposed the same rule on uls.co.za that passed in the held-out run. The extension accepted it in 3.268 seconds, and both independent lanes passed. No other site reached candidate evaluation. This round yielded no additional matches and used no Kane runs. The serialized test suite passed 77 of 77. [Development results](development-recipes.json)
+
 ## Historical draw
 
 The initial draw at `4977467` passed hostnames to a helper that expects URLs. The resulting zero count was invalid. The corrected historical draw contained 81 eligible domains. The historical draw was never run. [Corrected historical draw](draw.json)

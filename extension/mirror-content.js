@@ -116,6 +116,7 @@
       }
       return entries;
     }
+    if (op === 'recipeCandidates') return CurbCut.menuHoverRecipes(run.trigger,value);
     if (op === 'widget') {
       const id = run.trigger.getAttribute('aria-controls');
       const panel = id && document.getElementById(id);

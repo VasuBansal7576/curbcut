@@ -2,6 +2,7 @@ import {chromium} from 'playwright'
 import {readFile,writeFile,mkdtemp,rm} from 'node:fs/promises'
 import {tmpdir} from 'node:os'
 import path from 'node:path'
+import {pathToFileURL} from 'node:url'
 import {setTimeout as delay} from 'node:timers/promises'
 import {guardRequests,session} from '../core/chrome.mjs'
 import {journeyLane} from '../core/probe.mjs'
@@ -10,9 +11,9 @@ import {acceptableURL,allowedHost,siteKey} from '../core/task.mjs'
 
 const report = 'proof/mirror-dom/fresh-results.json'
 const draw = JSON.parse(await readFile('proof/mirror-dom/fresh-draw.json'))
-const extension = path.resolve('extension')
+const extension = path.resolve(process.env.CURBCUT_TRIAL_EXTENSION ?? 'extension')
 const bundled = new Set(JSON.parse(await readFile('extension/bundled.json')).map(row => siteKey(new URL(row.url))))
-const runtime = await readFile('extension/runtime.js','utf8')
+const runtime = await readFile(path.join(extension,'runtime.js'),'utf8')
 const rows = await readFile(report,'utf8').then(value => JSON.parse(value).rows,error => {
   if (error.code !== 'ENOENT') throw error
   return []
@@ -127,18 +128,21 @@ async function scout(page) {
   return {eligible:false,reason:!triggers.length?'no navigation trigger':'no bounded keyboard gap',triggers:triggers.length,hovered}
 }
 
-async function trial(entry) {
+export async function trial(entry,{diagnose=false,verify=true}={}) {
   const result = await profile(entry.url,true,async (page,context) => {
     await page.locator(entry.selector).focus({timeout:1500})
     const worker = context.serviceWorkers()[0] ?? await context.waitForEvent('serviceworker',{timeout:5000})
     const started = performance.now()
-    const detected = await worker.evaluate(async () => {
+    const {detected,diagnostics} = await worker.evaluate(async diagnose => {
       await chrome.storage.local.set({matchMouseEnabled:true})
-      return matchMouse((await chrome.tabs.query({active:true,currentWindow:true}))[0])
-    })
-    return {detected,elapsedMs:Math.round(performance.now()-started)}
+      const diagnostics = diagnose ? {stage:"setup"} : undefined
+      const detected = await matchMouse((await chrome.tabs.query({active:true,currentWindow:true}))[0],diagnostics)
+      return {detected,diagnostics}
+    },diagnose)
+    return {detected,diagnostics,elapsedMs:Math.round(performance.now()-started)}
   })
   if (!result.detected.matched) return {...result,status:'no-match'}
+  if (!verify) return {...result,status:'proposed'}
   const {patch} = result.detected
   const oracleDir = await mkdtemp(path.join(tmpdir(),'mirror-oracle-'))
   try {
@@ -185,7 +189,7 @@ async function attempt(candidate) {
   return row
 }
 
-while (rows.length < draw.candidates.length) {
+while (import.meta.url === pathToFileURL(process.argv[1]).href && rows.length < draw.candidates.length) {
   const remaining = draw.target - rows.filter(row => row.scout.eligible).length
   if (!remaining) break
   const batch = draw.candidates.slice(rows.length,rows.length + Math.min(3,remaining))
