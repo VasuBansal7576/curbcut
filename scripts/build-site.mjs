@@ -89,6 +89,19 @@ for(const patch of recorded) {
     }
     proposal='[Local failure]('+videoLink(provenance.sourceLocalRun)+') · [Local replay]('+videoLink(provenance.repairDirectory+'/after.json')+
       ') · [Repair provenance]('+videoLink(provenancePath)+')'
+    const runDirectory=path.dirname(attempt)
+    const runtimeAgent=['full-agent','agent-diff'].includes(patch.evidence.repairMethod) &&
+      provenance.sourceLocalRun===path.join(runDirectory,'local','before.json')
+    if(runtimeAgent) {
+      const agentFile=path.join(provenance.repairDirectory,'candidate.json')
+      const agentPatch=await read(agentFile,null)
+      const agentProvenance=await read(path.join(provenance.repairDirectory,'provenance.json'),null)
+      if(path.dirname(provenance.repairDirectory)!==path.join(runDirectory,'local') ||
+        !['grok','codex exec'].includes(agentProvenance?.writer) || !isDeepStrictEqual(agentPatch?.rules,patch.rules)) {
+        throw new Error('Unconfirmed runtime agent proposal for '+patch.id)
+      }
+      proposal+=' · [Agent proposal]('+videoLink(agentFile)+')'
+    }
   } else if(patch.evaluation) {
     const measured=v6Local?.rows.find(row=>row.id===patch.id && row.status==='locally-fixed')
     const recorded=v6Kane?.cases.find(row=>row.id===patch.id && row.verified)
@@ -113,12 +126,7 @@ for(const patch of recorded) {
     if(!provenancePath) throw new Error('Missing proposal provenance for '+patch.id)
     const provenance=await read(provenancePath,null)
     const candidate=path.join(path.dirname(provenancePath),'candidate.json')
-    const runDirectory=path.dirname(attempt)
-    const runtimeLocal=runDirectory.startsWith('proof/kane/'+patch.id+'/') &&
-      provenance.sourceLocalRun===path.join(runDirectory,'local','before.json') &&
-      /^attempt-[1-3]$/.test(path.basename(provenance.repairDirectory??'')) &&
-      path.dirname(provenance.repairDirectory)===path.join(runDirectory,'local')
-    const agentCandidate=provenance.priorAgentProposal??(runtimeLocal?path.join(provenance.repairDirectory,'candidate.json'):candidate)
+    const agentCandidate=provenance.priorAgentProposal??candidate
     const agentPatch=await read(agentCandidate,null)
     const sampleCase=v5Sample?.cases.find(row=>row.id===patch.id && row.kaneVerified &&
       row.runs.some(run=>run.phase==='after' && run.recording===patch.evidence.after))
@@ -136,9 +144,9 @@ for(const patch of recorded) {
     const source=archive.find(run=>run.taskId===patch.id && run.sessionId===agentProvenance?.sourceRunId)
     const sourceLocalRun=provenance.sourceLocalRun
     const localFailure=sourceLocalRun && await read(sourceLocalRun,null)
-    const localSource=localFailure?.runner==='playwright' && localFailure.status==='fail' && (runtimeLocal || [hardLocal,v5Local].some(cohort=>
+    const localSource=localFailure?.runner==='playwright' && localFailure.status==='fail' && [hardLocal,v5Local].some(cohort=>
       cohort && provenance.registrationBlob===cohort.registered.blob && cohort.results.some(row=>
-        row.task.id===patch.id && row.status==='locally-fixed' && row.phases.some(phase=>phase.name==='before' && phase.file===sourceLocalRun))))
+        row.task.id===patch.id && row.status==='locally-fixed' && row.phases.some(phase=>phase.name==='before' && phase.file===sourceLocalRun)))
     const kaneSource=!sourceLocalRun && source?.status===(patch.evidence.localOracle?patch.evidence.kaneVerdicts?.before:'fail')
     if(!['codex exec','grok'].includes(agentProvenance?.writer) || (!localSource && !kaneSource) ||
       !isDeepStrictEqual((await read(candidate,null))?.rules,patch.rules) ||

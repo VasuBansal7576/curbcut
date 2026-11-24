@@ -38,6 +38,49 @@ Earlier attempts on this branch, kept as evidence:
 - [2026-11-24T18-05-29.703Z](check/2026-11-24T18-05-29.703Z): Kane before fail `65f5fe0c-d95b-4aff-a77c-996b760c3a1a` (35.936875). Grok CLI aborted because `-p` / `--single` cannot be used with `--prompt-file`. `core/agent.mjs` now calls grok with `--prompt-file` only.
 - [2026-11-24T18-09-54.850Z](check/2026-11-24T18-09-54.850Z): Grok proposed; Kane after had no sealed pack; after-retry was `ERR_CONNECTION_REFUSED` after another agent stopped the 4317 server. Not a product verdict.
 
+### Fresh clone
+
+The independent QA run was inconclusive. Its evidence ID was
+`396ecb73-1979-46c6-9546-fb86c9ddb23f` and the runner session was
+`76556d45-2e39-4ce4-b547-eae6889f5be4`. Kane turned the initial Tab-order
+hint into an assertion and stopped at step 4 with zero Tab presses. The
+13-step override left too little room for some replays, but this attempt
+stopped before reaching that limit.
+
+The new objective asks for search, focus traversal, activation, and an
+observation of the cart count. The fixture defaults are 28 steps for keyboard
+and 16 for pointer control. The archived before, control, and after streams
+reached step numbers 11, 11, and 22.
+
+The [archived terminal capture](check/2026-11-24T18-15-53.859Z/terminal.jsonl)
+records `Invalid Kane after evidence for keyboard-add-headphones`. The builder
+could read the result but could not find its `.curbcut/check/` path in the
+archive ledger. Check now writes live runs under `proof/kane/`. The builder
+follows the verification record to the runtime agent candidate and the local
+failure that prompted it. A failed build restores the prior patch file.
+
+The first live attempt used a fresh clone of `loop/reliability` at
+`9e5fa27`, followed by `npm ci`. The documented shop command used the
+isolated fixture port 4391 and default Kane limits. Grok 4.5 proposed the
+repair after the local failure. Local patched keyboard and pointer replays
+passed before the billed Kane lanes.
+
+| Phase | Verdict | Kane session | Reported credits |
+| --- | --- | --- | ---: |
+| Before | Fail, six trusted Tab presses skipped the target | `9b1d4624-cd2f-496c-b0fc-997e66c239da` | 31.705345 |
+| Pointer control | Pass | `cfe24ce4-9953-43d7-be28-724c8f5055a9` | 18.764490 |
+| Patched after | Pass, trusted keyboard activation | `c5f376a4-674a-46f3-abcc-39be4cd46a04` | 48.784578 |
+
+The CLI exited 0 with `check verified` and published
+`keyboard-add-headphones` in the clone. The generated report linked all
+three recordings. A subsequent build against the same recordings linked
+the original Grok candidate as well. The clone was removed after
+verification.
+
+Kane balance went from **1581.5322** to **1464.6433**, a debit of
+**116.8889** credits. The three session results report **99.2544** credits
+in total. The balance debit is the spend figure for the 160-credit cap.
+
 ## 2. Gate in a coding agent (`curbcut gate`)
 
 Config: [proof/demo/gate/curbcut.gate.json](gate/curbcut.gate.json). One keyboard-only task, Kane path, not `--local`.
