@@ -22,7 +22,6 @@ for(const row of local.rows.filter(row=>row.status==='locally-fixed')) {
   if(finalize) {
     if(!passed.has(id)) {
       await rm(target,{force:true})
-      await rm(path.join(ROOT,artifact),{force:true})
       continue
     }
     const bytes=await readFile(path.join(ROOT,artifact))

@@ -102,5 +102,25 @@ try {
       assert.deepEqual(selection.targets[category],expected)
     }
   }
+  const release=await optional('release.json')
+  if(release) {
+    const audit=await read('extension-e2e.json')
+    assert.equal(release.frozenCommit,freeze.frozenCommit)
+    for(const {id,category,proof,measurement,artifact,sha256} of release.releases) {
+      assert.match(id,/^v6-[0-9a-f]{20}$/)
+      assert.equal(artifact,'proof/heldout-v6/release/'+id+'.json')
+      assert.equal(measurement,'proof/heldout-v6/measurements/'+id+'.json')
+      const [archive,published]=await Promise.all([readFile(path.join(folder,'release',id+'.json')),
+        readFile(new URL('../patches/'+id+'.json',import.meta.url))])
+      const patch=JSON.parse(published)
+      assert(archive.equals(published))
+      assert.equal(sha(archive),sha256)
+      assert.equal(patch.evaluation.category,category)
+      assert.equal(patch.status,proof==='kane'?'verified':'locally-verified')
+      assert.deepEqual(patch.rules,local.rows.find(row=>row.id===id).patch.rules)
+      assert.equal((await read('measurements/'+id+'.json')).after.status,'pass')
+      assert(audit.results.some(row=>row.id===id && row.status==='pass' && row.off.probe.status==='fail' && row.on.probe.status==='pass'))
+    }
+  }
   console.log('Verified '+roots.length+' frozen Git objects and '+Object.keys(inputs).length+' registered inputs.')
 } finally {await rm(work,{recursive:true,force:true})}
