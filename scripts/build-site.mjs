@@ -257,4 +257,4 @@ const html=deploy?result.replace(/(href|src)="\.\.\/([^"]+)"/g,(_,attribute,file
   return attribute+'="'+repo+'/'+kind+'/main/'+file+'"'
 }).replace('Try the fixture shop ↗','Get the extension'):result
 await writeFile(path.join(ROOT,'site/index.html'),html+'\n')
-console.log(`Built dashboard: ${active.length} active Kane repairs · ${recorded.length} Kane-verified tasks · ${localFixed} local fixes`)
+console.log(`Built dashboard: ${active.length} active Kane repairs · ${recorded.length} Kane-verified tasks · ${locallyVerified.length} active local repairs · ${localFixed} local fixture fixes`)
