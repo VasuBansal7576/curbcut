@@ -13,7 +13,10 @@ const draw = JSON.parse(await readFile('proof/mirror-dom/fresh-draw.json'))
 const extension = path.resolve('extension')
 const bundled = new Set(JSON.parse(await readFile('extension/bundled.json')).map(row => siteKey(new URL(row.url))))
 const runtime = await readFile('extension/runtime.js','utf8')
-const rows = []
+const rows = await readFile(report,'utf8').then(value => JSON.parse(value).rows,error => {
+  if (error.code !== 'ENOENT') throw error
+  return []
+})
 const snapshot = page => page.evaluate(() => [...document.querySelectorAll('a[href],button,input,select,textarea,summary,[role=menuitem],[role=button],[tabindex]')]
   .filter(node => node.checkVisibility({visibilityProperty:true,opacityProperty:true}) && !node.closest('[inert],[aria-hidden=true]') &&
     !node.matches(':disabled,[aria-disabled=true]') && node.getBoundingClientRect().width > 0 && node.getBoundingClientRect().height > 0)
@@ -160,8 +163,7 @@ async function trial(entry) {
 }
 
 const save = () => writeFile(report,JSON.stringify({draw:'d764df9',rows},null,2)+'\n')
-for (const candidate of draw.candidates) {
-  if (rows.filter(row=>row.scout.eligible).length >= draw.target) break
+async function attempt(candidate) {
   let scouting
   const errors = []
   try {
@@ -177,8 +179,21 @@ for (const candidate of draw.candidates) {
     try { row.trial=await trial(scouting) }
     catch (error) { row.trial={status:'trial-error',reason:error.message.slice(0,400)} }
   }
-  rows.push(row)
+  return row
+}
+
+while (rows.length < draw.candidates.length) {
+  const remaining = draw.target - rows.filter(row => row.scout.eligible).length
+  if (!remaining) break
+  const batch = draw.candidates.slice(rows.length,rows.length + Math.min(3,remaining))
+  const completed = await Promise.all(batch.map(async (candidate,index) => {
+    await delay(650*index)
+    return attempt(candidate)
+  }))
+  for (const row of completed) {
+    rows.push(row)
+    console.log(rows.length,row.site,row.scout.eligible ? row.trial.status : row.scout.reason)
+  }
   await save()
-  console.log(rows.length,candidate.site,scouting.eligible ? row.trial.status : scouting.reason)
   await delay(650)
 }
