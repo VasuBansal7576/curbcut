@@ -3,7 +3,10 @@ importScripts(
   "lib/match.js",
   "lib/validate.js",
   "lib/select.js",
-  "lib/sensitive.js"
+  "lib/sensitive.js",
+  "jev-runtime.js",
+  "lib/jev-config.js",
+  "instant-background.js"
 );
 
 const Ext = globalThis.CurbCutExt;
@@ -22,6 +25,7 @@ async function readJsonAsset(path) {
 
 async function getState() {
   const stored = await chrome.storage.local.get(null);
+  for (const key of Object.keys(stored)) if (key.startsWith(instantQueuePrefix)) delete stored[key];
   return {
     ...Ext.DEFAULT_STATE,
     ...stored,
@@ -245,6 +249,7 @@ async function openCapture(tabId, fromPage = false) {
 
 chrome.commands.onCommand.addListener((command, tab) => {
   if (command === "im-stuck") openCapture(tab?.id).catch(() => {});
+  if (command === "instant-fix") instantFix(tab?.id).catch(() => {});
 });
 
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
@@ -314,6 +319,14 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
       case "CLEAR_PENDING_STUCK": {
         const state = await setState({ pendingStuck: false });
         sendResponse({ ok: true, state });
+        return;
+      }
+      case "RUN_INSTANT": {
+        const fromPage = _sender.tab && /^https?:/.test(_sender.url ?? "");
+        const tabId = fromPage ? _sender.tab.id : message.capturedTabId ??
+          (await chrome.tabs.query({ active: true, currentWindow: true }))[0]?.id;
+        if (!fromPage && message.capturedTabId != null) await chrome.tabs.update(tabId, { active: true });
+        sendResponse(await instantFix(tabId));
         return;
       }
       case "OPEN_STUCK": {

@@ -11,11 +11,14 @@ import {match} from './engine.js'
 
 const runtime=()=>readFile(path.join(ROOT,'extension/runtime.js'),'utf8')
 
-export async function guardRequests(context,task,{discovery=false,extension=false}={}) {
+export async function guardRequests(context,task,{discovery=false,extension=false,instantBridge=false}={}) {
   const base=new URL(task.url),hosts=new Map()
   await context.route('**/*',async route=>{
     try {
       const request=route.request(),url=new URL(request.url())
+      if(extension && instantBridge && url.origin==='http://127.0.0.1:4317' &&
+        ['/instant/decide','/instant/queue'].includes(url.pathname) && ['OPTIONS','POST'].includes(request.method()) &&
+        request.serviceWorker()?.url().startsWith('chrome-extension://')) return await route.continue()
       if(!['GET','HEAD'].includes(request.method())) return await route.abort()
       if(extension && url.protocol==='chrome-extension:') return await route.continue()
       if(discovery && ['image','media','font'].includes(request.resourceType())) return await route.abort()

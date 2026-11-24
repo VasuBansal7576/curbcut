@@ -4,6 +4,7 @@ import {apply,match} from './engine.js'
 import {keyboardVisibility,observePassage,widthEvidence} from './geometry.js'
 import {isMirroredHoverEvent,observedHoverRules} from './hover.js'
 import {inspectRuleSelectors} from './selectors.js'
+import {collectInstantState,instantPrivacy} from './jev-browser.js'
 
 export const lowContrastFilter='grayscale(1) contrast(0.22)'
 
@@ -328,4 +329,4 @@ function enforce(persona,report=()=>{}, {topLevel=true}={}) {
   }
   return state
 }
-globalThis.CurbCut=Object.freeze({apply,match,snapshot,reader,readerRow,enforce,exactSelector,discoverCoverage:()=>discoverCoverage(exactSelector),coverageObservation,keyboardVisibility,inspectRuleSelectors,observePassage,widthEvidence})
+globalThis.CurbCut=Object.freeze({apply,match,snapshot,reader,readerRow,enforce,exactSelector,discoverCoverage:()=>discoverCoverage(exactSelector),coverageObservation,keyboardVisibility,inspectRuleSelectors,observePassage,widthEvidence,instantPrivacy,collectInstantState:()=>collectInstantState(exactSelector)})

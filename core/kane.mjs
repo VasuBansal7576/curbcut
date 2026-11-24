@@ -294,6 +294,7 @@ export async function runKane(task,persona,patch,directory,options={}) {
     const hint=persona==='keyboard-only' && !patch?await keyboardHint(browser.page,task):null
     const objective=replayObjective(task,persona,{patched:Boolean(patch),hint})
     const args=['run','--target','desktop','--headless','--agent','--local','--global-context','/dev/null','--local-context','/dev/null','--cdp-endpoint',browser.endpoint,'--url',task.url,'--max-steps',String(maxSteps),'--timeout',String(timeout),'--final-validation',task.probe || task.journey?'off':'on','--assertion-mode',assertionMode,'--assertion-failure-mode','stop',objective]
+    await options.beforeRun?.()
     const processResult=await command('kane-cli',args,{timeout:(timeout+90)*1000,processGroup:true})
     await writeFile(path.join(directory,'events.ndjson'),processResult.stdout)
     await writeFile(path.join(directory,'stderr.txt'),processResult.stderr)

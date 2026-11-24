@@ -208,7 +208,7 @@ function matchedPatch(browser,patch) {
   return [...browser.observations.values()].some(page=>page.events.some(event=>event.type==='rule' && event.patchId===patch.id))
 }
 
-async function checkLane(task,persona,patch=null,{requireMatch=false,capture=false,targetWait=0,attachedBrowser}={}) {
+async function checkLane(task,persona,patch=null,{requireMatch=false,capture=false,targetWait=0,attachedBrowser,observe}={}) {
   let browser=attachedBrowser
   try {
     browser??=await session(task,persona,patch,tmpdir(),{local:true,gate:true})
@@ -302,7 +302,10 @@ async function checkLane(task,persona,patch=null,{requireMatch=false,capture=fal
     return {...details,url:page.url(),checks,status:passed?'pass':'fail',reason:'Checked the declared outcome after the '+action+' action.'}
   } catch(error) {
     return {status:error instanceof BlockedPage?'blocked':'inconclusive',reason:error.message.split('\n')[0]}
-  } finally {if(!attachedBrowser) await browser?.abort()}
+  } finally {
+    try {if(browser) await observe?.(browser.page)}
+    finally {if(!attachedBrowser) await browser?.abort()}
+  }
 }
 
 export async function confirmBarrier(data) {
@@ -323,8 +326,8 @@ export async function oracle(task,patch=null) {
   return {runner:'playwright',status:{pass:'no barrier',fail:'confirmed'}[persona.status]??persona.status,control,persona}
 }
 
-export async function replayLane(task,persona,patch=null,{targetWait=0}={}) {
-  return {runner:'playwright',...await checkLane(task,persona,patch,{requireMatch:Boolean(patch),capture:true,targetWait})}
+export async function replayLane(task,persona,patch=null,{targetWait=0,observe}={}) {
+  return {runner:'playwright',...await checkLane(task,persona,patch,{requireMatch:Boolean(patch),capture:true,targetWait,observe})}
 }
 
 export async function replayInstalledProbe(browser,task) {

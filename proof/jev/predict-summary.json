@@ -1,0 +1,110 @@
+{
+  "finishedAt": "2026-11-24T14:10:25.106Z",
+  "source": "Committed evidence packs, result.json, and event streams",
+  "archiveFiles": 427,
+  "labeledFiles": 427,
+  "uniqueSessions": 427,
+  "attempted": 427,
+  "scored": 427,
+  "training": 339,
+  "holdout": 88,
+  "trainAuc": 0.559191011235955,
+  "heldoutAuc": 0.7151692708333334,
+  "thresholdChosenWithoutDecisiveTrainingLoss": 0.4,
+  "trainImpact": {
+    "threshold": 0.4,
+    "skipped": 0,
+    "decisiveLost": 0,
+    "decisivePassedLost": 0,
+    "knownCreditsSaved": 0,
+    "skippedWithoutCreditRecord": 0
+  },
+  "heldoutImpact": {
+    "threshold": 0.4,
+    "skipped": 0,
+    "decisiveLost": 0,
+    "decisivePassedLost": 0,
+    "knownCreditsSaved": 0,
+    "skippedWithoutCreditRecord": 0
+  },
+  "sweep": [
+    {
+      "threshold": 0.1,
+      "skipped": 0,
+      "decisiveLost": 0,
+      "decisivePassedLost": 0,
+      "knownCreditsSaved": 0,
+      "skippedWithoutCreditRecord": 0
+    },
+    {
+      "threshold": 0.2,
+      "skipped": 0,
+      "decisiveLost": 0,
+      "decisivePassedLost": 0,
+      "knownCreditsSaved": 0,
+      "skippedWithoutCreditRecord": 0
+    },
+    {
+      "threshold": 0.3,
+      "skipped": 0,
+      "decisiveLost": 0,
+      "decisivePassedLost": 0,
+      "knownCreditsSaved": 0,
+      "skippedWithoutCreditRecord": 0
+    },
+    {
+      "threshold": 0.4,
+      "skipped": 0,
+      "decisiveLost": 0,
+      "decisivePassedLost": 0,
+      "knownCreditsSaved": 0,
+      "skippedWithoutCreditRecord": 0
+    },
+    {
+      "threshold": 0.5,
+      "skipped": 0,
+      "decisiveLost": 0,
+      "decisivePassedLost": 0,
+      "knownCreditsSaved": 0,
+      "skippedWithoutCreditRecord": 0
+    },
+    {
+      "threshold": 0.6,
+      "skipped": 2,
+      "decisiveLost": 2,
+      "decisivePassedLost": 2,
+      "knownCreditsSaved": 53.665252499999994,
+      "skippedWithoutCreditRecord": 0
+    },
+    {
+      "threshold": 0.7,
+      "skipped": 47,
+      "decisiveLost": 27,
+      "decisivePassedLost": 19,
+      "knownCreditsSaved": 1212.0582705,
+      "skippedWithoutCreditRecord": 0
+    },
+    {
+      "threshold": 0.8,
+      "skipped": 87,
+      "decisiveLost": 63,
+      "decisivePassedLost": 45,
+      "knownCreditsSaved": 1830.6656930000001,
+      "skippedWithoutCreditRecord": 0
+    },
+    {
+      "threshold": 0.9,
+      "skipped": 88,
+      "decisiveLost": 64,
+      "decisivePassedLost": 46,
+      "knownCreditsSaved": 1845.7483980000002,
+      "skippedWithoutCreditRecord": 0
+    }
+  ],
+  "steps": {
+    "holdout": 88,
+    "modelMAE": 6.1647727272727275,
+    "meanStepBaseline": 9.908011869436201,
+    "baselineMAE": 7.037732667925553
+  }
+}

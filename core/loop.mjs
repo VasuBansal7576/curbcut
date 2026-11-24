@@ -129,7 +129,7 @@ async function verifyRegisteredCandidate(task,patch,{dir,run,persist,progress,pr
   const at=instant()
   const verified={...patch,status:'verified',evidence:{before:before.video,control:control.video,after:after.video,
     verifiedAt:at,kaneRunIds:lanes.map(result=>result.runId),kaneVerdicts:{before:'fail',control:'pass',after:'pass'},
-    localOracle:{before:'fail',control:'pass',after:'pass'}},
+    ...(provenance.localOracle===null?{}:{localOracle:{before:'fail',control:'pass',after:'pass'}})},
     history:[{at,event:'verified',before:before.runId,control:control.runId,after:after.runId}]}
   await progress('publishing',after)
   await persist(verified)

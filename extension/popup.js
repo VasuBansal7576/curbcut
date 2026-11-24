@@ -46,7 +46,7 @@ import {createReport} from './lib/report.js';
     queued: "Task sent to local loop.",
     reproducing: "Kane is reproducing the barrier.",
     "checking-control": "Kane is running the pointer control.",
-    "writing-patch": "Codex is writing the repair.",
+    "writing-patch": "Writing the repair.",
     verifying: "Kane is testing the repair.",
     publishing: "Publishing the verified repair.",
     verified: "Kane verified the repair. It is available in the extension.",

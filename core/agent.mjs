@@ -4,7 +4,10 @@ import path from 'node:path'
 import {ROOT,command,readJSON,saveJSON} from './io.mjs'
 import validate from './validate.generated.cjs'
 import {match} from './engine.js'
-import {validateLiveSelectors} from './probe.mjs'
+import {replayLane,validateLiveSelectors} from './probe.mjs'
+import {jevKey} from './jev.mjs'
+import {chooseInstant,instantPatch,threshold} from './jev-policy.js'
+import {captureInstant} from './jev-capture.mjs'
 
 export class ProposalRejected extends Error {
   constructor(message,rules,selectorValidation) {
@@ -72,7 +75,33 @@ async function requestProposal(task,failure,previous,directory) {
   } finally {await rm(dir,{recursive:true,force:true})}
 }
 
+async function instantProposal(task,failure,directory) {
+  if(!task.probe && !task.journey) return null
+  const key=await jevKey()
+  if(!key) return null
+  let capture
+  const before=await replayLane(task,task.persona,null,{observe:async page=>{
+    capture=await captureInstant(page,task).catch(()=>null)
+  }})
+  if(before.status!=='fail' || !capture?.state.candidates.length) return null
+  const decision=await chooseInstant(key,capture.state,capture.screenshot).catch(()=>null)
+  if(!decision?.rules || decision.confidence<threshold) return null
+  const patch=instantPatch(capture.state.url,decision,task)
+  if(!validate(patch) || !match(patch,task.url)) return null
+  const selectorValidation=await validateLiveSelectors(task,patch.rules).catch(()=>null)
+  if(!selectorValidation?.ok) return null
+  await saveJSON(path.join(directory,'selector-validation.json'),selectorValidation)
+  await saveJSON(path.join(directory,'candidate.json'),patch)
+  await saveJSON(path.join(directory,'provenance.json'),{writer:'TypeSafe Jev',model:decision.model,confidence:decision.confidence,
+    threshold,providerMs:decision.providerMs,runner:failure.runner,sourceReason:failure.reason,sourceRunId:failure.runId??null})
+  return patch
+}
+
 export async function propose(task,failure,previous,directory,{retryInvalid=true}={}) {
+  if(process.env.CURBCUT_JEV_FIRST==='1' && !previous && !failure.previousAttempts?.length) {
+    const candidate=await instantProposal(task,failure,directory)
+    if(candidate) return candidate
+  }
   try {return await requestProposal(task,failure,previous,directory)}
   catch(error) {
     if(!retryInvalid || !(error instanceof ProposalRejected)) throw error
