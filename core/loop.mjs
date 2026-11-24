@@ -17,13 +17,13 @@ export async function catalog() {
   for(const patch of patches) if(!validate(patch)) throw new Error('Invalid patch '+patch.id)
   return patches
 }
-export async function publish(patch) {
+async function publish(patch) {
   if(!validate(patch)) throw new Error('Invalid publication')
   await saveJSON(patchFile(patch.id),patch)
   const build=await command(process.execPath,['scripts/build-site.mjs'])
   if(build.code!==0) throw new Error(build.stderr)
 }
-export function serialPublisher() {
+function serialPublisher() {
   let publication=Promise.resolve()
   return patch=>{
     const next=publication.then(()=>publish(patch))

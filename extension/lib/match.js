@@ -47,7 +47,6 @@
     }
   }
 
-  root.matchUrlPattern = matchUrlPattern;
   root.matchPatch = matchPatch;
   root.isFixtureShopUrl = isFixtureShopUrl;
 })();

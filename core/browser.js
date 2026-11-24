@@ -70,7 +70,7 @@ function repairContext(targets) {
   return {nodes,hoverRules:observedHoverRules(nodes.map(node=>node.selector))}
 }
 
-export function snapshot(observedSelector,hints=[]) {
+function snapshot(observedSelector,hints=[]) {
   const target=observedSelector ? document.querySelector(observedSelector) : null
   const selected=new Map()
   for(const selector of hints) {
@@ -98,10 +98,10 @@ export function snapshot(observedSelector,hints=[]) {
     })}
 }
 const readerRows=new WeakMap()
-export function readerRow(element) {
+function readerRow(element) {
   return readerRows.get(element)
 }
-export function reader(report=()=>{}) {
+function reader(report=()=>{}) {
   const originalFocus=document.activeElement
   const panel=document.createElement('dialog')
   panel.dataset.curbcutReader=''
@@ -201,7 +201,7 @@ export function reader(report=()=>{}) {
   return ()=>{observer.disconnect();panel.close();panel.remove();for(const element of mappings.keys()) readerRows.delete(element);originalFocus?.focus()}
 }
 
-export function enforce(persona,report=()=>{}, {topLevel=true}={}) {
+function enforce(persona,report=()=>{}, {topLevel=true}={}) {
   const state={persona,blockedPointers:0,horizontalScroll:false,minWidth:innerWidth,maxWidth:innerWidth}
   Object.defineProperty(globalThis,'__curbcutState',{value:state,configurable:true})
   if(persona==='keyboard-only') {

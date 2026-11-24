@@ -93,7 +93,7 @@ const limits={
   'color-blind':{maxSteps:24,timeout:250},
   control:{maxSteps:22,timeout:300}
 }
-export function kaneLimits(task,persona,options={}) {
+function kaneLimits(task,persona,options={}) {
   const defaults=limits[persona]
   const maxSteps=options.maxSteps??Number(process.env.CURBCUT_KANE_MAX_STEPS??defaults.maxSteps)
   return {maxSteps,timeout:options.timeout??Math.max(defaults.timeout,maxSteps*6),

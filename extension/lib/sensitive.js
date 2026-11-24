@@ -42,6 +42,5 @@
   }
 
   root.urlLooksSensitive = urlLooksSensitive;
-  root.documentLooksSensitive = documentLooksSensitive;
   root.canCapturePage = canCapturePage;
 })();

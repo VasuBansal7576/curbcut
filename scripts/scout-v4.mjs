@@ -1,87 +1,19 @@
 import {createHash} from 'node:crypto'
-import {spawn} from 'node:child_process'
-import {appendFile,readFile,mkdir} from 'node:fs/promises'
-import {createInterface} from 'node:readline'
 import {tmpdir} from 'node:os'
 import {setTimeout as delay} from 'node:timers/promises'
-import path from 'node:path'
-import {ROOT,command,instant,readJSON,saveJSON} from '../core/io.mjs'
-import {acceptableURL,forbiddenJourneyAction,normalizeTask,siteKey,taskNavigation} from '../core/task.mjs'
+import {command} from '../core/io.mjs'
+import {acceptableURL,forbiddenJourneyAction,normalizeTask,taskNavigation} from '../core/task.mjs'
 import {session} from '../core/chrome.mjs'
 import {BlockedPage} from '../core/access.mjs'
 import {confirmBarrier} from '../core/probe.mjs'
 
-export const folder='proof/hard-v4'
 export const sha256=value=>createHash('sha256').update(value).digest('hex')
-export const samplePath=folder+'/sample.json'
-export const scoutPath=folder+'/scouting.json'
-const safetyPath=folder+'/safety-exclusions.json'
-const seed='curbcut-v4-tranco-2026-11-23'
-const priorCommit='fab5c9a'
-const requestedSites=1600
-const minRank=1000,maxRank=50000
-const concurrency=3
 export const hostExclusion=/(?:\b(?:login|signin|auth|account|passport|sso|casino|poker|betting|sportsbook|torrent|warez)\b|(?:porn|hentai|onlyfans|xhamster|xnxx|xvideos|javhd|hornyleak|rule34|camsoda|bet365|thepiratebay|1337x|vortexscans|fmovies|putlocker|yts\.|nhentai|xhplus|xhvid|satta|matka|1xbet|melbet|22bet|stake\.|betway))/i
 
 export async function git(args) {
   const result=await command('git',args,{timeout:30000})
   if(result.code!==0) throw new Error(result.stderr.trim()||'Git command failed.')
   return result.stdout.trim()
-}
-
-export async function committedBlob(file) {
-  const commit=await git(['log','-1','--format=%H','--',file])
-  if(!commit) throw new Error(file+' must be committed first.')
-  const [blob,actual]=await Promise.all([git(['rev-parse',commit+':'+file]),git(['hash-object',file])])
-  if(blob!==actual) throw new Error(file+' differs from its committed Git blob.')
-  return {commit,blob}
-}
-
-async function previousSites() {
-  const paths=['tasks','patches','proof','README.md','SPEC.md']
-  const child=spawn('git',['grep','-I','-h','-o','-E','https?://[a-zA-Z0-9._-]+|"site": *"[a-zA-Z0-9._-]+"',priorCommit,'--',...paths],
-    {cwd:ROOT,stdio:['ignore','pipe','inherit']})
-  const exit=new Promise((resolve,reject)=>{child.once('error',reject);child.once('close',resolve)})
-  const sites=new Set()
-  for await(const line of createInterface({input:child.stdout})) {
-    const url=line.startsWith('"site"')?'https://'+line.split('"')[3]:line
-    try {sites.add(siteKey(new URL(url)))} catch {}
-  }
-  if(await exit!==0 || !sites.size) throw new Error('Unable to recover the historical site exclusions.')
-  return sites
-}
-
-async function sample(csv,listId) {
-  if(!/^[a-z0-9]{4,10}$/i.test(listId??'')) throw new Error('Supply the immutable Tranco list ID.')
-  const output=path.join(ROOT,samplePath)
-  const existing=await readFile(output).catch(error=>{if(error.code!=='ENOENT') throw error})
-  if(existing) throw new Error('The preregistered sample already exists.')
-  const content=await readFile(csv)
-  const prior=await previousSites()
-  const candidates=[]
-  const domains=new Set()
-  let ranks=0,excludedPrior=0,excludedHost=0
-  for(const line of content.toString().split(/\r?\n/)) {
-    const [rawRank,domain]=line.split(',')
-    const rank=Number(rawRank)
-    if(rank<minRank || rank>maxRank || !domain) continue
-    ranks++
-    if(!/^[a-z\d-]+(?:\.[a-z\d-]+)+$/.test(domain) || hostExclusion.test(domain)) {excludedHost++;continue}
-    const site=siteKey(new URL('https://'+domain))
-    if(prior.has(site)) {excludedPrior++;continue}
-    if(site!==domain || domains.has(site)) {excludedHost++;continue}
-    domains.add(site)
-    candidates.push({rank,site})
-  }
-  if(ranks!==maxRank-minRank+1 || candidates.length<requestedSites) throw new Error('The Tranco CSV did not cover the requested rank range.')
-  const order=value=>sha256(seed+'\n'+value)
-  const selected=candidates.map(candidate=>({...candidate,order:order(candidate.site)}))
-    .sort((a,b)=>a.order.localeCompare(b.order)).slice(0,requestedSites).map(({rank,site})=>({rank,site,url:'https://'+site+'/'}))
-  await saveJSON(output,{version:4,registeredAt:instant(),source:'https://tranco-list.eu/list/'+listId,
-    listId,csvSha256:sha256(content),seed,rankRange:[minRank,maxRank],priorCommit,excludedPrior,excludedHost,
-    sampling:'Sample without replacement by sorting registrable domains by SHA-256 of seed, newline, and domain.',
-    concurrency,sites:selected})
-  console.log('Preregistered',selected.length,'sites from Tranco',listId,'with',excludedPrior,'prior ranks excluded.')
 }
 
 export function inspectPage() {
@@ -423,62 +355,4 @@ export async function scoutSite(candidate,{version=4,checkAccess}={}) {
   return {status:checks.find(row=>row.result.status==='confirmed')?'confirmed':
     checks.some(row=>row.result.status==='no barrier')?'no barrier':checks.some(row=>row.result.status==='blocked')?'blocked':
       checks.length?'inconclusive':'no candidate',url,detected:discovery.hard.length,checks}
-}
-
-async function scout() {
-  const registration=await committedBlob(samplePath)
-  const implementation=await git(['rev-parse','HEAD'])
-  const prereg=await readJSON(path.join(ROOT,samplePath))
-  const safety=await committedBlob(safetyPath)
-  const screen=await readJSON(path.join(ROOT,safetyPath))
-  const excluded=new Map(screen.excluded.map(item=>[item.site,item.categories]))
-  if(prereg.seed!==seed || prereg.sites.length!==requestedSites || prereg.concurrency!==concurrency) throw new Error('Unexpected preregistered sample.')
-  const dir=path.join(ROOT,'.curbcut/v4')
-  await mkdir(dir,{recursive:true})
-  const journal=path.join(dir,'scouting-'+registration.blob+'.ndjson')
-  const raw=await readFile(journal,'utf8').catch(error=>{if(error.code==='ENOENT') return '';throw error})
-  const recorded=new Map(raw.trim().split('\n').filter(Boolean).map(line=>{const row=JSON.parse(line);return [row.site,row]}))
-  const compatible=new Set([implementation,screen.reuseObservationCommit])
-  if([...recorded.values()].some(row=>!compatible.has(row.implementation))) throw new Error('Cannot reuse observations with an unknown implementation.')
-  for(const candidate of prereg.sites) {
-    const categories=excluded.get(candidate.site)
-    if(!categories) continue
-    const previous=recorded.get(candidate.site)
-    recorded.set(candidate.site,{...candidate,status:'excluded',reason:'Safety screen: '+categories.join(', '),
-      previouslyVisited:Boolean(previous),implementation,checkedAt:instant()})
-  }
-  const pending=prereg.sites.filter(site=>!recorded.has(site.site))
-  const startedAt=instant()
-  let written=Promise.resolve()
-  async function worker() {
-    while(pending.length) {
-      const candidate=pending.shift()
-      const result=await scoutSite(candidate).catch(error=>({status:'inconclusive',reason:error.message.split('\n')[0]}))
-      const row={...candidate,...result,implementation,checkedAt:instant()}
-      recorded.set(candidate.site,row)
-      written=written.then(()=>appendFile(journal,JSON.stringify(row)+'\n'))
-      await written
-      if(recorded.size%25===0 || result.status==='confirmed') {
-        console.log(recorded.size+'/'+requestedSites,candidate.site,result.status,result.checks?.find(row=>row.result.status==='confirmed')?.task.barrierClass??'')
-      }
-      await delay(900)
-    }
-  }
-  await Promise.all(Array.from({length:concurrency},worker))
-  const rows=prereg.sites.map(candidate=>recorded.get(candidate.site))
-  const groups=Object.groupBy(rows,row=>row.status)
-  const confirmed=rows.flatMap(row=>row.checks?.filter(check=>check.result.status==='confirmed')??[])
-  const hard=confirmed.filter(row=>row.task.barrierClass)
-  const summary={sites:rows.length,confirmed:confirmed.length,hard:hard.length,
-    confirmedSites:groups.confirmed?.length??0,counts:Object.fromEntries(Object.entries(groups).map(([name,items])=>[name,items.length])),
-    byClass:Object.fromEntries(Object.entries(Object.groupBy(hard,entry=>entry.task.barrierClass)).map(([name,items])=>[name,items.length]))}
-  await saveJSON(path.join(ROOT,scoutPath),{runner:'playwright',registration,safety,implementation,startedAt,finishedAt:instant(),summary,rows})
-  console.log(JSON.stringify(summary,null,2))
-}
-
-if(process.argv[1] && path.resolve(process.argv[1])===path.join(ROOT,'scripts/scout-v4.mjs')) {
-  const [mode,csv,listId]=process.argv.slice(2)
-  if(mode==='sample' && csv && listId) await sample(csv,listId)
-  else if(mode==='scout') await scout()
-  else throw new Error('Usage: node scripts/scout-v4.mjs sample <tranco.csv> <list-id> | scout')
 }

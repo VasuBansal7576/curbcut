@@ -114,7 +114,7 @@ node launch/scripts/render.mjs
 node launch/scripts/render.mjs verify
 ```
 
-The [footage manifest](launch/footage-manifest.json) indexes the source recordings, Kane sessions, durations and live server transcript. The existing film uses HTML motion typography, local Chromium, Kane’s recorded task footage, the verified dashboard counts, and ffmpeg. It creates the original synthesized underscore locally, burns captions into the film, and writes [curbcut-launch.mp4](launch/curbcut-launch.mp4). The installed-extension toggle is a separately labeled local Chrome replay. [WebVTT captions](launch/captions/launch.vtt) · [Draft HN, X and LinkedIn posts](launch/posts.md). Opening figures come from the [WebAIM Million 2026](https://webaim.org/projects/million/).
+The [launch guide](launch/README.md) documents the source footage, Kane sessions, offline render, and delivery checks. The film combines Chromium captures with Kane’s recorded task footage and uses an original synthesized score. [Launch film](launch/curbcut-launch.mp4) · [WebVTT captions](launch/captions/launch.vtt) · [Draft HN, X and LinkedIn posts](launch/posts.md). Opening figures come from the [WebAIM Million 2026](https://webaim.org/projects/million/).
 
 ## Scope and ethics
 

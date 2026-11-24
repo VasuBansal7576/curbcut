@@ -12,7 +12,7 @@ const personas=new Set(['keyboard-only','low-vision','screen-reader-view','color
 const restricted=/(?:^|[/?&=_-])(?:log[-_]?in|sign[-_]?(?:up|in)|checkout|payment|register|oauth|password|account)(?:[/?&=_.-]|$)/i
 const restrictedHost=/^(?:accounts?|auth|checkout|login|oauth|payments?|signin|sso)$/i
 export function fixtureURL(url) {return url.origin==='http://127.0.0.1:4317' && url.pathname.startsWith('/fixtures/shop/')}
-export function publicAddress(value) {
+function publicAddress(value) {
   try {return ipaddr.process(value).range()==='unicast'} catch {return false}
 }
 export async function allowedHost(hostname) {

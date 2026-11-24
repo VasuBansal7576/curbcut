@@ -103,7 +103,7 @@ export function widthEvidence(element,{text=false}={}) {
   }
 }
 
-export function exactPassage(selector,quote) {
+function exactPassage(selector,quote) {
   const matches=[...document.querySelectorAll(selector)].filter(node=>
     node.getClientRects().length && node.textContent.replace(/\s+/g,' ').trim().includes(quote))
   return matches.length===1?matches[0]:null

@@ -3,13 +3,13 @@ import {mkdir,readFile} from 'node:fs/promises'
 import {ROOT,instant,readJSON,saveJSON} from '../core/io.mjs'
 import {git,sha256} from './scout-v4.mjs'
 
-export const folder='proof/heldout-v5'
-export const tag='curbcut-freeze-v5'
+const folder='proof/heldout-v5'
+const tag='curbcut-freeze-v5'
 export const sampleSeed='curbcut-v5-visible-keyboard-tranco-2026-11-23-restart'
 export const kaneSeed='curbcut-v5-verified-subset-2026-11-23'
 export const count=2050,concurrency=3,minimumRank=1000,maximumRank=50000
 export const attempts=5,model='gpt-6.2-sol'
-export const frozenPaths=['core','extension','schemas','schemas/patch.json','scripts','fixtures','tests','curbcut.mjs','package.json','package-lock.json','site/style.css']
+const frozenPaths=['core','extension','schemas','schemas/patch.json','scripts','fixtures','tests','curbcut.mjs','package.json','package-lock.json','site/style.css']
 export const relative=name=>folder+'/'+name
 export const given=name=>path.join(ROOT,relative(name))
 export const read=name=>readJSON(given(name))
