@@ -1,0 +1,37 @@
+{
+  "id": "v6-6f841d9581c8944de0aa",
+  "url": "https://fosdem.org/2027/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "ul.news-list > li:nth-of-type(1) > a:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "FOSDEM 2027 Accepted Stands: complete list"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "fosdem.org",
+  "match": "https://fosdem.org/2027/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "ul.news-list > li:nth-of-type(1) > a:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#3478c2"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:51.422Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-6f841d9581c8944de0aa.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:51.422Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "6aa7c794ffad4eb3775b284a05a65ec547e3606ad7b98b5b38409260ce8c56ef"
+    }
+  ]
+}

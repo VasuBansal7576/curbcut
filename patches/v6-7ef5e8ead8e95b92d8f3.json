@@ -1,0 +1,37 @@
+{
+  "id": "v6-7ef5e8ead8e95b92d8f3",
+  "url": "https://1gt.ru/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "#acceptCookie",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "ПРИНЯТЬ"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "1gt.ru",
+  "match": "https://1gt.ru/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "#acceptCookie",
+      "action": "setContrast",
+      "value": {
+        "color": "#414141"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:37.447Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-7ef5e8ead8e95b92d8f3.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:37.447Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "faafdf57a855c2c0545fd3af2f11344c1760cf6256d363ece55751a7f831f940"
+    }
+  ]
+}

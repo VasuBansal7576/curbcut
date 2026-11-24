@@ -1,0 +1,37 @@
+{
+  "id": "v6-0509ee40ba8a472daa86",
+  "url": "https://developpez.net/forums/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "#gabarit_menu > li:nth-of-type(2) > a:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "DI/DSI Solutions d'entreprise"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "developpez.net",
+  "match": "https://developpez.net/forums/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "#gabarit_menu > li:nth-of-type(2) > a:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#1d1d1d"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:11.689Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-0509ee40ba8a472daa86.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:11.689Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "c9a8cf952867d9c816086a7fded9c499427d2f8e4c4f952f7f74be794e33264b"
+    }
+  ]
+}

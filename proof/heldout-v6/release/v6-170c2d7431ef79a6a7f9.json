@@ -1,0 +1,49 @@
+{
+  "id": "v6-170c2d7431ef79a6a7f9",
+  "url": "https://mollygram.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the img identified by “MollyGram” and choose its row to report it. If no row conveys that name, report that the task failed.",
+  "observedSelector": "div.logo-image > img:nth-of-type(1)",
+  "evaluation": {
+    "category": "missing-alt",
+    "role": "img",
+    "name": "MollyGram"
+  },
+  "controlTask": "Use the normal visual page. Identify this img with a single pointer click: MollyGram. The harness records the click and suppresses activation.",
+  "site": "mollygram.com",
+  "match": "https://mollygram.com/",
+  "barrier": "The visible image has no text alternative.",
+  "rules": [
+    {
+      "selector": "div.logo-image > img:nth-of-type(1)",
+      "action": "setAltText",
+      "value": "MollyGram"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v6/kane/v6-170c2d7431ef79a6a7f9/before-1/recording.mp4",
+    "control": "proof/heldout-v6/kane/v6-170c2d7431ef79a6a7f9/control-1/recording.mp4",
+    "after": "proof/heldout-v6/kane/v6-170c2d7431ef79a6a7f9/after-1/recording.mp4",
+    "kaneRunIds": [
+      "66d6e2c7-7532-414e-abb9-1bb331b801d9",
+      "d6c34f9d-7b42-42a3-af75-41125ce502e1",
+      "55917917-125f-44e7-b16b-60c61540f910"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-24T13:30:54.964Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-170c2d7431ef79a6a7f9.json"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-24T13:30:54.964Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "c43032c1ac9d311fb5b0a9bf5a2878171113b9344a367c22b5a975946a4d005f"
+    }
+  ]
+}

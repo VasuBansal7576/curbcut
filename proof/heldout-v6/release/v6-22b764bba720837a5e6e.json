@@ -1,0 +1,37 @@
+{
+  "id": "v6-22b764bba720837a5e6e",
+  "url": "https://allstarlink.org/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "main.flex-shrink-0 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > p:nth-of-type(2) > a:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Installing on Debian (PC or VM)"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "allstarlink.org",
+  "match": "https://allstarlink.org/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "main.flex-shrink-0 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > p:nth-of-type(2) > a:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#538316"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:42.616Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-22b764bba720837a5e6e.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:42.616Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "5b925ce70990e8f8015a5a890abf34713c960402a65d415118543254a99b5049"
+    }
+  ]
+}

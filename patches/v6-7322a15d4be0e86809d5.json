@@ -1,0 +1,37 @@
+{
+  "id": "v6-7322a15d4be0e86809d5",
+  "url": "https://91app.com/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "header.elementor.elementor-10625 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > a:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "專人聯繫"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "91app.com",
+  "match": "https://91app.com/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "header.elementor.elementor-10625 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > a:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#1d1d1d"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:47.148Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-7322a15d4be0e86809d5.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:47.148Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "8f9e0a1a41aee4d5b705ed4e336b9d7b344085229b7be67dfa58e147f7607931"
+    }
+  ]
+}

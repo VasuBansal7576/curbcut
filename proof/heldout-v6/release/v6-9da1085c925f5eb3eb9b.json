@@ -1,0 +1,37 @@
+{
+  "id": "v6-9da1085c925f5eb3eb9b",
+  "url": "https://uad.ac.id/en/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "#menu-item-8495 > a:nth-of-type(1) > span:nth-of-type(2)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "ABOUT UAD"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "uad.ac.id",
+  "match": "https://uad.ac.id/en/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "#menu-item-8495 > a:nth-of-type(1) > span:nth-of-type(2)",
+      "action": "setContrast",
+      "value": {
+        "color": "#727272"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:02.432Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-9da1085c925f5eb3eb9b.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:02.432Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "0bf94f8ced19a7096cf17cf93bf27903499619d580b532f3cc40d34f6d4633d6"
+    }
+  ]
+}

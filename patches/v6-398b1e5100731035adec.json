@@ -1,0 +1,37 @@
+{
+  "id": "v6-398b1e5100731035adec",
+  "url": "https://www.cnrl.com/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "button.cky-btn.cky-btn-customize",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "More Information"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.cnrl.com",
+  "match": "https://www.cnrl.com/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "button.cky-btn.cky-btn-customize",
+      "action": "setContrast",
+      "value": {
+        "color": "#007cc2"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:15.361Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-398b1e5100731035adec.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:15.361Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "53a8c477fe48987e94d34ef03dbd66429c230a4e9737277823ba5dac70a916b3"
+    }
+  ]
+}

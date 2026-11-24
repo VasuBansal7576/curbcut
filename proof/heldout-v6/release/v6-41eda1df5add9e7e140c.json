@@ -1,0 +1,37 @@
+{
+  "id": "v6-41eda1df5add9e7e140c",
+  "url": "https://www.slashfilm.com/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "#social-nav-holder > ul:nth-of-type(1) > li:nth-of-type(8) > a:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Newsletter"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.slashfilm.com",
+  "match": "https://www.slashfilm.com/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "#social-nav-holder > ul:nth-of-type(1) > li:nth-of-type(8) > a:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#168197"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:49.766Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-41eda1df5add9e7e140c.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:49.766Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "30096b033695796a8d4b6522085ea7fa38e089b6c582d12ce5798d95b437aaa4"
+    }
+  ]
+}

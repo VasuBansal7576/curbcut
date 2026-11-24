@@ -1,0 +1,37 @@
+{
+  "id": "v6-a4ddc85e350589d755c9",
+  "url": "https://www.wpbeginner.com/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "div.wpb-top-orange-bar__text > div:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Trusted WordPress tutorials, when you need them most."
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.wpbeginner.com",
+  "match": "https://www.wpbeginner.com/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "div.wpb-top-orange-bar__text > div:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#2e2e2e"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:56.698Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-a4ddc85e350589d755c9.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:56.698Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "3efef4eb27a45939c5836087fc31a098ac6583a91e1cc8a51e7d04e16a39efcd"
+    }
+  ]
+}

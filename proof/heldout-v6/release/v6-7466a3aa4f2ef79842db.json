@@ -1,0 +1,37 @@
+{
+  "id": "v6-7466a3aa4f2ef79842db",
+  "url": "https://www.tvb.com/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "div.tvb-home-columns.l > section:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > a:nth-of-type(2) > div:nth-of-type(2) > p:nth-of-type(1) > span:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "藝人動態"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.tvb.com",
+  "match": "https://www.tvb.com/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "div.tvb-home-columns.l > section:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(2) > a:nth-of-type(2) > div:nth-of-type(2) > p:nth-of-type(1) > span:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#6c7880"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:07.519Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-7466a3aa4f2ef79842db.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:07.519Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "2d0849df055df65d58d4b374b4fccf287466e95fff54aa8f753f07696811823d"
+    }
+  ]
+}

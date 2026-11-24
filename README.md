@@ -37,6 +37,9 @@ Percentages are shares of home pages in the WebAIM study. [2026 error frequencie
 
 | Check | Result | Proof |
 | --- | --- | --- |
+| Held-out v6 | **76 of 118** registered tasks repaired locally after scouting 400 sites. | [Results by failure type](proof/heldout-v6/README.md#local-results) |
+| V6 Kane sample | **7 of 15** selected naming tasks verified. Contrast and language use local proof. | [Kane results and recordings](proof/heldout-v6/README.md#kane-results) |
+| Extension bundle | **105** active fixes, 61 Kane verified and 44 with local proof. The installed audit passed all 51 new packaged fixes. | [Extension audit](proof/heldout-v6/extension-e2e.json) · [Dashboard](site/index.html) |
 | Held-out v5 | With the code frozen, local Playwright scouted 2,050 preregistered sites and confirmed **99 of 142 repairs (69.7%)**, including **51 of 89 multi-step journeys (57.3%)**. | [Results by barrier class and persona](proof/heldout-v5/README.md#local-playwright-results) |
 | Kane sample | Kane verified **11 of 20** randomly selected, locally fixed held-out v5 cases: 6 screen reader labels, 4 zoom reflows and 1 of 5 keyboard journeys (Holafly tabs). Three failed the rule and six were inconclusive. | [Registration and per-case results](proof/heldout-v5/README.md#seeded-kane-sample) |
 | V5 extension audit | The v5 extension bundled **54** active Kane-verified fixes. All 11 new fixes failed off and passed on in the installed extension. The prior audit passed all 43 original fixes. San Antonio Public Library can be slow to load. | [New extension audit](proof/heldout-v5/kane-sample-20/extension-e2e.json) · [Prior extension audit](proof/reliability/extension-e2e.json) · [Kane sessions](proof/kane/README.md#verified-public-repairs) |
@@ -49,7 +52,7 @@ The original Kane sample verified **0 of 4**. WoRMS and TikFinity hit the step l
 - **csc.gov.in.** Open ABOUT with the keyboard and follow “About MeitY.” [Before](proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/before/recording.mp4) · [After](proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/attempt-1/after/recording.mp4)
 - **WoRMS.** Tab to Tools, open it and reach “Match taxa.” [Before](proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/before/recording.mp4) · [After](proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/after/recording.mp4)
 
-[Evidence dashboard](site/index.html) · [Recorded live report](proof/live/README.md)
+[Evidence dashboard](site/index.html) · [Draft v1.0 release notes](launch/release-v1.0.md) · [Recorded live report](proof/live/README.md)
 
 ## Try it
 

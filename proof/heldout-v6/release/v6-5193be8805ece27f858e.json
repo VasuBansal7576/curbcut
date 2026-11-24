@@ -1,0 +1,49 @@
+{
+  "id": "v6-5193be8805ece27f858e",
+  "url": "https://www.munich-airport.de/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the button identified by “Vorherige Folie” and choose its row to report it. If no row conveys that name, report that the task failed.",
+  "observedSelector": "ul.keyvisual-direction-nav > li:nth-of-type(1) > button:nth-of-type(1)",
+  "evaluation": {
+    "category": "empty-button",
+    "role": "button",
+    "name": "Vorherige Folie"
+  },
+  "controlTask": "Use the normal visual page. Identify this button with a single pointer click: Vorherige Folie. The harness records the click and suppresses activation.",
+  "site": "www.munich-airport.de",
+  "match": "https://www.munich-airport.de/",
+  "barrier": "The visible button has no accessible name.",
+  "rules": [
+    {
+      "selector": "ul.keyvisual-direction-nav > li:nth-of-type(1) > button:nth-of-type(1)",
+      "action": "addLabel",
+      "value": "Vorherige Folie"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v6/kane/v6-5193be8805ece27f858e/before-1/recording.mp4",
+    "control": "proof/heldout-v6/kane/v6-5193be8805ece27f858e/control-1/recording.mp4",
+    "after": "proof/heldout-v6/kane/v6-5193be8805ece27f858e/after-1/recording.mp4",
+    "kaneRunIds": [
+      "202ffe74-912a-4024-891b-bdc89843b09f",
+      "69a8e744-2326-4319-a7ff-4fe2c73a63a8",
+      "c07671ed-c4cc-4f38-8003-42d0b452c033"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-24T13:31:47.914Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-5193be8805ece27f858e.json"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-24T13:31:47.914Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "21d39d5247863f127aeba04e30deb3e3ad413d20e0f3d9f9e92b9bd003b3e8ed"
+    }
+  ]
+}

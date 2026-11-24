@@ -1,0 +1,37 @@
+{
+  "id": "v6-f71982b146d641303e52",
+  "url": "https://webguard.pro/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "section.blog-section > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "На серверах хостинга установлен ISPManager 5 Bussines с нашими модулями защиты от взлома и вирусов"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "webguard.pro",
+  "match": "https://webguard.pro/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "section.blog-section > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#6e777f"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:16.511Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-f71982b146d641303e52.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:16.511Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "3dee4084419dc284a419505c6c89f093dbe2301fe65a67b5fb76c4d1b982f261"
+    }
+  ]
+}

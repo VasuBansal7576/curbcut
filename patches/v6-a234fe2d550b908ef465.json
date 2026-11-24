@@ -1,0 +1,37 @@
+{
+  "id": "v6-a234fe2d550b908ef465",
+  "url": "https://www.infinitepay.io/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "div.rebrand-home_tag",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "A nova funcionária do seu negócio"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.infinitepay.io",
+  "match": "https://www.infinitepay.io/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "div.rebrand-home_tag",
+      "action": "setContrast",
+      "value": {
+        "color": "#6b6e8e"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:42.388Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-a234fe2d550b908ef465.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:42.388Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "0d683a85d36e8d9c7a53ce9df2c1be8724b99fe9adfcb560a85c03ccba7af266"
+    }
+  ]
+}

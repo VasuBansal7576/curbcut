@@ -1,0 +1,37 @@
+{
+  "id": "v6-035402528fb5fd67e4c6",
+  "url": "https://www.extremeterrain.com/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "div.pull_left.free_shipping > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1) > a:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Details"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.extremeterrain.com",
+  "match": "https://www.extremeterrain.com/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "div.pull_left.free_shipping > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1) > a:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#f3cb54"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:34.278Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-035402528fb5fd67e4c6.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:34.278Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "d1e15eb3cfc8830b6c7bf900fa1e739cc99e5255892f8f77be3442551338248e"
+    }
+  ]
+}

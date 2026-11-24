@@ -1,0 +1,37 @@
+{
+  "id": "v6-ca1af71af5543e3a0a13",
+  "url": "https://languagetool.org/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "a.nav__item.nav__item--register",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Sign up"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "languagetool.org",
+  "match": "https://languagetool.org/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "a.nav__item.nav__item--register",
+      "action": "setContrast",
+      "value": {
+        "color": "#0077db"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:39.231Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-ca1af71af5543e3a0a13.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:39.231Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "15f7850a38b7fbb25d73c4cfb7877a3637baacb79a7d8af32fa8c6eafe49dcba"
+    }
+  ]
+}

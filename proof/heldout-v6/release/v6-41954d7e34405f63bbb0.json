@@ -1,0 +1,49 @@
+{
+  "id": "v6-41954d7e34405f63bbb0",
+  "url": "https://meridiano.net/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the link identified by “Béisbol venezolano” and choose its row to report it. If no row conveys that name, report that the task failed.",
+  "observedSelector": "a.link.icono",
+  "evaluation": {
+    "category": "missing-alt",
+    "role": "link",
+    "name": "Béisbol venezolano"
+  },
+  "controlTask": "Use the normal visual page. Identify this link with a single pointer click: Béisbol venezolano. The harness records the click and suppresses activation.",
+  "site": "meridiano.net",
+  "match": "https://meridiano.net/",
+  "barrier": "The visible link has no accessible name.",
+  "rules": [
+    {
+      "selector": "a.link.icono > amp-img:nth-of-type(1) > img:nth-of-type(1)",
+      "action": "setAltText",
+      "value": "Béisbol venezolano"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v6/kane/v6-41954d7e34405f63bbb0/before-1/recording.mp4",
+    "control": "proof/heldout-v6/kane/v6-41954d7e34405f63bbb0/control-1/recording.mp4",
+    "after": "proof/heldout-v6/kane/v6-41954d7e34405f63bbb0/after-1/recording.mp4",
+    "kaneRunIds": [
+      "4f7b8d0e-9561-4c33-8f44-244408c851d4",
+      "9925c8d5-b487-4bf9-8b0e-27b26ecb95a9",
+      "ae52216d-a118-46a0-a544-3d94df74378f"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-24T13:31:24.593Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-41954d7e34405f63bbb0.json"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-24T13:31:24.593Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "f9594d54e3d1e443bc344e143e8bf6e13861627f0ca2ba3f00d84c752ab66229"
+    }
+  ]
+}

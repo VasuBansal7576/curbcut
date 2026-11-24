@@ -1,0 +1,37 @@
+{
+  "id": "v6-dbfd956203dc0e47304f",
+  "url": "https://www.argusmedia.com/en",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "#onetrust-pc-btn-handler",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Cookies settings"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.argusmedia.com",
+  "match": "https://www.argusmedia.com/en",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "#onetrust-pc-btn-handler",
+      "action": "setContrast",
+      "value": {
+        "color": "#0e80a7"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:31.196Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-dbfd956203dc0e47304f.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:31.196Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "c5386f96ce6de3fb581e779ac5df418b57c0f2a02332a55b015433f540e6d423"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "v6-6631495303224e7a36cd",
+  "url": "https://www.independent.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the button identified by “Toggle menu” and choose its row to report it. If no row conveys that name, report that the task failed.",
+  "observedSelector": "button.menu-toggle",
+  "evaluation": {
+    "category": "empty-button",
+    "role": "button",
+    "name": "Toggle menu"
+  },
+  "controlTask": "Use the normal visual page. Identify this button with a single pointer click: Toggle menu. The harness records the click and suppresses activation.",
+  "site": "www.independent.com",
+  "match": "https://www.independent.com/",
+  "barrier": "The visible button has no accessible name.",
+  "rules": [
+    {
+      "selector": "button.menu-toggle",
+      "action": "addLabel",
+      "value": "Toggle menu"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v6/kane/v6-6631495303224e7a36cd/before-1/recording.mp4",
+    "control": "proof/heldout-v6/kane/v6-6631495303224e7a36cd/control-1/recording.mp4",
+    "after": "proof/heldout-v6/kane/v6-6631495303224e7a36cd/after-1/recording.mp4",
+    "kaneRunIds": [
+      "c0685be1-5f69-474d-94d6-1a6236e544e5",
+      "64450ade-d225-46a7-aff9-0dcbd850931c",
+      "4341d5dd-5b75-462d-8dee-11c7515ce98b"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-24T13:31:28.355Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-6631495303224e7a36cd.json"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-24T13:31:28.355Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "d95f72be9b5b9d96c86e44881c350fb254699afa32b38fb14f199b0848e7b445"
+    }
+  ]
+}

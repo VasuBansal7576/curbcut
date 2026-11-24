@@ -1,0 +1,37 @@
+{
+  "id": "v6-d324b1de8940364d68f6",
+  "url": "https://www.twingate.com/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "div.framer-11s7c7i > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1) > div:nth-of-type(2) > p:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Try Twingate for Free"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.twingate.com",
+  "match": "https://www.twingate.com/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "div.framer-11s7c7i > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1) > div:nth-of-type(2) > p:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#7b7b7b"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:01.350Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-d324b1de8940364d68f6.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:01.350Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "dedefc8f439580b3d598d62dac2b388bc0a2e6ad7b3e909051800e9e362f6887"
+    }
+  ]
+}

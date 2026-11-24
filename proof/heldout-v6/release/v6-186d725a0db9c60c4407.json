@@ -1,0 +1,37 @@
+{
+  "id": "v6-186d725a0db9c60c4407",
+  "url": "https://www.gensler.com/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "div.hero-element-caption__content.loaded > div:nth-of-type(1) > strong:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Subaru Park"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.gensler.com",
+  "match": "https://www.gensler.com/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "div.hero-element-caption__content.loaded > div:nth-of-type(1) > strong:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#323232"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:39.510Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-186d725a0db9c60c4407.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:39.510Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "fd5bca1044d3fcf9f85fc32c7a6df2b00eedccc957bd60cd2e97527327bad164"
+    }
+  ]
+}

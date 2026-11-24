@@ -3470,6 +3470,349 @@
     ]
   },
   {
+    "id": "v6-170c2d7431ef79a6a7f9",
+    "url": "https://mollygram.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the img identified by “MollyGram” and choose its row to report it. If no row conveys that name, report that the task failed.",
+    "observedSelector": "div.logo-image > img:nth-of-type(1)",
+    "evaluation": {
+      "category": "missing-alt",
+      "role": "img",
+      "name": "MollyGram"
+    },
+    "controlTask": "Use the normal visual page. Identify this img with a single pointer click: MollyGram. The harness records the click and suppresses activation.",
+    "site": "mollygram.com",
+    "match": "https://mollygram.com/",
+    "barrier": "The visible image has no text alternative.",
+    "rules": [
+      {
+        "selector": "div.logo-image > img:nth-of-type(1)",
+        "action": "setAltText",
+        "value": "MollyGram"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v6/kane/v6-170c2d7431ef79a6a7f9/before-1/recording.mp4",
+      "control": "proof/heldout-v6/kane/v6-170c2d7431ef79a6a7f9/control-1/recording.mp4",
+      "after": "proof/heldout-v6/kane/v6-170c2d7431ef79a6a7f9/after-1/recording.mp4",
+      "kaneRunIds": [
+        "66d6e2c7-7532-414e-abb9-1bb331b801d9",
+        "d6c34f9d-7b42-42a3-af75-41125ce502e1",
+        "55917917-125f-44e7-b16b-60c61540f910"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-24T13:30:54.964Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-170c2d7431ef79a6a7f9.json"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-24T13:30:54.964Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "c43032c1ac9d311fb5b0a9bf5a2878171113b9344a367c22b5a975946a4d005f"
+      }
+    ]
+  },
+  {
+    "id": "v6-1c713d1e1e5115a94c06",
+    "url": "https://www.futbolfantasy.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the link identified by “Fantasy Analytics de LaLiga” and choose its row to report it. If no row conveys that name, report that the task failed.",
+    "observedSelector": "a.analytics.with-label",
+    "evaluation": {
+      "category": "empty-link",
+      "role": "link",
+      "name": "Fantasy Analytics de LaLiga"
+    },
+    "controlTask": "Use the normal visual page. Identify this link with a single pointer click: Fantasy Analytics de LaLiga. The harness records the click and suppresses activation.",
+    "site": "www.futbolfantasy.com",
+    "match": "https://www.futbolfantasy.com/",
+    "barrier": "The visible link has no accessible name.",
+    "rules": [
+      {
+        "selector": "a.analytics.with-label",
+        "action": "addLabel",
+        "value": "Fantasy Analytics de LaLiga"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v6/kane/v6-1c713d1e1e5115a94c06/before-1/recording.mp4",
+      "control": "proof/heldout-v6/kane/v6-1c713d1e1e5115a94c06/control-1/recording.mp4",
+      "after": "proof/heldout-v6/kane/v6-1c713d1e1e5115a94c06/after-1/recording.mp4",
+      "kaneRunIds": [
+        "0987c1c9-cbb5-4da2-bdfe-4162ea464cc2",
+        "c515cbbf-17f3-4fdb-8696-cdc123900412",
+        "f37baf6e-4ba0-4dba-b622-990c3bb02e67"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-24T13:31:32.500Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-1c713d1e1e5115a94c06.json"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-24T13:31:32.500Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "c78f474f815dce606efb90d3b6800d805d9d8bd0874c89ca305f9a0668e7d2b6"
+      }
+    ]
+  },
+  {
+    "id": "v6-41954d7e34405f63bbb0",
+    "url": "https://meridiano.net/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the link identified by “Béisbol venezolano” and choose its row to report it. If no row conveys that name, report that the task failed.",
+    "observedSelector": "a.link.icono",
+    "evaluation": {
+      "category": "missing-alt",
+      "role": "link",
+      "name": "Béisbol venezolano"
+    },
+    "controlTask": "Use the normal visual page. Identify this link with a single pointer click: Béisbol venezolano. The harness records the click and suppresses activation.",
+    "site": "meridiano.net",
+    "match": "https://meridiano.net/",
+    "barrier": "The visible link has no accessible name.",
+    "rules": [
+      {
+        "selector": "a.link.icono > amp-img:nth-of-type(1) > img:nth-of-type(1)",
+        "action": "setAltText",
+        "value": "Béisbol venezolano"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v6/kane/v6-41954d7e34405f63bbb0/before-1/recording.mp4",
+      "control": "proof/heldout-v6/kane/v6-41954d7e34405f63bbb0/control-1/recording.mp4",
+      "after": "proof/heldout-v6/kane/v6-41954d7e34405f63bbb0/after-1/recording.mp4",
+      "kaneRunIds": [
+        "4f7b8d0e-9561-4c33-8f44-244408c851d4",
+        "9925c8d5-b487-4bf9-8b0e-27b26ecb95a9",
+        "ae52216d-a118-46a0-a544-3d94df74378f"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-24T13:31:24.593Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-41954d7e34405f63bbb0.json"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-24T13:31:24.593Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "f9594d54e3d1e443bc344e143e8bf6e13861627f0ca2ba3f00d84c752ab66229"
+      }
+    ]
+  },
+  {
+    "id": "v6-5193be8805ece27f858e",
+    "url": "https://www.munich-airport.de/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the button identified by “Vorherige Folie” and choose its row to report it. If no row conveys that name, report that the task failed.",
+    "observedSelector": "ul.keyvisual-direction-nav > li:nth-of-type(1) > button:nth-of-type(1)",
+    "evaluation": {
+      "category": "empty-button",
+      "role": "button",
+      "name": "Vorherige Folie"
+    },
+    "controlTask": "Use the normal visual page. Identify this button with a single pointer click: Vorherige Folie. The harness records the click and suppresses activation.",
+    "site": "www.munich-airport.de",
+    "match": "https://www.munich-airport.de/",
+    "barrier": "The visible button has no accessible name.",
+    "rules": [
+      {
+        "selector": "ul.keyvisual-direction-nav > li:nth-of-type(1) > button:nth-of-type(1)",
+        "action": "addLabel",
+        "value": "Vorherige Folie"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v6/kane/v6-5193be8805ece27f858e/before-1/recording.mp4",
+      "control": "proof/heldout-v6/kane/v6-5193be8805ece27f858e/control-1/recording.mp4",
+      "after": "proof/heldout-v6/kane/v6-5193be8805ece27f858e/after-1/recording.mp4",
+      "kaneRunIds": [
+        "202ffe74-912a-4024-891b-bdc89843b09f",
+        "69a8e744-2326-4319-a7ff-4fe2c73a63a8",
+        "c07671ed-c4cc-4f38-8003-42d0b452c033"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-24T13:31:47.914Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-5193be8805ece27f858e.json"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-24T13:31:47.914Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "21d39d5247863f127aeba04e30deb3e3ad413d20e0f3d9f9e92b9bd003b3e8ed"
+      }
+    ]
+  },
+  {
+    "id": "v6-5d6a06db450ef73285c8",
+    "url": "https://inappstory.ru/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the button identified by “Закрыть баннер” and choose its row to report it. If no row conveys that name, report that the task failed.",
+    "observedSelector": "header.fixed.top-0 > div:nth-of-type(1) > button:nth-of-type(1)",
+    "evaluation": {
+      "category": "empty-button",
+      "role": "button",
+      "name": "Закрыть баннер"
+    },
+    "controlTask": "Use the normal visual page. Identify this button with a single pointer click: Закрыть баннер. The harness records the click and suppresses activation.",
+    "site": "inappstory.ru",
+    "match": "https://inappstory.ru/",
+    "barrier": "The visible button has no accessible name.",
+    "rules": [
+      {
+        "selector": "header.fixed.top-0 > div:nth-of-type(1) > button:nth-of-type(1)",
+        "action": "addLabel",
+        "value": "Закрыть баннер"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v6/kane/v6-5d6a06db450ef73285c8/before-1/recording.mp4",
+      "control": "proof/heldout-v6/kane/v6-5d6a06db450ef73285c8/control-2/recording.mp4",
+      "after": "proof/heldout-v6/kane/v6-5d6a06db450ef73285c8/after-1/recording.mp4",
+      "kaneRunIds": [
+        "3095c8be-8f96-4a5a-9111-c51893f2a558",
+        "4e162886-61e0-4690-a77c-b8bbfeeea93f",
+        "3ec46e90-791c-4174-9fc2-19994a7c5b01"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-24T13:31:17.897Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-5d6a06db450ef73285c8.json"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-24T13:31:17.897Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "332cb9aeae948e9acb8ac722a1a79d48db33e906a886c93376ab0e8831c53dbf"
+      }
+    ]
+  },
+  {
+    "id": "v6-6631495303224e7a36cd",
+    "url": "https://www.independent.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the button identified by “Toggle menu” and choose its row to report it. If no row conveys that name, report that the task failed.",
+    "observedSelector": "button.menu-toggle",
+    "evaluation": {
+      "category": "empty-button",
+      "role": "button",
+      "name": "Toggle menu"
+    },
+    "controlTask": "Use the normal visual page. Identify this button with a single pointer click: Toggle menu. The harness records the click and suppresses activation.",
+    "site": "www.independent.com",
+    "match": "https://www.independent.com/",
+    "barrier": "The visible button has no accessible name.",
+    "rules": [
+      {
+        "selector": "button.menu-toggle",
+        "action": "addLabel",
+        "value": "Toggle menu"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v6/kane/v6-6631495303224e7a36cd/before-1/recording.mp4",
+      "control": "proof/heldout-v6/kane/v6-6631495303224e7a36cd/control-1/recording.mp4",
+      "after": "proof/heldout-v6/kane/v6-6631495303224e7a36cd/after-1/recording.mp4",
+      "kaneRunIds": [
+        "c0685be1-5f69-474d-94d6-1a6236e544e5",
+        "64450ade-d225-46a7-aff9-0dcbd850931c",
+        "4341d5dd-5b75-462d-8dee-11c7515ce98b"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-24T13:31:28.355Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-6631495303224e7a36cd.json"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-24T13:31:28.355Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "d95f72be9b5b9d96c86e44881c350fb254699afa32b38fb14f199b0848e7b445"
+      }
+    ]
+  },
+  {
+    "id": "v6-79a3b611312d99c4a01e",
+    "url": "https://abc7ny.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the img identified by “ABC7 Eyewitness News” and choose its row to report it. If no row conveys that name, report that the task failed.",
+    "observedSelector": "img.Hxa-d.QNwmF",
+    "evaluation": {
+      "category": "missing-alt",
+      "role": "img",
+      "name": "ABC7 Eyewitness News"
+    },
+    "controlTask": "Use the normal visual page. Identify this img with a single pointer click: ABC7 Eyewitness News. The harness records the click and suppresses activation.",
+    "site": "abc7ny.com",
+    "match": "https://abc7ny.com/",
+    "barrier": "The visible image has no text alternative.",
+    "rules": [
+      {
+        "selector": "img.Hxa-d.QNwmF",
+        "action": "setAltText",
+        "value": "ABC7 Eyewitness News"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v6/kane/v6-79a3b611312d99c4a01e/before-1/recording.mp4",
+      "control": "proof/heldout-v6/kane/v6-79a3b611312d99c4a01e/control-1/recording.mp4",
+      "after": "proof/heldout-v6/kane/v6-79a3b611312d99c4a01e/after-1/recording.mp4",
+      "kaneRunIds": [
+        "9d820fb9-854d-4405-8f75-87eeebf03307",
+        "b4ce8258-e9c8-4968-a056-5cd298f32059",
+        "25c1b77a-39f4-4d17-98d0-7d501299d514"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-24T13:31:00.536Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-79a3b611312d99c4a01e.json"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-24T13:31:00.536Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "96e3eace83bf25d0875303155ec279cad832ff94308055c0142da49113f709da"
+      }
+    ]
+  },
+  {
     "id": "ventusky-precipitation",
     "url": "https://www.ventusky.com/",
     "persona": "keyboard-only",
@@ -3596,6 +3939,1623 @@
         "with": "inconclusive",
         "after": "2484ecef-7287-44df-b3bc-abb8b396e170",
         "afterVideo": "proof/kane/w3schools-select-swatch/2026-11-22T10-55-38.882Z/recheck-with/recording.mp4"
+      }
+    ]
+  },
+  {
+    "id": "v6-02908098a5e1c23c7852",
+    "url": "https://mku.ac.ke/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "div.navbar-right.callout-text > p:nth-of-type(1) > strong:nth-of-type(1) > span:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Call Us:"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "mku.ac.ke",
+    "match": "https://mku.ac.ke/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "div.navbar-right.callout-text > p:nth-of-type(1) > strong:nth-of-type(1) > span:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#ca8722"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:18.725Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-02908098a5e1c23c7852.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:18.725Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "c02c4f4c18e5f83a6e19228ed896286d6e771e60f738fbf7c1226d04d8f8d12b"
+      }
+    ]
+  },
+  {
+    "id": "v6-035402528fb5fd67e4c6",
+    "url": "https://www.extremeterrain.com/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "div.pull_left.free_shipping > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1) > a:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Details"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.extremeterrain.com",
+    "match": "https://www.extremeterrain.com/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "div.pull_left.free_shipping > div:nth-of-type(1) > p:nth-of-type(1) > span:nth-of-type(1) > a:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#f3cb54"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:34.278Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-035402528fb5fd67e4c6.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:34.278Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "d1e15eb3cfc8830b6c7bf900fa1e739cc99e5255892f8f77be3442551338248e"
+      }
+    ]
+  },
+  {
+    "id": "v6-0509ee40ba8a472daa86",
+    "url": "https://developpez.net/forums/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "#gabarit_menu > li:nth-of-type(2) > a:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "DI/DSI Solutions d'entreprise"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "developpez.net",
+    "match": "https://developpez.net/forums/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "#gabarit_menu > li:nth-of-type(2) > a:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#1d1d1d"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:11.689Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-0509ee40ba8a472daa86.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:11.689Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "c9a8cf952867d9c816086a7fded9c499427d2f8e4c4f952f7f74be794e33264b"
+      }
+    ]
+  },
+  {
+    "id": "v6-21ca92ec4c7518b0f27f",
+    "url": "https://www.lezhin.com/ko",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "body > div:nth-of-type(2) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1) > span:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "오리지널"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.lezhin.com",
+    "match": "https://www.lezhin.com/ko",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "body > div:nth-of-type(2) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1) > span:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#767676"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:27.308Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-21ca92ec4c7518b0f27f.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:27.308Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "8f956c0cc436bdc6179cbea6e39d66dd8930943c4ceeb2d3712efd27eaf63f44"
+      }
+    ]
+  },
+  {
+    "id": "v6-22b764bba720837a5e6e",
+    "url": "https://allstarlink.org/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "main.flex-shrink-0 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > p:nth-of-type(2) > a:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Installing on Debian (PC or VM)"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "allstarlink.org",
+    "match": "https://allstarlink.org/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "main.flex-shrink-0 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > p:nth-of-type(2) > a:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#538316"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:42.616Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-22b764bba720837a5e6e.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:42.616Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "5b925ce70990e8f8015a5a890abf34713c960402a65d415118543254a99b5049"
+      }
+    ]
+  },
+  {
+    "id": "v6-2ccebc8fe929693a2367",
+    "url": "https://ventoy.net/en/index.html",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "#nav_buttons > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Main page"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "ventoy.net",
+    "match": "https://ventoy.net/en/index.html",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "#nav_buttons > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#1e1e1e"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:20.013Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-2ccebc8fe929693a2367.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:20.013Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "3db57b8c9ab2ec1dc8ba49703df96b42935b056da31f8cac7ecaac3d36577770"
+      }
+    ]
+  },
+  {
+    "id": "v6-2e82b6fc9311b58541c4",
+    "url": "https://dikidi.net/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "div.cookie-confirm > div:nth-of-type(2)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Cookies are essential for the website to function and help us improve your experience when visiting our website."
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "dikidi.net",
+    "match": "https://dikidi.net/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "div.cookie-confirm > div:nth-of-type(2)",
+        "action": "setContrast",
+        "value": {
+          "color": "#707781"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:13.014Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-2e82b6fc9311b58541c4.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:13.014Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "8aea65965f2d617425ec006b1a524a77d63a83f28812d8f0c6d86410e8d895fa"
+      }
+    ]
+  },
+  {
+    "id": "v6-3953b516c6edcac631bc",
+    "url": "https://www.dash0.com/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "p.text-white.font-medium",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "AutoMerge is generally available"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.dash0.com",
+    "match": "https://www.dash0.com/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "p.text-white.font-medium",
+        "action": "setContrast",
+        "value": {
+          "color": "#404040"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:09.369Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-3953b516c6edcac631bc.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:09.369Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "e4a24eca332146f1fe42ccfe803e23167124705a74b784fa1559b2b4a8485504"
+      }
+    ]
+  },
+  {
+    "id": "v6-398b1e5100731035adec",
+    "url": "https://www.cnrl.com/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "button.cky-btn.cky-btn-customize",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "More Information"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.cnrl.com",
+    "match": "https://www.cnrl.com/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "button.cky-btn.cky-btn-customize",
+        "action": "setContrast",
+        "value": {
+          "color": "#007cc2"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:15.361Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-398b1e5100731035adec.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:15.361Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "53a8c477fe48987e94d34ef03dbd66429c230a4e9737277823ba5dac70a916b3"
+      }
+    ]
+  },
+  {
+    "id": "v6-41eda1df5add9e7e140c",
+    "url": "https://www.slashfilm.com/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "#social-nav-holder > ul:nth-of-type(1) > li:nth-of-type(8) > a:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Newsletter"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.slashfilm.com",
+    "match": "https://www.slashfilm.com/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "#social-nav-holder > ul:nth-of-type(1) > li:nth-of-type(8) > a:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#168197"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:49.766Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-41eda1df5add9e7e140c.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:49.766Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "30096b033695796a8d4b6522085ea7fa38e089b6c582d12ce5798d95b437aaa4"
+      }
+    ]
+  },
+  {
+    "id": "v6-4990d783b2f27c5e55da",
+    "url": "https://www.independent.com/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "#post-781206 > header:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(2)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Meaghan Clark Tiernan"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.independent.com",
+    "match": "https://www.independent.com/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "#post-781206 > header:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(2)",
+        "action": "setContrast",
+        "value": {
+          "color": "#767676"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:20.138Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-4990d783b2f27c5e55da.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:20.138Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "ef13fecab8991d7fbdc72965d5e671e0e8c9bc2132d90dbac6c67713a212a4d7"
+      }
+    ]
+  },
+  {
+    "id": "v6-53f7e35f28c1258adc57",
+    "url": "https://www.holidify.com/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "a.nav-link.nav-login",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Log in/Sign up"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.holidify.com",
+    "match": "https://www.holidify.com/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "a.nav-link.nav-login",
+        "action": "setContrast",
+        "value": {
+          "color": "#ea180a"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:31.783Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-53f7e35f28c1258adc57.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:31.783Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "043ed0fc790820b955d5289525698c6b4e5e347eb1466c591f0b215c2d830400"
+      }
+    ]
+  },
+  {
+    "id": "v6-567e702229f56f18fc93",
+    "url": "https://www.sanook.com/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "ul.jsx-4210383423.jsx-3115074935 > li:nth-of-type(1) > a:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "หน้าแรก"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.sanook.com",
+    "match": "https://www.sanook.com/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "ul.jsx-4210383423.jsx-3115074935 > li:nth-of-type(1) > a:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#0f0f0f"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:43.383Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-567e702229f56f18fc93.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:43.383Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "183b4c47628c80b4d930bba526ba14f8e771bc0a8f409e095763a0f57cbfb84b"
+      }
+    ]
+  },
+  {
+    "id": "v6-5b1eda5a9b3bbecf5373",
+    "url": "https://fotop.com.br/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "div.container-menu-home > div:nth-of-type(1) > button:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "My Orders"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "fotop.com.br",
+    "match": "https://fotop.com.br/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "div.container-menu-home > div:nth-of-type(1) > button:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#2b2b2b"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:35.719Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-5b1eda5a9b3bbecf5373.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:35.719Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "1da272264984e942aacb2904917f0a90cea6d120d600252ea2f9d4378401e1c6"
+      }
+    ]
+  },
+  {
+    "id": "v6-6279b0ab1db893e43f87",
+    "url": "https://ipdata.co/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "div.eyebrow-bordered.hero-eyebrow",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "[ IP INTELLIGENCE API ]"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "ipdata.co",
+    "match": "https://ipdata.co/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "div.eyebrow-bordered.hero-eyebrow",
+        "action": "setContrast",
+        "value": {
+          "color": "#2d61ff"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:25.612Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-6279b0ab1db893e43f87.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:25.612Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "75dd7dc646fccb73c9f71bceb085b9c2327d6bfd6a476dc3d1a7af6a156ffbd0"
+      }
+    ]
+  },
+  {
+    "id": "v6-693296c192bbe84e659a",
+    "url": "https://gasazip.com/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "#ol_password_lost",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "정보찾기"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "gasazip.com",
+    "match": "https://gasazip.com/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "#ol_password_lost",
+        "action": "setContrast",
+        "value": {
+          "color": "#0b6efd"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:45.938Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-693296c192bbe84e659a.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:45.938Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "e92cfa05b83b7f681005abece58c4e43023902f5acf3e729fac50f5f4bf6b6fb"
+      }
+    ]
+  },
+  {
+    "id": "v6-6f841d9581c8944de0aa",
+    "url": "https://fosdem.org/2027/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "ul.news-list > li:nth-of-type(1) > a:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "FOSDEM 2027 Accepted Stands: complete list"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "fosdem.org",
+    "match": "https://fosdem.org/2027/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "ul.news-list > li:nth-of-type(1) > a:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#3478c2"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:51.422Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-6f841d9581c8944de0aa.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:51.422Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "6aa7c794ffad4eb3775b284a05a65ec547e3606ad7b98b5b38409260ce8c56ef"
+      }
+    ]
+  },
+  {
+    "id": "v6-6fcdd224891489f502a8",
+    "url": "https://www.loopwork.co/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "h2.text-block-1032.white",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Trusted by 2400+ Shopify subscription brands"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.loopwork.co",
+    "match": "https://www.loopwork.co/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "h2.text-block-1032.white",
+        "action": "setContrast",
+        "value": {
+          "color": "#ffffff",
+          "background-color": "#4805b5"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:06.913Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-6fcdd224891489f502a8.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:06.913Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "b9174f8baf3f72c4e2371e6040fc6afd059794010fbc1106cdcff2db9188854b"
+      }
+    ]
+  },
+  {
+    "id": "v6-718805b93b6af5d46253",
+    "url": "https://icanbuy.com/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "p",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "empty"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "icanbuy.com",
+    "match": "https://icanbuy.com/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "p",
+        "action": "setContrast",
+        "value": {
+          "color": "#767676"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:04.854Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-718805b93b6af5d46253.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:04.854Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "4bad94522415c9663e394d062f2e4df5ec1127c67dc7dd7fe96c841723ad814a"
+      }
+    ]
+  },
+  {
+    "id": "v6-7322a15d4be0e86809d5",
+    "url": "https://91app.com/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "header.elementor.elementor-10625 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > a:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "專人聯繫"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "91app.com",
+    "match": "https://91app.com/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "header.elementor.elementor-10625 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > a:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#1d1d1d"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:47.148Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-7322a15d4be0e86809d5.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:47.148Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "8f9e0a1a41aee4d5b705ed4e336b9d7b344085229b7be67dfa58e147f7607931"
+      }
+    ]
+  },
+  {
+    "id": "v6-759577513283dbd13c38",
+    "url": "https://rptu.de/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "#stage-134 > div:nth-of-type(2) > div:nth-of-type(1) > h4:nth-of-type(1) > button:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Studium"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "rptu.de",
+    "match": "https://rptu.de/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "#stage-134 > div:nth-of-type(2) > div:nth-of-type(1) > h4:nth-of-type(1) > button:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#8e8e8e"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:16.572Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-759577513283dbd13c38.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:16.572Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "401a52a6060b1b3f0ac9771f55037cf8ea40a33158939d5be34ab6f8736341ff"
+      }
+    ]
+  },
+  {
+    "id": "v6-75a32f86bb27e3a8ae0f",
+    "url": "https://www.trueanthem.com/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "header.elementor.elementor-2820 > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Login"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.trueanthem.com",
+    "match": "https://www.trueanthem.com/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "header.elementor.elementor-2820 > section:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1) > span:nth-of-type(1) > span:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#787578"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:45.059Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-75a32f86bb27e3a8ae0f.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:45.059Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "b77e1b872b5d4bb594de158e49b123520ba4038549634b2294ffe97327d20c70"
+      }
+    ]
+  },
+  {
+    "id": "v6-76809a37bd286a28c112",
+    "url": "https://www.lenteradana.co.id/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "label.wny_7G_cta",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Unduh SPinjam"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.lenteradana.co.id",
+    "match": "https://www.lenteradana.co.id/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "label.wny_7G_cta",
+        "action": "setContrast",
+        "value": {
+          "color": "#3c3c3c"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:23.441Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-76809a37bd286a28c112.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:23.441Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "304037831b250cd43eed583d6ec1da81e0068516e9253a96eafcb0a7a4504522"
+      }
+    ]
+  },
+  {
+    "id": "v6-76e103ca84b2ae09fee4",
+    "url": "https://www.maam.ru/archive/rdr",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "#main_menu > div:nth-of-type(1) > ul:nth-of-type(12) > li:nth-of-type(1) > b:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Детский сад"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.maam.ru",
+    "match": "https://www.maam.ru/archive/rdr",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "#main_menu > div:nth-of-type(1) > ul:nth-of-type(12) > li:nth-of-type(1) > b:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#a16c00"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:51.057Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-76e103ca84b2ae09fee4.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:51.057Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "c0cc036d76dc79ceeefdb840dca97d736d5d458bf0b8dc21d13e187213ca6111"
+      }
+    ]
+  },
+  {
+    "id": "v6-7ef5e8ead8e95b92d8f3",
+    "url": "https://1gt.ru/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "#acceptCookie",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "ПРИНЯТЬ"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "1gt.ru",
+    "match": "https://1gt.ru/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "#acceptCookie",
+        "action": "setContrast",
+        "value": {
+          "color": "#414141"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:37.447Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-7ef5e8ead8e95b92d8f3.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:37.447Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "faafdf57a855c2c0545fd3af2f11344c1760cf6256d363ece55751a7f831f940"
+      }
+    ]
+  },
+  {
+    "id": "v6-8ae4acf5a63ba91c4296",
+    "url": "https://upneet.gov.in/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "#cookieTitle",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "We value your privacy"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "upneet.gov.in",
+    "match": "https://upneet.gov.in/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "#cookieTitle",
+        "action": "setContrast",
+        "value": {
+          "color": "#767676"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:22.950Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-8ae4acf5a63ba91c4296.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:22.950Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "95712e9dfe26aad87e2bdb41d60c71efffb3584fdd208db24812e85fe69cef3e"
+      }
+    ]
+  },
+  {
+    "id": "v6-95a17cb2528c5e53dc05",
+    "url": "https://bitcointalk.org/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "#bodyarea > div:nth-of-type(1) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(2) > td:nth-of-type(1) > span:nth-of-type(1) > a:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Legal"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "bitcointalk.org",
+    "match": "https://bitcointalk.org/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "#bodyarea > div:nth-of-type(1) > table:nth-of-type(1) > tbody:nth-of-type(1) > tr:nth-of-type(2) > td:nth-of-type(1) > span:nth-of-type(1) > a:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#446787"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:01.480Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-95a17cb2528c5e53dc05.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:01.480Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "ef7498d92ec3c2ed6be88e10f9be544964ff42dac3fb71672d1a0e80738f0471"
+      }
+    ]
+  },
+  {
+    "id": "v6-95e189b878396ea3fa54",
+    "url": "https://www.seroundtable.com/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "section.featured.flex-col > div:nth-of-type(1) > a:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Google Updates"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.seroundtable.com",
+    "match": "https://www.seroundtable.com/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "section.featured.flex-col > div:nth-of-type(1) > a:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#5a8204"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:10.631Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-95e189b878396ea3fa54.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:10.631Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "20a969c5283ac6c8622e581f34b51b1c6c3b3d1947020e5018c0b65f88ddc6a0"
+      }
+    ]
+  },
+  {
+    "id": "v6-9da1085c925f5eb3eb9b",
+    "url": "https://uad.ac.id/en/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "#menu-item-8495 > a:nth-of-type(1) > span:nth-of-type(2)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "ABOUT UAD"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "uad.ac.id",
+    "match": "https://uad.ac.id/en/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "#menu-item-8495 > a:nth-of-type(1) > span:nth-of-type(2)",
+        "action": "setContrast",
+        "value": {
+          "color": "#727272"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:02.432Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-9da1085c925f5eb3eb9b.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:02.432Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "0bf94f8ced19a7096cf17cf93bf27903499619d580b532f3cc40d34f6d4633d6"
+      }
+    ]
+  },
+  {
+    "id": "v6-a234fe2d550b908ef465",
+    "url": "https://www.infinitepay.io/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "div.rebrand-home_tag",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "A nova funcionária do seu negócio"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.infinitepay.io",
+    "match": "https://www.infinitepay.io/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "div.rebrand-home_tag",
+        "action": "setContrast",
+        "value": {
+          "color": "#6b6e8e"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:42.388Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-a234fe2d550b908ef465.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:42.388Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "0d683a85d36e8d9c7a53ce9df2c1be8724b99fe9adfcb560a85c03ccba7af266"
+      }
+    ]
+  },
+  {
+    "id": "v6-a4ddc85e350589d755c9",
+    "url": "https://www.wpbeginner.com/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "div.wpb-top-orange-bar__text > div:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Trusted WordPress tutorials, when you need them most."
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.wpbeginner.com",
+    "match": "https://www.wpbeginner.com/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "div.wpb-top-orange-bar__text > div:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#2e2e2e"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:56.698Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-a4ddc85e350589d755c9.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:56.698Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "3efef4eb27a45939c5836087fc31a098ac6583a91e1cc8a51e7d04e16a39efcd"
+      }
+    ]
+  },
+  {
+    "id": "v6-a504797ef870836a1f09",
+    "url": "https://www.bcc.kz/kz/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "div.md\\:relative.inline-block > a:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Кіру"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.bcc.kz",
+    "match": "https://www.bcc.kz/kz/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "div.md\\:relative.inline-block > a:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#1e874b"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:35.892Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-a504797ef870836a1f09.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:35.892Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "47e4230667e73f8b7fc96621ffeb83c50cc1a1fb123bb1e76ee35facef71469f"
+      }
+    ]
+  },
+  {
+    "id": "v6-a825c7f76a795943769b",
+    "url": "https://shi998.com/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "li.vC2icSzvouSfxfbU3KhNZ3ni3G.Ra3o1 > a:nth-of-type(1) > span:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "全部影片"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "shi998.com",
+    "match": "https://shi998.com/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "li.vC2icSzvouSfxfbU3KhNZ3ni3G.Ra3o1 > a:nth-of-type(1) > span:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#b1b1b1"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:44.946Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-a825c7f76a795943769b.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:44.946Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "2f64ac69de1a62d9cb50291713940bbbfa59e533de6dd62936640bcfc8a1503b"
+      }
+    ]
+  },
+  {
+    "id": "v6-bd3dd07140cae4897b13",
+    "url": "https://www.klsescreener.com/v2/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "p.text-muted.mb-0",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Find the best stocks with advanced criteria."
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.klsescreener.com",
+    "match": "https://www.klsescreener.com/v2/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "p.text-muted.mb-0",
+        "action": "setContrast",
+        "value": {
+          "color": "#131a22"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:28.137Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-bd3dd07140cae4897b13.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:28.137Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "f527f0e0df2e7227e89da4657d8eb8658d1087b12e83d613a8b216315f8e612d"
+      }
+    ]
+  },
+  {
+    "id": "v6-c97d773758c2c320e6dc",
+    "url": "https://e2n.de/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "label.checkbox--wrapper.first > p:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Notwendig"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "e2n.de",
+    "match": "https://e2n.de/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "label.checkbox--wrapper.first > p:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#767676"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:51.469Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-c97d773758c2c320e6dc.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:51.469Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "2b2b143813a134d67a6fa604917b6323108408eeaa2ecd6af73560fcac3f1ea9"
+      }
+    ]
+  },
+  {
+    "id": "v6-c9b284335d2525d4d36c",
+    "url": "https://tver.jp/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "h2.Navigation_categoryTitle__rGYxL.Navigation_visible___m22W",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "カテゴリ"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "tver.jp",
+    "match": "https://tver.jp/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "h2.Navigation_categoryTitle__rGYxL.Navigation_visible___m22W",
+        "action": "setContrast",
+        "value": {
+          "color": "#000000"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:18.364Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-c9b284335d2525d4d36c.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:18.364Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "f508479cc0d5f706978ab3202ea81769f01d1ece4c7aef3fcd88c418c2a09c9b"
+      }
+    ]
+  },
+  {
+    "id": "v6-ca1af71af5543e3a0a13",
+    "url": "https://languagetool.org/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "a.nav__item.nav__item--register",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Sign up"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "languagetool.org",
+    "match": "https://languagetool.org/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "a.nav__item.nav__item--register",
+        "action": "setContrast",
+        "value": {
+          "color": "#0077db"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:39.231Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-ca1af71af5543e3a0a13.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:39.231Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "15f7850a38b7fbb25d73c4cfb7877a3637baacb79a7d8af32fa8c6eafe49dcba"
+      }
+    ]
+  },
+  {
+    "id": "v6-cef23e0626968ef0b8ab",
+    "url": "https://www.teamup.com/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "#top-menu > li:nth-of-type(6) > a:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Get Started"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.teamup.com",
+    "match": "https://www.teamup.com/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "#top-menu > li:nth-of-type(6) > a:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#454545"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:27.835Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-cef23e0626968ef0b8ab.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:27.835Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "1e235c586efa06a68e0760357a72b64a09d32520ed1387cf84de2b36f993366e"
+      }
+    ]
+  },
+  {
+    "id": "v6-d324b1de8940364d68f6",
+    "url": "https://www.twingate.com/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "div.framer-11s7c7i > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1) > div:nth-of-type(2) > p:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "Try Twingate for Free"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.twingate.com",
+    "match": "https://www.twingate.com/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "div.framer-11s7c7i > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1) > div:nth-of-type(2) > p:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#7b7b7b"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:01.350Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-d324b1de8940364d68f6.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:01.350Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "dedefc8f439580b3d598d62dac2b388bc0a2e6ad7b3e909051800e9e362f6887"
+      }
+    ]
+  },
+  {
+    "id": "v6-d742e2046808fe8f397e",
+    "url": "https://www.wajibati.net/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "div.social-wrapper > span:nth-of-type(2) > a:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "تويتر"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "www.wajibati.net",
+    "match": "https://www.wajibati.net/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "div.social-wrapper > span:nth-of-type(2) > a:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#2d2d2d"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:28:29.816Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-d742e2046808fe8f397e.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:28:29.816Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "b7be811ad175f3c0f0a326eb7a9ff9c248f15e6be20f3a3af16caac87d2d8eb1"
+      }
+    ]
+  },
+  {
+    "id": "v6-dev-lang-284c7c99ab280efb2a3e",
+    "url": "https://www.berkshirehathaway.com/letters/1999htm.html",
+    "site": "www.berkshirehathaway.com",
+    "match": "https://www.berkshirehathaway.com/letters/1999htm.html",
+    "persona": "document-language",
+    "task": "Declare the language of the primary visible text.",
+    "barrier": "The document element omits the primary language.",
+    "observedSelector": "html",
+    "rules": [
+      {
+        "selector": "html",
+        "action": "setLang",
+        "value": "en"
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "localMeasurement": "proof/heldout-v6/development-language/v6-dev-lang-284c7c99ab280efb2a3e.json",
+      "verifiedAt": "2026-11-24T13:29:41.008Z"
+    },
+    "evaluation": {
+      "category": "missing-language",
+      "name": "en"
+    },
+    "history": [
+      {
+        "at": "2026-11-24T13:29:41.008Z",
+        "event": "locally-verified",
+        "study": "Known development page, outside the held-out sample"
+      }
+    ]
+  },
+  {
+    "id": "v6-dev-lang-4b1499ed6395c7f5bd4c",
+    "url": "https://www.norvig.com/sudoku.html",
+    "site": "www.norvig.com",
+    "match": "https://www.norvig.com/sudoku.html",
+    "persona": "document-language",
+    "task": "Declare the language of the primary visible text.",
+    "barrier": "The document element omits the primary language.",
+    "observedSelector": "html",
+    "rules": [
+      {
+        "selector": "html",
+        "action": "setLang",
+        "value": "en"
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "localMeasurement": "proof/heldout-v6/development-language/v6-dev-lang-4b1499ed6395c7f5bd4c.json",
+      "verifiedAt": "2026-11-24T13:29:44.938Z"
+    },
+    "evaluation": {
+      "category": "missing-language",
+      "name": "en"
+    },
+    "history": [
+      {
+        "at": "2026-11-24T13:29:44.938Z",
+        "event": "locally-verified",
+        "study": "Known development page, outside the held-out sample"
+      }
+    ]
+  },
+  {
+    "id": "v6-dev-lang-59f85e6c21e2c13dfe5f",
+    "url": "https://www.paulgraham.com/avg.html",
+    "site": "www.paulgraham.com",
+    "match": "https://www.paulgraham.com/avg.html",
+    "persona": "document-language",
+    "task": "Declare the language of the primary visible text.",
+    "barrier": "The document element omits the primary language.",
+    "observedSelector": "html",
+    "rules": [
+      {
+        "selector": "html",
+        "action": "setLang",
+        "value": "en"
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "localMeasurement": "proof/heldout-v6/development-language/v6-dev-lang-59f85e6c21e2c13dfe5f.json",
+      "verifiedAt": "2026-11-24T13:29:39.964Z"
+    },
+    "evaluation": {
+      "category": "missing-language",
+      "name": "en"
+    },
+    "history": [
+      {
+        "at": "2026-11-24T13:29:39.964Z",
+        "event": "locally-verified",
+        "study": "Known development page, outside the held-out sample"
+      }
+    ]
+  },
+  {
+    "id": "v6-f71982b146d641303e52",
+    "url": "https://webguard.pro/",
+    "persona": "low-contrast-simulation",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "observedSelector": "section.blog-section > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1)",
+    "evaluation": {
+      "category": "low-contrast",
+      "text": "На серверах хостинга установлен ISPManager 5 Bussines с нашими модулями защиты от взлома и вирусов"
+    },
+    "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+    "site": "webguard.pro",
+    "match": "https://webguard.pro/",
+    "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+    "rules": [
+      {
+        "selector": "section.blog-section > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1)",
+        "action": "setContrast",
+        "value": {
+          "color": "#6e777f"
+        }
+      }
+    ],
+    "status": "locally-verified",
+    "evidence": {
+      "verifiedAt": "2026-11-24T13:29:16.511Z",
+      "localMeasurement": "proof/heldout-v6/measurements/v6-f71982b146d641303e52.json"
+    },
+    "history": [
+      {
+        "event": "locally-verified",
+        "at": "2026-11-24T13:29:16.511Z",
+        "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+        "candidateSha256": "3dee4084419dc284a419505c6c89f093dbe2301fe65a67b5fb76c4d1b982f261"
       }
     ]
   }

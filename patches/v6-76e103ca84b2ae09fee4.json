@@ -1,0 +1,37 @@
+{
+  "id": "v6-76e103ca84b2ae09fee4",
+  "url": "https://www.maam.ru/archive/rdr",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "#main_menu > div:nth-of-type(1) > ul:nth-of-type(12) > li:nth-of-type(1) > b:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Детский сад"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.maam.ru",
+  "match": "https://www.maam.ru/archive/rdr",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "#main_menu > div:nth-of-type(1) > ul:nth-of-type(12) > li:nth-of-type(1) > b:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#a16c00"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:51.057Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-76e103ca84b2ae09fee4.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:51.057Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "c0cc036d76dc79ceeefdb840dca97d736d5d458bf0b8dc21d13e187213ca6111"
+    }
+  ]
+}

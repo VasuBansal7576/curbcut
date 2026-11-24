@@ -1,0 +1,49 @@
+{
+  "id": "v6-5d6a06db450ef73285c8",
+  "url": "https://inappstory.ru/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the button identified by “Закрыть баннер” and choose its row to report it. If no row conveys that name, report that the task failed.",
+  "observedSelector": "header.fixed.top-0 > div:nth-of-type(1) > button:nth-of-type(1)",
+  "evaluation": {
+    "category": "empty-button",
+    "role": "button",
+    "name": "Закрыть баннер"
+  },
+  "controlTask": "Use the normal visual page. Identify this button with a single pointer click: Закрыть баннер. The harness records the click and suppresses activation.",
+  "site": "inappstory.ru",
+  "match": "https://inappstory.ru/",
+  "barrier": "The visible button has no accessible name.",
+  "rules": [
+    {
+      "selector": "header.fixed.top-0 > div:nth-of-type(1) > button:nth-of-type(1)",
+      "action": "addLabel",
+      "value": "Закрыть баннер"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v6/kane/v6-5d6a06db450ef73285c8/before-1/recording.mp4",
+    "control": "proof/heldout-v6/kane/v6-5d6a06db450ef73285c8/control-2/recording.mp4",
+    "after": "proof/heldout-v6/kane/v6-5d6a06db450ef73285c8/after-1/recording.mp4",
+    "kaneRunIds": [
+      "3095c8be-8f96-4a5a-9111-c51893f2a558",
+      "4e162886-61e0-4690-a77c-b8bbfeeea93f",
+      "3ec46e90-791c-4174-9fc2-19994a7c5b01"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-24T13:31:17.897Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-5d6a06db450ef73285c8.json"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-24T13:31:17.897Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "332cb9aeae948e9acb8ac722a1a79d48db33e906a886c93376ab0e8831c53dbf"
+    }
+  ]
+}

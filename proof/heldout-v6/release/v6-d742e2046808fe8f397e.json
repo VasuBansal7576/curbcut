@@ -1,0 +1,37 @@
+{
+  "id": "v6-d742e2046808fe8f397e",
+  "url": "https://www.wajibati.net/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "div.social-wrapper > span:nth-of-type(2) > a:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "تويتر"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.wajibati.net",
+  "match": "https://www.wajibati.net/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "div.social-wrapper > span:nth-of-type(2) > a:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#2d2d2d"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:29.816Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-d742e2046808fe8f397e.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:29.816Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "b7be811ad175f3c0f0a326eb7a9ff9c248f15e6be20f3a3af16caac87d2d8eb1"
+    }
+  ]
+}

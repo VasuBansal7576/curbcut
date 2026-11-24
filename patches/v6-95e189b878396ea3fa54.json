@@ -1,0 +1,37 @@
+{
+  "id": "v6-95e189b878396ea3fa54",
+  "url": "https://www.seroundtable.com/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "section.featured.flex-col > div:nth-of-type(1) > a:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Google Updates"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.seroundtable.com",
+  "match": "https://www.seroundtable.com/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "section.featured.flex-col > div:nth-of-type(1) > a:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#5a8204"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:10.631Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-95e189b878396ea3fa54.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:10.631Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "20a969c5283ac6c8622e581f34b51b1c6c3b3d1947020e5018c0b65f88ddc6a0"
+    }
+  ]
+}

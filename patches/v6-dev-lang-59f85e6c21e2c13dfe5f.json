@@ -1,0 +1,33 @@
+{
+  "id": "v6-dev-lang-59f85e6c21e2c13dfe5f",
+  "url": "https://www.paulgraham.com/avg.html",
+  "site": "www.paulgraham.com",
+  "match": "https://www.paulgraham.com/avg.html",
+  "persona": "document-language",
+  "task": "Declare the language of the primary visible text.",
+  "barrier": "The document element omits the primary language.",
+  "observedSelector": "html",
+  "rules": [
+    {
+      "selector": "html",
+      "action": "setLang",
+      "value": "en"
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "localMeasurement": "proof/heldout-v6/development-language/v6-dev-lang-59f85e6c21e2c13dfe5f.json",
+    "verifiedAt": "2026-11-24T13:29:39.964Z"
+  },
+  "evaluation": {
+    "category": "missing-language",
+    "name": "en"
+  },
+  "history": [
+    {
+      "at": "2026-11-24T13:29:39.964Z",
+      "event": "locally-verified",
+      "study": "Known development page, outside the held-out sample"
+    }
+  ]
+}

@@ -36,3 +36,19 @@ The scout attempted all 400 sites. It inspected 197 pages, recorded 62 blocked a
 A local fix needed an unpatched failure, a patched pass, and a failure after removing the rule. The frozen language threshold abstained on all 20 tasks. The five v6 categories are new to this cohort. The earlier v5 form-label study fixed 19 of 20 tasks locally and Kane verified all six form-label tasks in its later random sample. [Local v6 outcomes](local-summary.json) · [V5 results](../heldout-v5/README.md)
 
 The language follow-up checked three known pages used in earlier development. It used the full sample and both halves as separate inputs to the offline detector and required all three to agree. It measured fail, pass, fail on all three pages. These are development results outside the 400-site cohort. [Local language checks](development-language/summary.json)
+
+
+## Kane results
+
+The seeded selection included 15 locally fixed tasks, five per naming category. Kane started 15. Each verified task had a failing baseline, passing sighted pointer control and passing repaired replay. Inconclusive phases had one retry.
+| Category | Kane verified / selected | Started |
+| --- | ---: | ---: |
+| Missing alternative text | 3 / 5 | 5 |
+| Empty links | 1 / 5 | 5 |
+| Empty buttons | 3 / 5 | 5 |
+
+The study used 1051.8158 Kane credits including the pilots. The final balance was 2340.3270. The TVB baseline retry and both patched Laura Geller attempts hit CLI deadlines. Their stalled isolated browsers were closed and the attempts remained inconclusive. [Selection with runner hashes](kane-selection.json) · [Outcomes, recording paths and session IDs](kane-summary.json)
+
+## Installed extension
+
+The local release bundle contains 51 new fixes. 7 have Kane evidence, 41 have local contrast proof from the held-out cohort and 3 have local language proof from the development pages. These 51 fixes failed with the installed extension off and passed with it on. The audit excluded six contrast candidates from the bundle, with two failed patched measurements and four inconclusive replays. The bundle contains 105 active public fixes in total. [Installed audit](extension-e2e.json) · [Held-out release bytes](release.json) · [Development language release](development-language/summary.json)

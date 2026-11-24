@@ -1,0 +1,37 @@
+{
+  "id": "v6-76809a37bd286a28c112",
+  "url": "https://www.lenteradana.co.id/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "label.wny_7G_cta",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Unduh SPinjam"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.lenteradana.co.id",
+  "match": "https://www.lenteradana.co.id/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "label.wny_7G_cta",
+      "action": "setContrast",
+      "value": {
+        "color": "#3c3c3c"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:23.441Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-76809a37bd286a28c112.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:23.441Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "304037831b250cd43eed583d6ec1da81e0068516e9253a96eafcb0a7a4504522"
+    }
+  ]
+}

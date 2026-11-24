@@ -1,0 +1,37 @@
+{
+  "id": "v6-718805b93b6af5d46253",
+  "url": "https://icanbuy.com/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "p",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "empty"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "icanbuy.com",
+  "match": "https://icanbuy.com/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "p",
+      "action": "setContrast",
+      "value": {
+        "color": "#767676"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:04.854Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-718805b93b6af5d46253.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:04.854Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "4bad94522415c9663e394d062f2e4df5ec1127c67dc7dd7fe96c841723ad814a"
+    }
+  ]
+}

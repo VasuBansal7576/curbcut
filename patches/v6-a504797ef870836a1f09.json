@@ -1,0 +1,37 @@
+{
+  "id": "v6-a504797ef870836a1f09",
+  "url": "https://www.bcc.kz/kz/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "div.md\\:relative.inline-block > a:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Кіру"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.bcc.kz",
+  "match": "https://www.bcc.kz/kz/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "div.md\\:relative.inline-block > a:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#1e874b"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:35.892Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-a504797ef870836a1f09.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:35.892Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "47e4230667e73f8b7fc96621ffeb83c50cc1a1fb123bb1e76ee35facef71469f"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "v6-ad6ffbc5fe285c26804e",
+  "url": "https://www.dexcom.com/en-GB?ipc=IN",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "a.ot-cookie-policy-link",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Click here for Cookie Policy."
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.dexcom.com",
+  "match": "https://www.dexcom.com/en-GB",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "a.ot-cookie-policy-link",
+      "action": "setContrast",
+      "value": {
+        "color": "#3575d4"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:42.484Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-ad6ffbc5fe285c26804e.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:42.484Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "5bc28f5d925f4f1ed61f8d0a6c69ae1c5dd7cbf43428bd1b1a84027684c60f14"
+    }
+  ]
+}

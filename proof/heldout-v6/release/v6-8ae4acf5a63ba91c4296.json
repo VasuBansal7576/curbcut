@@ -1,0 +1,37 @@
+{
+  "id": "v6-8ae4acf5a63ba91c4296",
+  "url": "https://upneet.gov.in/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "#cookieTitle",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "We value your privacy"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "upneet.gov.in",
+  "match": "https://upneet.gov.in/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "#cookieTitle",
+      "action": "setContrast",
+      "value": {
+        "color": "#767676"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:22.950Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-8ae4acf5a63ba91c4296.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:22.950Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "95712e9dfe26aad87e2bdb41d60c71efffb3584fdd208db24812e85fe69cef3e"
+    }
+  ]
+}

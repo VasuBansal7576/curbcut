@@ -1,0 +1,37 @@
+{
+  "id": "v6-693296c192bbe84e659a",
+  "url": "https://gasazip.com/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "#ol_password_lost",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "정보찾기"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "gasazip.com",
+  "match": "https://gasazip.com/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "#ol_password_lost",
+      "action": "setContrast",
+      "value": {
+        "color": "#0b6efd"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:45.938Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-693296c192bbe84e659a.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:45.938Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "e92cfa05b83b7f681005abece58c4e43023902f5acf3e729fac50f5f4bf6b6fb"
+    }
+  ]
+}

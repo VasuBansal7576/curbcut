@@ -1,0 +1,37 @@
+{
+  "id": "v6-6279b0ab1db893e43f87",
+  "url": "https://ipdata.co/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "div.eyebrow-bordered.hero-eyebrow",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "[ IP INTELLIGENCE API ]"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "ipdata.co",
+  "match": "https://ipdata.co/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "div.eyebrow-bordered.hero-eyebrow",
+      "action": "setContrast",
+      "value": {
+        "color": "#2d61ff"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:25.612Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-6279b0ab1db893e43f87.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:25.612Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "75dd7dc646fccb73c9f71bceb085b9c2327d6bfd6a476dc3d1a7af6a156ffbd0"
+    }
+  ]
+}

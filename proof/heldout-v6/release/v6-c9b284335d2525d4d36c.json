@@ -1,0 +1,37 @@
+{
+  "id": "v6-c9b284335d2525d4d36c",
+  "url": "https://tver.jp/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "h2.Navigation_categoryTitle__rGYxL.Navigation_visible___m22W",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "カテゴリ"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "tver.jp",
+  "match": "https://tver.jp/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "h2.Navigation_categoryTitle__rGYxL.Navigation_visible___m22W",
+      "action": "setContrast",
+      "value": {
+        "color": "#000000"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:18.364Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-c9b284335d2525d4d36c.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:18.364Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "f508479cc0d5f706978ab3202ea81769f01d1ece4c7aef3fcd88c418c2a09c9b"
+    }
+  ]
+}

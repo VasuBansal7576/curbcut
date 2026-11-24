@@ -1,0 +1,37 @@
+{
+  "id": "v6-2ccebc8fe929693a2367",
+  "url": "https://ventoy.net/en/index.html",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "#nav_buttons > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Main page"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "ventoy.net",
+  "match": "https://ventoy.net/en/index.html",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "#nav_buttons > ul:nth-of-type(1) > li:nth-of-type(1) > a:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#1e1e1e"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:20.013Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-2ccebc8fe929693a2367.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:20.013Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "3db57b8c9ab2ec1dc8ba49703df96b42935b056da31f8cac7ecaac3d36577770"
+    }
+  ]
+}

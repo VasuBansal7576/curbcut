@@ -1,0 +1,38 @@
+{
+  "id": "v6-6fcdd224891489f502a8",
+  "url": "https://www.loopwork.co/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "h2.text-block-1032.white",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Trusted by 2400+ Shopify subscription brands"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.loopwork.co",
+  "match": "https://www.loopwork.co/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "h2.text-block-1032.white",
+      "action": "setContrast",
+      "value": {
+        "color": "#ffffff",
+        "background-color": "#4805b5"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:06.913Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-6fcdd224891489f502a8.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:06.913Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "b9174f8baf3f72c4e2371e6040fc6afd059794010fbc1106cdcff2db9188854b"
+    }
+  ]
+}

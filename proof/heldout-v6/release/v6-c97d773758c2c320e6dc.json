@@ -1,0 +1,37 @@
+{
+  "id": "v6-c97d773758c2c320e6dc",
+  "url": "https://e2n.de/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "label.checkbox--wrapper.first > p:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Notwendig"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "e2n.de",
+  "match": "https://e2n.de/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "label.checkbox--wrapper.first > p:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#767676"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:51.469Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-c97d773758c2c320e6dc.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:51.469Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "2b2b143813a134d67a6fa604917b6323108408eeaa2ecd6af73560fcac3f1ea9"
+    }
+  ]
+}

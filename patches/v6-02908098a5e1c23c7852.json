@@ -1,0 +1,37 @@
+{
+  "id": "v6-02908098a5e1c23c7852",
+  "url": "https://mku.ac.ke/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "div.navbar-right.callout-text > p:nth-of-type(1) > strong:nth-of-type(1) > span:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Call Us:"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "mku.ac.ke",
+  "match": "https://mku.ac.ke/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "div.navbar-right.callout-text > p:nth-of-type(1) > strong:nth-of-type(1) > span:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#ca8722"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:18.725Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-02908098a5e1c23c7852.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:18.725Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "c02c4f4c18e5f83a6e19228ed896286d6e771e60f738fbf7c1226d04d8f8d12b"
+    }
+  ]
+}

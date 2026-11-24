@@ -1,0 +1,37 @@
+{
+  "id": "v6-53f7e35f28c1258adc57",
+  "url": "https://www.holidify.com/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "a.nav-link.nav-login",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Log in/Sign up"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.holidify.com",
+  "match": "https://www.holidify.com/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "a.nav-link.nav-login",
+      "action": "setContrast",
+      "value": {
+        "color": "#ea180a"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:31.783Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-53f7e35f28c1258adc57.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:31.783Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "043ed0fc790820b955d5289525698c6b4e5e347eb1466c591f0b215c2d830400"
+    }
+  ]
+}

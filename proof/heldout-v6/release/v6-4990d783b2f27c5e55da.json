@@ -1,0 +1,37 @@
+{
+  "id": "v6-4990d783b2f27c5e55da",
+  "url": "https://www.independent.com/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "#post-781206 > header:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(2)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Meaghan Clark Tiernan"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.independent.com",
+  "match": "https://www.independent.com/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "#post-781206 > header:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(2) > span:nth-of-type(2)",
+      "action": "setContrast",
+      "value": {
+        "color": "#767676"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:20.138Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-4990d783b2f27c5e55da.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:20.138Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "ef13fecab8991d7fbdc72965d5e671e0e8c9bc2132d90dbac6c67713a212a4d7"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "v6-15e921accadad6313fdf",
+  "url": "https://www.psypost.org/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "div.jeg_posts.jeg_load_more_flag > article:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) > a:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Developmental Psychology"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.psypost.org",
+  "match": "https://www.psypost.org/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "div.jeg_posts.jeg_load_more_flag > article:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1) > a:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#767676"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:07.031Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-15e921accadad6313fdf.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:07.031Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "b850aa5ea1f8fad71de86a2c396142cec91cbe16ff72aebc65d7ff1059c3b086"
+    }
+  ]
+}

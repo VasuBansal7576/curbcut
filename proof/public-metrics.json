@@ -1,12 +1,12 @@
 {
-  "tested": 245,
-  "blocked": 72,
+  "tested": 252,
+  "blocked": 79,
   "blockedByPersona": {
     "keyboard-only": 30,
     "low-vision": 28,
-    "screen-reader-view": 14
+    "screen-reader-view": 21
   },
-  "fixed": 55,
+  "fixed": 62,
   "open": 17,
   "publicTasks": [
     {
@@ -3257,6 +3257,118 @@
         },
         {
           "source": "patches/v5-fcff2ddd132fff0edeae.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v6-170c2d7431ef79a6a7f9",
+      "url": "https://mollygram.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the img identified by “MollyGram” and choose its row to report it. If no row conveys that name, report that the task failed.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v6-170c2d7431ef79a6a7f9.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v6-1c713d1e1e5115a94c06",
+      "url": "https://www.futbolfantasy.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the link identified by “Fantasy Analytics de LaLiga” and choose its row to report it. If no row conveys that name, report that the task failed.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v6-1c713d1e1e5115a94c06.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v6-41954d7e34405f63bbb0",
+      "url": "https://meridiano.net/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the link identified by “Béisbol venezolano” and choose its row to report it. If no row conveys that name, report that the task failed.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v6-41954d7e34405f63bbb0.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v6-5193be8805ece27f858e",
+      "url": "https://www.munich-airport.de/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the button identified by “Vorherige Folie” and choose its row to report it. If no row conveys that name, report that the task failed.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v6-5193be8805ece27f858e.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v6-5d6a06db450ef73285c8",
+      "url": "https://inappstory.ru/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the button identified by “Закрыть баннер” and choose its row to report it. If no row conveys that name, report that the task failed.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v6-5d6a06db450ef73285c8.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v6-6631495303224e7a36cd",
+      "url": "https://www.independent.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the button identified by “Toggle menu” and choose its row to report it. If no row conveys that name, report that the task failed.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v6-6631495303224e7a36cd.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v6-79a3b611312d99c4a01e",
+      "url": "https://abc7ny.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the img identified by “ABC7 Eyewitness News” and choose its row to report it. If no row conveys that name, report that the task failed.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v6-79a3b611312d99c4a01e.json",
           "status": "fixed"
         }
       ]

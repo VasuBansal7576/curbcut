@@ -1,0 +1,49 @@
+{
+  "id": "v6-79a3b611312d99c4a01e",
+  "url": "https://abc7ny.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the img identified by “ABC7 Eyewitness News” and choose its row to report it. If no row conveys that name, report that the task failed.",
+  "observedSelector": "img.Hxa-d.QNwmF",
+  "evaluation": {
+    "category": "missing-alt",
+    "role": "img",
+    "name": "ABC7 Eyewitness News"
+  },
+  "controlTask": "Use the normal visual page. Identify this img with a single pointer click: ABC7 Eyewitness News. The harness records the click and suppresses activation.",
+  "site": "abc7ny.com",
+  "match": "https://abc7ny.com/",
+  "barrier": "The visible image has no text alternative.",
+  "rules": [
+    {
+      "selector": "img.Hxa-d.QNwmF",
+      "action": "setAltText",
+      "value": "ABC7 Eyewitness News"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v6/kane/v6-79a3b611312d99c4a01e/before-1/recording.mp4",
+    "control": "proof/heldout-v6/kane/v6-79a3b611312d99c4a01e/control-1/recording.mp4",
+    "after": "proof/heldout-v6/kane/v6-79a3b611312d99c4a01e/after-1/recording.mp4",
+    "kaneRunIds": [
+      "9d820fb9-854d-4405-8f75-87eeebf03307",
+      "b4ce8258-e9c8-4968-a056-5cd298f32059",
+      "25c1b77a-39f4-4d17-98d0-7d501299d514"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-24T13:31:00.536Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-79a3b611312d99c4a01e.json"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-24T13:31:00.536Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "96e3eace83bf25d0875303155ec279cad832ff94308055c0142da49113f709da"
+    }
+  ]
+}

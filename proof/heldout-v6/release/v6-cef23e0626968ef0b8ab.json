@@ -1,0 +1,37 @@
+{
+  "id": "v6-cef23e0626968ef0b8ab",
+  "url": "https://www.teamup.com/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "#top-menu > li:nth-of-type(6) > a:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Get Started"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.teamup.com",
+  "match": "https://www.teamup.com/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "#top-menu > li:nth-of-type(6) > a:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#454545"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:27.835Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-cef23e0626968ef0b8ab.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:27.835Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "1e235c586efa06a68e0760357a72b64a09d32520ed1387cf84de2b36f993366e"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "v6-567e702229f56f18fc93",
+  "url": "https://www.sanook.com/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "ul.jsx-4210383423.jsx-3115074935 > li:nth-of-type(1) > a:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "หน้าแรก"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "www.sanook.com",
+  "match": "https://www.sanook.com/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "ul.jsx-4210383423.jsx-3115074935 > li:nth-of-type(1) > a:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#0f0f0f"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:43.383Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-567e702229f56f18fc93.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:43.383Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "183b4c47628c80b4d930bba526ba14f8e771bc0a8f409e095763a0f57cbfb84b"
+    }
+  ]
+}

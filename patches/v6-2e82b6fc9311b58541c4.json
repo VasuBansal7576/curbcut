@@ -1,0 +1,37 @@
+{
+  "id": "v6-2e82b6fc9311b58541c4",
+  "url": "https://dikidi.net/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "div.cookie-confirm > div:nth-of-type(2)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Cookies are essential for the website to function and help us improve your experience when visiting our website."
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "dikidi.net",
+  "match": "https://dikidi.net/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "div.cookie-confirm > div:nth-of-type(2)",
+      "action": "setContrast",
+      "value": {
+        "color": "#707781"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:28:13.014Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-2e82b6fc9311b58541c4.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:28:13.014Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "8aea65965f2d617425ec006b1a524a77d63a83f28812d8f0c6d86410e8d895fa"
+    }
+  ]
+}

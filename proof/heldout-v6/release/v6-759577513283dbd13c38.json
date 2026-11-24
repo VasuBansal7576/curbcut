@@ -1,0 +1,37 @@
+{
+  "id": "v6-759577513283dbd13c38",
+  "url": "https://rptu.de/",
+  "persona": "low-contrast-simulation",
+  "task": "Read the selected passage at WCAG AA contrast.",
+  "observedSelector": "#stage-134 > div:nth-of-type(2) > div:nth-of-type(1) > h4:nth-of-type(1) > button:nth-of-type(1)",
+  "evaluation": {
+    "category": "low-contrast",
+    "text": "Studium"
+  },
+  "controlTask": "Read the selected text in the normal visual page. Report it exactly.",
+  "site": "rptu.de",
+  "match": "https://rptu.de/",
+  "barrier": "Text contrast is below WCAG AA for the rendered size and weight.",
+  "rules": [
+    {
+      "selector": "#stage-134 > div:nth-of-type(2) > div:nth-of-type(1) > h4:nth-of-type(1) > button:nth-of-type(1)",
+      "action": "setContrast",
+      "value": {
+        "color": "#8e8e8e"
+      }
+    }
+  ],
+  "status": "locally-verified",
+  "evidence": {
+    "verifiedAt": "2026-11-24T13:29:16.572Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-759577513283dbd13c38.json"
+  },
+  "history": [
+    {
+      "event": "locally-verified",
+      "at": "2026-11-24T13:29:16.572Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "401a52a6060b1b3f0ac9771f55037cf8ea40a33158939d5be34ab6f8736341ff"
+    }
+  ]
+}

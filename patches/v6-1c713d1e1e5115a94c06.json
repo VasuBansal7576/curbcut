@@ -1,0 +1,49 @@
+{
+  "id": "v6-1c713d1e1e5115a94c06",
+  "url": "https://www.futbolfantasy.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the link identified by “Fantasy Analytics de LaLiga” and choose its row to report it. If no row conveys that name, report that the task failed.",
+  "observedSelector": "a.analytics.with-label",
+  "evaluation": {
+    "category": "empty-link",
+    "role": "link",
+    "name": "Fantasy Analytics de LaLiga"
+  },
+  "controlTask": "Use the normal visual page. Identify this link with a single pointer click: Fantasy Analytics de LaLiga. The harness records the click and suppresses activation.",
+  "site": "www.futbolfantasy.com",
+  "match": "https://www.futbolfantasy.com/",
+  "barrier": "The visible link has no accessible name.",
+  "rules": [
+    {
+      "selector": "a.analytics.with-label",
+      "action": "addLabel",
+      "value": "Fantasy Analytics de LaLiga"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v6/kane/v6-1c713d1e1e5115a94c06/before-1/recording.mp4",
+    "control": "proof/heldout-v6/kane/v6-1c713d1e1e5115a94c06/control-1/recording.mp4",
+    "after": "proof/heldout-v6/kane/v6-1c713d1e1e5115a94c06/after-1/recording.mp4",
+    "kaneRunIds": [
+      "0987c1c9-cbb5-4da2-bdfe-4162ea464cc2",
+      "c515cbbf-17f3-4fdb-8696-cdc123900412",
+      "f37baf6e-4ba0-4dba-b622-990c3bb02e67"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-24T13:31:32.500Z",
+    "localMeasurement": "proof/heldout-v6/measurements/v6-1c713d1e1e5115a94c06.json"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-24T13:31:32.500Z",
+      "frozenCommit": "8bdba502688a297f78ca75a19193cf0d55046ffd",
+      "candidateSha256": "c78f474f815dce606efb90d3b6800d805d9d8bd0874c89ca305f9a0668e7d2b6"
+    }
+  ]
+}
