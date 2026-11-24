@@ -12,10 +12,13 @@ const queue=path.join(ROOT,'.curbcut/instant-queue')
 const actions=new Set(['mirrorHoverToFocus','mirrorHoverEventToFocus','makeFocusable','setRole','bindEnterToClick','restoreFocusOutline',
   'addLabel','setAltText','injectCSS'])
 
+const domActions=new Set(['mirrorHoverToFocus','mirrorHoverEventToFocus','toggleOnActivate','arrowKeyNavigation'])
+
 export async function enqueueInstant({patch,confidence,model}) {
+  const dom=model==='dom-parity'
   if(!patch || !/^instant-[a-f0-9-]{36}$/.test(patch.id) || patch.status!=='candidate' ||
-    !Number.isFinite(confidence) || confidence<threshold || confidence>1 || typeof model!=='string' || !/^jev-[\w.-]{1,60}$/.test(model) ||
-    !match(patch,patch.url) || !patch.rules.every(rule=>actions.has(rule.action)) ||
+    !Number.isFinite(confidence) || confidence<threshold || confidence>1 || typeof model!=='string' || (!dom && !/^jev-[\w.-]{1,60}$/.test(model)) ||
+    !match(patch,patch.url) || !patch.rules.every(rule=>(dom?domActions:actions).has(rule.action) && (!dom || rule.action!=='arrowKeyNavigation' || rule.activate==='focus')) ||
     Object.keys(patch.evidence).length || patch.history.length) throw new Error('Invalid instant candidate.')
   const task=await normalizeTask(patch)
   const file=path.join(queue,patch.id+'.json')

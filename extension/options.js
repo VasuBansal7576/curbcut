@@ -72,3 +72,5 @@ evidenceForm.addEventListener("submit", async event => {
     evidenceStatus.textContent = "Could not save the evidence URL.";
   }
 });
+
+bindSwitch("match-mouse", "matchMouseEnabled", "Match mouse");

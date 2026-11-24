@@ -1,0 +1,44 @@
+{
+  "registrationCommit": "4977467",
+  "publicTrial": {
+    "status": "blocked",
+    "requested": 30,
+    "eligible": 0,
+    "run": 0,
+    "confirmedClass1ScoutingCases": {
+      "hard-v4": 39,
+      "heldout-v5": 44
+    },
+    "reason": "All confirmed class-1 cases in the registered sources were on bundled domains.",
+    "matchingRule": null,
+    "noMatch": null,
+    "wrongMatch": null,
+    "pointerRegressions": null,
+    "timeToFixMs": null,
+    "independentOracleRuns": 0,
+    "supplementalAbortedV5ConfirmedCases": 5,
+    "supplementalAbortedV5EligibleCases": 0
+  },
+  "installedExtensionSmoke": {
+    "syntheticCssHover": "matched",
+    "escapeUndo": "passed",
+    "bundledPatchChecks": {
+      "asme-org-tr2": "passed",
+      "cato-org-tr2": "passed",
+      "v4-86f207deeb57-7bc09a21": "passed"
+    }
+  },
+  "kane": {
+    "selected": 0,
+    "verified": 0,
+    "creditsSpent": 0
+  },
+  "checks": {
+    "build": "passed",
+    "npmTest": {
+      "passed": 38,
+      "failed": 8,
+      "reason": "A process in another worktree held 127.0.0.1:4317."
+    }
+  }
+}

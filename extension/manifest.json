@@ -10,7 +10,8 @@
     "downloads",
     "activeTab",
     "clipboardWrite",
-    "scripting"
+    "scripting",
+    "debugger"
   ],
   "host_permissions": [
     "<all_urls>"
@@ -49,6 +50,10 @@
         "mac": "MacCtrl+Shift+U"
       },
       "description": "Capture an accessibility barrier"
+    },
+    "match-mouse": {
+      "suggested_key": { "default": "Alt+Shift+M" },
+      "description": "Try matching a hover menu with the keyboard"
     }
   },
   "web_accessible_resources": [

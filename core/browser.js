@@ -349,4 +349,4 @@ function enforce(persona,report=()=>{}, {topLevel=true}={}) {
   }
   return state
 }
-globalThis.CurbCut=Object.freeze({collectNames:()=>collectNames(exactSelector),visibleLanguageSample,applyLiveName,apply,match,snapshot,reader,readerRow,enforce,exactSelector,discoverCoverage:()=>discoverCoverage(exactSelector),coverageObservation,keyboardVisibility,inspectRuleSelectors,observePassage,widthEvidence,instantPrivacy,collectInstantState:()=>collectInstantState(exactSelector)})
+globalThis.CurbCut=Object.freeze({observedHoverRules,collectNames:()=>collectNames(exactSelector),visibleLanguageSample,applyLiveName,apply,match,snapshot,reader,readerRow,enforce,exactSelector,discoverCoverage:()=>discoverCoverage(exactSelector),coverageObservation,keyboardVisibility,inspectRuleSelectors,observePassage,widthEvidence,instantPrivacy,collectInstantState:()=>collectInstantState(exactSelector)})
