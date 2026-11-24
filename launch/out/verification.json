@@ -1,91 +1,75 @@
 {
   "master": {
-    "duration": 133.733333,
-    "frames": 4012,
+    "duration": 145.133333,
+    "frames": 4354,
     "video": "H.264, 1920×1080, 30 fps",
     "audio": "AAC stereo, 48 kHz",
     "integrated_LUFS": -16.0,
     "true_peak_dBTP": -1.6,
-    "full_mean_dBFS": -19.1,
+    "full_mean_dBFS": -19.2,
     "highpass_300Hz_mean_dBFS": -21.2,
-    "difference_dB": -2.1,
-    "aac_packet_sha256": "70baf2c0f699f2e12fed46aa3ccafbcbd9f8d399ea9ce8c1173eadd633f6e1fb",
-    "sha256": "4c6464b39e5efdb3e08b9eb50ae6fe20fe9d90d985cf67820c512283a4f8bbbb",
+    "difference_dB": -2.0,
+    "aac_packet_sha256": "02bf7e848b5225711db5eb2db62a22e1982ef9d40512959b808c0b3b21b6da27",
+    "sha256": "23282101bf53c8b9f93f27b30e4d92e0b6300719705fc55784abc91385bef1df",
     "motion": {
       "comparison": "Frames n and n+15 at 30 fps, above the subtitle band. Motion requires a luma change of at least 5/255 in at least 0.1% of a 480×232 area-downsample.",
-      "pairs": 267,
+      "pairs": 290,
       "first_pair": [
         0,
         15
       ],
       "last_pair": [
-        3990,
-        4005
+        4335,
+        4350
       ],
-      "moving_pairs": 250,
+      "moving_pairs": 289,
       "quiet_start_frames": [
-        510,
-        1005,
-        1020,
-        1035,
-        1065,
-        1095,
-        1125,
-        3240,
-        3360,
-        3465,
-        3480,
-        3510,
-        3525,
-        3570,
-        3585,
-        3600,
-        3780
+        600
       ],
       "pixel_static_start_frames": [],
-      "longest_quiet_interval_seconds": 1.5
+      "longest_quiet_interval_seconds": 0.5
     },
     "transcript": {
-      "script_words": 380,
-      "matched_words": 375,
-      "lines": 28,
+      "script_words": 418,
+      "matched_words": 415,
+      "lines": 27,
       "line_match": {
         "shopping.1": 1.0,
         "skip.1": 1.0,
         "skip.2": 1.0,
         "scale.1": 1.0,
+        "scale.2": 1.0,
         "title.1": 1.0,
         "title.2": 1.0,
-        "test.1": 1.0,
+        "test.1": 0.889,
         "control.1": 1.0,
         "control.2": 1.0,
         "rules.1": 1.0,
         "prove.1": 1.0,
         "share.1": 1.0,
-        "mass-off.1": 0.929,
-        "mass-off.2": 1.0,
-        "mass-off.3": 1.0,
+        "mass-off.1": 1.0,
         "mass-on.1": 1.0,
-        "mass-proof.1": 1.0,
-        "csc.1": 0.929,
-        "reader.1": 1.0,
-        "zoom.1": 1.0,
-        "swatch.1": 0.909,
+        "names.1": 1.0,
+        "names.2": 1.0,
+        "contrast.1": 1.0,
+        "jev.1": 1.0,
+        "jev.2": 1.0,
         "results.1": 0.933,
         "results.2": 1.0,
-        "worms.1": 1.0,
-        "worms.2": 1.0,
-        "verified.1": 0.929,
-        "retire.1": 1.0,
+        "six.1": 1.0,
+        "verified.1": 1.0,
+        "verified.2": 1.0,
+        "owner.1": 1.0,
         "close.1": 1.0
       },
       "differences": [
-        "delete | a → ",
-        "replace | blocked → block",
-        "replace | on → in",
-        "replace | locked → lock",
-        "replace | fixes → this"
+        "replace | step one → then",
+        "replace | locked → lock"
       ]
+    },
+    "scene_transcript_rechecks": {
+      "test": "Step 1. Kane, an AI testing agent, tries the task the way a disabled person would. It fails.",
+      "results": "Then we locked the code and pointed it at 2050 websites it had never seen.\nIt fixed 99 of 142 barriers on its own, including 51 of the 89 hard ones."
     }
   },
   "teaser": {
@@ -128,117 +112,107 @@
       "differences": []
     }
   },
-  "contact_frames": 67,
+  "contact_frames": 73,
   "stills_by_frame": {
-    "shopping": 58,
-    "skip": 208,
-    "scale": 352,
-    "title": 530,
-    "test": 825,
-    "control": 912,
-    "rules": 1098,
-    "prove": 1281,
-    "share": 1445,
-    "mass-off": 1730,
-    "mass-on": 1907,
-    "mass-proof": 2140,
-    "csc": 2307,
-    "reader": 2450,
-    "zoom": 2551,
-    "swatch": 2668,
-    "results": 3165,
-    "worms": 3424,
-    "verified": 3573,
-    "retire": 3801,
-    "close": 3883,
+    "shopping": 75,
+    "skip": 215,
+    "scale": 459,
+    "title": 709,
+    "test": 993,
+    "control": 1103,
+    "rules": 1282,
+    "prove": 1423,
+    "share": 1585,
+    "mass-off": 1814,
+    "mass-on": 1942,
+    "names": 2242,
+    "contrast": 2524,
+    "jev": 2902,
+    "results": 3281,
+    "six": 3514,
+    "verified": 3916,
+    "owner": 4012,
+    "close": 4287,
     "teaser-before": 114,
     "teaser-after": 205,
     "teaser-title": 328
   },
   "decoded_still_vs_lossless_canvas": {
     "shopping": {
-      "luma_psnr_db": 44.83,
-      "high_contrast_edge_ratio": 1.0
-    },
-    "skip": {
-      "luma_psnr_db": 43.3,
+      "luma_psnr_db": 44.93,
       "high_contrast_edge_ratio": 0.999
     },
+    "skip": {
+      "luma_psnr_db": 43.4,
+      "high_contrast_edge_ratio": 0.998
+    },
     "scale": {
-      "luma_psnr_db": 43.49,
-      "high_contrast_edge_ratio": 0.989
+      "luma_psnr_db": 44.49,
+      "high_contrast_edge_ratio": 0.996
     },
     "title": {
-      "luma_psnr_db": 45.39,
-      "high_contrast_edge_ratio": 0.997
+      "luma_psnr_db": 45.27,
+      "high_contrast_edge_ratio": 1.0
     },
     "test": {
-      "luma_psnr_db": 43.28,
+      "luma_psnr_db": 43.16,
       "high_contrast_edge_ratio": 0.999
     },
     "control": {
-      "luma_psnr_db": 43.27,
-      "high_contrast_edge_ratio": 0.996
+      "luma_psnr_db": 43.1,
+      "high_contrast_edge_ratio": 1.0
     },
     "rules": {
-      "luma_psnr_db": 44.7,
-      "high_contrast_edge_ratio": 0.999
+      "luma_psnr_db": 43.61,
+      "high_contrast_edge_ratio": 0.998
     },
     "prove": {
-      "luma_psnr_db": 42.46,
-      "high_contrast_edge_ratio": 0.996
+      "luma_psnr_db": 43.05,
+      "high_contrast_edge_ratio": 0.999
     },
     "share": {
-      "luma_psnr_db": 44.92,
-      "high_contrast_edge_ratio": 0.999
+      "luma_psnr_db": 45.01,
+      "high_contrast_edge_ratio": 1.0
     },
     "mass-off": {
-      "luma_psnr_db": 45.93,
-      "high_contrast_edge_ratio": 1.001
-    },
-    "mass-on": {
-      "luma_psnr_db": 45.69,
-      "high_contrast_edge_ratio": 0.996
-    },
-    "mass-proof": {
-      "luma_psnr_db": 44.39,
-      "high_contrast_edge_ratio": 0.992
-    },
-    "csc": {
-      "luma_psnr_db": 45.25,
-      "high_contrast_edge_ratio": 0.997
-    },
-    "reader": {
-      "luma_psnr_db": 42.59,
-      "high_contrast_edge_ratio": 0.999
-    },
-    "zoom": {
-      "luma_psnr_db": 46.26,
-      "high_contrast_edge_ratio": 1.002
-    },
-    "swatch": {
-      "luma_psnr_db": 47.39,
-      "high_contrast_edge_ratio": 0.998
-    },
-    "results": {
-      "luma_psnr_db": 44.41,
+      "luma_psnr_db": 45.84,
       "high_contrast_edge_ratio": 0.995
     },
-    "worms": {
-      "luma_psnr_db": 44.96,
-      "high_contrast_edge_ratio": 1.001
+    "mass-on": {
+      "luma_psnr_db": 44.89,
+      "high_contrast_edge_ratio": 0.993
+    },
+    "names": {
+      "luma_psnr_db": 42.55,
+      "high_contrast_edge_ratio": 1.0
+    },
+    "contrast": {
+      "luma_psnr_db": 45.9,
+      "high_contrast_edge_ratio": 0.997
+    },
+    "jev": {
+      "luma_psnr_db": 42.86,
+      "high_contrast_edge_ratio": 1.0
+    },
+    "results": {
+      "luma_psnr_db": 44.94,
+      "high_contrast_edge_ratio": 0.999
+    },
+    "six": {
+      "luma_psnr_db": 44.88,
+      "high_contrast_edge_ratio": 0.998
     },
     "verified": {
-      "luma_psnr_db": 45.05,
-      "high_contrast_edge_ratio": 0.996
+      "luma_psnr_db": 44.93,
+      "high_contrast_edge_ratio": 0.998
     },
-    "retire": {
-      "luma_psnr_db": 43.35,
-      "high_contrast_edge_ratio": 0.996
+    "owner": {
+      "luma_psnr_db": 47.32,
+      "high_contrast_edge_ratio": 1.0
     },
     "close": {
-      "luma_psnr_db": 45.33,
-      "high_contrast_edge_ratio": 0.998
+      "luma_psnr_db": 45.21,
+      "high_contrast_edge_ratio": 0.996
     },
     "teaser-before": {
       "luma_psnr_db": 45.95,
@@ -254,27 +228,28 @@
     }
   },
   "bed_energy_200Hz_to_4kHz_percent": 99.99,
-  "voice_over_ducked_bed_rms_dB": 13.3,
-  "speech_energy_200Hz_to_4kHz_percent": 78.93,
+  "voice_over_ducked_bed_rms_dB": 13.7,
+  "speech_energy_200Hz_to_4kHz_percent": 80.9,
   "minimum_visible_page_percent": {
-    "prove": 78.54,
-    "skip": 81.65,
-    "share": 74.39,
-    "csc": 74.62,
-    "mass-on": 76.39,
-    "worms": 84.82,
-    "reader": 80.81,
-    "test": 80.69,
-    "swatch": 75.94,
-    "mass-proof": 74.78,
-    "mass-off": 80.1,
-    "zoom": 82.66,
-    "shopping": 82.09,
-    "retire": 76.1,
+    "prove": 79.83,
+    "skip": 79.88,
+    "owner": 79.83,
+    "share": 72.07,
+    "mass-on": 72.48,
+    "test": 79.88,
+    "mass-off": 77.98,
+    "contrast": 71.33,
+    "shopping": 80.06,
+    "rules": 71.01,
     "teaser-after": 76.37,
-    "control": 75.06,
+    "names": 78.84,
+    "control": 79.84,
+    "jev": 72.22,
     "teaser-before": 82.33
   },
-  "evidence_stills_matching_pack": 27,
-  "live_g2p": "fˈɪksᵻz ʃˈɪp ˈoʊnli ˈæftɚ kˈeɪn pɹˈuːvz ðˌɛm. fˈɔːɹɾi θɹˈiː ɑːɹ lˈaɪv ɪnðɪ ɛkstˈɛnʃən tədˈeɪ."
+  "evidence_stills_matching_pack": 15,
+  "live_g2p": {
+    "And on pages we've never fixed, there's an experiment. Jev, a fast decision model from TypeSafe, names unlabelled buttons live, in about a second.": "ænd ˌɔn pˈeɪdʒᵻz wiːv nˈɛvɚ fˈɪkst, ðɛɹz ɐn ɛkspˈɛɹɪmənt. dʒˈɛv, ɐ fˈæst dᵻsˈɪʒən mˈɑːdəl fɹʌm tˈaɪp sˈeɪf, nˈeɪmz ʌnlˈeɪbəld bˈʌʔnz lˈaɪv, ɪn ɐbˌaʊt ɐ sˈɛkənd.",
+    "Today, 105 fixes are live in the extension. 61 of them proven by Kane.": "tədˈeɪ, wˈʌn hˈʌndɹɪd fˈaɪv fˈɪksᵻz ɑːɹ lˈaɪv ɪnðɪ ɛkstˈɛnʃən. sˈɪksti wˈʌn ʌv ðˌɛm pɹˈuːvən baɪ kˈeɪn."
+  }
 }

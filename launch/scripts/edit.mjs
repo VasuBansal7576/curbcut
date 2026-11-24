@@ -5,20 +5,12 @@ import {initial,events,states,still} from './story.mjs'
 const file=path=>new URL('../'+path,import.meta.url)
 const cuts=JSON.parse(readFileSync(file('film/word-times.json')))
 const catalog=JSON.parse(readFileSync(file('film/plates/index.json')))
-const custom={
- count:['Start the WebAIM counter',[65,280,820,230]],percent:['Land at 95.9% and 959 tiles',[150,289,505,217]],
- logo:['Cut the curb into a ramp',[60,160,730,535]],lane2:['Paint the second lane',[76,70,280,76]],
- rules:['Reveal the repair rules',[88,509,900,75]],focusRule:['Highlight makeFocusable',[84,508,1240,72]],
- enterRule:['Highlight bindEnterToClick',[84,695,1240,72]],
- sample:['2,050 held-out sites attempted',[65,228,480,205]],barriers:['142 registered barriers',[735,228,365,205]],
- fixed:['99 fixed in local Playwright tests',[1365,228,320,205]],hardCount:['51 of 89 hard journeys fixed locally',[815,540,990,103]],
- menusCount:['31 of 43 hover menus',[80,700,281,117]],panelsCount:['11 of 20 disclosures',[425,700,281,117]],
- tabsCount:['5 of 14 tabs and carousels',[770,700,281,117]],modalsCount:['3 of 11 modal dialogs',[1115,700,281,117]],
- wormsSkip:['Outline the skipped Tools menu',[1390,246,156,68]],
- wormsFail:['Show FAIL on the unpatched Kane frame',[61,836,275,105]],
- wormsPass:['Show PASS on the patched Kane frame',[61,836,275,105]],
- gate:['Kane proves the journey before release',[71,342,1440,189]],shipped:['Show the verified inventory of 43',[55,215,675,490]],
- published:['Mark fixes live in the extension',[744,507,805,154]]
+const graphics={
+  count:'Top million home pages',percent:'95.9% with failures',sixTypes:'Six common mistakes',logo:'Cut the curb into a ramp',
+  freeze:'Freeze the repair code',sample:'2,050 unseen sites',fixed:'99 of 142 fixed locally',hardCount:'51 of 89 hard journeys',
+  sample6:'400 new sites',categories:'Five additional categories',fixed6:'76 of 118 fixed locally',
+  samples:'Random samples',v5:'11 of 20 v5 repairs verified',v6:'7 of 15 v6 repairs verified',limits:'Unverified outcomes',
+  inventory:'105 active fixes',shipped:'61 verified by Kane'
 }
 const clean=s=>s.toLowerCase().replace(/^[^a-z0-9]+|[^a-z0-9]+$/g,'')
 const beats=[],cues=[],rows=[]
@@ -38,8 +30,10 @@ for(const [cut,shots] of Object.entries(cuts)){
       const index=words.findIndex((_,j)=>j>=cursor&&phrase.every((p,i)=>clean(words[j+i]?.[0]??'')===p))
       assert.ok(index>=0,shot.id+' '+word)
       cursor=index+phrase.length
-      const top=states[state]?.focus?.[1]>840||states[state]?.asset==='f1123b3e-5'?146:834
-      const spec=custom[state]??(states[state]?.nav?[states[state].headline,[1370,834,490,110]]:null)??[states[state].headline,[55+(states[state].lane?268:0),top,Math.min(570,Math.max(190,states[state].headline.length*43)),111]]
+      const product=states[state]
+      const region=cut==='teaser'?(state==='logo'?[60,160,730,535]:[1370,834,490,110]):
+        state==='logo'?[56,160,780,540]:product?[140,24,385,51]:[84,300,580,220]
+      const spec=[product?.headline??graphics[state],region]
       const beat={cut,scene:shot.id,word,state,event:spec[0],region:spec[1],local:words[index][1],wordStart:+(shot.frame/30+words[index][1]).toFixed(6)}
       if(still[shot.id]===state)beat.still=shot.id
       beats.push(beat);addSources(state)
@@ -60,13 +54,15 @@ for(const cut of ['master','teaser']){
     const refs=keys.map(key=>{
       const a=catalog[key]
       if(a.run)return '['+a.run.slice(0,8)+' · step '+a.step+' · '+a.verdict+'](../'+a.source+')'
-      if(a.url)return '[Chromium '+(a.enabled?'on':'off')+' · '+(a.key??'320 CSS px')+'](film/plates/'+a.file+')'
+      if(a.url)return '['+key+' · '+new URL(a.url).hostname+'](film/plates/'+a.file+')'
       return '['+key+'](film/plates/'+a.file+')'
     })
-    const graphics={scale:'WebAIM Million 2026 · 959 of 1,000 marks',rules:'[Agent’s original rules](../proof/kane/keyboard-add-headphones/2026-11-21T19-39-28.953Z/attempt-1/agent-answer.txt)',results:'[Frozen local results](../proof/heldout-v5/local-summary.json)',verified:'[Extension inventory](../extension/bundled.json)'}
+    const graphics={scale:'WebAIM Million 2026 · 959 of 1,000 marks',rules:'[Agent’s original rules](../proof/kane/keyboard-add-headphones/2026-11-21T19-39-28.953Z/attempt-1/agent-answer.txt)',results:'[Frozen local results](../proof/heldout-v5/local-summary.json)',six:'[Five v6 categories](../proof/heldout-v6/local-summary.json)',verified:'[Extension inventory](../extension/bundled.json)'}
     sheet+='| '+time(s.frame/30)+' | '+s.cues.map(c=>c.text).join(' ')+' | '+(refs.join(' · ')||graphics[s.id]||'Curb-to-ramp identity')+' |\n'
   }
   sheet+='\n'
 }
-sheet+='The extension captures used fresh headless Chromium profiles. The CloudConvert detail was captured at 320 CSS pixels and 6× device scale. The narrow right-hand inset is Kane’s original 320-pixel step. The ColorHexa report inset comes from the installed extension recording at 1 and 5 seconds. The Share shot places the photographed extension switch over the captured Mass.edu page. The government-site detail uses fresh 5464 × 3400 screenshots at 200% browser zoom. At a Kane proof beat, the bordered inset shows the original evidence at 1.25× and the surrounding page shows the matching Chromium journey. The displayed destination URL comes from the recorded tab. Focus labels transcribe the page or identify the recorded key.\n\nThe underscore is an original 88 BPM synthesized score. Kokoro af_heart narrates at speed 1.04. Motion sounds come from the HyperFrames offline SFX collection.\n'
+sheet+='## Word-linked picture changes\n\n| Cut | Scene | Spoken word | Onset | Picture |\n|---|---|---|---:|---|\n'
+for(const b of beats)sheet+=`| ${b.cut} | ${b.scene} | ${b.word} | ${time(b.wordStart)} | ${b.event} |\n`
+sheet+='\nThe Munich baseline Kane pack records an unsuccessful search at the top of Reading view. The close-up uses a separate Chromium capture of the selector in the local study. The patched Kane outline uses the clicked row rectangle stored in step 4. The Jev close-up uses the two rows visible in the Meridiano capture. The Mass.edu insets come from the original Kane packs. ExtremeTerrain uses the measured foreground and background in each installed-extension capture.\n'
 save('shots.md',sheet)

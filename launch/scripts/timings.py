@@ -7,7 +7,7 @@ import soundfile as sf
 from kokoro_onnx import Kokoro
 from onnx import TensorProto, helper
 
-from voice import MODEL, OUT, SPEED, VOICE, spoken
+from voice import MODEL, OUT, SPEED, VOICE, spoken, pronunciation
 
 
 def timing_model():
@@ -25,7 +25,7 @@ def timing_model():
 
 def align_line(engine, cue):
     text = cue["text"]
-    style, _, batches = engine._prepare(spoken(text), VOICE, SPEED, "en-us", False, .25, .1)
+    style, _, batches = engine._prepare(pronunciation(engine, text), VOICE, SPEED, "en-us", True, .25, .1)
     audio, phones = engine._create_batches(batches, style, SPEED, True)
     active = np.flatnonzero(abs(audio) > .004)
     head = max(0, active[0] - 960)

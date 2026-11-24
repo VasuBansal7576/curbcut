@@ -1,6 +1,6 @@
 WEBVTT
 
-00:00:00.095 --> 00:00:02.351
+00:00:00.095 --> 00:00:02.352
 This is someone shopping with only a keyboard.
 
 00:00:03.295 --> 00:00:07.242
@@ -9,77 +9,74 @@ They press Tab to move through the page… and the Add to cart button gets skipp
 00:00:07.317 --> 00:00:08.599
 They can't buy anything.
 
-00:00:08.795 --> 00:00:16.688
+00:00:08.795 --> 00:00:16.667
 That's not rare. In 2026, 95.9 percent of the top million home pages had accessibility failures.
 
-00:00:16.895 --> 00:00:18.206
+00:00:16.742 --> 00:00:19.814
+And almost all of them come from the same six mistakes.
+
+00:00:19.995 --> 00:00:21.283
 So we built Curb Cut.
 
-00:00:18.281 --> 00:00:23.145
-It fixes barriers from the outside, right in your browser, and proves every fix works.
+00:00:21.358 --> 00:00:26.521
+It fixes those barriers from the outside, right in your browser, and proves every fix works.
 
-00:00:23.328 --> 00:00:27.894
-Step one. Kane, an AI testing agent, tries the keyboard. It fails.
+00:00:26.728 --> 00:00:33.320
+Step one. Kane, an AI testing agent, tries the task the way a disabled person would. It fails.
 
-00:00:28.095 --> 00:00:30.655
-Kane tries a mouse. The same task works.
+00:00:33.528 --> 00:00:36.494
+Kane tries again with a mouse. The same task works.
 
-00:00:30.730 --> 00:00:33.047
-So the website is broken for keyboard users.
+00:00:36.569 --> 00:00:38.809
+So the website is broken, not the task.
 
-00:00:33.228 --> 00:00:38.090
-Step two. An agent writes safe rules: make the button reachable, and let Enter press it.
+00:00:38.995 --> 00:00:43.240
+Step two. An agent writes a small, safe fix. Just rules, no code.
 
-00:00:38.295 --> 00:00:44.588
-Step three. Kane reaches the button, presses Enter, and the headphones go in the cart. A recording is proof.
+00:00:43.428 --> 00:00:48.762
+Step three. Kane runs the task again with the fix, and it passes. The recording is the proof.
 
-00:00:44.795 --> 00:00:48.552
-Step four. The extension shares verified fixes with everyone.
+00:00:48.962 --> 00:00:53.509
+Step four. The extension shares the proven fix with everyone who visits that site.
 
-00:00:48.762 --> 00:00:53.153
-The hard barriers aren't single buttons. They're menus that only open for a mouse.
+00:00:53.695 --> 00:01:00.842
+Some barriers are whole journeys. On mass.edu, a keyboard user reaches About, and the menu never opens.
 
-00:00:53.228 --> 00:00:58.369
-On mass.edu, a keyboard user reaches About, and the menu never opens.
+00:01:01.028 --> 00:01:05.370
+With Curb Cut, the same keys open the menu, and Enter takes you to the page.
 
-00:00:58.444 --> 00:01:00.237
-The links are there, but invisible.
+00:01:05.562 --> 00:01:11.494
+For blind users, the most common barrier is a button with no name. A screen reader just says, button.
 
-00:01:00.428 --> 00:01:07.160
-With Curb Cut, the same keys open the menu, every link is visible as you reach it, and Enter takes you to the page.
+00:01:11.569 --> 00:01:17.429
+On Munich Airport, Curb Cut names it: previous slide. Kane found it with the fix, and couldn't without it.
 
-00:01:07.362 --> 00:01:12.012
-Kane proved it both ways: without the fix it failed, with the fix it reached the page.
+00:01:17.628 --> 00:01:24.347
+The most common failure of all is faint text. Curb Cut nudges the colour just enough to be readable, and measures it.
 
-00:01:12.195 --> 00:01:17.848
-On csc.gov.in, ABOUT blocked the keyboard too. Now it opens About MeitY.
+00:01:24.528 --> 00:01:33.750
+And on pages we've never fixed, there's an experiment. Jev, a fast decision model from TypeSafe, names unlabelled buttons live, in about a second.
 
-00:01:18.028 --> 00:01:22.231
-Screen reader users heard an unnamed box. Now it's called Sites search.
+00:01:33.825 --> 00:01:39.009
+On real sites, 13 of its 15 names were right. When it isn't sure, it stays quiet.
 
-00:01:22.428 --> 00:01:25.330
-At high zoom, text ran offscreen. Now it wraps.
-
-00:01:25.628 --> 00:01:29.895
-On ColorHexa, “I'm stuck” reports the picker. Kane verifies the fix.
-
-00:01:30.095 --> 00:01:34.806
+00:01:39.195 --> 00:01:43.931
 Then we locked the code and pointed it at 2,050 websites it had never seen.
 
-00:01:34.881 --> 00:01:45.974
-It found 142 real barriers and fixed 99 of them on its own, including 51 of the 89 hard ones: menus, expanding panels, tabs and pop-ups.
+00:01:44.006 --> 00:01:50.427
+It fixed 99 of 142 barriers on its own, including 51 of the 89 hard ones.
 
-00:01:46.162 --> 00:01:52.007
-On one of those new sites, the World Register of Marine Species, the keyboard skipped the Tools menu.
+00:01:50.628 --> 00:01:57.946
+On 400 more new sites, we tested the five other common failures. Curb Cut fixed 76 of 118.
 
-00:01:52.082 --> 00:01:55.133
-Kane failed it without the fix, and passed it with the fix.
+00:01:58.128 --> 00:02:05.720
+Kane checked random samples of those fixes, and proved 11 of 20, then 7 of 15. Where it couldn't, we say why.
 
-00:01:55.328 --> 00:02:00.531
-Fixes ship only after Kane proves them. 43 are live in the extension today.
+00:02:05.795 --> 00:02:11.425
+Today, 105 fixes are live in the extension. 61 of them proven by Kane.
 
-00:02:00.728 --> 00:02:09.058
-Every night, Kane tries each task with the fix turned off. When the website fixes itself, the patch retires. It becomes unnecessary.
+00:02:11.628 --> 00:02:20.439
+And every fix can go back to the site owner: the exact change, with Kane's recording as proof. When the website fixes itself, our patch retires.
 
-00:02:09.262 --> 00:02:13.635
+00:02:20.628 --> 00:02:25.023
 Curb Cut. Fixing the web for the people it shuts out. Verified by Kane.

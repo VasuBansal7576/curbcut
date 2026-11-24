@@ -2,6 +2,7 @@ from pathlib import Path
 import hashlib
 import os
 import json
+import re
 
 import numpy as np
 import onnxruntime as rt
@@ -20,13 +21,25 @@ def spoken(line):
     substitutions = {
         "2026": "twenty twenty-six", "95.9": "ninety-five point nine",
         "2,050": "two thousand fifty", "142": "one hundred forty two", "99": "ninety nine",
+        "118": "one hundred eighteen", "105": "one hundred five", "400": "four hundred",
+        "76": "seventy six", "61": "sixty one", "13": "thirteen", "15": "fifteen",
+        "20": "twenty", "11": "eleven", "7": "seven", "Jev": "Jev", "TypeSafe": "Type Safe",
         "51": "fifty one", "89": "eighty nine", "43": "forty three", "live": "lyve", "mass.edu": "Mass dot E D U",
         "csc.gov.in": "C S C dot gov dot in", "ABOUT": "About", "MeitY": "May tee",
         "ColorHexa": "Color Hexa", "“": "", "”": "", "…": ",",
     }
     for source, wording in substitutions.items():
-        line = line.replace(source, wording)
+        line = re.sub(r"(?<!\w)" + re.escape(source) + r"(?!\w)", wording, line) if source[0].isalnum() else line.replace(source, wording)
     return line
+
+
+def pronunciation(engine, line):
+    phones = engine.tokenizer.phonemize(spoken(line), "en-us")
+    if "15 names" in line:
+        phones = phones.replace("fˈɪftiːn", "fˌɪftˈiːn")
+    if line.startswith("Step one."):
+        phones = phones.replace("stˈɛp", "stˈɛp,", 1)
+    return phones
 
 
 def main():
@@ -42,14 +55,15 @@ def main():
         record[scene] = []
         for line in lines:
             text = spoken(line)
-            phones = kokoro.tokenizer.phonemize(text, "en-us")
+            phones = pronunciation(kokoro, line)
             checks[line] = phones
             if "live" in line:
                 assert "lˈaɪv" in phones, phones
-            key = hashlib.sha256(f"{VOICE}|{SPEED}|{text}".encode()).hexdigest()[:16]
+            identity = phones if phones != kokoro.tokenizer.phonemize(text, "en-us") else text
+            key = hashlib.sha256(f"{VOICE}|{SPEED}|{identity}".encode()).hexdigest()[:16]
             wav = OUT / f"voice-{key}.wav"
             if not wav.exists():
-                audio, rate = kokoro.create(text, voice=VOICE, speed=SPEED, lang="en-us")
+                audio, rate = kokoro.create(phones, voice=VOICE, speed=SPEED, is_phonemes=True)
                 active = np.flatnonzero(abs(audio) > .004)
                 audio = audio[max(0,active[0]-int(rate*.04)):active[-1]+int(rate*.08)]
                 sf.write(wav, audio, rate)

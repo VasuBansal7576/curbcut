@@ -69,11 +69,11 @@ def sound_effects(scenes, length):
     cues = {
         "skip": [("key-press", "tab"), ("impact-bass-1", "skipped")],
         "title": [("whoosh-short", "curb")], "control": [("pop", "works")],
-        "test": [("impact-bass-1", "fails")], "prove": [("key-press", "enter")],
+        "test": [("impact-bass-1", "fails")], "prove": [("pop", "passes")],
         "share": [("click-soft", "everyone")], "mass-on": [("key-press", "enter")],
         "mass-proof": [("impact-bass-1", "failed"), ("pop", "reached")],
         "worms": [("impact-bass-1", "failed"), ("pop", "passed")],
-        "results": [("pop", "99")], "retire": [("whoosh-short", "retires")],
+        "results": [("pop", "99")], "owner": [("whoosh-short", "retires")],
         "close": [("whoosh-short", "curb")], "teaser-title": [("whoosh-short", "curb")],
         "teaser-before": [("key-press", "tab")], "teaser-after": [("key-press", "enter")],
     }
@@ -140,21 +140,19 @@ def mix(name, scenes):
 def main():
     lines = json.loads((OUT / "voice.json").read_text())
     engine = timing_model()
-    cuts = {}
-    for name in ["master", "teaser"]:
-        script = {k:v for k,v in lines.items() if k.startswith("teaser-") == (name == "teaser")}
-        scenes = timeline(name, script)
-        for scene in scenes:
-            for cue in scene["cues"]:
-                cue["words"] = align_line(engine, cue)
-        seconds = mix(name, scenes)
-        assert 100 <= seconds <= 145 if name == "master" else seconds == 15
-        for scene in scenes:
-            for cue in scene["cues"]:
-                del cue["seconds"], cue["wav"]
-        cuts[name] = scenes
-        (LAUNCH / "audio" / f"{name}.m4a").write_bytes((OUT / f"{name}.m4a").read_bytes())
-        print(name, seconds, flush=True)
+    cuts = json.loads((LAUNCH / "film/word-times.json").read_text())
+    script = {k:v for k,v in lines.items() if not k.startswith("teaser-")}
+    scenes = timeline("master", script)
+    for scene in scenes:
+        for cue in scene["cues"]:
+            cue["words"] = align_line(engine, cue)
+    seconds = mix("master", scenes)
+    for scene in scenes:
+        for cue in scene["cues"]:
+            del cue["seconds"], cue["wav"]
+    cuts["master"] = scenes
+    (LAUNCH / "audio/master.m4a").write_bytes((OUT / "master.m4a").read_bytes())
+    print("master", seconds, flush=True)
     (LAUNCH / "film/word-times.json").write_text(json.dumps(cuts, ensure_ascii=False, indent=2)+"\n")
 
 

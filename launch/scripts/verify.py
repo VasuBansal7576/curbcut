@@ -83,7 +83,16 @@ def stills():
     selected = [b for b in beats if "still" in b]
     assert sorted(b["scene"] for b in selected) == sorted({b["scene"] for b in beats})
     for cut, video in [("master", MASTER), ("teaser", TEASER)]:
-        marks = sorted((math.ceil(b["wordStart"]*30-.00002)+3, b["still"]) for b in selected if b["cut"] == cut)
+        cut_beats = [b for b in beats if b["cut"] == cut]
+        shots = {s["id"]:s for s in json.loads((LAUNCH / "film/word-times.json").read_text())[cut]}
+        marks = []
+        for i,b in enumerate(cut_beats):
+            if "still" not in b:
+                continue
+            shot = shots[b["scene"]]
+            end = next((r["local"] for r in cut_beats[i+1:] if r["scene"] == b["scene"]),shot["frames"]/30)
+            local = math.ceil(b["local"]*30-1e-8)+3 if cut=="teaser" else math.floor((b["local"]+end)*15)
+            marks.append((shot["frame"]+min(local,shot["frames"]-1),b["still"]))
         temp = WORK / ("stills-" + cut)
         temp.mkdir(parents=True, exist_ok=True)
         choose = "+".join(f"eq(n\\,{frame})" for frame, _ in marks)
@@ -156,7 +165,7 @@ def motion(video, frames):
 def words(text):
     text = text.lower().replace("’", "'").replace("%", " percent").replace("homepages", "home pages")
     variants = {
-        "curbcut": "curb cut", "offscreen": "off screen", "may tee": "meity", "may t.": "meity.",
+        "curbcut": "curb cut", "colour": "color", "unlabelled": "unlabeled", "offscreen": "off screen", "may tee": "meity", "may t.": "meity.",
         "mass dot e d u": "mass.edu", "mass dot edu": "mass.edu", "c s c dot gov dot in": "csc.gov.in",
         "color hexa": "colorhexa", "pop-ups": "pop ups", "2,050": "2050", "two thousand fifty": "2050",
     }
@@ -171,7 +180,7 @@ def transcript(video, target, sections):
     wav = WORK / (target.name + "-16k.wav")
     run(["ffmpeg", "-loglevel", "error", "-y", "-i", video, "-vn", "-ar", 16000, "-ac", 1, wav])
     run(["whisper-cli", "-ng", "-np", "-t", 5, "-l", "en", "-m", MODELS / "ggml-small.en.bin",
-         "-f", wav, "--prompt", "Curb Cut, Kane CLI, WebAIM, ColorHexa, and Sites search.",
+         "-f", wav, "--prompt", "Curb Cut, Kane, Jev, TypeSafe, Munich Airport, Mass.edu.",
          "--carry-initial-prompt", "-otxt", "-of", target])
     actual = words(target.with_suffix(".txt").read_text())
     expected = []
@@ -193,6 +202,22 @@ def transcript(video, target, sections):
     (WORK / (target.name+"-diff.txt")).write_text("\n".join(diff)+"\n")
     assert min(coverage.values()) >= .70, coverage
     return dict(script_words=len(expected), matched_words=len(matched), lines=len(ranges), line_match=coverage, differences=diff)
+
+
+def scene_transcripts(shots, full):
+    result = {}
+    for shot in shots:
+        name = shot["id"]
+        if all(full["line_match"][f"{name}.{i+1}"] == 1 for i in range(len(shot["cues"]))):
+            continue
+        path = WORK / (name+"-asr.wav")
+        target = WORK / (name+"-asr")
+        run(["ffmpeg","-v","error","-y","-i",MASTER,"-ss",str(shot["frame"]/30),"-t",str(shot["frames"]/30),
+             "-vn","-ar","16000","-ac","1",path])
+        run(["whisper-cli","-ng","-np","-t",4,"-l","en","-m",MODELS/"ggml-small.en.bin",
+             "-f",path,"--prompt","Curb Cut, Kane, Jev, TypeSafe, Munich Airport, Mass.edu.","-otxt","-of",target])
+        result[name] = target.with_suffix(".txt").read_text().strip()
+    return result
 
 
 def main():
@@ -224,6 +249,12 @@ def main():
     for name, video in [("master", MASTER), ("teaser", TEASER)]:
         report[name]["motion"] = motion(video, report[name]["frames"])
     report["master"]["transcript"] = transcript(MASTER, OUT / "transcript", sections)
+    text = (OUT / "transcript.txt").read_text()
+    normalized = " ".join(words(text))
+    assert normalized.count(" live ") == 2
+    for claim in ["13 of its 15 names","99 of 142","51 of the 89","76 of 118","11 of 20","7 of 15","105 fixes","61 of them"]:
+        assert claim in normalized, claim
+    report["master"]["scene_transcript_rechecks"] = scene_transcripts(cuts["master"],report["master"]["transcript"])
     report["teaser"]["transcript"] = transcript(TEASER, WORK / "teaser-transcript", short)
     if (WORK / "master-bed.wav").exists():
         bed, rate = sf.read(WORK / "master-bed.wav")
@@ -241,7 +272,8 @@ def main():
         p.name.removesuffix("-coverage.json"): round(100*json.loads(p.read_text()),2)
         for p in WORK.glob("*-coverage.json") if json.loads(p.read_text()) < 1
     }
-    assert len(report["minimum_visible_page_percent"]) == 17 and "worms" in report["minimum_visible_page_percent"]
+    expected = {s["id"] for cut in cuts.values() for s in cut} - {"scale","title","results","six","verified","close","teaser-title"}
+    assert set(report["minimum_visible_page_percent"]) == expected
     plates = LAUNCH / "film/plates"
     evidence = [p for p in json.loads((plates / "index.json").read_text()).values() if p.get("member")]
     for plate in evidence:
@@ -249,8 +281,9 @@ def main():
             assert pack.read(plate["member"]) == (plates / plate["file"]).read_bytes(), plate["file"]
     report["evidence_stills_matching_pack"] = len(evidence)
     assert min(report["minimum_visible_page_percent"].values()) >= 70
-    report["live_g2p"] = json.loads((LAUNCH / "film/pronunciation.json").read_text())[sections["verified"][0]]
-    assert "lˈaɪv" in report["live_g2p"]
+    phones = json.loads((LAUNCH / "film/pronunciation.json").read_text())
+    report["live_g2p"] = {line:p for line,p in phones.items() if " live" in line}
+    assert len(report["live_g2p"]) == 2 and all("lˈaɪv" in p for p in report["live_g2p"].values())
     (OUT / "verification.json").write_text(json.dumps(report, indent=2, ensure_ascii=False)+"\n")
     print(json.dumps(report, indent=2))
 

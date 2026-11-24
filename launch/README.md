@@ -1,14 +1,31 @@
 # Curb Cut launch film
 
-The [two-minute film](curbcut-launch.mp4) follows a keyboard user from the About menu on Mass.edu to the Department of Higher Education page. The [15-second cut](curbcut-launch-15s.mp4) shows the same keys with repairs off and on. The master also follows Kane’s held-out keyboard test on the World Register of Marine Species. The [shot list](shots.md) gives the spoken lines, source files, Kane step numbers and verdicts.
+The [launch film](curbcut-launch.mp4) follows a skipped shopping button through a keyboard test, pointer control, repair and replay. It then follows real repairs on Mass.edu, Munich Airport and ExtremeTerrain, and an experimental live naming run on Meridiano. The [15-second teaser](curbcut-launch-15s.mp4) follows the Mass.edu menu. [Thumbnail](curbcut-launch-thumbnail.png) · [Captions](captions/launch.vtt) · [Scene and word timestamps](shots.md)
 
-## Extension screenshots
+## What the numbers describe
 
-[Popup, settings and instant-fix badge](ui/) at 2×. The captures use an installed extension in isolated headless Chromium, with representative page markup and a simulated TypeSafe reply for the badge.
+| Evidence | What was counted |
+|---|---|
+| WebAIM Million 2026 | 95.9% of the one million home pages had detectable WCAG failures. Six failure types accounted for 96% of detected errors. [WebAIM study](https://webaim.org/projects/million/) |
+| Held-out v5 | Frozen code, 2,050 previously unseen Tranco domains, 142 registered barriers and 99 local repairs. Of 89 multi-step journeys, 51 passed. V5 also covered form labels. [Sample](../proof/heldout-v5/sample.json) · [Local outcomes](../proof/heldout-v5/local-summary.json) |
+| Held-out v6 | A fresh draw of 400 sites yielded 118 registered barriers in five additional categories. Local tests confirmed 47/62 contrast repairs, 8/12 alternative-text repairs, 12/12 empty links, 9/12 empty buttons and 0/20 document-language repairs. Total 76/118. [Sample](../proof/heldout-v6/sample.json) · [Local outcomes](../proof/heldout-v6/local-summary.json) |
+| Independent Kane samples | Kane verified 11/20 sampled v5 repairs. Three failed and six were inconclusive. Kane verified 7/15 v6 naming repairs, from five selected cases per naming category. [V5 run ledger](../proof/heldout-v5/kane-sample-20/summary.json) · [V6 run ledger](../proof/heldout-v6/kane-summary.json) |
+| Release inventory | 105 active fixes across releases. Of those, 61 have Kane proof and 44 have local proof. [Bundled inventory](../extension/bundled.json) |
+| Experimental Jev naming | Reviewers judged 13/15 applied names correct on seven real sites. The median time to the first name was 1,137 ms. On Meridiano, the menu and search buttons received “Menú” and “Buscar.” [Adjudication](../proof/jev/live-naming-real-sites.json) · [Capture](../proof/jev/live-naming-demo/capture.json) |
+
+The render reads the local, Kane and release counts from the ledgers and checks them against the narrated figures before encoding. [Study data loader](scripts/study.mjs)
+
+## Picture sources
+
+The [plate index](film/plates/index.json) identifies the source file, screenshot member and step for Kane evidence. The Munich baseline pack records the unsuccessful search at the top of Reading view. The paired close-ups show the exact carousel selector in fresh installed-extension captures. The word outlines use Chromium text ranges, and the patched Kane outline follows the clicked row’s recorded rectangle. [Munich evidence](../evidence/v6-5193be8805ece27f858e/report.md)
+
+The ExtremeTerrain meter uses two fresh installed-extension captures. The “Details” link measured 4.386958:1 before and 4.501341:1 after. Both values round to two decimals in the film. This is local contrast proof. The Meridiano plates come directly from the original live-naming run. [Contrast measurement](../proof/heldout-v6/measurements/v6-035402528fb5fd67e4c6.json) · [Meridiano evidence](../proof/jev/live-naming-demo/)
+
+The owner scene shows the supplied 2× popup captures and a typeset copy of the Markdown produced by the extension’s report generator for Mass.edu. The retirement scene returns to the shopping case. [Extension screenshots](ui/) · [Report generator](../extension/lib/report.js)
 
 ## Render from the repository root
 
-Use Node 22 or later, the repository’s locked Playwright dependency, Playwright’s Chromium build, FFmpeg with libx264, and ffprobe. The checked-in stills, fonts, word timings and audio mixes are sufficient for an offline render. No live site access or speech model is needed for this path.
+Use Node 22 or later, the locked Playwright dependency, Playwright Chromium, FFmpeg with libx264, and ffprobe. The film, captions, shot list and thumbnail can be rebuilt offline from the checked-in sources, word timings and master audio. The renderer uses muted, isolated headless Chromium. It preserves the checked-in teaser.
 
 ```sh
 npm ci
@@ -17,99 +34,49 @@ export FILM_CACHE="$(mktemp -d)"
 node launch/scripts/render.mjs render
 ```
 
-The renderer uses isolated, headless, muted Chromium and writes both MP4s and the thumbnail. It also regenerates the word-linked events, captions and shot list. Intermediate scene encodes and lossless references stay in `FILM_CACHE`. Use the same cache for verification.
+## Rebuild speech and verify
 
-## Check the delivery
-
-The verification tools use Python 3.11, NumPy, SciPy, Pillow, soundfile, and the whisper.cpp CLI. Set `FILM_MODELS` to a directory containing whisper.cpp’s `ggml-small.en.bin`.
+Use Python 3.11 and whisper.cpp’s whisper-cli. The model files and the instrumented timing model belong in the temporary build directory. Install dependencies into its virtual environment.
 
 ```sh
-python3 -m venv "$FILM_CACHE/venv"
+export FILM_MODELS="$FILM_CACHE/models"
+mkdir -p "$FILM_MODELS"
+python3.11 -m venv "$FILM_CACHE/venv"
 export FILM_PYTHON="$FILM_CACHE/venv/bin/python"
-"$FILM_PYTHON" -m pip install numpy==2.4.6 scipy==1.17.1 Pillow==13.0.0 soundfile==0.14.0
-node launch/scripts/render.mjs verify
-```
-
-[Sync measurements](out/sync.json) compare consecutive decoded frames inside the region belonging to each visual beat. [Delivery measurements](out/verification.json) include stream formats, audio levels, transcript coverage, frame motion, sharpness and minimum unobscured page area across every frame of each product scene. The area calculation subtracts overlaid titles, callouts, outlines, provenance chips, inserted panels and subtitles. The two sizes of [scene stills](out/stills/) and the [two-second contact sheet](out/contact.png) come from the encoded movies.
-
-## Source and timing
-
-[Story and shot definitions](scripts/story.mjs) associate words with footage and actions. [Frame drawing](film/film.js) positions the source image, native focus target, large callout and one provenance chip. [Graphic scenes](film/graphics.js) draw the curb, lanes, WebAIM sample and frozen local results. [Source metadata](film/plates/index.json) identifies each used screenshot, including the original evidence-pack member or browser key press. The files supplied here preserve the particular pages seen in the film.
-
-To record fresh source material, run the following from the repository root. Each run creates and removes its own temporary Chromium profile. The scripts load the repository’s unpacked extension, press real keys, save a 5464 × 3400 frame per key on the government sites at 2× device scale and 200% browser zoom, record the focused element and menu visibility, and check the repaired destination. The 320 CSS pixel CloudConvert capture uses six device pixels per CSS pixel. Live sites may have changed since the film.
-
-```sh
-export CAPTURE_DIR="$(mktemp -d)"
-node launch/scripts/capture.mjs
-node launch/scripts/capture-detail.mjs
-"$FILM_PYTHON" launch/scripts/nav-plates.py "$CAPTURE_DIR"
-```
-
-The [approved narration](film/narration.json) and [phoneme record](film/pronunciation.json) accompany the final mixes. To regenerate speech, place the Kokoro v1.0 ONNX model and compatible voices binary in `FILM_MODELS` as `kokoro.onnx` and `voices.bin`. The audio scripts use af_heart at 1.04×, preserve the spoken adjective /laɪv/, extract word onsets from Kokoro’s duration output, synthesize and duck the score, and mix the effects before normalizing.
-
-```sh
-"$FILM_PYTHON" -m pip install kokoro-onnx==0.6.1 onnx==1.23.2 onnxruntime==1.32.0
+"$FILM_PYTHON" -m pip install numpy==2.4.6 scipy==1.17.1 Pillow==13.0.0 soundfile==0.14.0 kokoro-onnx==0.6.1 onnx==1.23.2 onnxruntime==1.32.0
+curl -fL https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx -o "$FILM_MODELS/kokoro.onnx"
+curl -fL https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin -o "$FILM_MODELS/voices.bin"
+curl -fL https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-small.en.bin -o "$FILM_MODELS/ggml-small.en.bin"
 "$FILM_PYTHON" launch/scripts/voice.py
 "$FILM_PYTHON" launch/scripts/score.py
 node launch/scripts/render.mjs render
 node launch/scripts/render.mjs verify
 ```
 
-The musical score is original. The five offline motion effects are used in the mix under the [Pixabay Content License](https://pixabay.com/service/license-summary/). Local font licenses accompany the font files.
+Kokoro uses af_heart at 1.04×. Both spoken instances of “live” use /laɪv/. Jev uses /dʒɛv/. “Menú” and “Buscar” appear as original on-screen labels. The 88 BPM score ducks beneath speech. The five motion effects are supplied under the [Pixabay Content License](https://pixabay.com/service/license-summary/). [Approved narration](film/narration.json) · [Synthesized phonemes](film/pronunciation.json)
 
-## What the numbers describe
+To recapture the new live plates, run the commands below in order. Each live-site capture measures the actual target and checks its outcome. Each browser process closes at the end of its capture. Site changes can affect future captures.
 
-The repair code was frozen before a draw of 2,050 previously unseen Tranco sites. Scouting confirmed 144 barriers. Two failed browser access preflight, leaving 142 registered barriers. Local Playwright tests confirmed 99 automatic repairs, including 51 of 89 hard journeys. [Held-out study](../proof/heldout-v5/README.md) · [Local results](../proof/heldout-v5/local-summary.json)
-
-| Hard journey | Fixed locally / registered |
-|---|---:|
-| Hover menu | 31 / 43 |
-| Disclosure | 11 / 20 |
-| Tabs or carousel | 5 / 14 |
-| Modal dialog | 3 / 11 |
-| Custom listbox | 1 / 1 |
-
-Kane independently verified 0 of 4 selected cases in the original v5 draw. It verified WoRMS in a two-case rerun with a 50-step limit. The baseline failed after 24 steps. With the fix, the Tools menu opened, “Match taxa” was visible at step 24, and the run passed after 26 steps. TikFinity remained inconclusive. Across releases, the extension ships 43 Kane-verified fixes. [Rerun evidence](../proof/heldout-v5/README.md#post-amendment-kane-rerun) · [Bundled inventory](../extension/bundled.json)
-
-The [held-out results graphic](out/stills/results.png) starts at 01:30.000. The WoRMS scene starts at 01:46.067. FAIL appears at 01:52.533 on the [baseline failure frame](film/plates/5fc7e627-23.jpg). PASS appears at 01:54.033 on the [patched menu frame](film/plates/eb14dcd6-24.jpg). Both screenshots fill the frame at native scale. The callouts transcribe the menu labels.
+```sh
+node launch/scripts/capture-contrast.mjs
+node launch/scripts/capture-reader.mjs
+node launch/scripts/capture-report.mjs
+```
 
 ## Delivery checks
 
-Both files are 1920 × 1080 H.264 at 30 fps with stereo 48 kHz AAC. The master runs 133.733 seconds (4,012 frames). The teaser runs 15.000 seconds (450 frames).
+[Word-to-frame sync](out/sync.json) measures consecutive decoded frames in the event region. [Geometry](out/geometry.json) measures the visible union of real source rectangles after overlays and the maximum source-pixel scale on every product frame. [Delivery verification](out/verification.json) includes format, loudness, speech recognition, frame motion, source-pack identity and decoded-still sharpness. [Midpoint review](out/beats/index.json) identifies one full-resolution decoded image for each beat in both cuts. [Navigation review](out/stills/navigation/README.md) measures lettering at both desktop and phone sizes.
 
-| Measurement | Master | Teaser |
+| Encoded measurement | Launch film | Teaser |
 |---|---:|---:|
-| Beats within ±0.2 seconds | 73/73 | 7/7 |
-| Largest offset | 0.033233 s | 0.026334 s |
-| Integrated loudness | -16.0 LUFS | -16.0 LUFS |
-| True peak | -1.6 dBTP | -2.2 dBTP |
-| Full-band mean | -19.1 dBFS | -20.1 dBFS |
-| Mean after 300 Hz high-pass | -21.2 dBFS | -22.2 dBFS |
-| Script lines represented in Whisper transcription | 28/28 | 3/3 |
-| Normalized script words matched | 375/380 | 34/34 |
-| Pixel-static half-second comparisons | 0/267 | 0/29 |
-| Longest interval below the motion threshold | 1.5 s | 0 s |
+| Duration | 2:25.133 | 0:15.000 |
+| 1920 × 1080 H.264 frames at 30 fps | 4,354 | 450 |
+| Word-linked visual changes within ±0.2 s | 60/60 | 7/7 |
+| Largest absolute offset | 0.0323 s | 0.026334 s |
+| Integrated loudness | −16.0 LUFS | −16.0 LUFS |
+| True peak | −1.6 dBTP | −2.2 dBTP |
+| Words matched in full-cut Whisper pass | 415/418 | 34/34 |
 
-Kokoro produced **lˈaɪv** for “43 are live” and **ɹᵻkˈɔːɹdɪŋ** for “a recording.” Whisper recognized all held-out counts and both WoRMS verdicts. Transcribing the results, WoRMS and release scenes individually also recovered “locked” and “Fixes,” which the full-film pass heard as “lock” and “This.” The narration measured 13.3 dB above the ducked music. Between 200 Hz and 4 kHz, the narration retained 78.93% of its energy and the score retained 99.99%. [Whisper transcript](out/transcript.txt) · [Word-level differences](out/verification.json)
+Whisper recovered every narrated count and both instances of “live.” Its uninterrupted master pass heard “then” for “Step one” and “lock” for “locked.” Rechecking those two encoded scenes separately recovered both phrases. The pronunciation record confirms /laɪv/ in both lines. Speech measured 13.7 dB above the ducked score. [Full transcript](out/transcript.txt) · [Scene rechecks](out/verification.json)
 
-Verification covered 21 master scenes and three teaser scenes at 1920 × 1080 and 640 × 360, plus a 67-frame contact sheet. The lowest decoded-still luma PSNR against the lossless canvas was 42.46 dB. All 27 Kane stills matched their original evidence-pack JPEGs byte for byte.
-
-| Product scene | Minimum visible page area | Product scene | Minimum visible page area |
-|---|---:|---|---:|
-| Shopping | 82.09% | Mass.edu, Kane replay | 74.78% |
-| Tab skips Add to cart | 81.65% | CSC.gov.in | 74.62% |
-| Keyboard test | 80.69% | Screen reader | 80.81% |
-| Mouse control | 75.06% | Zoomed text | 82.66% |
-| Proof | 78.54% | ColorHexa report | 75.94% |
-| Share the fix | 74.39% | Patch retirement | 76.10% |
-| Mass.edu, extension off | 80.10% | Teaser, extension off | 82.33% |
-| Mass.edu, extension on | 76.39% | Teaser, extension on | 76.37% |
-| WoRMS, Kane rerun | 84.82% | | |
-
-## Government-site navigation review
-
-The [beat-by-beat still index](out/stills/navigation/README.md) links the 1920×1080 and 640×360 exports for all 29 navigation samples, including the exact 54 s and 56 s frames. At both times the Mass.edu About text measures 60 pixels in the master and 20 pixels at phone width. On the skipped-link beat the outline lands on Board Business. On the repaired keyboard journey it moves inside the open menu to The DHE, then Enter shows the destination heading and the recorded URL.
-
-The open-menu overview shows The DHE at 44 / 15 pixels (master / phone). Its focused close-up measures 55 / 19 pixels. CSC.gov.in’s focused About MeitY measures 42 / 14 pixels. These heights count contrasting glyph rows inside the actual link. Chromium recorded each site at 5464×3400 in a fresh profile. The film uses losslessly cropped 3000×2100 source plates with the original tab URL and key-event metadata.
-
-Kane’s original evidence appears in labeled, tightly cropped insets at 1.25× native pixels. Its navigation lettering measures 12–17 pixels in the master. The surrounding high-resolution Chromium capture shows the corresponding keyboard state. The 19 master scenes carried over from the preceding cut retain identical encoded video packets. The 15-second teaser retains the same file hash. [Encoded-frame measurements](out/navigation.json)
+All 67 beat midpoints were inspected. Across the 15 product scenes, the lowest visible source area was 71.01% and the largest source scale was 1.25×. All 15 Kane stills matched their archived evidence-pack members byte for byte.

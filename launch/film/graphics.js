@@ -32,6 +32,9 @@ function pavement(t,closing=false) {
     disk(u,v,6.6,ink,4.3)
     disk(u-1.7,v-3.9*f,4.6,yellow,2.7)
   }
+  if(!window.current.shot.id.startsWith('teaser-')){
+    plane([[473,90,96],[473,360,96],[473,360,height(473,360)]],'#777776',ink,2)
+  }
   const a=p(0,360,96),b=p(180,360,96),d=p(473,360,height(473,360)),e=p(473,360,96)
   traced([a,b,p(180,360,height(180,360)),d,e,p(720,360,96)],at(t,0,1.75),ink,5)
   const span=240*progress
@@ -45,87 +48,4 @@ function identity(shot,t) {
   print('CUT',66,688,338,yellow)
   pavement(t,isClose)
   print(isClose?'Verified by Kane.':'Fixing the web for people it shuts out.',78,826,isClose?66:57,white,'Overpass',650,1020)
-  if(shot.id==='thumbnail')mono('43 KANE-VERIFIED FIXES LIVE',80,912,42,yellow)
-}
-function scaleGraphic(shot,t) {
-  const start=onset(shot,'count'), end=onset(shot,'percent')
-  const filled=t>=end?959:Math.floor(959*clamp((t-start)/(end-start)))
-  mono('WEBAIM MILLION  /  2026',76,104,42,yellow)
-  const value=t<start?'How often?':(filled/10).toFixed(1)+'%'
-  print(value,62,491,t<start?170:245,white,'Highway',400,815)
-  print('of top home pages',75,626,88)
-  print('fail basic checks.',75,722,88)
-  mono('1,000,000 home pages',78,866,42)
-  ctx.save();ctx.translate(928+20*t/(shot.frames/30),162+14*t/(shot.frames/30))
-  for(let j=0;j<25;j++)for(let i=0;i<40;i++){
-    const x=i*22,y=j*28
-    poly([[x,y],[x+8,y],[x+14,y+6],[x+18,y+6],[x+18,y+13],[x+11,y+13],[x+5,y+7],[x,y+7]],j*40+i<filled?red:white)
-  }
-  ctx.restore()
-}
-function rulesGraphic(shot,state,t,scene){
-  const active=state==='focusRule'?'makeFocusable':state==='enterRule'?'bindEnterToClick':null
-  const title=active==='makeFocusable'?'Make it reachable.':active?'Let Enter press it.':'Write a fix.'
-  if(state)laneMark(2,80,74,t)
-  print(title,68,362,186)
-  if(!state||state==='lane2'){
-    print('Kane’s failure',84,628,106);arrow(795,537,108)
-    print('Agent’s repair',1040,628,106,yellow)
-  } else {
-    mono('div.add-to-cart',82,456,48,yellow)
-    scene.shopRules.forEach((rule,i)=>{
-      const y=505+i*95,on=rule.action===active
-      if(on)rect(76,y,1570,80,yellow)
-      mono('{ "action": "'+rule.action+'"'+(rule.value?', "value": "'+rule.value+'"':'')+' }',98,y+56,42,on?ink:white)
-    })
-  }
-  paintLine(t)
-}
-function paintLine(t){
-  const length=145+120*(1+Math.sin(t*.95))
-  rect(79,156,length,12,yellow)
-}
-function resultsGraphic(state,t){
-  mono('HELD-OUT TEST  /  LOCAL PLAYWRIGHT',78,103,46,yellow)
-  const stages=['sample','barriers','fixed','hardCount','menusCount','panelsCount','tabsCount','modalsCount']
-  const active=stages.indexOf(state)
-  const cols=[[72,'2,050','sites attempted'],[743,'142','barriers found'],[1375,'99','fixed locally']]
-  for(const [i,[x,value,label]] of cols.entries()){
-    if(i>active)continue
-    const travel=12*Math.sin(t*.63+i*.9)
-    print(value,x+travel,426,221,i===2?yellow:white)
-    print(label,x+travel+4,502,66)
-    if(i<2 && i<active)arrow(x+(i===0?544:474),310,90)
-  }
-  if(active<0)print('Code frozen.',68+8*Math.sin(t),447,193)
-  if(active>=3){
-    for(let i=0;i<89;i++){
-      const x=85+(i%30)*22,y=552+Math.floor(i/30)*27
-      if(i<51)disk(x,y,8+1.5*Math.sin(t*2-i*.13),yellow)
-      else {ctx.strokeStyle=white;ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y,8,0,Math.PI*2);ctx.stroke()}
-    }
-    print('51 of 89 hard journeys',816,632,99,yellow)
-    const categories=[['Hover menus','31 / 43'],['Disclosures','11 / 20'],['Tabs / carousels','5 / 14'],['Modal dialogs','3 / 11'],['Listboxes','1 / 1']]
-    for(const [i,[label,count]] of categories.entries()){
-      const x=80+i*345,selected=i===active-4
-      if(selected)rect(x,691,328,135,yellow)
-      print(count,x+13,760,72,selected?ink:yellow)
-      print(label,x+13,807,41,selected?ink:white,'Overpass',680)
-    }
-  }
-  print('Frozen repair code · randomly sampled Tranco sites · fixes measured locally',79,915,42,white,'Overpass',650)
-  paintLine(t)
-}
-function shippedGraphic(state,t){
-  mono('EXTENSION RELEASE',78,105,46,yellow)
-  if(state==='shipped'||state==='published'){
-    print('43',58,685,606,yellow)
-    print('Kane-verified',751,468,164)
-    print(state==='published'?'fixes live.':'fixes.',751,641,164)
-    domes(788,748,13,2,45,t+.3,13)
-  }else{
-    print(state==='gate'?'Kane proves it.':'Before a fix ships.',68,518,198)
-    print('The same journey must pass.',81,666,78,white,'Overpass',650)
-  }
-  paintLine(t)
 }

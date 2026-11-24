@@ -2,12 +2,13 @@ import assert from 'node:assert/strict'
 import {execFileSync, spawn} from 'node:child_process'
 import {createHash} from 'node:crypto'
 import {once} from 'node:events'
-import {existsSync, mkdirSync, readFileSync, writeFileSync} from 'node:fs'
+import {existsSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync} from 'node:fs'
 import path from 'node:path'
 import {fileURLToPath, pathToFileURL} from 'node:url'
 import {chromium} from 'playwright'
 import './edit.mjs'
-import {initial, states, shopRules} from './story.mjs'
+import {geometry} from './geometry.mjs'
+import {initial, states, shopRules, study} from './story.mjs'
 
 const launch=fileURLToPath(new URL('../',import.meta.url))
 const work=process.env.FILM_CACHE || '/private/tmp/curbcut-v5-build'
@@ -44,7 +45,7 @@ function prepare(shot,index){
     const data=readFileSync(path.join(launch,'film/plates',index[key].file))
     plates[key]={...index[key],imageUrl:'data:image/'+(index[key].file.endsWith('.jpg')?'jpeg':'png')+';base64,'+data.toString('base64')}
   }
-  return {scene:{states:used,initial:initial[shot.id],shopRules},plates}
+  return {scene:{states:used,initial:initial[shot.id],shopRules,study},plates}
 }
 async function encode(page,shot){
   const encoder=spawn('ffmpeg',['-v','error','-y','-f','image2pipe','-vcodec','mjpeg','-framerate','30','-i','pipe:0','-an',
@@ -54,7 +55,6 @@ async function encode(page,shot){
   let minimum=1
   const navBeats=[]
   const reviewFrames=new Map(shot.beats.map(b=>[Math.min(shot.frames-1,Math.ceil(b.local*30-1e-8)+3),b.state]))
-  if(shot.id==='mass-off')for(const second of [54,56])reviewFrames.set(second*30-shot.frame,'check-'+second+'s')
   try{
     for(let f=0;f<shot.frames;f++){
       const [image,share,nav]=await page.evaluate(([n,review])=>[window.frame(n),window.pageShare,review?window.navProof:null],[f,reviewFrames.has(f)])
@@ -72,7 +72,7 @@ async function render(stillsOnly=false){
   const index=read(path.join(launch,'film/plates/index.json'))
   const browser=await chromium.launch({headless:true,args:['--mute-audio']})
   const design=createHash('sha256')
-  for(const name of ['film/drawing.js','film/graphics.js','film/film.js','film/index.html','film/film.css','scripts/render.mjs','scripts/story.mjs','film/fonts/Overpass.ttf','film/fonts/JetBrainsMono.ttf','film/fonts/BarlowCondensed-ExtraBold.ttf'])design.update(readFileSync(path.join(launch,name)))
+  for(const name of ['film/master.js','film/drawing.js','film/graphics.js','film/film.js','film/index.html','film/film.css','scripts/render.mjs','scripts/story.mjs','film/fonts/Overpass.ttf','film/fonts/JetBrainsMono.ttf','film/fonts/BarlowCondensed-ExtraBold.ttf'])design.update(readFileSync(path.join(launch,name)))
   const version=design.digest('hex')
   try{
     const context=await browser.newContext({viewport:{width:1920,height:1080},deviceScaleFactor:1,offline:true})
@@ -91,7 +91,7 @@ async function render(stillsOnly=false){
         const selected=shot.beats.filter(b=>b.still)
         assert.equal(selected.length,1,shot.id)
         const [b]=selected
-        const stillFrame=Math.min(shot.frames-1,Math.ceil(b.local*30-1e-8)+3)
+        const stillFrame=Math.min(shot.frames-1,shot.id.startsWith('teaser-')?Math.ceil(b.local*30-1e-8)+3:Math.floor((b.local+(shot.beats[shot.beats.indexOf(b)+1]?.local??shot.frames/30))*15))
         const pixels=await page.evaluate(f=>window.frame(f,'png'),stillFrame)
         mkdirSync(file('references'),{recursive:true})
         writeFileSync(file('references/'+b.still+'.png'),Buffer.from(pixels,'base64'))
@@ -103,25 +103,49 @@ async function render(stillsOnly=false){
       return page
     }
     const [page]=await Promise.all(Array.from({length:3},worker))
-    await page.evaluate(()=>window.startShot({id:'thumbnail',cues:[],frames:180},{}))
+    await page.evaluate(study=>window.startShot({id:'thumbnail',cues:[],frames:180},{study}),study)
     writeFileSync(path.join(launch,'curbcut-launch-thumbnail.png'),Buffer.from(await page.evaluate(()=>window.frame(100,'png')),'base64'))
   }finally{await browser.close()}
   if(!stillsOnly&&!process.env.FILM_SCENES)mux()
 }
 function mux(){
   for(const [cut,shots] of Object.entries(cuts)){
+    if(cut==='teaser' && existsSync(path.join(launch,names.teaser)))continue
     const list=file(cut+'-list.txt')
     writeFileSync(list,shots.map(s=>"file '"+s.id+".mp4'\nduration "+(s.frames/30).toFixed(6)).join('\n')+'\n')
-    run('ffmpeg',['-v','error','-y','-f','concat','-safe','1','-i',list,'-i',path.join(audio,cut+'.m4a'),'-map','0:v:0','-map','1:a:0','-c','copy','-movflags','+faststart',path.join(launch,names[cut])])
+    const output=path.join(launch,names[cut]),pending=output+'.'+process.pid+'.mp4'
+    try{
+      run('ffmpeg',['-v','error','-y','-f','concat','-safe','1','-i',list,'-i',path.join(audio,cut+'.m4a'),'-map','0:v:0','-map','1:a:0','-c','copy','-movflags','+faststart',pending])
+      renameSync(pending,output)
+    }finally{rmSync(pending,{force:true})}
   }
+}
+async function measureGeometry(){
+  const browser=await chromium.launch({headless:true,args:['--mute-audio']})
+  try{
+    const page=await browser.newPage({offline:true,viewport:{width:1920,height:1080}})
+    await page.goto(pathToFileURL(path.join(launch,'film/index.html')).href)
+    await page.evaluate(()=>window.fontsReady)
+    const index=read(path.join(launch,'film/plates/index.json'))
+    const rows=Object.entries(cuts).flatMap(([cut,shots])=>shots.filter(s=>initial[s.id]).map(s=>{
+      const shot=buildShot(cut,s)
+      return {shot,...prepare(shot,index)}
+    }))
+    const result=await geometry(page,rows)
+    writeFileSync(path.join(launch,'out/geometry.json'),JSON.stringify(result,null,2)+'\n')
+    console.log('Measured native scale and visible source area across',rows.length,'product scenes.')
+  }finally{await browser.close()}
 }
 if(process.argv[2]==='check'){
   for(const [cut,shots] of Object.entries(cuts))for(const s of shots)buildShot(cut,s)
   console.log('Verified',beats.length,'word-linked events')
-}else if(process.argv[2]==='verify'){
+}else if(process.argv[2]==='geometry')await measureGeometry()
+else if(process.argv[2]==='verify'){
+  await measureGeometry()
   run(python,[path.join(launch,'scripts/sync-check.py')])
   run(python,[path.join(launch,'scripts/verify.py')])
   run(python,[path.join(launch,'scripts/nav-check.py')])
+  run(python,[path.join(launch,'scripts/beat-stills.py')])
 }else if(!process.argv[2]||process.argv[2]==='render')await render()
 else if(process.argv[2]==='stills')await render(true)
 else if(process.argv[2]==='mux')mux()

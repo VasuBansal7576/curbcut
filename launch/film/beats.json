@@ -4,15 +4,15 @@
     "scene": "shopping",
     "word": "keyboard",
     "state": "keyboard",
-    "event": "Keyboard only.",
+    "event": "Keyboard only",
     "region": [
-      55,
-      834,
-      570,
-      111
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 1.8299,
-    "wordStart": 1.8299,
+    "local": 1.8053,
+    "wordStart": 1.8053,
     "still": "shopping"
   },
   {
@@ -20,12 +20,12 @@
     "scene": "skip",
     "word": "Tab",
     "state": "tab",
-    "event": "Press Tab.",
+    "event": "Tab to the next control",
     "region": [
-      55,
-      834,
-      430,
-      111
+      140,
+      24,
+      385,
+      51
     ],
     "local": 0.5427,
     "wordStart": 3.7427
@@ -35,12 +35,12 @@
     "scene": "skip",
     "word": "skipped",
     "state": "skipped",
-    "event": "Skipped.",
+    "event": "Add to cart skipped",
     "region": [
-      55,
-      146,
-      344,
-      111
+      140,
+      24,
+      385,
+      51
     ],
     "local": 3.6177,
     "wordStart": 6.8177,
@@ -51,12 +51,12 @@
     "scene": "skip",
     "word": "can't",
     "state": "cannot",
-    "event": "Can’t buy.",
+    "event": "Purchase blocked",
     "region": [
-      55,
-      146,
-      430,
-      111
+      140,
+      24,
+      385,
+      51
     ],
     "local": 4.3573,
     "wordStart": 7.5573
@@ -66,12 +66,12 @@
     "scene": "scale",
     "word": "2026",
     "state": "count",
-    "event": "Start the WebAIM counter",
+    "event": "Top million home pages",
     "region": [
-      65,
-      280,
-      820,
-      230
+      84,
+      300,
+      580,
+      220
     ],
     "local": 1.6177,
     "wordStart": 10.3177
@@ -81,16 +81,31 @@
     "scene": "scale",
     "word": "95.9",
     "state": "percent",
-    "event": "Land at 95.9% and 959 tiles",
+    "event": "95.9% with failures",
     "region": [
-      150,
-      289,
-      505,
-      217
+      84,
+      300,
+      580,
+      220
     ],
-    "local": 2.9177,
-    "wordStart": 11.6177,
+    "local": 2.9427,
+    "wordStart": 11.6427,
     "still": "scale"
+  },
+  {
+    "cut": "master",
+    "scene": "scale",
+    "word": "six",
+    "state": "sixTypes",
+    "event": "Six common mistakes",
+    "region": [
+      84,
+      300,
+      580,
+      220
+    ],
+    "local": 10.2647,
+    "wordStart": 18.9647
   },
   {
     "cut": "master",
@@ -99,13 +114,13 @@
     "state": "logo",
     "event": "Cut the curb into a ramp",
     "region": [
-      60,
+      56,
       160,
-      730,
-      535
+      780,
+      540
     ],
     "local": 0.7353,
-    "wordStart": 17.5353,
+    "wordStart": 20.6353,
     "still": "title"
   },
   {
@@ -113,30 +128,30 @@
     "scene": "test",
     "word": "Step one",
     "state": "lane1",
-    "event": "Test the task.",
+    "event": "Try the keyboard journey",
     "region": [
-      323,
-      834,
-      570,
-      111
+      140,
+      24,
+      385,
+      51
     ],
     "local": 0.1853,
-    "wordStart": 23.418633
+    "wordStart": 26.818633
   },
   {
     "cut": "master",
     "scene": "test",
     "word": "fails",
     "state": "fails",
-    "event": "It fails.",
+    "event": "Keyboard test failed",
     "region": [
-      323,
-      146,
-      387,
-      111
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 4.1603,
-    "wordStart": 27.393633,
+    "local": 6.1853,
+    "wordStart": 32.818633,
     "still": "test"
   },
   {
@@ -144,30 +159,30 @@
     "scene": "control",
     "word": "mouse",
     "state": "mouse",
-    "event": "Mouse control.",
+    "event": "Try the pointer",
     "region": [
-      323,
-      146,
-      570,
-      111
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 0.8177,
-    "wordStart": 28.8177
+    "local": 1.1927,
+    "wordStart": 34.626033
   },
   {
     "cut": "master",
     "scene": "control",
     "word": "works",
     "state": "works",
-    "event": "It works.",
+    "event": "Headphones added",
     "region": [
-      323,
-      146,
-      387,
-      111
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 2.2677,
-    "wordStart": 30.2677,
+    "local": 2.6927,
+    "wordStart": 36.126033,
     "still": "control"
   },
   {
@@ -175,151 +190,76 @@
     "scene": "control",
     "word": "broken",
     "state": "broken",
-    "event": "Broken for keyboard users.",
+    "event": "Keyboard barrier confirmed",
     "region": [
-      323,
-      146,
-      570,
-      111
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 3.599,
-    "wordStart": 31.599
+    "local": 4.0043,
+    "wordStart": 37.437633
   },
   {
     "cut": "master",
     "scene": "rules",
     "word": "Step two",
     "state": "lane2",
-    "event": "Paint the second lane",
+    "event": "Write the repair",
     "region": [
-      76,
-      70,
-      280,
-      76
+      140,
+      24,
+      385,
+      51
     ],
     "local": 0.1853,
-    "wordStart": 33.318633
+    "wordStart": 39.0853
   },
   {
     "cut": "master",
     "scene": "rules",
     "word": "rules",
     "state": "rules",
-    "event": "Reveal the repair rules",
+    "event": "Four declarative rules",
     "region": [
-      88,
-      509,
-      900,
-      75
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 2.0603,
-    "wordStart": 35.193633
-  },
-  {
-    "cut": "master",
-    "scene": "rules",
-    "word": "reachable",
-    "state": "focusRule",
-    "event": "Highlight makeFocusable",
-    "region": [
-      84,
-      508,
-      1240,
-      72
-    ],
-    "local": 3.3603,
-    "wordStart": 36.493633,
+    "local": 3.2603,
+    "wordStart": 42.1603,
     "still": "rules"
-  },
-  {
-    "cut": "master",
-    "scene": "rules",
-    "word": "Enter",
-    "state": "enterRule",
-    "event": "Highlight bindEnterToClick",
-    "region": [
-      84,
-      695,
-      1240,
-      72
-    ],
-    "local": 4.2353,
-    "wordStart": 37.368633
   },
   {
     "cut": "master",
     "scene": "prove",
     "word": "Step three",
     "state": "lane3",
-    "event": "Replay the task.",
+    "event": "Replay with the fix",
     "region": [
-      323,
-      834,
-      570,
-      111
+      140,
+      24,
+      385,
+      51
     ],
     "local": 0.1853,
-    "wordStart": 38.3853
+    "wordStart": 43.518633
   },
   {
     "cut": "master",
     "scene": "prove",
-    "word": "reaches",
-    "state": "reaches",
-    "event": "Button in focus.",
-    "region": [
-      323,
-      146,
-      570,
-      111
-    ],
-    "local": 1.4603,
-    "wordStart": 39.6603
-  },
-  {
-    "cut": "master",
-    "scene": "prove",
-    "word": "presses",
-    "state": "press",
-    "event": "Press the key.",
-    "region": [
-      323,
-      146,
-      570,
-      111
-    ],
-    "local": 2.4603,
-    "wordStart": 40.6603
-  },
-  {
-    "cut": "master",
-    "scene": "prove",
-    "word": "Enter",
-    "state": "enter",
-    "event": "Enter.",
-    "region": [
-      323,
-      146,
-      258,
-      111
-    ],
-    "local": 2.8603,
-    "wordStart": 41.0603
-  },
-  {
-    "cut": "master",
-    "scene": "prove",
-    "word": "cart",
+    "word": "passes",
     "state": "cart",
-    "event": "In the cart.",
+    "event": "Keyboard test passed",
     "region": [
-      323,
-      146,
-      516,
-      111
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 4.3853,
-    "wordStart": 42.5853,
+    "local": 3.2103,
+    "wordStart": 46.543633,
     "still": "prove"
   },
   {
@@ -327,76 +267,46 @@
     "scene": "prove",
     "word": "proof",
     "state": "proof",
-    "event": "Recorded proof.",
+    "event": "Recorded replay",
     "region": [
-      323,
-      146,
-      570,
-      111
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 5.9853,
-    "wordStart": 44.1853
+    "local": 5.0353,
+    "wordStart": 48.368633
   },
   {
     "cut": "master",
     "scene": "share",
     "word": "Step four",
     "state": "lane4",
-    "event": "Share the fix.",
+    "event": "Distribute the repair",
     "region": [
-      323,
-      834,
-      570,
-      111
+      140,
+      24,
+      385,
+      51
     ],
     "local": 0.1853,
-    "wordStart": 44.8853
+    "wordStart": 49.051967
   },
   {
     "cut": "master",
     "scene": "share",
     "word": "everyone",
     "state": "everyone",
-    "event": "For everyone.",
+    "event": "Fixes enabled",
     "region": [
-      323,
-      834,
-      559,
-      111
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 3.3353,
-    "wordStart": 48.0353,
+    "local": 3.2103,
+    "wordStart": 52.076967,
     "still": "share"
-  },
-  {
-    "cut": "master",
-    "scene": "mass-off",
-    "word": "hard",
-    "state": "hard",
-    "event": "The hard barriers.",
-    "region": [
-      1370,
-      834,
-      490,
-      110
-    ],
-    "local": 0.2607,
-    "wordStart": 48.927367
-  },
-  {
-    "cut": "master",
-    "scene": "mass-off",
-    "word": "menus",
-    "state": "menus",
-    "event": "Hover-only menus.",
-    "region": [
-      1370,
-      834,
-      490,
-      110
-    ],
-    "local": 2.6107,
-    "wordStart": 51.277367
   },
   {
     "cut": "master",
@@ -405,59 +315,44 @@
     "state": "site",
     "event": "Mass.edu",
     "region": [
-      1370,
-      834,
-      490,
-      110
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 4.784,
-    "wordStart": 53.450667
+    "local": 2.5103,
+    "wordStart": 56.1103
   },
   {
     "cut": "master",
     "scene": "mass-off",
-    "word": "reaches About",
+    "word": "About",
     "state": "aboutOff",
     "event": "Tab to About.",
     "region": [
-      1370,
-      834,
-      490,
-      110
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 7.259,
-    "wordStart": 55.925667
+    "local": 5.3103,
+    "wordStart": 58.9103
   },
   {
     "cut": "master",
     "scene": "mass-off",
     "word": "never",
-    "state": "closed",
-    "event": "Menu stays shut.",
+    "state": "massFail",
+    "event": "Menu stays shut",
     "region": [
-      1370,
-      834,
-      490,
-      110
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 8.884,
-    "wordStart": 57.550667,
+    "local": 6.4103,
+    "wordStart": 60.0103,
     "still": "mass-off"
-  },
-  {
-    "cut": "master",
-    "scene": "mass-off",
-    "word": "invisible",
-    "state": "invisible",
-    "event": "Submenu links skipped.",
-    "region": [
-      1370,
-      834,
-      490,
-      110
-    ],
-    "local": 10.9465,
-    "wordStart": 59.613167
   },
   {
     "cut": "master",
@@ -466,638 +361,546 @@
     "state": "repaired",
     "event": "Repairs on.",
     "region": [
-      1370,
-      834,
-      490,
-      110
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 0.3795,
-    "wordStart": 60.712833
+    "local": 0.3539,
+    "wordStart": 61.287233
   },
   {
     "cut": "master",
     "scene": "mass-on",
-    "word": "same keys",
+    "word": "open",
     "state": "opened",
     "event": "Menu open.",
     "region": [
-      1370,
-      834,
-      490,
-      110
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 1.2545,
-    "wordStart": 61.587833
+    "local": 1.8789,
+    "wordStart": 62.812233
   },
   {
     "cut": "master",
     "scene": "mass-on",
-    "word": "every link",
+    "word": "menu",
     "state": "link",
     "event": "Tab to The DHE.",
     "region": [
-      1370,
-      834,
-      490,
-      110
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 3.1045,
-    "wordStart": 63.437833,
-    "still": "mass-on"
+    "local": 2.2039,
+    "wordStart": 63.137233
   },
   {
     "cut": "master",
     "scene": "mass-on",
     "word": "Enter",
-    "state": "arrived",
-    "event": "Destination reached.",
+    "state": "massPass",
+    "event": "Destination reached",
     "region": [
-      1370,
-      834,
-      490,
-      110
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 5.4045,
-    "wordStart": 65.737833
+    "local": 3.0789,
+    "wordStart": 64.012233,
+    "still": "mass-on"
   },
   {
     "cut": "master",
-    "scene": "mass-proof",
-    "word": "Kane",
-    "state": "both",
-    "event": "Kane replays it.",
+    "scene": "names",
+    "word": "blind",
+    "state": "archive",
+    "event": "Find the named button",
     "region": [
-      1370,
-      834,
-      490,
-      110
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 0.164,
-    "wordStart": 67.430667
+    "local": 0.3323,
+    "wordStart": 65.798967
   },
   {
     "cut": "master",
-    "scene": "mass-proof",
-    "word": "without",
-    "state": "before",
-    "event": "Without the fix.",
+    "scene": "names",
+    "word": "no name",
+    "state": "noName",
+    "event": "Accessible name missing",
     "region": [
-      1370,
-      834,
-      490,
-      110
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 1.989,
-    "wordStart": 69.255667
+    "local": 3.1823,
+    "wordStart": 68.648967
   },
   {
     "cut": "master",
-    "scene": "mass-proof",
-    "word": "failed",
-    "state": "failed",
-    "event": "Journey failed.",
+    "scene": "names",
+    "word": "previous slide",
+    "state": "named",
+    "event": "Previous slide",
     "region": [
-      1370,
-      834,
-      490,
-      110
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 2.714,
-    "wordStart": 69.980667
+    "local": 8.4392,
+    "wordStart": 73.905867,
+    "still": "names"
   },
   {
     "cut": "master",
-    "scene": "mass-proof",
-    "word": "with",
-    "state": "withFix",
-    "event": "With the fix.",
+    "scene": "names",
+    "word": "found",
+    "state": "witness",
+    "event": "Kane found the named row",
     "region": [
-      1370,
-      834,
-      490,
-      110
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 3.314,
-    "wordStart": 70.580667
+    "local": 10.1142,
+    "wordStart": 75.580867
   },
   {
     "cut": "master",
-    "scene": "mass-proof",
-    "word": "reached",
-    "state": "reached",
-    "event": "Page reached.",
+    "scene": "names",
+    "word": "couldn't",
+    "state": "absent",
+    "event": "Baseline search failed",
     "region": [
-      1370,
-      834,
-      490,
-      110
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 3.939,
-    "wordStart": 71.205667,
-    "still": "mass-proof"
+    "local": 11.2392,
+    "wordStart": 76.705867
   },
   {
     "cut": "master",
-    "scene": "csc",
-    "word": "csc.gov.in",
-    "state": "csc",
-    "event": "CSC.gov.in",
+    "scene": "contrast",
+    "word": "faint",
+    "state": "faint",
+    "event": "Below the AA threshold",
     "region": [
-      1370,
-      834,
-      490,
-      110
+      140,
+      24,
+      385,
+      51
+    ],
+    "local": 1.9427,
+    "wordStart": 79.476033
+  },
+  {
+    "cut": "master",
+    "scene": "contrast",
+    "word": "nudges",
+    "state": "nudge",
+    "event": "Adjust the text colour",
+    "region": [
+      140,
+      24,
+      385,
+      51
+    ],
+    "local": 3.8177,
+    "wordStart": 81.351033
+  },
+  {
+    "cut": "master",
+    "scene": "contrast",
+    "word": "measures",
+    "state": "measured",
+    "event": "AA threshold reached",
+    "region": [
+      140,
+      24,
+      385,
+      51
+    ],
+    "local": 6.3177,
+    "wordStart": 83.851033,
+    "still": "contrast"
+  },
+  {
+    "cut": "master",
+    "scene": "jev",
+    "word": "experiment",
+    "state": "experiment",
+    "event": "Live naming experiment",
+    "region": [
+      140,
+      24,
+      385,
+      51
+    ],
+    "local": 2.2979,
+    "wordStart": 86.731233
+  },
+  {
+    "cut": "master",
+    "scene": "jev",
+    "word": "unlabelled",
+    "state": "pair",
+    "event": "Two unnamed buttons",
+    "region": [
+      140,
+      24,
+      385,
+      51
+    ],
+    "local": 6.9479,
+    "wordStart": 91.381233
+  },
+  {
+    "cut": "master",
+    "scene": "jev",
+    "word": "live",
+    "state": "labels",
+    "event": "Two live names",
+    "region": [
+      140,
+      24,
+      385,
+      51
+    ],
+    "local": 7.8729,
+    "wordStart": 92.306233
+  },
+  {
+    "cut": "master",
+    "scene": "jev",
+    "word": "13",
+    "state": "precision",
+    "event": "Names checked on real sites",
+    "region": [
+      140,
+      24,
+      385,
+      51
+    ],
+    "local": 10.5389,
+    "wordStart": 94.972233,
+    "still": "jev"
+  },
+  {
+    "cut": "master",
+    "scene": "jev",
+    "word": "quiet",
+    "state": "quiet",
+    "event": "Abstain when uncertain",
+    "region": [
+      140,
+      24,
+      385,
+      51
+    ],
+    "local": 14.1139,
+    "wordStart": 98.547233
+  },
+  {
+    "cut": "master",
+    "scene": "results",
+    "word": "locked",
+    "state": "freeze",
+    "event": "Freeze the repair code",
+    "region": [
+      84,
+      300,
+      580,
+      220
     ],
     "local": 0.3927,
-    "wordStart": 72.4927
-  },
-  {
-    "cut": "master",
-    "scene": "csc",
-    "word": "ABOUT",
-    "state": "cscAbout",
-    "event": "Tab to ABOUT.",
-    "region": [
-      1370,
-      834,
-      490,
-      110
-    ],
-    "local": 2.3177,
-    "wordStart": 74.4177
-  },
-  {
-    "cut": "master",
-    "scene": "csc",
-    "word": "blocked",
-    "state": "cscFail",
-    "event": "Keyboard blocked.",
-    "region": [
-      1370,
-      834,
-      490,
-      110
-    ],
-    "local": 2.5677,
-    "wordStart": 74.6677
-  },
-  {
-    "cut": "master",
-    "scene": "csc",
-    "word": "Now",
-    "state": "cscOpen",
-    "event": "Keyboard opens it.",
-    "region": [
-      1370,
-      834,
-      490,
-      110
-    ],
-    "local": 4.2427,
-    "wordStart": 76.3427
-  },
-  {
-    "cut": "master",
-    "scene": "csc",
-    "word": "opens",
-    "state": "meity",
-    "event": "About MeitY.",
-    "region": [
-      1370,
-      834,
-      490,
-      110
-    ],
-    "local": 4.6927,
-    "wordStart": 76.7927,
-    "still": "csc"
-  },
-  {
-    "cut": "master",
-    "scene": "csc",
-    "word": "MeitY",
-    "state": "ministry",
-    "event": "Destination verified.",
-    "region": [
-      1370,
-      834,
-      490,
-      110
-    ],
-    "local": 5.1927,
-    "wordStart": 77.2927
-  },
-  {
-    "cut": "master",
-    "scene": "reader",
-    "word": "Screen reader",
-    "state": "reader",
-    "event": "Screen reader.",
-    "region": [
-      55,
-      834,
-      570,
-      111
-    ],
-    "local": 0.2103,
-    "wordStart": 78.143633
-  },
-  {
-    "cut": "master",
-    "scene": "reader",
-    "word": "unnamed",
-    "state": "unnamed",
-    "event": "No accessible name.",
-    "region": [
-      55,
-      834,
-      570,
-      111
-    ],
-    "local": 1.5103,
-    "wordStart": 79.443633
-  },
-  {
-    "cut": "master",
-    "scene": "reader",
-    "word": "Sites search",
-    "state": "named",
-    "event": "Sites search.",
-    "region": [
-      55,
-      834,
-      559,
-      111
-    ],
-    "local": 3.6103,
-    "wordStart": 81.543633,
-    "still": "reader"
-  },
-  {
-    "cut": "master",
-    "scene": "zoom",
-    "word": "zoom",
-    "state": "clipped",
-    "event": "Text cut off.",
-    "region": [
-      55,
-      834,
-      559,
-      111
-    ],
-    "local": 0.5677,
-    "wordStart": 82.901033
-  },
-  {
-    "cut": "master",
-    "scene": "zoom",
-    "word": "wraps",
-    "state": "wraps",
-    "event": "Text wraps.",
-    "region": [
-      55,
-      834,
-      473,
-      111
-    ],
-    "local": 2.5677,
-    "wordStart": 84.901033,
-    "still": "zoom"
-  },
-  {
-    "cut": "master",
-    "scene": "swatch",
-    "word": "ColorHexa",
-    "state": "swatch",
-    "event": "ColorHexa.",
-    "region": [
-      55,
-      834,
-      430,
-      111
-    ],
-    "local": 0.3427,
-    "wordStart": 85.876033
-  },
-  {
-    "cut": "master",
-    "scene": "swatch",
-    "word": "I'm stuck",
-    "state": "stuck",
-    "event": "“I’m stuck.”",
-    "region": [
-      55,
-      834,
-      516,
-      111
-    ],
-    "local": 1.1677,
-    "wordStart": 86.701033
-  },
-  {
-    "cut": "master",
-    "scene": "swatch",
-    "word": "reports",
-    "state": "sent",
-    "event": "Report sent.",
-    "region": [
-      55,
-      834,
-      516,
-      111
-    ],
-    "local": 1.6177,
-    "wordStart": 87.151033
-  },
-  {
-    "cut": "master",
-    "scene": "swatch",
-    "word": "verifies",
-    "state": "picker",
-    "event": "Picker open.",
-    "region": [
-      55,
-      834,
-      516,
-      111
-    ],
-    "local": 3.2677,
-    "wordStart": 88.801033,
-    "still": "swatch"
+    "wordStart": 99.4927
   },
   {
     "cut": "master",
     "scene": "results",
     "word": "2,050",
     "state": "sample",
-    "event": "2,050 held-out sites attempted",
+    "event": "2,050 unseen sites",
     "region": [
-      65,
-      228,
-      480,
-      205
+      84,
+      300,
+      580,
+      220
     ],
-    "local": 2.2927,
-    "wordStart": 92.2927
-  },
-  {
-    "cut": "master",
-    "scene": "results",
-    "word": "142",
-    "state": "barriers",
-    "event": "142 registered barriers",
-    "region": [
-      735,
-      228,
-      365,
-      205
-    ],
-    "local": 5.3501,
-    "wordStart": 95.3501
+    "local": 2.2677,
+    "wordStart": 101.3677
   },
   {
     "cut": "master",
     "scene": "results",
     "word": "99",
     "state": "fixed",
-    "event": "99 fixed in local Playwright tests",
+    "event": "99 of 142 fixed locally",
     "region": [
-      1365,
-      228,
-      320,
-      205
+      84,
+      300,
+      580,
+      220
     ],
-    "local": 7.8251,
-    "wordStart": 97.8251
+    "local": 5.475,
+    "wordStart": 104.575
   },
   {
     "cut": "master",
     "scene": "results",
     "word": "51",
     "state": "hardCount",
-    "event": "51 of 89 hard journeys fixed locally",
+    "event": "51 of 89 hard journeys",
     "region": [
-      815,
-      540,
-      990,
-      103
+      84,
+      300,
+      580,
+      220
     ],
-    "local": 9.9751,
-    "wordStart": 99.9751
-  },
-  {
-    "cut": "master",
-    "scene": "results",
-    "word": "menus",
-    "state": "menusCount",
-    "event": "31 of 43 hover menus",
-    "region": [
-      80,
-      700,
-      281,
-      117
-    ],
-    "local": 12.6001,
-    "wordStart": 102.6001
-  },
-  {
-    "cut": "master",
-    "scene": "results",
-    "word": "expanding",
-    "state": "panelsCount",
-    "event": "11 of 20 disclosures",
-    "region": [
-      425,
-      700,
-      281,
-      117
-    ],
-    "local": 13.4751,
-    "wordStart": 103.4751
-  },
-  {
-    "cut": "master",
-    "scene": "results",
-    "word": "tabs",
-    "state": "tabsCount",
-    "event": "5 of 14 tabs and carousels",
-    "region": [
-      770,
-      700,
-      281,
-      117
-    ],
-    "local": 14.7751,
-    "wordStart": 104.7751
-  },
-  {
-    "cut": "master",
-    "scene": "results",
-    "word": "pop-ups",
-    "state": "modalsCount",
-    "event": "3 of 11 modal dialogs",
-    "region": [
-      1115,
-      700,
-      281,
-      117
-    ],
-    "local": 15.3751,
-    "wordStart": 105.3751,
+    "local": 9.15,
+    "wordStart": 108.25,
     "still": "results"
   },
   {
     "cut": "master",
-    "scene": "worms",
-    "word": "Tools",
-    "state": "wormsSkip",
-    "event": "Outline the skipped Tools menu",
+    "scene": "six",
+    "word": "400",
+    "state": "sample6",
+    "event": "400 new sites",
     "region": [
-      1390,
-      246,
-      156,
-      68
+      84,
+      300,
+      580,
+      220
     ],
-    "local": 5.1927,
-    "wordStart": 111.259367
+    "local": 0.3927,
+    "wordStart": 110.926033
   },
   {
     "cut": "master",
-    "scene": "worms",
-    "word": "failed",
-    "state": "wormsFail",
-    "event": "Show FAIL on the unpatched Kane frame",
+    "scene": "six",
+    "word": "five",
+    "state": "categories",
+    "event": "Five additional categories",
     "region": [
-      61,
-      836,
-      275,
-      105
+      84,
+      300,
+      580,
+      220
     ],
-    "local": 6.463,
-    "wordStart": 112.529667
+    "local": 2.7677,
+    "wordStart": 113.301033
   },
   {
     "cut": "master",
-    "scene": "worms",
-    "word": "passed",
-    "state": "wormsPass",
-    "event": "Show PASS on the patched Kane frame",
+    "scene": "six",
+    "word": "76",
+    "state": "fixed6",
+    "event": "76 of 118 fixed locally",
     "region": [
-      61,
-      836,
-      275,
-      105
+      84,
+      300,
+      580,
+      220
     ],
-    "local": 7.963,
-    "wordStart": 114.029667,
-    "still": "worms"
-  },
-  {
-    "cut": "master",
-    "scene": "verified",
-    "word": "Kane",
-    "state": "gate",
-    "event": "Kane proves the journey before release",
-    "region": [
-      71,
-      342,
-      1440,
-      189
-    ],
-    "local": 1.639,
-    "wordStart": 116.872333
+    "local": 5.7177,
+    "wordStart": 116.251033,
+    "still": "six"
   },
   {
     "cut": "master",
     "scene": "verified",
-    "word": "43",
+    "word": "random",
+    "state": "samples",
+    "event": "Random samples",
+    "region": [
+      84,
+      300,
+      580,
+      220
+    ],
+    "local": 0.914,
+    "wordStart": 118.947333
+  },
+  {
+    "cut": "master",
+    "scene": "verified",
+    "word": "11",
+    "state": "v5",
+    "event": "11 of 20 v5 repairs verified",
+    "region": [
+      84,
+      300,
+      580,
+      220
+    ],
+    "local": 3.389,
+    "wordStart": 121.422333
+  },
+  {
+    "cut": "master",
+    "scene": "verified",
+    "word": "7",
+    "state": "v6",
+    "event": "7 of 15 v6 repairs verified",
+    "region": [
+      84,
+      300,
+      580,
+      220
+    ],
+    "local": 4.689,
+    "wordStart": 122.722333
+  },
+  {
+    "cut": "master",
+    "scene": "verified",
+    "word": "why",
+    "state": "limits",
+    "event": "Unverified outcomes",
+    "region": [
+      84,
+      300,
+      580,
+      220
+    ],
+    "local": 7.289,
+    "wordStart": 125.322333
+  },
+  {
+    "cut": "master",
+    "scene": "verified",
+    "word": "105",
+    "state": "inventory",
+    "event": "105 active fixes",
+    "region": [
+      84,
+      300,
+      580,
+      220
+    ],
+    "local": 8.4059,
+    "wordStart": 126.439233
+  },
+  {
+    "cut": "master",
+    "scene": "verified",
+    "word": "61",
     "state": "shipped",
-    "event": "Show the verified inventory of 43",
+    "event": "61 verified by Kane",
     "region": [
-      55,
-      215,
-      675,
-      490
+      84,
+      300,
+      580,
+      220
     ],
-    "local": 2.989,
-    "wordStart": 118.222333
-  },
-  {
-    "cut": "master",
-    "scene": "verified",
-    "word": "live",
-    "state": "published",
-    "event": "Mark fixes live in the extension",
-    "region": [
-      744,
-      507,
-      805,
-      154
-    ],
-    "local": 3.739,
-    "wordStart": 118.972333,
+    "local": 11.5559,
+    "wordStart": 129.589233,
     "still": "verified"
   },
   {
     "cut": "master",
-    "scene": "retire",
-    "word": "Every night",
-    "state": "recheck",
-    "event": "Nightly recheck.",
+    "scene": "owner",
+    "word": "every fix",
+    "state": "popup",
+    "event": "Fixes on this page",
     "region": [
-      55,
-      146,
-      570,
-      111
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 0.1638,
-    "wordStart": 120.797133
+    "local": 0.2927,
+    "wordStart": 131.826033
   },
   {
     "cut": "master",
-    "scene": "retire",
+    "scene": "owner",
+    "word": "site owner",
+    "state": "export",
+    "event": "Send fix to site owner",
+    "region": [
+      140,
+      24,
+      385,
+      51
+    ],
+    "local": 1.6427,
+    "wordStart": 133.176033,
+    "still": "owner"
+  },
+  {
+    "cut": "master",
+    "scene": "owner",
+    "word": "exact change",
+    "state": "change",
+    "event": "Source change",
+    "region": [
+      140,
+      24,
+      385,
+      51
+    ],
+    "local": 2.7677,
+    "wordStart": 134.301033
+  },
+  {
+    "cut": "master",
+    "scene": "owner",
+    "word": "recording",
+    "state": "recording",
+    "event": "Before and after recordings",
+    "region": [
+      140,
+      24,
+      385,
+      51
+    ],
+    "local": 4.5177,
+    "wordStart": 136.051033
+  },
+  {
+    "cut": "master",
+    "scene": "owner",
     "word": "website",
     "state": "native",
-    "event": "Site fixed itself.",
+    "event": "Native repair passes",
     "region": [
-      55,
-      146,
-      570,
-      111
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 3.9888,
-    "wordStart": 124.622133
+    "local": 6.2927,
+    "wordStart": 137.826033
   },
   {
     "cut": "master",
-    "scene": "retire",
+    "scene": "owner",
     "word": "retires",
     "state": "retire",
-    "event": "Retired.",
+    "event": "Patch retired",
     "region": [
-      55,
-      146,
-      344,
-      111
+      140,
+      24,
+      385,
+      51
     ],
-    "local": 5.9388,
-    "wordStart": 126.572133,
-    "still": "retire"
-  },
-  {
-    "cut": "master",
-    "scene": "retire",
-    "word": "unnecessary",
-    "state": "peel",
-    "event": "Patch removed.",
-    "region": [
-      55,
-      146,
-      570,
-      111
-    ],
-    "local": 7.6138,
-    "wordStart": 128.247133
+    "local": 8.2927,
+    "wordStart": 139.826033
   },
   {
     "cut": "master",
@@ -1106,13 +909,13 @@
     "state": "logo",
     "event": "Cut the curb into a ramp",
     "region": [
-      60,
+      56,
       160,
-      730,
-      535
+      780,
+      540
     ],
     "local": 0.164,
-    "wordStart": 129.330667,
+    "wordStart": 140.697333,
     "still": "close"
   },
   {

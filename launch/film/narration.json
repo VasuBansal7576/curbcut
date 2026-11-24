@@ -7,64 +7,59 @@
     "They can't buy anything."
   ],
   "scale": [
-    "That's not rare. In 2026, 95.9 percent of the top million home pages had accessibility failures."
+    "That's not rare. In 2026, 95.9 percent of the top million home pages had accessibility failures.",
+    "And almost all of them come from the same six mistakes."
   ],
   "title": [
     "So we built Curb Cut.",
-    "It fixes barriers from the outside, right in your browser, and proves every fix works."
+    "It fixes those barriers from the outside, right in your browser, and proves every fix works."
   ],
   "test": [
-    "Step one. Kane, an AI testing agent, tries the keyboard. It fails."
+    "Step one. Kane, an AI testing agent, tries the task the way a disabled person would. It fails."
   ],
   "control": [
-    "Kane tries a mouse. The same task works.",
-    "So the website is broken for keyboard users."
+    "Kane tries again with a mouse. The same task works.",
+    "So the website is broken, not the task."
   ],
   "rules": [
-    "Step two. An agent writes safe rules: make the button reachable, and let Enter press it."
+    "Step two. An agent writes a small, safe fix. Just rules, no code."
   ],
   "prove": [
-    "Step three. Kane reaches the button, presses Enter, and the headphones go in the cart. A recording is proof."
+    "Step three. Kane runs the task again with the fix, and it passes. The recording is the proof."
   ],
   "share": [
-    "Step four. The extension shares verified fixes with everyone."
+    "Step four. The extension shares the proven fix with everyone who visits that site."
   ],
   "mass-off": [
-    "The hard barriers aren't single buttons. They're menus that only open for a mouse.",
-    "On mass.edu, a keyboard user reaches About, and the menu never opens.",
-    "The links are there, but invisible."
+    "Some barriers are whole journeys. On mass.edu, a keyboard user reaches About, and the menu never opens."
   ],
   "mass-on": [
-    "With Curb Cut, the same keys open the menu, every link is visible as you reach it, and Enter takes you to the page."
+    "With Curb Cut, the same keys open the menu, and Enter takes you to the page."
   ],
-  "mass-proof": [
-    "Kane proved it both ways: without the fix it failed, with the fix it reached the page."
+  "names": [
+    "For blind users, the most common barrier is a button with no name. A screen reader just says, button.",
+    "On Munich Airport, Curb Cut names it: previous slide. Kane found it with the fix, and couldn't without it."
   ],
-  "csc": [
-    "On csc.gov.in, ABOUT blocked the keyboard too. Now it opens About MeitY."
+  "contrast": [
+    "The most common failure of all is faint text. Curb Cut nudges the colour just enough to be readable, and measures it."
   ],
-  "reader": [
-    "Screen reader users heard an unnamed box. Now it's called Sites search."
-  ],
-  "zoom": [
-    "At high zoom, text ran offscreen. Now it wraps."
-  ],
-  "swatch": [
-    "On ColorHexa, “I'm stuck” reports the picker. Kane verifies the fix."
+  "jev": [
+    "And on pages we've never fixed, there's an experiment. Jev, a fast decision model from TypeSafe, names unlabelled buttons live, in about a second.",
+    "On real sites, 13 of its 15 names were right. When it isn't sure, it stays quiet."
   ],
   "results": [
     "Then we locked the code and pointed it at 2,050 websites it had never seen.",
-    "It found 142 real barriers and fixed 99 of them on its own, including 51 of the 89 hard ones: menus, expanding panels, tabs and pop-ups."
+    "It fixed 99 of 142 barriers on its own, including 51 of the 89 hard ones."
   ],
-  "worms": [
-    "On one of those new sites, the World Register of Marine Species, the keyboard skipped the Tools menu.",
-    "Kane failed it without the fix, and passed it with the fix."
+  "six": [
+    "On 400 more new sites, we tested the five other common failures. Curb Cut fixed 76 of 118."
   ],
   "verified": [
-    "Fixes ship only after Kane proves them. 43 are live in the extension today."
+    "Kane checked random samples of those fixes, and proved 11 of 20, then 7 of 15. Where it couldn't, we say why.",
+    "Today, 105 fixes are live in the extension. 61 of them proven by Kane."
   ],
-  "retire": [
-    "Every night, Kane tries each task with the fix turned off. When the website fixes itself, the patch retires. It becomes unnecessary."
+  "owner": [
+    "And every fix can go back to the site owner: the exact change, with Kane's recording as proof. When the website fixes itself, our patch retires."
   ],
   "close": [
     "Curb Cut. Fixing the web for the people it shuts out. Verified by Kane."

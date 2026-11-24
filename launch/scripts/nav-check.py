@@ -10,7 +10,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 WORK = Path(os.environ.get("FILM_CACHE", "/private/tmp/curbcut-v5-build"))
 OUT = ROOT / "out/stills/navigation"
-SCENES = ["mass-off", "mass-on", "mass-proof", "csc", "teaser-before", "teaser-after"]
+SCENES = ["mass-off", "mass-on", "teaser-before", "teaser-after"]
 
 
 def ink_height(image, region, white_on_blue=False):
@@ -32,14 +32,14 @@ def ink_height(image, region, white_on_blue=False):
 
 def check_journey(mark):
     expected = {
-        "aboutOff": ("Tab", "About", False), "closed": ("ArrowDown", "About", False),
+        "aboutOff": ("Tab", "About", False), "closed": ("ArrowDown", "About", False), "massFail": ("ArrowDown", "About", False),
         "invisible": ("Tab", "Board Business", False), "opened": ("ArrowDown", "About", True),
         "link": ("Tab", "The DHE", True), "cscOpen": ("ArrowDown", "ABOUT", True),
         "meity": ("Tab", "About MeitY", True),
     }
     if mark["state"] in expected:
         assert (mark["key"], mark["focus"], mark["menuVisible"]) == expected[mark["state"]]
-    if mark["state"] in {"arrived", "reached", "ministry"}:
+    if mark["state"] in {"arrived", "massPass"}:
         assert mark["key"] == "Enter"
         endpoint = "/meity" if mark["state"] == "ministry" else "/about/aboutdhe.asp"
         assert mark["url"].endswith(endpoint)
