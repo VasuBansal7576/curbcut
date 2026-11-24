@@ -21,6 +21,12 @@ The repair on uls.co.za made the Linux server solutions link keyboard-reachable.
 
 The draw was committed as `d764df9` before browsing. The extension under trial was `e710e14`. The scout and trial used isolated headless Chromium profiles. The build passed. The full test suite passed 60 of 60 with port 4317 free at startup and test files serialized to avoid competing fixture servers.
 
+## Kane sample
+
+The seeded sample included the sole independent match, uls.co.za. Kane verified **0 of 1**. The unpatched keyboard run failed as expected and the patched keyboard run passed. The pointer control failed its visibility assertion, so the three lanes did not establish verification.
+
+Kane reported **59.183 credits** for the three runs. The shared balance fell by **122.7171 credits**, including concurrent work. The lowest observed balance was **1,604.6401 credits**. All three outcomes were decisive, so no retry was used. [Kane run ledger](kane-results.json)
+
 ## Historical draw
 
 The initial draw at `4977467` passed hostnames to a helper that expects URLs. The resulting zero count was invalid. The corrected historical draw contained 81 eligible domains. The historical draw was never run. [Corrected historical draw](draw.json)

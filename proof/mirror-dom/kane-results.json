@@ -1,0 +1,58 @@
+{
+  "seed": "curbcut-mirror-dom-fresh-v1-kane",
+  "selected": [
+    "uls.co.za"
+  ],
+  "verified": 0,
+  "cases": [
+    {
+      "site": "uls.co.za",
+      "runs": [
+        {
+          "phase": "before",
+          "attempt": 1,
+          "expected": "fail",
+          "before": 1725.506,
+          "status": "fail",
+          "reason": "Services was focused and Arrow Down pressed, but no submenu or required link appeared.",
+          "runId": "41c6ac6b-8583-4856-9a1e-efa5df1d3774",
+          "evidenceValid": true,
+          "reportedCredits": 21.218397500000002,
+          "after": 1680.027
+        },
+        {
+          "phase": "control",
+          "attempt": 1,
+          "expected": "pass",
+          "before": 1680.027,
+          "status": "fail",
+          "reason": "Checkpoint assertion failed: \"its controls appear\"",
+          "runId": "3d562683-ebce-4ad7-9d00-b379f180099d",
+          "evidenceValid": true,
+          "reportedCredits": 15.81199,
+          "after": 1631.4694
+        },
+        {
+          "phase": "after",
+          "attempt": 1,
+          "expected": "pass",
+          "before": 1631.4694,
+          "status": "pass",
+          "reason": "Objective completed",
+          "runId": "aad78d1a-e0ca-48ef-b7c0-254c86a736b5",
+          "evidenceValid": true,
+          "reportedCredits": 22.15258,
+          "after": 1604.6401
+        }
+      ],
+      "verified": false
+    }
+  ],
+  "finalBalance": 1604.6401,
+  "initialBalance": 1727.3572,
+  "minimumToStart": 1627.3572,
+  "kaneReportedRunCredits": 59.1829675,
+  "accountBalanceChange": 122.7171,
+  "creditAccounting": "Kane run receipts are attributable to this trial. The shared account balance change also includes concurrent activity.",
+  "minimumObservedBalance": 1604.6401
+}
