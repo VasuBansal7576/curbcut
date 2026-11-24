@@ -214,7 +214,7 @@ export async function checkPage({url,task,persona='keyboard-only',local=false,dr
   await mkdir(dir,{recursive:true})
   await saveJSON(path.join(dir,'task.json'),derived)
   const result=local?await repairLocally(derived,{base:dir,attempts:3,...(write?{write}:{})}):
-    await fix(derived,{base:dir,attempts:3,...(write?{write}:{}),...(run?{run}:{}),...(persist?{persist}:{})})
+    await fix(derived,{base:dir,attempts:3,agentOnly:true,...(write?{write}:{}),...(run?{run}:{}),...(persist?{persist}:{})})
   let reportPath=null
   if(result.patch) {
     const reportable={...result.patch,status:result.patch.status==='verified'?'verified':'locally-verified'}

@@ -7,7 +7,7 @@ import {session} from './chrome.mjs'
 import {ROOT,command,relative,saveJSON} from './io.mjs'
 import {BlockedPage,pageBlock} from './access.mjs'
 import {match} from './engine.js'
-import {managedKeyboardSelector,taskDestination} from './task.mjs'
+import {fixtureURL,managedKeyboardSelector,taskDestination} from './task.mjs'
 import {journeySelectors,outcomeChecks,passageQuote} from './probe.mjs'
 import {checkKaneAccess} from './preflight.mjs'
 
@@ -100,7 +100,8 @@ const limits={
 export function kaneLimits(task,persona,options={}) {
   const defaults=limits[persona]
   const type=persona==='control'?persona:task.evaluation?.category??task.barrierClass??task.probe?.action??persona
-  const archived=stepLimits[type]?.maxSteps??defaults.maxSteps
+  const shopCart=task.id==='keyboard-add-headphones' && fixtureURL(new URL(task.url))
+  const archived=shopCart?persona==='control'?16:28:stepLimits[type]?.maxSteps??defaults.maxSteps
   const maxSteps=options.maxSteps??Number(process.env.CURBCUT_KANE_MAX_STEPS??Math.min(archived,defaults.maxSteps))
   return {maxSteps,timeout:options.timeout??Math.max(defaults.timeout,maxSteps*6),
     assertionMode:options.assertionMode??(persona==='low-contrast-simulation' || task.evaluation?.category==='low-contrast' || !task.probe && persona==='low-vision'?'visual':'dom')}
@@ -131,7 +132,7 @@ async function keyboardHint(page,task) {
     if(index<0 || ![document.body,document.documentElement].includes(document.activeElement)) return null
     return {forward:index+1,reverse:ordered.length-index}
   },{selector:task.observedSelector,managedKeyboardSelector}).catch(()=>null)
-  if(result?.excluded) return 'The exact visible target is outside the sequential Tab order in the initial browser state. Check this with several real focus moves, including forward Tab. Do not search for a different control.'
+  if(result?.excluded) return 'Use forward Tab through the controls near the target, then Shift+Tab to confirm where focus returns. Report which controls received focus if you cannot reach the target.'
   if(!result) return null
   const forward=result.forward<=result.reverse
   return 'Initial focus order suggests roughly '+(forward?result.forward:result.reverse)+' '+(forward?'Tab':'Shift+Tab')+' presses. Check actual focus and stop on the exact target.'
@@ -146,14 +147,16 @@ export function replayObjective(task,persona,{patched=false,hint=null}={}) {
     task.probe?.action==='read'?
     'Find the quoted passage directly using page search or vertical scrolling. Once there, look at the start of the passage, report whether the text fits across the viewport, and stop. Do not scroll through the rest of the page.':
     task.probe && keyboard?
-      'Keep focus on the page. When the exact control receives focus, activate it and check the outcome once.':
+      'Keep focus on the page. Carry out any setup in the task first. When the exact control receives focus, perform the requested action. Confirm the final state by observing the page. If focus skips the target, report the focus sequence and stop.':
       task.probe?'Test the exact target and report the outcome once.':null
   const menu=keyboard && task.barrierClass===1?
     'Tab to the menu opener. Use Arrow Down if focus alone does not reveal the submenu. Press Enter only on the required submenu link.' : null
   const failure=keyboard && baseline?'If a required control is missing, invisible, or cannot be reached, report the task as failed.':null
-  return [instructions[persona],guidance,menu,baseline?hint:null,failure,
+  return [instructions[persona],guidance,menu,hint,failure,
     'Stay on this public site. Do not sign in, register, pay, send or submit anything, or interact with a CAPTCHA or access challenge. Leave fixture settings unchanged. Use visible controls only.',
-    persona==='control' && task.controlTask?task.controlTask:task.task].filter(Boolean).join(' ')
+    task.id==='keyboard-add-headphones' && keyboard && fixtureURL(new URL(task.url))?
+      'Tab to the search field. Type headphones as a single text entry, then press Enter to search. Tab toward the Add to cart control in the Field Headphones result. If it receives focus, press Enter and observe whether the header reads Cart (1).':
+      persona==='control' && task.controlTask?task.controlTask:task.task].filter(Boolean).join(' ')
 }
 
 export function judgeJourney({task,persona,events,checks,kaneStatus}) {

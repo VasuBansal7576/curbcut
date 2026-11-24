@@ -1,4 +1,4 @@
-import {mkdir,readdir,rm,writeFile} from 'node:fs/promises'
+import {mkdir,readdir,readFile,rm,writeFile} from 'node:fs/promises'
 import path from 'node:path'
 import {ROOT,instant,readJSON,saveJSON,command,relative} from './io.mjs'
 import {normalizeTask} from './task.mjs'
@@ -25,9 +25,17 @@ export async function catalog() {
 }
 async function publish(patch) {
   if(!validate(patch)) throw new Error('Invalid publication')
-  await saveJSON(patchFile(patch.id),patch)
-  const build=await command(process.execPath,['scripts/build-site.mjs'])
-  if(build.code!==0) throw new Error(build.stderr)
+  const file=patchFile(patch.id)
+  const previous=await readFile(file).catch(error=>{if(error.code==='ENOENT') return null;throw error})
+  await saveJSON(file,patch)
+  try {
+    const build=await command(process.execPath,['scripts/build-site.mjs'])
+    if(build.code!==0) throw new Error(build.stderr || build.stdout || 'Site build failed.')
+  } catch(error) {
+    if(previous) await writeFile(file,previous)
+    else await rm(file)
+    throw error
+  }
 }
 function serialPublisher() {
   let publication=Promise.resolve()
@@ -45,7 +53,7 @@ export async function withLock(fn) {
 }
 const measured=result=>({status:result.status,reason:result.reason,steps:result.steps,checks:result.checks,geometry:result.geometry})
 
-export async function repairLocally(data,{base,replay=replayLane,write=propose,attempts=5,templates=bundledTemplates}={}) {
+export async function repairLocally(data,{base,replay=replayLane,write=propose,attempts=5,templates=bundledTemplates,agentOnly=false}={}) {
   if(!Number.isInteger(attempts) || attempts<1 || attempts>5) throw new Error('Use between one and five local patch proposals.')
   const task=await normalizeTask(data)
   const phases=[]
@@ -70,8 +78,8 @@ export async function repairLocally(data,{base,replay=replayLane,write=propose,a
   }
   const snapshot=withPointerContext(before.snapshot)
   let nearMiss
-  const eligible=await templates()
-  for(const [index,patch] of [...inherited(task,snapshot,eligible),...recipes(task,snapshot)].entries()) {
+  const eligible=agentOnly?[]:await templates()
+  for(const [index,patch] of (agentOnly?[]:[...inherited(task,snapshot,eligible),...recipes(task,snapshot)]).entries()) {
     const directory='fast-'+(index+1)
     const after=await run(directory+'/after',task.persona,patch)
     if(after.status==='pass') {
@@ -185,7 +193,7 @@ async function familyDecision(task,patch,policy) {
     mode:mature?selected?'sampled':'local-sample-bypass':'full'}}
 }
 
-export async function fix(data,{run=runKane,write=propose,persist=publish,check=oracle,base=undefined,prior=null,progress=async()=>{},attempts=3,registeredCandidate=null,provenance=null,replay,templates,policy=familyPolicy,verify=work=>work()}={}) {
+export async function fix(data,{run=runKane,write=propose,persist=publish,check=oracle,base=undefined,prior=null,progress=async()=>{},attempts=3,registeredCandidate=null,provenance=null,replay,templates,agentOnly=false,policy=familyPolicy,verify=work=>work()}={}) {
   if(!Number.isInteger(attempts) || attempts<1 || attempts>3) throw new Error('Use between one and three patch proposals.')
   const task=await normalizeTask(data)
   const dir=base??newDirectory(task.id)
@@ -208,7 +216,7 @@ export async function fix(data,{run=runKane,write=propose,persist=publish,check=
   if((task.probe || task.journey || task.evaluation) && (check===oracle || replay)) {
     const evidenceDir=dir
     const localDir=path.join(evidenceDir,'local')
-    const local=await repairLocally(task,{base:localDir,write,attempts,replay,templates})
+    const local=await repairLocally(task,{base:localDir,write,attempts,replay,templates,agentOnly})
     if(local.status!=='locally-fixed') return local
     return verify(async()=>{
       const {patch}=local
