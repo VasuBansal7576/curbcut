@@ -1,0 +1,13 @@
+{
+  "barrier": "At 320 CSS pixels, the body's 960px minimum width and the side-by-side table layout place the 480px-wide paragraph from x=84 to x=564, clipping its right side.",
+  "rules": [
+    {"selector":"body","action":"injectCSS","value":{"min-width":"0"}},
+    {"selector":"div.wrap","action":"injectCSS","value":{"max-width":"100%"}},
+    {"selector":"div.no-login","action":"injectCSS","value":{"max-width":"100%"}},
+    {"selector":"section.about-rp","action":"injectCSS","value":{"max-width":"100%"}},
+    {"selector":"div.about-rp__inner.no-login__box","action":"injectCSS","value":{"max-width":"100%","box-sizing":"border-box"}},
+    {"selector":"div.about-rp__text-wrapper","action":"injectCSS","value":{"display":"block","max-width":"100%"}},
+    {"selector":"div:nth-of-type(2) > div:nth-of-type(2) > section:nth-of-type(1) > div > div:nth-of-type(1) > p","action":"injectCSS","value":{"display":"block","max-width":"100%","box-sizing":"border-box"}},
+    {"selector":"img.about-rp__image","action":"injectCSS","value":{"display":"block","max-width":"100%","height":"auto"}}
+  ]
+}

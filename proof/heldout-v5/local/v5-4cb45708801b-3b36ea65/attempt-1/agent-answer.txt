@@ -1,0 +1,10 @@
+{
+  "barrier": "Pointer hover opens the Cybersecurity submenu, but keyboard focus and Arrow Down leave it hidden, so the Backup and Recovery link is unavailable.",
+  "rules": [
+    {
+      "selector": "#mega-menu-item-1213",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseover"
+    }
+  ]
+}

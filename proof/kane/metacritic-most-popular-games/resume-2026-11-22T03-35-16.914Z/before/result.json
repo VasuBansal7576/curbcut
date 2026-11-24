@@ -1,0 +1,1850 @@
+{
+  "status": "fail",
+  "runId": "6749ac63-af2e-4be9-a822-a4d518502185",
+  "reason": "Checkpoint assertion failed: \"the Most Popular control in the homepage Games carousel is in the sequential keyboard focus order\"",
+  "summary": "The agent made the required check immediately after a general page review. The visible page area showed other homepage sections, not the Games carousel, and the check result was an unresolved placeholder rather than a verified focus result.\nUpdate the run to use Tab and page-navigation keys to reach the Games carousel, confirm that Most Popular receives focus in sequence, and only then perform the assertion.",
+  "resultCode": 720,
+  "reasonCode": "assertion_error.checkpoint_failed",
+  "credits": 14.632269999999998,
+  "exitCode": 1,
+  "steps": [
+    "navigate: Navigate to https://www.metacritic.com/",
+    "analyze: ANALYZE(textual_visual, 'the Most Popular control in the homepage Games carousel",
+    "assert: the Most Popular control in the homepage Games carousel is in the sequential key"
+  ],
+  "objective": "Use Tab, Shift+Tab, arrow keys, Page Up, Page Down, Home, End, text entry, Space and Enter only. Remain on this public site. Stop before sign-in, registration or payment. Never change fixture settings. Use only visible controls. Verify the final result on the page. First assert the Most Popular control in the homepage Games carousel is in the sequential keyboard focus order. Use Tab and Enter to select Most Popular and verify it becomes the selected Games carousel category.",
+  "evidencePack": "proof/kane/metacritic-most-popular-games/resume-2026-11-22T03-35-16.914Z/before/2b56e926-4e80-4dab-94e3-d9eb9075bcca.evidence",
+  "evidenceValid": true,
+  "observedOutcome": {
+    "selector": "[data-testid=\"games-carousel\"] [data-testid=\"header-menu-item\"]:nth-child(3)[class*=\"global-header-menu__item--active\"]",
+    "visible": false
+  },
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "keyboard-only",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920,
+      "keys": {
+        "tab": 0,
+        "activate": 0,
+        "other": 0
+      }
+    },
+    "readerVisible": false,
+    "width": 1280,
+    "fixtureFixed": false,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "https://www.metacritic.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body.odyssey.odyssey-top-strategy",
+    "nodes": [
+      {
+        "selector": "[data-testid=\"games-carousel\"] [data-testid=\"header-menu-item\"]:nth-child(3)",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 282,
+        "width": 92
+      },
+      {
+        "selector": "ul.global-header-menu.m-0",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 32,
+        "width": 1216
+      },
+      {
+        "selector": "#__nuxt",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.nuxt-loading-indicator",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "header.c-site-header.flex",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.fandom-ad-sticky-container.sticky-placement-top",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.fandom-ad-wrapper.fandom-ad-placeholder",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#google_ads_iframe_\\/5441\\/metacritic\\.display\\/top_leaderboard\\/desktop\\/front_door_0__container__",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 155,
+        "width": 970
+      },
+      {
+        "selector": "#label-top_leaderboard",
+        "role": "text",
+        "name": "Advertisement",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 592,
+        "width": 95
+      },
+      {
+        "selector": "div.w-full.min-h-16",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.flex.items-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 32,
+        "width": 1216
+      },
+      {
+        "selector": "div.cursor-pointer.w-44",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 32,
+        "width": 176
+      },
+      {
+        "selector": "a.inline-block.no-underline",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 32,
+        "width": 176
+      },
+      {
+        "selector": "nav",
+        "role": "navigation",
+        "name": "Main navigation",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 208,
+        "width": 632
+      },
+      {
+        "selector": "li.shrink-0.relative",
+        "role": "menuitem",
+        "name": "Games",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 256,
+        "width": 82
+      },
+      {
+        "selector": "a.rounded-sm.px-4",
+        "role": "link",
+        "name": "Games",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 256,
+        "width": 82
+      },
+      {
+        "selector": "li.shrink-0.relative",
+        "role": "menuitem",
+        "name": "Movies",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 374,
+        "width": 84
+      },
+      {
+        "selector": "a.rounded-sm.px-4",
+        "role": "link",
+        "name": "Movies",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 374,
+        "width": 84
+      },
+      {
+        "selector": "li.shrink-0.relative",
+        "role": "menuitem",
+        "name": "TV Shows",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 493,
+        "width": 104
+      },
+      {
+        "selector": "a.rounded-sm.px-4",
+        "role": "link",
+        "name": "TV Shows",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 493,
+        "width": 104
+      },
+      {
+        "selector": "li.shrink-0.relative",
+        "role": "menuitem",
+        "name": "Music",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 633,
+        "width": 75
+      },
+      {
+        "selector": "a.rounded-sm.px-4",
+        "role": "link",
+        "name": "Music",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 633,
+        "width": 75
+      },
+      {
+        "selector": "li.shrink-0.relative",
+        "role": "menuitem",
+        "name": "News",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 744,
+        "width": 72
+      },
+      {
+        "selector": "a.rounded-sm.px-4",
+        "role": "link",
+        "name": "News",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 744,
+        "width": 72
+      },
+      {
+        "selector": "div.flex.grow",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 840,
+        "width": 408
+      },
+      {
+        "selector": "div.flex.items-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 840,
+        "width": 308
+      },
+      {
+        "selector": "form.flex.items-center",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 840,
+        "width": 308
+      },
+      {
+        "selector": "#global-search-input",
+        "role": "searchbox",
+        "name": "Search",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 849,
+        "width": 246
+      },
+      {
+        "selector": "button.aria-disabled\\:cursor-not-allowed.aria-disabled\\:opacity-75",
+        "role": "button",
+        "name": "Register",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1164,
+        "width": 84
+      },
+      {
+        "selector": "main",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.mt-12.grid",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "grid",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.grid-container-mobile.md\\:grid-container-tablet",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 32,
+        "width": 1216
+      },
+      {
+        "selector": "div.global-carousel.relative",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 32,
+        "width": 1216
+      },
+      {
+        "selector": "div.global-header.flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 32,
+        "width": 1216
+      },
+      {
+        "selector": "div.global-header__container.flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 32,
+        "width": 1216
+      },
+      {
+        "selector": "div.global-header__heading--empty.pb-0",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 32,
+        "width": 1120
+      },
+      {
+        "selector": "div.global-header-title.flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 32,
+        "width": 1120
+      },
+      {
+        "selector": "h2.m-0.font-\\[var\\(--font-family-headings\\,\\\"Proxima_Nova\\\"\\,sans-serif\\)\\]",
+        "role": "heading",
+        "name": "New and Notable",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 32,
+        "width": 188
+      },
+      {
+        "selector": "div.global-header__nav.hidden",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1168,
+        "width": 80
+      },
+      {
+        "selector": "button.font-medium.aria-disabled\\:cursor-not-allowed",
+        "role": "button",
+        "name": "Previous items",
+        "state": "disabled",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1168,
+        "width": 36
+      },
+      {
+        "selector": "button.font-medium.aria-disabled\\:cursor-not-allowed",
+        "role": "button",
+        "name": "Next items",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1212,
+        "width": 36
+      },
+      {
+        "selector": "div.relative.md\\:before\\:pointer-events-none",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 32,
+        "width": 1216
+      },
+      {
+        "selector": "section.grid.max-lg\\:\\[\\&\\:\\:-webkit-scrollbar\\]\\:w-0",
+        "role": "region",
+        "name": "New and Notable content",
+        "state": "",
+        "tabIndex": -1,
+        "display": "grid",
+        "left": 32,
+        "width": 1216
+      },
+      {
+        "selector": "div.w-76\\.5.relative",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 32,
+        "width": 306
+      },
+      {
+        "selector": "a.relative.z-1",
+        "role": "link",
+        "name": "Grand Theft Auto VI Grand Theft Auto VI game",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 48,
+        "width": 274
+      },
+      {
+        "selector": "div.relative.block",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 48,
+        "width": 274
+      },
+      {
+        "selector": "div.block.h-full",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 48,
+        "width": 274
+      },
+      {
+        "selector": "img.block.w-full",
+        "role": "img",
+        "name": "Grand Theft Auto VI",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 48,
+        "width": 274
+      },
+      {
+        "selector": "h3.m-0.line-clamp-2",
+        "role": "heading",
+        "name": "Grand Theft Auto VI",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flow-root",
+        "left": 48,
+        "width": 274
+      },
+      {
+        "selector": "li.flex.shrink-0",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 48,
+        "width": 48
+      },
+      {
+        "selector": "div.relative.z-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 48,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.items-stretch",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 48,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 48,
+        "width": 172
+      },
+      {
+        "selector": "div.leading-none",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 48,
+        "width": 105
+      },
+      {
+        "selector": "div.w-full.text-start",
+        "role": "text",
+        "name": "Metascore",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 48,
+        "width": 105
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 48,
+        "width": 172
+      },
+      {
+        "selector": "div.font-bold.text-gray-900",
+        "role": "text",
+        "name": "Universal Acclaim",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 48,
+        "width": 172
+      },
+      {
+        "selector": "div.text-sm\\/5.text-gray-900",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 48,
+        "width": 172
+      },
+      {
+        "selector": "a.transition-colors.md\\:hover\\:text-gray-700",
+        "role": "link",
+        "name": "Based on 158 Critic Reviews",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 48,
+        "width": 172
+      },
+      {
+        "selector": "div.self-stretch.flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 242,
+        "width": 80
+      },
+      {
+        "selector": "a.flex.flex-col",
+        "role": "link",
+        "name": "Metascore 99 out of 100",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 242,
+        "width": 80
+      },
+      {
+        "selector": "div.flex.items-center",
+        "role": "text",
+        "name": "Metascore 99 out of 100",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 242,
+        "width": 80
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 48,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.h-2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 48,
+        "width": 274
+      },
+      {
+        "selector": "div.bg-score-positive.transition-all",
+        "role": "text",
+        "name": "152 positive reviews (100%)",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 48,
+        "width": 274
+      },
+      {
+        "selector": "div.w-76\\.5.relative",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 350,
+        "width": 306
+      },
+      {
+        "selector": "a.relative.z-1",
+        "role": "link",
+        "name": "The Hunger Games: Sunrise on the Reaping The Hunger Games: Sunrise on the Reaping movie",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 366,
+        "width": 274
+      },
+      {
+        "selector": "div.relative.block",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 366,
+        "width": 274
+      },
+      {
+        "selector": "div.block.h-full",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 366,
+        "width": 274
+      },
+      {
+        "selector": "img.block.w-full",
+        "role": "img",
+        "name": "The Hunger Games: Sunrise on the Reaping",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 366,
+        "width": 274
+      },
+      {
+        "selector": "h3.m-0.line-clamp-2",
+        "role": "heading",
+        "name": "The Hunger Games: Sunrise on the Reaping",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flow-root",
+        "left": 366,
+        "width": 274
+      },
+      {
+        "selector": "li.flex.shrink-0",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 366,
+        "width": 50
+      },
+      {
+        "selector": "div.relative.z-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 366,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.items-stretch",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 366,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 366,
+        "width": 167
+      },
+      {
+        "selector": "div.leading-none",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 366,
+        "width": 105
+      },
+      {
+        "selector": "div.w-full.text-start",
+        "role": "text",
+        "name": "Metascore",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 366,
+        "width": 105
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 366,
+        "width": 167
+      },
+      {
+        "selector": "div.font-bold.text-gray-900",
+        "role": "text",
+        "name": "Mixed or Average",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 366,
+        "width": 167
+      },
+      {
+        "selector": "div.text-sm\\/5.text-gray-900",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 366,
+        "width": 167
+      },
+      {
+        "selector": "a.transition-colors.md\\:hover\\:text-gray-700",
+        "role": "link",
+        "name": "Based on 39 Critic Reviews",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 366,
+        "width": 167
+      },
+      {
+        "selector": "div.self-stretch.flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 560,
+        "width": 80
+      },
+      {
+        "selector": "a.flex.flex-col",
+        "role": "link",
+        "name": "Metascore 56 out of 100",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 560,
+        "width": 80
+      },
+      {
+        "selector": "div.flex.items-center",
+        "role": "text",
+        "name": "Metascore 56 out of 100",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 560,
+        "width": 80
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 366,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.h-2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 366,
+        "width": 274
+      },
+      {
+        "selector": "div.bg-score-positive.transition-all",
+        "role": "text",
+        "name": "20 positive reviews (51%)",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 366,
+        "width": 136
+      },
+      {
+        "selector": "div.bg-score-mixed.transition-all",
+        "role": "text",
+        "name": "17 neutral reviews (44%)",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 506,
+        "width": 116
+      },
+      {
+        "selector": "div.bg-score-negative.transition-all",
+        "role": "text",
+        "name": "2 negative reviews (5%)",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 626,
+        "width": 14
+      },
+      {
+        "selector": "div.w-76\\.5.relative",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 668,
+        "width": 306
+      },
+      {
+        "selector": "a.relative.z-1",
+        "role": "link",
+        "name": "I Play Rocky I Play Rocky movie",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 684,
+        "width": 274
+      },
+      {
+        "selector": "div.relative.block",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 684,
+        "width": 274
+      },
+      {
+        "selector": "div.block.h-full",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 684,
+        "width": 274
+      },
+      {
+        "selector": "img.block.w-full",
+        "role": "img",
+        "name": "I Play Rocky",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 684,
+        "width": 274
+      },
+      {
+        "selector": "h3.m-0.line-clamp-2",
+        "role": "heading",
+        "name": "I Play Rocky",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flow-root",
+        "left": 684,
+        "width": 274
+      },
+      {
+        "selector": "li.flex.shrink-0",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 684,
+        "width": 50
+      },
+      {
+        "selector": "div.relative.z-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 684,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.items-stretch",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 684,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 684,
+        "width": 167
+      },
+      {
+        "selector": "div.leading-none",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 684,
+        "width": 105
+      },
+      {
+        "selector": "div.w-full.text-start",
+        "role": "text",
+        "name": "Metascore",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 684,
+        "width": 105
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 684,
+        "width": 167
+      },
+      {
+        "selector": "div.font-bold.text-gray-900",
+        "role": "text",
+        "name": "Generally Favorable",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 684,
+        "width": 167
+      },
+      {
+        "selector": "div.text-sm\\/5.text-gray-900",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 684,
+        "width": 167
+      },
+      {
+        "selector": "a.transition-colors.md\\:hover\\:text-gray-700",
+        "role": "link",
+        "name": "Based on 46 Critic Reviews",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 684,
+        "width": 167
+      },
+      {
+        "selector": "div.self-stretch.flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 878,
+        "width": 80
+      },
+      {
+        "selector": "a.flex.flex-col",
+        "role": "link",
+        "name": "Metascore 68 out of 100",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 878,
+        "width": 80
+      },
+      {
+        "selector": "div.flex.items-center",
+        "role": "text",
+        "name": "Metascore 68 out of 100",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 878,
+        "width": 80
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 684,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.h-2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 684,
+        "width": 274
+      },
+      {
+        "selector": "div.bg-score-positive.transition-all",
+        "role": "text",
+        "name": "36 positive reviews (78%)",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 684,
+        "width": 208
+      },
+      {
+        "selector": "div.bg-score-mixed.transition-all",
+        "role": "text",
+        "name": "7 neutral reviews (15%)",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 896,
+        "width": 40
+      },
+      {
+        "selector": "div.bg-score-negative.transition-all",
+        "role": "text",
+        "name": "3 negative reviews (7%)",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 941,
+        "width": 17
+      },
+      {
+        "selector": "div.w-76\\.5.relative",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 986,
+        "width": 306
+      },
+      {
+        "selector": "a.relative.z-1",
+        "role": "link",
+        "name": "Paper Tiger Paper Tiger movie",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1002,
+        "width": 274
+      },
+      {
+        "selector": "div.relative.block",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1002,
+        "width": 274
+      },
+      {
+        "selector": "div.block.h-full",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1002,
+        "width": 274
+      },
+      {
+        "selector": "img.block.w-full",
+        "role": "img",
+        "name": "Paper Tiger",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1002,
+        "width": 274
+      },
+      {
+        "selector": "h3.m-0.line-clamp-2",
+        "role": "heading",
+        "name": "Paper Tiger",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flow-root",
+        "left": 1002,
+        "width": 274
+      },
+      {
+        "selector": "li.flex.shrink-0",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1002,
+        "width": 50
+      },
+      {
+        "selector": "div.relative.z-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1002,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.items-stretch",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1002,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1002,
+        "width": 167
+      },
+      {
+        "selector": "div.leading-none",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1002,
+        "width": 105
+      },
+      {
+        "selector": "div.w-full.text-start",
+        "role": "text",
+        "name": "Metascore",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1002,
+        "width": 105
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1002,
+        "width": 167
+      },
+      {
+        "selector": "div.font-bold.text-gray-900",
+        "role": "text",
+        "name": "Universal Acclaim",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1002,
+        "width": 167
+      },
+      {
+        "selector": "div.text-sm\\/5.text-gray-900",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1002,
+        "width": 167
+      },
+      {
+        "selector": "a.transition-colors.md\\:hover\\:text-gray-700",
+        "role": "link",
+        "name": "Based on 38 Critic Reviews",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 1002,
+        "width": 167
+      },
+      {
+        "selector": "div.self-stretch.flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1196,
+        "width": 80
+      },
+      {
+        "selector": "a.flex.flex-col",
+        "role": "link",
+        "name": "Metascore 81 out of 100",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1196,
+        "width": 80
+      },
+      {
+        "selector": "div.flex.items-center",
+        "role": "text",
+        "name": "Metascore 81 out of 100",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1196,
+        "width": 80
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1002,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.h-2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1002,
+        "width": 274
+      },
+      {
+        "selector": "div.bg-score-positive.transition-all",
+        "role": "text",
+        "name": "29 positive reviews (76%)",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1002,
+        "width": 206
+      },
+      {
+        "selector": "div.bg-score-mixed.transition-all",
+        "role": "text",
+        "name": "9 neutral reviews (24%)",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1212,
+        "width": 64
+      },
+      {
+        "selector": "div.w-76\\.5.relative",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1304,
+        "width": 306
+      },
+      {
+        "selector": "a.relative.z-1",
+        "role": "link",
+        "name": "The Further Mis-Adventures of Cliff Booth The Further Mis-Adventures of Cliff Booth movie",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1320,
+        "width": 274
+      },
+      {
+        "selector": "div.relative.block",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1320,
+        "width": 274
+      },
+      {
+        "selector": "div.block.h-full",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1320,
+        "width": 274
+      },
+      {
+        "selector": "img.block.w-full",
+        "role": "img",
+        "name": "The Further Mis-Adventures of Cliff Booth",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1320,
+        "width": 274
+      },
+      {
+        "selector": "h3.m-0.line-clamp-2",
+        "role": "heading",
+        "name": "The Further Mis-Adventures of Cliff Booth",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flow-root",
+        "left": 1320,
+        "width": 274
+      },
+      {
+        "selector": "li.flex.shrink-0",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1320,
+        "width": 50
+      },
+      {
+        "selector": "div.relative.z-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1320,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.items-stretch",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1320,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1320,
+        "width": 167
+      },
+      {
+        "selector": "div.leading-none",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1320,
+        "width": 105
+      },
+      {
+        "selector": "div.w-full.text-start",
+        "role": "text",
+        "name": "Metascore",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1320,
+        "width": 105
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1320,
+        "width": 167
+      },
+      {
+        "selector": "div.font-bold.text-gray-900",
+        "role": "text",
+        "name": "Generally Favorable",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1320,
+        "width": 167
+      },
+      {
+        "selector": "div.text-sm\\/5.text-gray-900",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1320,
+        "width": 167
+      },
+      {
+        "selector": "a.transition-colors.md\\:hover\\:text-gray-700",
+        "role": "link",
+        "name": "Based on 32 Critic Reviews",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 1320,
+        "width": 167
+      },
+      {
+        "selector": "div.self-stretch.flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1514,
+        "width": 80
+      },
+      {
+        "selector": "a.flex.flex-col",
+        "role": "link",
+        "name": "Metascore 69 out of 100",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1514,
+        "width": 80
+      },
+      {
+        "selector": "div.flex.items-center",
+        "role": "text",
+        "name": "Metascore 69 out of 100",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1514,
+        "width": 80
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1320,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.h-2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1320,
+        "width": 274
+      },
+      {
+        "selector": "div.bg-score-positive.transition-all",
+        "role": "text",
+        "name": "24 positive reviews (75%)",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1320,
+        "width": 200
+      },
+      {
+        "selector": "div.bg-score-mixed.transition-all",
+        "role": "text",
+        "name": "6 neutral reviews (19%)",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1524,
+        "width": 50
+      },
+      {
+        "selector": "div.bg-score-negative.transition-all",
+        "role": "text",
+        "name": "2 negative reviews (6%)",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1577,
+        "width": 17
+      },
+      {
+        "selector": "div.w-76\\.5.relative",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1622,
+        "width": 306
+      },
+      {
+        "selector": "a.relative.z-1",
+        "role": "link",
+        "name": "Steps Steps movie",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1638,
+        "width": 274
+      },
+      {
+        "selector": "div.relative.block",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1638,
+        "width": 274
+      },
+      {
+        "selector": "div.block.h-full",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1638,
+        "width": 274
+      },
+      {
+        "selector": "img.block.w-full",
+        "role": "img",
+        "name": "Steps",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1638,
+        "width": 274
+      },
+      {
+        "selector": "h3.m-0.line-clamp-2",
+        "role": "heading",
+        "name": "Steps",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flow-root",
+        "left": 1638,
+        "width": 274
+      },
+      {
+        "selector": "li.flex.shrink-0",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1638,
+        "width": 50
+      },
+      {
+        "selector": "div.relative.z-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1638,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.items-stretch",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1638,
+        "width": 274
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1638,
+        "width": 164
+      },
+      {
+        "selector": "div.leading-none",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1638,
+        "width": 105
+      },
+      {
+        "selector": "div.w-full.text-start",
+        "role": "text",
+        "name": "Metascore",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1638,
+        "width": 105
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1638,
+        "width": 164
+      },
+      {
+        "selector": "div.font-bold.text-gray-900",
+        "role": "text",
+        "name": "Mixed or Average",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1638,
+        "width": 164
+      },
+      {
+        "selector": "div.text-sm\\/5.text-gray-900",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1638,
+        "width": 164
+      },
+      {
+        "selector": "a.transition-colors.md\\:hover\\:text-gray-700",
+        "role": "link",
+        "name": "Based on 10 Critic Reviews",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 1638,
+        "width": 164
+      },
+      {
+        "selector": "div.self-stretch.flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1832,
+        "width": 80
+      },
+      {
+        "selector": "a.flex.flex-col",
+        "role": "link",
+        "name": "Metascore 53 out of 100",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1832,
+        "width": 80
+      },
+      {
+        "selector": "div.flex.items-center",
+        "role": "text",
+        "name": "Metascore 53 out of 100",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1832,
+        "width": 80
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1638,
+        "width": 274
+      }
+    ]
+  },
+  "video": "proof/kane/metacritic-most-popular-games/resume-2026-11-22T03-35-16.914Z/before/recording.mp4"
+}

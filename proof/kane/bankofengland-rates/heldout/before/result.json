@@ -1,0 +1,79 @@
+{
+  "status": "inconclusive",
+  "runId": "1af6774c-12b6-447b-b369-4adefd890ffa",
+  "reason": "AP determined agent is stuck — no viable actions remain",
+  "summary": "The website's edge security blocked the browser at the first page load, so the public homepage and its controls never became available.\nRetry from an approved network or browser session, or ask the site owner to allow the automation traffic. Once access is restored, rerun the Bank Rate viewport and activation checks.\nevidence: network_failure: GET https://www.bankofengland.co.uk/ -> 403 body: <HTML><HEAD>\n<TITLE>Access Denied</TITLE>\nevidence: error_ui_text: You don't have permission to access \"http&#58;&#47;&#47;www&#46;bankofengland&#46;co&#46;uk&#47;\" on this server.",
+  "resultCode": 330,
+  "reasonCode": "stuck.ap_stuck",
+  "credits": 12.685854999999998,
+  "exitCode": 1,
+  "steps": [
+    "navigate: Navigate to https://www.bankofengland.co.uk/",
+    "wait: Waiting due to the access challenge on the Bank of England starting page",
+    "wait: Waiting because the Bank of England page displays an Access Denied access challenge"
+  ],
+  "objective": "Use the locked 320 CSS pixel viewport and scroll vertically only. Remain on this public site. Stop before sign-in, registration or payment. If a CAPTCHA or access challenge appears, stop and report it. Never change fixture settings. Use only visible controls. Verify the final result on the page. At 320px width, assert the Current Bank Rate control fits within the visible width without horizontal scrolling. Activate it and verify the Bank Rate information page or panel opens.",
+  "evidencePack": "proof/kane/bankofengland-rates/heldout/before/73804667-851f-4c3b-b5f1-1023bb74dbaf.evidence",
+  "evidenceValid": true,
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "low-vision",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 320,
+      "maxWidth": 320
+    },
+    "readerVisible": false,
+    "width": 320,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "https://www.bankofengland.co.uk/",
+    "width": 320,
+    "scrollWidth": 320,
+    "focused": "body",
+    "nodes": [
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Access Denied",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 304
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Reference #18.2767d117.1795343312.50b2136e",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 304
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "https://errors.edgesuite.net/18.2767d117.1795343312.50b2136e",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 304
+      }
+    ]
+  },
+  "video": "proof/kane/bankofengland-rates/heldout/before/recording.mp4"
+}

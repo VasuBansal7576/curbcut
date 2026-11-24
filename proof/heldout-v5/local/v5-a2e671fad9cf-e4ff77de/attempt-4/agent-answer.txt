@@ -1,0 +1,31 @@
+{
+  "barrier": "At 320 CSS pixels, the main navigation is set to display:none, so Solutions cannot receive focus. Earlier repairs made the trigger reachable, but For Advisors remained unavailable after ArrowDown.",
+  "rules": [
+    {
+      "selector": "header.header.header-marketing > div.header-container.container",
+      "action": "injectCSS",
+      "value": {"flex-wrap": "wrap", "height": "auto"}
+    },
+    {
+      "selector": "#menu-main-navigation",
+      "action": "injectCSS",
+      "value": {"display": "flex", "flex-wrap": "wrap", "max-width": "100%", "min-width": "0"}
+    },
+    {
+      "selector": "#menu-main-navigation > div.header-mainmenu-item.dropdown:first-of-type:is(:hover, :focus-within) > div.dropdown-menu",
+      "action": "injectCSS",
+      "value": {"display": "block", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "#menu-main-navigation > div.header-mainmenu-item.dropdown:first-of-type > a.dropdown-toggle",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#menu-main-navigation > div.header-mainmenu-item.dropdown:first-of-type",
+      "items": "#menu-main-navigation > div.header-mainmenu-item.dropdown:first-of-type > a.dropdown-toggle, #menu-main-navigation > div.header-mainmenu-item.dropdown:first-of-type > div.dropdown-menu > a.dropdown-item",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ]
+}

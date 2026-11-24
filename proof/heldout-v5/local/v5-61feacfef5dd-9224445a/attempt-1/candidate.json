@@ -1,0 +1,57 @@
+{
+  "id": "v5-61feacfef5dd-9224445a",
+  "url": "https://www.superguidatv.it/",
+  "persona": "keyboard-only",
+  "task": "Open “Soap opera” from keyboard focus or with Arrow Down and follow “La forza di una donna”. Confirm the public destination /soap/la-forza-di-una-donna/.",
+  "controlTask": "Hover “Soap opera”, click “La forza di una donna” and confirm /soap/la-forza-di-una-donna/.",
+  "observedSelector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/soap/la-forza-di-una-donna/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menu-td-demo-header-menu-1 > li:nth-of-type(5)",
+    "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > ul > li:nth-of-type(2) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.superguidatv.it",
+  "match": "https://www.superguidatv.it/",
+  "barrier": "The Soap opera link receives keyboard focus, but its Superfish submenu stays at display:none after focus and Arrow Down. Pointer hover opens the submenu and exposes the La forza di una donna link.",
+  "rules": [
+    {
+      "selector": "#menu-td-demo-header-menu-1 > li.menu-item-27719",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseover"
+    },
+    {
+      "selector": "#menu-td-demo-header-menu-1 > li.menu-item-27719 > a, #menu-td-demo-header-menu-1 > li.menu-item-27719 > ul.sub-menu > li > a",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

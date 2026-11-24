@@ -1,0 +1,69 @@
+{
+  "id": "v5-50fb49e07856f48c7a86",
+  "url": "https://gamerch.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “事前登録・リリース情報 『Tower of Babel: Survivors of Chaos』全世界累計販売本数20万本突破！ 6日まえ” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “事前登録・リリース情報 『Tower of Babel: Survivors of Chaos』全世界累計販売本数20万本突破！ 6日まえ” at normal width.",
+  "observedSelector": "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div > ul > li:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div > ul > li:nth-of-type(1)",
+      "equals": "事前登録・リリース情報 『Tower of Babel: Survivors of Chaos』全世界累計販売本数20万本突破！ 6日まえ"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div > ul > li:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "gamerch.com",
+  "match": "https://gamerch.com/",
+  "barrier": "At 320 CSS pixels, the 1,000-pixel desktop layout places the 460-pixel article row at x=270. Horizontal clipping hides most of the passage, which sits in a fixed-width text column beside the thumbnail.",
+  "rules": [
+    {
+      "selector": "div.layout:has(div.main-column)",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "div.layout div.main-column",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.main-column > div.area > div.topics__article > ul > li",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "div.main-column > div.area > div.topics__article > ul > li > div.topics__article--contents",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "height": "auto",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

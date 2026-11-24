@@ -1,0 +1,15 @@
+{
+  "barrier": "The search input exposes the combobox role, while Reading view's probe requires a textbox. The allowed rules cannot assign the textbox role, so naming the field and marking its search region still leaves the role mismatch unresolved.",
+  "rules": [
+    {
+      "selector": "div.search:has(#searchAutocomplete > input)",
+      "action": "setRole",
+      "value": "search"
+    },
+    {
+      "selector": "#searchAutocomplete > input",
+      "action": "addLabel",
+      "value": "Search for Abstracts, Guidelines, Meetings"
+    }
+  ]
+}

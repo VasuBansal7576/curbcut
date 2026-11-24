@@ -1,0 +1,34 @@
+{
+  "id": "v4-6d930fe59706b0d02cc7",
+  "url": "https://www.americanmuscle.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search AmericanMuscle.com” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search AmericanMuscle.com” field and type test without submitting.",
+  "observedSelector": "#keywords",
+  "requiredName": "Search AmericanMuscle.com",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#keywords",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.americanmuscle.com",
+  "match": "https://www.americanmuscle.com/",
+  "barrier": "The #keywords input already has the textbox role but has no accessible name, so it cannot be found by name in Reading view.",
+  "rules": [
+    {
+      "selector": "#keywords",
+      "action": "addLabel",
+      "value": "Search AmericanMuscle.com"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

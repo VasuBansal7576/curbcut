@@ -1,0 +1,1 @@
+{"barrier":"Focus and Arrow Down leave the Resources submenu at display:none, keeping the Stack Ads link unavailable to keyboard users. Pointer hover opens the submenu and updates the button’s expanded state.","rules":[{"selector":"#main-navigation > ul > li.nav__item > button[aria-controls=\"submenu-resources\"]","action":"mirrorHoverEventToFocus","value":"mouseenter"}]}

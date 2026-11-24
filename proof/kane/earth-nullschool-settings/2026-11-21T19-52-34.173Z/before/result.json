@@ -1,0 +1,1357 @@
+{
+  "status": "pass",
+  "runId": "7f8f30be-33a0-4b14-92f5-a39ad817dd55",
+  "reason": "Objective completed",
+  "summary": "The requested lower-left globe control labeled “earth” was reached using the keyboard and activated.\nThe settings menu opened successfully and displayed both the Mode and Projection controls.\nThe task was completed on the public Earth Nullschool site without entering sign-in, registration, or payment screens.",
+  "resultCode": 100,
+  "reasonCode": "success.complete",
+  "credits": 17.887605,
+  "exitCode": 0,
+  "steps": [
+    "navigate: Navigate to https://earth.nullschool.net/",
+    "press_key: PRIMARY: press the Tab key",
+    "press_key: PRIMARY: press the Enter key",
+    "analyze: the settings menu displays its Projection control",
+    "assert: the settings menu is expanded and displays its Mode and Projection controls"
+  ],
+  "evidencePack": "proof/kane/earth-nullschool-settings/2026-11-21T19-52-34.173Z/before/47de08be-a298-445e-a1be-80bae421aa17.evidence",
+  "evidenceValid": true,
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "keyboard-only",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920,
+      "keys": {
+        "tab": 1,
+        "activate": 1,
+        "other": 0
+      }
+    },
+    "readerVisible": false,
+    "width": 1280,
+    "fixtureFixed": false,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "https://earth.nullschool.net/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "button.card.no-touch-tt",
+    "nodes": [
+      {
+        "selector": "#earth",
+        "role": "text",
+        "name": "earth",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 32,
+        "width": 47
+      },
+      {
+        "selector": "button.card.no-touch-tt",
+        "role": "button",
+        "name": "earth Show/Hide Menu",
+        "state": "expanded true",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 16,
+        "width": 79
+      },
+      {
+        "selector": "main",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.earth-bar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 119
+      },
+      {
+        "selector": "div.earth.vert-unchanged",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 16,
+        "width": 87
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "earth Show/Hide Menu",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 16,
+        "width": 79
+      },
+      {
+        "selector": "#earth-tt",
+        "role": "tooltip",
+        "name": "Show/Hide Menu",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1120,
+        "width": 160
+      },
+      {
+        "selector": "#main-display",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#menu-sizer",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 16,
+        "width": 528
+      },
+      {
+        "selector": "div.stack",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 16,
+        "width": 528
+      },
+      {
+        "selector": "#menu",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 16,
+        "width": 528
+      },
+      {
+        "selector": "div.panel.card",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 16,
+        "width": 528
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 33,
+        "width": 494
+      },
+      {
+        "selector": "div.row-label",
+        "role": "text",
+        "name": "Date",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 33,
+        "width": 36
+      },
+      {
+        "selector": "div.vert-hidden.sep",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 77,
+        "width": 2
+      },
+      {
+        "selector": "#change-tz",
+        "role": "button",
+        "name": "Change Timezone",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 281,
+        "width": 77
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 33,
+        "width": 494
+      },
+      {
+        "selector": "div.row-label",
+        "role": "text",
+        "name": "Data",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 33,
+        "width": 36
+      },
+      {
+        "selector": "div.sep",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 77,
+        "width": 2
+      },
+      {
+        "selector": "div.bunch",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 87,
+        "width": 121
+      },
+      {
+        "selector": "div.field",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 87,
+        "width": 121
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 33,
+        "width": 494
+      },
+      {
+        "selector": "div.row-label",
+        "role": "text",
+        "name": "Source",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 33,
+        "width": 52
+      },
+      {
+        "selector": "div.sep",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 93,
+        "width": 2
+      },
+      {
+        "selector": "div.bunch",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 103,
+        "width": 330
+      },
+      {
+        "selector": "div.field",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 103,
+        "width": 330
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 33,
+        "width": 494
+      },
+      {
+        "selector": "div.row-label",
+        "role": "text",
+        "name": "Scale",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 33,
+        "width": 41
+      },
+      {
+        "selector": "div.sep",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 82,
+        "width": 2
+      },
+      {
+        "selector": "div.colorbar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 92,
+        "width": 435
+      },
+      {
+        "selector": "#colorbar-cursor",
+        "role": "text",
+        "name": "0 km/h",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 90,
+        "width": 4
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 33,
+        "width": 494
+      },
+      {
+        "selector": "#control-label",
+        "role": "text",
+        "name": "Control",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 33,
+        "width": 57
+      },
+      {
+        "selector": "div.sep",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 98,
+        "width": 2
+      },
+      {
+        "selector": "div.bunch",
+        "role": "toolbar",
+        "name": "Control",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 108,
+        "width": 402
+      },
+      {
+        "selector": "div.bunch",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 108,
+        "width": 236
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "Current Conditions",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 108,
+        "width": 50
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "Choose Date",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 32
+      },
+      {
+        "selector": "#nav-arrows",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 202,
+        "width": 134
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "-8 hours",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 202,
+        "width": 32
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "-1 hour",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 236,
+        "width": 32
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "+1 hour",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 270,
+        "width": 32
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "+8 hours",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 304,
+        "width": 32
+      },
+      {
+        "selector": "div.bunch.multi-select",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 346,
+        "width": 164
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "Toggle Grid",
+        "state": "pressed false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 346,
+        "width": 49
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "Start/Stop Animation",
+        "state": "pressed true",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 399,
+        "width": 32
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "High Definition Mode",
+        "state": "pressed false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 435,
+        "width": 39
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "Current Position",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 478,
+        "width": 32
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 33,
+        "width": 494
+      },
+      {
+        "selector": "#mode-label",
+        "role": "text",
+        "name": "Mode",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 33,
+        "width": 42
+      },
+      {
+        "selector": "div.sep",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 83,
+        "width": 2
+      },
+      {
+        "selector": "div.bunch",
+        "role": "tablist",
+        "name": "Mode",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 93,
+        "width": 384
+      },
+      {
+        "selector": "#air-tab",
+        "role": "tab",
+        "name": "Air Mode",
+        "state": "selected true",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 93,
+        "width": 38
+      },
+      {
+        "selector": "#ocean-tab",
+        "role": "tab",
+        "name": "Ocean Mode",
+        "state": "selected false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 134,
+        "width": 65
+      },
+      {
+        "selector": "#chem-tab",
+        "role": "tab",
+        "name": "Atmospheric Chemistry Mode",
+        "state": "selected false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 201,
+        "width": 60
+      },
+      {
+        "selector": "#particulates-tab",
+        "role": "tab",
+        "name": "Particulates Mode",
+        "state": "selected false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 263,
+        "width": 108
+      },
+      {
+        "selector": "#space-tab",
+        "role": "tab",
+        "name": "Space Weather Mode",
+        "state": "selected false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 373,
+        "width": 62
+      },
+      {
+        "selector": "#bio-tab",
+        "role": "tab",
+        "name": "Biology Mode",
+        "state": "selected false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 437,
+        "width": 40
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 33,
+        "width": 494
+      },
+      {
+        "selector": "#animate-label",
+        "role": "text",
+        "name": "Animate",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 33,
+        "width": 64
+      },
+      {
+        "selector": "div.sep",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 105,
+        "width": 2
+      },
+      {
+        "selector": "div.bunch",
+        "role": "radiogroup",
+        "name": "Animate",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 115,
+        "width": 205
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Wind Animation",
+        "state": "checked true",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 115,
+        "width": 54
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Ocean Surface Currents Animation",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 171,
+        "width": 83
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Peak Wave Period Animation",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 256,
+        "width": 64
+      },
+      {
+        "selector": "#air-tab-height",
+        "role": "tabpanel",
+        "name": "Air",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 33,
+        "width": 494
+      },
+      {
+        "selector": "#air-height-label",
+        "role": "text",
+        "name": "Height",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 33,
+        "width": 52
+      },
+      {
+        "selector": "div.sep",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 93,
+        "width": 2
+      },
+      {
+        "selector": "div.bunch",
+        "role": "radiogroup",
+        "name": "Height",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 103,
+        "width": 370
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Surface",
+        "state": "checked true, disabled false",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 103,
+        "width": 41
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "1000 hectopascals",
+        "state": "checked false, disabled false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 146,
+        "width": 57
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "850 hectopascals",
+        "state": "checked false, disabled false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 204,
+        "width": 46
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "700 hectopascals",
+        "state": "checked false, disabled false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 252,
+        "width": 46
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "500 hectopascals",
+        "state": "checked false, disabled false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 301,
+        "width": 46
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "250 hectopascals",
+        "state": "checked false, disabled false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 349,
+        "width": 46
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "70 hectopascals",
+        "state": "checked false, disabled false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 398,
+        "width": 36
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "10 hectopascals",
+        "state": "checked false, disabled false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 436,
+        "width": 36
+      },
+      {
+        "selector": "#pressure-label",
+        "role": "text",
+        "name": "hPa",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 480,
+        "width": 28
+      },
+      {
+        "selector": "#air-tab-overlay",
+        "role": "tabpanel",
+        "name": "Air",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 33,
+        "width": 494
+      },
+      {
+        "selector": "#air-overlay-label",
+        "role": "text",
+        "name": "Overlay",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 33,
+        "width": 59
+      },
+      {
+        "selector": "div.sep",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 100,
+        "width": 2
+      },
+      {
+        "selector": "div.bunch",
+        "role": "radiogroup",
+        "name": "Overlay",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 110,
+        "width": 417
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Wind Speed",
+        "state": "checked true",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 110,
+        "width": 54
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Temperature",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 166,
+        "width": 57
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Relative Humidity",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 225,
+        "width": 39
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Dew Point Temperature",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 266,
+        "width": 49
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Wet Bulb Temperature",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 316,
+        "width": 51
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "3-hour Precipitation Accumulation",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 369,
+        "width": 58
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Convective Available Potential Energy from Surface",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 429,
+        "width": 59
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Total Precipitable Water",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 110,
+        "width": 52
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Total Cloud Water",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 163,
+        "width": 52
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Mean Sea Level Pressure",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 217,
+        "width": 61
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Misery Index",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 280,
+        "width": 35
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Ultraviolet Index and Erythemal Dose Rate",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 317,
+        "width": 43
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Instantaneous Wind Power Density",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 362,
+        "width": 52
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "No Overlay",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 416,
+        "width": 56
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 33,
+        "width": 494
+      },
+      {
+        "selector": "#projection-label",
+        "role": "text",
+        "name": "Projection",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 33,
+        "width": 79
+      },
+      {
+        "selector": "div.sep",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 120,
+        "width": 2
+      },
+      {
+        "selector": "div.bunch",
+        "role": "radiogroup",
+        "name": "Projection",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 130,
+        "width": 335
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Atlantis",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 130,
+        "width": 32
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Conic Equidistant",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 164,
+        "width": 38
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Equirectangular",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 204,
+        "width": 32
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Equal Earth",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 238,
+        "width": 39
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Orthographic",
+        "state": "checked true",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 279,
+        "width": 32
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Patterson",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 313,
+        "width": 32
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Stereographic",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 347,
+        "width": 32
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Waterman Butterfly",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 381,
+        "width": 41
+      },
+      {
+        "selector": "button",
+        "role": "radio",
+        "name": "Winkel Tripel",
+        "state": "checked false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 424,
+        "width": 41
+      },
+      {
+        "selector": "div.last.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 33,
+        "width": 494
+      },
+      {
+        "selector": "div.bunch",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 33,
+        "width": 61
+      },
+      {
+        "selector": "a.kiosk",
+        "role": "link",
+        "name": "About this site",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 33,
+        "width": 61
+      },
+      {
+        "selector": "div.bunch.kiosk",
+        "role": "toolbar",
+        "name": "Links",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 130,
+        "width": 205
+      },
+      {
+        "selector": "a.app-link",
+        "role": "link",
+        "name": "Nullschool App",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 130,
+        "width": 32
+      },
+      {
+        "selector": "img.fa",
+        "role": "img",
+        "name": "app icon",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 138,
+        "width": 16
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Newsletter",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 164,
+        "width": 32
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Facebook",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 198,
+        "width": 32
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Bluesky",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 232,
+        "width": 32
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "YouTube",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 266,
+        "width": 35
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Instagram",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 303,
+        "width": 32
+      },
+      {
+        "selector": "div.bunch",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 372,
+        "width": 87
+      },
+      {
+        "selector": "a.kiosk",
+        "role": "link",
+        "name": "Provide feedback about this site",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 372,
+        "width": 87
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 495,
+        "width": 32
+      },
+      {
+        "selector": "div.lang-shortcuts.bunch",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 495,
+        "width": 0
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "settings",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 495,
+        "width": 32
+      },
+      {
+        "selector": "div.cta-bar.kiosk",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1083,
+        "width": 197
+      },
+      {
+        "selector": "div.cta.vert-unchanged",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1099,
+        "width": 165
+      },
+      {
+        "selector": "div.cta-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1115,
+        "width": 105
+      },
+      {
+        "selector": "a.app-cta.app-link",
+        "role": "link",
+        "name": "app icon get the app!",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1115,
+        "width": 105
+      },
+      {
+        "selector": "img.app-icon",
+        "role": "img",
+        "name": "app icon",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1115,
+        "width": 20
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "Dismiss",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1224,
+        "width": 32
+      }
+    ]
+  },
+  "video": "proof/kane/earth-nullschool-settings/2026-11-21T19-52-34.173Z/before/recording.mp4"
+}

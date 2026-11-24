@@ -1,0 +1,12 @@
+Skill update available: not installed → 0.1.4 — run `kane-cli install skill`
+
+Running on: Desktop · Chrome
+evidence: 1 status_disagrees advisory(ies) — step verdicts disagree with their failure records [
+  {
+    code: 'l1.failure.status_disagrees',
+    severity: 'warning',
+    location: 'tests/use-tab-shift-tab-arrow-keys-page-up-pag-6065d98f/steps/3-0-3/failure.yaml',
+    message: 'failure record status "broken" disagrees with result.yaml step status "failed"'
+  }
+]
+evidence: view locally with `kane-cli evidence serve /Users/vasu/.testmuai/kaneai/sessions/cf5ef348-c917-42a8-88c6-a12b55a51dc1/evidence/3b5e6f66-7626-44b1-bef3-48d6dbe844e0.evidence`

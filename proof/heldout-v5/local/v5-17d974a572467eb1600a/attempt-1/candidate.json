@@ -1,0 +1,63 @@
+{
+  "id": "v5-17d974a572467eb1600a",
+  "url": "https://www.itmedia.co.jp/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “・京大がAI依存チェックリスト公開 「当てはまるものあれば、しばらくAI触らないで」” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “・京大がAI依存チェックリスト公開 「当てはまるものあれば、しばらくAI触らないで」” at normal width.",
+  "observedSelector": "#colBoxNewArtTheme > div:nth-of-type(1) > div:nth-of-type(3) > ul > li:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#colBoxNewArtTheme > div:nth-of-type(1) > div:nth-of-type(3) > ul > li:nth-of-type(1)",
+      "equals": "・京大がAI依存チェックリスト公開 「当てはまるものあれば、しばらくAI触らないで」"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#colBoxNewArtTheme > div:nth-of-type(1) > div:nth-of-type(3) > ul > li:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.itmedia.co.jp",
+  "match": "https://www.itmedia.co.jp/",
+  "barrier": "At 320 CSS pixels, the headline list item remains 670 CSS pixels wide inside a desktop layout whose main wrapper has a 990 CSS pixel minimum width. The page clips the overflow, leaving part of the passage outside the visible area.",
+  "rules": [
+    {
+      "selector": "#WallPaper, #masterBody, #masterBodyOut, #masterBodyIn, #masterBodyOuter, #masterBodyInner, #masterContents, #globalContents, #masterMain",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#globalContents",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "#masterMain .colBox.colBoxNewArt, #masterMain .colBox.colBoxNewArt .colBoxOuter, #colBoxNewArt, #colBoxNewArtTheme, #colBoxNewArtTheme > .colBoxIndex, #colBoxNewArtTheme > .colBoxIndex > .colBoxUlist, #colBoxNewArtTheme .colBoxUlist > ul, #colBoxNewArtTheme .colBoxUlist > ul > li",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#colBoxNewArtTheme .colBoxUlist > ul > li, #colBoxNewArtTheme .colBoxUlist > ul > li > a",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "normal",
+        "overflow-wrap": "anywhere",
+        "height": "auto"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

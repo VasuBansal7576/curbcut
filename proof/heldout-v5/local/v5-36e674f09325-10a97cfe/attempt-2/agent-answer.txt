@@ -1,0 +1,16 @@
+{
+  "barrier": "Tab traversal skipped the visible Yearbook span even though it had tabindex=\"0\", so the keyboard run never reached the control that reveals Students & Families.",
+  "rules": [
+    {
+      "selector": "body.default.unaffiliated:has(#onetrust-policy)",
+      "action": "removeFocusTrap"
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#yearbook-dropdown > span",
+      "target": "#yearbook-level-2-nav-desktop",
+      "mode": "display",
+      "display": "grid"
+    }
+  ]
+}

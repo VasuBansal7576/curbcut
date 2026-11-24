@@ -1,0 +1,23 @@
+{
+  "barrier": "Keyboard focus reaches “Soap opera”, but after Arrow Down, Tab misses “La forza di una donna”. The closed submenu has display:none, and pointer hover applies the sfHover open class to its parent list item.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#menu-td-demo-header-menu-1 > li.menu-item-27719 > a.sf-with-ul",
+      "target": "#menu-td-demo-header-menu-1 > li.menu-item-27719",
+      "mode": "class",
+      "className": "sfHover"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#menu-td-demo-header-menu-1 > li.menu-item-27719",
+      "items": "#menu-td-demo-header-menu-1 > li.menu-item-27719 > a.sf-with-ul, #menu-td-demo-header-menu-1 > li.menu-item-27719 > ul.sub-menu > li > a",
+      "orientation": "vertical",
+      "activate": "focus"
+    },
+    {
+      "action": "restoreFocusOutline",
+      "selector": "#menu-td-demo-header-menu-1 > li.menu-item-27719 > a.sf-with-ul, #menu-td-demo-header-menu-1 > li.menu-item-27719 > ul.sub-menu > li > a"
+    }
+  ]
+}

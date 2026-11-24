@@ -1,0 +1,72 @@
+{
+  "id": "v5-af564ab070db-43142dbd",
+  "url": "https://npo.nl/",
+  "persona": "keyboard-only",
+  "task": "Focus “Sinterklaas”, move once with ArrowRight, activate “Herfst” and read its panel.",
+  "controlTask": "Click “Herfst” and read its panel.",
+  "observedSelector": "#tab1",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#tab-content2"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "#inhoud > div > div:nth-of-type(8) > div:nth-of-type(1) > ul",
+    "[role=tab]",
+    "#tab-content2"
+  ],
+  "journey": [
+    {
+      "selector": "#tab1",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#tab1",
+      "action": "key",
+      "key": "ArrowRight",
+      "pointer": {
+        "action": "click",
+        "selector": "#tab2"
+      }
+    },
+    {
+      "selector": "#tab2",
+      "action": "activate",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#tab-content2",
+      "action": "observe"
+    }
+  ],
+  "site": "npo.nl",
+  "match": "https://npo.nl/",
+  "barrier": "Tab reaches Sinterklaas, but the viewport stays at the top of the page while the focused button is more than 5,800 pixels below it. Making the button focusable and restoring its outline did not bring it into view.",
+  "rules": [
+    {
+      "selector": "html.html.js, body.navigation\\:mobile",
+      "action": "injectCSS",
+      "value": {
+        "height": "auto",
+        "max-height": "none"
+      }
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "ul[role=\"tablist\"]:has(> li > #tab1)",
+      "items": "ul[role=\"tablist\"]:has(> li > #tab1) > li > button[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

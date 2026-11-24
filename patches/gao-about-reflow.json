@@ -1,0 +1,55 @@
+{
+  "id": "gao-about-reflow",
+  "url": "https://www.gao.gov/about",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Learn about our role in the government, plus our history, performance,”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "controlTask": "At normal width, read the passage beginning “Learn about our role in the government, plus our history, performance,” and verify all its text is visible without horizontal scrolling.",
+  "observedSelector": "#block--gao-about-teasers-contact-info > div:nth-of-type(1) > div:nth-of-type(3) > a > div > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#block--gao-about-teasers-contact-info > div:nth-of-type(1) > div:nth-of-type(3) > a > div > p",
+      "equals": "Learn about our role in the government, plus our history, performance,"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#block--gao-about-teasers-contact-info > div:nth-of-type(1) > div:nth-of-type(3) > a > div > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.gao.gov",
+  "match": "https://www.gao.gov/about",
+  "barrier": "At 320 CSS pixels, the teaser row keeps three cards side by side, placing the requested passage entirely beyond the right edge at x=456–554.",
+  "rules": [
+    {
+      "selector": "div.row",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane/gao-about-reflow/heldout-v2/before/recording.mp4",
+    "after": "proof/kane/gao-about-reflow/heldout-v2/attempt-1/after/recording.mp4",
+    "control": "proof/kane/gao-about-reflow/heldout-v2/control/recording.mp4",
+    "verifiedAt": "2026-11-22T14:39:48.288Z",
+    "kaneRunIds": [
+      "e5d68f72-1bf5-4190-bd36-68a0daf94235",
+      "097e438b-77d5-4b9b-b9c6-4ba130ad25c5",
+      "4084e3f0-cb28-4c46-a536-62fb61d9cc85"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-22T14:39:48.288Z",
+      "event": "verified",
+      "before": "e5d68f72-1bf5-4190-bd36-68a0daf94235",
+      "control": "097e438b-77d5-4b9b-b9c6-4ba130ad25c5",
+      "after": "4084e3f0-cb28-4c46-a536-62fb61d9cc85"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "v4-07809f6fe8ae-6150d51e",
+  "url": "https://lionic.com/",
+  "persona": "keyboard-only",
+  "task": "Expand “Company Licensing Products Support” with the keyboard and read “Endpoint Solution (SDK)”.",
+  "controlTask": "Click “Company Licensing Products Support” and read “Endpoint Solution (SDK)”.",
+  "observedSelector": "#desktop-nav",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#desktop-nav-license > div:nth-of-type(2) > div:nth-of-type(2) > p",
+      "equals": "Endpoint Solution (SDK)"
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#desktop-nav-content"
+  ],
+  "journey": [
+    {
+      "selector": "#desktop-nav",
+      "action": "activate"
+    },
+    {
+      "selector": "#desktop-nav-license > div:nth-of-type(2) > div:nth-of-type(2) > p",
+      "action": "observe"
+    }
+  ],
+  "site": "lionic.com",
+  "match": "https://lionic.com/",
+  "barrier": "The desktop navigation disclosure (#desktop-nav) has a tabIndex of -1, so Tab skips the control needed to expand the panel containing Endpoint Solution (SDK).",
+  "rules": [
+    {
+      "selector": "#desktop-nav",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#desktop-nav",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#desktop-nav",
+      "target": "#desktop-nav-content",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

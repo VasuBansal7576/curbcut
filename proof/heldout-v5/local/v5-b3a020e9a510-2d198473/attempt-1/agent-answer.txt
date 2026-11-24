@@ -1,0 +1,12 @@
+{
+  "barrier": "ArrowRight from Countries does not move focus to Regions, and Regions has tabindex=\"-1\", so Tab skips it.",
+  "rules": [
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#Destinations .destinations__segmented [role=\"tablist\"]",
+      "items": "button[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

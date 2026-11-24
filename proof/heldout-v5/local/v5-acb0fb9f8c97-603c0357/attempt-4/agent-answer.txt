@@ -1,0 +1,10 @@
+{
+  "barrier": "The Products link receives keyboard focus, but the keyboard journey does not reproduce the hover behavior that reveals the submenu and lets users follow the Under Construction Maintenance Mode link.",
+  "rules": [
+    {
+      "selector": "nav.mega-menu-nav > ul.mega-menu.wp-block-create-block-mega-menu > li.mega-menu-item:first-of-type",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseover"
+    }
+  ]
+}

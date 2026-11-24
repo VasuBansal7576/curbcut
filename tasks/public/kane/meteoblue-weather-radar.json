@@ -1,0 +1,9 @@
+{
+  "id": "meteoblue-weather-radar",
+  "url": "https://www.meteoblue.com/en/weather/maps/",
+  "persona": "keyboard-only",
+  "observedSelector": "[data-map-id=\"radar\"]",
+  "successSelector": "[data-map-id=\"radar\"][class*=\" active-\"]",
+  "task": "First assert the Weather Radar option in Popular Maps is in sequential keyboard focus order. If a consent dialog appears, use Manage options and Confirm choices. Select Weather Radar with Tab and Enter. Verify the map switches to Weather Radar.",
+  "controlTask": "If a consent dialog appears, use Manage options and Confirm choices. Click Weather Radar in Popular Maps and verify it becomes the selected map."
+}

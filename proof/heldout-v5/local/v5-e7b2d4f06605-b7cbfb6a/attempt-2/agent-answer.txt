@@ -1,0 +1,12 @@
+{
+  "barrier": "Pointer hover reveals the UPSC submenu, but keyboard focus and Arrow Down leave it at display:none, so the Exam Schedule link is unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#parnt_21896 > a",
+      "target": "#parnt_21896 > #sub-parnt_21896",
+      "mode": "display",
+      "display": "flex"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "v4-22403f71540ed1161620",
+  "url": "https://www.jefferson.edu/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Whether you're contemplating enrollment at Jefferson for a bachelor's or master’s degree,” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Whether you're contemplating enrollment at Jefferson for a bachelor's or master’s degree,” at normal width.",
+  "observedSelector": "div:nth-of-type(1) > div > main > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "div:nth-of-type(1) > div > main > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > p",
+      "equals": "Whether you're contemplating enrollment at Jefferson for a bachelor's or master’s degree,"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "div:nth-of-type(1) > div > main > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.jefferson.edu",
+  "match": "https://www.jefferson.edu/",
+  "barrier": "At 320 CSS pixels, the paragraph’s content extends 83 pixels beyond its 280-pixel box and is clipped at the viewport edge.",
+  "rules": [
+    {
+      "selector": "div:nth-of-type(1) > div > main > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > p",
+      "action": "injectCSS",
+      "value": {
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

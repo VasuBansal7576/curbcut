@@ -1,0 +1,69 @@
+{
+  "id": "v5-d118abe71d63-3373fa85",
+  "url": "https://www.nrc.gov/",
+  "persona": "keyboard-only",
+  "task": "Focus “Careers”, move once with ArrowRight, activate “Contracting” and read its panel.",
+  "controlTask": "Click “Contracting” and read its panel.",
+  "observedSelector": "#rcs-tab-rcs-744076",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#rcs-panel-rcs-744161"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "#block-nrc-theme-content > article > div > div:nth-of-type(7) > div > div > div:nth-of-type(1)",
+    "[role=tab]",
+    "#rcs-panel-rcs-744161"
+  ],
+  "journey": [
+    {
+      "selector": "#rcs-tab-rcs-744076",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#rcs-tab-rcs-744076",
+      "action": "key",
+      "key": "ArrowRight",
+      "pointer": {
+        "action": "click",
+        "selector": "#rcs-tab-rcs-744161"
+      }
+    },
+    {
+      "selector": "#rcs-tab-rcs-744161",
+      "action": "activate",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#rcs-panel-rcs-744161",
+      "action": "observe"
+    }
+  ],
+  "site": "www.nrc.gov",
+  "match": "https://www.nrc.gov/",
+  "barrier": "Keyboard traversal reaches Careers, but the focused tab remains outside the viewport. Changing the display of its enclosing wrappers did not bring it into view.",
+  "rules": [
+    {
+      "selector": "#rcs-tab-rcs-744076",
+      "action": "extendTimeout",
+      "value": 2000
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.resources-for__tabs[role=\"tablist\"]",
+      "items": "div.resources-for__tabs[role=\"tablist\"] > button[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,37 @@
+{
+  "id": "v5-2c5b454b7051b469faec",
+  "url": "https://www.chunkbase.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Added alternative map views and customization options: in-game biome color palette, end” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Added alternative map views and customization options: in-game biome color palette, end” at normal width.",
+  "observedSelector": "#main > article > div > div > ul > li:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#main > article > div > div > ul > li:nth-of-type(1)",
+      "equals": "Added alternative map views and customization options: in-game biome color palette, end"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#main > article > div > div > ul > li:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.chunkbase.com",
+  "match": "https://www.chunkbase.com/",
+  "barrier": "At 320 CSS pixels, the body, #content, and #pagefooter each enforce a 360px minimum width. The news item extends to x=333, beyond the viewport's right edge.",
+  "rules": [
+    {
+      "selector": "body, #content, #pagefooter",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

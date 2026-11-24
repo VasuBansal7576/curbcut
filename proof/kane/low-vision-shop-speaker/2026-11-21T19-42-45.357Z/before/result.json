@@ -1,0 +1,394 @@
+{
+  "status": "inconclusive",
+  "runId": "9e5d7d14-cc06-4eb8-9c54-74b73e017c54",
+  "reason": "Child agent failed: Recording the child task as blocked as instructed.",
+  "summary": "The agent recognized that the button was beyond the visible width, then did not carry out the required blocked-task reporting action.\nUpdate the agent flow so a failed visible-width check immediately records the task as blocked and terminates the run.",
+  "resultCode": 440,
+  "reasonCode": "agent_error.child_failed",
+  "credits": 29.954095000000002,
+  "exitCode": 1,
+  "steps": [
+    "navigate: Navigate to http://127.0.0.1:4317/fixtures/shop/",
+    "scroll: Scrolling to Porch Speaker in the unfiltered collection",
+    "analyze: ANALYZE(textual_visual, 'The Add to cart control for Porch Speaker fits fully wi",
+    "assert: Before activating Porch Speaker, its Add to cart control fits fully within the v",
+    "analyze: ANALYZE(textual_visual, 'A required control is beyond the viewport’s right edge,",
+    "wait: Waiting record the task as blocked and stop"
+  ],
+  "evidencePack": "proof/kane/low-vision-shop-speaker/2026-11-21T19-42-45.357Z/before/87b2e897-699f-47e6-9054-a6bfe5b70470.evidence",
+  "evidenceValid": true,
+  "integrity": "Could not confirm a single recorded page with the required persona and fixture state.",
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "low-vision",
+      "blockedPointers": 0,
+      "horizontalScroll": true,
+      "minWidth": 320,
+      "maxWidth": 500
+    },
+    "readerVisible": false,
+    "width": 500,
+    "fixtureFixed": false,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "http://127.0.0.1:4317/fixtures/shop/",
+    "width": 500,
+    "scrollWidth": 641,
+    "focused": "body",
+    "nodes": [
+      {
+        "selector": "header.masthead",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": -141,
+        "width": 500
+      },
+      {
+        "selector": "a.wordmark",
+        "role": "link",
+        "name": "Stillroom Supply",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -116,
+        "width": 188
+      },
+      {
+        "selector": "#cart",
+        "role": "button",
+        "name": "Cart (0)",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 248,
+        "width": 86
+      },
+      {
+        "selector": "main",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": -141,
+        "width": 500
+      },
+      {
+        "selector": "section.hero",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": -141,
+        "width": 500
+      },
+      {
+        "selector": "p.eyebrow",
+        "role": "text",
+        "name": "The listening collection",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": -101,
+        "width": 420
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Make roomfor sound.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": -101,
+        "width": 420
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Everyday audio for quieter rituals.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": -101,
+        "width": 420
+      },
+      {
+        "selector": "section.catalog",
+        "role": "region",
+        "name": "Shop the collection",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": -141,
+        "width": 500
+      },
+      {
+        "selector": "#catalog-heading",
+        "role": "heading",
+        "name": "Shop the collection",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": -116,
+        "width": 450
+      },
+      {
+        "selector": "#search-form",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": -116,
+        "width": 450
+      },
+      {
+        "selector": "#search",
+        "role": "searchbox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -116,
+        "width": 352
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "Search",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 244,
+        "width": 80
+      },
+      {
+        "selector": "#search-status",
+        "role": "status",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": -116,
+        "width": 450
+      },
+      {
+        "selector": "#products",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "grid",
+        "left": -116,
+        "width": 450
+      },
+      {
+        "selector": "article.product",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": -116,
+        "width": 300
+      },
+      {
+        "selector": "div.product-copy",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": -115,
+        "width": 298
+      },
+      {
+        "selector": "p.eyebrow",
+        "role": "text",
+        "name": "Over-ear audio",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": -97,
+        "width": 263
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Field Headphones",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": -97,
+        "width": 263
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Soft cushions and a warm, balanced sound.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": -97,
+        "width": 263
+      },
+      {
+        "selector": "div.purchase",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": -97,
+        "width": 263
+      },
+      {
+        "selector": "div.add-to-cart",
+        "role": "text",
+        "name": "Add to cart",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 56,
+        "width": 110
+      },
+      {
+        "selector": "article.product",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 200,
+        "width": 300
+      },
+      {
+        "selector": "div.product-copy",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 201,
+        "width": 298
+      },
+      {
+        "selector": "p.eyebrow",
+        "role": "text",
+        "name": "Portable audio",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 219,
+        "width": 263
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Porch Speaker",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 219,
+        "width": 263
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "A compact speaker for slow mornings.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 219,
+        "width": 263
+      },
+      {
+        "selector": "div.purchase",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 219,
+        "width": 263
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "Add to cart",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 372,
+        "width": 110
+      },
+      {
+        "selector": "#cart-status",
+        "role": "status",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": -116,
+        "width": 450
+      },
+      {
+        "selector": "#shipping",
+        "role": "button",
+        "name": "Shipping details",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": -116,
+        "width": 145
+      },
+      {
+        "selector": "#start-reservation",
+        "role": "button",
+        "name": "Start a cart reservation",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 33,
+        "width": 195
+      },
+      {
+        "selector": "#reservation-status",
+        "role": "status",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": -116,
+        "width": 450
+      },
+      {
+        "selector": "footer",
+        "role": "contentinfo",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": -141,
+        "width": 500
+      },
+      {
+        "selector": "#native-fix",
+        "role": "checkbox",
+        "name": "Native fixes",
+        "state": "unchecked",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 230,
+        "width": 13
+      }
+    ]
+  },
+  "video": "proof/kane/low-vision-shop-speaker/2026-11-21T19-42-45.357Z/before/recording.mp4"
+}

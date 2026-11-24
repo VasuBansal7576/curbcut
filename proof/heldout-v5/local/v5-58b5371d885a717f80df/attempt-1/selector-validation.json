@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "body > div.main:has(> div.con > div.bw_bigtit.le > p)",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "main"
+          ],
+          "label": "中国共产党江西省第十六次代表大会胜利闭幕 中共江西省委十六届一次全体会议举行 新一届省委常委会召开会议 尹弘主持 新一届省委常委与新闻媒体记者见面 尹弘报道集 陈永奇报道集"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "body > div.main > div.con:has(> div.bw_bigtit.le > p)",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "con"
+          ],
+          "label": "中国共产党江西省第十六次代表大会胜利闭幕 中共江西省委十六届一次全体会议举行 新一届省委常委会召开会议 尹弘主持 新一届省委常委与新闻媒体记者见面 尹弘报道集 陈永奇报道集"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "field": "selector",
+      "selector": "body > div.main > div.con > div.bw_bigtit.le:has(> p)",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "bw_bigtit",
+            "le"
+          ],
+          "label": "中国共产党江西省第十六次代表大会胜利闭幕 中共江西省委十六届一次全体会议举行 新一届省委常委会召开会议 尹弘主持 新一届省委常委与新闻媒体记者见面"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "field": "selector",
+      "selector": "body > div.main > div.con > div.bw_bigtit.le > :is(h1, p)",
+      "count": 2,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "h1",
+          "classes": [],
+          "label": "中国共产党江西省第十六次代表大会胜利闭幕"
+        },
+        {
+          "tag": "p",
+          "classes": [],
+          "label": "中共江西省委十六届一次全体会议举行 新一届省委常委会召开会议 尹弘主持 新一届省委常委与新闻媒体记者见面"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "field": "selector",
+      "selector": "body > div.main > div.con > div.bw_bigtit.le > :is(h1, p) > a",
+      "count": 4,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "a",
+          "classes": [],
+          "label": "中国共产党江西省第十六次代表大会胜利闭幕"
+        },
+        {
+          "tag": "a",
+          "classes": [],
+          "label": "中共江西省委十六届一次全体会议举行"
+        },
+        {
+          "tag": "a",
+          "classes": [],
+          "label": "新一届省委常委会召开会议 尹弘主持"
+        },
+        {
+          "tag": "a",
+          "classes": [],
+          "label": "新一届省委常委与新闻媒体记者见面"
+        }
+      ]
+    }
+  ]
+}

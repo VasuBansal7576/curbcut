@@ -1,0 +1,36 @@
+{
+  "barrier": "At 320 CSS pixels, the main navigation and its panel container both use display: none. The Certification menu button has no clickable area, and the panel cannot render inside its hidden container.",
+  "rules": [
+    {
+      "selector": "div.lsn-bar-inner",
+      "action": "injectCSS",
+      "value": {"flex-wrap": "wrap", "height": "auto"}
+    },
+    {
+      "selector": "div.lsn-bar-inner > nav.lsn-nav",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "100%"}
+    },
+    {
+      "selector": "nav.lsn-nav > ul.lsn-nav-list",
+      "action": "injectCSS",
+      "value": {"flex-direction": "column"}
+    },
+    {
+      "selector": "div.lsn > div.lsn-panels",
+      "action": "injectCSS",
+      "value": {"display": "block", "max-width": "100%"}
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#lsn-t-certification",
+      "target": "#lsn-p-certification",
+      "mode": "attribute"
+    },
+    {
+      "selector": "#lsn-p-certification > .lsn-panel-inner > .lsn-grid",
+      "action": "injectCSS",
+      "value": {"display": "block", "overflow-wrap": "anywhere"}
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "unglobalcompact-org-tr2",
+  "url": "https://unglobalcompact.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, locate the textbox named “Search”. Enter the text test and confirm the field contains it. Do not submit.",
+  "controlTask": "Click the public text field with the visible hint “Search”, type test and confirm the value. Do not submit.",
+  "observedSelector": "#search_keywords",
+  "requiredName": "Search",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#search_keywords",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "unglobalcompact.org",
+  "match": "https://unglobalcompact.org/",
+  "barrier": "The search input has no accessible name, so Reading view exposes it as an unnamed textbox.",
+  "rules": [
+    {
+      "selector": "#search_keywords",
+      "action": "addLabel",
+      "value": "Search"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

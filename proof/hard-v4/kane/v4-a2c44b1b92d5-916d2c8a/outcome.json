@@ -1,0 +1,87 @@
+{
+  "task": {
+    "id": "v4-a2c44b1b92d5-916d2c8a",
+    "url": "https://raptortech.com/",
+    "persona": "keyboard-only",
+    "task": "Open “Products” from keyboard focus or with Arrow Down and follow “Emergency Alerting & Management Emergency Management Software Prepare staff, coordinate response, and recover after a crisis.”. Confirm the public destination /protect-your-school/raptor-emergency-management-system/.",
+    "controlTask": "Hover “Products”, click “Emergency Alerting & Management Emergency Management Software Prepare staff, coordinate response, and recover after a crisis.” and confirm /protect-your-school/raptor-emergency-management-system/.",
+    "observedSelector": "#products-link",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/protect-your-school/raptor-emergency-management-system/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#primary-nav > li:nth-of-type(2)",
+      "#primary-nav > li:nth-of-type(2) > div"
+    ],
+    "journey": [
+      {
+        "selector": "#products-link",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#products-link",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#emergency-management > div > div:nth-of-type(1) > a:nth-of-type(1)",
+        "action": "activate"
+      }
+    ]
+  },
+  "status": "already-accessible",
+  "phases": [
+    {
+      "name": "before",
+      "balance": 627.2861,
+      "after": 588.5868,
+      "status": "pass",
+      "runner": "kane",
+      "runId": "f1fb9506-f938-442d-9b03-8743c598cd7b",
+      "credits": 35.45614499999999,
+      "reason": "Objective completed",
+      "video": "proof/hard-v4/kane/v4-a2c44b1b92d5-916d2c8a/before/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-a2c44b1b92d5-916d2c8a/before/462b7b54-5d64-4bd8-91c8-749ec2963768.evidence",
+      "basis": "recorded-journey-and-outcome"
+    },
+    {
+      "name": "control",
+      "balance": 588.5868,
+      "after": 566.9233,
+      "status": "pass",
+      "runner": "kane",
+      "runId": "83dddf07-107c-4448-9afb-17f029ef2267",
+      "credits": 18.246565,
+      "reason": "Objective completed",
+      "video": "proof/hard-v4/kane/v4-a2c44b1b92d5-916d2c8a/control/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-a2c44b1b92d5-916d2c8a/control/808d2b92-15aa-40bb-88c4-780b0fab44c8.evidence",
+      "basis": "recorded-journey-and-outcome"
+    },
+    {
+      "name": "attempt-1/after",
+      "balance": 566.9233,
+      "after": 533.8893,
+      "status": "pass",
+      "runner": "kane",
+      "runId": "c6137aa9-fbf1-48bc-a19c-a2e5ea1b1a74",
+      "credits": 31.360961,
+      "reason": "Objective completed",
+      "video": "proof/hard-v4/kane/v4-a2c44b1b92d5-916d2c8a/attempt-1/after/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-a2c44b1b92d5-916d2c8a/attempt-1/after/00362e48-e369-4374-9e69-90144b4e4549.evidence",
+      "basis": "recorded-journey-and-outcome"
+    }
+  ],
+  "localProposal": "proof/hard-v4/local/v4-a2c44b1b92d5-916d2c8a/attempt-1",
+  "reason": "Objective completed",
+  "finishedAt": "2026-11-23T16:39:59.744Z"
+}

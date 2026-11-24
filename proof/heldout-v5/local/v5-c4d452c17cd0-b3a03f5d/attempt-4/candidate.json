@@ -1,0 +1,72 @@
+{
+  "id": "v5-c4d452c17cd0-b3a03f5d",
+  "url": "https://daily.dev/",
+  "persona": "keyboard-only",
+  "task": "Focus “Feed”, move once with ArrowRight, activate “Customize” and read its panel.",
+  "controlTask": "Click “Customize” and read its panel.",
+  "observedSelector": "#tour-tab-newtab",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#tour-panel-control"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "#features > div:nth-of-type(2) > div > div",
+    "[role=tab]",
+    "#tour-panel-control"
+  ],
+  "journey": [
+    {
+      "selector": "#tour-tab-newtab",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#tour-tab-newtab",
+      "action": "key",
+      "key": "ArrowRight",
+      "pointer": {
+        "action": "click",
+        "selector": "#tour-tab-control"
+      }
+    },
+    {
+      "selector": "#tour-tab-control",
+      "action": "activate",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#tour-panel-control",
+      "action": "observe"
+    }
+  ],
+  "site": "daily.dev",
+  "match": "https://daily.dev/",
+  "barrier": "Tab reaches Feed, but it remains outside the visible viewport. In the failed keyboard run, the padded feature tablist renders as a 176px-tall block instead of the 62px flex strip observed in the pointer run.",
+  "rules": [
+    {
+      "selector": "#features > div:nth-of-type(2) > div.no-scrollbar.overflow-x-auto > [role='tablist']",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "width": "fit-content"
+      }
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#features [role='tablist'][aria-label='daily.dev features']",
+      "items": "#features [role='tablist'][aria-label='daily.dev features'] > button.tour-tab[role='tab']",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

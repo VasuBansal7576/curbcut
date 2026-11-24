@@ -1,0 +1,16 @@
+{
+  "barrier": "Tab reaches Buy Instagram Followers, but ArrowDown leaves focus on the page body instead of moving it to the adjacent Buy Instagram Likes tab, which has tabindex=\"-1\".",
+  "rules": [
+    {
+      "action": "makeFocusable",
+      "selector": "#services [role=\"tablist\"][aria-label=\"Services\"] > button[role=\"tab\"][aria-label=\"Buy Instagram Likes\"]"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#services",
+      "items": "#services [role=\"tablist\"][aria-label=\"Services\"] > button[role=\"tab\"]",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ]
+}

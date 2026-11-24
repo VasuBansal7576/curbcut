@@ -1,0 +1,14 @@
+{
+  "barrier": "At 320 CSS pixels, the paragraph fits, but its reported text omits “AI brain.” Those words are in a span with display: contents and no layout box of its own.",
+  "rules": [
+    {
+      "selector": "span.lines-border-yellow-new",
+      "action": "injectCSS",
+      "value": {
+        "display": "inline-block",
+        "max-width": "100%",
+        "white-space": "normal"
+      }
+    }
+  ]
+}

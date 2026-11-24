@@ -1,0 +1,34 @@
+{
+  "id": "v5-77f6ea3ec90a8e403cab",
+  "url": "https://nj.gov/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search NJ.gov” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search NJ.gov” field and type test without submitting.",
+  "observedSelector": "#main_content > div:nth-of-type(2) > div > section > div:nth-of-type(2) > div > form > div > input",
+  "requiredName": "Search NJ.gov",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#main_content > div:nth-of-type(2) > div > section > div:nth-of-type(2) > div > form > div > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "nj.gov",
+  "match": "https://nj.gov/",
+  "barrier": "The hero search textbox has no accessible name in Reading view. Its duplicate site_search ID causes the Search NJ.gov labels to name the header textbox instead.",
+  "rules": [
+    {
+      "selector": "#main_content section.hero_sign form#search > div.input_wrap > input#site_search",
+      "action": "addLabel",
+      "value": "Search NJ.gov"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

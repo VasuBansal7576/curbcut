@@ -1,0 +1,52 @@
+{
+  "id": "v4-11eece5236f4-be33a635",
+  "url": "https://www.bluecore.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Solutions” from keyboard focus or with Arrow Down and follow “Identify and convertEasily grow lists and quickly capture conversions.”. Confirm the public destination /solutions/identify-and-convert-shoppers/.",
+  "controlTask": "Hover “Solutions”, click “Identify and convertEasily grow lists and quickly capture conversions.” and confirm /solutions/identify-and-convert-shoppers/.",
+  "observedSelector": "#menu-item-14 > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/solutions/identify-and-convert-shoppers/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menu-item-14",
+    "#menu-item-14 > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#menu-item-14 > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-item-14 > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-item-325 > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.bluecore.com",
+  "match": "https://www.bluecore.com/",
+  "barrier": "Hovering over Solutions reveals its submenu, but focusing the Solutions link and pressing Arrow Down leaves the Identify and convert link unavailable.",
+  "rules": [
+    {
+      "selector": "#menu-item-14",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

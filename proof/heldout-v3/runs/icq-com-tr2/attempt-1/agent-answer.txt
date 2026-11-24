@@ -1,0 +1,9 @@
+{
+  "barrier": "The visible Eng control is a clickable div outside the Tab order, so keyboard users cannot reach it to open the language menu.",
+  "rules": [
+    {"selector": "#header > div > div > div:nth-of-type(1)", "action": "makeFocusable"},
+    {"selector": "#header > div > div > div:nth-of-type(1)", "action": "setRole", "value": "button"},
+    {"selector": "#header > div > div > div:nth-of-type(1)", "action": "bindEnterToClick"},
+    {"selector": "#header > div > div > div:nth-of-type(1)", "action": "restoreFocusOutline"}
+  ]
+}

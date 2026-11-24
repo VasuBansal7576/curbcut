@@ -1,0 +1,49 @@
+{
+  "id": "v5-01a5930f072f-ba6a98ba",
+  "url": "https://www.airalo.com/",
+  "persona": "keyboard-only",
+  "task": "Expand “Locations” with the keyboard and read “Directs to products for this location when selected.”.",
+  "controlTask": "Click “Locations” and read “Directs to products for this location when selected.”.",
+  "observedSelector": "#__nuxt > div > div:nth-of-type(3) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > button",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#megamenu-location-item-aria-desc",
+      "equals": "Directs to products for this location when selected."
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#mega-menu"
+  ],
+  "journey": [
+    {
+      "selector": "#__nuxt > div > div:nth-of-type(3) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > button",
+      "action": "activate"
+    },
+    {
+      "selector": "#megamenu-location-item-aria-desc",
+      "action": "observe"
+    }
+  ],
+  "site": "www.airalo.com",
+  "match": "https://www.airalo.com/",
+  "barrier": "Tab traversal skips the Locations button inside the focusable search combobox. The prior focus repair reached the button, but keyboard activation still left the menu description unavailable. Pointer activation opened the menu.",
+  "rules": [
+    {
+      "selector": "div[role=\"combobox\"][aria-haspopup=\"menu\"]:has(button[aria-controls=\"mega-menu\"][aria-describedby=\"header_search-input-mega-menu-cta-desc\"])",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "button[aria-controls=\"mega-menu\"][aria-describedby=\"header_search-input-mega-menu-cta-desc\"]",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "button[aria-controls=\"mega-menu\"][aria-describedby=\"header_search-input-mega-menu-cta-desc\"]",
+      "action": "bindEnterToClick"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

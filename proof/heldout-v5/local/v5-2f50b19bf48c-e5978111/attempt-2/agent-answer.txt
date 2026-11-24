@@ -1,0 +1,52 @@
+{
+  "barrier": "The «О гознаке» submenu is hidden until its wrapper is hovered. The previous block layout let the keyboard journey reach «Компания сегодня», but pointer hover still timed out even though the trigger fit within the 320 CSS pixel viewport.",
+  "rules": [
+    {
+      "selector": "header > div.container",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "flex-wrap": "wrap",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "header > div.container > div.header__left",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "flex-wrap": "wrap",
+        "height": "auto",
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "header > div.container > div.header__left > div.header__dropdown-wrapper",
+      "action": "injectCSS",
+      "value": {
+        "flex-direction": "column",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "header > div.container > div.header__left > div.header__dropdown-wrapper > span",
+      "action": "injectCSS",
+      "value": {
+        "width": "fit-content"
+      }
+    },
+    {
+      "selector": "header > div.container > div.header__left > div.header__dropdown-wrapper > span",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "header > div.container > div.header__left > div.header__dropdown-wrapper > span",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "selector": "header > div.container > div.header__left > div.header__dropdown-wrapper",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

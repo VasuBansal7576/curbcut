@@ -1,0 +1,31 @@
+{
+  "barrier": "At 320 CSS pixels, the home container and its paragraph remain 566 pixels wide. The paragraph extends 246 pixels past the left edge, where page-level overflow clipping cuts off the text.",
+  "rules": [
+    {
+      "selector": "#app > div.home-fc1a2",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.home-fc1a2 > div.home__content-f1a76, div.home__content-f1a76 > div.home__cities-ad155",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.home__cities-ad155 > p.home__description-f0214",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

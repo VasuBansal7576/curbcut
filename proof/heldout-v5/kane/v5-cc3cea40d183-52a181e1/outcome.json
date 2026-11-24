@@ -1,0 +1,37 @@
+{
+  "task": {
+    "id": "v5-cc3cea40d183-52a181e1",
+    "url": "https://www.kaizhenglaw.com/",
+    "persona": "keyboard-only",
+    "task": "Activate “Next slide” from the keyboard and confirm the next slide is shown.",
+    "controlTask": "Click “Next slide” and confirm the next slide is shown.",
+    "observedSelector": "#swiper1 > div:nth-of-type(4)",
+    "outcomeChecks": [
+      {
+        "kind": "visible",
+        "selector": "#swiper1 > div:nth-of-type(1) > div:nth-of-type(3).swiper-slide-active"
+      }
+    ],
+    "barrierClass": 3,
+    "relatedSelectors": [
+      "#swiper1",
+      "#swiper1 > div:nth-of-type(3)",
+      "#swiper1 > div:nth-of-type(1) > div:nth-of-type(3)"
+    ],
+    "journey": [
+      {
+        "selector": "#swiper1 > div:nth-of-type(4)",
+        "action": "activate"
+      },
+      {
+        "selector": "#swiper1 > div:nth-of-type(1) > div:nth-of-type(3).swiper-slide-active",
+        "action": "observe"
+      }
+    ]
+  },
+  "status": "budget stop",
+  "phases": [],
+  "localProposal": "proof/heldout-v5/local/v5-cc3cea40d183-52a181e1/attempt-2",
+  "reason": "The remaining balance cannot reserve three phases above 153.8893 credits.",
+  "finishedAt": "2026-11-23T20:43:05.296Z"
+}

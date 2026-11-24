@@ -1,0 +1,2104 @@
+{
+  "runner": "playwright",
+  "status": "pass",
+  "reason": "The complete journey reached the declared outcome.",
+  "steps": [
+    {
+      "selector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "focus"
+    },
+    {
+      "selector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown"
+    },
+    {
+      "selector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "url": "https://ufal.br/ufal/institucional/apresentacao",
+  "checks": [
+    true
+  ],
+  "snapshot": {
+    "url": "https://ufal.br/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "#visual-portal-wrapper",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+          "parent": "li.ufal.has_subtree > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "class": "state-published nav-link",
+            "aria-haspopup": "true"
+          },
+          "hoverHandlers": [],
+          "text": "Institucional",
+          "children": [],
+          "box": [
+            163,
+            76,
+            112,
+            46
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "li.ufal.has_subtree > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "parent": "li.ufal.has_subtree > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "institucional has_subtree nav-item"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.state-published.nav-link",
+            "#navitem-3616ff2a994e4fd791b59c272d0c73f9",
+            "label",
+            "ul.has_subtree.dropdown"
+          ],
+          "box": [
+            163,
+            76,
+            112,
+            46
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "li.ufal.has_subtree > ul:nth-of-type(1)",
+          "parent": "li.ufal.has_subtree",
+          "tag": "ul",
+          "attributes": {
+            "class": "has_subtree dropdown"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.institucional.has_subtree",
+            "li.ensino.has_subtree",
+            "li.pesquisa-e-inovacao.has_subtree",
+            "li.extensao.has_subtree",
+            "li.comunicacao.has_subtree",
+            "li.fale-com-a-ufal.nav-item"
+          ],
+          "box": [
+            163,
+            76,
+            1035,
+            46
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "152",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "li.ufal.has_subtree",
+          "parent": "#global-menu",
+          "tag": "li",
+          "attributes": {
+            "class": "ufal has_subtree nav-item"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.state-published.nav-link",
+            "#navitem-ufal",
+            "label",
+            "ul.has_subtree.dropdown"
+          ],
+          "box": [
+            163,
+            40,
+            60,
+            36
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#global-menu",
+          "parent": "#menu",
+          "tag": "ul",
+          "attributes": {
+            "id": "global-menu",
+            "class": "flex-grow-1"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.ufal.has_subtree",
+            "li.estudante.has_subtree",
+            "li.servidor.has_subtree",
+            "li.transparencia.has_subtree",
+            "li.acesso-a-informacao.nav-item",
+            "li.nav-item.shortcut"
+          ],
+          "box": [
+            163,
+            39,
+            1035,
+            37
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu",
+          "tag": "nav",
+          "attributes": {
+            "id": "menu",
+            "class": "d-flex flex-column aligm-items-center position-relative pat-navigationmarker",
+            "tabindex": "-1"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#global-menu",
+            "ul.mobile-site-actions",
+            "#mobile-login",
+            "a.close",
+            "div.dropdown-ghost.d-none"
+          ],
+          "box": [
+            163,
+            39,
+            1035,
+            83
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > ul",
+          "parent": "li.ufal.has_subtree > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "has_subtree dropdown"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.apresentacao.nav-item",
+            "li.quem-e-quem.nav-item",
+            "li.reitoria.nav-item",
+            "li.pro-reitorias.nav-item",
+            "li.os-campi.nav-item",
+            "li.unidades-academicas.nav-item"
+          ],
+          "box": [
+            163,
+            122,
+            250,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "hidden",
+            "overflow-y": "hidden",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+          "parent": "li.apresentacao.nav-item",
+          "tag": "a",
+          "attributes": {
+            "class": "state-published nav-link"
+          },
+          "hoverHandlers": [],
+          "text": "Apresentação",
+          "children": [],
+          "box": [
+            163,
+            122,
+            250,
+            40
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "li.apresentacao.nav-item",
+          "parent": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > ul",
+          "tag": "li",
+          "attributes": {
+            "class": "apresentacao nav-item"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.state-published.nav-link"
+          ],
+          "box": [
+            163,
+            122,
+            250,
+            40
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "--bs-link-color-rgb: var(--bs-link-hover-color-rgb);",
+          "conditions": []
+        },
+        {
+          "selector": ".nav-link:hover, .nav-link:focus",
+          "declarations": "color: var(--bs-nav-link-hover-color);",
+          "conditions": []
+        },
+        {
+          "selector": "body.frontend a:hover",
+          "declarations": "text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": "body.frontend #menu li.ufal > .dropdown li:hover, body.frontend #menu li.ufal > .dropdown li:focus-within, body.frontend #menu li.ufal > .dropdown > li.inPath",
+          "declarations": "background-color: var(--ufal-alt-color);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": "body.frontend #menu li.ufal > .dropdown .dropdown a:hover, body.frontend #menu li.ufal > .dropdown .dropdown a:focus-within",
+          "declarations": "background-color: var(--ufal-alt-color); color: rgb(255, 255, 255) !important;",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": "body.frontend #menu li.ufal:hover, body.frontend #menu li.ufal.inPath",
+          "declarations": "background-color: var(--ufal-main-color);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": "body.frontend #menu li.ufal:hover .dropdown",
+          "declarations": "border-top-left-radius: 0px;",
+          "conditions": []
+        },
+        {
+          "selector": "#menu a:hover",
+          "declarations": "text-decoration: none;",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": "#menu > ul > li:hover .dropdown",
+          "declarations": "visibility: visible; opacity: 1; z-index: 152;",
+          "conditions": [
+            "(min-width: 992px) and (hover: hover)"
+          ]
+        },
+        {
+          "selector": "#menu > ul > li > .dropdown > li:hover .dropdown",
+          "declarations": "max-height: 1500px; visibility: visible;",
+          "conditions": [
+            "(min-width: 992px) and (hover: hover)"
+          ]
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1)",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 163,
+        "width": 112
+      },
+      {
+        "selector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > ul",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 163,
+        "width": 250
+      },
+      {
+        "selector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+        "role": "link",
+        "name": "Institucional",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 163,
+        "width": 112
+      },
+      {
+        "selector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 163,
+        "width": 250
+      },
+      {
+        "selector": "#navitem-3616ff2a994e4fd791b59c272d0c73f9",
+        "role": "checkbox",
+        "name": "",
+        "state": "unchecked",
+        "tag": "input",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "ul.has_subtree.dropdown",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 163,
+        "width": 1035
+      },
+      {
+        "selector": "#visual-portal-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html.h-100",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "nav.skiplinks.container",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.outer-wrapper.flex-grow-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#footer",
+        "role": "contentinfo",
+        "name": "",
+        "state": "",
+        "tag": "footer",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#searchModal",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": "-1",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "div.position-fixed.bottom-0",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1192,
+        "width": 64
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Ufal celebra marco histórico de 60 patentes concedidas e chega à 61ª proteção",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 9010,
+        "width": 1116
+      },
+      {
+        "selector": "a.searchToggle",
+        "role": "link",
+        "name": "Ir para a busca 3",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 82,
+        "width": 136
+      },
+      {
+        "selector": "#link-rodape",
+        "role": "link",
+        "name": "Ir para o rodapé 4",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 82,
+        "width": 144
+      },
+      {
+        "selector": "#header",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.col-12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.d-flex.gap-3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 82,
+        "width": 1116
+      },
+      {
+        "selector": "a.portal-logo",
+        "role": "link",
+        "name": "Universidade Federal de Alagoas",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 163,
+        "width": 430
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Universidade Federal de Alagoas",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 82,
+        "width": 65
+      },
+      {
+        "selector": "div.d-flex.flex-column",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 163,
+        "width": 1035
+      },
+      {
+        "selector": "div.d-flex.justify-content-between",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 163,
+        "width": 1035
+      },
+      {
+        "selector": "h1.my-1",
+        "role": "heading",
+        "name": "Universidade Federal de Alagoas",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 163,
+        "width": 430
+      },
+      {
+        "selector": "div.ms-3.flex-lg-grow-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 609,
+        "width": 262
+      },
+      {
+        "selector": "a.contrast-toggle",
+        "role": "link",
+        "name": "Alto Contraste",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 609,
+        "width": 20
+      },
+      {
+        "selector": "div.d-flex.d-xxl-none",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 872,
+        "width": 326
+      },
+      {
+        "selector": "li.portletItem.action-item-perfil",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 872,
+        "width": 30
+      },
+      {
+        "selector": "li.portletItem.action-item-email",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 917,
+        "width": 38
+      },
+      {
+        "selector": "li.portletItem.action-item-ouvidoria",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 970,
+        "width": 57
+      },
+      {
+        "selector": "li.portletItem.action-item-contato",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 1042,
+        "width": 44
+      },
+      {
+        "selector": "a.btn-login.pat-plone-modal",
+        "role": "link",
+        "name": "Acessar",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 1104,
+        "width": 94
+      },
+      {
+        "selector": "div.w-100",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 163,
+        "width": 1035
+      },
+      {
+        "selector": "#menu",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": "-1",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 163,
+        "width": 1035
+      },
+      {
+        "selector": "li.ufal.has_subtree",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 163,
+        "width": 60
+      },
+      {
+        "selector": "a.state-published.nav-link",
+        "role": "link",
+        "name": "Acesso a Informação",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 528,
+        "width": 191
+      },
+      {
+        "selector": "label",
+        "role": "button",
+        "name": "Transparência",
+        "state": "",
+        "tag": "label",
+        "tabIndex": 0,
+        "tabIndexAttribute": "0",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 528,
+        "width": 0
+      },
+      {
+        "selector": "li.ensino.has_subtree",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 275,
+        "width": 76
+      },
+      {
+        "selector": "li.pesquisa-e-inovacao.has_subtree",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 351,
+        "width": 162
+      },
+      {
+        "selector": "li.extensao.has_subtree",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 513,
+        "width": 154
+      },
+      {
+        "selector": "li.comunicacao.has_subtree",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 667,
+        "width": 120
+      },
+      {
+        "selector": "li.fale-com-a-ufal.nav-item",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 787,
+        "width": 135
+      },
+      {
+        "selector": "li.estudante.has_subtree",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 223,
+        "width": 95
+      },
+      {
+        "selector": "li.servidor.has_subtree",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 318,
+        "width": 87
+      },
+      {
+        "selector": "li.transparencia.has_subtree",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 406,
+        "width": 122
+      },
+      {
+        "selector": "li.acesso-a-informacao.nav-item",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 528,
+        "width": 191
+      },
+      {
+        "selector": "li.nav-item.shortcut",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1014,
+        "width": 184
+      },
+      {
+        "selector": "div.d-flex.flex-row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1014,
+        "width": 184
+      },
+      {
+        "selector": "a.search",
+        "role": "link",
+        "name": "Buscar",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 1163,
+        "width": 35
+      },
+      {
+        "selector": "div.dropdown-ghost.d-none",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 163,
+        "width": 1035
+      },
+      {
+        "selector": "#content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#frontpage",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tag": "main",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#rotativo",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#slider-tile",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 82,
+        "width": 1116
+      },
+      {
+        "selector": "#carroussel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 82,
+        "width": 1116
+      },
+      {
+        "selector": "div.itens",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 82,
+        "width": 1116
+      },
+      {
+        "selector": "div.swiper.swiper-initialized",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 82,
+        "width": 1116
+      },
+      {
+        "selector": "div.swiper-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 82,
+        "width": 1116
+      },
+      {
+        "selector": "div.swiper-slide.swiper-slide-active",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 82,
+        "width": 1116
+      },
+      {
+        "selector": "div.item",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 9010,
+        "width": 1116
+      },
+      {
+        "selector": "img.img-full",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 9010,
+        "width": 1116
+      },
+      {
+        "selector": "div.dados",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 9010,
+        "width": 1116
+      },
+      {
+        "selector": "div.swiper-slide.swiper-slide-next",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1198,
+        "width": 1116
+      },
+      {
+        "selector": "div.swiper-slide",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 9010,
+        "width": 1116
+      },
+      {
+        "selector": "div.swiper-pagination.swiper-pagination-clickable",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 82,
+        "width": 1116
+      },
+      {
+        "selector": "div.swiper-button-prev",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 86,
+        "width": 44
+      },
+      {
+        "selector": "div.swiper-button-next",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1150,
+        "width": 44
+      },
+      {
+        "selector": "#noticias",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.col-lg-10.col-md-7",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 950
+      },
+      {
+        "selector": "h2.titulo",
+        "role": "heading",
+        "name": "Notícias",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 82,
+        "width": 926
+      },
+      {
+        "selector": "div.col-lg-2.col-md-5",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1020,
+        "width": 190
+      },
+      {
+        "selector": "a.btn.btn-primary",
+        "role": "link",
+        "name": "Ver mais",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 1116,
+        "width": 82
+      },
+      {
+        "selector": "div.col-lg-3.col-md-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 355,
+        "width": 285
+      },
+      {
+        "selector": "div.main",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "grid",
+        "left": 367,
+        "width": 261
+      },
+      {
+        "selector": "a.item.d-flex",
+        "role": "link",
+        "name": "Ufal solidária Adote uma carta em parceria com os Correios",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 367,
+        "width": 261
+      },
+      {
+        "selector": "div.mt-auto",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 383,
+        "width": 229
+      },
+      {
+        "selector": "div.badge.text-bg-main",
+        "role": "text",
+        "name": "Ufal solidária",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 383,
+        "width": 91
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 391,
+        "width": 237
+      },
+      {
+        "selector": "a.titulo",
+        "role": "link",
+        "name": "Egresso da Ufal é premiado em concurso nacional de Finanças Públicas",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 391,
+        "width": 237
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+          "parent": "li.ufal.has_subtree > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "class": "state-published nav-link",
+            "aria-haspopup": "true"
+          },
+          "hoverHandlers": [],
+          "text": "Institucional",
+          "children": [],
+          "box": [
+            163,
+            76,
+            112,
+            46
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "li.ufal.has_subtree > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "parent": "li.ufal.has_subtree > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "institucional has_subtree nav-item"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.state-published.nav-link",
+            "#navitem-3616ff2a994e4fd791b59c272d0c73f9",
+            "label",
+            "ul.has_subtree.dropdown"
+          ],
+          "box": [
+            163,
+            76,
+            112,
+            46
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "li.ufal.has_subtree > ul:nth-of-type(1)",
+          "parent": "li.ufal.has_subtree",
+          "tag": "ul",
+          "attributes": {
+            "class": "has_subtree dropdown"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.institucional.has_subtree",
+            "li.ensino.has_subtree",
+            "li.pesquisa-e-inovacao.has_subtree",
+            "li.extensao.has_subtree",
+            "li.comunicacao.has_subtree",
+            "li.fale-com-a-ufal.nav-item"
+          ],
+          "box": [
+            163,
+            76,
+            1035,
+            46
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "152",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "li.ufal.has_subtree",
+          "parent": "#global-menu",
+          "tag": "li",
+          "attributes": {
+            "class": "ufal has_subtree nav-item"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.state-published.nav-link",
+            "#navitem-ufal",
+            "label",
+            "ul.has_subtree.dropdown"
+          ],
+          "box": [
+            163,
+            40,
+            60,
+            36
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#global-menu",
+          "parent": "#menu",
+          "tag": "ul",
+          "attributes": {
+            "id": "global-menu",
+            "class": "flex-grow-1"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.ufal.has_subtree",
+            "li.estudante.has_subtree",
+            "li.servidor.has_subtree",
+            "li.transparencia.has_subtree",
+            "li.acesso-a-informacao.nav-item",
+            "li.nav-item.shortcut"
+          ],
+          "box": [
+            163,
+            39,
+            1035,
+            37
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu",
+          "tag": "nav",
+          "attributes": {
+            "id": "menu",
+            "class": "d-flex flex-column aligm-items-center position-relative pat-navigationmarker",
+            "tabindex": "-1"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#global-menu",
+            "ul.mobile-site-actions",
+            "#mobile-login",
+            "a.close",
+            "div.dropdown-ghost.d-none"
+          ],
+          "box": [
+            163,
+            39,
+            1035,
+            83
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > ul",
+          "parent": "li.ufal.has_subtree > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "has_subtree dropdown"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.apresentacao.nav-item",
+            "li.quem-e-quem.nav-item",
+            "li.reitoria.nav-item",
+            "li.pro-reitorias.nav-item",
+            "li.os-campi.nav-item",
+            "li.unidades-academicas.nav-item"
+          ],
+          "box": [
+            163,
+            122,
+            250,
+            360
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "hidden",
+            "overflow-y": "hidden",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "152",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+          "parent": "li.apresentacao.nav-item",
+          "tag": "a",
+          "attributes": {
+            "class": "state-published nav-link"
+          },
+          "hoverHandlers": [],
+          "text": "Apresentação",
+          "children": [],
+          "box": [
+            163,
+            122,
+            250,
+            40
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "li.apresentacao.nav-item",
+          "parent": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > ul",
+          "tag": "li",
+          "attributes": {
+            "class": "apresentacao nav-item"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.state-published.nav-link"
+          ],
+          "box": [
+            163,
+            122,
+            250,
+            40
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "--bs-link-color-rgb: var(--bs-link-hover-color-rgb);",
+          "conditions": []
+        },
+        {
+          "selector": ".nav-link:hover, .nav-link:focus",
+          "declarations": "color: var(--bs-nav-link-hover-color);",
+          "conditions": []
+        },
+        {
+          "selector": "body.frontend a:hover",
+          "declarations": "text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": "body.frontend #menu li.ufal > .dropdown li:hover, body.frontend #menu li.ufal > .dropdown li:focus-within, body.frontend #menu li.ufal > .dropdown > li.inPath",
+          "declarations": "background-color: var(--ufal-alt-color);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": "body.frontend #menu li.ufal > .dropdown .dropdown a:hover, body.frontend #menu li.ufal > .dropdown .dropdown a:focus-within",
+          "declarations": "background-color: var(--ufal-alt-color); color: rgb(255, 255, 255) !important;",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": "body.frontend #menu li.ufal:hover, body.frontend #menu li.ufal.inPath",
+          "declarations": "background-color: var(--ufal-main-color);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": "body.frontend #menu li.ufal:hover .dropdown",
+          "declarations": "border-top-left-radius: 0px;",
+          "conditions": []
+        },
+        {
+          "selector": "#menu a:hover",
+          "declarations": "text-decoration: none;",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": "#menu > ul > li:hover .dropdown",
+          "declarations": "visibility: visible; opacity: 1; z-index: 152;",
+          "conditions": [
+            "(min-width: 992px) and (hover: hover)"
+          ]
+        },
+        {
+          "selector": "#menu > ul > li > .dropdown > li:hover .dropdown",
+          "declarations": "max-height: 1500px; visibility: visible;",
+          "conditions": [
+            "(min-width: 992px) and (hover: hover)"
+          ]
+        }
+      ]
+    }
+  }
+}

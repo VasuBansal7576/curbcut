@@ -1,0 +1,1849 @@
+{
+  "status": "fail",
+  "runId": "7f015554-f6a7-4801-86e4-a39f33833a82",
+  "reason": "Checkpoint assertion failed: \"the first Extra Examples disclosure in the entry for example is keyboard focusable\"",
+  "summary": "The page loaded the dictionary entry, but the agent stopped after a visual analysis and immediately made the focusability assertion. It did not use Tab or other allowed keyboard controls to move focus to the first Extra Examples disclosure, so the required page state was never established.\nRetry from the loaded entry: use only keyboard navigation to tab through visible controls until the first Extra Examples disclosure receives focus, verify the focus indicator, press Enter or Space, and then verify that “Consider the following example” is visible.",
+  "resultCode": 720,
+  "reasonCode": "assertion_error.checkpoint_failed",
+  "credits": 13.87357,
+  "exitCode": 1,
+  "steps": [
+    "navigate: Navigate to https://www.oxfordlearnersdictionaries.com/definition/english/exampl",
+    "analyze: ANALYZE(textual_visual, 'the first Extra Examples disclosure in the entry for ex",
+    "assert: the first Extra Examples disclosure in the entry for example is keyboard focusab"
+  ],
+  "evidencePack": "proof/kane/oxford-extra-examples/2026-11-21T19-55-30.756Z/before/4613fc02-2f3f-4638-b6a5-c2157fb4f58f.evidence",
+  "evidenceValid": true,
+  "observedOutcome": {
+    "selector": "#example_unbox_2.is-active",
+    "visible": false
+  },
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "keyboard-only",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920,
+      "keys": {
+        "tab": 0,
+        "activate": 0,
+        "other": 0
+      }
+    },
+    "readerVisible": false,
+    "width": 1280,
+    "fixtureFixed": false,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "https://www.oxfordlearnersdictionaries.com/definition/english/example",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "#q",
+    "nodes": [
+      {
+        "selector": "#example_unbox_2 > .box_title",
+        "role": "text",
+        "name": "Extra Examples",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 279,
+        "width": 601
+      },
+      {
+        "selector": "#example_unbox_2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 279,
+        "width": 601
+      },
+      {
+        "selector": "#ox-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#ox-header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#flex-header-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#flex-header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 54,
+        "width": 1172
+      },
+      {
+        "selector": "#h-title",
+        "role": "link",
+        "name": "Oxford logo",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 64,
+        "width": 162
+      },
+      {
+        "selector": "#h-redeem",
+        "role": "link",
+        "name": "Redeem",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 884,
+        "width": 77
+      },
+      {
+        "selector": "#h-upgrade",
+        "role": "link",
+        "name": "Upgrade",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 971,
+        "width": 79
+      },
+      {
+        "selector": "#h-help",
+        "role": "link",
+        "name": "Help",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1060,
+        "width": 53
+      },
+      {
+        "selector": "form",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1119,
+        "width": 97
+      },
+      {
+        "selector": "#h-sign-in",
+        "role": "link",
+        "name": "Sign in",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1124,
+        "width": 87
+      },
+      {
+        "selector": "#flex-menu",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 54,
+        "width": 1172
+      },
+      {
+        "selector": "img.old-logo",
+        "role": "img",
+        "name": "Oxford Learners Dictionaries",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 64,
+        "width": 235
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 733,
+        "width": 123
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 866,
+        "width": 103
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 979,
+        "width": 109
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1098,
+        "width": 108
+      },
+      {
+        "selector": "#searchbar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.mainsearch",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 250,
+        "width": 780
+      },
+      {
+        "selector": "#search-form",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 250,
+        "width": 780
+      },
+      {
+        "selector": "#dictionarySelector",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 250,
+        "width": 220
+      },
+      {
+        "selector": "#select_div",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 250,
+        "width": 210
+      },
+      {
+        "selector": "div.searchfield",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 470,
+        "width": 507
+      },
+      {
+        "selector": "#q",
+        "role": "textbox",
+        "name": "Enter search text",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 470,
+        "width": 466
+      },
+      {
+        "selector": "input",
+        "role": "button",
+        "name": "Submit",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 983,
+        "width": 48
+      },
+      {
+        "selector": "div.responsive_container.xenglish",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 54,
+        "width": 1172
+      },
+      {
+        "selector": "#ad_topslot",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "div.responsive_row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "div.responsive_entry_left",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 64,
+        "width": 160
+      },
+      {
+        "selector": "#ad_leftslot",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 64,
+        "width": 160
+      },
+      {
+        "selector": "#ad_leftslot2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 64,
+        "width": 160
+      },
+      {
+        "selector": "div.responsive_entry_center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 224,
+        "width": 979
+      },
+      {
+        "selector": "div.responsive_entry_center_wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 224,
+        "width": 979
+      },
+      {
+        "selector": "div.entry-header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 252,
+        "width": 951
+      },
+      {
+        "selector": "div.responsive_entry_center_left",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 252,
+        "width": 724
+      },
+      {
+        "selector": "p.definition-title",
+        "role": "text",
+        "name": "Definition of from the Oxford Advanced Learner's Dictionary",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 242,
+        "width": 734
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "example noun",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 317,
+        "width": 97
+      },
+      {
+        "selector": "#ox-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 252,
+        "width": 648
+      },
+      {
+        "selector": "#main_column",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 252,
+        "width": 648
+      },
+      {
+        "selector": "#main-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 252,
+        "width": 648
+      },
+      {
+        "selector": "#entryContent",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 252,
+        "width": 628
+      },
+      {
+        "selector": "#example",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 252,
+        "width": 628
+      },
+      {
+        "selector": "div.top-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 252,
+        "width": 628
+      },
+      {
+        "selector": "#example_topg_1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 252,
+        "width": 628
+      },
+      {
+        "selector": "div.webtop",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 252,
+        "width": 628
+      },
+      {
+        "selector": "#example_h_1",
+        "role": "heading",
+        "name": "example",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 252,
+        "width": 125
+      },
+      {
+        "selector": "div.symbols",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 252,
+        "width": 628
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 252,
+        "width": 48
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "OPAL W",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 308,
+        "width": 76
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "OPAL S",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 392,
+        "width": 72
+      },
+      {
+        "selector": "div.phons_br",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 252,
+        "width": 628
+      },
+      {
+        "selector": "div.sound.audio_play_button",
+        "role": "text",
+        "name": "example pronunciation English",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 252,
+        "width": 28
+      },
+      {
+        "selector": "div.phons_n_am",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 252,
+        "width": 628
+      },
+      {
+        "selector": "div.sound.audio_play_button",
+        "role": "text",
+        "name": "example pronunciation American",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 252,
+        "width": 28
+      },
+      {
+        "selector": "a.Ref",
+        "role": "link",
+        "name": "Idioms",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 252,
+        "width": 80
+      },
+      {
+        "selector": "#example_sng_1",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 252,
+        "width": 628
+      },
+      {
+        "selector": "div.symbols",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 295,
+        "width": 48
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 295,
+        "width": 48
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "div.collapse",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "div.collapse",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "div.collapse",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "#ring-links-box",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Questions about grammar and vocabulary? Find the answers with Practical English Usage online, your indispensable guide to problems in English.",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 291,
+        "width": 574
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "Questions about grammar and vocabulary?",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 291,
+        "width": 310
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Find the answers with online, your indispensable guide to problems in English.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 291,
+        "width": 574
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 440,
+        "width": 164
+      },
+      {
+        "selector": "#example_sng_2",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 252,
+        "width": 628
+      },
+      {
+        "selector": "div.symbols",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 295,
+        "width": 48
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 295,
+        "width": 48
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "div.collapse",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "div.collapse",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "div.collapse",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "#ad_contentslot_1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "#example_sng_3",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 252,
+        "width": 628
+      },
+      {
+        "selector": "div.symbols",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 295,
+        "width": 48
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 295,
+        "width": 48
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "div.collapse",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "#example_sng_4",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 252,
+        "width": 628
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "div.collapse",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 276,
+        "width": 604
+      },
+      {
+        "selector": "div.collapse",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 252,
+        "width": 628
+      },
+      {
+        "selector": "#example_idmgs_1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 252,
+        "width": 628
+      },
+      {
+        "selector": "div.top-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 269,
+        "width": 594
+      },
+      {
+        "selector": "#example_topg_2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 269,
+        "width": 594
+      },
+      {
+        "selector": "div.webtop",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 269,
+        "width": 594
+      },
+      {
+        "selector": "div.symbols",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 269,
+        "width": 594
+      },
+      {
+        "selector": "#example_sng_5",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 269,
+        "width": 594
+      },
+      {
+        "selector": "div.variants",
+        "role": "text",
+        "name": "(abbreviation )",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 288,
+        "width": 122
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 269,
+        "width": 594
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 269,
+        "width": 594
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 269,
+        "width": 594
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 269,
+        "width": 594
+      },
+      {
+        "selector": "div.collapse",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 269,
+        "width": 594
+      },
+      {
+        "selector": "div.top-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 269,
+        "width": 594
+      },
+      {
+        "selector": "#example_topg_3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 269,
+        "width": 594
+      },
+      {
+        "selector": "div.webtop",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 269,
+        "width": 594
+      },
+      {
+        "selector": "#example_sng_6",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 269,
+        "width": 594
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 269,
+        "width": 594
+      },
+      {
+        "selector": "a.Ref",
+        "role": "link",
+        "name": "example",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 306,
+        "width": 59
+      },
+      {
+        "selector": "a.Ref",
+        "role": "link",
+        "name": "example",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 306,
+        "width": 59
+      },
+      {
+        "selector": "div.pron-link",
+        "role": "text",
+        "name": "Check pronunciation:",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 252,
+        "width": 628
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "example",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 398,
+        "width": 57
+      },
+      {
+        "selector": "#ad_btmslot",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 252,
+        "width": 648
+      },
+      {
+        "selector": "#rightcolumn",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 900,
+        "width": 300
+      },
+      {
+        "selector": "#relatedentries",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "h4.no-rule",
+        "role": "heading",
+        "name": "Other results",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "for example",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "div.responsive_row.nearby",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "h4",
+        "role": "heading",
+        "name": "Nearby words",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "examinee noun",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "examiner noun",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "a.selected",
+        "role": "link",
+        "name": "example noun",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 903,
+        "width": 294
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "exasperate verb",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "exasperated adjective",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "div.responsive_row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "div.wotd-box.ox_5000",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "div.dayhead",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 925,
+        "width": 250
+      },
+      {
+        "selector": "#date",
+        "role": "text",
+        "name": "22 November 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 925,
+        "width": 250
+      },
+      {
+        "selector": "a.rss-icon",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1150,
+        "width": 25
+      },
+      {
+        "selector": "a.headword",
+        "role": "link",
+        "name": "differ",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 925,
+        "width": 250
+      },
+      {
+        "selector": "div.pos",
+        "role": "text",
+        "name": "verb",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 929,
+        "width": 246
+      },
+      {
+        "selector": "div.prons",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 925,
+        "width": 250
+      },
+      {
+        "selector": "#uk_pron",
+        "role": "text",
+        "name": "pronunciation English",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 995,
+        "width": 40
+      },
+      {
+        "selector": "#us_pron",
+        "role": "text",
+        "name": "pronunciation American",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1065,
+        "width": 40
+      },
+      {
+        "selector": "div.from",
+        "role": "text",
+        "name": "From the",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 925,
+        "width": 250
+      },
+      {
+        "selector": "a.origin",
+        "role": "link",
+        "name": "Oxford 5000",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 925,
+        "width": 250
+      },
+      {
+        "selector": "div.cefr",
+        "role": "text",
+        "name": "B2",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 1035,
+        "width": 30
+      },
+      {
+        "selector": "div.bottom-text",
+        "role": "text",
+        "name": "Oxford Learner's Dictionaries Word of the Day",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 925,
+        "width": 250
+      },
+      {
+        "selector": "#ad_rightslot",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "#ad_rightslot2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 910,
+        "width": 280
+      },
+      {
+        "selector": "#ox-footer",
+        "role": "contentinfo",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.footer-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container.footer-social-media-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 55,
+        "width": 1170
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 55,
+        "width": 1170
+      },
+      {
+        "selector": "div.col-md-12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 520,
+        "width": 240
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 520,
+        "width": 80
+      },
+      {
+        "selector": "a.facebook-logo",
+        "role": "link",
+        "name": "Find us on Facebook",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 520,
+        "width": 80
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 600,
+        "width": 80
+      },
+      {
+        "selector": "a.wordpress-logo",
+        "role": "link",
+        "name": "Find us on Wordpress",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 600,
+        "width": 80
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 680,
+        "width": 80
+      },
+      {
+        "selector": "a.instagram-logo",
+        "role": "link",
+        "name": "Find us on Instagram",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 680,
+        "width": 80
+      },
+      {
+        "selector": "div.footer-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container.footer-content-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "grid",
+        "left": 55,
+        "width": 1170
+      },
+      {
+        "selector": "div",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 70,
+        "width": 364
+      },
+      {
+        "selector": "#footer-content-col-1-header",
+        "role": "text",
+        "name": "Oxford Learner's Dictionaries",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 70,
+        "width": 364
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 70,
+        "width": 364
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Browse Dictionaries & Grammar Opens in a new window",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 70,
+        "width": 231
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 70,
+        "width": 364
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Search Box Opens in a new window",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 70,
+        "width": 93
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 70,
+        "width": 364
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "System Requirements Opens in a new window",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 70,
+        "width": 165
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 70,
+        "width": 364
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Contact Us Opens in a new window",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 70,
+        "width": 92
+      }
+    ]
+  },
+  "video": "proof/kane/oxford-extra-examples/2026-11-21T19-55-30.756Z/before/recording.mp4"
+}

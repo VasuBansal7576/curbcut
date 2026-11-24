@@ -1,0 +1,16 @@
+{
+  "barrier": "Tab reaches Buy Instagram Followers, but ArrowDown leaves focus on the document body while the cookie dialog is open instead of moving it to Buy Instagram Likes.",
+  "rules": [
+    {
+      "selector": "#cc-main .cm[role=\"dialog\"]",
+      "action": "removeFocusTrap"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#services [role=\"tablist\"][aria-label=\"Services\"]",
+      "items": "#services [role=\"tablist\"][aria-label=\"Services\"] > button[role=\"tab\"]",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ]
+}

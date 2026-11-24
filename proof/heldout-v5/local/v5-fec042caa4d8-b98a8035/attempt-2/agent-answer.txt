@@ -1,0 +1,16 @@
+{
+  "barrier": "Sequential Tab navigation reaches AI Workspace, but focus then moves to the document body before ArrowDown can be used. Restoring the focus outline did not prevent the focus loss.",
+  "rules": [
+    {
+      "selector": "div.ProductTabberTabs_tab-list__4f2_0[role=\"tablist\"]",
+      "action": "removeFocusTrap"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.ProductTabberTabs_tab-list__4f2_0[role=\"tablist\"]",
+      "items": "button[role=\"tab\"][id^=\"product-tab-\"]",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ]
+}

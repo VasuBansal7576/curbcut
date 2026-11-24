@@ -1,0 +1,1775 @@
+{
+  "runner": "playwright",
+  "status": "fail",
+  "reason": "locator.click: Timeout 1500ms exceeded.",
+  "steps": [
+    {
+      "selector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > a",
+      "action": "focus"
+    },
+    {
+      "selector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > a",
+      "action": "key",
+      "key": "ArrowDown"
+    },
+    {
+      "selector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > div > div > div:nth-of-type(1) > ul > li:nth-of-type(3) > a",
+      "action": "activate"
+    }
+  ],
+  "url": "https://www.orfonline.org/",
+  "snapshot": {
+    "url": "https://www.orfonline.org/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body",
+    "context": {
+      "nodes": [
+        {
+          "selector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > a",
+          "parent": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "class": "dropbtn"
+          },
+          "hoverHandlers": [],
+          "text": "RESEARCH",
+          "children": [],
+          "box": [
+            82,
+            155,
+            78,
+            46
+          ],
+          "style": {
+            "display": "inline-block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "dropdown"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.dropbtn",
+            "div.dropdown-content"
+          ],
+          "box": [
+            82,
+            155,
+            78,
+            46
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "parent": "div.main_navbar > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.dropdown"
+          ],
+          "box": [
+            82,
+            155,
+            78,
+            46
+          ],
+          "style": {
+            "display": "inline-block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main_navbar > ul:nth-of-type(1)",
+          "parent": "div.main_navbar",
+          "tag": "ul",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li",
+            "li",
+            "li",
+            "li",
+            "li"
+          ],
+          "box": [
+            82,
+            155,
+            831,
+            46
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main_navbar",
+          "parent": "div.col-lg-9.col-md-8",
+          "tag": "div",
+          "attributes": {
+            "class": "main_navbar"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul"
+          ],
+          "box": [
+            82,
+            155,
+            831,
+            46
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.col-lg-9.col-md-8",
+          "tag": "div",
+          "attributes": {
+            "class": "col-lg-9 col-md-8 col-sm-6 col-4"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.main_navbar",
+            "#mySidenav",
+            "span.toggle"
+          ],
+          "box": [
+            70,
+            155,
+            855,
+            46
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > div",
+          "parent": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "dropdown-content"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.mega_menu"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "-1",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > div > div > div:nth-of-type(1) > ul > li:nth-of-type(3) > a",
+          "parent": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3)",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "Young Voices",
+          "children": [],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3)",
+          "parent": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "w-100"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "inline-block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "parent": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.w-100",
+            "li.w-100",
+            "li.w-100",
+            "li.w-100"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "submenu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "h5",
+            "ul"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "inline-block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > div",
+          "tag": "div",
+          "attributes": {
+            "class": "mega_menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.submenu",
+            "div.submenu",
+            "div.submenu"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(10, 88, 202);",
+          "conditions": []
+        },
+        {
+          "selector": ".main_navbar li a:hover::before, header, .main_navbar li a.dropbtn.active::before, .main_navbar li a.active::before",
+          "declarations": "width: 100%;",
+          "conditions": []
+        },
+        {
+          "selector": ".alphbet-wise-search ul li a:hover, .main_navbar li a:hover, .you_may_topic a:hover h3, a:hover .heading_h3, .main_navbar .dropbtn.active, .main_navbar li a.active",
+          "declarations": "color: rgb(0, 105, 167);",
+          "conditions": []
+        },
+        {
+          "selector": ".main_navbar .dropdown-content a, .main_navbar .dropdown:hover .dropdown-content",
+          "declarations": "display: block;",
+          "conditions": []
+        },
+        {
+          "selector": ".main_navbar .dropdown-content li a:hover",
+          "declarations": "color: rgb(43, 83, 113);",
+          "conditions": []
+        },
+        {
+          "selector": "a, a:hover",
+          "declarations": "text-decoration: none;",
+          "conditions": []
+        },
+        {
+          "selector": ".accordion-body ul li a, .alphbet-wise-search ul li a:hover, .atcb_text, .btn-green, .heading_h3 a:hover, .main_navbar li a:hover, .realted-events em a, .viral_world h3 span, .you_may_topic a:hover h3, a:hover .heading_h3, h6 a",
+          "declarations": "color: rgb(0, 105, 167);",
+          "conditions": []
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 82,
+        "width": 78
+      },
+      {
+        "selector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > div",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > a",
+        "role": "link",
+        "name": "RESEARCH",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 82,
+        "width": 78
+      },
+      {
+        "selector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > div > div > div:nth-of-type(1) > ul > li:nth-of-type(3) > a",
+        "role": "link",
+        "name": "Young Voices",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 421,
+        "width": 71
+      },
+      {
+        "selector": "body",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "noscript",
+        "role": "text",
+        "name": "<iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-KZ28GV9Q\"\nheight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>",
+        "state": "",
+        "tag": "noscript",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "header",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "style",
+        "role": "text",
+        "name": ".video-container {\n  position: relative;\n  width: 100%;\n  padding-bottom: 56.25%; /* 16:9 ratio → (9 ÷ 16 = 0.5625 = 56.25%) */\n  height: 0;\n  overflow: hidden;\n}\n\n.video-container iframe {\n  position",
+        "state": "",
+        "tag": "style",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "div.wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "section.videos",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.row.align-items-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.col-lg-5.col-md-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 475
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Kritika Banerjee",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 969,
+        "width": 122
+      },
+      {
+        "selector": "img.img-fluid",
+        "role": "img",
+        "name": "img",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 1163,
+        "width": 21
+      },
+      {
+        "selector": "div.col-lg-7.col-md-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 545,
+        "width": 665
+      },
+      {
+        "selector": "div.multi_btn",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 557,
+        "width": 641
+      },
+      {
+        "selector": "a.subscribe",
+        "role": "link",
+        "name": "Subscribe",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 1098,
+        "width": 100
+      },
+      {
+        "selector": "div.top_nav",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.top_nav_main",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.col-lg-9.col-md-8",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 855
+      },
+      {
+        "selector": "div.main_navbar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 82,
+        "width": 831
+      },
+      {
+        "selector": "div.dropdown",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 421,
+        "width": 71
+      },
+      {
+        "selector": "a.dropbtn",
+        "role": "link",
+        "name": "About Us",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 421,
+        "width": 71
+      },
+      {
+        "selector": "div.col-lg-3.col-md-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 925,
+        "width": 285
+      },
+      {
+        "selector": "div.search",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 937,
+        "width": 261
+      },
+      {
+        "selector": "#searchForm",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tag": "form",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 937,
+        "width": 261
+      },
+      {
+        "selector": "#form1",
+        "role": "searchbox",
+        "name": "",
+        "state": "",
+        "tag": "input",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 937,
+        "width": 261
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1188,
+        "width": 9
+      },
+      {
+        "selector": "section.home_banner",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "#demo",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.carousel-inner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 82,
+        "width": 1116
+      },
+      {
+        "selector": "div.carousel-item.active",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 82,
+        "width": 1116
+      },
+      {
+        "selector": "div.col-xl-10.col-lg-9",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 950
+      },
+      {
+        "selector": "img.img-fluid.w-100",
+        "role": "img",
+        "name": "Rethinking Development: Navigating Disruption in Contemporary Africa",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 82,
+        "width": 926
+      },
+      {
+        "selector": "div.col-xl-2.col-lg-3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1020,
+        "width": 190
+      },
+      {
+        "selector": "div.carousel-caption",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 696,
+        "width": 502
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Books And Monographs",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 726,
+        "width": 305
+      },
+      {
+        "selector": "div.topic_story",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 842,
+        "width": 356
+      },
+      {
+        "selector": "div.carousel-indicators",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1110,
+        "width": 90
+      },
+      {
+        "selector": "button.active",
+        "role": "button",
+        "name": "",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1113,
+        "width": 9
+      },
+      {
+        "selector": "section.recent_updates",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.all_detail.for_bottom_padding",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.col-12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "h2.heading_h2",
+        "role": "heading",
+        "name": "All Updates",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 82,
+        "width": 198
+      },
+      {
+        "selector": "div.col-lg-4.col-sm-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 830,
+        "width": 380
+      },
+      {
+        "selector": "div.all_story.update",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 842,
+        "width": 356
+      },
+      {
+        "selector": "img.img-fluid.recent_img",
+        "role": "img",
+        "name": "From Pledges to Action: Making Climate Finance Work for Smallholders",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 842,
+        "width": 356
+      },
+      {
+        "selector": "h3.heading_h3",
+        "role": "heading",
+        "name": "From Pledges to Action: Making Climate Finance Work for Smallholders",
+        "state": "",
+        "tag": "h3",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flow-root",
+        "left": 842,
+        "width": 356
+      },
+      {
+        "selector": "div.author_name",
+        "role": "text",
+        "name": "| |",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 842,
+        "width": 356
+      },
+      {
+        "selector": "div.viewallhp.text-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 82,
+        "width": 1116
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > a",
+          "parent": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "class": "dropbtn"
+          },
+          "hoverHandlers": [],
+          "text": "RESEARCH",
+          "children": [],
+          "box": [
+            82,
+            155,
+            70,
+            46
+          ],
+          "style": {
+            "display": "inline-block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "dropdown"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.dropbtn",
+            "div.dropdown-content"
+          ],
+          "box": [
+            82,
+            155,
+            70,
+            46
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "parent": "div.main_navbar > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.dropdown"
+          ],
+          "box": [
+            82,
+            155,
+            70,
+            46
+          ],
+          "style": {
+            "display": "inline-block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main_navbar > ul:nth-of-type(1)",
+          "parent": "div.main_navbar",
+          "tag": "ul",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li",
+            "li",
+            "li",
+            "li",
+            "li"
+          ],
+          "box": [
+            82,
+            155,
+            831,
+            46
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main_navbar",
+          "parent": "div.col-lg-9.col-md-8",
+          "tag": "div",
+          "attributes": {
+            "class": "main_navbar"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul"
+          ],
+          "box": [
+            82,
+            155,
+            831,
+            46
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.col-lg-9.col-md-8",
+          "tag": "div",
+          "attributes": {
+            "class": "col-lg-9 col-md-8 col-sm-6 col-4"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.main_navbar",
+            "#mySidenav",
+            "span.toggle"
+          ],
+          "box": [
+            70,
+            155,
+            855,
+            46
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > div",
+          "parent": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "dropdown-content"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.mega_menu"
+          ],
+          "box": [
+            82,
+            205,
+            880,
+            350
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "-1",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > div > div > div:nth-of-type(1) > ul > li:nth-of-type(3) > a",
+          "parent": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3)",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "Young Voices",
+          "children": [],
+          "box": [
+            127,
+            357,
+            211,
+            25
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3)",
+          "parent": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "w-100"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a"
+          ],
+          "box": [
+            127,
+            357,
+            211,
+            30
+          ],
+          "style": {
+            "display": "inline-block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "parent": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.w-100",
+            "li.w-100",
+            "li.w-100",
+            "li.w-100"
+          ],
+          "box": [
+            127,
+            294,
+            261,
+            123
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "submenu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "h5",
+            "ul"
+          ],
+          "box": [
+            127,
+            250,
+            261,
+            167
+          ],
+          "style": {
+            "display": "inline-block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main_navbar > ul:nth-of-type(1) > li:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "header > div:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > div",
+          "tag": "div",
+          "attributes": {
+            "class": "mega_menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.submenu",
+            "div.submenu",
+            "div.submenu"
+          ],
+          "box": [
+            127,
+            250,
+            790,
+            260
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(10, 88, 202);",
+          "conditions": []
+        },
+        {
+          "selector": ".main_navbar li a:hover::before, header, .main_navbar li a.dropbtn.active::before, .main_navbar li a.active::before",
+          "declarations": "width: 100%;",
+          "conditions": []
+        },
+        {
+          "selector": ".alphbet-wise-search ul li a:hover, .main_navbar li a:hover, .you_may_topic a:hover h3, a:hover .heading_h3, .main_navbar .dropbtn.active, .main_navbar li a.active",
+          "declarations": "color: rgb(0, 105, 167);",
+          "conditions": []
+        },
+        {
+          "selector": ".main_navbar .dropdown-content a, .main_navbar .dropdown:hover .dropdown-content",
+          "declarations": "display: block;",
+          "conditions": []
+        },
+        {
+          "selector": ".main_navbar .dropdown-content li a:hover",
+          "declarations": "color: rgb(43, 83, 113);",
+          "conditions": []
+        },
+        {
+          "selector": "a, a:hover",
+          "declarations": "text-decoration: none;",
+          "conditions": []
+        },
+        {
+          "selector": ".accordion-body ul li a, .alphbet-wise-search ul li a:hover, .atcb_text, .btn-green, .heading_h3 a:hover, .main_navbar li a:hover, .realted-events em a, .viral_world h3 span, .you_may_topic a:hover h3, a:hover .heading_h3, h6 a",
+          "declarations": "color: rgb(0, 105, 167);",
+          "conditions": []
+        }
+      ]
+    }
+  }
+}

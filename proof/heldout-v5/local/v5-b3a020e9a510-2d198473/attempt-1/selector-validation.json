@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "container",
+      "selector": "#Destinations .destinations__segmented [role=\"tablist\"]",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "inline-flex",
+            "justify-center",
+            "w-auto",
+            "gap-2"
+          ],
+          "role": "tablist",
+          "label": "Segmented control"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "items",
+      "selector": "button[role=\"tab\"]",
+      "scope": "#Destinations .destinations__segmented [role=\"tablist\"]",
+      "count": 3,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "id": "countries-ba4i7pb",
+          "classes": [
+            "text-sm",
+            "sm:text-base",
+            "md:px-5",
+            "px-4"
+          ],
+          "role": "tab",
+          "label": "Countries"
+        },
+        {
+          "tag": "button",
+          "id": "regions-ba4i7pb",
+          "classes": [
+            "text-sm",
+            "sm:text-base",
+            "md:px-5",
+            "px-4"
+          ],
+          "role": "tab",
+          "label": "Regions"
+        },
+        {
+          "tag": "button",
+          "id": "plans-ba4i7pb",
+          "classes": [
+            "text-sm",
+            "sm:text-base",
+            "md:px-5",
+            "px-4"
+          ],
+          "role": "tab",
+          "label": "Plans New"
+        }
+      ]
+    }
+  ]
+}

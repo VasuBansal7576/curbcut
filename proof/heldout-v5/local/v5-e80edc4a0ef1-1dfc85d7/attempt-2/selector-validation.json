@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#countryPicker",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "countryPicker",
+          "classes": [
+            "modal",
+            "fade"
+          ],
+          "label": "Asia 🇦🇪 UAE – English 🇦🇪 UAE – Arabic 🇦🇿 Azerbaijan 🇧🇩 Bangladesh 🇧🇭 Bahrain - Arabic 🇧🇭"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "dialog",
+      "selector": "#countryPicker",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "countryPicker",
+          "classes": [
+            "modal",
+            "fade"
+          ],
+          "label": "Asia 🇦🇪 UAE – English 🇦🇪 UAE – Arabic 🇦🇿 Azerbaijan 🇧🇩 Bangladesh 🇧🇭 Bahrain - Arabic 🇧🇭"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "close",
+      "selector": "#countryPicker .modal-header > button[data-bs-dismiss=\"modal\"]",
+      "scope": "#countryPicker",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "btn-close"
+          ],
+          "label": "Close"
+        }
+      ]
+    }
+  ]
+}

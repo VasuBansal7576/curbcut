@@ -1,0 +1,1807 @@
+{
+  "status": "pass",
+  "runId": "ba03fd24-2603-4a12-9f89-cdd58b382d0d",
+  "reason": "Objective completed",
+  "summary": "Opened the public “How To Apply For a Course” page on Kidderminster College’s website.\nSelected the Frequently Asked Questions item “What is a next of kin?”.\nThe answer was displayed, beginning “A next of kin is a relative…”.\nCompleted the requested action without signing in, registering, or making a payment.",
+  "resultCode": 100,
+  "reasonCode": "success.complete",
+  "credits": 18.6387475,
+  "exitCode": 0,
+  "steps": [
+    "navigate: Navigate to https://www.kidderminster.ac.uk/good-to-know-articles/how-to-apply-f",
+    "click: Clicking Close on the privacy consent banner",
+    "scroll: Scrolling into view the Frequently Asked Questions section",
+    "click: Clicking the Frequently Asked Questions item What is a next of kin?",
+    "analyze: ANALYZE(textual_visual, 'the answer beginning A next of kin is a relative is vis",
+    "assert: the answer beginning A next of kin is a relative is visible"
+  ],
+  "evidencePack": "proof/kane/kidderminster-application-faq/resume-2026-11-22T03-32-20.479Z/control/d26af1d7-60c2-4ff5-988e-a33c21d89344.evidence",
+  "evidenceValid": true,
+  "observedOutcome": {
+    "selector": "#expand-f28d3621-47c4-495b-8993-bd8210e37d66.show",
+    "visible": true
+  },
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "control",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920
+    },
+    "readerVisible": false,
+    "width": 1280,
+    "fixtureFixed": false,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "https://www.kidderminster.ac.uk/good-to-know-articles/how-to-apply-for-a-course/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body.scroll-down",
+    "nodes": [
+      {
+        "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 143,
+        "width": 456
+      },
+      {
+        "selector": "div.m-expand.m-expand__trigger",
+        "role": "tabpanel",
+        "name": "",
+        "state": "expanded true",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 508
+      },
+      {
+        "selector": "div.svg-sprite",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": -1,
+        "width": 1
+      },
+      {
+        "selector": "div.cky-btn-revisit-wrapper.cky-revisit-bottom-left",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 15,
+        "width": 45
+      },
+      {
+        "selector": "button.cky-btn-revisit",
+        "role": "button",
+        "name": "Consent Preferences",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 23,
+        "width": 30
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Revisit consent button",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 23,
+        "width": 30
+      },
+      {
+        "selector": "main",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "header.g-header",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container-fluid.d-flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 10,
+        "width": 1260
+      },
+      {
+        "selector": "a.g-header__logo.d-flex",
+        "role": "link",
+        "name": "West Lancachire College Logo Home",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 25,
+        "width": 163
+      },
+      {
+        "selector": "img.align-self-center.test",
+        "role": "img",
+        "name": "West Lancachire College Logo",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 25,
+        "width": 163
+      },
+      {
+        "selector": "#mobileMenu",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 228,
+        "width": 1027
+      },
+      {
+        "selector": "div.m-pills",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 228,
+        "width": 266
+      },
+      {
+        "selector": "a.a-btn.a-btn--reversed",
+        "role": "link",
+        "name": "Staff",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 228,
+        "width": 78
+      },
+      {
+        "selector": "a.a-btn.a-btn--reversed",
+        "role": "link",
+        "name": "Current Students",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 308,
+        "width": 186
+      },
+      {
+        "selector": "nav.g-nav",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.grid-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 102,
+        "width": 1076
+      },
+      {
+        "selector": "div.g-nav__item.parent-link",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 102,
+        "width": 133
+      },
+      {
+        "selector": "a.g-nav__item",
+        "role": "link",
+        "name": "Subject Areas",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 275,
+        "width": 120
+      },
+      {
+        "selector": "a.g-nav__item",
+        "role": "link",
+        "name": "Facilities",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 435,
+        "width": 80
+      },
+      {
+        "selector": "a.g-nav__item",
+        "role": "link",
+        "name": "Student Life",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 556,
+        "width": 105
+      },
+      {
+        "selector": "a.g-nav__item",
+        "role": "link",
+        "name": "Support",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 702,
+        "width": 72
+      },
+      {
+        "selector": "a.g-nav__item",
+        "role": "link",
+        "name": "Events & Open Days",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 814,
+        "width": 165
+      },
+      {
+        "selector": "a.g-nav__item",
+        "role": "link",
+        "name": "Parents",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1020,
+        "width": 71
+      },
+      {
+        "selector": "a.g-nav__item",
+        "role": "link",
+        "name": "News",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1131,
+        "width": 47
+      },
+      {
+        "selector": "nav.g-header__nav",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 519,
+        "width": 369
+      },
+      {
+        "selector": "a.g-header__nav-item",
+        "role": "link",
+        "name": "About",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 531,
+        "width": 44
+      },
+      {
+        "selector": "a.g-header__nav-item",
+        "role": "link",
+        "name": "Safeguarding",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 599,
+        "width": 93
+      },
+      {
+        "selector": "a.g-header__nav-item",
+        "role": "link",
+        "name": "Work for us",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 716,
+        "width": 82
+      },
+      {
+        "selector": "a.g-header__nav-item",
+        "role": "link",
+        "name": "Contact",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 822,
+        "width": 55
+      },
+      {
+        "selector": "div.g-header__btns",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 915,
+        "width": 340
+      },
+      {
+        "selector": "a.a-btn.d-none",
+        "role": "link",
+        "name": "Employers",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-flex",
+        "left": 915,
+        "width": 156
+      },
+      {
+        "selector": "#top-navigation-button-2",
+        "role": "link",
+        "name": "Apply Now",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-flex",
+        "left": 1096,
+        "width": 159
+      },
+      {
+        "selector": "div.m-hero--breadcrumb",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.m-hero__cta-banner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.grid-container.d-flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 102,
+        "width": 1076
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 117,
+        "width": 55
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Home",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 117,
+        "width": 43
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 180,
+        "width": 165
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Good to know articles",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 180,
+        "width": 153
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 354,
+        "width": 189
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "How To Apply For a Course",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 354,
+        "width": 189
+      },
+      {
+        "selector": "div.m-hero.m-hero--imageAndButton",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.grid-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 102,
+        "width": 1076
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 102,
+        "width": 1076
+      },
+      {
+        "selector": "div.col-sm-7",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 102,
+        "width": 628
+      },
+      {
+        "selector": "h1.o-textcolor--variant-1",
+        "role": "heading",
+        "name": "How To Apply For a Course",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 598
+      },
+      {
+        "selector": "h2.o-textcolor--reversed",
+        "role": "heading",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 598
+      },
+      {
+        "selector": "p.o-textcolor--reversed",
+        "role": "text",
+        "name": "Unsure of our application process? Take a look below at our hints and tips on how to apply for a course at Kidderminster College!",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 598
+      },
+      {
+        "selector": "div.col-sm-5.text-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 819,
+        "width": 359
+      },
+      {
+        "selector": "div.o-section.mt",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.o-section__content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.grid-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 102,
+        "width": 1076
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 102,
+        "width": 1076
+      },
+      {
+        "selector": "div.col-12.col-md-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 102,
+        "width": 538
+      },
+      {
+        "selector": "div.m-card.m-card--basic",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 508
+      },
+      {
+        "selector": "div.m-card__content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 157,
+        "width": 428
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "1. Make your choice",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 157,
+        "width": 428
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Take a look at our courses and decide which one inspires you the most; we always say to go for something you enjoy or are passionate about, so have a look and determine what stands out to you. Have a ",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 157,
+        "width": 400
+      },
+      {
+        "selector": "div.col-12.col-md-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 640,
+        "width": 538
+      },
+      {
+        "selector": "div.m-card.m-card--basic",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 655,
+        "width": 508
+      },
+      {
+        "selector": "div.m-card__content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 695,
+        "width": 428
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "2. Fill out our application form",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 695,
+        "width": 428
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Once you’ve decided what course you’d like to study with us, hit the apply now button! You’ll be asked to make an account and to fill out our easy online application form. Fill this in as much as poss",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 695,
+        "width": 400
+      },
+      {
+        "selector": "div.col-12.col-md-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 102,
+        "width": 538
+      },
+      {
+        "selector": "div.m-card.m-card--basic",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 508
+      },
+      {
+        "selector": "div.m-card__content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 157,
+        "width": 428
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "3. Confirm your place",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 157,
+        "width": 428
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Once we’ve confirmed your place based on the entry requirements for your course, you’ll get sent an offer email; all you have to do now is click the link and accept your place! To ensure your suitabil",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 157,
+        "width": 400
+      },
+      {
+        "selector": "div.col-12.col-md-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 640,
+        "width": 538
+      },
+      {
+        "selector": "div.m-card.m-card--basic",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 655,
+        "width": 508
+      },
+      {
+        "selector": "div.m-card__content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 695,
+        "width": 428
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "4. Welcome to Kidderminster College",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 695,
+        "width": 428
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "You’re in! Once you’ve confirmed your place, we’ll send you a Welcome Passport with everything you need to know about starting at KC. We also send out regular emails and social media updates so you ca",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 695,
+        "width": 400
+      },
+      {
+        "selector": "div.o-section.with-list-style",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.o-section__header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.grid-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 102,
+        "width": 1076
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 102,
+        "width": 1076
+      },
+      {
+        "selector": "div.col-12.col-md-8",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 281,
+        "width": 717
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Frequently Asked Questions",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 296,
+        "width": 687
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 296,
+        "width": 687
+      },
+      {
+        "selector": "div.o-section__content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.grid-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 102,
+        "width": 1076
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 102,
+        "width": 1076
+      },
+      {
+        "selector": "div.col-12.col-md-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 102,
+        "width": 538
+      },
+      {
+        "selector": "h4",
+        "role": "heading",
+        "name": "What is a next of kin?",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 143,
+        "width": 183
+      },
+      {
+        "selector": "#expand-f28d3621-47c4-495b-8993-bd8210e37d66",
+        "role": "text",
+        "name": "A next of kin is a relative with whom you have the closest relationship and would be the person we would contact in an emergency.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 143,
+        "width": 456
+      },
+      {
+        "selector": "div.m-expand__content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 143,
+        "width": 456
+      },
+      {
+        "selector": "p.MsoNormal",
+        "role": "text",
+        "name": "A next of kin is a relative with whom you have the closest relationship and would be the person we would contact in an emergency.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 153,
+        "width": 446
+      },
+      {
+        "selector": "div.m-expand.m-expand__trigger",
+        "role": "tabpanel",
+        "name": "",
+        "state": "expanded false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 508
+      },
+      {
+        "selector": "div.m-expand-header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 143,
+        "width": 456
+      },
+      {
+        "selector": "h4",
+        "role": "heading",
+        "name": "What if my school is not on the list?",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 143,
+        "width": 295
+      },
+      {
+        "selector": "div.m-expand.m-expand__trigger",
+        "role": "tabpanel",
+        "name": "",
+        "state": "expanded false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 508
+      },
+      {
+        "selector": "div.m-expand-header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 143,
+        "width": 456
+      },
+      {
+        "selector": "h4",
+        "role": "heading",
+        "name": "What is an EHCP?",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 143,
+        "width": 154
+      },
+      {
+        "selector": "div.col-12.col-md-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 640,
+        "width": 538
+      },
+      {
+        "selector": "div.m-expand.m-expand__trigger",
+        "role": "tabpanel",
+        "name": "",
+        "state": "expanded false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 655,
+        "width": 508
+      },
+      {
+        "selector": "div.m-expand-header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 681,
+        "width": 456
+      },
+      {
+        "selector": "h4",
+        "role": "heading",
+        "name": "I am confused about the living in the UK/EEA for 3 years question",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 681,
+        "width": 456
+      },
+      {
+        "selector": "div.m-expand.m-expand__trigger",
+        "role": "tabpanel",
+        "name": "",
+        "state": "expanded false",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 655,
+        "width": 508
+      },
+      {
+        "selector": "div.m-expand-header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 681,
+        "width": 456
+      },
+      {
+        "selector": "h4",
+        "role": "heading",
+        "name": "What qualifications do I need to include in my application?",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 681,
+        "width": 456
+      },
+      {
+        "selector": "footer.g-footer",
+        "role": "contentinfo",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.g-footer__top",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.grid-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 102,
+        "width": 1076
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 102,
+        "width": 1076
+      },
+      {
+        "selector": "div.col-12.col-sm-3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 102,
+        "width": 269
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 239
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "16-18 College",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 117,
+        "width": 115
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 239
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Higher Education",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 117,
+        "width": 162
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 239
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Apprenticeships",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 117,
+        "width": 150
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 239
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Adults 19+",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 117,
+        "width": 93
+      },
+      {
+        "selector": "div.col-12.col-sm-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 371,
+        "width": 359
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 416,
+        "width": 299
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Policies and Statements",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 416,
+        "width": 167
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 416,
+        "width": 299
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Complaints and Compliments Procedure",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 416,
+        "width": 284
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 416,
+        "width": 299
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Learner Privacy Notice",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 416,
+        "width": 156
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 416,
+        "width": 299
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "B2B Privacy Statement",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 416,
+        "width": 158
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 416,
+        "width": 299
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "National 16 to 18 Performance Tables",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 416,
+        "width": 257
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 416,
+        "width": 299
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Kidderminster College Ofsted Results",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 416,
+        "width": 263
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 416,
+        "width": 299
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Website Accessibility Statement",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 416,
+        "width": 225
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 416,
+        "width": 299
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Safeguarding Policy",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 416,
+        "width": 139
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 416,
+        "width": 299
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Supply Chain Information",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 416,
+        "width": 178
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 416,
+        "width": 299
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Modern Slavery Statement",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 416,
+        "width": 185
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 416,
+        "width": 299
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "NCG Disclaimer",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 416,
+        "width": 110
+      },
+      {
+        "selector": "div.col-12.col-sm-5",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 730,
+        "width": 448
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 775,
+        "width": 126
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Current Students",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 822,
+        "width": 79
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 931,
+        "width": 46
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Staff",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 931,
+        "width": 46
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1007,
+        "width": 156
+      },
+      {
+        "selector": "a.a-btn.a-btn--primary",
+        "role": "link",
+        "name": "Employers",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-flex",
+        "left": 1007,
+        "width": 156
+      },
+      {
+        "selector": "div.g-footer__social",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 745,
+        "width": 418
+      },
+      {
+        "selector": "a.ml-2",
+        "role": "link",
+        "name": "Kidderminster College",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 1033,
+        "width": 32
+      },
+      {
+        "selector": "a.ml-2",
+        "role": "link",
+        "name": "KidderminstColl",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 1073,
+        "width": 20
+      },
+      {
+        "selector": "a.ml-2",
+        "role": "link",
+        "name": "kidderminstercollege",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 1100,
+        "width": 33
+      },
+      {
+        "selector": "a.ml-2",
+        "role": "link",
+        "name": "kidderminstercollege",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 1141,
+        "width": 22
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 102,
+        "width": 1076
+      },
+      {
+        "selector": "div.col-12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 102,
+        "width": 1076
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 53
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Part Of NCG Logo 02",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 117,
+        "width": 53
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 210,
+        "width": 90
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Ofsted Good GP White",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 210,
+        "width": 90
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 340,
+        "width": 186
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Matrix Qm White",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 340,
+        "width": 186
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 566,
+        "width": 202
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Tef 2023 Silver Logo KC",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 566,
+        "width": 202
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 809,
+        "width": 136
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Colleges Worcestershire Logo Whiteout",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 809,
+        "width": 136
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 985,
+        "width": 117
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "The Point Business Centre White",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 985,
+        "width": 117
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 91
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Learner Happiness Partner 25 26 Logo",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 117,
+        "width": 91
+      },
+      {
+        "selector": "div.g-footer__bottom",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.grid-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 102,
+        "width": 1076
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 102,
+        "width": 1076
+      },
+      {
+        "selector": "div.col-12.col-sm-10",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 102,
+        "width": 897
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 117,
+        "width": 145
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "About The College",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 117,
+        "width": 130
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 272,
+        "width": 32
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "NCG",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 272,
+        "width": 32
+      },
+      {
+        "selector": "div.col-12.col-sm-2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 999,
+        "width": 179
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "NCG",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 1131,
+        "width": 32
+      }
+    ]
+  },
+  "video": "proof/kane/kidderminster-application-faq/resume-2026-11-22T03-32-20.479Z/control/recording.mp4"
+}

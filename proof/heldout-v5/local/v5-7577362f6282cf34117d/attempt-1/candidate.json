@@ -1,0 +1,34 @@
+{
+  "id": "v5-7577362f6282cf34117d",
+  "url": "https://www.indiabix.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search” field and type test without submitting.",
+  "observedSelector": "#txtSearchKey",
+  "requiredName": "Search",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#txtSearchKey",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.indiabix.com",
+  "match": "https://www.indiabix.com/",
+  "barrier": "The native textbox #txtSearchKey has no accessible name, so it cannot be identified as “Search” in Reading view.",
+  "rules": [
+    {
+      "selector": "#txtSearchKey",
+      "action": "addLabel",
+      "value": "Search"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

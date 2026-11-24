@@ -1,0 +1,55 @@
+{
+  "id": "v4-52c7859b6fdc-1dbfa8c6",
+  "url": "https://www.audience.io/",
+  "persona": "keyboard-only",
+  "task": "Open “Platform” from keyboard focus or with Arrow Down and follow “Promotions”. Confirm the public destination /promotions.",
+  "controlTask": "Hover “Platform”, click “Promotions” and confirm /promotions.",
+  "observedSelector": "#w-dropdown-toggle-0",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/promotions"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#w-node-_0fc76abe-e44c-d547-de15-6c3e7f8f7cd3-7f8f7ccf > div:nth-of-type(1)",
+    "#w-dropdown-list-0"
+  ],
+  "journey": [
+    {
+      "selector": "#w-dropdown-toggle-0",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-toggle-0",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-list-0 > a:nth-of-type(1)",
+      "action": "activate"
+    }
+  ],
+  "site": "www.audience.io",
+  "match": "https://www.audience.io/",
+  "barrier": "The Platform trigger is keyboard-focusable, but focus and Arrow Down leave its dropdown at display:none, making the Promotions link unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#w-dropdown-toggle-0",
+      "target": "#w-dropdown-list-0",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

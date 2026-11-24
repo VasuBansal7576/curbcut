@@ -1,0 +1,9 @@
+{
+  "barrier": "The snapshot exposes Edit Chart Data as text with tabIndex -1, leaving it out of the keyboard tab order.",
+  "rules": [
+    {"selector": "#btn-edit-chart", "action": "makeFocusable"},
+    {"selector": "#btn-edit-chart", "action": "setRole", "value": "button"},
+    {"selector": "#btn-edit-chart", "action": "bindEnterToClick"},
+    {"selector": "#btn-edit-chart", "action": "restoreFocusOutline"}
+  ]
+}

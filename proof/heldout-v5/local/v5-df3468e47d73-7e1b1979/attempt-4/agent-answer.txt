@@ -1,0 +1,10 @@
+{
+  "barrier": "Hovering over Who We Are opens the submenu, but keyboard traversal reaches the button with the submenu still hidden, and the button lacks focus at the Arrow Down step.",
+  "rules": [
+    {
+      "selector": "#header .header-nav-menu > li.header-nav-item:has(> #who_we_are)",
+      "action": "mirrorHoverEventToFocus",
+      "value": "pointerover"
+    }
+  ]
+}

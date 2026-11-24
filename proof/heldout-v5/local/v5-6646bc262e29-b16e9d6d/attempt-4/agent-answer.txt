@@ -1,0 +1,32 @@
+{
+  "barrier": "Keyboard activation opens the free domain modal, but focus can remain outside it while it fades in, and Escape does not dismiss it.",
+  "rules": [
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "selector": "#exampleModalToggle1",
+      "action": "removeFocusTrap"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#exampleModalToggle1",
+      "opener": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "close": "#exampleModalToggle1 .modal-footer > button[data-bs-dismiss='modal']"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "barrier": "At 320 CSS pixels, focusing Companies and pressing ArrowDown leaves its submenu at display: none, so the Financial Services link cannot be activated.",
+  "rules": [
+    {
+      "selector": "div._35850eeef85c22c1-wrapper",
+      "action": "injectCSS",
+      "value": {"display": "block"}
+    },
+    {
+      "selector": "ul._35850eeef85c22c1-primaryNavigationList",
+      "action": "injectCSS",
+      "value": {"display": "block"}
+    },
+    {
+      "selector": "nav._35850eeef85c22c1-navigation",
+      "action": "injectCSS",
+      "value": {"height": "auto", "max-height": "none"}
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#nav > header > div:nth-of-type(3) > nav > ul > li:nth-of-type(2) > a",
+      "target": "#nav > header > div:nth-of-type(3) > nav > ul > li:nth-of-type(2) > ul",
+      "mode": "display",
+      "display": "block"
+    }
+  ]
+}

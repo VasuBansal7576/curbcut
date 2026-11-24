@@ -1,0 +1,37 @@
+{
+  "id": "v5-6e2fa530ab3d56a3d621",
+  "url": "https://mjt.lu/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “This sub-domain is used for link redirection and static content hosting.” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “This sub-domain is used for link redirection and static content hosting.” at normal width.",
+  "observedSelector": "#container > div > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#container > div > p",
+      "equals": "This sub-domain is used for link redirection and static content hosting."
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#container > div > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "mjt.lu",
+  "match": "https://mjt.lu/",
+  "barrier": "At 320 CSS pixels, the 600-pixel-wide #container extends beyond the viewport and the page clips the passage on the right.",
+  "rules": [
+    {
+      "selector": "#container",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

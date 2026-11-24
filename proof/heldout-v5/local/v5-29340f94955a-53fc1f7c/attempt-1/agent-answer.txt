@@ -1,0 +1,9 @@
+{
+  "barrier": "The navigation list item reveals #dropdown-menu on CSS hover. Focusing “Menüyü aç” and pressing Arrow Down leave the dropdown hidden, so the “KADIN” link is unavailable.",
+  "rules": [
+    {
+      "selector": "#main-nav > div > nav > ul > li:has(> #dropdown-menu)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

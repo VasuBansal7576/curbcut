@@ -1,0 +1,1849 @@
+{
+  "status": "pass",
+  "runId": "53af2aef-bdd5-4016-9643-53d2fa113bd9",
+  "reason": "Objective completed",
+  "summary": "You asked to switch the time comparison strip from today to tomorrow.\nSelected the quick-date control immediately to the right of today’s selected date.\nThe time comparison strip now shows tomorrow, Nov 23, as the current date.",
+  "resultCode": 100,
+  "reasonCode": "success.complete",
+  "credits": 21.657669999999996,
+  "exitCode": 0,
+  "steps": [
+    "navigate: Navigate to https://www.worldtimebuddy.com/",
+    "click: Clicking tomorrow's quick-date control immediately to the right of today's selected date",
+    "click: PRIMARY: tomorrow's quick-date control immediately to the right of today's selec",
+    "click: Clearing the active time selection",
+    "click: Clicking tomorrow’s quick-date control to the right of today’s selected date",
+    "analyze: tomorrow is the current date in the time comparison strip",
+    "assert: tomorrow becomes the current date in the time comparison strip"
+  ],
+  "objective": "Use the normal visual page and a pointer. Ignore any persona-specific means in the supplied task; pursue the same functional outcome. Remain on this public site. Stop before sign-in, registration or payment. Never change fixture settings. Use only visible controls. Verify the final result on the page. Click tomorrow's quick-date control immediately to the right of today's selected date. Verify tomorrow becomes the current date in the time comparison strip.",
+  "evidencePack": "proof/kane/worldtimebuddy-select-tomorrow/resume-2026-11-22T03-33-50.126Z/control/9e1b69ea-e22f-47dd-ad30-f403be82a669.evidence",
+  "evidenceValid": true,
+  "observedOutcome": {
+    "selector": ".date-jump[idx=\"2\"].current-cell",
+    "visible": true
+  },
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "control",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920
+    },
+    "readerVisible": false,
+    "width": 1280,
+    "fixtureFixed": false,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "https://www.worldtimebuddy.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "#location",
+    "nodes": [
+      {
+        "selector": ".date-jump[idx=\"2\"]",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 532,
+        "width": 67
+      },
+      {
+        "selector": "span.datepicker_input_txt",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 476,
+        "width": 236
+      },
+      {
+        "selector": "div.wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 134,
+        "width": 1013
+      },
+      {
+        "selector": "#logo",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 134,
+        "width": 1013
+      },
+      {
+        "selector": "#homelink",
+        "role": "link",
+        "name": "World Clock & Time Converter",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 134,
+        "width": 300
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "World Clock & Time Converter",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 134,
+        "width": 165
+      },
+      {
+        "selector": "li.first",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 311,
+        "width": 84
+      },
+      {
+        "selector": "#tab_features",
+        "role": "link",
+        "name": "Features",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 312,
+        "width": 83
+      },
+      {
+        "selector": "li.dropdown",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 397,
+        "width": 79
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 478,
+        "width": 99
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Mobile App",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 479,
+        "width": 98
+      },
+      {
+        "selector": "li.last",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 579,
+        "width": 144
+      },
+      {
+        "selector": "#social-bttns",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 595,
+        "width": 128
+      },
+      {
+        "selector": "li.dropdown",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 978,
+        "width": 71
+      },
+      {
+        "selector": "li.separ",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1050,
+        "width": 5
+      },
+      {
+        "selector": "li.hformat.last",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1071,
+        "width": 76
+      },
+      {
+        "selector": "#st24",
+        "role": "link",
+        "name": "24",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1096,
+        "width": 25
+      },
+      {
+        "selector": "#stMX",
+        "role": "link",
+        "name": "MX",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1121,
+        "width": 25
+      },
+      {
+        "selector": "#locations_wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 134,
+        "width": 1013
+      },
+      {
+        "selector": "#locations",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 134,
+        "width": 1013
+      },
+      {
+        "selector": "#toolbar-default",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 136,
+        "width": 1009
+      },
+      {
+        "selector": "#page-link",
+        "role": "link",
+        "name": "Link to this view",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1037,
+        "width": 84
+      },
+      {
+        "selector": "#settings-dropdown",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 930,
+        "width": 90
+      },
+      {
+        "selector": "#sd-activator",
+        "role": "text",
+        "name": "Settings",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 930,
+        "width": 90
+      },
+      {
+        "selector": "#searchIcon",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 180,
+        "width": 18
+      },
+      {
+        "selector": "#defaultText",
+        "role": "text",
+        "name": "Place or timezone",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 177,
+        "width": 119
+      },
+      {
+        "selector": "#location",
+        "role": "textbox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 177,
+        "width": 238
+      },
+      {
+        "selector": "div.clientarea",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 136,
+        "width": 1009
+      },
+      {
+        "selector": "#quick-next-day",
+        "role": "text",
+        "name": "Jump to next day",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1125,
+        "width": 20
+      },
+      {
+        "selector": "#controls",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 136,
+        "width": 1009
+      },
+      {
+        "selector": "#glass",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 451,
+        "width": 672
+      },
+      {
+        "selector": "div.cband",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 453,
+        "width": 0
+      },
+      {
+        "selector": "div.band",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 450,
+        "width": 31
+      },
+      {
+        "selector": "div.container.srt",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 136,
+        "width": 999
+      },
+      {
+        "selector": "div.buttons",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 106,
+        "width": 30
+      },
+      {
+        "selector": "#home",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 136,
+        "width": 38
+      },
+      {
+        "selector": "div.location",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 176,
+        "width": 160
+      },
+      {
+        "selector": "div.city",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 176,
+        "width": 160
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "London",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 176,
+        "width": 55
+      },
+      {
+        "selector": "div.country",
+        "role": "text",
+        "name": "United Kingdom, England",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 176,
+        "width": 160
+      },
+      {
+        "selector": "div.data.data_faded",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 321,
+        "width": 90
+      },
+      {
+        "selector": "div.time",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 321,
+        "width": 90
+      },
+      {
+        "selector": "div.date",
+        "role": "text",
+        "name": "Mon, Nov 23",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 321,
+        "width": 90
+      },
+      {
+        "selector": "div.data-end",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 411,
+        "width": 106
+      },
+      {
+        "selector": "div.time",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 411,
+        "width": 90
+      },
+      {
+        "selector": "div.date",
+        "role": "text",
+        "name": "Mon, Nov 23",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 427,
+        "width": 90
+      },
+      {
+        "selector": "div.hourline",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 451,
+        "width": 672
+      },
+      {
+        "selector": "li.tod_c.tod_selected",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 451,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "Nov",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 452,
+        "width": 27
+      },
+      {
+        "selector": "li.tod_n",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 479,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "1",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 488,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 482,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 482,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_n",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 507,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "2",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 516,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 510,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 510,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_n",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 535,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "3",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 544,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 538,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 538,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_n",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 563,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "4",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 572,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 566,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 566,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_n",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 591,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "5",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 600,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 594,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 594,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_m",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 619,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "6",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 628,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 622,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 622,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_m",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 647,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "7",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 656,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 650,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 650,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_d",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 675,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "8",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 684,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 678,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 678,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_d",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 703,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "9",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 712,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 706,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 706,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_d",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 731,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "10",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 736,
+        "width": 16
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 734,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 734,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_d",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 759,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "11",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 765,
+        "width": 15
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 762,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 762,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_d",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 787,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "12",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 792,
+        "width": 16
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 790,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 790,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_d",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 815,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "1",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 824,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 818,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 818,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_d",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 843,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "2",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 852,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 846,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 846,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_d",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 871,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "3",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 880,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 874,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 874,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_d",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 899,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "4",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 908,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 902,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 902,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_d",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 927,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "5",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 936,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 930,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 930,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_e",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 955,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "6",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 964,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 958,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 958,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_e",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 983,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "7",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 992,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 986,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 986,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_e",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1011,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "8",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 1020,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1014,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1014,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_e",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1039,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "9",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 1048,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1042,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1042,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_n",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1067,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "10",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 1072,
+        "width": 16
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1070,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1070,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_n.tod_boundary",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1095,
+        "width": 27
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "11",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 1101,
+        "width": 15
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "GMT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1098,
+        "width": 21
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1098,
+        "width": 21
+      },
+      {
+        "selector": "div.container.srt",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 136,
+        "width": 999
+      },
+      {
+        "selector": "div.buttons",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 106,
+        "width": 30
+      },
+      {
+        "selector": "div.icon",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 136,
+        "width": 38
+      },
+      {
+        "selector": "div.location",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 176,
+        "width": 160
+      },
+      {
+        "selector": "div.city",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 176,
+        "width": 160
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "Cairo",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 176,
+        "width": 38
+      },
+      {
+        "selector": "div.country",
+        "role": "text",
+        "name": "Egypt",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 176,
+        "width": 160
+      },
+      {
+        "selector": "div.data.data_faded",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 321,
+        "width": 90
+      },
+      {
+        "selector": "div.time",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 321,
+        "width": 90
+      },
+      {
+        "selector": "div.date",
+        "role": "text",
+        "name": "Mon, Nov 23",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 321,
+        "width": 90
+      },
+      {
+        "selector": "div.data-end",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 411,
+        "width": 106
+      },
+      {
+        "selector": "div.time",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 411,
+        "width": 90
+      },
+      {
+        "selector": "div.date",
+        "role": "text",
+        "name": "Mon, Nov 23",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 427,
+        "width": 90
+      },
+      {
+        "selector": "div.hourline",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 451,
+        "width": 672
+      },
+      {
+        "selector": "li.tod_n.tod_selected",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 451,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "2",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 460,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "EET",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 454,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 454,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_n",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 479,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "3",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 488,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "EET",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 482,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 482,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_n",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 507,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "4",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 516,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "EET",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 510,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 510,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_n",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 535,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "5",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 544,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "EET",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 538,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 538,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_m",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 563,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "6",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 572,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "EET",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 566,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 566,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_m",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 591,
+        "width": 28
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "7",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 600,
+        "width": 8
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "EET",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 594,
+        "width": 22
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 594,
+        "width": 22
+      },
+      {
+        "selector": "li.tod_d",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 619,
+        "width": 28
+      }
+    ]
+  },
+  "video": "proof/kane/worldtimebuddy-select-tomorrow/resume-2026-11-22T03-33-50.126Z/control/recording.mp4"
+}

@@ -1,0 +1,13 @@
+{
+  "barrier": "At 320 CSS pixels, white-space: pre prevents the code line from wrapping, giving the block a scroll width of 513 pixels and a client width of 270 pixels.",
+  "rules": [
+    {
+      "selector": "main > article > pre:nth-of-type(35)",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "pre-wrap",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-fcff2ddd132fff0edeae",
+    "url": "https://www.forumotion.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search forums” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search forums” field and type test without submitting.",
+    "observedSelector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+    "requiredName": "Search forums",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    }
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "Checked the declared outcome after the type action.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "Checked the declared outcome after the type action.",
+      "file": "proof/heldout-v5/local/v5-fcff2ddd132fff0edeae/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "screen-reader-view",
+      "status": "fail",
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "file": "proof/heldout-v5/local/v5-fcff2ddd132fff0edeae/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "screen-reader-view",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the type action.",
+      "file": "proof/heldout-v5/local/v5-fcff2ddd132fff0edeae/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the type action.",
+      "file": "proof/heldout-v5/local/v5-fcff2ddd132fff0edeae/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v5-fcff2ddd132fff0edeae",
+    "url": "https://www.forumotion.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search forums” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search forums” field and type test without submitting.",
+    "observedSelector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+    "requiredName": "Search forums",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.forumotion.com",
+    "match": "https://www.forumotion.com/",
+    "barrier": "Reading view names the directory search textbox “Search for a forum in the directory,” so it cannot be found by the expected name “Search forums.”",
+    "rules": [
+      {
+        "selector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+        "action": "addLabel",
+        "value": "Search forums"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/heldout-v5/local/v5-fcff2ddd132fff0edeae/attempt-1"
+}

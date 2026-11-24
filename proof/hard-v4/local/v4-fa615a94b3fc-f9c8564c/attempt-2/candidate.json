@@ -1,0 +1,55 @@
+{
+  "id": "v4-fa615a94b3fc-f9c8564c",
+  "url": "https://domains.lt/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, hover “PASLAUGOS”, click “.com, .net domenų WHOIS informacija” and confirm /paslaugos/com-net-whois/.",
+  "controlTask": "Hover “PASLAUGOS”, click “.com, .net domenų WHOIS informacija” and confirm /paslaugos/com-net-whois/.",
+  "observedSelector": "#navMenu > div > div:nth-of-type(1) > a:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/paslaugos/com-net-whois/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#navMenu > div > div:nth-of-type(1)",
+    "#navMenu > div > div:nth-of-type(1) > div"
+  ],
+  "journey": [
+    {
+      "selector": "#navMenu > div > div:nth-of-type(1) > a:nth-of-type(1)",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#navMenu > div > div:nth-of-type(1) > a:nth-of-type(1)",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#navMenu > div > div:nth-of-type(1) > div > a:nth-of-type(7)",
+      "action": "activate"
+    }
+  ],
+  "site": "domains.lt",
+  "match": "https://domains.lt/",
+  "barrier": "At 320 CSS pixels, focusing Paslaugos and pressing ArrowDown leaves its submenu at display:none, so the WHOIS link is unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#navMenu > div > div:nth-of-type(1) > a:nth-of-type(1)",
+      "target": "#navMenu > div > div:nth-of-type(1) > div",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

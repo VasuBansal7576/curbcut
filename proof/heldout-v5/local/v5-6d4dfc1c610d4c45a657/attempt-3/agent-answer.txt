@@ -1,0 +1,9 @@
+{
+  "barrier": "Reading view has focus in a dialog, and the search input is exposed as a combobox. Adding its accessible name did not make it discoverable by the textbox probe. The available rules can address the dialog focus trap but cannot expose the input as a textbox.",
+  "rules": [
+    {
+      "selector": "dialog",
+      "action": "removeFocusTrap"
+    }
+  ]
+}

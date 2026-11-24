@@ -1,0 +1,30 @@
+{
+  "id": "buffbuff-com-tr",
+  "url": "https://buffbuff.com/",
+  "persona": "keyboard-only",
+  "task": "Use Tab and Enter to reach and activate “****”. Verify its content becomes visible.",
+  "controlTask": "Click “****” and verify its content becomes visible.",
+  "observedSelector": "#badge-slow-compensation-point > span > span",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#header > div > div:nth-of-type(2) > div:nth-of-type(4) > div"
+    }
+  ],
+  "minimumTabPresses": 2,
+  "probe": {
+    "action": "click"
+  },
+  "site": "buffbuff.com",
+  "match": "https://buffbuff.com/",
+  "barrier": "The replay could not find the points control. The snapshot shows it as a focusable span with a button role, which does not provide native Enter activation.",
+  "rules": [
+    {
+      "selector": "#badge-slow-compensation-point > span > span",
+      "action": "bindEnterToClick"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

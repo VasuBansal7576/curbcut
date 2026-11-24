@@ -1,0 +1,30 @@
+{
+  "id": "idrive-com-tr2",
+  "url": "https://www.idrive.com/",
+  "persona": "keyboard-only",
+  "task": "Use Tab and Enter to reach and activate “Cloud Applications Backup”. Verify its content becomes visible.",
+  "controlTask": "Click “Cloud Applications Backup” and verify its content becomes visible.",
+  "observedSelector": "header > nav > div > ul > li:nth-of-type(6) > span",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "header > nav > div > ul > li:nth-of-type(6) > ul"
+    }
+  ],
+  "minimumTabPresses": 2,
+  "probe": {
+    "action": "click"
+  },
+  "site": "www.idrive.com",
+  "match": "https://www.idrive.com/",
+  "barrier": "The Cloud Applications Backup span can receive Tab focus but has no native Enter activation. The replay stopped after focus and did not verify submenu visibility after Enter.",
+  "rules": [
+    {
+      "selector": "header > nav > div > ul > li:nth-of-type(6) > span",
+      "action": "bindEnterToClick"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

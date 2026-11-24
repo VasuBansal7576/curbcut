@@ -1,0 +1,52 @@
+{
+  "id": "v5-7b801b9b8f66-2ef1d4b9",
+  "url": "https://www.aeserver.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Domains” from keyboard focus or with Arrow Down and follow “.org”. Confirm the public destination /domain-registration/org-domains/.",
+  "controlTask": "Hover “Domains”, click “.org” and confirm /domain-registration/org-domains/.",
+  "observedSelector": "#menu-main-menu > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/domain-registration/org-domains/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menu-main-menu > li:nth-of-type(1)",
+    "#menu-main-menu > li:nth-of-type(1) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#menu-main-menu > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-main-menu > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-main-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > ul > li:nth-of-type(4) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.aeserver.com",
+  "match": "https://www.aeserver.com/",
+  "barrier": "The Domains link receives keyboard focus, but the submenu is revealed only by CSS hover on its parent list item. Focusing Domains and pressing Arrow Down leaves the .org link hidden.",
+  "rules": [
+    {
+      "selector": "#menu-main-menu > li:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

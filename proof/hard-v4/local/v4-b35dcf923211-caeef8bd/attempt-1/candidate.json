@@ -1,0 +1,52 @@
+{
+  "id": "v4-b35dcf923211-caeef8bd",
+  "url": "https://snort.org/",
+  "persona": "keyboard-only",
+  "task": "Open “Downloads” from keyboard focus or with Arrow Down and follow “Snort”. Confirm the public destination /downloads.",
+  "controlTask": "Hover “Downloads”, click “Snort” and confirm /downloads.",
+  "observedSelector": "#nav_dropdown_download",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/downloads"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > ul > li:nth-of-type(2)",
+    "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > ul > li:nth-of-type(2) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#nav_dropdown_download",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#nav_dropdown_download",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "snort.org",
+  "match": "https://snort.org/",
+  "barrier": "The Downloads submenu remains at display: none after the Downloads link receives focus and Arrow Down is pressed, leaving the Snort link unavailable to the keyboard.",
+  "rules": [
+    {
+      "selector": "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > ul > li:nth-of-type(2)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,442 @@
+{
+  "runner": "playwright",
+  "model": "gpt-6.2-sol",
+  "checkedAt": "2026-11-23T18:00:56.519Z",
+  "attemptLimit": 5,
+  "fixture": {
+    "id": "fixture-hover-products",
+    "replay": {
+      "status": "locally-fixed",
+      "reason": "The complete journey reached the declared outcome.",
+      "phases": [
+        {
+          "name": "control",
+          "persona": "control",
+          "status": "pass",
+          "reason": "The complete journey reached the declared outcome."
+        },
+        {
+          "name": "before",
+          "persona": "keyboard-only",
+          "status": "fail",
+          "reason": "Journey step 2 was unavailable after the prior step."
+        },
+        {
+          "name": "attempt-1/after",
+          "persona": "keyboard-only",
+          "iteration": 1,
+          "status": "pass",
+          "reason": "The complete journey reached the declared outcome."
+        },
+        {
+          "name": "attempt-1/control-with-patch",
+          "persona": "control",
+          "iteration": 1,
+          "status": "pass",
+          "reason": "The complete journey reached the declared outcome."
+        }
+      ],
+      "patch": {
+        "id": "fixture-hover-products",
+        "url": "http://127.0.0.1:4317/fixtures/shop/journeys.html",
+        "persona": "keyboard-only",
+        "task": "Open Products using focus and go to Porch Speaker.",
+        "controlTask": "Hover Products, then click Porch Speaker.",
+        "observedSelector": "#products-trigger",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/fixtures/shop/porch.html"
+          },
+          {
+            "kind": "text",
+            "selector": "#product-title",
+            "equals": "Porch Speaker"
+          }
+        ],
+        "barrierClass": 1,
+        "journey": [
+          {
+            "selector": "#products-trigger",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#porch-link",
+            "action": "activate"
+          }
+        ],
+        "site": "127.0.0.1",
+        "match": "http://127.0.0.1:4317/fixtures/shop/journeys.html",
+        "barrier": "The Products list is hidden until #products-menu is hovered. Focusing the Products button leaves the Porch Speaker link unavailable to keyboard users.",
+        "rules": [
+          {
+            "selector": "#products-menu",
+            "action": "mirrorHoverToFocus"
+          }
+        ],
+        "status": "candidate",
+        "evidence": {},
+        "history": []
+      }
+    },
+    "selectorValidation": {
+      "ok": true,
+      "matches": [
+        {
+          "index": 0,
+          "field": "selector",
+          "selector": "#products-menu",
+          "count": 1,
+          "issue": null,
+          "matches": [
+            {
+              "tag": "div",
+              "id": "products-menu",
+              "classes": [],
+              "label": "Products Porch Speaker"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "rows": [
+    {
+      "task": {
+        "id": "v4-ed10f90826d5-52509f91",
+        "url": "https://www.class.com/",
+        "persona": "keyboard-only",
+        "task": "Focus “Collaborative, Active Learning”, move once with ArrowRight, activate “Seamless Course Setup and Delivery” and read its panel.",
+        "controlTask": "Click “Seamless Course Setup and Delivery” and read its panel.",
+        "observedSelector": "#e-n-tab-title-1409318351",
+        "outcomeChecks": [
+          {
+            "kind": "visible",
+            "selector": "#e-n-tab-content-1409318352"
+          }
+        ],
+        "barrierClass": 3,
+        "relatedSelectors": [
+          "#main > div > div:nth-of-type(1) > div:nth-of-type(16) > div > div:nth-of-type(3) > div > div > div:nth-of-type(1)",
+          "[role=tab]",
+          "#e-n-tab-content-1409318352"
+        ],
+        "journey": [
+          {
+            "selector": "#e-n-tab-title-1409318351",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#e-n-tab-title-1409318351",
+            "action": "key",
+            "key": "ArrowRight",
+            "pointer": {
+              "action": "click",
+              "selector": "#e-n-tab-title-1409318352"
+            }
+          },
+          {
+            "selector": "#e-n-tab-title-1409318352",
+            "action": "activate",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#e-n-tab-content-1409318352",
+            "action": "observe"
+          }
+        ]
+      },
+      "archivedV4": {
+        "status": "unresolved",
+        "reason": "Use selectors observed in the patchable DOM."
+      },
+      "visibilityReplay": {
+        "status": "unresolved",
+        "reason": "Journey step 1 could not be seen while focused: clipped or off-screen."
+      },
+      "replay": {
+        "status": "unresolved",
+        "reason": "Journey step 1 could not be seen while focused: clipped or off-screen.",
+        "phases": [
+          {
+            "name": "control",
+            "persona": "control",
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          {
+            "name": "before",
+            "persona": "keyboard-only",
+            "status": "fail",
+            "reason": "Journey step 1 could not be seen while focused: clipped or off-screen."
+          },
+          {
+            "name": "attempt-1/after",
+            "persona": "keyboard-only",
+            "iteration": 1,
+            "status": "fail",
+            "reason": "Journey step 1 could not be seen while focused: clipped or off-screen."
+          },
+          {
+            "name": "proposal",
+            "iteration": 2,
+            "status": "rejected",
+            "reason": "Invalid patch proposal: [{\"instancePath\":\"/rules\",\"schemaPath\":\"#/properties/rules/minItems\",\"keyword\":\"minItems\",\"params\":{\"limit\":1},\"message\":\"must NOT have fewer than 1 items\"}]"
+          },
+          {
+            "name": "attempt-3/after",
+            "persona": "keyboard-only",
+            "iteration": 3,
+            "status": "fail",
+            "reason": "Journey step 1 could not be seen while focused: clipped or off-screen."
+          },
+          {
+            "name": "attempt-4/after",
+            "persona": "keyboard-only",
+            "iteration": 4,
+            "status": "fail",
+            "reason": "Journey step 1 could not be seen while focused: clipped or off-screen."
+          },
+          {
+            "name": "attempt-5/after",
+            "persona": "keyboard-only",
+            "iteration": 5,
+            "status": "fail",
+            "reason": "Journey step 1 could not be seen while focused: clipped or off-screen."
+          }
+        ],
+        "patch": null
+      }
+    },
+    {
+      "task": {
+        "id": "v4-5c34a9ed265c-77d2f0cf",
+        "url": "https://washingtoncitypaper.com/",
+        "persona": "keyboard-only",
+        "task": "Open “Classifieds, Etc.” from keyboard focus or with Arrow Down and follow “Press Releases”. Confirm the public destination /local.",
+        "controlTask": "Hover “Classifieds, Etc.”, click “Press Releases” and confirm /local.",
+        "observedSelector": "#menu-primary-menu-1 > li:nth-of-type(6) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/local"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#menu-primary-menu-1 > li:nth-of-type(6)",
+          "#menu-primary-menu-1 > li:nth-of-type(6) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#menu-primary-menu-1 > li:nth-of-type(6) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-primary-menu-1 > li:nth-of-type(6) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-primary-menu-1 > li:nth-of-type(6) > ul > li:nth-of-type(4) > a",
+            "action": "activate"
+          }
+        ]
+      },
+      "archivedV4": {
+        "status": "unresolved",
+        "reason": "The proposal repeated the previous rules."
+      },
+      "visibilityReplay": {
+        "status": "control-fail",
+        "reason": "Tab traversal missed journey step 1."
+      },
+      "replay": {
+        "status": "unresolved",
+        "reason": "Tab traversal missed journey step 1.",
+        "phases": [
+          {
+            "name": "control",
+            "persona": "control",
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          {
+            "name": "before",
+            "persona": "keyboard-only",
+            "status": "fail",
+            "reason": "Tab traversal missed journey step 1."
+          },
+          {
+            "name": "attempt-1/after",
+            "persona": "keyboard-only",
+            "iteration": 1,
+            "status": "fail",
+            "reason": "Tab traversal missed journey step 1."
+          },
+          {
+            "name": "attempt-2/after",
+            "persona": "keyboard-only",
+            "iteration": 2,
+            "status": "fail",
+            "reason": "Tab traversal missed journey step 1."
+          },
+          {
+            "name": "attempt-3/after",
+            "persona": "keyboard-only",
+            "iteration": 3,
+            "status": "fail",
+            "reason": "Tab traversal missed journey step 1."
+          },
+          {
+            "name": "attempt-4/after",
+            "persona": "keyboard-only",
+            "iteration": 4,
+            "status": "fail",
+            "reason": "Tab traversal missed journey step 1."
+          },
+          {
+            "name": "attempt-5/after",
+            "persona": "keyboard-only",
+            "iteration": 5,
+            "status": "fail",
+            "reason": "Tab traversal missed journey step 1."
+          }
+        ],
+        "patch": null
+      }
+    },
+    {
+      "task": {
+        "id": "v4-1a99c14aef71-7a4dc0a1",
+        "url": "https://cursor.com/",
+        "persona": "keyboard-only",
+        "task": "Focus “🌐 English ↓”, press Arrow Down to open it, move from “English✓” to “简体中文” and select it with Enter.",
+        "controlTask": "Click “🌐 English ↓” and select “简体中文”. Confirm the selected value.",
+        "observedSelector": "#site-footer > div:nth-of-type(2) > div:nth-of-type(2) > div > div > button",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "#site-footer > div:nth-of-type(2) > div:nth-of-type(2) > div > div > button",
+            "equals": "简体中文"
+          }
+        ],
+        "barrierClass": 5,
+        "relatedSelectors": [
+          "#language-dropdown",
+          "[role=option]"
+        ],
+        "journey": [
+          {
+            "selector": "#site-footer > div:nth-of-type(2) > div:nth-of-type(2) > div > div > button",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#site-footer > div:nth-of-type(2) > div:nth-of-type(2) > div > div > button",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "click"
+            }
+          },
+          {
+            "selector": "#language-dropdown > div > ul > li:nth-of-type(1) > button",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover",
+              "selector": "#language-dropdown > div > ul > li:nth-of-type(2) > button"
+            }
+          },
+          {
+            "selector": "#language-dropdown > div > ul > li:nth-of-type(2) > button",
+            "action": "key",
+            "key": "Enter",
+            "pointer": {
+              "action": "click"
+            }
+          }
+        ]
+      },
+      "archivedV4": {
+        "status": "control-blocked",
+        "reason": "The journey left the public task site."
+      },
+      "visibilityReplay": {
+        "status": "control-blocked",
+        "reason": "Journey step 2 did not receive the expected keyboard focus."
+      },
+      "replay": {
+        "status": "unresolved",
+        "reason": "Journey step 3 did not receive the expected keyboard focus.",
+        "phases": [
+          {
+            "name": "control",
+            "persona": "control",
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome."
+          },
+          {
+            "name": "before",
+            "persona": "keyboard-only",
+            "status": "fail",
+            "reason": "Journey step 2 did not receive the expected keyboard focus."
+          },
+          {
+            "name": "attempt-1/after",
+            "persona": "keyboard-only",
+            "iteration": 1,
+            "status": "inconclusive",
+            "reason": "Journey step 1 did not identify a unique control."
+          },
+          {
+            "name": "attempt-2/after",
+            "persona": "keyboard-only",
+            "iteration": 2,
+            "status": "fail",
+            "reason": "Journey step 3 was unavailable after the prior step."
+          },
+          {
+            "name": "attempt-3/after",
+            "persona": "keyboard-only",
+            "iteration": 3,
+            "status": "fail",
+            "reason": "Journey step 2 did not receive the expected keyboard focus."
+          },
+          {
+            "name": "attempt-4/after",
+            "persona": "keyboard-only",
+            "iteration": 4,
+            "status": "fail",
+            "reason": "Journey step 2 did not receive the expected keyboard focus."
+          },
+          {
+            "name": "attempt-5/after",
+            "persona": "keyboard-only",
+            "iteration": 5,
+            "status": "fail",
+            "reason": "Journey step 3 did not receive the expected keyboard focus."
+          }
+        ],
+        "patch": null
+      }
+    }
+  ]
+}

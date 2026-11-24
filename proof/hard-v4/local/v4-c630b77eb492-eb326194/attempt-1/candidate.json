@@ -1,0 +1,60 @@
+{
+  "id": "v4-c630b77eb492-eb326194",
+  "url": "https://www.lasillavacia.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, hover “Pódcasts”, click “Déjà Vu” and confirm /category/podcasts/deja-vu/.",
+  "controlTask": "Hover “Pódcasts”, click “Déjà Vu” and confirm /category/podcasts/deja-vu/.",
+  "observedSelector": "#menu-opcion-menu-1 > li:nth-of-type(8) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/category/podcasts/deja-vu/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menu-opcion-menu-1 > li:nth-of-type(8)",
+    "#menu-opcion-menu-1 > li:nth-of-type(8) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#menu-opcion-menu-1 > li:nth-of-type(8) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-opcion-menu-1 > li:nth-of-type(8) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-opcion-menu-1 > li:nth-of-type(8) > ul > li:nth-of-type(2) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.lasillavacia.com",
+  "match": "https://www.lasillavacia.com/",
+  "barrier": "At 320 CSS pixels, the desktop navigation is hidden and the Pódcasts link has no rendered box, so it cannot receive focus to reveal the Déjà Vu submenu.",
+  "rules": [
+    {
+      "selector": "div.bottom-header-contain.desktop-only",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#menu-opcion-menu-1 > li:nth-of-type(8)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

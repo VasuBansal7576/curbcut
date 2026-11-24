@@ -1,0 +1,78 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#login",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "login",
+          "classes": [
+            "modal",
+            "fade"
+          ],
+          "role": "dialog",
+          "label": "Login Anggota × Lupa Kata Sandi ? Daftar"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "dialog",
+      "selector": "#login",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "login",
+          "classes": [
+            "modal",
+            "fade"
+          ],
+          "role": "dialog",
+          "label": "Login Anggota × Lupa Kata Sandi ? Daftar"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "opener",
+      "selector": "#main-slide > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "a",
+          "classes": [
+            "btn-slider",
+            "btn",
+            "btn-primary"
+          ],
+          "label": "Mainkan"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "close",
+      "selector": "#login > div > div > div:nth-of-type(1) > button",
+      "scope": "#login",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "close"
+          ],
+          "label": "Close"
+        }
+      ]
+    }
+  ]
+}

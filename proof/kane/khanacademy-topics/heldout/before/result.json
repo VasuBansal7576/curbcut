@@ -1,0 +1,104 @@
+{
+  "status": "inconclusive",
+  "runId": "a3b26897-4191-47d1-a658-35b6377ad9ef",
+  "reason": "Hard blocker: captcha",
+  "summary": "The site presented a bot or browser-verification challenge instead of its normal public page, so the required controls were unavailable.\nRetry from an approved browser or network that can pass the site’s verification challenge, then rerun the Reading view checks.\nevidence: console_error: Challenge: FUAhKXiRDX3itECn => be800a5f72ee774782399915a3c67e371056c4a60fe5abdd9568872a38255d9d\nevidence: network_failure: POST https://www.khanacademy.org/_fs-ch-1T1wmsGaOgGaSxcX/fst-post-back -> None FAILED (net::ERR_FAILED)",
+  "resultCode": 610,
+  "reasonCode": "blocker.captcha",
+  "credits": 11.685835,
+  "exitCode": 1,
+  "steps": [
+    "navigate: Navigate to https://www.khanacademy.org/"
+  ],
+  "objective": "Work exclusively inside the Reading view dialog. Use only its listed roles, names and controls. Remain on this public site. Stop before sign-in, registration or payment. If a CAPTCHA or access challenge appears, stop and report it. Never change fixture settings. Use only visible controls. Verify the final result on the page. In Reading view, first assert the exact row ‘button · Search for courses, skills, and videos’ is present. Activate it and verify a search field becomes available without signing in.",
+  "evidencePack": "proof/kane/khanacademy-topics/heldout/before/dc28584b-1691-4e1d-a98c-2c892894c257.evidence",
+  "evidenceValid": true,
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "screen-reader-view",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920,
+      "readerInputs": 0
+    },
+    "readerVisible": true,
+    "width": 1280,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "https://www.khanacademy.org/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "dialog",
+    "nodes": [
+      {
+        "selector": "#pageContainer",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#contentContainer",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "flex",
+        "left": 382,
+        "width": 517
+      },
+      {
+        "selector": "#fastlyLogo",
+        "role": "img",
+        "name": "Company Logo",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 607,
+        "width": 65
+      },
+      {
+        "selector": "#spinnerText",
+        "role": "text",
+        "name": "is verifying your browser...",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 413,
+        "width": 455
+      },
+      {
+        "selector": "#spinner",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 413,
+        "width": 455
+      }
+    ]
+  },
+  "video": "proof/kane/khanacademy-topics/heldout/before/recording.mp4"
+}

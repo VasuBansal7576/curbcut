@@ -1,0 +1,75 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-8c2de31e4a8e0806b3b7",
+    "url": "https://www.9game.cn/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “外域对决官网在哪下载 最新官方下载安装地址 外域对决怎么下载？想要比别人更加抢先抢快的玩到这款游戏，那么你获取游戏开测消息是关键，能够获取到第一手信息，你才能在最快的时间内容体验到，外... [详情]” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “外域对决官网在哪下载 最新官方下载安装地址 外域对决怎么下载？想要比别人更加抢先抢快的玩到这款游戏，那么你获取游戏开测消息是关键，能够获取到第一手信息，你才能在最快的时间内容体验到，外... [详情]” at normal width.",
+    "observedSelector": "div:nth-of-type(5) > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(2) > ul > li:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "div:nth-of-type(5) > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(2) > ul > li:nth-of-type(1)",
+        "equals": "外域对决官网在哪下载 最新官方下载安装地址 外域对决怎么下载？想要比别人更加抢先抢快的玩到这款游戏，那么你获取游戏开测消息是关键，能够获取到第一手信息，你才能在最快的时间内容体验到，外... [详情]"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "div:nth-of-type(5) > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(2) > ul > li:nth-of-type(1)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    }
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "The target does not fit the visible width.",
+    "geometry": {
+      "left": 105,
+      "right": 582.828125,
+      "width": 320,
+      "scrollX": 0,
+      "clientWidth": 580,
+      "scrollWidth": 580,
+      "inView": false,
+      "fits": false
+    }
+  },
+  "registeredControl": {
+    "geometry": {
+      "left": 245,
+      "right": 722.828125,
+      "width": 1280,
+      "scrollX": 0,
+      "clientWidth": 580,
+      "scrollWidth": 580,
+      "inView": false,
+      "fits": true
+    },
+    "url": "https://www.9game.cn/",
+    "checks": [
+      true,
+      true
+    ],
+    "status": "pass",
+    "reason": "Checked the declared outcome after the read action."
+  },
+  "runner": "playwright",
+  "status": "control-inconclusive",
+  "reason": "The unique target was not visible.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "inconclusive",
+      "reason": "The unique target was not visible.",
+      "file": "proof/hard-v4/local/v4-8c2de31e4a8e0806b3b7/control.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

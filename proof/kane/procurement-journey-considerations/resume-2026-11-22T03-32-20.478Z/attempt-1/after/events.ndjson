@@ -1,0 +1,111 @@
+{"type":"stream_start","cli_version":"0.10.7","surface":"run","pid":15771,"v":1,"ts":"2026-11-22T03:35:13.003Z"}
+{"type":"recording_state","enabled":true,"session_id":"97f4a622-59cc-4d3f-a327-2421fc656e19","persist":false,"v":1,"ts":"2026-11-22T03:35:13.016Z"}
+{"type":"skill_update_available","current":null,"latest":"0.1.4","install_cmd":"kane-cli install skill","v":1,"ts":"2026-11-22T03:35:13.488Z"}
+{"type":"bifurcation","flows":["Navigate to https://www.procurementjourney.scot/index.php/route-1/route-1-introduction then Use Tab, Shift+Tab, arrow keys, Page Up, Page Down, Home, End, text entry, Space and Enter only.\nRemain on this public site.\nStop before sign-in, registration or payment.\nNever change fixture settings.\nUse only visible controls.\nVerify the final result on the page.\nFirst assert the Considerations Before Proceeding accordion title is in the sequential keyboard focus order.\nDismiss the cookie banner with Reject using the keyboard if it covers the page.\nOpen Considerations Before Proceeding with Tab and Enter.\nVerify the first question, Are the good/services you are buying business critical?, is visible.\nKeyboard navigation: Use the Skip to main content link if it is the first focus.\nThen continue Tab navigation until Considerations Before Proceeding, right after the Thresholds link.\nWith that heading focused press Enter once."],"count":1,"v":1,"ts":"2026-11-22T03:35:18.344Z"}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-22T03:35:20.704Z"}
+{"step":2,"status":"done","remark":"navigate: Navigate to https://www.procurementjourney.scot/index.php/route-1/route-1-introd","v":1,"ts":"2026-11-22T03:35:20.707Z"}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-22T03:35:27.587Z"}
+{"step":3,"status":"done","remark":"analyze: the cookie banner covers the page","v":1,"ts":"2026-11-22T03:35:40.991Z"}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-22T03:35:41.723Z"}
+{"step":4,"status":"done","remark":"assert: the Considerations Before Proceeding accordion title is in the sequential keyboa","v":1,"ts":"2026-11-22T03:35:41.729Z"}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-22T03:35:42.337Z"}
+{"step":2,"status":"running","remark":"Step 1","child_id":"39593466","v":1,"ts":"2026-11-22T03:35:42.459Z"}
+{"step":2,"status":"done","remark":"press_key: PRIMARY: move keyboard focus toward the Reject button","child_id":"39593466","v":1,"ts":"2026-11-22T03:35:46.629Z"}
+{"step":3,"status":"running","remark":"Step 2","child_id":"39593466","v":1,"ts":"2026-11-22T03:35:47.265Z"}
+{"step":3,"status":"done","remark":"press_key: PRIMARY: move keyboard focus to the Reject button","child_id":"39593466","v":1,"ts":"2026-11-22T03:35:53.500Z"}
+{"step":4,"status":"running","remark":"Step 3","child_id":"39593466","v":1,"ts":"2026-11-22T03:35:54.153Z"}
+{"step":4,"status":"done","remark":"press_key: PRIMARY: move keyboard focus to the Reject button","child_id":"39593466","v":1,"ts":"2026-11-22T03:35:59.542Z"}
+{"step":5,"status":"running","remark":"Step 4","child_id":"39593466","v":1,"ts":"2026-11-22T03:36:00.161Z"}
+{"step":5,"status":"done","remark":"press_key: PRIMARY: Dismiss the cookie banner by selecting Reject using the keyboard; role=","child_id":"39593466","v":1,"ts":"2026-11-22T03:36:05.332Z"}
+{"step":6,"status":"running","remark":"Step 5","child_id":"39593466","v":1,"ts":"2026-11-22T03:36:05.987Z"}
+{"step":6,"status":"done","remark":"wait: Waiting confirm the cookie banner remains dismissed","child_id":"39593466","v":1,"ts":"2026-11-22T03:36:10.310Z"}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-22T03:36:13.454Z"}
+{"step":6,"status":"done","remark":"press_key: PRIMARY: press the Tab key","v":1,"ts":"2026-11-22T03:36:17.354Z"}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-22T03:36:17.952Z"}
+{"step":7,"status":"done","remark":"press_key: PRIMARY: activate the Skip to main content link with the Enter key","v":1,"ts":"2026-11-22T03:36:23.507Z"}
+{"step":8,"status":"running","remark":"Step 7","v":1,"ts":"2026-11-22T03:36:24.173Z"}
+{"step":8,"status":"done","remark":"press_key: PRIMARY: press the Tab key to continue keyboard navigation from main content","v":1,"ts":"2026-11-22T03:36:27.715Z"}
+{"step":9,"status":"running","remark":"Step 8","v":1,"ts":"2026-11-22T03:36:28.315Z"}
+{"step":9,"status":"done","remark":"press_key: PRIMARY: press the Tab key to continue keyboard navigation","v":1,"ts":"2026-11-22T03:36:34.616Z"}
+{"step":10,"status":"running","remark":"Step 9","v":1,"ts":"2026-11-22T03:36:35.244Z"}
+{"step":10,"status":"done","remark":"wait: queued plan (8 steps): press_key \"Contact us\"; press_key \"Contact us\"; press_key","v":1,"ts":"2026-11-22T03:36:48.282Z"}
+{"step":11,"status":"running","remark":"Step 10","v":1,"ts":"2026-11-22T03:36:49.353Z"}
+{"step":11,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:36:49.396Z"}
+{"step":12,"status":"running","remark":"Step 11","v":1,"ts":"2026-11-22T03:36:50.085Z"}
+{"step":12,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:36:50.105Z"}
+{"step":13,"status":"running","remark":"Step 12","v":1,"ts":"2026-11-22T03:36:50.873Z"}
+{"step":13,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:36:50.886Z"}
+{"step":14,"status":"running","remark":"Step 13","v":1,"ts":"2026-11-22T03:36:51.871Z"}
+{"step":14,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:36:51.887Z"}
+{"step":15,"status":"running","remark":"Step 14","v":1,"ts":"2026-11-22T03:36:52.547Z"}
+{"step":15,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:36:52.566Z"}
+{"step":16,"status":"running","remark":"Step 15","v":1,"ts":"2026-11-22T03:36:53.212Z"}
+{"step":16,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:36:53.224Z"}
+{"step":17,"status":"running","remark":"Step 16","v":1,"ts":"2026-11-22T03:36:53.941Z"}
+{"step":17,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:36:53.954Z"}
+{"step":18,"status":"running","remark":"Step 17","v":1,"ts":"2026-11-22T03:36:54.589Z"}
+{"step":18,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:36:54.601Z"}
+{"step":19,"status":"running","remark":"Step 18","v":1,"ts":"2026-11-22T03:36:55.212Z"}
+{"step":19,"status":"done","remark":"wait: queued plan (8 steps): press_key \"Route 1\"; press_key \"Route 1\"; press_key \"Rout","v":1,"ts":"2026-11-22T03:37:02.715Z"}
+{"step":20,"status":"running","remark":"Step 19","v":1,"ts":"2026-11-22T03:37:03.411Z"}
+{"step":20,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:03.429Z"}
+{"step":21,"status":"running","remark":"Step 20","v":1,"ts":"2026-11-22T03:37:04.072Z"}
+{"step":21,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:04.083Z"}
+{"step":22,"status":"running","remark":"Step 21","v":1,"ts":"2026-11-22T03:37:04.703Z"}
+{"step":22,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:04.715Z"}
+{"step":23,"status":"running","remark":"Step 22","v":1,"ts":"2026-11-22T03:37:05.682Z"}
+{"step":23,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:05.696Z"}
+{"step":24,"status":"running","remark":"Step 23","v":1,"ts":"2026-11-22T03:37:06.420Z"}
+{"step":24,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:06.459Z"}
+{"step":25,"status":"running","remark":"Step 24","v":1,"ts":"2026-11-22T03:37:07.092Z"}
+{"step":25,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:07.103Z"}
+{"step":26,"status":"running","remark":"Step 25","v":1,"ts":"2026-11-22T03:37:07.706Z"}
+{"step":26,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:07.716Z"}
+{"step":27,"status":"running","remark":"Step 26","v":1,"ts":"2026-11-22T03:37:08.422Z"}
+{"step":27,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:08.442Z"}
+{"step":28,"status":"running","remark":"Step 27","v":1,"ts":"2026-11-22T03:37:09.043Z"}
+{"step":28,"status":"done","remark":"wait: queued plan (8 steps): press_key \"Care & Support Services\"; press_key \"Care & Su","v":1,"ts":"2026-11-22T03:37:16.647Z"}
+{"step":29,"status":"running","remark":"Step 28","v":1,"ts":"2026-11-22T03:37:17.287Z"}
+{"step":29,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:17.300Z"}
+{"step":30,"status":"running","remark":"Step 29","v":1,"ts":"2026-11-22T03:37:18.421Z"}
+{"step":30,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:18.574Z"}
+{"step":31,"status":"running","remark":"Step 30","v":1,"ts":"2026-11-22T03:37:19.361Z"}
+{"step":31,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:19.379Z"}
+{"step":32,"status":"running","remark":"Step 31","v":1,"ts":"2026-11-22T03:37:20.242Z"}
+{"step":32,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:20.280Z"}
+{"step":33,"status":"running","remark":"Step 32","v":1,"ts":"2026-11-22T03:37:21.428Z"}
+{"step":33,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:21.468Z"}
+{"step":34,"status":"running","remark":"Step 33","v":1,"ts":"2026-11-22T03:37:22.283Z"}
+{"step":34,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:22.318Z"}
+{"step":35,"status":"running","remark":"Step 34","v":1,"ts":"2026-11-22T03:37:23.053Z"}
+{"step":35,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:23.118Z"}
+{"step":36,"status":"running","remark":"Step 35","v":1,"ts":"2026-11-22T03:37:24.193Z"}
+{"step":36,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:24.213Z"}
+{"step":37,"status":"running","remark":"Step 36","v":1,"ts":"2026-11-22T03:37:25.037Z"}
+{"step":37,"status":"done","remark":"wait: queued plan (5 steps): press_key \"Contract Award\"; press_key \"Contract Award\"; p","v":1,"ts":"2026-11-22T03:37:35.146Z"}
+{"step":38,"status":"running","remark":"Step 37","v":1,"ts":"2026-11-22T03:37:36.153Z"}
+{"step":38,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:36.223Z"}
+{"step":39,"status":"running","remark":"Step 38","v":1,"ts":"2026-11-22T03:37:36.943Z"}
+{"step":39,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:36.964Z"}
+{"step":40,"status":"running","remark":"Step 39","v":1,"ts":"2026-11-22T03:37:37.731Z"}
+{"step":40,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:37.750Z"}
+{"step":41,"status":"running","remark":"Step 40","v":1,"ts":"2026-11-22T03:37:38.430Z"}
+{"step":41,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:38.449Z"}
+{"step":42,"status":"running","remark":"Step 41","v":1,"ts":"2026-11-22T03:37:39.123Z"}
+{"step":42,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:37:39.142Z"}
+{"step":43,"status":"running","remark":"Step 42","v":1,"ts":"2026-11-22T03:37:39.827Z"}
+{"step":43,"status":"done","remark":"press_key: PRIMARY: press the Tab key to move from Thresholds to Considerations Before Proc","v":1,"ts":"2026-11-22T03:37:44.698Z"}
+{"step":44,"status":"running","remark":"Step 43","v":1,"ts":"2026-11-22T03:37:45.423Z"}
+{"step":44,"status":"done","remark":"press_key: PRIMARY: Open Considerations Before Proceeding with Tab and Enter; role=button; ","v":1,"ts":"2026-11-22T03:37:51.819Z"}
+{"step":45,"status":"running","remark":"Step 44","v":1,"ts":"2026-11-22T03:37:52.596Z"}
+{"step":45,"status":"done","remark":"analyze: ANALYZE(visual, 'the first question, Are the good/services you are buying busine","v":1,"ts":"2026-11-22T03:38:01.344Z"}
+{"step":46,"status":"running","remark":"Step 45","v":1,"ts":"2026-11-22T03:38:02.151Z"}
+{"step":46,"status":"done","remark":"assert: the first question, Are the good/services you are buying business critical?, is ","v":1,"ts":"2026-11-22T03:38:02.160Z"}
+{"step":47,"status":"running","remark":"Step 46","v":1,"ts":"2026-11-22T03:38:02.820Z"}
+{"step":47,"status":"done","remark":"wait: PRIMARY: confirm Considerations Before Proceeding remains focused and expanded a","v":1,"ts":"2026-11-22T03:38:09.835Z"}
+{"step":48,"status":"running","remark":"Step 47","v":1,"ts":"2026-11-22T03:38:10.599Z"}
+{"step":48,"status":"done","remark":"analyze: the final result is verified on the page","v":1,"ts":"2026-11-22T03:38:25.555Z"}
+{"step":49,"status":"running","remark":"Step 48","v":1,"ts":"2026-11-22T03:38:26.244Z"}
+{"step":49,"status":"done","remark":"assert: the final result is verified on the page","v":1,"ts":"2026-11-22T03:38:26.254Z"}
+{"type":"coverage","status":"skipped","reason":"not_assurance_project","pack":"/Users/vasu/.testmuai/kaneai/sessions/97f4a622-59cc-4d3f-a327-2421fc656e19/evidence/f1c02e1d-8cac-43e4-8e3f-679933b81394.evidence","v":1,"ts":"2026-11-22T03:38:30.216Z"}
+{"type":"run_end","status":"passed","summary":"The requested “Considerations Before Proceeding” section was opened using keyboard navigation.\nA cookie notice that covered the page was dismissed by choosing Reject with the keyboard.\nThe first question, “Are the good/services you are buying business critical?”, became visible.\nKeyboard navigation was continued to the “Considerations Before Proceeding” heading after “Thresholds,” and the section was activated with Enter.\nThe page displayed the completion message: “You are now ready to begin Route 1 of the Procurement Journey.”","one_liner":"opened Considerations Before Proceeding on Procurement Journey Scotland","final_state":{"url":"https://www.procurementjourney.scot/index.php/route-1/route-1-introduction#main-content","first_question_visible":"Are the good/services you are buying business critical?","final_result":"You are now ready to begin Route 1 of the Procurement Journey."},"reason":"Objective completed","duration":193.5,"bifurcated":false,"total_runs":1,"context":{"memory":{"considerations_accordion_focus_order":{"extracted_value":"true","operator":"equals","transforms":[],"json_path":null,"reasoning":"value: 'true' -> 'true'; equals 'true' -> PASS","analyzer_type":"textual_visual","step":2,"query":"whether the Considerations Before Proceeding accordion title button in the article is in the sequential keyboard focus order","condition":"the Considerations Before Proceeding accordion title is in the sequential keyboard focus order","human_description":"Checking the Considerations Before Proceeding accordion focusability","expected_value":"true","subject":"the Considerations Before Proceeding accordion title in the sequential keyboard focus order","must_be":"present","code_js":"el(138).tabIndex >= 0 && !el(138).disabled && getComputedStyle(el(138)).display !== 'none' && getComputedStyle(el(138)).visibility !== 'hidden'","wrapped_js":"(els) => {\n  const __m = {138: 0};\n  const el = (i) => els[__m[i]];\n  const __v = (el(138).tabIndex >= 0 && !el(138).disabled && getComputedStyle(el(138)).display !== 'none' && getComputedStyle(el(138)).visibility !== 'hidden');\n  return (typeof __v === 'boolean' ? String(__v) : __v);\n}","locators":["internal:role=button[name=\"Considerations Before\"i]"],"needs_unit_conversion":false},"cookie_banner_covers_page":{"extracted_value":"true","operator":"equals","transforms":[],"json_path":null,"reasoning":"value: 'true' -> 'true'; equals 'true' -> PASS","analyzer_type":"textual_visual","step":2,"query":"whether the cookie banner covering the page is present","condition":"the cookie banner covers the page","human_description":"Checking whether the cookie banner covers the page","expected_value":"true","subject":"the cookie banner covering the page","must_be":"present","code_js":"getComputedStyle(el(2)).display !== 'none' && getComputedStyle(el(2)).visibility !== 'hidden' && getComputedStyle(el(2)).position === 'fixed' && el(2).getBoundingClientRect().height >= window.innerHeight","wrapped_js":"(els) => {\n  const __m = {2: 0};\n  const el = (i) => els[__m[i]];\n  const __v = (getComputedStyle(el(2)).display !== 'none' && getComputedStyle(el(2)).visibility !== 'hidden' && getComputedStyle(el(2)).position === 'fixed' && el(2).getBoundingClientRect().height >= window.innerHeight);\n  return (typeof __v === 'boolean' ? String(__v) : __v);\n}","locators":["internal:role=dialog[name=\"Our use of cookies and\"i]"],"needs_unit_conversion":false},"first_question_visible":{"extracted_value":"true","operator":"equals","transforms":[],"json_path":null,"reasoning":"value: 'true' -> 'true'; equals 'true' -> PASS","analyzer_type":"visual","step":44,"query":"whether the first question, Are the good/services you are buying business critical?, is visible in the Considerations Before Proceeding section","condition":"the first question, Are the good/services you are buying business critical?, is visible","human_description":"Checking whether the first question is visible","expected_value":"true","subject":"the first question, Are the good/services you are buying business critical?","must_be":"present"},"final_result_page_check":{"extracted_value":"true","operator":"equals","transforms":[],"json_path":null,"reasoning":"value: 'true' -> 'true'; equals 'true' -> PASS","analyzer_type":"textual_visual","step":47,"query":"whether the final readiness result heading is present in the Route 1 Introduction article","condition":"the final result is verified on the page","human_description":"Checking whether the final result is present on the page","expected_value":"true","subject":"the final result on the page","must_be":"present","code_js":"el(161).innerText.trim() === 'You are now ready to begin Route 1 of the Procurement Journey.'","wrapped_js":"(els) => {\n  const __m = {161: 0};\n  const el = (i) => els[__m[i]];\n  const __v = (el(161).innerText.trim() === 'You are now ready to begin Route 1 of the Procurement Journey.');\n  return (typeof __v === 'boolean' ? String(__v) : __v);\n}","locators":["internal:role=heading[name=\"You are now ready to begin\"i]"],"needs_unit_conversion":false}},"variables":{"considerations_accordion_focus_order":{"syntax":"{{considerations_accordion_focus_order}}","value":"true","type":"memory","secret":false},"cookie_banner_covers_page":{"syntax":"{{cookie_banner_covers_page}}","value":"true","type":"memory","secret":false},"first_question_visible":{"syntax":"{{first_question_visible}}","value":"true","type":"memory","secret":false},"final_result_page_check":{"syntax":"{{final_result_page_check}}","value":"true","type":"memory","secret":false}},"pointer":"(passed) opened Considerations Before Proceeding on Procurement Journey Scotland"},"credits_consumed":59.389042499999995,"session_dir":"/Users/vasu/.testmuai/kaneai/sessions/97f4a622-59cc-4d3f-a327-2421fc656e19","run_dir":"/Users/vasu/.testmuai/kaneai/sessions/97f4a622-59cc-4d3f-a327-2421fc656e19/runs/0","result_code":100,"reason_code":"success.complete","per_flow_metadata":[{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"The requested “Considerations Before Proceeding” section was opened using keyboard navigation.\nA cookie notice that covered the page was dismissed by choosing Reject with the keyboard.\nThe first question, “Are the good/services you are buying business critical?”, became visible.\nKeyboard navigation was continued to the “Considerations Before Proceeding” heading after “Thresholds,” and the section was activated with Enter.\nThe page displayed the completion message: “You are now ready to begin Route 1 of the Procurement Journey.”","one_liner":"opened Considerations Before Proceeding on Procurement Journey Scotland","credits_consumed":59.389042499999995}],"run_id":"run-0","coverage":{"status":"skipped"},"v":1,"ts":"2026-11-22T03:38:30.216Z"}

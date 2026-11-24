@@ -1,0 +1,105 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "html.html.js, body.navigation\\:mobile",
+      "count": 2,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "html",
+          "classes": [
+            "html",
+            "js",
+            "default"
+          ],
+          "label": "De portal van de Publieke Omroep <link href=\"https://npo.nl/assets/css/font-v4.css\" rel=\"stylesheet\""
+        },
+        {
+          "tag": "body",
+          "classes": [
+            "navigation:mobile"
+          ],
+          "label": "Direct naar de inhoudDirect naar de hoofdnavigatieDirect naar zoekenDirect naar de extra informatie "
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "container",
+      "selector": "ul[role=\"tablist\"]:has(> li > #tab1)",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "ul",
+          "classes": [
+            "max:6",
+            "max:center",
+            "cluster",
+            "cluster--center"
+          ],
+          "role": "tablist",
+          "label": "SinterklaasHerfstRealityDuurzaam levenTrue crime"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "items",
+      "selector": "ul[role=\"tablist\"]:has(> li > #tab1) > li > button[role=\"tab\"]",
+      "scope": "ul[role=\"tablist\"]:has(> li > #tab1)",
+      "count": 5,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "id": "tab1",
+          "classes": [
+            "label"
+          ],
+          "role": "tab",
+          "label": "Sinterklaas"
+        },
+        {
+          "tag": "button",
+          "id": "tab2",
+          "classes": [
+            "label"
+          ],
+          "role": "tab",
+          "label": "Herfst"
+        },
+        {
+          "tag": "button",
+          "id": "tab3",
+          "classes": [
+            "label"
+          ],
+          "role": "tab",
+          "label": "Reality"
+        },
+        {
+          "tag": "button",
+          "id": "tab4",
+          "classes": [
+            "label"
+          ],
+          "role": "tab",
+          "label": "Duurzaam leven"
+        },
+        {
+          "tag": "button",
+          "id": "tab5",
+          "classes": [
+            "label"
+          ],
+          "role": "tab",
+          "label": "True crime"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "v4-d2af6285faad11b99fc5",
+  "url": "https://www.ukrainealarm.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Встановіть застосунок Повітряна тривога, щоб миттєво отримувати сповіщення системи цивільної оборони.” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Встановіть застосунок Повітряна тривога, щоб миттєво отримувати сповіщення системи цивільної оборони.” at normal width.",
+  "observedSelector": "#comp-ir225ikb > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#comp-ir225ikb > p",
+      "equals": "Встановіть застосунок Повітряна тривога, щоб миттєво отримувати сповіщення системи цивільної оборони."
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#comp-ir225ikb > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.ukrainealarm.com",
+  "match": "https://www.ukrainealarm.com/",
+  "barrier": "The passage sits in a 497 CSS pixel text container that starts 18 pixels from the left edge. At a 320 CSS pixel viewport, horizontal clipping cuts off the passage instead of letting it wrap to the available width.",
+  "rules": [
+    {
+      "selector": "#site-root",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#comp-l9siuban",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#comp-l9siubbp",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#comp-ir225ikb",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "min-width": "0",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

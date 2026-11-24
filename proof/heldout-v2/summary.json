@@ -1,0 +1,1127 @@
+{
+  "startedAt": "2026-11-22T14:29:10.805Z",
+  "freezeCommit": "c85c935fe8d274c59daf2619b89ab41d6385ae14",
+  "registrationCommit": "dc9c7e189c9efdff87965f30f2d427080558bad7",
+  "planDigest": "e7036828165a3b560214e40d6788a02e235ead47a38fa3b0880e5e500fabae2e",
+  "startCredits": 5304.5725,
+  "threshold": 2984.5725,
+  "model": "gpt-6.2-sol",
+  "finishedAt": "2026-11-22T15:34:16.041Z",
+  "endCredits": 3505.9383,
+  "spentCredits": 1798.6342000000004,
+  "fixed": 13,
+  "total": 39,
+  "registered": 40,
+  "counts": {
+    "fixed": 13,
+    "unpatchable": 0,
+    "no barrier": 1,
+    "Kane error": 25,
+    "blocked": 1,
+    "budget stop": 0,
+    "pending": 0,
+    "running": 0
+  },
+  "scoutingExcluded": {
+    "inconclusive": 276,
+    "blocked": 102,
+    "superseded": 1,
+    "no barrier": 1,
+    "eligible alternate": 7
+  },
+  "results": [
+    {
+      "id": "caltech-home-keyboard",
+      "url": "https://www.caltech.edu/",
+      "persona": "keyboard-only",
+      "category": "education",
+      "task": "Use Tab and Enter to reach and activate “READ FULL ARTICLE”. Verify the public destination at /about/news/caltech-names-the-bridget-and-william-coughran-department-of-computing-mathematical-sciences.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:29:10.847Z",
+      "attemptId": "b2e2658a-dbed-4edb-9d28-229af905f5e6",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "8ecf7992-ac17-4ed4-b132-90f1d3c40861",
+          "result": "proof/kane/caltech-home-keyboard/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "Maximum steps exceeded (24/16)",
+      "finishedAt": "2026-11-22T14:30:44.065Z"
+    },
+    {
+      "id": "vanderbilt-home-keyboard",
+      "url": "https://www.vanderbilt.edu/",
+      "persona": "keyboard-only",
+      "category": "education",
+      "task": "Use Tab and Enter to reach and activate “Prospective Grad & Professional”. Verify its controlled content becomes visible.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:29:10.847Z",
+      "attemptId": "3966bbda-9970-499e-8237-ac8ef781cd82",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "42be871c-2644-4967-9bcb-cc58a1a196b3",
+          "result": "proof/kane/vanderbilt-home-keyboard/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "Maximum steps exceeded (21/16)",
+      "finishedAt": "2026-11-22T14:30:18.871Z"
+    },
+    {
+      "id": "multcolib-reader",
+      "url": "https://multcolib.org/",
+      "persona": "screen-reader-view",
+      "category": "civic",
+      "task": "In Reading view, locate the textbox named “Search books, movies and more.”. Enter the text test and confirm the field contains it. Do not submit.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:30:20.411Z",
+      "attemptId": "a57964c5-60b8-4dc2-a320-e18edfc4543a",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "b70c06ee-5116-443f-b4e8-a5e21d03d875",
+          "result": "proof/kane/multcolib-reader/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "The required accessible control was absent from the recorded Reading view interaction.",
+      "finishedAt": "2026-11-22T14:31:04.629Z"
+    },
+    {
+      "id": "newscientist-reader",
+      "url": "https://www.newscientist.com/",
+      "persona": "screen-reader-view",
+      "category": "science",
+      "task": "In Reading view, locate the textbox named “Enter search keywords”. Enter the text test and confirm the field contains it. Do not submit.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:30:45.630Z",
+      "attemptId": "e134abaa-0bbb-4900-9bde-a240f6349ad3",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "22d52ddd-536f-4696-b742-a4166d0f3b13",
+          "result": "proof/kane/newscientist-reader/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "The required accessible control was absent from the recorded Reading view interaction.",
+      "finishedAt": "2026-11-22T14:31:32.264Z"
+    },
+    {
+      "id": "pgcmls-reader",
+      "url": "https://www.pgcmls.info/",
+      "persona": "screen-reader-view",
+      "category": "civic",
+      "task": "In Reading view, locate the textbox named “Search PGCMLS.info...”. Enter the text test and confirm the field contains it. Do not submit.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:31:06.173Z",
+      "attemptId": "473a4dcf-0027-4bd4-82b8-e59e44db9f07",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "714ea761-09da-462d-98dd-60ec4e1de864",
+          "result": "proof/kane/pgcmls-reader/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "The required accessible control was absent from the recorded Reading view interaction.",
+      "finishedAt": "2026-11-22T14:31:52.907Z"
+    },
+    {
+      "id": "tcpl-reader",
+      "url": "https://www.tcpl.org/",
+      "persona": "screen-reader-view",
+      "category": "civic",
+      "task": "In Reading view, locate the textbox named “Search books, videos, etc.”. Enter the text test and confirm the field contains it. Do not submit.",
+      "outcome": "blocked",
+      "startedAt": "2026-11-22T14:31:33.835Z",
+      "attemptId": "d4ac06ca-5f2c-4f5d-88f1-56279a27ae51",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "blocked",
+          "runner": "playwright",
+          "sessionId": null,
+          "result": "proof/kane/tcpl-reader/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "HTTP 403",
+      "finishedAt": "2026-11-22T14:31:35.991Z"
+    },
+    {
+      "id": "indypl-reader",
+      "url": "https://www.indypl.org/",
+      "persona": "screen-reader-view",
+      "category": "civic",
+      "task": "In Reading view, locate the textbox named “Search”. Enter the text test and confirm the field contains it. Do not submit.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:31:37.556Z",
+      "attemptId": "698bb5ac-791e-4045-9b3f-06ac6feb090f",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "12f84d32-188c-47b8-aa08-63076de2fa92",
+          "result": "proof/kane/indypl-reader/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "The required accessible control was absent from the recorded Reading view interaction.",
+      "finishedAt": "2026-11-22T14:32:23.995Z"
+    },
+    {
+      "id": "sanantonio-library-reader",
+      "url": "https://www.mysapl.org/",
+      "persona": "screen-reader-view",
+      "category": "civic",
+      "task": "In Reading view, locate the textbox named “Search Catalog”. Enter the text test and confirm the field contains it. Do not submit.",
+      "outcome": "fixed",
+      "startedAt": "2026-11-22T14:31:54.443Z",
+      "attemptId": "a6926d4b-f28b-43e3-bd1d-d09881e0c447",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "d7b5a631-abdd-41c0-b714-94d511df5b15",
+          "result": "proof/kane/sanantonio-library-reader/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "b58e7824-0ce9-4f71-a23e-6db155779cd0",
+          "result": "proof/kane/sanantonio-library-reader/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "36fb53a9-1e55-4230-a9da-8cdd3de7a8ce",
+          "result": "proof/kane/sanantonio-library-reader/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T14:34:12.040Z"
+    },
+    {
+      "id": "ovh-reader",
+      "url": "https://www.ovhcloud.com/en-in/",
+      "persona": "screen-reader-view",
+      "category": "saas",
+      "task": "In Reading view, locate the textbox named “Search for a domain name”. Enter the text test and confirm the field contains it. Do not submit.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:32:25.540Z",
+      "attemptId": "224a1460-b66b-4d94-a55a-1a0100d7f469",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "79f3f597-3011-4bc0-9db0-201ab0af5854",
+          "result": "proof/kane/ovh-reader/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "The run did not produce a validated Kane evidence pack.",
+      "finishedAt": "2026-11-22T14:36:48.898Z"
+    },
+    {
+      "id": "openbsd-faq-reflow",
+      "url": "https://www.openbsd.org/faq/faq1.html",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “From: user@example.com To: bugs@openbsd.org Subject: 3.3-beta panics on a SPARCStation2 OpenBSD”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "fixed",
+      "startedAt": "2026-11-22T14:34:13.588Z",
+      "attemptId": "e172f11e-b831-4404-965f-bf149277924d",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "6a2d7209-1ee5-4bd1-b65e-7b4cf9c371fd",
+          "result": "proof/kane/openbsd-faq-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "8f980a9e-99aa-4842-b3a0-057bde42f302",
+          "result": "proof/kane/openbsd-faq-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "96a83db9-497a-4b81-aade-25ca01e8f12f",
+          "result": "proof/kane/openbsd-faq-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T14:39:18.297Z"
+    },
+    {
+      "id": "gao-about-reflow",
+      "url": "https://www.gao.gov/about",
+      "persona": "low-vision",
+      "category": "government",
+      "task": "At 320 CSS pixels, read the passage beginning “Learn about our role in the government, plus our history, performance,”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "fixed",
+      "startedAt": "2026-11-22T14:36:50.464Z",
+      "attemptId": "687c438e-41a9-49ba-89c8-86b8792d1813",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "e5d68f72-1bf5-4190-bd36-68a0daf94235",
+          "result": "proof/kane/gao-about-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "097e438b-77d5-4b9b-b9c6-4ba130ad25c5",
+          "result": "proof/kane/gao-about-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "4084e3f0-cb28-4c46-a536-62fb61d9cc85",
+          "result": "proof/kane/gao-about-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T14:39:48.288Z"
+    },
+    {
+      "id": "getty-about-reflow",
+      "url": "https://www.getty.edu/about/",
+      "persona": "low-vision",
+      "category": "museum",
+      "task": "At 320 CSS pixels, read the passage beginning “Getty Foundation Grants that advance the arts around the world”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:39:19.842Z",
+      "attemptId": "fce2a329-f520-4fe8-8d5d-de2b4ffe8518",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "9d031bf6-ad53-4b02-8478-8b047973c904",
+          "result": "proof/kane/getty-about-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "3a433988-4c2f-4bf7-b5f5-ec05686444f2",
+          "result": "proof/kane/getty-about-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "122d0955-4cfc-4571-9e88-b708633b8765",
+          "result": "proof/kane/getty-about-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "reason": "The declared outcome held despite the failed checkpoint.",
+      "finishedAt": "2026-11-22T14:43:17.371Z"
+    },
+    {
+      "id": "daringfireball-reflow",
+      "url": "https://daringfireball.net/projects/markdown/",
+      "persona": "low-vision",
+      "category": "media",
+      "task": "At 320 CSS pixels, read the passage beginning “The best way to get a feel for Markdown’s formatting syntax”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:39:49.855Z",
+      "attemptId": "90619390-0cbb-4db7-8eb8-0d5f0e90c7d1",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "1f4e41e2-4636-4372-8b28-65fd031111a8",
+          "result": "proof/kane/daringfireball-reflow/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "Could not confirm the persona and repair state on the recorded outcome page.",
+      "finishedAt": "2026-11-22T14:40:32.953Z"
+    },
+    {
+      "id": "htdp-reflow",
+      "url": "https://htdp.org/2023-8-14/Book/part_prologue.html",
+      "persona": "low-vision",
+      "category": "education",
+      "task": "At 320 CSS pixels, read the passage beginning “function call:expected a function after the open parenthesis, found a number”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "fixed",
+      "startedAt": "2026-11-22T14:40:34.519Z",
+      "attemptId": "5a677d0f-cd75-4194-a728-74206be15231",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "51f6f29f-8f4e-43ca-8518-036c9c3069c5",
+          "result": "proof/kane/htdp-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "ddc1f68e-d0de-47ec-ad42-6cbbe562f7b7",
+          "result": "proof/kane/htdp-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "dae2063b-f9b1-4e68-b8eb-a17f7cf646bc",
+          "result": "proof/kane/htdp-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T14:43:56.636Z"
+    },
+    {
+      "id": "mathworld-pi-reflow",
+      "url": "https://mathworld.wolfram.com/Pi.html",
+      "persona": "low-vision",
+      "category": "science",
+      "task": "At 320 CSS pixels, read the passage beginning “Chudnovsky and Chudnovsky (1984)”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:43:18.934Z",
+      "attemptId": "4da88cfb-18a5-4ff3-8dbf-d342f65cd50e",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "a3ec803e-184b-48af-98e4-d5895e040e7e",
+          "result": "proof/kane/mathworld-pi-reflow/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "The declared outcome held despite the failed checkpoint.",
+      "finishedAt": "2026-11-22T14:44:08.113Z"
+    },
+    {
+      "id": "sqlite-faq-reflow",
+      "url": "https://www.sqlite.org/faq.html",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “INSERT INTO t1 VALUES((SELECT max(a) FROM t1)+1,123);”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:43:58.203Z",
+      "attemptId": "1cd98390-e5b6-4b0c-a09f-a3a49e2541e5",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "7b8423da-96d5-4644-a07c-4361a0b2eaab",
+          "result": "proof/kane/sqlite-faq-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "f1357e3f-b0b7-4176-ba83-17805d7b7602",
+          "result": "proof/kane/sqlite-faq-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "350d2d42-a46e-484e-aeb3-d2119820b41e",
+          "result": "proof/kane/sqlite-faq-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "reason": "The run did not produce a validated Kane evidence pack.",
+      "finishedAt": "2026-11-22T14:48:34.859Z"
+    },
+    {
+      "id": "gwern-about-reflow",
+      "url": "https://gwern.net/about",
+      "persona": "low-vision",
+      "category": "media",
+      "task": "At 320 CSS pixels, read the passage beginning “feedback <- read.csv(\"https://gwern.net/doc/traffic/2013-gwern-gwernnet-anonymousfeedback.csv\", colClasses=c(\"”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:44:09.675Z",
+      "attemptId": "eda4106c-c8e4-42d0-90e1-df1739f9440f",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "94e8c14d-67d8-4d76-8cb4-04ac5eece3dd",
+          "result": "proof/kane/gwern-about-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "f29b2a5d-891d-44ec-a068-a4c5334a213b",
+          "result": "proof/kane/gwern-about-reflow/heldout-v2/control/result.json"
+        }
+      ],
+      "reason": "The declared outcome held despite the failed checkpoint.",
+      "finishedAt": "2026-11-22T14:48:49.850Z"
+    },
+    {
+      "id": "sedgewick-reflow",
+      "url": "https://algs4.cs.princeton.edu/11model/",
+      "persona": "low-vision",
+      "category": "education",
+      "task": "At 320 CSS pixels, read the passage beginning “% java Scale mandrill.jpg 200 400”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "fixed",
+      "startedAt": "2026-11-22T14:48:36.429Z",
+      "attemptId": "2d955b8c-6834-490b-a2ec-032abacd335b",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "035de390-b0b6-417d-a112-45ca76f46841",
+          "result": "proof/kane/sedgewick-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "7b66edf0-0f93-4681-a93b-57ec96d56626",
+          "result": "proof/kane/sedgewick-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "2a86e20d-930b-47c0-a192-0c7836f51718",
+          "result": "proof/kane/sedgewick-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T14:51:46.402Z"
+    },
+    {
+      "id": "lua-manual-reflow",
+      "url": "https://www.lua.org/manual/5.4/manual.html",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “chunk ::= block block ::= {stat} [retstat] stat ::= ‘;’ |”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "fixed",
+      "startedAt": "2026-11-22T14:48:51.416Z",
+      "attemptId": "e5b7ae93-bb75-4cea-86a9-b77efaa95b0f",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "b83f00cf-c90e-49d4-8ae2-4a6a4f310fc0",
+          "result": "proof/kane/lua-manual-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "3472d244-23e5-41fa-8a90-587c7aa5d2cb",
+          "result": "proof/kane/lua-manual-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "06702ffd-7a8c-4145-b63e-a070b5bc9912",
+          "result": "proof/kane/lua-manual-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T14:53:51.881Z"
+    },
+    {
+      "id": "slatestarcodex-moloch-reflow",
+      "url": "https://slatestarcodex.com/2014/07/30/meditations-on-moloch/",
+      "persona": "low-vision",
+      "category": "media",
+      "task": "At 320 CSS pixels, read the passage beginning “Scott Elliot says: July 30, 2014 at 1:16 am ~new~ This”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:51:47.966Z",
+      "attemptId": "beeec3d4-035a-4d1b-9e3b-ee54cd7763ed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "493e0dec-1a83-471a-94ce-9a6e0da8c5ac",
+          "result": "proof/kane/slatestarcodex-moloch-reflow/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "The task outcome checks did not pass in the recorded browser.",
+      "finishedAt": "2026-11-22T14:54:18.013Z"
+    },
+    {
+      "id": "perl-intro-reflow",
+      "url": "https://perldoc.perl.org/perlintro",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “. a single character \\s a whitespace character (space, tab, newline,”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:53:53.438Z",
+      "attemptId": "78cba429-84b8-4cf0-a58c-8d69f928047b",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "87f4df81-cabe-49f2-8d33-c09213b955be",
+          "result": "proof/kane/perl-intro-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "3d477beb-cc46-4ab2-a3bb-2a717a30c8e0",
+          "result": "proof/kane/perl-intro-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "21848d31-adab-46b6-b9f1-c11997a3b64a",
+          "result": "proof/kane/perl-intro-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "reason": "The run did not produce a validated Kane evidence pack.",
+      "finishedAt": "2026-11-22T15:01:37.458Z"
+    },
+    {
+      "id": "fsblog-models-reflow",
+      "url": "https://fs.blog/mental-models/",
+      "persona": "low-vision",
+      "category": "media",
+      "task": "At 320 CSS pixels, read the passage beginning “Mastering the best of what other people have already figured out”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:54:19.576Z",
+      "attemptId": "d06dfac9-e596-4564-867b-4758472565e6",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "3498fb15-1923-47f4-b654-4416f7fb6503",
+          "result": "proof/kane/fsblog-models-reflow/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "Recorded browser access failed: Visible CAPTCHA or verification frame",
+      "finishedAt": "2026-11-22T14:55:21.833Z"
+    },
+    {
+      "id": "nginx-core-reflow",
+      "url": "https://nginx.org/en/docs/http/ngx_http_core_module.html",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “listen 127.0.0.1 default_server accept_filter=dataready backlog=1024;”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:55:23.404Z",
+      "attemptId": "b6cc2493-4b22-4a13-b692-d12503abd96f",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "5e1c4aee-116f-4865-a7a0-b4fde5a5ffce",
+          "result": "proof/kane/nginx-core-reflow/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "The task outcome checks did not pass in the recorded browser.",
+      "finishedAt": "2026-11-22T14:56:46.735Z"
+    },
+    {
+      "id": "martinfowler-reflow",
+      "url": "https://martinfowler.com/articles/continuousIntegration.html",
+      "persona": "low-vision",
+      "category": "media",
+      "task": "At 320 CSS pixels, read the passage beginning “Usually the best way to fix the build is to revert”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "fixed",
+      "startedAt": "2026-11-22T14:56:48.278Z",
+      "attemptId": "732015ba-f1ef-411b-8819-10a699db5b30",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "f031352b-1b1b-4bb9-939a-7a3759d03f2f",
+          "result": "proof/kane/martinfowler-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "505fae71-bccf-4078-a602-00017edef53b",
+          "result": "proof/kane/martinfowler-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "a0edaaf1-3574-41b5-9d46-96f41f93a543",
+          "result": "proof/kane/martinfowler-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T14:59:23.459Z"
+    },
+    {
+      "id": "apache-core-reflow",
+      "url": "https://httpd.apache.org/docs/2.4/mod/core.html",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “#Example (default format for threaded MPMs) ErrorLogFormat \"[%{u}t] [%-m:%l] [pid %P:tid”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T14:59:25.024Z",
+      "attemptId": "5119cdd7-0067-4656-9751-e7d27e03128b",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "ceb47001-a759-4915-82cd-d5a3e1609545",
+          "result": "proof/kane/apache-core-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "1e6667cc-997c-4ab1-a891-576806f401e1",
+          "result": "proof/kane/apache-core-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "fe0b3da9-784d-4ff3-ae01-a6a6591e4e9d",
+          "result": "proof/kane/apache-core-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "reason": "Maximum steps exceeded (17/16)",
+      "finishedAt": "2026-11-22T15:05:53.977Z"
+    },
+    {
+      "id": "nullprogram-reflow",
+      "url": "https://nullprogram.com/blog/2016/11/17/",
+      "persona": "low-vision",
+      "category": "media",
+      "task": "At 320 CSS pixels, read the passage beginning “echo -ne '\\x31\\xFF\\xB8\\x3C\\x00\\x00\\x00\\x0F\\x05' >> true”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "fixed",
+      "startedAt": "2026-11-22T15:01:39.026Z",
+      "attemptId": "54825b10-0975-473f-bf29-732034e5244f",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "369f3837-a6c7-4b5e-bb0a-d975ac08b4e3",
+          "result": "proof/kane/nullprogram-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "c4dd0c0e-bd90-4d6a-917f-12de14adde81",
+          "result": "proof/kane/nullprogram-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "067d24f5-232c-4616-956e-fcd3f47259dc",
+          "result": "proof/kane/nullprogram-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T15:05:06.050Z"
+    },
+    {
+      "id": "iana-protocols-reflow",
+      "url": "https://www.iana.org/protocols",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “ANCP Port Management Functions”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T15:05:07.594Z",
+      "attemptId": "90a8eaf0-1b30-4354-ab97-41e268867055",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "adb1f0e6-ac76-44e5-bfbf-e8d39f49156a",
+          "result": "proof/kane/iana-protocols-reflow/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "The task outcome checks did not pass in the recorded browser.",
+      "finishedAt": "2026-11-22T15:06:08.709Z"
+    },
+    {
+      "id": "beepb00p-reflow",
+      "url": "https://beepb00p.xyz/annotating.html",
+      "persona": "low-vision",
+      "category": "media",
+      "task": "At 320 CSS pixels, read the passage beginning “org-emms: org-mode link handler to start playback at certain timestamp, could”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T15:05:55.559Z",
+      "attemptId": "71a7f6c6-cb00-46ac-9c33-7c4766251985",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "568d5806-d9e1-4e04-95de-a3f19bcdf5a0",
+          "result": "proof/kane/beepb00p-reflow/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "Maximum steps exceeded (17/16)",
+      "finishedAt": "2026-11-22T15:09:30.210Z"
+    },
+    {
+      "id": "unicode-standard-reflow",
+      "url": "https://www.unicode.org/standard/standard.html",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “Tech Site | Site Map | Search”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "fixed",
+      "startedAt": "2026-11-22T15:06:10.280Z",
+      "attemptId": "86242bd8-78a4-4980-8663-256af9f9f225",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "c2ffd38a-25c1-4c2e-a1ba-038995c281fd",
+          "result": "proof/kane/unicode-standard-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "40d95c87-85fa-46e5-a225-98c1de0d5c4c",
+          "result": "proof/kane/unicode-standard-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "c7f3783a-11cb-483c-a120-5b385f7b671e",
+          "result": "proof/kane/unicode-standard-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T15:09:04.415Z"
+    },
+    {
+      "id": "python-tutorial-reflow",
+      "url": "https://docs.python.org/3/tutorial/introduction.html",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “>>> s = 'First line.\\nSecond line.' # \\n means newline >>>”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T15:09:05.980Z",
+      "attemptId": "48d9e3af-5025-4af4-9530-550a99993dbf",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "007ca52b-9c44-44e7-9ad6-6666cbe9253e",
+          "result": "proof/kane/python-tutorial-reflow/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "The run did not produce a validated Kane evidence pack.",
+      "finishedAt": "2026-11-22T15:13:25.884Z"
+    },
+    {
+      "id": "json-org-reflow",
+      "url": "https://www.json.org/json-en.html",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “character '0020' . '10FFFF' - '\"' - '\\' '\\' escape”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "fixed",
+      "startedAt": "2026-11-22T15:09:31.780Z",
+      "attemptId": "0fa08e56-455b-465c-8136-295eb7ade779",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "958472fb-1e46-4b72-9362-607e7279835e",
+          "result": "proof/kane/json-org-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "09eb1f7d-1193-42dc-836a-37d12b02df0b",
+          "result": "proof/kane/json-org-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "78b04afa-fc98-4b0d-a235-492f5e6024d4",
+          "result": "proof/kane/json-org-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T15:14:25.306Z"
+    },
+    {
+      "id": "yaml-org-reflow",
+      "url": "https://yaml.org/spec/1.2.2/",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “{ \"A null\": null, \"Also a null\": null, \"Not a null\":”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T15:13:27.454Z",
+      "attemptId": "98b24e82-f846-4fc5-801c-6fdda3fedc17",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "79aee301-3eec-48e0-a7de-3ecc0b82a078",
+          "result": "proof/kane/yaml-org-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "983760e3-11b6-4c7f-945e-0a11abf5014f",
+          "result": "proof/kane/yaml-org-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "562ce53d-5a10-4438-a7a6-efff6bd22068",
+          "result": "proof/kane/yaml-org-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "reason": "The task outcome checks did not pass in the recorded browser.",
+      "finishedAt": "2026-11-22T15:24:21.409Z"
+    },
+    {
+      "id": "toml-io-reflow",
+      "url": "https://toml.io/en/v1.0.0",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “# On a Unix system, the above multi-line string will most”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T15:14:26.878Z",
+      "attemptId": "2031eccd-f3b5-41ea-b4ec-1ec242818a93",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "b376b3cc-53bc-4b22-abae-97d2fb120d85",
+          "result": "proof/kane/toml-io-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "402448c5-51d5-406d-b635-754bc489f6ec",
+          "result": "proof/kane/toml-io-reflow/heldout-v2/control/result.json"
+        }
+      ],
+      "reason": "The declared outcome held despite the failed checkpoint.",
+      "finishedAt": "2026-11-22T15:17:02.469Z"
+    },
+    {
+      "id": "commonmark-reflow",
+      "url": "https://commonmark.org/help/",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “# code block print '3 backticks or' print 'indent 4 spaces'”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "no barrier",
+      "startedAt": "2026-11-22T15:17:04.047Z",
+      "attemptId": "b49b4f29-6c43-40f8-8df2-2293ddca9e3f",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "65deb014-40c4-4593-a4b0-b0e39f6b378a",
+          "result": "proof/kane/commonmark-reflow/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "Objective completed",
+      "finishedAt": "2026-11-22T15:17:48.716Z"
+    },
+    {
+      "id": "whatwg-dom-reflow",
+      "url": "https://dom.spec.whatwg.org/",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “If interface is an ASCII case-insensitive match for any of the”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T15:17:50.266Z",
+      "attemptId": "314da56d-d920-4394-9e4e-50c7e8b32bc4",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "d33d6f83-912f-47a6-8217-a9c08372d667",
+          "result": "proof/kane/whatwg-dom-reflow/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "The run did not produce a validated Kane evidence pack.",
+      "finishedAt": "2026-11-22T15:22:13.455Z"
+    },
+    {
+      "id": "go-doc-reflow",
+      "url": "https://go.dev/doc/effective_go",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “// Allocate the top-level slice, the same as before. picture :=”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "fixed",
+      "startedAt": "2026-11-22T15:22:15.034Z",
+      "attemptId": "e7f0edc1-90ce-4add-a144-af638640cfbd",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "4019a447-a62c-4231-9e75-dc0de126a000",
+          "result": "proof/kane/go-doc-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "8f57b6d1-c998-4265-a932-fb1707ef5cd7",
+          "result": "proof/kane/go-doc-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "3d9e0e3a-5caf-4ca2-9268-f58699eb8e7c",
+          "result": "proof/kane/go-doc-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T15:27:10.629Z"
+    },
+    {
+      "id": "rust-book-reflow",
+      "url": "https://doc.rust-lang.org/book/ch01-02-hello-world.html",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “> dir /B %= the /B option says to only show”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "fixed",
+      "startedAt": "2026-11-22T15:24:22.975Z",
+      "attemptId": "3fdbde10-0061-46ec-a0cb-1bacfe823877",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "e4ff09da-ae37-4e6b-b609-a5a30ed3e76e",
+          "result": "proof/kane/rust-book-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "fa72607f-1dab-4294-b288-def12605c76c",
+          "result": "proof/kane/rust-book-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "b04ddb19-6c75-405e-b78b-2f18d11b124e",
+          "result": "proof/kane/rust-book-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T15:27:54.041Z"
+    },
+    {
+      "id": "dwm-suckless-reflow",
+      "url": "https://dwm.suckless.org/",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “https://cannibalcandy.wordpress.com/2012/04/26/installing-and-configuring-dwm-under-ubuntu/”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T15:27:12.200Z",
+      "attemptId": "17b1be15-e6f4-4fef-82c6-66e10a90e04a",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "f6feeae5-e9c7-4efd-ab71-8fc2c285cbd9",
+          "result": "proof/kane/dwm-suckless-reflow/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "Recorded browser access failed: Browser navigation error",
+      "finishedAt": "2026-11-22T15:28:30.000Z"
+    },
+    {
+      "id": "racket-guide-reflow",
+      "url": "https://docs.racket-lang.org/guide/intro.html",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “If you’ve used DrRacket before with something other than a program”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "Kane error",
+      "startedAt": "2026-11-22T15:27:55.609Z",
+      "attemptId": "ff529e03-b549-4bec-a4a4-816eb1e45337",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "1dcc1b89-19a6-4b46-a341-73ea8fb2c308",
+          "result": "proof/kane/racket-guide-reflow/heldout-v2/before/result.json"
+        }
+      ],
+      "reason": "The task outcome checks did not pass in the recorded browser.",
+      "finishedAt": "2026-11-22T15:28:47.427Z"
+    },
+    {
+      "id": "elm-reflow",
+      "url": "https://guide.elm-lang.org/core_language.html",
+      "persona": "low-vision",
+      "category": "reference",
+      "task": "At 320 CSS pixels, read the passage beginning “> madlib animal adjective = | \"The ostentatious \" ++ animal”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "outcome": "fixed",
+      "startedAt": "2026-11-22T15:28:31.576Z",
+      "attemptId": "a3b31cf9-2ec1-4467-8813-8d3d835d2c83",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "2a8eb0a4-fbb3-42c1-af11-b39a952069a4",
+          "result": "proof/kane/elm-reflow/heldout-v2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "6a2c9caa-d27f-4bc0-a18a-d651b3593374",
+          "result": "proof/kane/elm-reflow/heldout-v2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "075dfc0d-46dc-47f2-966e-0f3a6cd38830",
+          "result": "proof/kane/elm-reflow/heldout-v2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T15:34:13.363Z"
+    }
+  ]
+}

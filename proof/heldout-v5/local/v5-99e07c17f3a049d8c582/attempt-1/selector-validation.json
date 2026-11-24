@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#wrapper",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "wrapper",
+          "classes": [],
+          "label": "english КОМПАНИЯ НОВОСТИ ПРОДУКТЫ ПРОЕКТЫ ВАКАНСИИ КОНТАКТЫ Новости 25.05.2026 Модель экономики Росс"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "#wrapper > #content",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "content",
+          "classes": [],
+          "label": "Новости 25.05.2026 Модель экономики России29.04.2026 Фабрика приложений10.03.2026 Интеграция поставл"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "field": "selector",
+      "selector": "#content > .main, #content > .main > .text",
+      "count": 2,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "main"
+          ],
+          "label": "Новости 25.05.2026 Модель экономики России29.04.2026 Фабрика приложений10.03.2026 Интеграция поставл"
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "text"
+          ],
+          "label": "Новости 25.05.2026 Модель экономики России29.04.2026 Фабрика приложений10.03.2026 Интеграция поставл"
+        }
+      ]
+    }
+  ]
+}

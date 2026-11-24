@@ -1,0 +1,17 @@
+{
+  "barrier": "Hover reveals the Resources submenu, but after keyboard focus and Arrow Down, Tab traversal misses the Stack Ads link.",
+  "rules": [
+    {
+      "selector": "#main-navigation > ul > li.nav__item > button[aria-controls=\"submenu-resources\"]",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseover"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#main-navigation > ul > li.nav__item:has(> #submenu-resources)",
+      "items": "button[aria-controls=\"submenu-resources\"], #submenu-resources a[href]",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ]
+}

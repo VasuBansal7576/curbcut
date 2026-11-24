@@ -1,0 +1,43 @@
+{
+  "id": "buffbuff-com-tr",
+  "url": "https://buffbuff.com/",
+  "persona": "keyboard-only",
+  "task": "Use Tab and Enter to reach and activate “****”. Verify its content becomes visible.",
+  "controlTask": "Click “****” and verify its content becomes visible.",
+  "observedSelector": "#badge-slow-compensation-point > span > span",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#header > div > div:nth-of-type(2) > div:nth-of-type(4) > div"
+    }
+  ],
+  "minimumTabPresses": 2,
+  "probe": {
+    "action": "click"
+  },
+  "site": "buffbuff.com",
+  "match": "https://buffbuff.com/",
+  "barrier": "The replay targets the inner points badge span, which has tabIndex -1. The surrounding points entry is already a button in the tab order.",
+  "rules": [
+    {
+      "selector": "#badge-slow-compensation-point > span > span",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#badge-slow-compensation-point > span > span",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#badge-slow-compensation-point > span > span",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#badge-slow-compensation-point > span > span",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,106 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-df3468e47d73-7e1b1979",
+    "url": "https://asm.org/",
+    "persona": "keyboard-only",
+    "task": "Open “Who We Are” from keyboard focus or with Arrow Down and follow “About ASM”. Confirm the public destination /about-asm.",
+    "controlTask": "Hover “Who We Are”, click “About ASM” and confirm /about-asm.",
+    "observedSelector": "#header > header > nav:nth-of-type(2) > ul > li:nth-of-type(1) > button",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/about-asm"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#header > header > nav:nth-of-type(2) > ul > li:nth-of-type(1)",
+      "#who_we_are"
+    ],
+    "journey": [
+      {
+        "selector": "#header > header > nav:nth-of-type(2) > ul > li:nth-of-type(1) > button",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#header > header > nav:nth-of-type(2) > ul > li:nth-of-type(1) > button",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#who_we_are > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "unresolved",
+  "reason": "Live selector validation failed. selector \"#header ul.header-nav-menu > li.header-nav-item:focus-within > #who_we_are\": no matches",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-df3468e47d73-7e1b1979/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 2 did not receive the expected keyboard focus.",
+      "file": "proof/heldout-v5/local/v5-df3468e47d73-7e1b1979/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "fail",
+      "reason": "Journey step 2 did not receive the expected keyboard focus.",
+      "file": "proof/heldout-v5/local/v5-df3468e47d73-7e1b1979/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-2/after",
+      "persona": "keyboard-only",
+      "iteration": 2,
+      "status": "fail",
+      "reason": "Journey step 2 did not receive the expected keyboard focus.",
+      "file": "proof/heldout-v5/local/v5-df3468e47d73-7e1b1979/attempt-2/after.json"
+    },
+    {
+      "name": "attempt-3/after",
+      "persona": "keyboard-only",
+      "iteration": 3,
+      "status": "fail",
+      "reason": "Journey step 2 did not receive the expected keyboard focus.",
+      "file": "proof/heldout-v5/local/v5-df3468e47d73-7e1b1979/attempt-3/after.json"
+    },
+    {
+      "name": "attempt-4/after",
+      "persona": "keyboard-only",
+      "iteration": 4,
+      "status": "fail",
+      "reason": "Journey step 1 could not be seen while focused: focus moved.",
+      "file": "proof/heldout-v5/local/v5-df3468e47d73-7e1b1979/attempt-4/after.json"
+    },
+    {
+      "name": "proposal",
+      "iteration": 5,
+      "status": "rejected",
+      "reason": "Live selector validation failed. selector \"#header ul.header-nav-menu > li.header-nav-item:focus-within > #who_we_are\": no matches",
+      "file": "proof/heldout-v5/local/v5-df3468e47d73-7e1b1979/attempt-5/rejection.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

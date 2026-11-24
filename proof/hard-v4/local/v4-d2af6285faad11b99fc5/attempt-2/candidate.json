@@ -1,0 +1,59 @@
+{
+  "id": "v4-d2af6285faad11b99fc5",
+  "url": "https://www.ukrainealarm.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Встановіть застосунок Повітряна тривога, щоб миттєво отримувати сповіщення системи цивільної оборони.” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Встановіть застосунок Повітряна тривога, щоб миттєво отримувати сповіщення системи цивільної оборони.” at normal width.",
+  "observedSelector": "#comp-ir225ikb > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#comp-ir225ikb > p",
+      "equals": "Встановіть застосунок Повітряна тривога, щоб миттєво отримувати сповіщення системи цивільної оборони."
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#comp-ir225ikb > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.ukrainealarm.com",
+  "match": "https://www.ukrainealarm.com/",
+  "barrier": "At 320 CSS pixels, the passage sits in a desktop-width layout. Its 650-pixel text box starts 312 pixels left of the viewport and extends 18 pixels past the right edge, so horizontal clipping cuts off the text.",
+  "rules": [
+    {
+      "selector": "div.pTvOx2.wixui-page",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "div.Ak0vpt",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "100%",
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#comp-ir225ikb",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,135 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-ccd5ecc06c3c85e70808",
+    "url": "https://polyfill-fastly.io/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “https://polyfill-fastly.io/v3/polyfill.min.js” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “https://polyfill-fastly.io/v3/polyfill.min.js” at normal width.",
+    "observedSelector": "main > form > label:nth-of-type(1) > output > pre",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "main > form > label:nth-of-type(1) > output > pre",
+        "equals": "https://polyfill-fastly.io/v3/polyfill.min.js"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "main > form > label:nth-of-type(1) > output > pre"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    }
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "The target does not fit the visible width.",
+    "geometry": {
+      "left": 32,
+      "right": 411.296875,
+      "width": 320,
+      "scrollX": 0,
+      "clientWidth": 288,
+      "scrollWidth": 395,
+      "inView": true,
+      "fits": false
+    }
+  },
+  "registeredControl": {
+    "geometry": {
+      "left": 95,
+      "right": 474.296875,
+      "width": 1280,
+      "scrollX": 0,
+      "clientWidth": 1130,
+      "scrollWidth": 1130,
+      "inView": true,
+      "fits": true
+    },
+    "url": "https://polyfill-fastly.io/",
+    "checks": [
+      true,
+      true
+    ],
+    "status": "pass",
+    "reason": "Checked the declared outcome after the read action."
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "Checked the declared outcome after the read action.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/hard-v4/local/v4-ccd5ecc06c3c85e70808/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "low-vision",
+      "status": "fail",
+      "reason": "The target does not fit the visible width.",
+      "file": "proof/hard-v4/local/v4-ccd5ecc06c3c85e70808/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "low-vision",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/hard-v4/local/v4-ccd5ecc06c3c85e70808/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/hard-v4/local/v4-ccd5ecc06c3c85e70808/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v4-ccd5ecc06c3c85e70808",
+    "url": "https://polyfill-fastly.io/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “https://polyfill-fastly.io/v3/polyfill.min.js” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “https://polyfill-fastly.io/v3/polyfill.min.js” at normal width.",
+    "observedSelector": "main > form > label:nth-of-type(1) > output > pre",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "main > form > label:nth-of-type(1) > output > pre",
+        "equals": "https://polyfill-fastly.io/v3/polyfill.min.js"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "main > form > label:nth-of-type(1) > output > pre"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "polyfill-fastly.io",
+    "match": "https://polyfill-fastly.io/",
+    "barrier": "At 320 CSS pixels, the bundle URL uses white-space: pre, so it cannot wrap. The passage requires 395 pixels inside a 288-pixel container, forcing horizontal scrolling.",
+    "rules": [
+      {
+        "selector": "#polyfill-bundle-url",
+        "action": "injectCSS",
+        "value": {
+          "white-space": "pre-wrap",
+          "overflow-wrap": "anywhere"
+        }
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/hard-v4/local/v4-ccd5ecc06c3c85e70808/attempt-1"
+}

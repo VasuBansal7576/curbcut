@@ -1,0 +1,20 @@
+{
+  "status": "inconclusive",
+  "runId": "1a40ae61-5275-4592-911a-5f66be0b6feb",
+  "reason": "Screenshot failed: TargetClosedError: screenshot: Target page, context or browser has been closed",
+  "summary": "The page itself loaded, but the browser page or its automation context was closed during the run. As a result, the screenshot and final on-page verification could not be performed.\nCheck the browser-runner lifecycle and screenshot capture timing, then rerun the task in a stable browser context.",
+  "resultCode": 510,
+  "reasonCode": "infra_error.screenshot_failed",
+  "credits": 8.8747,
+  "exitCode": 1,
+  "steps": [
+    "navigate: Navigate to https://www.colorhexa.com/ff6600"
+  ],
+  "objective": "Use Tab, Shift+Tab, arrow keys, Page Up, Page Down, Home, End, text entry, Space and Enter only. Remain on this public site. Stop before sign-in, registration or payment. Never change fixture settings. Use only visible controls. Verify the final result on the page. Open the color picker from the swatch next to the search field. Press Tab through at least three controls unless the swatch gets focus sooner. If it gets focus, press Enter. Verify the color spectrum and hue slider appear.",
+  "evidencePack": "proof/kane/report-3aaf44ffc368c621d0/2026-11-22T10-13-06.149Z/attempt-1/after/ed27f657-7f78-4dcb-ad40-6bb206fc4c18.evidence",
+  "evidenceValid": true,
+  "integrity": "Could not confirm a single recorded page with the required persona and repair state.",
+  "runner": "kane",
+  "inspection": null,
+  "video": "proof/kane/report-3aaf44ffc368c621d0/2026-11-22T10-13-06.149Z/attempt-1/after/recording.mp4"
+}

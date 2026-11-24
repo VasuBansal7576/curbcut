@@ -1,0 +1,9 @@
+{
+  "barrier": "Pointer hover opens the «محصولات» submenu, but focusing the link and pressing Arrow Down leaves «کاتالوگ محصولات» unavailable to the keyboard.",
+  "rules": [
+    {
+      "selector": "#primary-navigation > ul > li:nth-of-type(2)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

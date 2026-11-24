@@ -1,0 +1,1 @@
+{"barrier":"Keyboard focus lands on Cookie settings instead of the open Privacy dialog, so the Escape step never reaches the dialog.","rules":[{"selector":"#onetrust-banner-sdk > div[role=\"dialog\"]","action":"makeFocusable"},{"action":"dialogBehavior","dialog":"#onetrust-banner-sdk","close":"#onetrust-close-btn-container > button"}]}

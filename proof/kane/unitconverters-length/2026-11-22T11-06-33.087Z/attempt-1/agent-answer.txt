@@ -1,0 +1,7 @@
+{
+  "barrier": "The Length converter lays out From and To in side-by-side table cells, placing the To field’s right edge at 351 pixels in a 320-pixel viewport.",
+  "rules": [
+    {"selector":"table","action":"injectCSS","value":{"display":"block"}},
+    {"selector":"td","action":"injectCSS","value":{"display":"block"}}
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "v5-a2e671fad9cf-e4ff77de",
+  "url": "https://ycharts.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, hover “SOLUTIONS”, click “For Advisors” and confirm /solutions/advisors/.",
+  "controlTask": "Hover “SOLUTIONS”, click “For Advisors” and confirm /solutions/advisors/.",
+  "observedSelector": "#menu-main-navigation > div:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/solutions/advisors/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menu-main-navigation > div:nth-of-type(1)",
+    "#menu-main-navigation > div:nth-of-type(1) > div"
+  ],
+  "journey": [
+    {
+      "selector": "#menu-main-navigation > div:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-main-navigation > div:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-main-navigation > div:nth-of-type(1) > div > a:nth-of-type(1)",
+      "action": "activate"
+    }
+  ],
+  "site": "ycharts.com",
+  "match": "https://ycharts.com/",
+  "barrier": "At 320 CSS pixels, #menu-main-navigation is display:none, so the Solutions trigger has no rendered box and focus stays on #app. For Advisors is inside the collapsed Solutions dropdown.",
+  "rules": [
+    {
+      "selector": "header.header.header-marketing > div.header-container.container",
+      "action": "injectCSS",
+      "value": {
+        "flex-wrap": "wrap",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "#menu-main-navigation",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "flex-wrap": "wrap",
+        "max-width": "100%",
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "#menu-main-navigation > div:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "selector": "#menu-main-navigation > div:nth-of-type(1) > a",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#menu-main-navigation > div:nth-of-type(1)",
+      "items": "#menu-main-navigation > div:nth-of-type(1) > a.dropdown-toggle, #menu-main-navigation > div:nth-of-type(1) > div.dropdown-menu > a.dropdown-item",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

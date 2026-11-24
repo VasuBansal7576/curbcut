@@ -1,0 +1,24 @@
+{
+  "barrier": "At 320 CSS pixels, the Companies submenu link fits horizontally when revealed, but its click times out inside the navigation container, which clips overflow.",
+  "rules": [
+    {
+      "selector": "div._35850eeef85c22c1-wrapper",
+      "action": "injectCSS",
+      "value": {"display": "block"}
+    },
+    {
+      "selector": "ul._35850eeef85c22c1-primaryNavigationList",
+      "action": "injectCSS",
+      "value": {"display": "block"}
+    },
+    {
+      "selector": "nav._35850eeef85c22c1-navigation",
+      "action": "injectCSS",
+      "value": {"height": "auto", "max-height": "none"}
+    },
+    {
+      "selector": "#nav > header > div:nth-of-type(3) > nav > ul > li:nth-of-type(2)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "barrier": "Hovering Products reveals its submenu, but keyboard focus and Arrow Down do not reliably keep it visible while focus moves to the Under Construction Maintenance Mode link.",
+  "rules": [
+    {
+      "selector": "nav.mega-menu-nav > ul.mega-menu > li.mega-menu-item:first-of-type",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

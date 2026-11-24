@@ -1,0 +1,205 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "body.lang_en.front, #page, #main",
+      "count": 3,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "body",
+          "classes": [
+            "lang_en",
+            "front",
+            "not-logged-in",
+            "page-home"
+          ],
+          "label": "Legacy of the Sith - Available Now! Your choices will determine the fate of the galaxy.... LEARN MOR"
+        },
+        {
+          "tag": "div",
+          "id": "page",
+          "classes": [
+            "front_page"
+          ],
+          "label": "Legacy of the Sith - Available Now! Your choices will determine the fate of the galaxy.... LEARN MOR"
+        },
+        {
+          "tag": "div",
+          "id": "main",
+          "classes": [],
+          "label": "Legacy of the Sith - Available Now! Your choices will determine the fate of the galaxy.... LEARN MOR"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "body.front #middle:has(#newMedia)",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "middle",
+          "classes": [],
+          "label": "About My SWTOR Store Community Support News Holonet Media Game Overview Game Setting Digital Expansi"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "field": "selector",
+      "selector": "div.pageContainer:has(#newMedia), #mainContent, #newsBlock, #newMedia, #newMedia > .newsItem.videoItem",
+      "count": 6,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "pageContainer"
+          ],
+          "label": "Latest News Go to News RSS The final boss of the Children of Nul Operation is now available on the P"
+        },
+        {
+          "tag": "div",
+          "id": "mainContent",
+          "classes": [],
+          "label": "Latest News Go to News RSS The final boss of the Children of Nul Operation is now available on the P"
+        },
+        {
+          "tag": "div",
+          "id": "newsBlock",
+          "classes": [
+            "newsList"
+          ],
+          "label": "Latest News Go to News RSS The final boss of the Children of Nul Operation is now available on the P"
+        },
+        {
+          "tag": "div",
+          "id": "newMedia",
+          "classes": [
+            "section"
+          ],
+          "label": "New Media Items Go to Media RSS Latest Videos 11.12.2026 Darth Jadus has stolen the key to Darth Nul"
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "newsItem",
+            "videoItem",
+            "new"
+          ],
+          "label": "11.12.2026 Darth Jadus has stolen the key to Darth Nul’s masterworks, and the race to the forgotten "
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "field": "selector",
+      "selector": "#newMedia > .newsItem.videoItem > .newsBlurb, #newMedia > .newsItem.videoItem > .newsBlurb > .newsDesc",
+      "count": 4,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "newsBlurb"
+          ],
+          "label": "11.12.2026 Darth Jadus has stolen the key to Darth Nul’s masterworks, and the race to the forgotten "
+        },
+        {
+          "tag": "span",
+          "classes": [
+            "newsDesc"
+          ],
+          "label": "11.12.2026 Darth Jadus has stolen the key to Darth Nul’s masterworks, and the race to the forgotten "
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "newsBlurb"
+          ],
+          "label": "04.21.2026 Discover more about Darth Nul as you explore her research vessel, The Enigma. Read more"
+        },
+        {
+          "tag": "span",
+          "classes": [
+            "newsDesc"
+          ],
+          "label": "04.21.2026 Discover more about Darth Nul as you explore her research vessel, The Enigma. Read more"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "field": "selector",
+      "selector": "#newMedia > .newsItem.videoItem > .newsBlurb > .newsDesc > p",
+      "count": 4,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "p",
+          "classes": [],
+          "label": "11.12.2026 Darth Jadus has stolen the key to Darth Nul’s masterworks, and the race to the forgotten "
+        },
+        {
+          "tag": "p",
+          "classes": [],
+          "label": "Read more"
+        },
+        {
+          "tag": "p",
+          "classes": [],
+          "label": "04.21.2026 Discover more about Darth Nul as you explore her research vessel, The Enigma."
+        },
+        {
+          "tag": "p",
+          "classes": [],
+          "label": "Read more"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "field": "selector",
+      "selector": "#newMedia > .newsItem.videoItem > .newsBlurb > .videoThumb, #newMedia img.newsThumb",
+      "count": 4,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "span",
+          "classes": [
+            "thumb",
+            "videoThumb"
+          ],
+          "label": ""
+        },
+        {
+          "tag": "img",
+          "classes": [
+            "newsThumb"
+          ],
+          "label": ""
+        },
+        {
+          "tag": "span",
+          "classes": [
+            "thumb",
+            "videoThumb"
+          ],
+          "label": ""
+        },
+        {
+          "tag": "img",
+          "classes": [
+            "newsThumb"
+          ],
+          "label": ""
+        }
+      ]
+    }
+  ]
+}

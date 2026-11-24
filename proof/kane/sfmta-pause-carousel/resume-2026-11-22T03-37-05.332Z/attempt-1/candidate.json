@@ -1,0 +1,29 @@
+{
+  "id": "sfmta-pause-carousel",
+  "url": "https://www.sfmta.com/",
+  "persona": "keyboard-only",
+  "task": "Assert that the visible Play/Pause control for the homepage carousel is keyboard focusable. Activate it with Tab and Enter to pause the carousel. Verify the control reports aria-pressed false.",
+  "controlTask": "Click Play/Pause on the rotating homepage carousel to pause it. Verify the control reports aria-pressed false.",
+  "observedSelector": "span.play_pause",
+  "successSelector": "span.play_pause[aria-pressed=\"false\"]",
+  "site": "www.sfmta.com",
+  "match": "https://www.sfmta.com/",
+  "barrier": "The visible carousel Play/Pause control is a span with a button role and tabIndex -1, so Tab skips it.",
+  "rules": [
+    {
+      "selector": "span.play_pause",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "span.play_pause",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "span.play_pause",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,117 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-0c04b0e536e8-76f66dec",
+    "url": "https://www.hillspet.com/",
+    "persona": "keyboard-only",
+    "task": "Expand “Shop” with the keyboard and read “Food & Environmental Sensitivities”.",
+    "controlTask": "Click “Shop” and read “Food & Environmental Sensitivities”.",
+    "observedSelector": "#container-4cb7125efe > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > nav > div > div > div > div > ul > li:nth-of-type(1) > button",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#shop-sublist-desktop > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > ul > li:nth-of-type(3)",
+        "equals": "Food & Environmental Sensitivities"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#shop-sublist-desktop"
+    ],
+    "journey": [
+      {
+        "selector": "#container-4cb7125efe > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > nav > div > div > div > div > ul > li:nth-of-type(1) > button",
+        "action": "activate"
+      },
+      {
+        "selector": "#shop-sublist-desktop > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > ul > li:nth-of-type(3)",
+        "action": "observe"
+      }
+    ]
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "Journey step 2 was unavailable after the prior step.",
+    "steps": [
+      {
+        "selector": "#container-4cb7125efe > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > nav > div > div > div > div > ul > li:nth-of-type(1) > button",
+        "action": "activate",
+        "traversal": {
+          "reached": true,
+          "tabs": 5
+        }
+      },
+      {
+        "selector": "#shop-sublist-desktop > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > ul > li:nth-of-type(3)",
+        "action": "observe"
+      }
+    ],
+    "url": "https://www.hillspet.com/"
+  },
+  "registeredControl": {
+    "status": "pass",
+    "reason": "The complete journey reached the declared outcome.",
+    "steps": [
+      {
+        "selector": "#container-4cb7125efe > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > nav > div > div > div > div > ul > li:nth-of-type(1) > button",
+        "action": "activate"
+      },
+      {
+        "selector": "#shop-sublist-desktop > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > ul > li:nth-of-type(3)",
+        "action": "observe"
+      }
+    ],
+    "url": "https://www.hillspet.com/",
+    "checks": [
+      true
+    ]
+  },
+  "runner": "playwright",
+  "status": "unresolved",
+  "reason": "Journey step 2 was unavailable after the prior step.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-0c04b0e536e8-76f66dec/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 2 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-0c04b0e536e8-76f66dec/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "fail",
+      "reason": "Journey step 2 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-0c04b0e536e8-76f66dec/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-2/after",
+      "persona": "keyboard-only",
+      "iteration": 2,
+      "status": "fail",
+      "reason": "Journey step 2 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-0c04b0e536e8-76f66dec/attempt-2/after.json"
+    },
+    {
+      "name": "attempt-3/after",
+      "persona": "keyboard-only",
+      "iteration": 3,
+      "status": "fail",
+      "reason": "Journey step 2 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-0c04b0e536e8-76f66dec/attempt-3/after.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

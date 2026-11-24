@@ -1,0 +1,52 @@
+{
+  "id": "v4-a2c44b1b92d5-916d2c8a",
+  "url": "https://raptortech.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Products” from keyboard focus or with Arrow Down and follow “Emergency Alerting & Management Emergency Management Software Prepare staff, coordinate response, and recover after a crisis.”. Confirm the public destination /protect-your-school/raptor-emergency-management-system/.",
+  "controlTask": "Hover “Products”, click “Emergency Alerting & Management Emergency Management Software Prepare staff, coordinate response, and recover after a crisis.” and confirm /protect-your-school/raptor-emergency-management-system/.",
+  "observedSelector": "#products-link",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/protect-your-school/raptor-emergency-management-system/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#primary-nav > li:nth-of-type(2)",
+    "#primary-nav > li:nth-of-type(2) > div"
+  ],
+  "journey": [
+    {
+      "selector": "#products-link",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#products-link",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#emergency-management > div > div:nth-of-type(1) > a:nth-of-type(1)",
+      "action": "activate"
+    }
+  ],
+  "site": "raptortech.com",
+  "match": "https://raptortech.com/",
+  "barrier": "The Products link is reachable by Tab, but the submenu opens on pointer hover and stays hidden during the keyboard journey, leaving the Emergency Alerting & Management link unavailable.",
+  "rules": [
+    {
+      "selector": "#primary-nav > li:nth-of-type(2)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

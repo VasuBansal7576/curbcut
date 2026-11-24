@@ -1,0 +1,72 @@
+{
+  "id": "v4-74e02400748b-ef29d192",
+  "url": "https://vietjack.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, hover “GIÁO ÁN - ĐỀ THI”, click “Giáo án, Bài giảng powerpoint lớp 1” and confirm /giao-an/giao-an-lop-1.jsp.",
+  "controlTask": "Hover “GIÁO ÁN - ĐỀ THI”, click “Giáo án, Bài giảng powerpoint lớp 1” and confirm /giao-an/giao-an-lop-1.jsp.",
+  "observedSelector": "#scroll-menu > ul > li:nth-of-type(14) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/giao-an/giao-an-lop-1.jsp"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#scroll-menu > ul > li:nth-of-type(14)",
+    "#scroll-menu > ul > li:nth-of-type(14) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#scroll-menu > ul > li:nth-of-type(14) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#scroll-menu > ul > li:nth-of-type(14) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#scroll-menu > ul > li:nth-of-type(14) > ul > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "vietjack.com",
+  "match": "https://vietjack.com/",
+  "barrier": "At 320 CSS pixels, focusing “GIÁO ÁN - ĐỀ THI” and pressing ArrowDown leaves its submenu at display: none, so the Grade 1 lesson plans link is unavailable.",
+  "rules": [
+    {
+      "selector": "ul.nav.navbar-nav",
+      "action": "injectCSS",
+      "value": {
+        "flex-wrap": "wrap",
+        "min-width": "0",
+        "white-space": "normal"
+      }
+    },
+    {
+      "selector": "#scroll-menu > ul > li:nth-of-type(14) > ul",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "white-space": "normal"
+      }
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#scroll-menu > ul > li:nth-of-type(14) > a",
+      "target": "#scroll-menu > ul > li:nth-of-type(14) > ul",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

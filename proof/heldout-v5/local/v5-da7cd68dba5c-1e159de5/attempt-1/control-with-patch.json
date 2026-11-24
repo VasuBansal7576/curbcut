@@ -1,0 +1,2074 @@
+{
+  "runner": "playwright",
+  "status": "pass",
+  "reason": "The complete journey reached the declared outcome.",
+  "steps": [
+    {
+      "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+      "action": "focus"
+    },
+    {
+      "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+      "action": "key",
+      "key": "ArrowDown"
+    },
+    {
+      "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(2) > div > a",
+      "action": "activate"
+    }
+  ],
+  "url": "https://www.infoblox.com/products/universal-ddi-management/",
+  "checks": [
+    true
+  ],
+  "snapshot": {
+    "url": "https://www.infoblox.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body.home.wp-singular",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+          "parent": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2)",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "Products",
+          "children": [],
+          "box": [
+            665,
+            61,
+            67,
+            22
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2)",
+          "parent": "div.nav-sections > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "nav-drop",
+            "aria-expanded": "false"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a",
+            "div.nav-mega-dropdown"
+          ],
+          "box": [
+            649,
+            61,
+            115,
+            22
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.nav-sections > ul:nth-of-type(1)",
+          "parent": "div.nav-sections",
+          "tag": "ul",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li",
+            "li.nav-drop",
+            "li.nav-drop",
+            "li.nav-drop.local-hide",
+            "li.nav-drop",
+            "li"
+          ],
+          "box": [
+            553,
+            61,
+            653,
+            22
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.nav-sections",
+          "parent": "div.nav-main",
+          "tag": "div",
+          "attributes": {
+            "class": "nav-sections"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul",
+            "div.nav-mobile-search",
+            "div.nav-mobile-bottom"
+          ],
+          "box": [
+            202,
+            61,
+            1004,
+            22
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.nav-main",
+          "parent": "#nav",
+          "tag": "div",
+          "attributes": {
+            "class": "nav-main"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.nav-hamburger",
+            "div.nav-brand",
+            "div.nav-sections",
+            "div.nav-search-container"
+          ],
+          "box": [
+            34,
+            40,
+            1212,
+            64
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#nav",
+          "tag": "nav",
+          "attributes": {
+            "id": "nav",
+            "aria-expanded": "false"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.nav-top",
+            "div.nav-main",
+            "div.nav-slide-panel"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            104
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > div",
+          "parent": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2)",
+          "tag": "div",
+          "attributes": {
+            "class": "nav-mega-dropdown"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "button.nav-mobile-return",
+            "div.mega-menu.block"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "fixed",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "98",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(2) > div > a",
+          "parent": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "aria-label": "Infoblox Universal DDI™ Management"
+          },
+          "hoverHandlers": [],
+          "text": "Infoblox Universal DDI™ Management",
+          "children": [
+            "span.arrow.content-arrow"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1)",
+          "parent": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2)",
+          "tag": "div",
+          "attributes": {
+            "class": "mm-item-primary"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2)",
+          "parent": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "mm-item"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.mm-item-primary"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "parent": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "mm-grid"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.mm-item",
+            "li.mm-item",
+            "li.mm-item",
+            "li.mm-item",
+            "li.mm-item",
+            "li.mm-item"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "mm-group"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "p.mm-section-label",
+            "ul.mm-grid"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "color: var(--wpex-hover-link-color,var(--wpex-link-color,var(--wpex-accent))); text-decoration: var(--wpex-hover-link-text-decoration);",
+          "conditions": []
+        },
+        {
+          "selector": "a:focus, a:hover",
+          "declarations": "color: rgb(16, 159, 218);",
+          "conditions": []
+        },
+        {
+          "selector": "a:hover b.c-rich-menu__block-title",
+          "declarations": "color: rgb(0, 189, 77);",
+          "conditions": []
+        },
+        {
+          "selector": "header nav a, header nav a:any-link, header nav a:hover",
+          "declarations": "color: currentcolor; text-decoration: none;",
+          "conditions": []
+        },
+        {
+          "selector": ".mega-menu .mm-item:not(.mm-item-heading):hover .content-arrow",
+          "declarations": "transform: translateX(4px);",
+          "conditions": [
+            "(hover: hover)"
+          ]
+        },
+        {
+          "selector": ".mega-menu .mm-item:not(.mm-item-heading):hover",
+          "declarations": "background: var(--color-offwhite-100);",
+          "conditions": [
+            "(hover: hover)"
+          ]
+        },
+        {
+          "selector": "header .nav-sections ul li:hover a, header .nav-sections ul li:hover .nav-label",
+          "declarations": "text-decoration-color: currentcolor;",
+          "conditions": [
+            "(hover: hover)"
+          ]
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2)",
+        "role": "listitem",
+        "name": "",
+        "state": "expanded false",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 649,
+        "width": 115
+      },
+      {
+        "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > div",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+        "role": "link",
+        "name": "Products",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 665,
+        "width": 67
+      },
+      {
+        "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(2) > div > a",
+        "role": "link",
+        "name": "Infoblox Universal DDI™ Management",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "ul",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 553,
+        "width": 653
+      },
+      {
+        "selector": "body.home.wp-singular",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html.html--js.html--loading-bg-images",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "noscript",
+        "role": "text",
+        "name": "<iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-F7RMF\"\n height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>",
+        "state": "",
+        "tag": "noscript",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "a.skip-to-content.wpex-absolute",
+        "role": "link",
+        "name": "Skip to content",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 8,
+        "width": 126
+      },
+      {
+        "selector": "span",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "span",
+        "tabIndex": -1,
+        "tabIndexAttribute": "-1",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#outer-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "iframe",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "iframe",
+        "tabIndex": -1,
+        "tabIndexAttribute": "-1",
+        "expanded": null,
+        "controls": null,
+        "hidden": true,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#top-bar-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#top-bar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "#top-bar-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1216,
+        "width": 0
+      },
+      {
+        "selector": "header.header-wrapper.nav-global",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.templatera_shortcode",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#nav-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.wpb_column.vc_column_container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.vc_column-inner.vc_custom_1789743083435",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.wpb_wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 15,
+        "width": 1250
+      },
+      {
+        "selector": "div.wpb_raw_code.wpb_raw_html",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 15,
+        "width": 1250
+      },
+      {
+        "selector": "#nav",
+        "role": "navigation",
+        "name": "",
+        "state": "expanded false",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.nav-top",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 34,
+        "width": 1212
+      },
+      {
+        "selector": "div.default-content-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 491,
+        "width": 739
+      },
+      {
+        "selector": "li.languages",
+        "role": "listitem",
+        "name": "",
+        "state": "expanded false",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 491,
+        "width": 114
+      },
+      {
+        "selector": "p.nav-top-drop",
+        "role": "text",
+        "name": "Portal Sign in",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1083,
+        "width": 147
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1123,
+        "width": 83
+      },
+      {
+        "selector": "p.nav-top-link",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 891,
+        "width": 79
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Pricing",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 1139,
+        "width": 51
+      },
+      {
+        "selector": "a.sl_norewrite",
+        "role": "link",
+        "name": "Learn more",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 751,
+        "width": 98
+      },
+      {
+        "selector": "li.nav-top-search-trigger",
+        "role": "listitem",
+        "name": "",
+        "state": "expanded false",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 971,
+        "width": 112
+      },
+      {
+        "selector": "div.nav-main",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 34,
+        "width": 1212
+      },
+      {
+        "selector": "div.nav-brand",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 50,
+        "width": 152
+      },
+      {
+        "selector": "div.nav-sections",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 202,
+        "width": 1004
+      },
+      {
+        "selector": "li.nav-drop",
+        "role": "listitem",
+        "name": "",
+        "state": "expanded false",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1005,
+        "width": 118
+      },
+      {
+        "selector": "li.nav-drop.local-hide",
+        "role": "listitem",
+        "name": "",
+        "state": "expanded false",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 880,
+        "width": 125
+      },
+      {
+        "selector": "#main",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tag": "main",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#ib-alert-bar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.ib-alert-bar-inner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 44,
+        "width": 1192
+      },
+      {
+        "selector": "div.ib-alert-icon",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 44,
+        "width": 329
+      },
+      {
+        "selector": "div.ib-alert-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 394,
+        "width": 802
+      },
+      {
+        "selector": "div.ib-alert-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 44,
+        "width": 1192
+      },
+      {
+        "selector": "div.ib-alert-title",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 394,
+        "width": 802
+      },
+      {
+        "selector": "#content-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "#primary",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "#content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "#single-blocks",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tag": "article",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "div.single-page-content.single-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "div.wpb-content-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "div.vc_section.home-hero",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": -7,
+        "width": 1294
+      },
+      {
+        "selector": "div.vc_row.wpb_row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.wpb_column.hero-content-mobile",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 29,
+        "width": 611
+      },
+      {
+        "selector": "div.vc_column-inner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "h1.vcex-heading.vcex-heading-plain",
+        "role": "heading",
+        "name": "Uniting Networking, Security and Cloud",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 44,
+        "width": 581
+      },
+      {
+        "selector": "div.wpb_text_column.wpex-max-w-100",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 44,
+        "width": 480
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Trusted by 6,000+ customers worldwide",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 44,
+        "width": 1192
+      },
+      {
+        "selector": "#watch-hero-video",
+        "role": "link",
+        "name": "Watch Video",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 44,
+        "width": 214
+      },
+      {
+        "selector": "div.wpb_column.home-hero-diamond-animation",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 640,
+        "width": 611
+      },
+      {
+        "selector": "div.wpex-video-bg-wrap.wpex-absolute",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 640,
+        "width": 611
+      },
+      {
+        "selector": "div.hero-diamond",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 674,
+        "width": 543
+      },
+      {
+        "selector": "div.diamond-border",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 674,
+        "width": 543
+      },
+      {
+        "selector": "#play-pause-button",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": "0",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1188,
+        "width": 48
+      },
+      {
+        "selector": "div.wpb_text_column.has-custom-color",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 29,
+        "width": 1222
+      },
+      {
+        "selector": "div.logo-river-slider",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 15,
+        "width": 1250
+      },
+      {
+        "selector": "#logo-river-pause-button",
+        "role": "text",
+        "name": "Pause logo river",
+        "state": "pressed false",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": "0",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1137,
+        "width": 48
+      },
+      {
+        "selector": "#logo-river-pause-icon",
+        "role": "img",
+        "name": "Pause logo river",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1137,
+        "width": 48
+      },
+      {
+        "selector": "div.customer-logos",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": -184,
+        "width": 6600
+      },
+      {
+        "selector": "div.logo-placeholder",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 3908,
+        "width": 132
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "BMW company logo",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 3908,
+        "width": 132
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+          "parent": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2)",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "Products",
+          "children": [],
+          "box": [
+            665,
+            61,
+            67,
+            22
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2)",
+          "parent": "div.nav-sections > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "nav-drop",
+            "aria-expanded": "true"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a",
+            "div.nav-mega-dropdown"
+          ],
+          "box": [
+            649,
+            61,
+            115,
+            22
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.nav-sections > ul:nth-of-type(1)",
+          "parent": "div.nav-sections",
+          "tag": "ul",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li",
+            "li.nav-drop",
+            "li.nav-drop",
+            "li.nav-drop.local-hide",
+            "li.nav-drop",
+            "li"
+          ],
+          "box": [
+            553,
+            61,
+            653,
+            22
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.nav-sections",
+          "parent": "div.nav-main",
+          "tag": "div",
+          "attributes": {
+            "class": "nav-sections"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul",
+            "div.nav-mobile-search",
+            "div.nav-mobile-bottom"
+          ],
+          "box": [
+            202,
+            61,
+            1004,
+            22
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.nav-main",
+          "parent": "#nav",
+          "tag": "div",
+          "attributes": {
+            "class": "nav-main"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.nav-hamburger",
+            "div.nav-brand",
+            "div.nav-sections",
+            "div.nav-search-container"
+          ],
+          "box": [
+            34,
+            40,
+            1212,
+            64
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#nav",
+          "tag": "nav",
+          "attributes": {
+            "id": "nav",
+            "aria-expanded": "false"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.nav-top",
+            "div.nav-main",
+            "div.nav-slide-panel"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            104
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > div",
+          "parent": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2)",
+          "tag": "div",
+          "attributes": {
+            "class": "nav-mega-dropdown"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "button.nav-mobile-return",
+            "div.mega-menu.block"
+          ],
+          "box": [
+            0,
+            104,
+            1280,
+            591
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "fixed",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "98",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(2) > div > a",
+          "parent": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "aria-label": "Infoblox Universal DDI™ Management"
+          },
+          "hoverHandlers": [],
+          "text": "Infoblox Universal DDI™ Management",
+          "children": [
+            "span.arrow.content-arrow"
+          ],
+          "box": [
+            244,
+            252,
+            227,
+            44
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1)",
+          "parent": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2)",
+          "tag": "div",
+          "attributes": {
+            "class": "mm-item-primary"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a"
+          ],
+          "box": [
+            244,
+            252,
+            227,
+            44
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(2)",
+          "parent": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "mm-item"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.mm-item-primary"
+          ],
+          "box": [
+            238,
+            244,
+            239,
+            60
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "parent": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "mm-grid"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.mm-item",
+            "li.mm-item",
+            "li.mm-item",
+            "li.mm-item",
+            "li.mm-item",
+            "li.mm-item"
+          ],
+          "box": [
+            244,
+            180,
+            227,
+            356
+          ],
+          "style": {
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.nav-sections > ul:nth-of-type(1) > li:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "mm-group"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "p.mm-section-label",
+            "ul.mm-grid"
+          ],
+          "box": [
+            244,
+            142,
+            227,
+            394
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "color: var(--wpex-hover-link-color,var(--wpex-link-color,var(--wpex-accent))); text-decoration: var(--wpex-hover-link-text-decoration);",
+          "conditions": []
+        },
+        {
+          "selector": "a:focus, a:hover",
+          "declarations": "color: rgb(16, 159, 218);",
+          "conditions": []
+        },
+        {
+          "selector": "a:hover b.c-rich-menu__block-title",
+          "declarations": "color: rgb(0, 189, 77);",
+          "conditions": []
+        },
+        {
+          "selector": "header nav a, header nav a:any-link, header nav a:hover",
+          "declarations": "color: currentcolor; text-decoration: none;",
+          "conditions": []
+        },
+        {
+          "selector": ".mega-menu .mm-item:not(.mm-item-heading):hover .content-arrow",
+          "declarations": "transform: translateX(4px);",
+          "conditions": [
+            "(hover: hover)"
+          ]
+        },
+        {
+          "selector": ".mega-menu .mm-item:not(.mm-item-heading):hover",
+          "declarations": "background: var(--color-offwhite-100);",
+          "conditions": [
+            "(hover: hover)"
+          ]
+        },
+        {
+          "selector": "header .nav-sections ul li:hover a, header .nav-sections ul li:hover .nav-label",
+          "declarations": "text-decoration-color: currentcolor;",
+          "conditions": [
+            "(hover: hover)"
+          ]
+        }
+      ]
+    }
+  }
+}

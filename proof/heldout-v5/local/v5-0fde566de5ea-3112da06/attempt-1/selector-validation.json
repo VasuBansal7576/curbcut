@@ -1,0 +1,116 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#home-platform [role=\"tablist\"][aria-labelledby=\"home-platform-title\"] > button[role=\"tab\"]",
+      "count": 3,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "id": "home-platform-tab-recovered",
+          "classes": [
+            "flex",
+            "h-14",
+            "shrink-0",
+            "items-center"
+          ],
+          "role": "tab",
+          "label": "Captured events"
+        },
+        {
+          "tag": "button",
+          "id": "home-platform-tab-quality",
+          "classes": [
+            "flex",
+            "h-14",
+            "shrink-0",
+            "items-center"
+          ],
+          "role": "tab",
+          "label": "Data quality"
+        },
+        {
+          "tag": "button",
+          "id": "home-platform-tab-consent",
+          "classes": [
+            "flex",
+            "h-14",
+            "shrink-0",
+            "items-center"
+          ],
+          "role": "tab",
+          "label": "Consent and EU delivery"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "container",
+      "selector": "#home-platform [role=\"tablist\"][aria-labelledby=\"home-platform-title\"]",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "flex",
+            "w-max",
+            "min-w-full",
+            "items-end"
+          ],
+          "role": "tablist",
+          "label": "Captured eventsData qualityConsent and EU delivery"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "items",
+      "selector": "#home-platform [role=\"tablist\"][aria-labelledby=\"home-platform-title\"] > button[role=\"tab\"]",
+      "scope": "#home-platform [role=\"tablist\"][aria-labelledby=\"home-platform-title\"]",
+      "count": 3,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "id": "home-platform-tab-recovered",
+          "classes": [
+            "flex",
+            "h-14",
+            "shrink-0",
+            "items-center"
+          ],
+          "role": "tab",
+          "label": "Captured events"
+        },
+        {
+          "tag": "button",
+          "id": "home-platform-tab-quality",
+          "classes": [
+            "flex",
+            "h-14",
+            "shrink-0",
+            "items-center"
+          ],
+          "role": "tab",
+          "label": "Data quality"
+        },
+        {
+          "tag": "button",
+          "id": "home-platform-tab-consent",
+          "classes": [
+            "flex",
+            "h-14",
+            "shrink-0",
+            "items-center"
+          ],
+          "role": "tab",
+          "label": "Consent and EU delivery"
+        }
+      ]
+    }
+  ]
+}

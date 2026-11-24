@@ -1,0 +1,17 @@
+{
+  "barrier": "The SOLUTIONS trigger is a span outside the Tab order, so keyboard users cannot focus it to open the hover submenu and reach Enterprise Solutions Catalog.",
+  "rules": [
+    {
+      "selector": "#nav > ul > li:nth-of-type(3) > span",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#nav > ul > li:nth-of-type(3) > span",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "selector": "#nav > ul > li:nth-of-type(3)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

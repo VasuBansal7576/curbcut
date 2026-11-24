@@ -1,0 +1,136 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-62c500cf7fa2effb9570",
+    "url": "https://www.mumuplayer.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search for Games” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search for Games” field and type test without submitting.",
+    "observedSelector": "#Sch",
+    "requiredName": "Search for Games",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#Sch",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    }
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "The expected usable role and name were absent from Reading view.",
+    "geometry": {
+      "left": 268.5,
+      "right": 800.609375,
+      "width": 1280,
+      "scrollX": 0,
+      "clientWidth": 446,
+      "scrollWidth": 446,
+      "inView": false,
+      "fits": true
+    },
+    "reader": {
+      "role": "textbox",
+      "name": "",
+      "state": "",
+      "editable": true,
+      "activatable": false
+    }
+  },
+  "registeredControl": {
+    "geometry": {
+      "left": 268.5,
+      "right": 800.609375,
+      "width": 1280,
+      "scrollX": 0,
+      "clientWidth": 446,
+      "scrollWidth": 446,
+      "inView": false,
+      "fits": true
+    },
+    "url": "https://www.mumuplayer.com/",
+    "checks": [
+      true
+    ],
+    "status": "pass",
+    "reason": "Checked the declared outcome after the type action."
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "Checked the declared outcome after the type action.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "Checked the declared outcome after the type action.",
+      "file": "proof/hard-v4/local/v4-62c500cf7fa2effb9570/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "screen-reader-view",
+      "status": "fail",
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "file": "proof/hard-v4/local/v4-62c500cf7fa2effb9570/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "screen-reader-view",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the type action.",
+      "file": "proof/hard-v4/local/v4-62c500cf7fa2effb9570/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the type action.",
+      "file": "proof/hard-v4/local/v4-62c500cf7fa2effb9570/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v4-62c500cf7fa2effb9570",
+    "url": "https://www.mumuplayer.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search for Games” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search for Games” field and type test without submitting.",
+    "observedSelector": "#Sch",
+    "requiredName": "Search for Games",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#Sch",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.mumuplayer.com",
+    "match": "https://www.mumuplayer.com/",
+    "barrier": "The search textbox #Sch has no accessible name, so it cannot be found as “Search for Games” in Reading view.",
+    "rules": [
+      {
+        "selector": "#Sch",
+        "action": "addLabel",
+        "value": "Search for Games"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/hard-v4/local/v4-62c500cf7fa2effb9570/attempt-1"
+}

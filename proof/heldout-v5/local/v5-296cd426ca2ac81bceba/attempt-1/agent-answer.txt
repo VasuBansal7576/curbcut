@@ -1,0 +1,52 @@
+{
+  "barrier": "At 320 CSS pixels, the fixed-width news layout places the 526-pixel-wide list beside the floated news image. The target row starts 378 pixels from the left edge, entirely outside the visible viewport.",
+  "rules": [
+    {
+      "selector": "div.news > div.inner, div.news > div.inner > div.content",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "div.news > div.inner > div.content > div.col.gz_news",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "div.col.gz_news > div.avator.fl, div.col.gz_news > ul.news_list",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.col.gz_news > div.avator.fl img",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "div.col.gz_news > ul.news_list > li.news_item, div.col.gz_news > ul.news_list > li.news_item > a",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box",
+        "height": "auto",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

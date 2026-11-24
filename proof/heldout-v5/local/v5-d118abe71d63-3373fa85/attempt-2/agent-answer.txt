@@ -1,0 +1,17 @@
+{
+  "barrier": "Keyboard traversal reached Careers, but the visibility check reported it clipped or off-screen. Both Resources for wrappers had overflow hidden and zero-sized boxes under the prior display: contents repair.",
+  "rules": [
+    {
+      "selector": "div.homepage-section.full-width:has(> div.resources-for), div.resources-for > div.resources-for__inner",
+      "action": "injectCSS",
+      "value": {"display": "block"}
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.resources-for__tabs[role=\"tablist\"]",
+      "items": "div.resources-for__tabs[role=\"tablist\"] > button[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

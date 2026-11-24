@@ -1,0 +1,110 @@
+{
+  "status": "inconclusive",
+  "runId": "f6feeae5-e9c7-4efd-ab71-8fc2c285cbd9",
+  "reason": "The exact URL repeatedly remained on a blank Chrome error page with no passage available to read.",
+  "summary": "The browser could not reach the article URL. Both navigation attempts ended on Chrome’s error page with no response from the website, so there was no passage to inspect.\nCheck the browser runner’s DNS, proxy, and outbound internet access, then rerun the check. If access works elsewhere, retry from a different network environment.\nevidence: network_failure: GET https://cannibalcandy.wordpress.com/2012/04/26/installing-and-configuring-dwm-under-ubuntu/ -> None FAILED (net::ERR\nevidence: network_failure: GET https://cannibalcandy.wordpress.com/2012/04/26/installing-and-configuring-dwm-under-ubuntu/ -> None FAILED (net::ERR",
+  "resultCode": 750,
+  "reasonCode": "assertion_error.step_not_achievable",
+  "credits": 13.587847500000002,
+  "exitCode": 1,
+  "steps": [
+    "navigate: Navigate to https://cannibalcandy.wordpress.com/2012/04/26/installing-and-config",
+    "navigate: PRIMARY: Navigate to https://cannibalcandy.wordpress.com/2012/04/26/installing-a",
+    "wait: PRIMARY: wait for the requested public article to load",
+    "wait: Waiting after attempting to load the requested public article"
+  ],
+  "objective": "Use the locked 320 CSS pixel viewport and scroll vertically only. Test the exact target and stop when the stated outcome is demonstrated. Stay on this public site. Do not sign in, register, pay, or interact with a CAPTCHA or access challenge. Leave fixture settings unchanged. Use visible controls only. At 320 CSS pixels, read the passage beginning “https://cannibalcandy.wordpress.com/2012/04/26/installing-and-configuring-dwm-under-ubuntu/”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "evidencePack": "proof/kane/dwm-suckless-reflow/heldout-v2/before/74f01b40-d8a5-4e76-902a-5bde2e5dc7b1.evidence",
+  "evidenceValid": true,
+  "integrity": "Recorded browser access failed: Browser navigation error",
+  "outcomeChecks": [
+    false,
+    false
+  ],
+  "runner": "kane",
+  "recordingTrail": [
+    {
+      "index": 0,
+      "events": [
+        {
+          "type": "document",
+          "documentId": "9153f8a4-34f0-4200-9e68-dad93ee5035b",
+          "url": "https://dwm.suckless.org/",
+          "targetMatches": false,
+          "top": true
+        }
+      ]
+    }
+  ],
+  "inspection": {
+    "readerVisible": false,
+    "width": 320,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "null/",
+    "width": 320,
+    "scrollWidth": 320,
+    "focused": "body",
+    "nodes": [
+      {
+        "selector": "body",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 304,
+        "right": 312,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "overflowX": "visible",
+        "minWidth": "0px",
+        "whiteSpace": "normal"
+      },
+      {
+        "selector": "html",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 320,
+        "right": 320,
+        "clientWidth": 320,
+        "scrollWidth": 320,
+        "overflowX": "visible",
+        "minWidth": "0px",
+        "whiteSpace": "normal"
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0,
+        "right": 0,
+        "clientWidth": 0,
+        "scrollWidth": 0,
+        "overflowX": "visible",
+        "minWidth": "0px",
+        "whiteSpace": "normal"
+      }
+    ]
+  },
+  "video": "proof/kane/dwm-suckless-reflow/heldout-v2/before/recording.mp4"
+}

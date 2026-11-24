@@ -1,0 +1,56 @@
+{
+  "id": "v4-5c34a9ed265c-77d2f0cf",
+  "url": "https://washingtoncitypaper.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Classifieds, Etc.” from keyboard focus or with Arrow Down and follow “Press Releases”. Confirm the public destination /local.",
+  "controlTask": "Hover “Classifieds, Etc.”, click “Press Releases” and confirm /local.",
+  "observedSelector": "#menu-primary-menu-1 > li:nth-of-type(6) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/local"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menu-primary-menu-1 > li:nth-of-type(6)",
+    "#menu-primary-menu-1 > li:nth-of-type(6) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#menu-primary-menu-1 > li:nth-of-type(6) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-primary-menu-1 > li:nth-of-type(6) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-primary-menu-1 > li:nth-of-type(6) > ul > li:nth-of-type(4) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "washingtoncitypaper.com",
+  "match": "https://washingtoncitypaper.com/",
+  "barrier": "The recorded Tab traversal ended at the cookie dialog’s Close control before reaching “Classifieds, Etc.”. The submenu containing “Press Releases” is hidden at rest and opens on pointer hover.",
+  "rules": [
+    {
+      "selector": "div.cmplz-close",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#menu-primary-menu-1 > li:nth-of-type(6)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

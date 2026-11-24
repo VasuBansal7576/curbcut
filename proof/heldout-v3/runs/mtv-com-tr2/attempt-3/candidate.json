@@ -1,0 +1,34 @@
+{
+  "id": "mtv-com-tr2",
+  "url": "https://www.mtv.com/",
+  "persona": "keyboard-only",
+  "task": "Use Tab and Enter to reach and activate “The Challenge: Home Turf S1 E5 Tori Deal 26m 39s 02/28/2024”. Verify the public destination at /episodes/1rq6s7.",
+  "controlTask": "Click “The Challenge: Home Turf S1 E5 Tori Deal 26m 39s 02/28/2024” and verify the public destination at /episodes/1rq6s7.",
+  "observedSelector": "#homepage_module-1_standard-16x9-carousel_episode-card-4",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/episodes/1rq6s7"
+    }
+  ],
+  "minimumTabPresses": 2,
+  "probe": {
+    "action": "click"
+  },
+  "site": "www.mtv.com",
+  "match": "https://www.mtv.com/",
+  "barrier": "The Tori Deal episode link has tabindex=\"-1\" in the initial snapshot, which excludes it from the sequential Tab order. The replay stopped among the header links, before reaching the episode carousel.",
+  "rules": [
+    {
+      "selector": "#homepage_module-1_standard-16x9-carousel_episode-card-4",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#homepage_module-1_standard-16x9-carousel_episode-card-4",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

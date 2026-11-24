@@ -1,0 +1,2010 @@
+{
+  "runner": "playwright",
+  "status": "pass",
+  "reason": "The complete journey reached the declared outcome.",
+  "steps": [
+    {
+      "selector": "#__next > div > div:nth-of-type(2) > div:nth-of-type(2) > div > header > div:nth-of-type(2) > button:nth-of-type(2)",
+      "action": "activate"
+    },
+    {
+      "selector": "#find-jobs-menu > nav > ul > li:nth-of-type(1)",
+      "action": "observe"
+    }
+  ],
+  "url": "https://www.care.com/",
+  "checks": [
+    true
+  ],
+  "snapshot": {
+    "url": "https://www.care.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#__next > div > div:nth-of-type(2) > div:nth-of-type(2) > div > header > div:nth-of-type(2) > button:nth-of-type(2)",
+          "parent": "header.CareHeaderContainer-root.CareHeaderContainer-background > div:nth-of-type(2)",
+          "tag": "button",
+          "attributes": {
+            "class": "MuiButtonBase-root DesktopDropdownButton--root CareFocusOutline DesktopDropdownButton--inverse mui-tnui9h",
+            "tabindex": "0",
+            "aria-controls": "find-jobs-menu",
+            "aria-describedby": "find-jobs-popover",
+            "aria-expanded": "false"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.MuiTypography-root.MuiTypography-body2",
+            "svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium"
+          ],
+          "box": [
+            557,
+            40,
+            91,
+            24
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "header.CareHeaderContainer-root.CareHeaderContainer-background > div:nth-of-type(2)",
+          "parent": "header.CareHeaderContainer-root.CareHeaderContainer-background",
+          "tag": "div",
+          "attributes": {
+            "class": "CareHeaderGrouping-root MuiBox-root mui-thflsa"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "button.MuiButtonBase-root.DesktopDropdownButton--root",
+            "button.MuiButtonBase-root.DesktopDropdownButton--root",
+            "button.MuiButtonBase-root.DesktopDropdownButton--root",
+            "button.MuiButtonBase-root.DesktopDropdownButton--root",
+            "div.HeaderLogInJoinNowBlock--inverse.MuiBox-root",
+            "#find-care-popover"
+          ],
+          "box": [
+            432,
+            32,
+            816,
+            40
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "header.CareHeaderContainer-root.CareHeaderContainer-background",
+          "parent": "div.MuiBox-root.mui-1bnys4 > div:nth-of-type(1)",
+          "tag": "header",
+          "attributes": {
+            "class": "CareHeaderContainer-root CareHeaderContainer-background CareHeaderContainer-background--transparent MuiBox-root mui-196b4ca"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.CareHeaderGrouping-root.MuiBox-root",
+            "div.CareHeaderGrouping-root.MuiBox-root"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            104
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.MuiBox-root.mui-1bnys4 > div:nth-of-type(1)",
+          "parent": "div.MuiBox-root.mui-1bnys4",
+          "tag": "div",
+          "attributes": {
+            "class": "MuiBox-root mui-0"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "header.CareHeaderContainer-root.CareHeaderContainer-background"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            104
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.MuiBox-root.mui-1bnys4",
+          "tag": "div",
+          "attributes": {
+            "class": "MuiBox-root mui-1bnys4"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.MuiBox-root.mui-0"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            104
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "3",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#find-jobs-menu",
+          "parent": "#find-jobs-popover > div:nth-of-type(3)",
+          "tag": "div",
+          "attributes": {
+            "class": "MuiBox-root mui-1q5f2yw",
+            "id": "find-jobs-menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "nav.NavLinkList--root.DesktopSimpleMenu--multiColumn"
+          ],
+          "box": [
+            51,
+            118,
+            498,
+            241
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#find-jobs-popover > div:nth-of-type(3)",
+          "parent": "#find-jobs-popover",
+          "tag": "div",
+          "attributes": {
+            "class": "MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation2 MuiPopover-paper mui-l9hype",
+            "tabindex": "-1"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#find-jobs-menu"
+          ],
+          "box": [
+            51,
+            118,
+            498,
+            241
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "0",
+            "position": "absolute",
+            "overflow-x": "hidden",
+            "overflow-y": "auto",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "matrix(0.75, 0, 0, 0.5625, 0, 0)"
+          }
+        },
+        {
+          "selector": "#find-jobs-popover",
+          "parent": "header.CareHeaderContainer-root.CareHeaderContainer-background > div:nth-of-type(2)",
+          "tag": "div",
+          "attributes": {
+            "role": "presentation",
+            "id": "find-jobs-popover",
+            "class": "MuiPopover-root MuiModal-root MuiModal-hidden mui-7hhai2",
+            "aria-hidden": "true"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.MuiBackdrop-root.MuiBackdrop-invisible",
+            "div",
+            "div.MuiPaper-root.MuiPaper-elevation",
+            "div"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            800
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "fixed",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "1300",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#find-jobs-menu > nav > ul > li:nth-of-type(1)",
+          "parent": "nav.NavLinkList--root.DesktopSimpleMenu--multiColumn > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "MuiListItem-root MuiListItem-gutters MuiListItem-padding mui-hkslp6"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "nav.NavLinkList--root.MuiBox-root"
+          ],
+          "box": [
+            63,
+            127,
+            150,
+            97
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav.NavLinkList--root.DesktopSimpleMenu--multiColumn > ul:nth-of-type(1)",
+          "parent": "nav.NavLinkList--root.DesktopSimpleMenu--multiColumn",
+          "tag": "ul",
+          "attributes": {
+            "class": "MuiList-root MuiList-padding NavLinkList--list NavLinkList--columns mui-1ysjg6y"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.MuiListItem-root.MuiListItem-gutters",
+            "li.MuiListItem-root.MuiListItem-gutters"
+          ],
+          "box": [
+            63,
+            127,
+            474,
+            223
+          ],
+          "style": {
+            "display": "grid",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav.NavLinkList--root.DesktopSimpleMenu--multiColumn",
+          "parent": "#find-jobs-menu",
+          "tag": "nav",
+          "attributes": {
+            "class": "NavLinkList--root DesktopSimpleMenu--multiColumn MuiBox-root mui-ycoaxo",
+            "role": "region",
+            "aria-label": "Find jobs menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.MuiList-root.MuiList-padding"
+          ],
+          "box": [
+            51,
+            118,
+            498,
+            241
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": ".mui-tnui9h:hover, .mui-tnui9h:focus-visible",
+          "declarations": "color: rgb(2, 87, 71);",
+          "conditions": []
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#find-jobs-menu",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 51,
+        "width": 498
+      },
+      {
+        "selector": "#__next > div > div:nth-of-type(2) > div:nth-of-type(2) > div > header > div:nth-of-type(2) > button:nth-of-type(2)",
+        "role": "button",
+        "name": "Find jobs",
+        "state": "expanded false",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": "0",
+        "expanded": "false",
+        "controls": "find-jobs-menu",
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 557,
+        "width": 91
+      },
+      {
+        "selector": "#find-jobs-menu > nav > ul > li:nth-of-type(1)",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 63,
+        "width": 150
+      },
+      {
+        "selector": "div.CareHeaderGrouping-root.MuiBox-root",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 32,
+        "width": 230
+      },
+      {
+        "selector": "button.MuiButtonBase-root.DesktopDropdownButton--root",
+        "role": "button",
+        "name": "Resources",
+        "state": "expanded false",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": "0",
+        "expanded": "false",
+        "controls": "resources-menu",
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 868,
+        "width": 103
+      },
+      {
+        "selector": "div.MuiTypography-root.MuiTypography-body2",
+        "role": "text",
+        "name": "Resources",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 868,
+        "width": 77
+      },
+      {
+        "selector": "svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium",
+        "role": "img",
+        "name": "Care.com logo",
+        "state": "",
+        "tag": "svg",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 32,
+        "width": 230
+      },
+      {
+        "selector": "header.CareHeaderContainer-root.CareHeaderContainer-background",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "body",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#__next",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#__NEXT_DATA__",
+        "role": "text",
+        "name": "{\"props\":{\"referrerCookie\":null,\"ldClientFlags\":{\"growth-vhp-mfe-recaptcha-enabled\":{\"value\":false,\"variationIndex\":1,\"reason\":{\"kind\":\"OFF\"}},\"sc-provider-enrollment\":{\"value\":2,\"variationIndex\":2,\"r",
+        "state": "",
+        "tag": "script",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Google Play",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 981,
+        "width": 145
+      },
+      {
+        "selector": "iframe",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tag": "iframe",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 304
+      },
+      {
+        "selector": "next-route-announcer",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "next-route-announcer",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "div.MuiBox-root.mui-ohwg9z",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.MuiBox-root.mui-3hxd12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.MuiBox-root.mui-15r844m",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.MuiBox-root.mui-so5sov",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.MuiBox-root.mui-8k09wv",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.MuiBox-root.mui-1bnys4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.MuiBox-root.mui-0",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "a.MuiTypography-root.MuiTypography-inherit",
+        "role": "link",
+        "name": "Tutoring",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": "0",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 955,
+        "width": 131
+      },
+      {
+        "selector": "div.HeaderLogInJoinNowBlock--inverse.MuiBox-root",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1003,
+        "width": 245
+      },
+      {
+        "selector": "a.MuiTypography-root.MuiTypography-body2",
+        "role": "link",
+        "name": "Log in",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 1003,
+        "width": 43
+      },
+      {
+        "selector": "div.MuiBox-root.mui-1vcllsw",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "h1.MuiTypography-root.MuiTypography-body1",
+        "role": "heading",
+        "name": "Connecting families with quality, local caregivers",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 32,
+        "width": 500
+      },
+      {
+        "selector": "div.MuiBox-root.mui-mvg4af",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 32,
+        "width": 500
+      },
+      {
+        "selector": "div.MuiStack-root.mui-1wg5sry",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 64,
+        "width": 436
+      },
+      {
+        "selector": "div.MuiStack-root.mui-jtajat",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 64,
+        "width": 436
+      },
+      {
+        "selector": "div.MuiBox-root.mui-1v8eule",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 64,
+        "width": 220
+      },
+      {
+        "selector": "div.MuiGrid-root.MuiGrid-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 815,
+        "width": 303
+      },
+      {
+        "selector": "div.MuiFormControl-root.MuiFormControl-fullWidth",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": "-1",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 64,
+        "width": 220
+      },
+      {
+        "selector": "div.MuiInputBase-root.MuiInput-root",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 64,
+        "width": 220
+      },
+      {
+        "selector": "div.MuiInputAdornment-root.MuiInputAdornment-positionStart",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 81,
+        "width": 32
+      },
+      {
+        "selector": "#zipCode",
+        "role": "textbox",
+        "name": "",
+        "state": "",
+        "tag": "input",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 121,
+        "width": 146
+      },
+      {
+        "selector": "div.MuiBox-root.mui-3n4hf6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 300,
+        "width": 200
+      },
+      {
+        "selector": "button.MuiButtonBase-root.MuiButton-root",
+        "role": "button",
+        "name": "Search",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": "0",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 300,
+        "width": 200
+      },
+      {
+        "selector": "div.MuiStack-root.mui-1vol2h7",
+        "role": "group",
+        "name": "Care.com community stats",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 64,
+        "width": 436
+      },
+      {
+        "selector": "div.MuiBox-root.mui-1fjtzvx",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 371,
+        "width": 129
+      },
+      {
+        "selector": "div.MuiBox-root.mui-r6ef99",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 371,
+        "width": 129
+      },
+      {
+        "selector": "p.MuiTypography-root.MuiTypography-numeral4",
+        "role": "text",
+        "name": "500K+",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 371,
+        "width": 77
+      },
+      {
+        "selector": "p.MuiTypography-root.MuiTypography-body1",
+        "role": "text",
+        "name": "caregiver reviews",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 371,
+        "width": 129
+      },
+      {
+        "selector": "div.MuiBox-root.mui-hw370b",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.MuiBox-root.mui-c9i5ci",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 195,
+        "width": 131
+      },
+      {
+        "selector": "div.MuiBox-root.mui-kxetqy",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 971,
+        "width": 98
+      },
+      {
+        "selector": "div.MuiBox-root.mui-6obmq7",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 347,
+        "width": 131
+      },
+      {
+        "selector": "div.MuiBox-root.mui-13cog4i",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 499,
+        "width": 131
+      },
+      {
+        "selector": "div.MuiBox-root.mui-mgkw37",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 651,
+        "width": 131
+      },
+      {
+        "selector": "div.MuiBox-root.mui-qlxcqz",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 803,
+        "width": 131
+      },
+      {
+        "selector": "div.MuiBox-root.mui-51uc77",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 955,
+        "width": 131
+      },
+      {
+        "selector": "footer.MuiBox-root.mui-qsc991",
+        "role": "contentinfo",
+        "name": "",
+        "state": "",
+        "tag": "footer",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.MuiContainer-root.MuiContainer-maxWidthMd",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 160,
+        "width": 960
+      },
+      {
+        "selector": "div.MuiBox-root.mui-k008qs",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 162,
+        "width": 955
+      },
+      {
+        "selector": "div.MuiBox-root.mui-9768ma",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 162,
+        "width": 130
+      },
+      {
+        "selector": "div.CareFooter.CareFooter--inverse",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 327,
+        "width": 150
+      },
+      {
+        "selector": "li.MuiListItem-root.MuiListItem-gutters",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 327,
+        "width": 150
+      },
+      {
+        "selector": "a.MuiTypography-root.MuiTypography-link3",
+        "role": "link",
+        "name": "Senior care jobs",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 327,
+        "width": 102
+      },
+      {
+        "selector": "div.MuiBox-root.mui-1g3slj9",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 327,
+        "width": 150
+      },
+      {
+        "selector": "div.MuiBox-root.mui-fynu7n",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 512,
+        "width": 303
+      },
+      {
+        "selector": "div.MuiBox-root.mui-8n33ok",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 815,
+        "width": 303
+      },
+      {
+        "selector": "a.MuiBox-root.mui-vjmjf3",
+        "role": "link",
+        "name": "App Store",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 1001,
+        "width": 117
+      },
+      {
+        "selector": "a.MuiBox-root.mui-1uvinz3",
+        "role": "link",
+        "name": "Google Play",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 990,
+        "width": 128
+      },
+      {
+        "selector": "a.MuiBox-root.mui-3n26xl",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 1070,
+        "width": 48
+      },
+      {
+        "selector": "div.MuiPaper-root.MuiPaper-elevation",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 162,
+        "width": 955
+      },
+      {
+        "selector": "div.MuiButtonBase-root.MuiAccordionSummary-root",
+        "role": "button",
+        "name": "Popular topics",
+        "state": "expanded false",
+        "tag": "div",
+        "tabIndex": 0,
+        "tabIndexAttribute": "0",
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 162,
+        "width": 136
+      },
+      {
+        "selector": "div.MuiAccordionSummary-content.MuiAccordionSummary-contentGutters",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 162,
+        "width": 108
+      },
+      {
+        "selector": "h3.MuiTypography-root.MuiTypography-body1",
+        "role": "heading",
+        "name": "Popular topics",
+        "state": "",
+        "tag": "h3",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 162,
+        "width": 108
+      },
+      {
+        "selector": "div.MuiAccordionSummary-expandIconWrapper.mui-1fx8m19",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 270,
+        "width": 28
+      },
+      {
+        "selector": "div.MuiCollapse-root.MuiCollapse-vertical",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 162,
+        "width": 955
+      },
+      {
+        "selector": "div.MuiCollapse-wrapper.MuiCollapse-vertical",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 162,
+        "width": 955
+      },
+      {
+        "selector": "div.MuiCollapse-wrapperInner.MuiCollapse-vertical",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 162,
+        "width": 955
+      },
+      {
+        "selector": "div.MuiAccordion-region",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 162,
+        "width": 955
+      },
+      {
+        "selector": "div.MuiAccordionDetails-root.mui-yw1pjd",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 162,
+        "width": 955
+      },
+      {
+        "selector": "div.MuiBox-root.mui-1qir7n3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 162,
+        "width": 955
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#__next > div > div:nth-of-type(2) > div:nth-of-type(2) > div > header > div:nth-of-type(2) > button:nth-of-type(2)",
+          "parent": "header.CareHeaderContainer-root.CareHeaderContainer-background > div:nth-of-type(2)",
+          "tag": "button",
+          "attributes": {
+            "class": "MuiButtonBase-root DesktopDropdownButton--root CareFocusOutline DesktopDropdownButton--open DesktopDropdownButton--inverse mui-tnui9h",
+            "tabindex": "0",
+            "aria-controls": "find-jobs-menu",
+            "aria-describedby": "find-jobs-popover",
+            "aria-expanded": "true",
+            "aria-hidden": "true"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.MuiTypography-root.MuiTypography-body2",
+            "svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium"
+          ],
+          "box": [
+            557,
+            40,
+            91,
+            24
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "header.CareHeaderContainer-root.CareHeaderContainer-background > div:nth-of-type(2)",
+          "parent": "header.CareHeaderContainer-root.CareHeaderContainer-background",
+          "tag": "div",
+          "attributes": {
+            "class": "CareHeaderGrouping-root MuiBox-root mui-thflsa"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "button.MuiButtonBase-root.DesktopDropdownButton--root",
+            "button.MuiButtonBase-root.DesktopDropdownButton--root",
+            "button.MuiButtonBase-root.DesktopDropdownButton--root",
+            "button.MuiButtonBase-root.DesktopDropdownButton--root",
+            "div.HeaderLogInJoinNowBlock--inverse.MuiBox-root",
+            "#find-care-popover"
+          ],
+          "box": [
+            432,
+            32,
+            816,
+            40
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "hidden",
+            "overflow-y": "hidden",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "header.CareHeaderContainer-root.CareHeaderContainer-background",
+          "parent": "div.MuiBox-root.mui-1bnys4 > div:nth-of-type(1)",
+          "tag": "header",
+          "attributes": {
+            "class": "CareHeaderContainer-root CareHeaderContainer-background CareHeaderContainer-background--transparent MuiBox-root mui-196b4ca"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.CareHeaderGrouping-root.MuiBox-root",
+            "div.CareHeaderGrouping-root.MuiBox-root"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            104
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.MuiBox-root.mui-1bnys4 > div:nth-of-type(1)",
+          "parent": "div.MuiBox-root.mui-1bnys4",
+          "tag": "div",
+          "attributes": {
+            "class": "MuiBox-root mui-0"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "header.CareHeaderContainer-root.CareHeaderContainer-background"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            104
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.MuiBox-root.mui-1bnys4",
+          "tag": "div",
+          "attributes": {
+            "class": "MuiBox-root mui-1bnys4"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.MuiBox-root.mui-0"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            104
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "3",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#find-jobs-menu",
+          "parent": "#find-jobs-popover > div:nth-of-type(3)",
+          "tag": "div",
+          "attributes": {
+            "class": "MuiBox-root mui-1q5f2yw",
+            "id": "find-jobs-menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "nav.NavLinkList--root.DesktopSimpleMenu--multiColumn"
+          ],
+          "box": [
+            525,
+            88,
+            650,
+            412
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#find-jobs-popover > div:nth-of-type(3)",
+          "parent": "#find-jobs-popover",
+          "tag": "div",
+          "attributes": {
+            "class": "MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation2 MuiPopover-paper mui-l9hype",
+            "tabindex": "-1"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#find-jobs-menu"
+          ],
+          "box": [
+            525,
+            88,
+            650,
+            412
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0.685522",
+            "position": "absolute",
+            "overflow-x": "hidden",
+            "overflow-y": "auto",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "matrix(0.978927, 0, 0, 0.963122, 0, 0)"
+          }
+        },
+        {
+          "selector": "#find-jobs-popover",
+          "parent": "header.CareHeaderContainer-root.CareHeaderContainer-background > div:nth-of-type(2)",
+          "tag": "div",
+          "attributes": {
+            "role": "presentation",
+            "id": "find-jobs-popover",
+            "class": "MuiPopover-root MuiModal-root mui-jp7szo"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.MuiBackdrop-root.MuiBackdrop-invisible",
+            "div",
+            "div.MuiPaper-root.MuiPaper-elevation",
+            "div"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            800
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "fixed",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "1300",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#find-jobs-menu > nav > ul > li:nth-of-type(1)",
+          "parent": "nav.NavLinkList--root.DesktopSimpleMenu--multiColumn > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "MuiListItem-root MuiListItem-gutters MuiListItem-padding mui-hkslp6"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "nav.NavLinkList--root.MuiBox-root"
+          ],
+          "box": [
+            541,
+            103,
+            196,
+            166
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav.NavLinkList--root.DesktopSimpleMenu--multiColumn > ul:nth-of-type(1)",
+          "parent": "nav.NavLinkList--root.DesktopSimpleMenu--multiColumn",
+          "tag": "ul",
+          "attributes": {
+            "class": "MuiList-root MuiList-padding NavLinkList--list NavLinkList--columns mui-1ysjg6y"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.MuiListItem-root.MuiListItem-gutters",
+            "li.MuiListItem-root.MuiListItem-gutters"
+          ],
+          "box": [
+            541,
+            103,
+            619,
+            381
+          ],
+          "style": {
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav.NavLinkList--root.DesktopSimpleMenu--multiColumn",
+          "parent": "#find-jobs-menu",
+          "tag": "nav",
+          "attributes": {
+            "class": "NavLinkList--root DesktopSimpleMenu--multiColumn MuiBox-root mui-ycoaxo",
+            "role": "region",
+            "aria-label": "Find jobs menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.MuiList-root.MuiList-padding"
+          ],
+          "box": [
+            525,
+            88,
+            650,
+            412
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": ".mui-tnui9h:hover, .mui-tnui9h:focus-visible",
+          "declarations": "color: rgb(2, 87, 71);",
+          "conditions": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,3030 @@
+{
+  "runner": "playwright",
+  "total": 41,
+  "counts": {
+    "still-verified": 36,
+    "inconclusive": 5
+  },
+  "results": [
+    {
+      "id": "asme-org-tr2",
+      "persona": "screen-reader-view",
+      "url": "https://www.asme.org/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:40:52.850Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 59.5,
+          "right": 487.90625,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 380,
+          "scrollWidth": 380,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.asme.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view.",
+        "geometry": {
+          "left": 59.5,
+          "right": 487.90625,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 380,
+          "scrollWidth": 380,
+          "inView": true,
+          "fits": true
+        },
+        "reader": {
+          "role": "searchbox",
+          "name": "",
+          "state": "",
+          "editable": true,
+          "activatable": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 59.5,
+          "right": 487.90625,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 380,
+          "scrollWidth": 380,
+          "inView": true,
+          "fits": true
+        },
+        "reader": {
+          "role": "searchbox",
+          "name": "Search products, events, courses, resource categories...",
+          "state": "",
+          "editable": true,
+          "activatable": false
+        },
+        "url": "https://www.asme.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 59.5,
+          "right": 487.90625,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 380,
+          "scrollWidth": 380,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.asme.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "reason": "Checked the declared outcome after the type action."
+    },
+    {
+      "id": "calculator-net-add-days",
+      "persona": "screen-reader-view",
+      "url": "https://www.calculator.net/date-calculator.html",
+      "runner": "playwright",
+      "at": "2026-11-23T16:48:06.445Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "status": "pass",
+        "reason": "The input sequence reached the declared result."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "Reading view did not expose textbox Days to add."
+      },
+      "after": {
+        "runner": "playwright",
+        "status": "pass",
+        "reason": "The input sequence reached the declared result."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "status": "pass",
+        "reason": "The input sequence reached the declared result."
+      },
+      "reason": "The input sequence reached the declared result."
+    },
+    {
+      "id": "cato-org-tr2",
+      "persona": "screen-reader-view",
+      "url": "https://www.cato.org/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:41:07.822Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 962.28125,
+          "right": 1172.46875,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 210,
+          "scrollWidth": 210,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.cato.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view.",
+        "geometry": {
+          "left": 962.28125,
+          "right": 1172.46875,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 210,
+          "scrollWidth": 210,
+          "inView": true,
+          "fits": true
+        },
+        "reader": {
+          "role": "searchbox",
+          "name": "",
+          "state": "",
+          "editable": true,
+          "activatable": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 962.28125,
+          "right": 1172.46875,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 210,
+          "scrollWidth": 210,
+          "inView": true,
+          "fits": true
+        },
+        "reader": {
+          "role": "searchbox",
+          "name": "Search",
+          "state": "",
+          "editable": true,
+          "activatable": false
+        },
+        "url": "https://www.cato.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 962.28125,
+          "right": 1172.46875,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 210,
+          "scrollWidth": 210,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.cato.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "reason": "Checked the declared outcome after the type action."
+    },
+    {
+      "id": "cloudconvert-com-tr2",
+      "persona": "low-vision",
+      "url": "https://cloudconvert.com/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:41:26.436Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 921.328125,
+          "right": 1208.78125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 331,
+          "scrollWidth": 331,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://cloudconvert.com/",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The target does not fit the visible width.",
+        "geometry": {
+          "left": 84,
+          "right": 371.453125,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 345,
+          "scrollWidth": 345,
+          "inView": false,
+          "fits": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 84,
+          "right": 259.40625,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 224,
+          "scrollWidth": 224,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://cloudconvert.com/",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 100,
+          "right": 527.328125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 1152,
+          "scrollWidth": 1152,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://cloudconvert.com/",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "reason": "Checked the declared outcome after the read action."
+    },
+    {
+      "id": "colorhexa-open-picker",
+      "persona": "keyboard-only",
+      "url": "https://www.colorhexa.com/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:41:36.358Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 166,
+          "right": 208,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 42,
+          "scrollWidth": 42,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.colorhexa.com/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "before": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 166,
+          "right": 208,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 42,
+          "scrollWidth": 42,
+          "inView": true,
+          "fits": true
+        },
+        "traversal": {
+          "reached": false,
+          "tabs": 30,
+          "exhausted": true
+        },
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 166,
+          "right": 208,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 42,
+          "scrollWidth": 42,
+          "inView": true,
+          "fits": true
+        },
+        "traversal": {
+          "reached": true,
+          "tabs": 2
+        },
+        "url": "https://www.colorhexa.com/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 166,
+          "right": 208,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 42,
+          "scrollWidth": 42,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.colorhexa.com/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "reason": "Checked the declared outcome after the click action."
+    },
+    {
+      "id": "discuz-vip-tr2",
+      "persona": "keyboard-only",
+      "url": "https://www.discuz.vip/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:41:40.543Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 675,
+          "right": 968.765625,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 0,
+          "scrollWidth": 0,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.discuz.vip/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "before": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 675,
+          "right": 968.765625,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 0,
+          "scrollWidth": 0,
+          "inView": false,
+          "fits": true
+        },
+        "traversal": {
+          "reached": false,
+          "tabs": 90,
+          "exhausted": true
+        },
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 675,
+          "right": 968.765625,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 0,
+          "scrollWidth": 0,
+          "inView": false,
+          "fits": true
+        },
+        "traversal": {
+          "reached": true,
+          "tabs": 73
+        },
+        "url": "https://www.discuz.vip/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 675,
+          "right": 968.765625,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 0,
+          "scrollWidth": 0,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.discuz.vip/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "reason": "Checked the declared outcome after the click action."
+    },
+    {
+      "id": "dol-gov-tr2",
+      "persona": "keyboard-only",
+      "url": "https://www.dol.gov/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:42:12.656Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 365.5,
+          "right": 660.328125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 295,
+          "scrollWidth": 295,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.dol.gov/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "before": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 365.5,
+          "right": 660.328125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 295,
+          "scrollWidth": 295,
+          "inView": false,
+          "fits": true
+        },
+        "traversal": {
+          "reached": false,
+          "tabs": 68,
+          "exhausted": true
+        },
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 365.5,
+          "right": 660.328125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 295,
+          "scrollWidth": 295,
+          "inView": false,
+          "fits": true
+        },
+        "traversal": {
+          "reached": true,
+          "tabs": 44
+        },
+        "url": "https://www.dol.gov/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 365.5,
+          "right": 660.328125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 295,
+          "scrollWidth": 295,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.dol.gov/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "reason": "Checked the declared outcome after the click action."
+    },
+    {
+      "id": "elm-reflow",
+      "persona": "low-vision",
+      "url": "https://guide.elm-lang.org/core_language.html",
+      "runner": "playwright",
+      "at": "2026-11-23T16:42:17.777Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 424.203125,
+          "right": 1139.71875,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 732,
+          "scrollWidth": 732,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://guide.elm-lang.org/core_language.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The target does not fit the visible width.",
+        "geometry": {
+          "left": 34.203125,
+          "right": 749.71875,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 252,
+          "scrollWidth": 716,
+          "inView": false,
+          "fits": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 34.203125,
+          "right": 289.0625,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 252,
+          "scrollWidth": 252,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://guide.elm-lang.org/core_language.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 424.203125,
+          "right": 1139.71875,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 732,
+          "scrollWidth": 732,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://guide.elm-lang.org/core_language.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "reason": "Checked the declared outcome after the read action."
+    },
+    {
+      "id": "euronext-com-tr",
+      "persona": "screen-reader-view",
+      "url": "https://www.euronext.com/en",
+      "runner": "playwright",
+      "at": "2026-11-23T16:42:24.345Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 494.90625,
+          "right": 712.90625,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 218,
+          "scrollWidth": 218,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.euronext.com/en",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view.",
+        "geometry": {
+          "left": 494.578125,
+          "right": 712.578125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 218,
+          "scrollWidth": 218,
+          "inView": true,
+          "fits": true
+        },
+        "reader": {
+          "role": "textbox",
+          "name": "",
+          "state": "",
+          "editable": true,
+          "activatable": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 494.578125,
+          "right": 712.578125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 218,
+          "scrollWidth": 218,
+          "inView": true,
+          "fits": true
+        },
+        "reader": {
+          "role": "textbox",
+          "name": "Sites search",
+          "state": "",
+          "editable": true,
+          "activatable": false
+        },
+        "url": "https://www.euronext.com/en",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 494.90625,
+          "right": 712.90625,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 218,
+          "scrollWidth": 218,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.euronext.com/en",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "reason": "Checked the declared outcome after the type action."
+    },
+    {
+      "id": "flashscore-de-tr",
+      "persona": "low-vision",
+      "url": "https://www.flashscore.de/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:42:36.636Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 56,
+          "right": 664.96875,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 1188,
+          "scrollWidth": 1188,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.flashscore.de/",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The target does not fit the visible width.",
+        "geometry": {
+          "left": 10,
+          "right": 618.96875,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 320,
+          "scrollWidth": 619,
+          "inView": true,
+          "fits": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 10,
+          "right": 294.90625,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.flashscore.de/",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 56,
+          "right": 664.96875,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 1188,
+          "scrollWidth": 1188,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.flashscore.de/",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "reason": "Checked the declared outcome after the read action."
+    },
+    {
+      "id": "fourmilab-prepare-latitude",
+      "persona": "screen-reader-view",
+      "url": "https://www.fourmilab.ch/cgi-bin/Earth",
+      "runner": "playwright",
+      "at": "2026-11-23T16:48:17.004Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "status": "pass",
+        "reason": "The input sequence reached the declared result."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "Reading view did not expose textbox Latitude."
+      },
+      "after": {
+        "runner": "playwright",
+        "status": "pass",
+        "reason": "The input sequence reached the declared result."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "status": "pass",
+        "reason": "The input sequence reached the declared result."
+      },
+      "reason": "The input sequence reached the declared result."
+    },
+    {
+      "id": "gao-about-reflow",
+      "persona": "low-vision",
+      "url": "https://www.gao.gov/about",
+      "runner": "playwright",
+      "at": "2026-11-23T16:42:43.919Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 867.046875,
+          "right": 1104.546875,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 248,
+          "scrollWidth": 248,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.gao.gov/about",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The target does not fit the visible width.",
+        "geometry": {
+          "left": 459.921875,
+          "right": 559.4375,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 100,
+          "scrollWidth": 100,
+          "inView": false,
+          "fits": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 55.40625,
+          "right": 210.296875,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 162,
+          "scrollWidth": 162,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.gao.gov/about",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 117.25,
+          "right": 878.203125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 998,
+          "scrollWidth": 998,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.gao.gov/about",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "reason": "Checked the declared outcome after the read action."
+    },
+    {
+      "id": "geeksforgeeks-open-search",
+      "persona": "keyboard-only",
+      "url": "https://www.geeksforgeeks.org/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:42:50.599Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 80,
+          "right": 112,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 32,
+          "scrollWidth": 32,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.geeksforgeeks.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "before": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 80,
+          "right": 112,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 32,
+          "scrollWidth": 32,
+          "inView": true,
+          "fits": true
+        },
+        "traversal": {
+          "reached": false,
+          "tabs": 196,
+          "exhausted": true
+        },
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 80,
+          "right": 112,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 32,
+          "scrollWidth": 32,
+          "inView": true,
+          "fits": true
+        },
+        "traversal": {
+          "reached": true,
+          "tabs": 2
+        },
+        "url": "https://www.geeksforgeeks.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 80,
+          "right": 112,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 32,
+          "scrollWidth": 32,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.geeksforgeeks.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "reason": "Checked the declared outcome after the click action."
+    },
+    {
+      "id": "go-doc-reflow",
+      "persona": "low-vision",
+      "url": "https://go.dev/doc/effective_go",
+      "runner": "playwright",
+      "at": "2026-11-23T16:42:55.355Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 86,
+          "right": 805.578125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 1164,
+          "scrollWidth": 1164,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://go.dev/doc/effective_go",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The target does not fit the visible width.",
+        "geometry": {
+          "left": 52,
+          "right": 771.578125,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 272,
+          "scrollWidth": 776,
+          "inView": false,
+          "fits": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 52,
+          "right": 275.875,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 272,
+          "scrollWidth": 272,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://go.dev/doc/effective_go",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 86,
+          "right": 805.578125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 1164,
+          "scrollWidth": 1164,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://go.dev/doc/effective_go",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "reason": "Checked the declared outcome after the read action."
+    },
+    {
+      "id": "htdp-reflow",
+      "persona": "low-vision",
+      "url": "https://htdp.org/2023-8-14/Book/part_prologue.html",
+      "runner": "playwright",
+      "at": "2026-11-23T16:43:02.938Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 273.6875,
+          "right": 957.6875,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 684,
+          "scrollWidth": 684,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://htdp.org/2023-8-14/Book/part_prologue.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The target does not fit the visible width.",
+        "geometry": {
+          "left": 22.796875,
+          "right": 478.796875,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 456,
+          "scrollWidth": 456,
+          "inView": false,
+          "fits": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 22.796875,
+          "right": 262.796875,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 242,
+          "scrollWidth": 242,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://htdp.org/2023-8-14/Book/part_prologue.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 273.6875,
+          "right": 903.6875,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 628,
+          "scrollWidth": 628,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://htdp.org/2023-8-14/Book/part_prologue.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "reason": "Checked the declared outcome after the read action."
+    },
+    {
+      "id": "json-org-reflow",
+      "persona": "low-vision",
+      "url": "https://www.json.org/json-en.html",
+      "runner": "playwright",
+      "at": "2026-11-23T16:43:06.248Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 907.5,
+          "right": 1190,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 251,
+          "scrollWidth": 251,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.json.org/json-en.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The target does not fit the visible width.",
+        "geometry": {
+          "left": 187.75,
+          "right": 470.25,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 251,
+          "scrollWidth": 251,
+          "inView": false,
+          "fits": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 58,
+          "right": 258.453125,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 188,
+          "scrollWidth": 188,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.json.org/json-en.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 106,
+          "right": 388.5,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 1052,
+          "scrollWidth": 1052,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.json.org/json-en.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "reason": "Checked the declared outcome after the read action."
+    },
+    {
+      "id": "kidderminster-application-faq",
+      "persona": "keyboard-only",
+      "url": "https://www.kidderminster.ac.uk/good-to-know-articles/how-to-apply-for-a-course/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:43:11.897Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 143,
+          "right": 599,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 456,
+          "scrollWidth": 456,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.kidderminster.ac.uk/good-to-know-articles/how-to-apply-for-a-course/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "before": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 143,
+          "right": 599,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 456,
+          "scrollWidth": 456,
+          "inView": false,
+          "fits": true
+        },
+        "traversal": {
+          "reached": false,
+          "tabs": 45,
+          "exhausted": true
+        },
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 143,
+          "right": 599,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 456,
+          "scrollWidth": 456,
+          "inView": false,
+          "fits": true
+        },
+        "traversal": {
+          "reached": true,
+          "tabs": 20
+        },
+        "url": "https://www.kidderminster.ac.uk/good-to-know-articles/how-to-apply-for-a-course/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 143,
+          "right": 599,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 456,
+          "scrollWidth": 456,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.kidderminster.ac.uk/good-to-know-articles/how-to-apply-for-a-course/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "reason": "Checked the declared outcome after the click action."
+    },
+    {
+      "id": "lua-manual-reflow",
+      "persona": "low-vision",
+      "url": "https://www.lua.org/manual/5.4/manual.html",
+      "runner": "playwright",
+      "at": "2026-11-23T16:43:24.508Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 80,
+          "right": 905.78125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 1120,
+          "scrollWidth": 1120,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.lua.org/manual/5.4/manual.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The target does not fit the visible width.",
+        "geometry": {
+          "left": 8,
+          "right": 671.171875,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 304,
+          "scrollWidth": 671,
+          "inView": false,
+          "fits": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 8,
+          "right": 312.3125,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 304,
+          "scrollWidth": 304,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.lua.org/manual/5.4/manual.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 97,
+          "right": 922.78125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 1086,
+          "scrollWidth": 1086,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.lua.org/manual/5.4/manual.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "reason": "Checked the declared outcome after the read action."
+    },
+    {
+      "id": "martinfowler-reflow",
+      "persona": "low-vision",
+      "url": "https://martinfowler.com/articles/continuousIntegration.html",
+      "runner": "playwright",
+      "at": "2026-11-23T16:43:33.916Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 645.59375,
+          "right": 952.203125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 317,
+          "scrollWidth": 317,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://martinfowler.com/articles/continuousIntegration.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The target does not fit the visible width.",
+        "geometry": {
+          "left": 30.890625,
+          "right": 388.65625,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 376,
+          "scrollWidth": 376,
+          "inView": false,
+          "fits": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 30.890625,
+          "right": 283.953125,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 258,
+          "scrollWidth": 258,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://martinfowler.com/articles/continuousIntegration.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 645.59375,
+          "right": 952.203125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 317,
+          "scrollWidth": 317,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://martinfowler.com/articles/continuousIntegration.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "reason": "Checked the declared outcome after the read action."
+    },
+    {
+      "id": "meteoblue-weather-radar",
+      "persona": "keyboard-only",
+      "url": "https://www.meteoblue.com/en/weather/maps/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:43:42.436Z",
+      "status": "inconclusive",
+      "control": {
+        "runner": "playwright",
+        "status": "inconclusive",
+        "reason": "The unique target was not visible."
+      },
+      "reason": "Pointer control: The unique target was not visible."
+    },
+    {
+      "id": "mynoise-open-menu",
+      "persona": "keyboard-only",
+      "url": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+      "runner": "playwright",
+      "at": "2026-11-23T16:43:44.403Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 10,
+          "right": 34,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 24,
+          "scrollWidth": 30,
+          "inView": true,
+          "fits": false
+        },
+        "url": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "before": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 10,
+          "right": 34,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 24,
+          "scrollWidth": 30,
+          "inView": true,
+          "fits": false
+        },
+        "traversal": {
+          "reached": false,
+          "tabs": 25,
+          "exhausted": true
+        },
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 10,
+          "right": 34,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 24,
+          "scrollWidth": 30,
+          "inView": true,
+          "fits": false
+        },
+        "traversal": {
+          "reached": true,
+          "tabs": 1
+        },
+        "url": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 10,
+          "right": 34,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 24,
+          "scrollWidth": 30,
+          "inView": true,
+          "fits": false
+        },
+        "url": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "reason": "Checked the declared outcome after the click action."
+    },
+    {
+      "id": "nullprogram-reflow",
+      "persona": "low-vision",
+      "url": "https://nullprogram.com/blog/2016/11/17/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:43:51.968Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 8,
+          "right": 437.078125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 1264,
+          "scrollWidth": 1264,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://nullprogram.com/blog/2016/11/17/",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The target does not fit the visible width.",
+        "geometry": {
+          "left": 8,
+          "right": 437.078125,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 304,
+          "scrollWidth": 429,
+          "inView": false,
+          "fits": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 8,
+          "right": 312.265625,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 304,
+          "scrollWidth": 304,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://nullprogram.com/blog/2016/11/17/",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 8,
+          "right": 437.078125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 1264,
+          "scrollWidth": 1264,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://nullprogram.com/blog/2016/11/17/",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "reason": "Checked the declared outcome after the read action."
+    },
+    {
+      "id": "nws-radar-play-pause",
+      "persona": "keyboard-only",
+      "url": "https://radar.weather.gov/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:43:54.016Z",
+      "status": "inconclusive",
+      "control": {
+        "runner": "playwright",
+        "status": "inconclusive",
+        "reason": "The unique target was not visible."
+      },
+      "reason": "Pointer control: The unique target was not visible."
+    },
+    {
+      "id": "online-conversion-length",
+      "persona": "low-vision",
+      "url": "https://www.onlineconversion.com/length_common.htm",
+      "runner": "playwright",
+      "at": "2026-11-23T16:48:22.587Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "status": "pass",
+        "reason": "The input sequence reached the declared result."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The control extends past the visible width: form[name=MainForm] select[name=to]"
+      },
+      "after": {
+        "runner": "playwright",
+        "status": "pass",
+        "reason": "The input sequence reached the declared result."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "status": "pass",
+        "reason": "The input sequence reached the declared result."
+      },
+      "reason": "The input sequence reached the declared result."
+    },
+    {
+      "id": "openbsd-faq-reflow",
+      "persona": "low-vision",
+      "url": "https://www.openbsd.org/faq/faq1.html",
+      "runner": "playwright",
+      "at": "2026-11-23T16:43:55.202Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 8,
+          "right": 600.90625,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 1264,
+          "scrollWidth": 1264,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.openbsd.org/faq/faq1.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The target does not fit the visible width.",
+        "geometry": {
+          "left": 8,
+          "right": 600.90625,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 304,
+          "scrollWidth": 593,
+          "inView": false,
+          "fits": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 8,
+          "right": 304.453125,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 304,
+          "scrollWidth": 304,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.openbsd.org/faq/faq1.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 8,
+          "right": 600.90625,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 1264,
+          "scrollWidth": 1264,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.openbsd.org/faq/faq1.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "reason": "Checked the declared outcome after the read action."
+    },
+    {
+      "id": "poets-org-tr2",
+      "persona": "screen-reader-view",
+      "url": "https://poets.org/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:44:04.347Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 846.390625,
+          "right": 1175.984375,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 290,
+          "scrollWidth": 290,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://poets.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view.",
+        "geometry": {
+          "left": 846.390625,
+          "right": 1175.984375,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 290,
+          "scrollWidth": 290,
+          "inView": true,
+          "fits": true
+        },
+        "reader": {
+          "role": "searchbox",
+          "name": "",
+          "state": "",
+          "editable": true,
+          "activatable": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 846.390625,
+          "right": 1175.984375,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 290,
+          "scrollWidth": 290,
+          "inView": true,
+          "fits": true
+        },
+        "reader": {
+          "role": "searchbox",
+          "name": "search",
+          "state": "",
+          "editable": true,
+          "activatable": false
+        },
+        "url": "https://poets.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 846.390625,
+          "right": 1175.984375,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 290,
+          "scrollWidth": 290,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://poets.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "reason": "Checked the declared outcome after the type action."
+    },
+    {
+      "id": "procurement-journey-considerations",
+      "persona": "keyboard-only",
+      "url": "https://www.procurementjourney.scot/index.php/route-1/route-1-introduction",
+      "runner": "playwright",
+      "at": "2026-11-23T16:44:09.235Z",
+      "status": "inconclusive",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 391,
+          "right": 1194,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 803,
+          "scrollWidth": 803,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.procurementjourney.scot/index.php/route-1/route-1-introduction",
+        "checks": [
+          false
+        ],
+        "status": "fail",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "reason": "Pointer control: Checked the declared outcome after the click action."
+    },
+    {
+      "id": "report-605ca95e172608f662",
+      "persona": "keyboard-only",
+      "url": "https://www.colorhexa.com/ff0000",
+      "runner": "playwright",
+      "at": "2026-11-23T16:44:14.006Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 166,
+          "right": 208,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 42,
+          "scrollWidth": 42,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.colorhexa.com/ff0000",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "before": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 166,
+          "right": 208,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 42,
+          "scrollWidth": 42,
+          "inView": true,
+          "fits": true
+        },
+        "traversal": {
+          "reached": false,
+          "tabs": 95,
+          "exhausted": true
+        },
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 166,
+          "right": 208,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 42,
+          "scrollWidth": 42,
+          "inView": true,
+          "fits": true
+        },
+        "traversal": {
+          "reached": true,
+          "tabs": 2
+        },
+        "url": "https://www.colorhexa.com/ff0000",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 166,
+          "right": 208,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 42,
+          "scrollWidth": 42,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.colorhexa.com/ff0000",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "reason": "Checked the declared outcome after the click action."
+    },
+    {
+      "id": "report-cb10e18073d48f295a",
+      "persona": "keyboard-only",
+      "url": "https://www.colorhexa.com/ff6600",
+      "runner": "playwright",
+      "at": "2026-11-23T16:44:17.784Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 166,
+          "right": 208,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 42,
+          "scrollWidth": 42,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.colorhexa.com/ff6600",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "before": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 166,
+          "right": 208,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 42,
+          "scrollWidth": 42,
+          "inView": true,
+          "fits": true
+        },
+        "traversal": {
+          "reached": false,
+          "tabs": 95,
+          "exhausted": true
+        },
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 166,
+          "right": 208,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 42,
+          "scrollWidth": 42,
+          "inView": true,
+          "fits": true
+        },
+        "traversal": {
+          "reached": true,
+          "tabs": 2
+        },
+        "url": "https://www.colorhexa.com/ff6600",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 166,
+          "right": 208,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 42,
+          "scrollWidth": 42,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.colorhexa.com/ff6600",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "reason": "Checked the declared outcome after the click action."
+    },
+    {
+      "id": "report-d6870c43f8831c2d3b",
+      "persona": "keyboard-only",
+      "url": "https://www.colorhexa.com/0066ff",
+      "runner": "playwright",
+      "at": "2026-11-23T16:44:21.085Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 166,
+          "right": 208,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 42,
+          "scrollWidth": 42,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.colorhexa.com/0066ff",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "before": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 166,
+          "right": 208,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 42,
+          "scrollWidth": 42,
+          "inView": true,
+          "fits": true
+        },
+        "traversal": {
+          "reached": false,
+          "tabs": 95,
+          "exhausted": true
+        },
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 166,
+          "right": 208,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 42,
+          "scrollWidth": 42,
+          "inView": true,
+          "fits": true
+        },
+        "traversal": {
+          "reached": true,
+          "tabs": 2
+        },
+        "url": "https://www.colorhexa.com/0066ff",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 166,
+          "right": 208,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 42,
+          "scrollWidth": 42,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.colorhexa.com/0066ff",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "reason": "Checked the declared outcome after the click action."
+    },
+    {
+      "id": "rust-book-reflow",
+      "persona": "low-vision",
+      "url": "https://doc.rust-lang.org/book/ch01-02-hello-world.html",
+      "runner": "playwright",
+      "at": "2026-11-23T16:44:24.380Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 429,
+          "right": 943.15625,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 750,
+          "scrollWidth": 750,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://doc.rust-lang.org/book/ch01-02-hello-world.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The target does not fit the visible width.",
+        "geometry": {
+          "left": 30,
+          "right": 544.15625,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 280,
+          "scrollWidth": 280,
+          "inView": false,
+          "fits": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 30,
+          "right": 291.3125,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 280,
+          "scrollWidth": 280,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://doc.rust-lang.org/book/ch01-02-hello-world.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 429,
+          "right": 943.15625,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 750,
+          "scrollWidth": 750,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://doc.rust-lang.org/book/ch01-02-hello-world.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "reason": "Checked the declared outcome after the read action."
+    },
+    {
+      "id": "sanantonio-library-reader",
+      "persona": "screen-reader-view",
+      "url": "https://www.mysapl.org/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:44:26.469Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 373,
+          "right": 820.4375,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 438,
+          "scrollWidth": 438,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.mysapl.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view.",
+        "geometry": {
+          "left": 373,
+          "right": 820.4375,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 438,
+          "scrollWidth": 438,
+          "inView": true,
+          "fits": true
+        },
+        "reader": {
+          "role": "textbox",
+          "name": "",
+          "state": "",
+          "editable": true,
+          "activatable": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 373,
+          "right": 820.4375,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 438,
+          "scrollWidth": 438,
+          "inView": true,
+          "fits": true
+        },
+        "reader": {
+          "role": "textbox",
+          "name": "Search Catalog",
+          "state": "",
+          "editable": true,
+          "activatable": false
+        },
+        "url": "https://www.mysapl.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 373,
+          "right": 820.4375,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 438,
+          "scrollWidth": 438,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.mysapl.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "reason": "Checked the declared outcome after the type action."
+    },
+    {
+      "id": "sedgewick-reflow",
+      "persona": "low-vision",
+      "url": "https://algs4.cs.princeton.edu/11model/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:44:52.324Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 921.046875,
+          "right": 1178.5,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 274,
+          "scrollWidth": 274,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://algs4.cs.princeton.edu/11model/",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The target does not fit the visible width.",
+        "geometry": {
+          "left": 895.78125,
+          "right": 1153.234375,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 274,
+          "scrollWidth": 274,
+          "inView": false,
+          "fits": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 11,
+          "right": 268.453125,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 304,
+          "scrollWidth": 304,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://algs4.cs.princeton.edu/11model/",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 418,
+          "right": 675.453125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 450,
+          "scrollWidth": 450,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://algs4.cs.princeton.edu/11model/",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "reason": "Checked the declared outcome after the read action."
+    },
+    {
+      "id": "sfmta-pause-carousel",
+      "persona": "keyboard-only",
+      "url": "https://www.sfmta.com/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:45:01.700Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 1220,
+          "right": 1265,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 45,
+          "scrollWidth": 45,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.sfmta.com/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "before": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 1220,
+          "right": 1265,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 45,
+          "scrollWidth": 45,
+          "inView": true,
+          "fits": true
+        },
+        "traversal": {
+          "reached": false,
+          "tabs": 82,
+          "exhausted": true
+        },
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 1220,
+          "right": 1265,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 45,
+          "scrollWidth": 45,
+          "inView": true,
+          "fits": true
+        },
+        "traversal": {
+          "reached": true,
+          "tabs": 20
+        },
+        "url": "https://www.sfmta.com/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 1220,
+          "right": 1265,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 45,
+          "scrollWidth": 45,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.sfmta.com/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "reason": "Checked the declared outcome after the click action."
+    },
+    {
+      "id": "statcounter-edit-chart",
+      "persona": "keyboard-only",
+      "url": "https://gs.statcounter.com/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:45:06.039Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 1038.578125,
+          "right": 1180.578125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 140,
+          "scrollWidth": 140,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://gs.statcounter.com/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "before": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 1038.578125,
+          "right": 1180.578125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 140,
+          "scrollWidth": 140,
+          "inView": true,
+          "fits": true
+        },
+        "traversal": {
+          "reached": false,
+          "tabs": 31,
+          "exhausted": true
+        },
+        "status": "fail",
+        "reason": "Tab traversal did not reach the target."
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 1038.578125,
+          "right": 1180.578125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 140,
+          "scrollWidth": 140,
+          "inView": true,
+          "fits": true
+        },
+        "traversal": {
+          "reached": true,
+          "tabs": 6
+        },
+        "url": "https://gs.statcounter.com/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 1038.578125,
+          "right": 1180.578125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 140,
+          "scrollWidth": 140,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://gs.statcounter.com/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the click action."
+      },
+      "reason": "Checked the declared outcome after the click action."
+    },
+    {
+      "id": "uline-com-tr2",
+      "persona": "low-vision",
+      "url": "https://www.uline.com/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:45:11.484Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 185.015625,
+          "right": 1097.984375,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 1240,
+          "scrollWidth": 1240,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.uline.com/",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The target does not fit the visible width.",
+        "geometry": {
+          "left": 61.515625,
+          "right": 918.484375,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 980,
+          "scrollWidth": 980,
+          "inView": false,
+          "fits": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 11.578125,
+          "right": 308.421875,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.uline.com/",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 35,
+          "right": 947.96875,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 1240,
+          "scrollWidth": 1240,
+          "inView": false,
+          "fits": true
+        },
+        "url": "https://www.uline.com/",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "reason": "Checked the declared outcome after the read action."
+    },
+    {
+      "id": "unglobalcompact-org-tr2",
+      "persona": "screen-reader-view",
+      "url": "https://unglobalcompact.org/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:45:20.891Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 1122.609375,
+          "right": 1241.609375,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 91,
+          "scrollWidth": 91,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://unglobalcompact.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The expected usable role and name were absent from Reading view.",
+        "geometry": {
+          "left": 1122.609375,
+          "right": 1241.609375,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 91,
+          "scrollWidth": 91,
+          "inView": true,
+          "fits": true
+        },
+        "reader": {
+          "role": "textbox",
+          "name": "",
+          "state": "",
+          "editable": true,
+          "activatable": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 1122.609375,
+          "right": 1241.609375,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 91,
+          "scrollWidth": 91,
+          "inView": true,
+          "fits": true
+        },
+        "reader": {
+          "role": "textbox",
+          "name": "Search",
+          "state": "",
+          "editable": true,
+          "activatable": false
+        },
+        "url": "https://unglobalcompact.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 1122.609375,
+          "right": 1241.609375,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 91,
+          "scrollWidth": 91,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://unglobalcompact.org/",
+        "checks": [
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the type action."
+      },
+      "reason": "Checked the declared outcome after the type action."
+    },
+    {
+      "id": "unicode-standard-reflow",
+      "persona": "low-vision",
+      "url": "https://www.unicode.org/standard/standard.html",
+      "runner": "playwright",
+      "at": "2026-11-23T16:45:34.362Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 584.296875,
+          "right": 768.203125,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 688,
+          "scrollWidth": 688,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.unicode.org/standard/standard.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The target does not fit the visible width.",
+        "geometry": {
+          "left": 212.921875,
+          "right": 396.828125,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 213,
+          "scrollWidth": 213,
+          "inView": true,
+          "fits": false
+        }
+      },
+      "after": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 8,
+          "right": 191.90625,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 184,
+          "scrollWidth": 184,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.unicode.org/standard/standard.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "geometry": {
+          "left": 189.953125,
+          "right": 373.859375,
+          "width": 1280,
+          "scrollX": 0,
+          "clientWidth": 184,
+          "scrollWidth": 184,
+          "inView": true,
+          "fits": true
+        },
+        "url": "https://www.unicode.org/standard/standard.html",
+        "checks": [
+          true,
+          true
+        ],
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "reason": "Checked the declared outcome after the read action."
+    },
+    {
+      "id": "unitconverters-length",
+      "persona": "low-vision",
+      "url": "https://www.unitconverters.net/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:48:31.296Z",
+      "status": "still-verified",
+      "control": {
+        "runner": "playwright",
+        "status": "pass",
+        "reason": "The input sequence reached the declared result."
+      },
+      "before": {
+        "runner": "playwright",
+        "status": "fail",
+        "reason": "The control extends past the visible width: #toVal"
+      },
+      "after": {
+        "runner": "playwright",
+        "status": "pass",
+        "reason": "The input sequence reached the declared result."
+      },
+      "afterControl": {
+        "runner": "playwright",
+        "status": "pass",
+        "reason": "The input sequence reached the declared result."
+      },
+      "reason": "The input sequence reached the declared result."
+    },
+    {
+      "id": "ventusky-precipitation",
+      "persona": "keyboard-only",
+      "url": "https://www.ventusky.com/",
+      "runner": "playwright",
+      "at": "2026-11-23T16:45:38.149Z",
+      "status": "inconclusive",
+      "control": {
+        "runner": "playwright",
+        "status": "inconclusive",
+        "reason": "The unique target was not visible."
+      },
+      "reason": "Pointer control: The unique target was not visible."
+    },
+    {
+      "id": "w3schools-select-swatch",
+      "persona": "keyboard-only",
+      "url": "https://www.w3schools.com/colors/colors_picker.asp#main",
+      "runner": "playwright",
+      "at": "2026-11-23T16:45:38.919Z",
+      "status": "inconclusive",
+      "control": {
+        "runner": "playwright",
+        "status": "inconclusive",
+        "reason": "The unique target was not visible."
+      },
+      "reason": "Pointer control: The unique target was not visible."
+    }
+  ]
+}

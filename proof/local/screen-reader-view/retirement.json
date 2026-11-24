@@ -1,0 +1,30 @@
+{
+  "source": "local-playwright",
+  "published": false,
+  "patch": {
+    "id": "reader-search-products",
+    "url": "http://127.0.0.1:4317/fixtures/shop/?fixed=1",
+    "site": "127.0.0.1",
+    "match": "http://127.0.0.1:4317/fixtures/shop/",
+    "persona": "screen-reader-view",
+    "task": "Use the accessibility view to find the searchbox named Search products, search for speaker, and confirm one result named Porch Speaker.",
+    "barrier": "The search input has no accessible name, so the reading view lists an unnamed searchbox.",
+    "rules": [
+      {
+        "selector": "#search",
+        "action": "addLabel",
+        "value": "Search products"
+      }
+    ],
+    "status": "retired",
+    "evidence": {},
+    "history": [
+      {
+        "at": "2026-11-21T19:07:31.375Z",
+        "event": "retired",
+        "without": "pass",
+        "video": "proof/local/screen-reader-view/recheck-without.mp4"
+      }
+    ]
+  }
+}

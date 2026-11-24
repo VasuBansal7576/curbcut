@@ -1,0 +1,60 @@
+{
+  "id": "v4-50bcbe90d147-64e49612",
+  "url": "https://www.certus.com/",
+  "persona": "keyboard-only",
+  "task": "Open “SOLUTIONS” from keyboard focus or with Arrow Down and follow “Enterprise Solutions Catalog”. Confirm the public destination /enterprise-solutions-catalog/.",
+  "controlTask": "Hover “SOLUTIONS”, click “Enterprise Solutions Catalog” and confirm /enterprise-solutions-catalog/.",
+  "observedSelector": "#nav > ul > li:nth-of-type(3) > span",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/enterprise-solutions-catalog/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#nav > ul > li:nth-of-type(3)",
+    "#nav > ul > li:nth-of-type(3) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#nav > ul > li:nth-of-type(3) > span",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#nav > ul > li:nth-of-type(3) > span",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#nav > ul > li:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.certus.com",
+  "match": "https://www.certus.com/",
+  "barrier": "The SOLUTIONS trigger is a span outside the Tab order, so keyboard users cannot focus it to open the hover submenu and reach Enterprise Solutions Catalog.",
+  "rules": [
+    {
+      "selector": "#nav > ul > li:nth-of-type(3) > span",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#nav > ul > li:nth-of-type(3) > span",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "selector": "#nav > ul > li:nth-of-type(3)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

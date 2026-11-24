@@ -1,0 +1,104 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "body, #header",
+      "count": 2,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "body",
+          "classes": [],
+          "label": "Global Chemical Network — Chemical Suppliers, Manufacturers & Products function getCookie(c_name) { "
+        },
+        {
+          "tag": "div",
+          "id": "header",
+          "classes": [],
+          "label": "function getCookie(c_name) { if (document.cookie.length>0) { c_start=document.cookie.indexOf(c_name "
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "#header > .header02, #nav, #nav > ul, #nav > ul > li.nav_bg02",
+      "count": 4,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "header02"
+          ],
+          "label": "Global Chemical Network Home | Products | Suppliers | Offer to Buy | Offer to Sell | ChemNet News | "
+        },
+        {
+          "tag": "div",
+          "id": "nav",
+          "classes": [],
+          "label": "Home | Products | Suppliers | Offer to Buy | Offer to Sell | ChemNet News | REACH | CAS | Resource |"
+        },
+        {
+          "tag": "ul",
+          "classes": [],
+          "label": "Home | Products | Suppliers | Offer to Buy | Offer to Sell | ChemNet News | REACH | CAS | Resource |"
+        },
+        {
+          "tag": "li",
+          "classes": [
+            "nav_bg02"
+          ],
+          "label": "Home | Products | Suppliers | Offer to Buy | Offer to Sell | ChemNet News | REACH | CAS | Resource |"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "field": "selector",
+      "selector": "#nav > ul > li.nav_bg02, #nav > ul > li.nav_bg02 > a",
+      "count": 11,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "li",
+          "classes": [
+            "nav_bg02"
+          ],
+          "label": "Home | Products | Suppliers | Offer to Buy | Offer to Sell | ChemNet News | REACH | CAS | Resource |"
+        },
+        {
+          "tag": "a",
+          "classes": [
+            "yellow",
+            "fb"
+          ],
+          "label": "Home"
+        },
+        {
+          "tag": "a",
+          "classes": [
+            "white"
+          ],
+          "label": "Products"
+        },
+        {
+          "tag": "a",
+          "classes": [
+            "white"
+          ],
+          "label": "Suppliers"
+        },
+        {
+          "tag": "a",
+          "classes": [
+            "white"
+          ],
+          "label": "Offer to Buy"
+        }
+      ]
+    }
+  ]
+}

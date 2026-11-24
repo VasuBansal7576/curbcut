@@ -1,0 +1,23 @@
+{
+  "barrier": "The Yearbook span already has tabindex=\"0\", but the observed Tab traversal never reaches it. Its desktop submenu stays hidden until the disclosure is activated.",
+  "rules": [
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#main-nav > ul.navbar-nav",
+      "items": "#main-nav > ul.navbar-nav > li > .nav-link[tabindex=\"0\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    },
+    {
+      "selector": "#yearbook-dropdown > span",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#yearbook-dropdown > span",
+      "target": "#yearbook-level-2-nav-desktop",
+      "mode": "display",
+      "display": "grid"
+    }
+  ]
+}

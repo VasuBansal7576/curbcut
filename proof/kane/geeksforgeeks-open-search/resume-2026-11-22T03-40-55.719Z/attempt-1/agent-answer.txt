@@ -1,0 +1,9 @@
+{
+  "barrier": "The header search toggle is a span with tabIndex -1, so Tab skips it.",
+  "rules": [
+    {"selector": ".gs-toggle-icon", "action": "makeFocusable"},
+    {"selector": ".gs-toggle-icon", "action": "setRole", "value": "button"},
+    {"selector": ".gs-toggle-icon", "action": "bindEnterToClick"},
+    {"selector": ".gs-toggle-icon", "action": "restoreFocusOutline"}
+  ]
+}

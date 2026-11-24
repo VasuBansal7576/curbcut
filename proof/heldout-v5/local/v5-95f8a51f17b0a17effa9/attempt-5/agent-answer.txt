@@ -1,0 +1,30 @@
+{
+  "barrier": "The carousel clips the passage when its slide is hidden, and the visible passage measured over 1,100 CSS pixels wide in the 320-pixel run.",
+  "rules": [
+    {
+      "selector": "html, body",
+      "action": "injectCSS",
+      "value": {"width":"100%","min-width":"0","box-sizing":"border-box"}
+    },
+    {
+      "selector": ".container.product:has(> #myCarousel1), .container:has(#myCarousel1), #myCarousel1",
+      "action": "injectCSS",
+      "value": {"width":"100%","min-width":"0","max-width":"100%","box-sizing":"border-box"}
+    },
+    {
+      "selector": "#myCarousel1 > .carousel-inner > .item:first-child",
+      "action": "injectCSS",
+      "value": {"display":"block","width":"100%","min-width":"0","height":"auto"}
+    },
+    {
+      "selector": "#myCarousel1 > .carousel-inner > .item:first-child > ul, #myCarousel1 > .carousel-inner > .item:first-child > ul > li#cont",
+      "action": "injectCSS",
+      "value": {"display":"block","width":"100%","min-width":"0","box-sizing":"border-box","height":"auto"}
+    },
+    {
+      "selector": "#myCarousel1 li#cont > ul.list-inline, #myCarousel1 li#cont > ul.list-inline > li",
+      "action": "injectCSS",
+      "value": {"display":"block","width":"auto","min-width":"0","max-width":"100%","box-sizing":"border-box","height":"auto","white-space":"normal","overflow-wrap":"anywhere"}
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "barrier": "The customer-service trigger is an anchor without href or an explicit tabindex. Tab and Shift+Tab skipped it, so Enter could not activate its click action.",
+  "rules": [
+    {"selector": "a.zixun_modal_btn", "action": "makeFocusable"},
+    {"selector": "a.zixun_modal_btn", "action": "setRole", "value": "button"},
+    {"selector": "a.zixun_modal_btn", "action": "bindEnterToClick"},
+    {"selector": "a.zixun_modal_btn", "action": "restoreFocusOutline"}
+  ]
+}

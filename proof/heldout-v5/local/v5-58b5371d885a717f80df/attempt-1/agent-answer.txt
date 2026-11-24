@@ -1,0 +1,30 @@
+{
+  "barrier": "The headline sits in a 960px-wide flex container inside a section with a 1200px minimum width. At 320 CSS pixels, the paragraph starts 121px from the left and extends to 839px, where horizontal clipping cuts off the text.",
+  "rules": [
+    {
+      "selector": "body > div.main:has(> div.con > div.bw_bigtit.le > p)",
+      "action": "injectCSS",
+      "value": {"min-width": "0", "max-width": "100%"}
+    },
+    {
+      "selector": "body > div.main > div.con:has(> div.bw_bigtit.le > p)",
+      "action": "injectCSS",
+      "value": {"max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "body > div.main > div.con > div.bw_bigtit.le:has(> p)",
+      "action": "injectCSS",
+      "value": {"display": "block", "max-width": "100%", "box-sizing": "border-box", "height": "auto"}
+    },
+    {
+      "selector": "body > div.main > div.con > div.bw_bigtit.le > :is(h1, p)",
+      "action": "injectCSS",
+      "value": {"max-width": "100%", "box-sizing": "border-box", "height": "auto", "white-space": "normal", "overflow-wrap": "anywhere"}
+    },
+    {
+      "selector": "body > div.main > div.con > div.bw_bigtit.le > :is(h1, p) > a",
+      "action": "injectCSS",
+      "value": {"max-width": "100%", "white-space": "normal", "overflow-wrap": "anywhere"}
+    }
+  ]
+}

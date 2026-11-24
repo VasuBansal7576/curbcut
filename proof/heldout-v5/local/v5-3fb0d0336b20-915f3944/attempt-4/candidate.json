@@ -1,0 +1,46 @@
+{
+  "id": "v5-3fb0d0336b20-915f3944",
+  "url": "https://www.productmadness.com/",
+  "persona": "keyboard-only",
+  "task": "Activate “Next” from the keyboard and confirm the next slide is shown.",
+  "controlTask": "Click “Next” and confirm the next slide is shown.",
+  "observedSelector": "section:nth-of-type(6) > div > div > div:nth-of-type(2) > div > div > button:nth-of-type(2)",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#slick-slide11.slick-current"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "section:nth-of-type(6) > div > div > div:nth-of-type(2) > div > div",
+    "section:nth-of-type(6) > div > div > div:nth-of-type(2) > div > div > button:nth-of-type(1)",
+    "#slick-slide11"
+  ],
+  "journey": [
+    {
+      "selector": "section:nth-of-type(6) > div > div > div:nth-of-type(2) > div > div > button:nth-of-type(2)",
+      "action": "activate"
+    },
+    {
+      "selector": "#slick-slide11.slick-current",
+      "action": "observe"
+    }
+  ],
+  "site": "www.productmadness.com",
+  "match": "https://www.productmadness.com/",
+  "barrier": "Tab reaches the native Next button, but its focused box spans 1250 pixels and extends past the slider’s right edge. The pointer run shows the same button at 25 pixels wide.",
+  "rules": [
+    {
+      "selector": ".icons-text-slider .slider-row > .col-12 > .slider > button.slick-next.slick-arrow[aria-label=\"Next\"]",
+      "action": "injectCSS",
+      "value": {
+        "width": "fit-content",
+        "min-width": "0"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

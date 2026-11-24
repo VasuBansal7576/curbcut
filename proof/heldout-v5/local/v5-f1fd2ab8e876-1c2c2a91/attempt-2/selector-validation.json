@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "trigger",
+      "selector": "#hdr-menu button[aria-controls=\"hdr-assistenza\"]",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "h2",
+            "hndl"
+          ],
+          "label": "Assistenza"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "target",
+      "selector": "#hdr-assistenza",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "hdr-assistenza",
+          "classes": [
+            "aree"
+          ],
+          "label": "Assistenza Casa e Mobile Energia"
+        }
+      ]
+    }
+  ]
+}

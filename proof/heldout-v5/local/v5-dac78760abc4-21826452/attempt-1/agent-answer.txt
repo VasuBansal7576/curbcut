@@ -1,0 +1,14 @@
+{
+  "barrier": "The open Privacy dialog has no tab stop on the dialog element itself, and focus remained on the page body when the keyboard journey tried to reach it.",
+  "rules": [
+    {
+      "selector": "#onetrust-banner-sdk > div[role=\"dialog\"]",
+      "action": "makeFocusable"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#onetrust-banner-sdk > div[role=\"dialog\"]",
+      "close": "#onetrust-close-btn-container > button"
+    }
+  ]
+}

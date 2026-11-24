@@ -1,0 +1,52 @@
+{
+  "id": "sanantonio-library-reader",
+  "url": "https://www.mysapl.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, locate the textbox named “Search Catalog”. Enter the text test and confirm the field contains it. Do not submit.",
+  "controlTask": "Click the public text field with the visible hint “Search Catalog”, type test and confirm the value. Do not submit.",
+  "observedSelector": "#searchTermsCatalog",
+  "requiredName": "Search Catalog",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#searchTermsCatalog",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.mysapl.org",
+  "match": "https://www.mysapl.org/",
+  "barrier": "The catalog search input has no accessible name, so Reading view lists it as an unnamed textbox.",
+  "rules": [
+    {
+      "selector": "#searchTermsCatalog",
+      "action": "addLabel",
+      "value": "Search Catalog"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane/sanantonio-library-reader/heldout-v2/before/recording.mp4",
+    "after": "proof/kane/sanantonio-library-reader/heldout-v2/attempt-1/after/recording.mp4",
+    "control": "proof/kane/sanantonio-library-reader/heldout-v2/control/recording.mp4",
+    "verifiedAt": "2026-11-22T14:34:12.039Z",
+    "kaneRunIds": [
+      "d7b5a631-abdd-41c0-b714-94d511df5b15",
+      "b58e7824-0ce9-4f71-a23e-6db155779cd0",
+      "36fb53a9-1e55-4230-a9da-8cdd3de7a8ce"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-22T14:34:12.039Z",
+      "event": "verified",
+      "before": "d7b5a631-abdd-41c0-b714-94d511df5b15",
+      "control": "b58e7824-0ce9-4f71-a23e-6db155779cd0",
+      "after": "36fb53a9-1e55-4230-a9da-8cdd3de7a8ce"
+    }
+  ]
+}

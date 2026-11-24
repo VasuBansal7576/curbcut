@@ -1,0 +1,1169 @@
+{
+  "runner": "playwright",
+  "status": "fail",
+  "reason": "locator.click: Timeout 1500ms exceeded.",
+  "steps": [
+    {
+      "selector": "#menu-item-445 > a",
+      "action": "focus"
+    },
+    {
+      "selector": "#menu-item-445 > a",
+      "action": "key",
+      "key": "ArrowDown"
+    },
+    {
+      "selector": "#menu-item-446 > a",
+      "action": "activate"
+    }
+  ],
+  "url": "https://imp.ch/",
+  "snapshot": {
+    "url": "https://imp.ch/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "#top",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#menu-item-445 > a",
+          "parent": "#menu-item-445",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "Unternehmen",
+          "children": [],
+          "box": [
+            206,
+            127,
+            141,
+            41
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-445",
+          "parent": "#imp-nav-list",
+          "tag": "li",
+          "attributes": {
+            "id": "menu-item-445",
+            "class": "menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-445"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a",
+            "ul.sub-menu"
+          ],
+          "box": [
+            206,
+            127,
+            142,
+            41
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#imp-nav-list",
+          "parent": "#imp-nav",
+          "tag": "ul",
+          "attributes": {
+            "id": "imp-nav-list",
+            "class": "imp-nav__list"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-item-444",
+            "#menu-item-445",
+            "#menu-item-451"
+          ],
+          "box": [
+            160,
+            127,
+            960,
+            41
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#imp-nav",
+          "parent": "div.imp-header__bottom",
+          "tag": "nav",
+          "attributes": {
+            "class": "imp-nav",
+            "id": "imp-nav",
+            "aria-label": "Hauptmenü"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "button.imp-nav__toggle",
+            "#imp-nav-list"
+          ],
+          "box": [
+            160,
+            126,
+            960,
+            42
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.imp-header__bottom",
+          "parent": "header.imp-header > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "imp-header__bottom"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#imp-nav"
+          ],
+          "box": [
+            160,
+            126,
+            960,
+            42
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "header.imp-header > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "imp-wrap"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.imp-header__top",
+            "div.imp-header__bottom"
+          ],
+          "box": [
+            160,
+            0,
+            960,
+            168
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-445 > ul",
+          "parent": "#menu-item-445",
+          "tag": "ul",
+          "attributes": {
+            "class": "sub-menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-item-446",
+            "#menu-item-447",
+            "#menu-item-448",
+            "#menu-item-449",
+            "#menu-item-450"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "50",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-446 > a",
+          "parent": "#menu-item-446",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "Über uns",
+          "children": [],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-446",
+          "parent": "#menu-item-445 > ul",
+          "tag": "li",
+          "attributes": {
+            "id": "menu-item-446",
+            "class": "menu-item menu-item-type-post_type menu-item-object-page menu-item-446"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover, a:focus",
+          "declarations": "text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": ".imp-nav a:hover, .imp-nav .current-menu-item > a, .imp-nav .current-menu-ancestor > a",
+          "declarations": "color: var(--imp-pink); text-decoration: none;",
+          "conditions": []
+        },
+        {
+          "selector": ".imp-nav li:hover > .sub-menu, .imp-nav li:focus-within > .sub-menu",
+          "declarations": "display: block;",
+          "conditions": []
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#menu-item-445",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 206,
+        "width": 142
+      },
+      {
+        "selector": "#menu-item-445 > ul",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#menu-item-445 > a",
+        "role": "link",
+        "name": "Unternehmen",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 206,
+        "width": 141
+      },
+      {
+        "selector": "#menu-item-446 > a",
+        "role": "link",
+        "name": "Über uns",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#imp-nav-list",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 160,
+        "width": 960
+      },
+      {
+        "selector": "#top",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "a.screen-reader-text",
+        "role": "link",
+        "name": "Zum Inhalt springen",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": -10000,
+        "width": 1
+      },
+      {
+        "selector": "header.imp-header",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#content",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tag": "main",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#imp-footer",
+        "role": "contentinfo",
+        "name": "",
+        "state": "",
+        "tag": "footer",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#imp-gotop",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": true,
+        "hasHref": true,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "div.imp-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 160,
+        "width": 960
+      },
+      {
+        "selector": "div.imp-header__top",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 160,
+        "width": 960
+      },
+      {
+        "selector": "a.imp-logo",
+        "role": "link",
+        "name": "ImproWare AG – Startseite",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 160,
+        "width": 945
+      },
+      {
+        "selector": "img",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 220,
+        "width": 200
+      },
+      {
+        "selector": "div.imp-header__bottom",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 160,
+        "width": 960
+      },
+      {
+        "selector": "#imp-nav",
+        "role": "navigation",
+        "name": "Hauptmenü",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 160,
+        "width": 960
+      },
+      {
+        "selector": "#menu-item-444",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 160,
+        "width": 46
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "info@imp.ch",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 1041,
+        "width": 64
+      },
+      {
+        "selector": "#menu-item-451",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 348,
+        "width": 236
+      },
+      {
+        "selector": "section.imp-slider",
+        "role": "region",
+        "name": "Aktuelles",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 175,
+        "width": 930
+      },
+      {
+        "selector": "div.imp-slider__scale",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 175,
+        "width": 930
+      },
+      {
+        "selector": "div.imp-slide.is-active",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 175,
+        "width": 930
+      },
+      {
+        "selector": "a.imp-it.imp-it--img",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 219,
+        "width": 202
+      },
+      {
+        "selector": "div.imp-it.imp-it--text",
+        "role": "text",
+        "name": "Auf dem Weg in die Gigabit Gesellschaft",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 488,
+        "width": 350
+      },
+      {
+        "selector": "button.imp-slider__arrow.imp-slider__arrow--prev",
+        "role": "button",
+        "name": "Zurück",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 179,
+        "width": 31
+      },
+      {
+        "selector": "button.imp-slider__arrow.imp-slider__arrow--next",
+        "role": "button",
+        "name": "Weiter",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1070,
+        "width": 31
+      },
+      {
+        "selector": "div.imp-slider__nav",
+        "role": "tablist",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 175,
+        "width": 930
+      },
+      {
+        "selector": "button.is-active",
+        "role": "button",
+        "name": "Slide 1",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 619,
+        "width": 10
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "Slide 3",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 651,
+        "width": 10
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#menu-item-445 > a",
+          "parent": "#menu-item-445",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "Unternehmen",
+          "children": [],
+          "box": [
+            206,
+            127,
+            141,
+            41
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-445",
+          "parent": "#imp-nav-list",
+          "tag": "li",
+          "attributes": {
+            "id": "menu-item-445",
+            "class": "menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-445"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a",
+            "ul.sub-menu"
+          ],
+          "box": [
+            206,
+            127,
+            142,
+            41
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#imp-nav-list",
+          "parent": "#imp-nav",
+          "tag": "ul",
+          "attributes": {
+            "id": "imp-nav-list",
+            "class": "imp-nav__list"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-item-444",
+            "#menu-item-445",
+            "#menu-item-451"
+          ],
+          "box": [
+            160,
+            127,
+            960,
+            41
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#imp-nav",
+          "parent": "div.imp-header__bottom",
+          "tag": "nav",
+          "attributes": {
+            "class": "imp-nav",
+            "id": "imp-nav",
+            "aria-label": "Hauptmenü"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "button.imp-nav__toggle",
+            "#imp-nav-list"
+          ],
+          "box": [
+            160,
+            126,
+            960,
+            42
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.imp-header__bottom",
+          "parent": "header.imp-header > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "imp-header__bottom"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#imp-nav"
+          ],
+          "box": [
+            160,
+            126,
+            960,
+            42
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "header.imp-header > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "imp-wrap"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.imp-header__top",
+            "div.imp-header__bottom"
+          ],
+          "box": [
+            160,
+            0,
+            960,
+            168
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-445 > ul",
+          "parent": "#menu-item-445",
+          "tag": "ul",
+          "attributes": {
+            "class": "sub-menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-item-446",
+            "#menu-item-447",
+            "#menu-item-448",
+            "#menu-item-449",
+            "#menu-item-450"
+          ],
+          "box": [
+            206,
+            168,
+            260,
+            206
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "50",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-446 > a",
+          "parent": "#menu-item-446",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "Über uns",
+          "children": [],
+          "box": [
+            207,
+            169,
+            258,
+            41
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-446",
+          "parent": "#menu-item-445 > ul",
+          "tag": "li",
+          "attributes": {
+            "id": "menu-item-446",
+            "class": "menu-item menu-item-type-post_type menu-item-object-page menu-item-446"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a"
+          ],
+          "box": [
+            207,
+            169,
+            258,
+            41
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover, a:focus",
+          "declarations": "text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": ".imp-nav a:hover, .imp-nav .current-menu-item > a, .imp-nav .current-menu-ancestor > a",
+          "declarations": "color: var(--imp-pink); text-decoration: none;",
+          "conditions": []
+        },
+        {
+          "selector": ".imp-nav li:hover > .sub-menu, .imp-nav li:focus-within > .sub-menu",
+          "declarations": "display: block;",
+          "conditions": []
+        }
+      ]
+    }
+  }
+}

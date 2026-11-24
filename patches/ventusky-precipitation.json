@@ -1,0 +1,63 @@
+{
+  "id": "ventusky-precipitation",
+  "url": "https://www.ventusky.com/",
+  "persona": "keyboard-only",
+  "task": "First assert the Precipitation anchor in the Forecast panel has either a link destination or an explicit tabindex of 0. Use Tab and Enter to switch from Temperature to Precipitation and verify the 3 hours accumulation option.",
+  "controlTask": "Click Precipitation in the Forecast panel. Verify that the page shows the Precipitation map and the 3 hours accumulation option.",
+  "observedSelector": "#i > a:has(> span.rain)",
+  "successSelector": "#i > a.p:has(> span.rain)",
+  "site": "www.ventusky.com",
+  "match": "https://www.ventusky.com/",
+  "barrier": "The Forecast panel’s Precipitation control is an anchor exposed as text with no href or explicit tabindex, so it lacks native Tab focus and Enter activation.",
+  "rules": [
+    {
+      "selector": "#i > a:has(> span.rain)",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#i > a:has(> span.rain)",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#i > a:has(> span.rain)",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#i > a:has(> span.rain)",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane/ventusky-precipitation/2026-11-22T10-55-11.916Z/recheck-without/recording.mp4",
+    "after": "proof/kane/ventusky-precipitation/resume-2026-11-22T03-36-41.810Z/attempt-1/after/recording.mp4",
+    "control": "proof/kane/ventusky-precipitation/resume-2026-11-22T03-36-41.810Z/control/recording.mp4",
+    "verifiedAt": "2026-11-22T03:40:21.390Z",
+    "kaneRunIds": [
+      "c78d6006-c215-48b2-9e3b-6d4519c89c45",
+      "ee2bae32-d42c-4d5c-b0d9-54c82b6e4fe7",
+      "8559edaa-1afe-42f7-9068-5e7048846ba8"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-22T03:40:21.390Z",
+      "event": "verified",
+      "before": "aefafb4e-c1c2-49d7-9ee8-18a7c615aa28",
+      "control": "ee2bae32-d42c-4d5c-b0d9-54c82b6e4fe7",
+      "after": "8559edaa-1afe-42f7-9068-5e7048846ba8"
+    },
+    {
+      "at": "2026-11-22T10:59:23.102Z",
+      "event": "rechecked",
+      "without": "fail",
+      "runId": "c78d6006-c215-48b2-9e3b-6d4519c89c45",
+      "video": "proof/kane/ventusky-precipitation/2026-11-22T10-55-11.916Z/recheck-without/recording.mp4",
+      "with": "pass",
+      "after": "2f0d2a79-5516-4a7a-b642-0474f8b3edad",
+      "afterVideo": "proof/kane/ventusky-precipitation/2026-11-22T10-55-11.916Z/recheck-with/recording.mp4",
+      "replacedBaseline": "aefafb4e-c1c2-49d7-9ee8-18a7c615aa28"
+    }
+  ]
+}

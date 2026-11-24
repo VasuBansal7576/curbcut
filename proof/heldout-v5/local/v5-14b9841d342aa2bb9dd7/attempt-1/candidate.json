@@ -1,0 +1,57 @@
+{
+  "id": "v5-14b9841d342aa2bb9dd7",
+  "url": "https://goinvest.ru/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Сделки на фондовом, валютном и срочном рынках можно совершать из одного портфеля.” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Сделки на фондовом, валютном и срочном рынках можно совершать из одного портфеля.” at normal width.",
+  "observedSelector": "#show-sticky > div > div > div > div:nth-of-type(4) > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#show-sticky > div > div > div > div:nth-of-type(4) > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > p",
+      "equals": "Сделки на фондовом, валютном и срочном рынках можно совершать из одного портфеля."
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#show-sticky > div > div > div > div:nth-of-type(4) > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "goinvest.ru",
+  "match": "https://goinvest.ru/",
+  "barrier": "At 320 CSS pixels, the passage starts 54 pixels from the left and remains 650 pixels wide inside a 1140-pixel flex row. The page clips the portion beyond the viewport.",
+  "rules": [
+    {
+      "selector": "#goinvest div:has(#show-sticky), #show-sticky, #show-sticky div:has(> div p.aXVKh2.HXVKh2.pWiO7O._6WiO7O), #show-sticky div:has(> p.aXVKh2.HXVKh2.pWiO7O._6WiO7O)",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#show-sticky div.acIQqU.gcIQqU.pcIQqU:has(> div.kcIQqU.lcIQqU > div > p.aXVKh2.HXVKh2.pWiO7O._6WiO7O)",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "#show-sticky p.aXVKh2.HXVKh2.pWiO7O._6WiO7O",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "max-width": "100%",
+        "height": "auto",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

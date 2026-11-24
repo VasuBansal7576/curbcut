@@ -1,0 +1,1812 @@
+{
+  "runner": "playwright",
+  "status": "pass",
+  "reason": "The complete journey reached the declared outcome.",
+  "steps": [
+    {
+      "selector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > a",
+      "action": "focus"
+    },
+    {
+      "selector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown"
+    },
+    {
+      "selector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "url": "https://www.mordorintelligence.com/market-analysis/aerospace-defense",
+  "checks": [
+    true
+  ],
+  "snapshot": {
+    "url": "https://www.mordorintelligence.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > a",
+          "parent": "ul.flex.nav-items > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "Reports",
+          "children": [],
+          "box": [
+            476,
+            20,
+            53,
+            19
+          ],
+          "style": {
+            "display": "inline",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.flex.nav-items > li:nth-of-type(1)",
+          "parent": "ul.flex.nav-items",
+          "tag": "li",
+          "attributes": {
+            "class": "nav-item has-dropdown store-item"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a",
+            "ul.dropdown.dropdown-big"
+          ],
+          "box": [
+            461,
+            3,
+            83,
+            54
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.flex.nav-items",
+          "parent": "nav.flex.nav-items-container",
+          "tag": "ul",
+          "attributes": {
+            "class": "flex nav-items"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.nav-item.has-dropdown",
+            "li.nav-item.has-dropdown",
+            "li.nav-item.has-dropdown",
+            "li.nav-item.has-dropdown",
+            "script",
+            "li.nav-item.has-dropdown"
+          ],
+          "box": [
+            461,
+            3,
+            719,
+            54
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav.flex.nav-items-container",
+          "parent": "#header > div:nth-of-type(1)",
+          "tag": "nav",
+          "attributes": {
+            "role": "navigation",
+            "class": "flex nav-items-container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.flex.nav-items"
+          ],
+          "box": [
+            461,
+            3,
+            719,
+            54
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "3",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          }
+        },
+        {
+          "selector": "#header > div:nth-of-type(1)",
+          "parent": "#header",
+          "tag": "div",
+          "attributes": {
+            "class": "flex layout-container new-nav-container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.flex.logo-nav-button",
+            "nav.flex.nav-items-container",
+            "div.d-flex"
+          ],
+          "box": [
+            100,
+            0,
+            1080,
+            60
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header",
+          "tag": "header",
+          "attributes": {
+            "id": "header",
+            "class": "site-header-wrapper"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.flex.layout-container",
+            "div.search-results-container"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            60
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "fixed",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "20",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > ul",
+          "parent": "ul.flex.nav-items > li:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "dropdown dropdown-big"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.dropdown-nav-item",
+            "li.dropdown-nav-item",
+            "li.dropdown-nav-item",
+            "li.dropdown-nav-item",
+            "li.dropdown-nav-item",
+            "li.dropdown-nav-item"
+          ],
+          "box": [
+            476,
+            42,
+            500,
+            452
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "hidden",
+            "opacity": "0",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "3",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+          "parent": "ul.dropdown.dropdown-big > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "Aerospace & Defense",
+          "children": [],
+          "box": [
+            502,
+            57,
+            145,
+            19
+          ],
+          "style": {
+            "display": "inline",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.dropdown.dropdown-big > li:nth-of-type(1)",
+          "parent": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > ul",
+          "tag": "li",
+          "attributes": {
+            "class": "dropdown-nav-item"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a"
+          ],
+          "box": [
+            502,
+            55,
+            222,
+            24
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(0, 86, 179); text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": ".breadcrumb a:hover, .nav-items-container a:hover, .report-category:hover, .report-sub-category:hover, .report-title-link:hover, .section-wise-price:hover",
+          "declarations": "text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": ".nav-item:hover, .price-selection-wrapper .getSectionWisePricing:hover, .section-wise-price",
+          "declarations": "cursor: pointer;",
+          "conditions": []
+        },
+        {
+          "selector": ".has-dropdown:hover > .dropdown",
+          "declarations": "visibility: visible; opacity: 1; margin-top: 15px; transition-delay: 0s; box-shadow: rgb(221, 221, 221) 0px 0px 4px 1px;",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".has-dropdown:hover > .mobile-dropdown",
+          "declarations": "visibility: visible; opacity: 1; margin-top: 15px; transition-delay: 0s; box-shadow: rgb(221, 221, 221) 0px 0px 4px 1px;",
+          "conditions": [
+            "(max-width: 991px)"
+          ]
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1)",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 461,
+        "width": 83
+      },
+      {
+        "selector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > ul",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 476,
+        "width": 500
+      },
+      {
+        "selector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > a",
+        "role": "link",
+        "name": "Reports",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 476,
+        "width": 53
+      },
+      {
+        "selector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 502,
+        "width": 145
+      },
+      {
+        "selector": "ul.flex.nav-items",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 461,
+        "width": 719
+      },
+      {
+        "selector": "body",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html.mi-chat-active",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "style",
+        "role": "text",
+        "name": ".language-switcher-btn{display:flex;align-items:center;gap:4px;background:0 0;border:none;padding:0;color:inherit;cursor:pointer}.language-switcher-btn svg{flex-shrink:0}.language-dropdown{display:fle",
+        "state": "",
+        "tag": "style",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#header",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "script",
+        "role": "text",
+        "name": "document.addEventListener(\"DOMContentLoaded\",()=>{const e=document.querySelector(\".language-switcher\"),n=document.querySelector(\".logo-nav-button\"),t=document.querySelector(\".nav-items\");if(!e||!n||!t",
+        "state": "",
+        "tag": "script",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "main.opacity-toggle",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tag": "main",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#scrollBtn",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "div.flex.layout-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 100,
+        "width": 1080
+      },
+      {
+        "selector": "div.flex.logo-nav-button",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 100,
+        "width": 240
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Contact",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 1054,
+        "width": 55
+      },
+      {
+        "selector": "img.updated-desktop-logo",
+        "role": "img",
+        "name": "Mordor Intelligence",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 100,
+        "width": 240
+      },
+      {
+        "selector": "nav.flex.nav-items-container",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 461,
+        "width": 719
+      },
+      {
+        "selector": "li.nav-item.has-dropdown",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 859,
+        "width": 83
+      },
+      {
+        "selector": "li.nav-item",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 1039,
+        "width": 85
+      },
+      {
+        "selector": "li.nav-item.language-switcher",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 1124,
+        "width": 56
+      },
+      {
+        "selector": "button.language-trigger",
+        "role": "button",
+        "name": "Select language",
+        "state": "expanded false",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 1134,
+        "width": 36
+      },
+      {
+        "selector": "div.d-flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1180,
+        "width": 0
+      },
+      {
+        "selector": "#clicked-on-search",
+        "role": "button",
+        "name": "Open search",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1212,
+        "width": 48
+      },
+      {
+        "selector": "img.skip-context.search-icon",
+        "role": "img",
+        "name": "search icon",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 1224,
+        "width": 32
+      },
+      {
+        "selector": "div.search-results-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "div.search-results-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "#section-one",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.layout-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 100,
+        "width": 1080
+      },
+      {
+        "selector": "div.section-one_content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 100,
+        "width": 648
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Precise market intelligence and advisory.",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 100,
+        "width": 648
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "33952 reports across 100+ industry segments exhaustively covered.",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 100,
+        "width": 648
+      },
+      {
+        "selector": "div.input-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 100,
+        "width": 467
+      },
+      {
+        "selector": "#search-input",
+        "role": "textbox",
+        "name": "",
+        "state": "",
+        "tag": "input",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 100,
+        "width": 417
+      },
+      {
+        "selector": "div.search-item_container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 100,
+        "width": 467
+      },
+      {
+        "selector": "div.search-result-items",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 100,
+        "width": 467
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "document pdf",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 5616,
+        "width": 33
+      },
+      {
+        "selector": "#section-two",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.client-container.client-item_right",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.layout-container.flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 100,
+        "width": 1080
+      },
+      {
+        "selector": "div.section-two_content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 100,
+        "width": 432
+      },
+      {
+        "selector": "h3.sub-heading.hidden",
+        "role": "heading",
+        "name": "CUSTOM RESEARCH",
+        "state": "",
+        "tag": "h3",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": -332,
+        "width": 432
+      },
+      {
+        "selector": "h2.hidden.hidden-left",
+        "role": "heading",
+        "name": "Get insights before anyone else can.",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": -332,
+        "width": 432
+      },
+      {
+        "selector": "p.hidden.hidden-left",
+        "role": "text",
+        "name": "With distributed expertise and continuous support, we become a part of your growth. Our global network of experts provides real-time inputs from the field, giving you sound insights into industry chan",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": -332,
+        "width": 432
+      },
+      {
+        "selector": "a.custom-btn.view-case-studies",
+        "role": "link",
+        "name": "View reports",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 748,
+        "width": 432
+      },
+      {
+        "selector": "div.client-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "h2.hidden.hidden-right",
+        "role": "heading",
+        "name": "Why us? The Mordor Advantage",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1180,
+        "width": 1080
+      },
+      {
+        "selector": "p.hidden.hidden-right",
+        "role": "text",
+        "name": "In each report we break down and analyze the market by segments, understand the prevailing dynamics and study the companies operating in these spaces, to finally arrive at solutions that help you have",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1180,
+        "width": 432
+      },
+      {
+        "selector": "a.custom-btn.view-case-studies-download-sample-cls",
+        "role": "link",
+        "name": "Explore More",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 100,
+        "width": 432
+      },
+      {
+        "selector": "#section-three",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.hidden.hidden-right",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1180,
+        "width": 1080
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Flash Delivery",
+        "state": "",
+        "tag": "h3",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1916,
+        "width": 318
+      },
+      {
+        "selector": "p.advancate-text",
+        "role": "text",
+        "name": "With our vast database of market intelligence and an ever-growing network of experts across the value chain, we make sure you get top-notch solutions with swift turnarounds that suit your deadlines.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1916,
+        "width": 318
+      },
+      {
+        "selector": "#section-four",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "h2.testimonial-heading-home",
+        "role": "heading",
+        "name": "Testimonials",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 100,
+        "width": 1080
+      },
+      {
+        "selector": "div.container-box",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 100,
+        "width": 1080
+      },
+      {
+        "selector": "div.slider",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 100,
+        "width": 1080
+      },
+      {
+        "selector": "div.slider-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 100,
+        "width": 1080
+      },
+      {
+        "selector": "div.slider-item",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 6580,
+        "width": 1080
+      },
+      {
+        "selector": "div.slide-item-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 6580,
+        "width": 1080
+      },
+      {
+        "selector": "div.left-side-document-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 6580,
+        "width": 76
+      },
+      {
+        "selector": "img.testimonial-icon-img",
+        "role": "img",
+        "name": "testimonials icon",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 6580,
+        "width": 100
+      },
+      {
+        "selector": "div.testimonial-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 6656,
+        "width": 972
+      },
+      {
+        "selector": "div.slider-text",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 6696,
+        "width": 932
+      },
+      {
+        "selector": "p.slider-peragraph",
+        "role": "text",
+        "name": "We purchased a study on ‘Global Bioplastic Market’ from Mordor Intelligence and are happy to recommend them to any business looking for market intelligence to aid in decision making. The team at Mordo",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 6696,
+        "width": 932
+      },
+      {
+        "selector": "a.letter-of-reco-anchor",
+        "role": "link",
+        "name": "document pdf Letter of recommendation →",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 6696,
+        "width": 932
+      },
+      {
+        "selector": "div.testimonial-auth-details",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 5616,
+        "width": 932
+      },
+      {
+        "selector": "div.auth-deatils",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 5616,
+        "width": 932
+      },
+      {
+        "selector": "p.auth-details-title",
+        "role": "text",
+        "name": "Lidiya Chung",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 5616,
+        "width": 932
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Marketing research analyst Greenway Technology Co., Ltd.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 5616,
+        "width": 932
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > a",
+          "parent": "ul.flex.nav-items > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "Reports",
+          "children": [],
+          "box": [
+            476,
+            20,
+            53,
+            19
+          ],
+          "style": {
+            "display": "inline",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.flex.nav-items > li:nth-of-type(1)",
+          "parent": "ul.flex.nav-items",
+          "tag": "li",
+          "attributes": {
+            "class": "nav-item has-dropdown store-item"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a",
+            "ul.dropdown.dropdown-big"
+          ],
+          "box": [
+            461,
+            3,
+            83,
+            54
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.flex.nav-items",
+          "parent": "nav.flex.nav-items-container",
+          "tag": "ul",
+          "attributes": {
+            "class": "flex nav-items"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.nav-item.has-dropdown",
+            "li.nav-item.has-dropdown",
+            "li.nav-item.has-dropdown",
+            "li.nav-item.has-dropdown",
+            "script",
+            "li.nav-item.has-dropdown"
+          ],
+          "box": [
+            461,
+            3,
+            719,
+            54
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav.flex.nav-items-container",
+          "parent": "#header > div:nth-of-type(1)",
+          "tag": "nav",
+          "attributes": {
+            "role": "navigation",
+            "class": "flex nav-items-container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.flex.nav-items"
+          ],
+          "box": [
+            461,
+            3,
+            719,
+            54
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "3",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          }
+        },
+        {
+          "selector": "#header > div:nth-of-type(1)",
+          "parent": "#header",
+          "tag": "div",
+          "attributes": {
+            "class": "flex layout-container new-nav-container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.flex.logo-nav-button",
+            "nav.flex.nav-items-container",
+            "div.d-flex"
+          ],
+          "box": [
+            100,
+            0,
+            1080,
+            60
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header",
+          "tag": "header",
+          "attributes": {
+            "id": "header",
+            "class": "site-header-wrapper"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.flex.layout-container",
+            "div.search-results-container"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            60
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "fixed",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "20",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > ul",
+          "parent": "ul.flex.nav-items > li:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "dropdown dropdown-big"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.dropdown-nav-item",
+            "li.dropdown-nav-item",
+            "li.dropdown-nav-item",
+            "li.dropdown-nav-item",
+            "li.dropdown-nav-item",
+            "li.dropdown-nav-item"
+          ],
+          "box": [
+            476,
+            57,
+            500,
+            452
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "3",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+          "parent": "ul.dropdown.dropdown-big > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "Aerospace & Defense",
+          "children": [],
+          "box": [
+            502,
+            72,
+            145,
+            19
+          ],
+          "style": {
+            "display": "inline",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.dropdown.dropdown-big > li:nth-of-type(1)",
+          "parent": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > ul",
+          "tag": "li",
+          "attributes": {
+            "class": "dropdown-nav-item"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a"
+          ],
+          "box": [
+            502,
+            70,
+            222,
+            24
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(0, 86, 179); text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": ".breadcrumb a:hover, .nav-items-container a:hover, .report-category:hover, .report-sub-category:hover, .report-title-link:hover, .section-wise-price:hover",
+          "declarations": "text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": ".nav-item:hover, .price-selection-wrapper .getSectionWisePricing:hover, .section-wise-price",
+          "declarations": "cursor: pointer;",
+          "conditions": []
+        },
+        {
+          "selector": ".has-dropdown:hover > .dropdown",
+          "declarations": "visibility: visible; opacity: 1; margin-top: 15px; transition-delay: 0s; box-shadow: rgb(221, 221, 221) 0px 0px 4px 1px;",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".has-dropdown:hover > .mobile-dropdown",
+          "declarations": "visibility: visible; opacity: 1; margin-top: 15px; transition-delay: 0s; box-shadow: rgb(221, 221, 221) 0px 0px 4px 1px;",
+          "conditions": [
+            "(max-width: 991px)"
+          ]
+        }
+      ]
+    }
+  }
+}

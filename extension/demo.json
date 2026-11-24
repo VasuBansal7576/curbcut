@@ -1,0 +1,90 @@
+[
+  {
+    "id": "keyboard-add-headphones",
+    "url": "http://127.0.0.1:4317/fixtures/shop/",
+    "site": "127.0.0.1",
+    "match": "http://127.0.0.1:4317/fixtures/shop/",
+    "persona": "keyboard-only",
+    "task": "Using only the keyboard, search for headphones and add Field Headphones to the cart. Confirm Cart (1).",
+    "barrier": "The visible Add to cart control is a div with tabIndex -1, so Tab skips it. The search input also has no accessible name.",
+    "rules": [
+      {
+        "selector": "div.add-to-cart",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": "div.add-to-cart",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": "div.add-to-cart",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": "div.add-to-cart",
+        "action": "restoreFocusOutline"
+      },
+      {
+        "selector": "#search",
+        "action": "addLabel",
+        "value": "Search products"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {
+      "before": "proof/local/keyboard-only/before.mp4",
+      "after": "proof/local/keyboard-only/after.mp4",
+      "control": "proof/local/keyboard-only/control.mp4"
+    },
+    "history": []
+  },
+  {
+    "id": "low-vision-shop-speaker",
+    "url": "http://127.0.0.1:4317/fixtures/shop/",
+    "site": "127.0.0.1",
+    "match": "http://127.0.0.1:4317/fixtures/shop/",
+    "persona": "low-vision",
+    "task": "Without scrolling horizontally, find Porch Speaker in the unfiltered collection and add it to the cart. Confirm Cart (1).",
+    "barrier": "The #products grid places Porch Speaker in a second column, with its Add to cart button starting at x=504 outside the 320px viewport.",
+    "rules": [
+      {
+        "selector": "#products",
+        "action": "injectCSS",
+        "value": {
+          "display": "block"
+        }
+      }
+    ],
+    "status": "candidate",
+    "evidence": {
+      "before": "proof/local/low-vision/before.mp4",
+      "after": "proof/local/low-vision/after.mp4",
+      "control": "proof/local/low-vision/control.mp4"
+    },
+    "history": []
+  },
+  {
+    "id": "reader-search-products",
+    "url": "http://127.0.0.1:4317/fixtures/shop/",
+    "site": "127.0.0.1",
+    "match": "http://127.0.0.1:4317/fixtures/shop/",
+    "persona": "screen-reader-view",
+    "task": "Use the accessibility view to find the searchbox named Search products, search for speaker, and confirm one result named Porch Speaker.",
+    "barrier": "The search input has no accessible name, so the reading view lists an unnamed searchbox.",
+    "rules": [
+      {
+        "selector": "#search",
+        "action": "addLabel",
+        "value": "Search products"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {
+      "before": "proof/local/screen-reader-view/before.mp4",
+      "after": "proof/local/screen-reader-view/after.mp4",
+      "control": "proof/local/screen-reader-view/control.mp4"
+    },
+    "history": []
+  }
+]

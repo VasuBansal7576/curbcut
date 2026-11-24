@@ -1,0 +1,37 @@
+{
+  "id": "v4-acb953224d92945f289a",
+  "url": "https://www.questionai.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Our Question AI has unique features and all free, also known as” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Our Question AI has unique features and all free, also known as” at normal width.",
+  "observedSelector": "#main > div:nth-of-type(2) > main > section:nth-of-type(2) > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#main > div:nth-of-type(2) > main > section:nth-of-type(2) > p",
+      "equals": "Our Question AI has unique features and all free, also known as"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#main > div:nth-of-type(2) > main > section:nth-of-type(2) > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.questionai.com",
+  "match": "https://www.questionai.com/",
+  "barrier": "At 320 CSS pixels, the 241-pixel navigation column pushes the main content to the right. The passage spans x=257 to x=545, so horizontal clipping cuts off most of it.",
+  "rules": [
+    {
+      "selector": "div.sidebar",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

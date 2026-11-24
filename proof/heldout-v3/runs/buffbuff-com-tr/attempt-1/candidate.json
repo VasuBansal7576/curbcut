@@ -1,0 +1,43 @@
+{
+  "id": "buffbuff-com-tr",
+  "url": "https://buffbuff.com/",
+  "persona": "keyboard-only",
+  "task": "Use Tab and Enter to reach and activate “****”. Verify its content becomes visible.",
+  "controlTask": "Click “****” and verify its content becomes visible.",
+  "observedSelector": "#badge-slow-compensation-point > span > span",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#header > div > div:nth-of-type(2) > div:nth-of-type(4) > div"
+    }
+  ],
+  "minimumTabPresses": 2,
+  "probe": {
+    "action": "click"
+  },
+  "site": "buffbuff.com",
+  "match": "https://buffbuff.com/",
+  "barrier": "The observed points badge shows 50 and sits inside a header entry that Tab skips because it is a div with no tabindex.",
+  "rules": [
+    {
+      "selector": "div.points-header-entry",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "div.points-header-entry",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "div.points-header-entry",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "div.points-header-entry",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

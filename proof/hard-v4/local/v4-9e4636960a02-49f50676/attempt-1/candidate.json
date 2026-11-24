@@ -1,0 +1,52 @@
+{
+  "id": "v4-9e4636960a02-49f50676",
+  "url": "https://www.ycombinator.com/",
+  "persona": "keyboard-only",
+  "task": "Open “About” from keyboard focus or with Arrow Down and follow “YC Interview Guide”. Confirm the public destination /interviews.",
+  "controlTask": "Hover “About”, click “YC Interview Guide” and confirm /interviews.",
+  "observedSelector": "#why-yc-page > div > div:nth-of-type(1) > div > header > nav:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/interviews"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#why-yc-page > div > div:nth-of-type(1) > div > header > nav:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+    "#why-yc-page > div > div:nth-of-type(1) > div > header > nav:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div"
+  ],
+  "journey": [
+    {
+      "selector": "#why-yc-page > div > div:nth-of-type(1) > div > header > nav:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#why-yc-page > div > div:nth-of-type(1) > div > header > nav:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#why-yc-page > div > div:nth-of-type(1) > div > header > nav:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div > div > div > a:nth-of-type(3)",
+      "action": "activate"
+    }
+  ],
+  "site": "www.ycombinator.com",
+  "match": "https://www.ycombinator.com/",
+  "barrier": "The About dropdown opens on hover but remains display:none after keyboard focus and Arrow Down, leaving the YC Interview Guide link unavailable.",
+  "rules": [
+    {
+      "selector": "#why-yc-page > div > div:nth-of-type(1) > div > header > nav:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

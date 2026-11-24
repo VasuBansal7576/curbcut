@@ -1,0 +1,54 @@
+{
+  "id": "v4-b1609e34bea2-0f6d50ae",
+  "url": "https://www.dailypay.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Employers” from keyboard focus or with Arrow Down and follow “Hospitals & Healthcare”. Confirm the public destination /industries/healthcare/.",
+  "controlTask": "Hover “Employers”, click “Hospitals & Healthcare” and confirm /industries/healthcare/.",
+  "observedSelector": "#page > div:nth-of-type(3) > header > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/industries/healthcare/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#page > div:nth-of-type(3) > header > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1)",
+    "#page > div:nth-of-type(3) > header > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div"
+  ],
+  "journey": [
+    {
+      "selector": "#page > div:nth-of-type(3) > header > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#page > div:nth-of-type(3) > header > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#page > div:nth-of-type(3) > header > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.dailypay.com",
+  "match": "https://www.dailypay.com/",
+  "barrier": "The Employers submenu stays at display: none after the trigger receives keyboard focus and Arrow Down, leaving Hospitals & Healthcare unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#page > div:nth-of-type(3) > header > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "target": "#page > div:nth-of-type(3) > header > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div",
+      "mode": "display"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

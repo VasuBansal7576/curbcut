@@ -1,0 +1,9 @@
+{
+  "barrier": "The first carousel’s “Next slide” button has tabindex=\"-1\", so Tab skips it.",
+  "rules": [
+    {"selector": "#swiper1 > .swiper-button-next", "action": "makeFocusable"},
+    {"selector": "#swiper1 > .swiper-button-next", "action": "setRole", "value": "button"},
+    {"selector": "#swiper1 > .swiper-button-next", "action": "bindEnterToClick"},
+    {"selector": "#swiper1 > .swiper-button-next", "action": "restoreFocusOutline"}
+  ]
+}

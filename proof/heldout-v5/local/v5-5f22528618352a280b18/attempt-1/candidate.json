@@ -1,0 +1,34 @@
+{
+  "id": "v5-5f22528618352a280b18",
+  "url": "https://www.india.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search on india.com...” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search on india.com...” field and type test without submitting.",
+  "observedSelector": "#t2",
+  "requiredName": "Search on india.com...",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#t2",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.india.com",
+  "match": "https://www.india.com/",
+  "barrier": "The visible search input #t2 has a native textbox role but no accessible name, so it cannot be found by its expected name in Reading view.",
+  "rules": [
+    {
+      "selector": "#t2",
+      "action": "addLabel",
+      "value": "Search on india.com..."
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

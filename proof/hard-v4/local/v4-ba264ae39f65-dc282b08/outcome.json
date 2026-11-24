@@ -1,0 +1,124 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-ba264ae39f65-dc282b08",
+    "url": "https://bogos.io/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels with vertical scrolling only, hover “Feature”, click “View all features→” and confirm /all-features/.",
+    "controlTask": "Hover “Feature”, click “View all features→” and confirm /all-features/.",
+    "observedSelector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/all-features/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1)",
+      "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "Journey step 1 was unavailable after the prior step.",
+    "steps": [
+      {
+        "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+        "action": "focus"
+      }
+    ],
+    "url": "https://bogos.io/"
+  },
+  "registeredControl": {
+    "status": "pass",
+    "reason": "The complete journey reached the declared outcome.",
+    "steps": [
+      {
+        "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+        "action": "focus"
+      },
+      {
+        "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown"
+      },
+      {
+        "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ],
+    "url": "https://bogos.io/all-features/",
+    "checks": [
+      true
+    ]
+  },
+  "runner": "playwright",
+  "status": "unresolved",
+  "reason": "Journey step 1 was unavailable after the prior step.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-ba264ae39f65-dc282b08/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "low-vision",
+      "status": "fail",
+      "reason": "Journey step 1 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-ba264ae39f65-dc282b08/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "low-vision",
+      "iteration": 1,
+      "status": "fail",
+      "reason": "Journey step 1 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-ba264ae39f65-dc282b08/attempt-1/after.json"
+    },
+    {
+      "name": "proposal",
+      "iteration": 2,
+      "status": "rejected",
+      "reason": "Use selectors observed in the patchable DOM.",
+      "file": "proof/hard-v4/local/v4-ba264ae39f65-dc282b08/attempt-2/rejection.json"
+    },
+    {
+      "name": "attempt-3/after",
+      "persona": "low-vision",
+      "iteration": 3,
+      "status": "fail",
+      "reason": "Journey step 1 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-ba264ae39f65-dc282b08/attempt-3/after.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

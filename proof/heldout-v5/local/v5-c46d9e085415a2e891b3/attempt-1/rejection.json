@@ -1,0 +1,42 @@
+{
+  "reason": "Live selector validation failed. selector \"dialog\": no matches",
+  "rules": [
+    {
+      "selector": "dialog",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "#dictSearchText",
+      "action": "addLabel",
+      "value": "Find Meaning..."
+    }
+  ],
+  "selectorValidation": {
+    "ok": false,
+    "matches": [
+      {
+        "index": 0,
+        "field": "selector",
+        "selector": "dialog",
+        "count": 0,
+        "issue": "no matches",
+        "matches": []
+      },
+      {
+        "index": 1,
+        "field": "selector",
+        "selector": "#dictSearchText",
+        "count": 1,
+        "issue": null,
+        "matches": [
+          {
+            "tag": "input",
+            "id": "dictSearchText",
+            "classes": [],
+            "label": ""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-6646bc262e29-b16e9d6d",
+    "url": "https://www.webhostingpad.com/",
+    "persona": "keyboard-only",
+    "task": "Open “free domain” by keyboard. Confirm the dialog appeared, then press Escape and confirm it closed.",
+    "controlTask": "Click “free domain” and confirm that the dialog opens. Click “Close” to close it.",
+    "observedSelector": "#canopy-2020 > div > div > div:nth-of-type(1) > p > span:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "hidden",
+        "selector": "#exampleModalToggle1"
+      }
+    ],
+    "barrierClass": 4,
+    "relatedSelectors": [
+      "#exampleModalToggle1",
+      "#exampleModalToggle1 > div > div > div:nth-of-type(2) > button"
+    ],
+    "journey": [
+      {
+        "selector": "#canopy-2020 > div > div > div:nth-of-type(1) > p > span:nth-of-type(1)",
+        "action": "activate",
+        "checks": [
+          {
+            "kind": "visible",
+            "selector": "#exampleModalToggle1"
+          }
+        ]
+      },
+      {
+        "selector": "#exampleModalToggle1",
+        "action": "key",
+        "key": "Escape",
+        "pointer": {
+          "action": "click",
+          "selector": "#exampleModalToggle1 > div > div > div:nth-of-type(2) > button"
+        }
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "unresolved",
+  "reason": "The final journey outcome did not hold.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-6646bc262e29-b16e9d6d/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Tab traversal missed journey step 1.",
+      "file": "proof/heldout-v5/local/v5-6646bc262e29-b16e9d6d/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-6646bc262e29-b16e9d6d/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-2/after",
+      "persona": "keyboard-only",
+      "iteration": 2,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-6646bc262e29-b16e9d6d/attempt-2/after.json"
+    },
+    {
+      "name": "attempt-3/after",
+      "persona": "keyboard-only",
+      "iteration": 3,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-6646bc262e29-b16e9d6d/attempt-3/after.json"
+    },
+    {
+      "name": "attempt-4/after",
+      "persona": "keyboard-only",
+      "iteration": 4,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-6646bc262e29-b16e9d6d/attempt-4/after.json"
+    },
+    {
+      "name": "attempt-5/after",
+      "persona": "keyboard-only",
+      "iteration": 5,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-6646bc262e29-b16e9d6d/attempt-5/after.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

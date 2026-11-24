@@ -1,0 +1,56 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-03ffd714caa8-14276c77",
+    "url": "https://www.care.com/",
+    "persona": "keyboard-only",
+    "task": "Expand “Find jobs” with the keyboard and read “Get startedBecome a caregiverSuccess on Care.comSafety center”.",
+    "controlTask": "Click “Find jobs” and read “Get startedBecome a caregiverSuccess on Care.comSafety center”.",
+    "observedSelector": "#__next > div > div:nth-of-type(2) > div:nth-of-type(2) > div > header > div:nth-of-type(2) > button:nth-of-type(2)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#find-jobs-menu > nav > ul > li:nth-of-type(1)",
+        "equals": "Get startedBecome a caregiverSuccess on Care.comSafety center"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#find-jobs-menu"
+    ],
+    "journey": [
+      {
+        "selector": "#__next > div > div:nth-of-type(2) > div:nth-of-type(2) > div > header > div:nth-of-type(2) > button:nth-of-type(2)",
+        "action": "activate"
+      },
+      {
+        "selector": "#find-jobs-menu > nav > ul > li:nth-of-type(1)",
+        "action": "observe"
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "already-accessible",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-03ffd714caa8-14276c77/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-03ffd714caa8-14276c77/before.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

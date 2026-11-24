@@ -1,0 +1,21 @@
+{
+  "barrier": "Keyboard traversal reaches the Progressive rollout tab while it is clipped or outside the viewport in the console’s scrollable tab row.",
+  "rules": [
+    {
+      "selector": "div.screen-tour > div.screen-tour-tabs[role=\"tablist\"]",
+      "action": "injectCSS",
+      "value": {
+        "flex-wrap": "wrap",
+        "min-width": "0",
+        "height": "auto"
+      }
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.screen-tour > div.screen-tour-tabs[role=\"tablist\"]",
+      "items": "div.screen-tour-tabs > button.screen-tour-tab[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

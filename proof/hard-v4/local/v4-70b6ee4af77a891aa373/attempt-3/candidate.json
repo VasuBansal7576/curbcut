@@ -1,0 +1,47 @@
+{
+  "id": "v4-70b6ee4af77a891aa373",
+  "url": "https://www.elong.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “© 2000 - 2026 北京艺龙信息技术有限公司, eLong, Inc or its affiliates. All Rights” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “© 2000 - 2026 北京艺龙信息技术有限公司, eLong, Inc or its affiliates. All Rights” at normal width.",
+  "observedSelector": "#__nuxt > div:nth-of-type(4) > div > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#__nuxt > div:nth-of-type(4) > div > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1)",
+      "equals": "© 2000 - 2026 北京艺龙信息技术有限公司, eLong, Inc or its affiliates. All Rights"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#__nuxt > div:nth-of-type(4) > div > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.elong.com",
+  "match": "https://www.elong.com/",
+  "barrier": "The 1240px-wide footer flex row places the 812px-wide copyright paragraph 100px from the left edge, so the right side is clipped at 320 CSS pixels.",
+  "rules": [
+    {
+      "selector": "div.footer-main-top",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "selector": "div.footer-div-first",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

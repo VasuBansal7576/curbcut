@@ -1,0 +1,65 @@
+{
+  "ok": false,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#menu",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "menu",
+          "classes": [
+            "collapse",
+            "navbar-collapse"
+          ],
+          "label": "Search Academic Programs Academic Programs Back Academic Programs By Location Campus Online Degrees "
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "#menu > ul > li:nth-of-type(1) > a.nav-link.d-lg-block",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "a",
+          "classes": [
+            "nav-link",
+            "d-none",
+            "d-lg-block"
+          ],
+          "label": "Academic Programs"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "field": "selector",
+      "selector": "#menu > ul > li:nth-of-type(1):is(:hover, :focus-within) > ul.dropdown-menu",
+      "count": 0,
+      "issue": "no matches",
+      "matches": []
+    },
+    {
+      "index": 3,
+      "field": "selector",
+      "selector": "#menu > ul > li:nth-of-type(1) > ul.dropdown-menu > li.row > ul:nth-of-type(2) > li:nth-of-type(2) > a.dropdown-item",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "a",
+          "classes": [
+            "dropdown-item"
+          ],
+          "label": "Associate Degrees"
+        }
+      ]
+    }
+  ]
+}

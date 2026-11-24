@@ -1,0 +1,60 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-5dfd5099e5a1-4af64c4c",
+    "url": "https://www.theadvocate.com/",
+    "persona": "keyboard-only",
+    "task": "Open “SPORTS” from keyboard focus or with Arrow Down and follow “LSU”. Confirm the public destination /baton_rouge/sports/lsu/.",
+    "controlTask": "Hover “SPORTS”, click “LSU” and confirm /baton_rouge/sports/lsu/.",
+    "observedSelector": "#main-nav_menu > li:nth-of-type(2) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/baton_rouge/sports/lsu/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#main-nav_menu > li:nth-of-type(2)",
+      "#main-nav_menu-child-2"
+    ],
+    "journey": [
+      {
+        "selector": "#main-nav_menu > li:nth-of-type(2) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#main-nav_menu > li:nth-of-type(2) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#main-nav_menu-child-2 > li:nth-of-type(2) > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "control-fail",
+  "reason": "locator.click: Timeout 1500ms exceeded.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "fail",
+      "reason": "locator.click: Timeout 1500ms exceeded.",
+      "file": "proof/heldout-v5/local/v5-5dfd5099e5a1-4af64c4c/control.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

@@ -1,0 +1,12 @@
+{
+  "barrier": "At 320 CSS pixels, the hero grid lets the passage extend from x=24 to x=392. The section clips the text beyond the viewport.",
+  "rules": [
+    {
+      "selector": "main section.relative.overflow-hidden > div.relative.z-\\[2\\]:has(> div > div.flex.flex-col.gap-8.items-start > div > h1.font-display.text-4xl)",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ]
+}

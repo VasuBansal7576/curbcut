@@ -1,0 +1,51 @@
+{
+  "barrier": "At 320 CSS pixels, the responsive header hides the “What we do” button and its flyout wrapper with display:none, so the button cannot be clicked and the flyout cannot be read.",
+  "rules": [
+    {
+      "selector": "#globalnav-ab8fd7542b .cmp-globalnav__main-row",
+      "action": "injectCSS",
+      "value": {
+        "flex-wrap": "wrap",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "#globalnav-ab8fd7542b .cmp-globalnav__primary",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#globalnav-ab8fd7542b .cmp-globalnav__tablist",
+      "action": "injectCSS",
+      "value": {
+        "flex-wrap": "wrap"
+      }
+    },
+    {
+      "selector": "#globalnav-ab8fd7542b > .cmp-globalnav__tab-panels-wrapper",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "#item_1-tabpanel",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#item_1-tabpanel div:has(> .kd-grid__col--sm-4.kd-grid__col--md-8.kd-grid__col--lg-3 > .cmp-globalnav-flyout-column--navigation)",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ]
+}

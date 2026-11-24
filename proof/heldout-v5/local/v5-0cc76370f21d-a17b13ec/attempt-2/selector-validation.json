@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "container",
+      "selector": "#fluconazoleFaq",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "fluconazoleFaq",
+          "classes": [
+            "accordion"
+          ],
+          "label": "What is Fluconazole and how does it work? Fluconazole is a systemic azole antifungal that inhibits f"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "items",
+      "selector": "#fluconazoleFaq > .accordion-item > h3 > button",
+      "scope": "#fluconazoleFaq",
+      "count": 36,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "accordion-button"
+          ],
+          "label": "What is Fluconazole and how does it work?"
+        },
+        {
+          "tag": "button",
+          "classes": [
+            "accordion-button",
+            "collapsed"
+          ],
+          "label": "What infections does Fluconazole treat?"
+        },
+        {
+          "tag": "button",
+          "classes": [
+            "accordion-button",
+            "collapsed"
+          ],
+          "label": "How fast does Fluconazole start working?"
+        },
+        {
+          "tag": "button",
+          "classes": [
+            "accordion-button",
+            "collapsed"
+          ],
+          "label": "Is Fluconazole effective for vaginal yeast infections?"
+        },
+        {
+          "tag": "button",
+          "classes": [
+            "accordion-button",
+            "collapsed"
+          ],
+          "label": "Can Fluconazole treat oral thrush and esophageal candidiasis?"
+        }
+      ]
+    }
+  ]
+}

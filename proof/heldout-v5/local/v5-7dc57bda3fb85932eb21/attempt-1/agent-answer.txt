@@ -1,0 +1,12 @@
+{
+  "barrier": "At 320 CSS pixels, the body's 375px minimum width and the containers' 345px minimum width keep the hero paragraph's right edge at 360px, beyond the visible viewport.",
+  "rules": [
+    {
+      "selector": "body.product.index, body.product.index div.container",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0"
+      }
+    }
+  ]
+}

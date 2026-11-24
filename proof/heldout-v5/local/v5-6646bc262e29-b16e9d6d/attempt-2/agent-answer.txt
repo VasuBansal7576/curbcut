@@ -1,0 +1,27 @@
+{
+  "barrier": "The “free domain” trigger opens the dialog with Enter, but the dialog is still transitioning when Escape is pressed and remains open.",
+  "rules": [
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#exampleModalToggle1.show[aria-modal='true']",
+      "close": "#exampleModalToggle1 .modal-footer > button[data-bs-dismiss='modal']"
+    }
+  ]
+}

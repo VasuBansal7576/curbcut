@@ -1,0 +1,52 @@
+{
+  "id": "v4-142834493081-935ef579",
+  "url": "https://sana.sy/",
+  "persona": "keyboard-only",
+  "task": "Open “سوريا” from keyboard focus or with Arrow Down and follow “رئاسة الجمهورية”. Confirm the public destination /presidency/.",
+  "controlTask": "Hover “سوريا”, click “رئاسة الجمهورية” and confirm /presidency/.",
+  "observedSelector": "#menu-item-2257213 > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/presidency/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menu-item-2257213",
+    "#menu-item-2257213 > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#menu-item-2257213 > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-item-2257213 > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-item-2557912 > a",
+      "action": "activate"
+    }
+  ],
+  "site": "sana.sy",
+  "match": "https://sana.sy/",
+  "barrier": "The “سوريا” submenu opens on pointer hover, but focusing its link and pressing Arrow Down left “رئاسة الجمهورية” unavailable.",
+  "rules": [
+    {
+      "selector": "#menu-item-2257213",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

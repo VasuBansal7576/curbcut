@@ -1,0 +1,809 @@
+{
+  "cohort": "held-out v3",
+  "freezeCommit": "5edbe2edead3019c169e22541068a580e62e5481",
+  "planDigest": "dc5a8494f395d1a12346a061595a57638cd8f2308894f7bd19008e51b6be760e",
+  "registrationCommit": "e8084d63604b55c46b52385bf00b73ee38e6000c",
+  "model": "gpt-6.2-sol",
+  "startedAt": "2026-11-23T05:17:06.839Z",
+  "startCredits": 2620.436,
+  "budget": 1600,
+  "reserve": 1000,
+  "floor": 1020.4360000000001,
+  "attempts": 3,
+  "targets": [
+    "euronext-com-tr",
+    "restream-io-tr",
+    "flashscore-de-tr",
+    "gbnews-com-tr",
+    "buffbuff-com-tr",
+    "primis-tech-tr",
+    "sonarsource-com-tr",
+    "tjk-org-tr",
+    "poets-org-tr2",
+    "arthritis-org-tr2",
+    "cloudconvert-com-tr2",
+    "spaggiari-eu-tr2",
+    "open-video-tr2",
+    "unglobalcompact-org-tr2",
+    "discuz-vip-tr2",
+    "mtv-com-tr2",
+    "uline-com-tr2",
+    "doodles-google-tr2",
+    "asme-org-tr2",
+    "icq-com-tr2",
+    "idrive-com-tr2",
+    "cato-org-tr2",
+    "dol-gov-tr2"
+  ],
+  "finishedAt": "2026-11-23T05:54:59.968Z",
+  "endCredits": 1501.4977,
+  "spentCredits": 1118.9383000000003,
+  "fixed": 10,
+  "total": 23,
+  "registered": 23,
+  "counts": {
+    "fixed": 10,
+    "unpatchable": 9,
+    "recorded access blocked": 1,
+    "no barrier": 2,
+    "Kane error": 1
+  },
+  "byPersona": {
+    "screen-reader-view": {
+      "fixed": 5,
+      "total": 5,
+      "registered": 5,
+      "counts": {
+        "fixed": 5
+      }
+    },
+    "keyboard-only": {
+      "fixed": 2,
+      "total": 11,
+      "registered": 11,
+      "counts": {
+        "unpatchable": 9,
+        "fixed": 2
+      }
+    },
+    "low-vision": {
+      "fixed": 3,
+      "total": 7,
+      "registered": 7,
+      "counts": {
+        "fixed": 3,
+        "recorded access blocked": 1,
+        "no barrier": 2,
+        "Kane error": 1
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "euronext-com-tr",
+      "url": "https://www.euronext.com/en",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the textbox named “Sites search”. Enter the text test and confirm the field contains it. Do not submit.",
+      "startedAt": "2026-11-23T05:17:06.894Z",
+      "outcome": "fixed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "7c5102a9-94be-4e4d-b9d6-954259995e12",
+          "credits": 12.848975,
+          "kaneStatus": "fail",
+          "browserStatus": "fail",
+          "basis": "required-reader-control-unavailable",
+          "result": "proof/heldout-v3/runs/euronext-com-tr/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "c904d104-5b8d-42bb-aeb9-57d23073d119",
+          "credits": 15.7928725,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "trusted-control-text",
+          "result": "proof/heldout-v3/runs/euronext-com-tr/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "9aeb5f1b-e641-4d97-85de-517c3b184fc5",
+          "credits": 12.8878375,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "named-reader-interaction",
+          "result": "proof/heldout-v3/runs/euronext-com-tr/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-23T05:19:51.215Z"
+    },
+    {
+      "id": "restream-io-tr",
+      "url": "https://restream.io/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “PRODUCTS”. Verify its content becomes visible.",
+      "startedAt": "2026-11-23T05:17:06.896Z",
+      "outcome": "unpatchable",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "dc195363-23e4-4bab-8923-b35220de4a11",
+          "credits": 39.2710975,
+          "kaneStatus": "inconclusive",
+          "browserStatus": null,
+          "basis": null,
+          "result": "proof/heldout-v3/runs/restream-io-tr/before/result.json"
+        }
+      ],
+      "reason": "A local replay of this patch under the persona still failed: Checked the declared outcome after the click action.",
+      "finishedAt": "2026-11-23T05:19:42.298Z"
+    },
+    {
+      "id": "flashscore-de-tr",
+      "url": "https://www.flashscore.de/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “U17 Weltmeisterschaft 2026 Fussball Live Ergebnisse, Aktuelle Fussball Ergebnisse, Bundesliga, Champions”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-23T05:19:43.784Z",
+      "outcome": "fixed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "5ae1d6ea-b3ce-414a-9435-509999296cd2",
+          "credits": 21.52936,
+          "kaneStatus": "fail",
+          "browserStatus": "fail",
+          "basis": "recorded-passage-width",
+          "result": "proof/heldout-v3/runs/flashscore-de-tr/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "97e62f2a-2358-45d2-8831-ba52d60213cd",
+          "credits": 22.736240000000002,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "recorded-passage-width",
+          "result": "proof/heldout-v3/runs/flashscore-de-tr/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "bf0fe7a7-3883-41b0-b79d-4d060cbd5867",
+          "credits": 13.788647499999998,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "recorded-passage-width",
+          "result": "proof/heldout-v3/runs/flashscore-de-tr/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-23T05:23:23.275Z"
+    },
+    {
+      "id": "gbnews-com-tr",
+      "url": "https://www.gbnews.com/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “Previous Slide”. Verify its content becomes visible.",
+      "startedAt": "2026-11-23T05:19:52.678Z",
+      "outcome": "unpatchable",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "dfbf43f6-027f-46f9-9e12-2e8b4ac53b0a",
+          "credits": 37.0640225,
+          "kaneStatus": "inconclusive",
+          "browserStatus": "fail",
+          "basis": "target-skipped-by-tab",
+          "result": "proof/heldout-v3/runs/gbnews-com-tr/before/result.json"
+        }
+      ],
+      "reason": "target-skipped-by-tab",
+      "finishedAt": "2026-11-23T05:23:32.929Z"
+    },
+    {
+      "id": "buffbuff-com-tr",
+      "url": "https://buffbuff.com/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “****”. Verify its content becomes visible.",
+      "startedAt": "2026-11-23T05:23:24.776Z",
+      "outcome": "unpatchable",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "27b793f0-210b-48f9-b5b5-dd04e9e91554",
+          "credits": 36.8206225,
+          "kaneStatus": "fail",
+          "browserStatus": "fail",
+          "basis": "target-skipped-by-tab",
+          "result": "proof/heldout-v3/runs/buffbuff-com-tr/before/result.json"
+        }
+      ],
+      "reason": "target-skipped-by-tab",
+      "finishedAt": "2026-11-23T05:26:18.818Z"
+    },
+    {
+      "id": "primis-tech-tr",
+      "url": "https://www.primis.tech/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Inside the Primis Hackathon: Creativity, Collaboration, and a Few Tough Decisions”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-23T05:23:34.401Z",
+      "outcome": "recorded access blocked",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "blocked",
+          "runner": "kane",
+          "sessionId": "2bd6d6a4-65c2-4761-aa81-b4065414b09b",
+          "credits": 19.4301425,
+          "kaneStatus": "pass",
+          "browserStatus": null,
+          "basis": null,
+          "result": "proof/heldout-v3/runs/primis-tech-tr/before/result.json"
+        }
+      ],
+      "reason": "Recorded browser access failed: Visible CAPTCHA or verification frame",
+      "finishedAt": "2026-11-23T05:24:47.160Z"
+    },
+    {
+      "id": "sonarsource-com-tr",
+      "url": "https://www.sonarsource.com/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “As we move toward using AI tooling for code generation, it”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-23T05:24:48.650Z",
+      "outcome": "no barrier",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "4655d424-d3d6-4d1a-9326-26f2e1fc68d8",
+          "credits": 20.623375,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "recorded-passage-width",
+          "result": "proof/heldout-v3/runs/sonarsource-com-tr/before/result.json"
+        }
+      ],
+      "reason": "recorded-passage-width",
+      "finishedAt": "2026-11-23T05:25:57.420Z"
+    },
+    {
+      "id": "tjk-org-tr",
+      "url": "https://www.tjk.org/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Antalya’da Sonbahar - Kış Sezonu başladı”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-23T05:25:58.928Z",
+      "outcome": "Kane error",
+      "phases": [],
+      "finishedAt": "2026-11-23T05:26:07.769Z"
+    },
+    {
+      "id": "poets-org-tr2",
+      "url": "https://poets.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the searchbox named “search”. Enter the text test and confirm the field contains it. Do not submit.",
+      "startedAt": "2026-11-23T05:26:09.249Z",
+      "outcome": "fixed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "a6039b7a-2d1d-40c2-91b1-04593fcbd871",
+          "credits": 12.350255,
+          "kaneStatus": "fail",
+          "browserStatus": "fail",
+          "basis": "required-reader-control-unavailable",
+          "result": "proof/heldout-v3/runs/poets-org-tr2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "f773f524-c19a-4b56-bd9f-16289c00a68d",
+          "credits": 19.255587499999997,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "trusted-control-text",
+          "result": "proof/heldout-v3/runs/poets-org-tr2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "68fac404-263b-461c-b97f-c4aae40f2fe5",
+          "credits": 13.0535375,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "named-reader-interaction",
+          "result": "proof/heldout-v3/runs/poets-org-tr2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-23T05:28:23.773Z"
+    },
+    {
+      "id": "arthritis-org-tr2",
+      "url": "https://www.arthritis.org/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “About Arthritis”. Verify the public destination at /about-arthritis.",
+      "startedAt": "2026-11-23T05:26:20.307Z",
+      "outcome": "unpatchable",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "f648dad2-4c0d-4f05-beff-190b2cd122f8",
+          "credits": 44.0281625,
+          "kaneStatus": "inconclusive",
+          "browserStatus": null,
+          "basis": null,
+          "result": "proof/heldout-v3/runs/arthritis-org-tr2/before/result.json"
+        }
+      ],
+      "reason": "A local replay of this patch under the persona still failed: The unique target was not visible.",
+      "finishedAt": "2026-11-23T05:29:12.521Z"
+    },
+    {
+      "id": "cloudconvert-com-tr2",
+      "url": "https://cloudconvert.com/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Vendor engines and open-source converters selected per file type”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-23T05:28:25.246Z",
+      "outcome": "fixed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "5e97e502-0672-4af1-a8ef-3e3e3dd05b67",
+          "credits": 19.7741425,
+          "kaneStatus": "fail",
+          "browserStatus": "fail",
+          "basis": "recorded-passage-width",
+          "result": "proof/heldout-v3/runs/cloudconvert-com-tr2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "b44410ac-2107-4e72-a46c-2dc6134804de",
+          "credits": 18.699965,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "recorded-passage-width",
+          "result": "proof/heldout-v3/runs/cloudconvert-com-tr2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "8d678131-f9d8-460a-a0ac-90496a5c2967",
+          "credits": 14.463819999999998,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "recorded-passage-width",
+          "result": "proof/heldout-v3/runs/cloudconvert-com-tr2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-23T05:31:06.237Z"
+    },
+    {
+      "id": "spaggiari-eu-tr2",
+      "url": "https://www.spaggiari.eu/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “SCOPRI DI PIÙ”. Verify the public destination at /dreamshaper.",
+      "startedAt": "2026-11-23T05:29:14.009Z",
+      "outcome": "unpatchable",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "661e40bc-8fc6-4195-bf03-c4baba8a8488",
+          "credits": 17.31605,
+          "kaneStatus": "fail",
+          "browserStatus": "inconclusive",
+          "basis": "keyboard-traversal-incomplete",
+          "result": "proof/heldout-v3/runs/spaggiari-eu-tr2/before/result.json"
+        }
+      ],
+      "reason": "Invalid patch proposal: [{\"instancePath\":\"/rules\",\"schemaPath\":\"#/properties/rules/minItems\",\"keyword\":\"minItems\",\"params\":{\"limit\":1},\"message\":\"must NOT have fewer than 1 items\"}]",
+      "finishedAt": "2026-11-23T05:30:42.481Z"
+    },
+    {
+      "id": "open-video-tr2",
+      "url": "https://open.video/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Combat sports — Angela Hill”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-23T05:30:43.968Z",
+      "outcome": "no barrier",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "cdec9de1-e15e-476d-8b9e-762c7346e1e7",
+          "credits": 19.644775,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "recorded-passage-width",
+          "result": "proof/heldout-v3/runs/open-video-tr2/before/result.json"
+        }
+      ],
+      "reason": "recorded-passage-width",
+      "finishedAt": "2026-11-23T05:31:36.827Z"
+    },
+    {
+      "id": "unglobalcompact-org-tr2",
+      "url": "https://unglobalcompact.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the textbox named “Search”. Enter the text test and confirm the field contains it. Do not submit.",
+      "startedAt": "2026-11-23T05:31:07.722Z",
+      "outcome": "fixed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "4f5b267c-d24a-42b3-ace1-4f820f11c118",
+          "credits": 12.3045875,
+          "kaneStatus": "fail",
+          "browserStatus": "fail",
+          "basis": "required-reader-control-unavailable",
+          "result": "proof/heldout-v3/runs/unglobalcompact-org-tr2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "41f120b2-7c1d-4413-a135-3b97bc64c070",
+          "credits": 16.534395,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "trusted-control-text",
+          "result": "proof/heldout-v3/runs/unglobalcompact-org-tr2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "6170405c-3ccc-47f0-b294-bb9c625ef702",
+          "credits": 5.59609,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "named-reader-interaction",
+          "result": "proof/heldout-v3/runs/unglobalcompact-org-tr2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-23T05:33:21.517Z"
+    },
+    {
+      "id": "discuz-vip-tr2",
+      "url": "https://www.discuz.vip/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “更多解决方案请联系官方客服进行交流。”. Verify its content becomes visible.",
+      "startedAt": "2026-11-23T05:31:38.296Z",
+      "outcome": "fixed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "8287f79a-9102-4626-928a-d06f3fc0a4f5",
+          "credits": 52.784195,
+          "kaneStatus": "fail",
+          "browserStatus": "inconclusive",
+          "basis": "keyboard-target-action-unproven",
+          "result": "proof/heldout-v3/runs/discuz-vip-tr2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "75bb431b-9b2d-42dd-a23a-35040a4badb6",
+          "credits": 21.763635,
+          "kaneStatus": "pass",
+          "browserStatus": "fail",
+          "basis": "recorded-control-outcome-absent",
+          "result": "proof/heldout-v3/runs/discuz-vip-tr2/control/result.json"
+        },
+        {
+          "stage": "attempt-2/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "cec6d56f-3783-4140-90f6-24007d32438a",
+          "credits": 41.5458575,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "trusted-keyboard-interaction",
+          "result": "proof/heldout-v3/runs/discuz-vip-tr2/attempt-2/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-23T05:39:36.181Z"
+    },
+    {
+      "id": "mtv-com-tr2",
+      "url": "https://www.mtv.com/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “The Challenge: Home Turf S1 E5 Tori Deal 26m 39s 02/28/2024”. Verify the public destination at /episodes/1rq6s7.",
+      "startedAt": "2026-11-23T05:33:23.018Z",
+      "outcome": "unpatchable",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "a5a50059-8ae0-4c44-b536-aaa84a1f6594",
+          "credits": 28.391029999999997,
+          "kaneStatus": "fail",
+          "browserStatus": "fail",
+          "basis": "target-skipped-by-tab",
+          "result": "proof/heldout-v3/runs/mtv-com-tr2/before/result.json"
+        }
+      ],
+      "reason": "target-skipped-by-tab",
+      "finishedAt": "2026-11-23T05:35:27.335Z"
+    },
+    {
+      "id": "uline-com-tr2",
+      "url": "https://www.uline.com/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-23T05:35:28.822Z",
+      "outcome": "fixed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "7c9b662c-baad-446a-b711-427de114e305",
+          "credits": 22.269810000000003,
+          "kaneStatus": "fail",
+          "browserStatus": "fail",
+          "basis": "recorded-passage-width",
+          "result": "proof/heldout-v3/runs/uline-com-tr2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "8df9e40c-d299-46a4-949c-6abb22c5f400",
+          "credits": 18.5326575,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "recorded-passage-width",
+          "result": "proof/heldout-v3/runs/uline-com-tr2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "1bcdba5e-99a6-45db-b735-5338ff6aee95",
+          "credits": 13.95933,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "recorded-passage-width",
+          "result": "proof/heldout-v3/runs/uline-com-tr2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-23T05:38:40.240Z"
+    },
+    {
+      "id": "doodles-google-tr2",
+      "url": "https://www.doodles.google/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “Nov 03, 2026 US Midterm Elections 2026”. Verify the public destination at /doodle/us-midterm-elections-2026/.",
+      "startedAt": "2026-11-23T05:38:41.721Z",
+      "outcome": "unpatchable",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "7cc2cf60-a81b-4400-b910-f94514f96208",
+          "credits": 69.9336225,
+          "kaneStatus": "fail",
+          "browserStatus": "fail",
+          "basis": "target-skipped-by-tab",
+          "result": "proof/heldout-v3/runs/doodles-google-tr2/before/result.json"
+        }
+      ],
+      "reason": "Use selectors observed in the patchable DOM.",
+      "finishedAt": "2026-11-23T05:43:59.321Z"
+    },
+    {
+      "id": "asme-org-tr2",
+      "url": "https://www.asme.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the searchbox named “Search products, events, courses, resource categories...”. Enter the text test and confirm the field contains it. Do not submit.",
+      "startedAt": "2026-11-23T05:39:37.669Z",
+      "outcome": "fixed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "dffdcb17-8db4-4bd1-b59e-1a36c48fea2b",
+          "credits": 11.9808825,
+          "kaneStatus": "fail",
+          "browserStatus": null,
+          "basis": null,
+          "result": "proof/heldout-v3/runs/asme-org-tr2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "ce1c01b8-efe2-4032-9d97-f8a0b810c697",
+          "credits": 16.17099,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "trusted-control-text",
+          "result": "proof/heldout-v3/runs/asme-org-tr2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "1bb0ccfd-5c83-4e1e-9e75-70c4dfbc09df",
+          "credits": 12.7721575,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "named-reader-interaction",
+          "result": "proof/heldout-v3/runs/asme-org-tr2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-23T05:42:51.805Z"
+    },
+    {
+      "id": "icq-com-tr2",
+      "url": "https://icq.com/desktop/en?#mac",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “Eng”. Verify its content becomes visible.",
+      "startedAt": "2026-11-23T05:42:53.289Z",
+      "outcome": "unpatchable",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "3478c773-3eeb-4278-8e6d-4eea365c8c60",
+          "credits": 17.3292275,
+          "kaneStatus": "fail",
+          "browserStatus": "fail",
+          "basis": "target-skipped-by-tab",
+          "result": "proof/heldout-v3/runs/icq-com-tr2/before/result.json"
+        }
+      ],
+      "reason": "target-skipped-by-tab",
+      "finishedAt": "2026-11-23T05:44:23.450Z"
+    },
+    {
+      "id": "idrive-com-tr2",
+      "url": "https://www.idrive.com/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “Cloud Applications Backup”. Verify its content becomes visible.",
+      "startedAt": "2026-11-23T05:44:00.831Z",
+      "outcome": "unpatchable",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "48ce1746-7c31-4df7-a2ad-348b7fe0005e",
+          "credits": 28.415460000000003,
+          "kaneStatus": "fail",
+          "browserStatus": "fail",
+          "basis": "target-skipped-by-tab",
+          "result": "proof/heldout-v3/runs/idrive-com-tr2/before/result.json"
+        }
+      ],
+      "reason": "target-skipped-by-tab",
+      "finishedAt": "2026-11-23T05:46:08.545Z"
+    },
+    {
+      "id": "cato-org-tr2",
+      "url": "https://www.cato.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the searchbox named “Search”. Enter the text test and confirm the field contains it. Do not submit.",
+      "startedAt": "2026-11-23T05:44:24.962Z",
+      "outcome": "fixed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "7c1f6ee3-b6ff-47e1-8f90-55a221e2f8b4",
+          "credits": 12.200510000000001,
+          "kaneStatus": "fail",
+          "browserStatus": "fail",
+          "basis": "required-reader-control-unavailable",
+          "result": "proof/heldout-v3/runs/cato-org-tr2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "b65ebf6c-b54f-4a94-92f9-b8d557ed95e6",
+          "credits": 6.308209999999999,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "trusted-control-text",
+          "result": "proof/heldout-v3/runs/cato-org-tr2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "7db69880-3e8a-4458-af67-3adffe976385",
+          "credits": 5.71666,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "named-reader-interaction",
+          "result": "proof/heldout-v3/runs/cato-org-tr2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-23T05:46:57.711Z"
+    },
+    {
+      "id": "dol-gov-tr2",
+      "url": "https://www.dol.gov/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “FEDERAL GOVERNMENT”. Verify its content becomes visible.",
+      "startedAt": "2026-11-23T05:46:10.048Z",
+      "outcome": "fixed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "25c40444-823c-4c61-8d28-4051f38dd66b",
+          "credits": 79.217955,
+          "kaneStatus": "inconclusive",
+          "browserStatus": null,
+          "basis": null,
+          "result": "proof/heldout-v3/runs/dol-gov-tr2/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "99cca2f3-749d-41a1-98a8-2ab78aa9d888",
+          "credits": 16.570515,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "trusted-control-activation",
+          "result": "proof/heldout-v3/runs/dol-gov-tr2/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "daebfc1c-b797-45e2-a223-c3f94de253aa",
+          "credits": 48.041145,
+          "kaneStatus": "pass",
+          "browserStatus": "pass",
+          "basis": "trusted-keyboard-interaction",
+          "result": "proof/heldout-v3/runs/dol-gov-tr2/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-23T05:54:57.392Z"
+    }
+  ]
+}

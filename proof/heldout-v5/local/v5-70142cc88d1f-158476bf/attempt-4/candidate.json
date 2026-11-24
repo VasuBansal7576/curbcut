@@ -1,0 +1,60 @@
+{
+  "id": "v5-70142cc88d1f-158476bf",
+  "url": "https://stackoverflow.co/",
+  "persona": "keyboard-only",
+  "task": "Open “Resources” from keyboard focus or with Arrow Down and follow “Stack Ads”. Confirm the public destination /advertising/resources.",
+  "controlTask": "Hover “Resources”, click “Stack Ads” and confirm /advertising/resources.",
+  "observedSelector": "#main-navigation > ul > li:nth-of-type(6) > button",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/advertising/resources"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#main-navigation > ul > li:nth-of-type(6)",
+    "#submenu-resources"
+  ],
+  "journey": [
+    {
+      "selector": "#main-navigation > ul > li:nth-of-type(6) > button",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#main-navigation > ul > li:nth-of-type(6) > button",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#submenu-resources > div > div > dl:nth-of-type(1) > dd:nth-of-type(1) > dl > dd:nth-of-type(2) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "stackoverflow.co",
+  "match": "https://stackoverflow.co/",
+  "barrier": "Hover reveals the Resources submenu, but after keyboard focus and Arrow Down, Tab traversal misses the Stack Ads link.",
+  "rules": [
+    {
+      "selector": "#main-navigation > ul > li.nav__item > button[aria-controls=\"submenu-resources\"]",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseover"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#main-navigation > ul > li.nav__item:has(> #submenu-resources)",
+      "items": "button[aria-controls=\"submenu-resources\"], #submenu-resources a[href]",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

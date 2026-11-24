@@ -1,0 +1,35 @@
+{
+  "status": "inconclusive",
+  "runId": "c3e6131f-35c3-46f2-bf22-55f1ed62341e",
+  "reason": "The current URL is chrome-error://chromewebdata/ and no public CNN homepage content is available.",
+  "summary": "The browsing environment could not load cnn.com and showed Chrome's network error page instead of the public homepage.\nRestore browser network access, DNS/proxy/egress connectivity to cnn.com, then rerun the homepage viewport check.\nevidence: network_failure: GET https://cnn.com/ -> None FAILED (net::ERR_FAILED)\nevidence: console_error: Failed to load resource: net::ERR_FAILED",
+  "resultCode": 750,
+  "reasonCode": "assertion_error.step_not_achievable",
+  "credits": 10.7145675,
+  "exitCode": 1,
+  "steps": [
+    "navigate: Navigate to https://cnn.com",
+    "wait: Waiting on the current browser error page"
+  ],
+  "objective": "Use the locked 320 CSS pixel viewport and scroll vertically only. Stay on this public site. Do not sign in, register, pay, or interact with a CAPTCHA or access challenge. Leave fixture settings unchanged. Use visible controls only. Scroll vertically through the public CNN homepage at 320 CSS pixels to read the main news headlines and first shelf of cards. Verify the page fits the viewport and no card pushes the page outside the visible right edge. Stop on the public homepage.",
+  "evidencePack": "proof/kane/cnn-home-reflow-320/2026-11-22T11-04-38.048Z/before/7279f2b6-b76a-4705-9927-d657d0c2139b.evidence",
+  "evidenceValid": true,
+  "integrity": "Could not confirm a single recorded page with the required persona and repair state.",
+  "outcomeChecks": [
+    true
+  ],
+  "runner": "kane",
+  "inspection": {
+    "readerVisible": false,
+    "width": 320,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "null/",
+    "width": 320,
+    "scrollWidth": 320,
+    "focused": "body",
+    "nodes": []
+  },
+  "video": "proof/kane/cnn-home-reflow-320/2026-11-22T11-04-38.048Z/before/recording.mp4"
+}

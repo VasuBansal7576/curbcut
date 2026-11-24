@@ -1,0 +1,13 @@
+{
+  "barrier": "The native Next button is reachable by Tab, but its rendered width collapses to zero at the right edge of the carousel, leaving no visible target when focused.",
+  "rules": [
+    {
+      "selector": ".icons-text-slider .slider-row > .col-12 > .slider > button.slick-next.slick-arrow",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "max-width": "none"
+      }
+    }
+  ]
+}

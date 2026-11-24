@@ -1,0 +1,37 @@
+{
+  "id": "v5-4470816c71467e0fa6bc",
+  "url": "https://www.magna.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Magna is one of the world’s largest automotive suppliers and a trusted” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Magna is one of the world’s largest automotive suppliers and a trusted” at normal width.",
+  "observedSelector": "#BodyRegion_C088_Col01 > div:nth-of-type(1) > div > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#BodyRegion_C088_Col01 > div:nth-of-type(1) > div > p",
+      "equals": "Magna is one of the world’s largest automotive suppliers and a trusted"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#BodyRegion_C088_Col01 > div:nth-of-type(1) > div > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.magna.com",
+  "match": "https://www.magna.com/",
+  "barrier": "At 320 CSS pixels, the About Magna grid gives the passage a 320-pixel-wide column starting 30 pixels from the left, so the final 30 pixels extend beyond the viewport and are clipped.",
+  "rules": [
+    {
+      "selector": "#BodyRegion_C087_Col00 > div:nth-of-type(2) > div.l-grid-layout__two-column",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

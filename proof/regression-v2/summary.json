@@ -1,0 +1,858 @@
+{
+  "runner": "kane with local browser access gate",
+  "start": 6428.4876,
+  "end": 5304.5725,
+  "spent": 1123.9151000000002,
+  "rows": [
+    {
+      "id": "aljazeera-menu",
+      "kind": "old held-out",
+      "persona": "screen-reader-view",
+      "url": "https://www.aljazeera.com/",
+      "began": "2026-11-22T13:59:56.138Z",
+      "finished": "2026-11-22T14:00:59.961Z",
+      "outcome": "already-accessible",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "sessionId": "bed01e2d-1678-4a42-8aae-6ec552cb1a89",
+          "runner": "kane",
+          "result": "runs/aljazeera-menu/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "arstechnica-search",
+      "kind": "old held-out",
+      "persona": "low-vision",
+      "url": "https://arstechnica.com/",
+      "began": "2026-11-22T14:26:05.856Z",
+      "finished": "2026-11-22T14:26:09.964Z",
+      "outcome": "blocked",
+      "reason": "HTTP 405",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "blocked",
+          "sessionId": null,
+          "runner": "playwright",
+          "result": "runs/arstechnica-search/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "asana-product-nav",
+      "kind": "old held-out",
+      "persona": "screen-reader-view",
+      "url": "https://asana.com/",
+      "began": "2026-11-22T14:23:30.174Z",
+      "finished": "2026-11-22T14:26:17.974Z",
+      "outcome": "unresolved",
+      "reason": "Invalid patch proposal: [{\"instancePath\":\"/rules\",\"schemaPath\":\"#/properties/rules/minItems\",\"keyword\":\"minItems\",\"params\":{\"limit\":1},\"message\":\"must NOT have fewer than 1 items\"}]",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "sessionId": "6372d25b-8712-4ddf-8466-b2de8f248b9f",
+          "runner": "kane",
+          "result": "runs/asana-product-nav/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "sessionId": "431c6867-869c-49c4-9187-c7ba36f61327",
+          "runner": "kane",
+          "result": "runs/asana-product-nav/control/result.json"
+        }
+      ]
+    },
+    {
+      "id": "axios-open-search",
+      "kind": "old held-out",
+      "persona": "keyboard-only",
+      "url": "https://www.axios.com/",
+      "began": "2026-11-22T13:57:55.210Z",
+      "finished": "2026-11-22T13:57:56.993Z",
+      "outcome": "blocked",
+      "reason": "HTTP 403",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "blocked",
+          "sessionId": null,
+          "runner": "playwright",
+          "result": "runs/axios-open-search/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "bankofengland-rates",
+      "kind": "old held-out",
+      "persona": "low-vision",
+      "url": "https://www.bankofengland.co.uk/",
+      "began": "2026-11-22T14:21:32.961Z",
+      "finished": "2026-11-22T14:21:34.598Z",
+      "outcome": "blocked",
+      "reason": "HTTP 403",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "blocked",
+          "sessionId": null,
+          "runner": "playwright",
+          "result": "runs/bankofengland-rates/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "calculator-net-add-days",
+      "kind": "verified repair",
+      "persona": "screen-reader-view",
+      "url": "https://www.calculator.net/date-calculator.html",
+      "began": "2026-11-22T13:57:55.211Z",
+      "finished": "2026-11-22T14:01:33.644Z",
+      "outcome": "still works",
+      "reason": "AP(text) failed: ",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "pass",
+          "sessionId": "8bfce661-46aa-478c-a632-cbb683809d5d",
+          "runner": "kane",
+          "result": "runs/calculator-net-add-days/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "canada-ca-menu",
+      "kind": "old held-out",
+      "persona": "low-vision",
+      "url": "https://www.canada.ca/en.html",
+      "began": "2026-11-22T14:14:56.553Z",
+      "finished": "2026-11-22T14:16:14.522Z",
+      "outcome": "already-accessible",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "sessionId": "105b040f-a219-40ac-8672-114258cab80f",
+          "runner": "kane",
+          "result": "runs/canada-ca-menu/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "colorhexa-open-picker",
+      "kind": "verified repair",
+      "persona": "keyboard-only",
+      "url": "https://www.colorhexa.com/",
+      "began": "2026-11-22T13:58:50.262Z",
+      "finished": "2026-11-22T13:59:54.637Z",
+      "outcome": "still works",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "pass",
+          "sessionId": "ad1dd160-e716-4186-8500-88bbc86f69ff",
+          "runner": "kane",
+          "result": "runs/colorhexa-open-picker/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "consumerfinance-tools",
+      "kind": "old held-out",
+      "persona": "keyboard-only",
+      "url": "https://www.consumerfinance.gov/",
+      "began": "2026-11-22T14:15:48.854Z",
+      "finished": "2026-11-22T14:17:18.499Z",
+      "outcome": "already-accessible",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "sessionId": "fb16abf3-b6f3-44d0-a340-9295ac15a8ba",
+          "runner": "kane",
+          "result": "runs/consumerfinance-tools/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "crateandbarrel-search",
+      "kind": "old held-out",
+      "persona": "screen-reader-view",
+      "url": "https://www.crateandbarrel.com/",
+      "began": "2026-11-22T14:03:10.994Z",
+      "finished": "2026-11-22T14:03:12.945Z",
+      "outcome": "blocked",
+      "reason": "HTTP 403",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "blocked",
+          "sessionId": null,
+          "runner": "playwright",
+          "result": "runs/crateandbarrel-search/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "csmonitor-main-menu",
+      "kind": "old held-out",
+      "persona": "low-vision",
+      "url": "https://www.csmonitor.com/",
+      "began": "2026-11-22T13:57:58.495Z",
+      "finished": "2026-11-22T13:58:48.760Z",
+      "outcome": "already-accessible",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "sessionId": "9c4196ea-50b0-44b0-a89c-ad3e39a5f4bc",
+          "runner": "kane",
+          "result": "runs/csmonitor-main-menu/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "edx-explore",
+      "kind": "old held-out",
+      "persona": "low-vision",
+      "url": "https://www.edx.org/",
+      "began": "2026-11-22T14:18:03.318Z",
+      "finished": "2026-11-22T14:19:12.246Z",
+      "outcome": "already-accessible",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "sessionId": "e0e6c76c-3a26-46a0-a1df-915801cadbb7",
+          "runner": "kane",
+          "result": "runs/edx-explore/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "fdic-bankfind",
+      "kind": "old held-out",
+      "persona": "keyboard-only",
+      "url": "https://www.fdic.gov/",
+      "began": "2026-11-22T14:21:36.100Z",
+      "finished": "2026-11-22T14:22:15.503Z",
+      "outcome": "inconclusive",
+      "reason": "Could not confirm the persona and repair state on the recorded outcome page.",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "sessionId": "c78a4873-1198-441f-bec7-5e88830cdcb1",
+          "runner": "kane",
+          "result": "runs/fdic-bankfind/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "federalreserve-press",
+      "kind": "old held-out",
+      "persona": "screen-reader-view",
+      "url": "https://www.federalreserve.gov/",
+      "began": "2026-11-22T14:20:03.556Z",
+      "finished": "2026-11-22T14:21:12.378Z",
+      "outcome": "already-accessible",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "sessionId": "2240ca60-b6c2-4c1d-be71-8709dbffcaca",
+          "runner": "kane",
+          "result": "runs/federalreserve-press/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "fourmilab-prepare-latitude",
+      "kind": "verified repair",
+      "persona": "screen-reader-view",
+      "url": "https://www.fourmilab.ch/cgi-bin/Earth",
+      "began": "2026-11-22T14:01:01.463Z",
+      "finished": "2026-11-22T14:02:15.418Z",
+      "outcome": "still works",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "pass",
+          "sessionId": "755d1feb-538f-4f4c-9114-0137caf3f510",
+          "runner": "kane",
+          "result": "runs/fourmilab-prepare-latitude/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "geeksforgeeks-open-search",
+      "kind": "verified repair",
+      "persona": "keyboard-only",
+      "url": "https://www.geeksforgeeks.org/",
+      "began": "2026-11-22T14:01:38.592Z",
+      "finished": "2026-11-22T14:02:33.755Z",
+      "outcome": "still works",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "pass",
+          "sessionId": "1f2824da-789b-4232-807a-529415b24f20",
+          "runner": "kane",
+          "result": "runs/geeksforgeeks-open-search/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "govuk-services",
+      "kind": "old held-out",
+      "persona": "keyboard-only",
+      "url": "https://www.gov.uk/",
+      "began": "2026-11-22T14:13:11.732Z",
+      "finished": "2026-11-22T14:14:55.052Z",
+      "outcome": "already-accessible",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "sessionId": "512b08c6-d7d1-4a51-8d86-03111643d228",
+          "runner": "kane",
+          "result": "runs/govuk-services/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "jcrew-shop-nav",
+      "kind": "old held-out",
+      "persona": "low-vision",
+      "url": "https://www.jcrew.com/",
+      "began": "2026-11-22T14:02:16.920Z",
+      "finished": "2026-11-22T14:03:22.382Z",
+      "outcome": "already-accessible",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "sessionId": "fa04525b-0241-402e-8c5b-2aa3f34ec8b7",
+          "runner": "kane",
+          "result": "runs/jcrew-shop-nav/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "khanacademy-topics",
+      "kind": "old held-out",
+      "persona": "screen-reader-view",
+      "url": "https://www.khanacademy.org/",
+      "began": "2026-11-22T14:17:20.000Z",
+      "finished": "2026-11-22T14:18:01.816Z",
+      "outcome": "inconclusive",
+      "reason": "AP determined agent is stuck — no viable actions remain",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "sessionId": "13260a0f-440f-42a5-a7b4-9f7574634966",
+          "runner": "kane",
+          "result": "runs/khanacademy-topics/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "kidderminster-application-faq",
+      "kind": "verified repair",
+      "persona": "keyboard-only",
+      "url": "https://www.kidderminster.ac.uk/good-to-know-articles/how-to-apply-for-a-course/",
+      "began": "2026-11-22T14:02:35.255Z",
+      "finished": "2026-11-22T14:03:09.493Z",
+      "outcome": "blocked",
+      "reason": "page.goto: Timeout 30000ms exceeded.",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "blocked",
+          "sessionId": null,
+          "runner": "playwright",
+          "result": "runs/kidderminster-application-faq/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "linear-app-features",
+      "kind": "old held-out",
+      "persona": "low-vision",
+      "url": "https://linear.app/",
+      "began": "2026-11-22T14:22:17.004Z",
+      "finished": "2026-11-22T14:23:53.625Z",
+      "outcome": "already-accessible",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "sessionId": "59ab553d-24b9-4f26-9198-fd9a02d05113",
+          "runner": "kane",
+          "result": "runs/linear-app-features/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "meteoblue-weather-radar",
+      "kind": "verified repair",
+      "persona": "keyboard-only",
+      "url": "https://www.meteoblue.com/en/weather/maps/",
+      "began": "2026-11-22T14:03:14.447Z",
+      "finished": "2026-11-22T14:06:20.199Z",
+      "outcome": "inconclusive",
+      "reason": "Child agent failed: Maximum steps exceeded (21/18)",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "inconclusive",
+          "sessionId": "209b164f-b65b-4cd8-9b4b-e4b78be27c4c",
+          "runner": "kane",
+          "result": "runs/meteoblue-weather-radar/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "mynoise-open-menu",
+      "kind": "verified repair",
+      "persona": "keyboard-only",
+      "url": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+      "began": "2026-11-22T14:03:58.315Z",
+      "finished": "2026-11-22T14:05:09.246Z",
+      "outcome": "still works",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "pass",
+          "sessionId": "123d3ae1-232a-4f35-8c91-a12d92800060",
+          "runner": "kane",
+          "result": "runs/mynoise-open-menu/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "nationalrail-timetable",
+      "kind": "old held-out",
+      "persona": "low-vision",
+      "url": "https://www.nationalrail.co.uk/",
+      "began": "2026-11-22T14:07:27.675Z",
+      "finished": "2026-11-22T14:09:03.467Z",
+      "outcome": "already-accessible",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "sessionId": "d4b34338-a403-467f-8216-801cb0385ccb",
+          "runner": "kane",
+          "result": "runs/nationalrail-timetable/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "notion-marketing-cta",
+      "kind": "old held-out",
+      "persona": "keyboard-only",
+      "url": "https://www.notion.com/",
+      "began": "2026-11-22T14:22:14.529Z",
+      "finished": "2026-11-22T14:23:28.673Z",
+      "outcome": "already-accessible",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "sessionId": "2291dd26-88c9-40bd-96ed-d2c2b318b5fe",
+          "runner": "kane",
+          "result": "runs/notion-marketing-cta/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "nws-radar-play-pause",
+      "kind": "verified repair",
+      "persona": "keyboard-only",
+      "url": "https://radar.weather.gov/",
+      "began": "2026-11-22T14:06:21.702Z",
+      "finished": "2026-11-22T14:07:26.172Z",
+      "outcome": "still works",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "pass",
+          "sessionId": "d67387fc-a3be-4bb3-a568-43a948f2db0d",
+          "runner": "kane",
+          "result": "runs/nws-radar-play-pause/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "online-conversion-length",
+      "kind": "verified repair",
+      "persona": "low-vision",
+      "url": "https://www.onlineconversion.com/length_common.htm",
+      "began": "2026-11-22T14:09:04.969Z",
+      "finished": "2026-11-22T14:09:59.455Z",
+      "outcome": "still works",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "pass",
+          "sessionId": "f2c957ca-4a41-434a-a946-dba9b6d506aa",
+          "runner": "kane",
+          "result": "runs/online-conversion-length/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "open-ac-uk-courses",
+      "kind": "old held-out",
+      "persona": "keyboard-only",
+      "url": "https://www.open.ac.uk/",
+      "began": "2026-11-22T14:19:17.883Z",
+      "finished": "2026-11-22T14:19:19.838Z",
+      "outcome": "blocked",
+      "reason": "HTTP 403",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "blocked",
+          "sessionId": null,
+          "runner": "playwright",
+          "result": "runs/open-ac-uk-courses/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "patagonia-product-cta",
+      "kind": "old held-out",
+      "persona": "keyboard-only",
+      "url": "https://www.patagonia.com/home/",
+      "began": "2026-11-22T14:03:23.883Z",
+      "finished": "2026-11-22T14:03:56.813Z",
+      "outcome": "inconclusive",
+      "reason": "The recorded baseline did not include the required trusted Tab traversal.",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "sessionId": "4de0957f-50a8-4a7c-83ae-d14b5fa35a83",
+          "runner": "kane",
+          "result": "runs/patagonia-product-cta/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "procurement-journey-considerations",
+      "kind": "verified repair",
+      "persona": "keyboard-only",
+      "url": "https://www.procurementjourney.scot/index.php/route-1/route-1-introduction",
+      "began": "2026-11-22T14:09:15.385Z",
+      "finished": "2026-11-22T14:11:49.724Z",
+      "outcome": "inconclusive",
+      "reason": "Maximum steps exceeded (25/18)",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "inconclusive",
+          "sessionId": "554a5d20-a848-44b1-941f-0dc3c1b98cac",
+          "runner": "kane",
+          "result": "runs/procurement-journey-considerations/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "rei-open-search",
+      "kind": "old held-out",
+      "persona": "keyboard-only",
+      "url": "https://www.rei.com/",
+      "began": "2026-11-22T14:01:35.146Z",
+      "finished": "2026-11-22T14:01:37.090Z",
+      "outcome": "blocked",
+      "reason": "page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.rei.com/",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "blocked",
+          "sessionId": null,
+          "runner": "playwright",
+          "result": "runs/rei-open-search/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "report-605ca95e172608f662",
+      "kind": "verified repair",
+      "persona": "keyboard-only",
+      "url": "https://www.colorhexa.com/ff0000",
+      "began": "2026-11-22T14:11:51.227Z",
+      "finished": "2026-11-22T14:13:10.230Z",
+      "outcome": "still works",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "pass",
+          "sessionId": "d04e3ee3-88a1-42bb-b103-5f0c7feeb328",
+          "runner": "kane",
+          "result": "runs/report-605ca95e172608f662/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "report-cb10e18073d48f295a",
+      "kind": "verified repair",
+      "persona": "keyboard-only",
+      "url": "https://www.colorhexa.com/ff6600",
+      "began": "2026-11-22T14:14:13.329Z",
+      "finished": "2026-11-22T14:15:00.410Z",
+      "outcome": "still works",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "pass",
+          "sessionId": "7ae020a1-4003-4da5-9e78-391bb6393b0e",
+          "runner": "kane",
+          "result": "runs/report-cb10e18073d48f295a/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "report-d6870c43f8831c2d3b",
+      "kind": "verified repair",
+      "persona": "keyboard-only",
+      "url": "https://www.colorhexa.com/0066ff",
+      "began": "2026-11-22T14:15:01.911Z",
+      "finished": "2026-11-22T14:15:47.351Z",
+      "outcome": "still works",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "pass",
+          "sessionId": "c0bb1f4d-aa26-4c3b-ad79-8506724f9aaf",
+          "runner": "kane",
+          "result": "runs/report-d6870c43f8831c2d3b/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "rome2rio-search",
+      "kind": "old held-out",
+      "persona": "screen-reader-view",
+      "url": "https://www.rome2rio.com/",
+      "began": "2026-11-22T14:09:12.224Z",
+      "finished": "2026-11-22T14:09:13.883Z",
+      "outcome": "blocked",
+      "reason": "HTTP 403",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "blocked",
+          "sessionId": null,
+          "runner": "playwright",
+          "result": "runs/rome2rio-search/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "sfmta-pause-carousel",
+      "kind": "verified repair",
+      "persona": "keyboard-only",
+      "url": "https://www.sfmta.com/",
+      "began": "2026-11-22T14:16:16.023Z",
+      "finished": "2026-11-22T14:17:54.900Z",
+      "outcome": "inconclusive",
+      "reason": "Maximum steps exceeded (22/18)",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "inconclusive",
+          "sessionId": "f7d3d0df-17cb-4382-86a1-84bcc1824bbb",
+          "runner": "kane",
+          "result": "runs/sfmta-pause-carousel/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "statcounter-edit-chart",
+      "kind": "verified repair",
+      "persona": "keyboard-only",
+      "url": "https://gs.statcounter.com/",
+      "began": "2026-11-22T14:17:56.402Z",
+      "finished": "2026-11-22T14:19:16.381Z",
+      "outcome": "still works",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "pass",
+          "sessionId": "9f9c646c-ecb9-44c5-ba0c-f323da9f5d44",
+          "runner": "kane",
+          "result": "runs/statcounter-edit-chart/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "tfl-plan-journey",
+      "kind": "old held-out",
+      "persona": "keyboard-only",
+      "url": "https://tfl.gov.uk/",
+      "began": "2026-11-22T14:05:10.748Z",
+      "finished": "2026-11-22T14:09:10.721Z",
+      "outcome": "already-accessible",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "sessionId": "fc956cee-ea5b-44a6-b83a-a53cc71b398b",
+          "runner": "kane",
+          "result": "runs/tfl-plan-journey/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "theverge-menu",
+      "kind": "old held-out",
+      "persona": "keyboard-only",
+      "url": "https://www.theverge.com/",
+      "began": "2026-11-22T14:23:55.126Z",
+      "finished": "2026-11-22T14:26:04.354Z",
+      "outcome": "already-accessible",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "sessionId": "448bef4a-9a8b-4ab6-b099-28a4dc5e88c1",
+          "runner": "kane",
+          "result": "runs/theverge-menu/before/result.json"
+        }
+      ]
+    },
+    {
+      "id": "unitconverters-length",
+      "kind": "verified repair",
+      "persona": "low-vision",
+      "url": "https://www.unitconverters.net/",
+      "began": "2026-11-22T14:19:13.748Z",
+      "finished": "2026-11-22T14:20:02.056Z",
+      "outcome": "still works",
+      "reason": "Objective completed",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "pass",
+          "sessionId": "62b50f29-8281-410e-aaff-1c8debd5bf86",
+          "runner": "kane",
+          "result": "runs/unitconverters-length/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "usa-gov-search",
+      "kind": "old held-out",
+      "persona": "screen-reader-view",
+      "url": "https://www.usa.gov/",
+      "began": "2026-11-22T14:10:00.956Z",
+      "finished": "2026-11-22T14:14:11.828Z",
+      "outcome": "inconclusive",
+      "reason": "Final verification failed: \"results appear\"",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "sessionId": "548eaa13-d2cf-4581-9180-fc0f8916fad4",
+          "runner": "kane",
+          "result": "runs/usa-gov-search/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "fail",
+          "sessionId": "2a71ac98-5758-4509-beda-2d6d35ea259b",
+          "runner": "kane",
+          "result": "runs/usa-gov-search/control/result.json"
+        }
+      ]
+    },
+    {
+      "id": "ventusky-precipitation",
+      "kind": "verified repair",
+      "persona": "keyboard-only",
+      "url": "https://www.ventusky.com/",
+      "began": "2026-11-22T14:19:21.339Z",
+      "finished": "2026-11-22T14:21:31.460Z",
+      "outcome": "inconclusive",
+      "reason": "Maximum steps exceeded (27/18)",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "inconclusive",
+          "sessionId": "5ca56951-b8e2-4bf8-aa9e-5c4eab73bd31",
+          "runner": "kane",
+          "result": "runs/ventusky-precipitation/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "w3schools-select-swatch",
+      "kind": "verified repair",
+      "persona": "keyboard-only",
+      "url": "https://www.w3schools.com/colors/colors_picker.asp#main",
+      "began": "2026-11-22T14:21:13.879Z",
+      "finished": "2026-11-22T14:22:13.027Z",
+      "outcome": "inconclusive",
+      "reason": "Could not confirm the persona and repair state on the recorded outcome page.",
+      "phases": [
+        {
+          "stage": "existing-repair",
+          "status": "inconclusive",
+          "sessionId": "9425dd56-80ff-4648-ae1a-369a52a07f35",
+          "runner": "kane",
+          "result": "runs/w3schools-select-swatch/existing-repair/result.json"
+        }
+      ]
+    },
+    {
+      "id": "wired-top-story",
+      "kind": "old held-out",
+      "persona": "screen-reader-view",
+      "url": "https://www.wired.com/",
+      "began": "2026-11-22T14:26:11.466Z",
+      "finished": "2026-11-22T14:28:20.318Z",
+      "outcome": "inconclusive",
+      "reason": "Could not confirm the persona and repair state on the recorded outcome page.",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "sessionId": "ed53b5bb-22d0-4c51-854a-60a3e2477fcf",
+          "runner": "kane",
+          "result": "runs/wired-top-story/before/result.json"
+        }
+      ]
+    }
+  ]
+}

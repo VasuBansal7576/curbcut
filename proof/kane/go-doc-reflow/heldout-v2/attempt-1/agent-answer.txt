@@ -1,0 +1,13 @@
+{
+  "barrier": "At a 320 CSS pixel viewport, the preformatted code block prevents lines from wrapping, so its 776-pixel scroll width exceeds its 272-pixel visible width and requires horizontal scrolling.",
+  "rules": [
+    {
+      "selector": "#main-content > article > pre:nth-of-type(55)",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "pre-wrap",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

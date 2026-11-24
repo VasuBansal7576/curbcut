@@ -1,0 +1,37 @@
+{
+  "id": "json-org-reflow",
+  "url": "https://www.json.org/json-en.html",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “character '0020' . '10FFFF' - '\"' - '\\' '\\' escape”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "controlTask": "At normal width, read the passage beginning “character '0020' . '10FFFF' - '\"' - '\\' '\\' escape” and verify all its text is visible without horizontal scrolling.",
+  "observedSelector": "#box > p:nth-of-type(11)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#box > p:nth-of-type(11)",
+      "equals": "character '0020' . '10FFFF' - '\"' - '\\' '\\' escape"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#box > p:nth-of-type(11)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.json.org",
+  "match": "https://www.json.org/json-en.html",
+  "barrier": "At 320 CSS pixels, the side-by-side grid in #spec places the grammar passage from x=220 to x=433, so its right side is clipped.",
+  "rules": [
+    {
+      "selector": "#spec",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

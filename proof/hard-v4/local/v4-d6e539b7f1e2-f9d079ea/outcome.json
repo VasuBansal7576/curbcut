@@ -1,0 +1,175 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-d6e539b7f1e2-f9d079ea",
+    "url": "https://www.ukulele-tabs.com/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels with vertical scrolling only, hover “CHORDS CHART +”, click “Soprano” and confirm /chords-chart/soprano-1.html.",
+    "controlTask": "Hover “CHORDS CHART +”, click “Soprano” and confirm /chords-chart/soprano-1.html.",
+    "observedSelector": "#page > nav > ul > li:nth-of-type(3) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/chords-chart/soprano-1.html"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#page > nav > ul > li:nth-of-type(3)",
+      "#page > nav > ul > li:nth-of-type(3) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#page > nav > ul > li:nth-of-type(3) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#page > nav > ul > li:nth-of-type(3) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#page > nav > ul > li:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "Journey step 1 was unavailable after the prior step.",
+    "steps": [
+      {
+        "selector": "#page > nav > ul > li:nth-of-type(3) > a",
+        "action": "focus"
+      }
+    ],
+    "url": "https://www.ukulele-tabs.com/"
+  },
+  "registeredControl": {
+    "status": "pass",
+    "reason": "The complete journey reached the declared outcome.",
+    "steps": [
+      {
+        "selector": "#page > nav > ul > li:nth-of-type(3) > a",
+        "action": "focus"
+      },
+      {
+        "selector": "#page > nav > ul > li:nth-of-type(3) > a",
+        "action": "key",
+        "key": "ArrowDown"
+      },
+      {
+        "selector": "#page > nav > ul > li:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ],
+    "url": "https://www.ukulele-tabs.com/chords-chart/soprano-1.html",
+    "checks": [
+      true
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-d6e539b7f1e2-f9d079ea/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "low-vision",
+      "status": "fail",
+      "reason": "Journey step 1 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-d6e539b7f1e2-f9d079ea/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "low-vision",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-d6e539b7f1e2-f9d079ea/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-d6e539b7f1e2-f9d079ea/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v4-d6e539b7f1e2-f9d079ea",
+    "url": "https://www.ukulele-tabs.com/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels with vertical scrolling only, hover “CHORDS CHART +”, click “Soprano” and confirm /chords-chart/soprano-1.html.",
+    "controlTask": "Hover “CHORDS CHART +”, click “Soprano” and confirm /chords-chart/soprano-1.html.",
+    "observedSelector": "#page > nav > ul > li:nth-of-type(3) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/chords-chart/soprano-1.html"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#page > nav > ul > li:nth-of-type(3)",
+      "#page > nav > ul > li:nth-of-type(3) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#page > nav > ul > li:nth-of-type(3) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#page > nav > ul > li:nth-of-type(3) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#page > nav > ul > li:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ],
+    "site": "www.ukulele-tabs.com",
+    "match": "https://www.ukulele-tabs.com/",
+    "barrier": "At 320 CSS pixels, the main navigation list is set to display:none, so the Chords Chart link has no rendered box and cannot receive focus.",
+    "rules": [
+      {
+        "selector": "ul",
+        "action": "injectCSS",
+        "value": {
+          "display": "block"
+        }
+      },
+      {
+        "selector": "#page > nav > ul > li:nth-of-type(3)",
+        "action": "mirrorHoverToFocus"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/hard-v4/local/v4-d6e539b7f1e2-f9d079ea/attempt-1"
+}

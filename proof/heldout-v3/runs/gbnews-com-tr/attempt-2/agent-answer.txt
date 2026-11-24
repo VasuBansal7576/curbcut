@@ -1,0 +1,9 @@
+{
+  "barrier": "The clickable Previous Slide div (#backBtn) has a tabIndex of -1 and no tabindex attribute, so Tab skips it and keyboard users cannot reach it to activate it with Enter.",
+  "rules": [
+    {"selector": "#backBtn", "action": "makeFocusable"},
+    {"selector": "#backBtn", "action": "setRole", "value": "button"},
+    {"selector": "#backBtn", "action": "bindEnterToClick"},
+    {"selector": "#backBtn", "action": "restoreFocusOutline"}
+  ]
+}

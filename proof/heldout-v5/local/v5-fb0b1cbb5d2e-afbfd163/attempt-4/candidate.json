@@ -1,0 +1,54 @@
+{
+  "id": "v5-fb0b1cbb5d2e-afbfd163",
+  "url": "https://www.readingplus.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Search” by keyboard. Confirm the dialog appeared, then press Escape and confirm it closed.",
+  "controlTask": "Click “Search” and confirm that the dialog opens. Click “Close” to close it.",
+  "observedSelector": "#wrapper-navbar > nav > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "hidden",
+      "selector": "#searchModal"
+    }
+  ],
+  "barrierClass": 4,
+  "relatedSelectors": [
+    "#searchModal",
+    "#search-close"
+  ],
+  "journey": [
+    {
+      "selector": "#wrapper-navbar > nav > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(1)",
+      "action": "activate",
+      "checks": [
+        {
+          "kind": "visible",
+          "selector": "#searchModal"
+        }
+      ]
+    },
+    {
+      "selector": "#searchModal",
+      "action": "key",
+      "key": "Escape",
+      "pointer": {
+        "action": "click",
+        "selector": "#search-close"
+      }
+    }
+  ],
+  "site": "www.readingplus.com",
+  "match": "https://www.readingplus.com/",
+  "barrier": "Keyboard activation opens the Search dialog, but pressing Escape while it is open leaves it visible. The dialog already supports programmatic focus and has a native Close button.",
+  "rules": [
+    {
+      "action": "dialogBehavior",
+      "dialog": "#searchModal.show[aria-modal='true']",
+      "opener": "#wrapper-navbar .header-menu-right-desktop > button.header-search-button[data-target='#searchModal']",
+      "close": "#searchModal button#search-close[data-dismiss='modal']"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

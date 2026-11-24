@@ -1,0 +1,20 @@
+{
+  "barrier": "The observed Tab sequence missed the Yearbook collapse trigger despite its tabindex=\"0\". The desktop panel containing “Students & Families” stayed hidden until the trigger was clicked.",
+  "rules": [
+    {
+      "selector": "#yearbook-dropdown > span",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#yearbook-dropdown > span",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#yearbook-dropdown > span",
+      "target": "#yearbook-level-2-nav-desktop",
+      "mode": "display",
+      "display": "grid"
+    }
+  ]
+}

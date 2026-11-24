@@ -1,0 +1,71 @@
+{
+  "id": "dol-gov-tr2",
+  "url": "https://www.dol.gov/",
+  "persona": "keyboard-only",
+  "task": "Use Tab and Enter to reach and activate “FEDERAL GOVERNMENT”. Verify its content becomes visible.",
+  "controlTask": "Click “FEDERAL GOVERNMENT” and verify its content becomes visible.",
+  "observedSelector": "#block-dolfootermenu-3 > section > span",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "div:nth-of-type(1) > div > footer > div:nth-of-type(1) > a"
+    }
+  ],
+  "minimumTabPresses": 2,
+  "probe": {
+    "action": "click"
+  },
+  "site": "www.dol.gov",
+  "match": "https://www.dol.gov/",
+  "barrier": "The Federal Government footer trigger is a span exposed as text with a tabIndex of -1, so Tab skips it and keyboard users cannot reach it to activate it with Enter.",
+  "rules": [
+    {
+      "selector": "#block-dolfootermenu-3 > section > span",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#block-dolfootermenu-3 > section > span",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#block-dolfootermenu-3 > section > span",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#block-dolfootermenu-3 > section > span",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v3/runs/dol-gov-tr2/before/recording.mp4",
+    "after": "proof/heldout-v3/runs/dol-gov-tr2/attempt-1/after/recording.mp4",
+    "control": "proof/heldout-v3/runs/dol-gov-tr2/control/recording.mp4",
+    "verifiedAt": "2026-11-23T05:54:57.391Z",
+    "kaneRunIds": [
+      "25c40444-823c-4c61-8d28-4051f38dd66b",
+      "99cca2f3-749d-41a1-98a8-2ab78aa9d888",
+      "daebfc1c-b797-45e2-a223-c3f94de253aa"
+    ],
+    "kaneVerdicts": {
+      "before": "inconclusive",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-23T05:54:57.391Z",
+      "event": "verified",
+      "before": "25c40444-823c-4c61-8d28-4051f38dd66b",
+      "control": "99cca2f3-749d-41a1-98a8-2ab78aa9d888",
+      "after": "daebfc1c-b797-45e2-a223-c3f94de253aa"
+    }
+  ]
+}

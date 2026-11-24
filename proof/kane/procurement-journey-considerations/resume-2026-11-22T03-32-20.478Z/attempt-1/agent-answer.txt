@@ -1,0 +1,22 @@
+{
+  "barrier": "The Considerations Before Proceeding accordion title is exposed as text with tabIndex -1, so Tab skips the clickable title.",
+  "rules": [
+    {
+      "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+      "action": "restoreFocusOutline"
+    }
+  ]
+}

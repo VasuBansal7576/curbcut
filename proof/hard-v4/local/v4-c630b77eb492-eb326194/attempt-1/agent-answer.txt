@@ -1,0 +1,17 @@
+{
+  "barrier": "At 320 CSS pixels, the desktop navigation is hidden and the Pódcasts link has no rendered box, so it cannot receive focus to reveal the Déjà Vu submenu.",
+  "rules": [
+    {
+      "selector": "div.bottom-header-contain.desktop-only",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#menu-opcion-menu-1 > li:nth-of-type(8)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

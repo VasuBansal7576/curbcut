@@ -1,0 +1,19 @@
+{
+  "id": "fourmilab-prepare-latitude",
+  "url": "https://www.fourmilab.ch/cgi-bin/Earth",
+  "site": "www.fourmilab.ch",
+  "match": "https://www.fourmilab.ch/cgi-bin/Earth",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, first assert that the exact row ‘textbox · Latitude’ is present. Set that textbox to 10 and press Tab to commit the change. Verify its value is 10 and the ‘radio · Lat: · checked’ row confirms custom latitude mode. Stop at that selection without using Update.",
+  "barrier": "The latitude textbox has no accessible name, so Reading view cannot display the exact row ‘textbox · Latitude’.",
+  "rules": [
+    {
+      "selector": "input[name=\"lat\"]",
+      "action": "addLabel",
+      "value": "Latitude"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

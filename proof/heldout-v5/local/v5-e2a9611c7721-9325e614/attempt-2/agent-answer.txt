@@ -1,0 +1,12 @@
+{
+  "barrier": "Keyboard focus reaches “Use cases”, but Arrow Down leaves its panel hidden and clipped. Pointer hover applies the panel’s show class and makes “Blog readers” available.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#siteNavUseCases",
+      "target": "#siteNavUseCases + .dropdown-menu.nav-panel-use-cases[aria-labelledby='siteNavUseCases']",
+      "mode": "class",
+      "className": "show"
+    }
+  ]
+}

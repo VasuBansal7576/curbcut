@@ -1,0 +1,34 @@
+{
+  "id": "v5-c46d9e085415a2e891b3",
+  "url": "https://rekhta.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Find Meaning...” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Find Meaning...” field and type test without submitting.",
+  "observedSelector": "#dictSearchText",
+  "requiredName": "Find Meaning...",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#dictSearchText",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "rekhta.org",
+  "match": "https://rekhta.org/",
+  "barrier": "The dictionary input has a native textbox role but an empty accessible name, so it cannot be found as “Find Meaning...” in Reading view.",
+  "rules": [
+    {
+      "selector": "#dictSearchText",
+      "action": "addLabel",
+      "value": "Find Meaning..."
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

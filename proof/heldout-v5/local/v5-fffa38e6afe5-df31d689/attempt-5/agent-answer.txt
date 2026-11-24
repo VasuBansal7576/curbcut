@@ -1,0 +1,25 @@
+{
+  "barrier": "The expanded .gov panel is positioned offscreen. Removing its layout box alone still leaves the paragraph extending past the 320 CSS pixel viewport because the guidance text does not shrink beside its icon.",
+  "rules": [
+    {
+      "selector": "#gov-banner-default-default:not([hidden])",
+      "action": "injectCSS",
+      "value": {"display": "contents"}
+    },
+    {
+      "selector": "#gov-banner-default-default > .grid-row.grid-gap-lg",
+      "action": "injectCSS",
+      "value": {"display": "block"}
+    },
+    {
+      "selector": "#gov-banner-default-default > .grid-row > .usa-banner__guidance > .usa-media-block__body",
+      "action": "injectCSS",
+      "value": {"min-width": "0", "width": "auto"}
+    },
+    {
+      "selector": "#gov-banner-default-default > .grid-row > .usa-banner__guidance > .usa-media-block__body > p",
+      "action": "injectCSS",
+      "value": {"width": "auto", "max-width": "100%", "overflow-wrap": "anywhere"}
+    }
+  ]
+}

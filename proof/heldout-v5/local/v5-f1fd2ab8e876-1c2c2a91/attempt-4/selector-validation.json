@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "html",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "html",
+          "classes": [],
+          "label": "Fastweb - Fibra ottica, ADSL, Mobile ed Energia html{color:#000;background:#fff}body,div,dl,dt,dd,ul"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "trigger",
+      "selector": "#hdr-menu button[aria-controls=\"hdr-assistenza\"]",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "h2",
+            "hndl"
+          ],
+          "label": "Assistenza"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "target",
+      "selector": "#hdr-menu .aux > .section.hassubm.assistenza_clienti",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "section",
+            "hassubm",
+            "assistenza_clienti"
+          ],
+          "label": "Assistenza Assistenza Casa e Mobile Energia"
+        }
+      ]
+    }
+  ]
+}

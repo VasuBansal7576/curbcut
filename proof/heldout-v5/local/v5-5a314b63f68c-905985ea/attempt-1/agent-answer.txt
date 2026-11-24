@@ -1,0 +1,9 @@
+{
+  "barrier": "Keyboard activation sets Products to aria-expanded=\"true\" and adds the show class, but the submenu stays at display: none without pointer hover, hiding Virtual School.",
+  "rules": [
+    {
+      "selector": "#navbar-toggler > ul > li:nth-of-type(2).dropdown",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

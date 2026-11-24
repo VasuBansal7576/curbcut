@@ -1,0 +1,94 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "div.min-h-dvh.overflow-x-clip:has(#tour-sioluy-tab-rollout)",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "min-h-dvh",
+            "overflow-x-clip"
+          ],
+          "label": "Login and register links available Docs Products Live Updates Ship web fixes to users in minutes Nat"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "container",
+      "selector": "div.screen-tour > div.screen-tour-tabs[role=\"tablist\"][aria-label=\"Inside the console\"]",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "screen-tour-tabs"
+          ],
+          "role": "tablist",
+          "label": "Inside the console"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "items",
+      "selector": "div.screen-tour-tabs[aria-label=\"Inside the console\"] > button.screen-tour-tab[role=\"tab\"]",
+      "scope": "div.screen-tour > div.screen-tour-tabs[role=\"tablist\"][aria-label=\"Inside the console\"]",
+      "count": 6,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "id": "tour-sioluy-tab-rollout",
+          "classes": [
+            "screen-tour-tab"
+          ],
+          "role": "tab",
+          "label": "01 Progressive rollout"
+        },
+        {
+          "tag": "button",
+          "id": "tour-sioluy-tab-live-release",
+          "classes": [
+            "screen-tour-tab"
+          ],
+          "role": "tab",
+          "label": "02 Live release"
+        },
+        {
+          "tag": "button",
+          "id": "tour-sioluy-tab-update-health",
+          "classes": [
+            "screen-tour-tab"
+          ],
+          "role": "tab",
+          "label": "03 Update health"
+        },
+        {
+          "tag": "button",
+          "id": "tour-sioluy-tab-compatibility",
+          "classes": [
+            "screen-tour-tab"
+          ],
+          "role": "tab",
+          "label": "04 Compatibility"
+        },
+        {
+          "tag": "button",
+          "id": "tour-sioluy-tab-builds",
+          "classes": [
+            "screen-tour-tab"
+          ],
+          "role": "tab",
+          "label": "05 Native builds"
+        }
+      ]
+    }
+  ]
+}

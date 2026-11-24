@@ -1,0 +1,67 @@
+{
+  "id": "v4-e7ddd70b08382386ca05",
+  "url": "https://www.tokyo-np.co.jp/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “「核のごみ」文献調査、説明会に常陸大宮市民の反応は？ 鈴木定幸市長「リスクは低い」と言うが” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “「核のごみ」文献調査、説明会に常陸大宮市民の反応は？ 鈴木定幸市長「リスクは低い」と言うが” at normal width.",
+  "observedSelector": "#document-wrapper > main > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(2) > p:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#document-wrapper > main > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(2) > p:nth-of-type(1)",
+      "equals": "「核のごみ」文献調査、説明会に常陸大宮市民の反応は？ 鈴木定幸市長「リスクは低い」と言うが"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#document-wrapper > main > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(2) > p:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.tokyo-np.co.jp",
+  "match": "https://www.tokyo-np.co.jp/",
+  "barrier": "At 320 CSS pixels, the document retains a 1024px minimum width and the horizontal content row leaves the passage 404px wide. Its right edge reaches 419px and is clipped by the viewport.",
+  "rules": [
+    {
+      "selector": "#document",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "#document-wrapper",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "main.main-container",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "div.wrp.lv2",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto"
+      }
+    },
+    {
+      "selector": "#document-wrapper > main > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(2) > p:nth-of-type(1)",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

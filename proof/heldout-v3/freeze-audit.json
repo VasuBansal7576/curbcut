@@ -1,0 +1,66 @@
+{
+  "commit": "5edbe2edead3019c169e22541068a580e62e5481",
+  "working": "",
+  "history": "",
+  "paths": [
+    "core",
+    "extension",
+    "schemas",
+    "scripts",
+    "curbcut.mjs",
+    "package.json",
+    "package-lock.json",
+    "site/style.css",
+    ":(exclude)extension/bundled.json",
+    ":(exclude)extension/demo.json",
+    "tests"
+  ],
+  "throughCommit": "92931e4abea2a303c18bdcaa8f77d33571c0deac",
+  "checkedAt": "2026-11-23T05:55:00.073Z",
+  "registrationCommit": "e8084d63604b55c46b52385bf00b73ee38e6000c",
+  "passed": true,
+  "objectFormat": "sha1",
+  "frozenObjects": {
+    "core": {
+      "type": "tree",
+      "hash": "23717e85b78c4223e60765455d3cf30ab4d6a11b"
+    },
+    "extension": {
+      "type": "tree",
+      "hash": "bd406f72660b1ba6946c0b642cca81b480558a92"
+    },
+    "schemas": {
+      "type": "tree",
+      "hash": "f37163527571b4077f35efae92e497c83bc4857f"
+    },
+    "schemas/patch.json": {
+      "type": "blob",
+      "hash": "c4c79e653fa7bacdba32111c0d4a21d9fc148448"
+    },
+    "scripts": {
+      "type": "tree",
+      "hash": "0ed439ecc6108ab35475b3c0d1d1d3290a8377d5"
+    },
+    "tests": {
+      "type": "tree",
+      "hash": "7f160fe0949109e496747bc58325410ec3c48277"
+    },
+    "curbcut.mjs": {
+      "type": "blob",
+      "hash": "eb7146cedfa873a4f3555cbb6424d3bd955beac1"
+    },
+    "package.json": {
+      "type": "blob",
+      "hash": "7798a43012fe16ff2e218a229389fee8e6216982"
+    },
+    "package-lock.json": {
+      "type": "blob",
+      "hash": "7dc55e3cabfd99432d8a495d762d6a9fc03f585f"
+    },
+    "site/style.css": {
+      "type": "blob",
+      "hash": "a10275e05ca88309a9381f1ca15c4ff43b1a12f2"
+    }
+  },
+  "frozenObjectNote": "The extension tree records the full tree at the frozen commit. The v3 working-tree check excluded bundled.json and demo.json."
+}

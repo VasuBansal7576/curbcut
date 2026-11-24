@@ -1,0 +1,88 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "trigger",
+      "selector": "#builder .pick.action > button[aria-controls='v-3-2-liste']",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "feld"
+          ],
+          "role": "combobox",
+          "label": "Show Alert"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "list",
+      "selector": "#v-3-2-liste",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "ul",
+          "id": "v-3-2-liste",
+          "classes": [
+            "liste"
+          ],
+          "role": "listbox",
+          "label": "Show AlertRead Text (TTS)Send Chatbot MessageSwitch OBS SceneControl Custom GoalSpin Wheel of Action"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "options",
+      "selector": "#v-3-2-liste > li[role='option']",
+      "scope": "#v-3-2-liste",
+      "count": 7,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "li",
+          "id": "v-3-2-o0",
+          "classes": [
+            "aktiv",
+            "gewaehlt"
+          ],
+          "role": "option",
+          "label": "Show Alert"
+        },
+        {
+          "tag": "li",
+          "id": "v-3-2-o1",
+          "classes": [],
+          "role": "option",
+          "label": "Read Text (TTS)"
+        },
+        {
+          "tag": "li",
+          "id": "v-3-2-o2",
+          "classes": [],
+          "role": "option",
+          "label": "Send Chatbot Message"
+        },
+        {
+          "tag": "li",
+          "id": "v-3-2-o3",
+          "classes": [],
+          "role": "option",
+          "label": "Switch OBS Scene"
+        },
+        {
+          "tag": "li",
+          "id": "v-3-2-o4",
+          "classes": [],
+          "role": "option",
+          "label": "Control Custom Goal"
+        }
+      ]
+    }
+  ]
+}

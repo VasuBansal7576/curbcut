@@ -1,0 +1,12 @@
+{
+  "barrier": "After keyboard focus reaches Buy Instagram Followers, ArrowDown leaves focus on the page body instead of moving it to Buy Instagram Likes in the vertical Services tablist.",
+  "rules": [
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#services .services-pin [role=\"tablist\"][aria-label=\"Services\"]",
+      "items": "#services .services-pin [role=\"tablist\"][aria-label=\"Services\"] > button[role=\"tab\"]",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ]
+}

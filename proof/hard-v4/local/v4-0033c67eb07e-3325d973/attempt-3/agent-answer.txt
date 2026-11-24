@@ -1,0 +1,16 @@
+{
+  "barrier": "Keyboard activation opens Centers & Labs, but pressing Escape leaves the modal visible.",
+  "rules": [
+    {
+      "action": "dialogBehavior",
+      "dialog": "#block-design2-rebrandingtopcenters-modal",
+      "opener": "#block-design2-rebrandingtopcenters-menu",
+      "close": "#block-design2-rebrandingtopcenters-modal > div > div > div:nth-of-type(1) > div > a:nth-of-type(2)"
+    },
+    {
+      "action": "addLabel",
+      "selector": "#block-design2-rebrandingtopcenters-modal",
+      "value": "Centers & Labs"
+    }
+  ]
+}

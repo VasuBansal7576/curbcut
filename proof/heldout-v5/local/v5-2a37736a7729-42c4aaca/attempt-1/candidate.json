@@ -1,0 +1,54 @@
+{
+  "id": "v5-2a37736a7729-42c4aaca",
+  "url": "https://sepe.es/HomeSepe",
+  "persona": "keyboard-only",
+  "task": "Open “Configurar” by keyboard. Confirm the dialog appeared, then press Escape and confirm it closed.",
+  "controlTask": "Click “Configurar” and confirm that the dialog opens. Click “common.cookies.cerrar” to close it.",
+  "observedSelector": "div:nth-of-type(2) > div > button:nth-of-type(3)",
+  "outcomeChecks": [
+    {
+      "kind": "hidden",
+      "selector": "#js-cookies-panel"
+    }
+  ],
+  "barrierClass": 4,
+  "relatedSelectors": [
+    "#js-cookies-panel",
+    "#js-cookies-panel > div > div > div:nth-of-type(1) > button"
+  ],
+  "journey": [
+    {
+      "selector": "div:nth-of-type(2) > div > button:nth-of-type(3)",
+      "action": "activate",
+      "checks": [
+        {
+          "kind": "visible",
+          "selector": "#js-cookies-panel"
+        }
+      ]
+    },
+    {
+      "selector": "#js-cookies-panel",
+      "action": "key",
+      "key": "Escape",
+      "pointer": {
+        "action": "click",
+        "selector": "#js-cookies-panel > div > div > div:nth-of-type(1) > button"
+      }
+    }
+  ],
+  "site": "sepe.es",
+  "match": "https://sepe.es/HomeSepe",
+  "barrier": "Keyboard activation of Configurar opens the cookie settings dialog, but focus remains on the page body, so the dialog does not receive Escape.",
+  "rules": [
+    {
+      "action": "dialogBehavior",
+      "dialog": "#js-cookies-panel",
+      "opener": "div.cookies-banner > button.js-cookies-configure[data-target=\"#js-cookies-panel\"]",
+      "close": "#js-cookies-panel .modal-header > button.btn-close[data-dismiss=\"modal\"]"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

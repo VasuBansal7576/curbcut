@@ -1,0 +1,73 @@
+{
+  "entry": "index.html",
+  "nativeFixedQuery": "?fixed=1",
+  "baselineQuery": "?fixed=0",
+  "nativeFixToggle": "#native-fix",
+  "tasks": [
+    {
+      "id": "keyboard-add-headphones",
+      "persona": "keyboard-only",
+      "objective": "Using only the keyboard, search for headphones and add Field Headphones to the cart. Confirm Cart (1).",
+      "selectors": {
+        "search": "#search",
+        "add": ".add-to-cart",
+        "cart": "#cart",
+        "status": "#cart-status"
+      },
+      "checks": {
+        "baseline": "Submit headphones with Enter. Tab past Search. The add control is outside sequential focus and the cart remains at zero.",
+        "nativeFixed": "Submit headphones with Enter. Tab to Add to cart and press Enter. The cart reads Cart (1) and status reads Field Headphones added to cart.",
+        "mouseControl": "Click Add to cart and confirm Cart (1)."
+      },
+      "rules": [
+        { "selector": "div.add-to-cart", "action": "makeFocusable" },
+        { "selector": "div.add-to-cart", "action": "setRole", "value": "button" },
+        { "selector": "div.add-to-cart", "action": "bindEnterToClick" },
+        { "selector": "div.add-to-cart", "action": "restoreFocusOutline" }
+      ]
+    },
+    {
+      "id": "low-vision-shop-speaker",
+      "persona": "low-vision",
+      "viewportWidth": 320,
+      "objective": "In the unfiltered collection, scroll vertically to Porch Speaker. Assert that its Add to cart control fits fully within the visible width. Add the speaker and confirm Cart (1).",
+      "selectors": {
+        "grid": "#products",
+        "speaker": "[data-product=speaker]",
+        "add": "[data-product=speaker] [data-add]",
+        "cart": "#cart"
+      },
+      "checks": {
+        "baseline": "At 320 CSS pixels the speaker card starts beyond the viewport's right edge and document.documentElement.scrollWidth exceeds 320.",
+        "nativeFixed": "At 320 CSS pixels both cards stack and document.documentElement.scrollWidth is 320. Scroll vertically to add Porch Speaker and confirm Cart (1)."
+      },
+      "rules": [
+        { "selector": "#products", "action": "injectCSS", "value": { "display": "block" } }
+      ]
+    },
+    {
+      "id": "reader-search-products",
+      "persona": "screen-reader-view",
+      "objective": "In Reading view, first assert the exact row label ‘searchbox · Search products’ is present. Use that named searchbox to type speaker and submit. Confirm one result named Porch Speaker.",
+      "selectors": {
+        "search": "#search",
+        "result": "[data-product=speaker] h3",
+        "status": "#search-status"
+      },
+      "checks": {
+        "baseline": "Inspect the searchbox in the accessibility tree. Its accessible name is empty.",
+        "nativeFixed": "Find the searchbox named Search products, type speaker and submit. The status reports 1 product found. and the only visible product heading is Porch Speaker."
+      },
+      "rules": [
+        { "selector": "#search", "action": "addLabel", "value": "Search products" }
+      ]
+    }
+  ],
+  "additionalChecks": {
+    "focusOutline": "Tab to Cart. Computed outline-style is none in baseline and solid in native fixed mode.",
+    "shippingDialog": "Open #shipping by keyboard. Enter and Space on #close-shipping and Escape all fail to close the baseline dialog. Each closes the native fixed dialog. A pointer click on Close shipping details works in both modes.",
+    "reservation": "Activate #start-reservation and wait six seconds. Baseline shows the expiry message in #shop-error. Native fixed mode still shows an active reservation. The timeout in milliseconds is stored in data-timeout on the reservation button and read when starting.",
+    "errorContrast": "After the baseline reservation expires, inspect #shop-error. Native fixed mode uses a darker error color and a longer timer.",
+    "persistence": "Toggle Native fixes on, then navigate to a URL for the shop without a fixed query. It stays on. Toggle off and repeat. Explicit fixed queries take precedence."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "v5-857ef2c1ce84-168863dc",
+  "url": "https://www.crictracker.com/",
+  "persona": "keyboard-only",
+  "task": "Open “NEWS” using the keyboard and read “Cricket News”.",
+  "controlTask": "Click “NEWS” and read “Cricket News”.",
+  "observedSelector": "#uniq6afffa6aa0211951df4f51b7 > button",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#uniq6afffa6aa0211951df4f51b7 > div > a:nth-of-type(1)"
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#uniq6afffa6aa0211951df4f51b7 > div"
+  ],
+  "journey": [
+    {
+      "selector": "#uniq6afffa6aa0211951df4f51b7 > button",
+      "action": "activate"
+    },
+    {
+      "selector": "#uniq6afffa6aa0211951df4f51b7 > div > a:nth-of-type(1)",
+      "action": "observe"
+    }
+  ],
+  "site": "www.crictracker.com",
+  "match": "https://www.crictracker.com/",
+  "barrier": "Keyboard activation reaches the News button, but its dropdown stays at display: none. Pointer activation adds the show class to the panel and reveals Cricket News.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#uniq6afffa6aa0211951df4f51b7 > button.dropdown-toggle",
+      "target": "#uniq6afffa6aa0211951df4f51b7 > div.dropdown-menu",
+      "mode": "class",
+      "className": "show"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

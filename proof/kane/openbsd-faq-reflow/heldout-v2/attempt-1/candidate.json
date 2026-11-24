@@ -1,0 +1,38 @@
+{
+  "id": "openbsd-faq-reflow",
+  "url": "https://www.openbsd.org/faq/faq1.html",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “From: user@example.com To: bugs@openbsd.org Subject: 3.3-beta panics on a SPARCStation2 OpenBSD”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "controlTask": "At normal width, read the passage beginning “From: user@example.com To: bugs@openbsd.org Subject: 3.3-beta panics on a SPARCStation2 OpenBSD” and verify all its text is visible without horizontal scrolling.",
+  "observedSelector": "pre:nth-of-type(3)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "pre:nth-of-type(3)",
+      "equals": "From: user@example.com To: bugs@openbsd.org Subject: 3.3-beta panics on a SPARCStation2 OpenBSD"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "pre:nth-of-type(3)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.openbsd.org",
+  "match": "https://www.openbsd.org/faq/faq1.html",
+  "barrier": "At a 320 CSS pixel viewport, the bug report sample uses white-space: pre, so its lines do not wrap. Its scroll width is 615 CSS pixels and its client width is 298 CSS pixels.",
+  "rules": [
+    {
+      "selector": "pre:nth-of-type(3)",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "pre-wrap",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

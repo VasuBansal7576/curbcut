@@ -1,0 +1,55 @@
+{
+  "id": "v4-27c6f312c486-51e6e4ad",
+  "url": "https://csc.gov.in/",
+  "persona": "keyboard-only",
+  "task": "Open “ABOUT” from keyboard focus or with Arrow Down and follow “About MeitY”. Confirm the public destination /meity.",
+  "controlTask": "Hover “ABOUT”, click “About MeitY” and confirm /meity.",
+  "observedSelector": "#menuzord > ul > li:nth-of-type(2) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/meity"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menuzord > ul > li:nth-of-type(2)",
+    "#menuzord > ul > li:nth-of-type(2) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menuzord > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "csc.gov.in",
+  "match": "https://csc.gov.in/",
+  "barrier": "Pointer hover opens the ABOUT submenu, but keyboard focus and Arrow Down leave it at display:none, so About MeitY cannot be reached.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#menuzord > ul > li:nth-of-type(2) > a",
+      "target": "#menuzord > ul > li:nth-of-type(2) > ul",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

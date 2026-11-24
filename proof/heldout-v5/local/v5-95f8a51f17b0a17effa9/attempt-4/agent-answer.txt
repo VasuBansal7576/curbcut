@@ -1,0 +1,71 @@
+{
+  "barrier": "The body has a 1280px minimum width, and the carousel lays out the three industry cards in a horizontal flex row. At 320 CSS pixels, the passage extends beyond the visible viewport.",
+  "rules": [
+    {
+      "selector": "body",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.container.product:has(#myCarousel1), #myCarousel1",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#myCarousel1 > .carousel-inner, #myCarousel1 > .carousel-inner > .item:first-child",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "height": "auto",
+        "max-height": "none",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#myCarousel1 > .carousel-inner > .item:first-child > ul, #myCarousel1 > .carousel-inner > .item:first-child > ul > li#cont",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "max-width": "100%",
+        "height": "auto",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#myCarousel1 > .carousel-inner > .item:first-child > ul > li#cont > ul.list-inline",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "max-width": "100%",
+        "height": "auto",
+        "max-height": "none",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#myCarousel1 > .carousel-inner > .item:first-child > ul > li#cont > ul.list-inline > li",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%",
+        "height": "auto",
+        "max-height": "none",
+        "box-sizing": "border-box",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

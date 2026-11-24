@@ -1,0 +1,48 @@
+{
+  "id": "v5-4640c542c67a77933560",
+  "url": "https://lmgtfy.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Let Me Google That For You (LMGTFY) is for all those people” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Let Me Google That For You (LMGTFY) is for all those people” at normal width.",
+  "observedSelector": "#tsf > div:nth-of-type(2) > div:nth-of-type(6) > center:nth-of-type(2) > div > p:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#tsf > div:nth-of-type(2) > div:nth-of-type(6) > center:nth-of-type(2) > div > p:nth-of-type(1)",
+      "equals": "Let Me Google That For You (LMGTFY) is for all those people"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#tsf > div:nth-of-type(2) > div:nth-of-type(6) > center:nth-of-type(2) > div > p:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "lmgtfy.com",
+  "match": "https://lmgtfy.com/",
+  "barrier": "At 320 CSS pixels, #searchform retains an 820px minimum width, placing the 640px-wide passage 90px from the left edge and clipping its right side.",
+  "rules": [
+    {
+      "selector": "#searchform",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.jhp.VlcLAe > center:nth-of-type(2) > div:nth-of-type(1)",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

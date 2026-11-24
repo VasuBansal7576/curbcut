@@ -1,0 +1,19 @@
+{
+  "barrier": "Tab traversal reaches Progressive rollout, but the button remains outside the viewport inside the tab strip’s overflow container. Wrapping the strip did not resolve the visibility failure.",
+  "rules": [
+    {
+      "selector": "div.screen-tour > div.screen-tour-tabs[role=\"tablist\"][aria-label=\"Inside the console\"]",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.screen-tour > div.screen-tour-tabs[role=\"tablist\"][aria-label=\"Inside the console\"]",
+      "items": "div.screen-tour-tabs[aria-label=\"Inside the console\"] > button.screen-tour-tab[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

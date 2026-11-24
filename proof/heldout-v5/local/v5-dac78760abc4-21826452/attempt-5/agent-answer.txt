@@ -1,0 +1,17 @@
+{
+  "barrier": "The open cookie banner has two nested dialog elements in the tab order, and the keyboard journey fails to focus the inner Privacy dialog where Escape is expected.",
+  "rules": [
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#onetrust-banner-sdk",
+      "items": "#onetrust-banner-sdk > div[aria-label=\"Privacy\"], #onetrust-close-btn-container > button",
+      "orientation": "both",
+      "activate": "focus"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#onetrust-banner-sdk",
+      "close": "#onetrust-close-btn-container > button"
+    }
+  ]
+}

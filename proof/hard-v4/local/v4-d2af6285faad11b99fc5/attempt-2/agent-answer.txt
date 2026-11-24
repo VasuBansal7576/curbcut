@@ -1,0 +1,34 @@
+{
+  "barrier": "At 320 CSS pixels, the passage sits in a desktop-width layout. Its 650-pixel text box starts 312 pixels left of the viewport and extends 18 pixels past the right edge, so horizontal clipping cuts off the text.",
+  "rules": [
+    {
+      "selector": "div.pTvOx2.wixui-page",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "div.Ak0vpt",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "100%",
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#comp-ir225ikb",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

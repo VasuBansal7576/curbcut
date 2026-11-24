@@ -1,0 +1,83 @@
+{
+  "id": "v4-27c6f312c486-51e6e4ad",
+  "url": "https://csc.gov.in/",
+  "persona": "keyboard-only",
+  "task": "Open “ABOUT” from keyboard focus or with Arrow Down and follow “About MeitY”. Confirm the public destination /meity.",
+  "controlTask": "Hover “ABOUT”, click “About MeitY” and confirm /meity.",
+  "observedSelector": "#menuzord > ul > li:nth-of-type(2) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/meity"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menuzord > ul > li:nth-of-type(2)",
+    "#menuzord > ul > li:nth-of-type(2) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menuzord > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "csc.gov.in",
+  "match": "https://csc.gov.in/",
+  "barrier": "Pointer hover opens the ABOUT submenu, but keyboard focus and Arrow Down leave it at display:none, so About MeitY cannot be reached.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#menuzord > ul > li:nth-of-type(2) > a",
+      "target": "#menuzord > ul > li:nth-of-type(2) > ul",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/before/recording.mp4",
+    "control": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/control/recording.mp4",
+    "after": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/attempt-1/after/recording.mp4",
+    "verifiedAt": "2026-11-23T16:06:39.566Z",
+    "kaneRunIds": [
+      "ad931ab3-4cf2-4a29-92b0-6e6c9a988dbc",
+      "1dff095d-b268-4388-97a2-90d491b4c91f",
+      "ebcd0a03-29f8-4c4f-9f6d-c068c2920ad6"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-23T16:06:39.566Z",
+      "event": "verified",
+      "before": "ad931ab3-4cf2-4a29-92b0-6e6c9a988dbc",
+      "control": "1dff095d-b268-4388-97a2-90d491b4c91f",
+      "after": "ebcd0a03-29f8-4c4f-9f6d-c068c2920ad6"
+    }
+  ]
+}

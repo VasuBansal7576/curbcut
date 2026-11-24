@@ -1,0 +1,45 @@
+{
+  "id": "htdp-reflow",
+  "url": "https://htdp.org/2023-8-14/Book/part_prologue.html",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “function call:expected a function after the open parenthesis, found a number”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "controlTask": "At normal width, read the passage beginning “function call:expected a function after the open parenthesis, found a number” and verify all its text is visible without horizontal scrolling.",
+  "observedSelector": "div:nth-of-type(2) > div > div:nth-of-type(21) > blockquote > table > tbody > tr:nth-of-type(2) > td",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "div:nth-of-type(2) > div > div:nth-of-type(21) > blockquote > table > tbody > tr:nth-of-type(2) > td",
+      "equals": "function call:expected a function after the open parenthesis, found a number"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "div:nth-of-type(2) > div > div:nth-of-type(21) > blockquote > table > tbody > tr:nth-of-type(2) > td"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "htdp.org",
+  "match": "https://htdp.org/2023-8-14/Book/part_prologue.html",
+  "barrier": "The error-message cell uses white-space: pre, which prevents wrapping and pushes its right edge to 479 CSS pixels. The main column also has a 370-pixel minimum width, and the page clips content beyond the 320-pixel viewport.",
+  "rules": [
+    {
+      "selector": "div.maincolumn",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "div:nth-of-type(2) > div > div:nth-of-type(21) > blockquote > table > tbody > tr:nth-of-type(2) > td",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "pre-wrap",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,16 @@
+{
+  "barrier": "Sequential keyboard navigation reaches Sinterklaas while the tab is still outside the viewport. Pointer interaction scrolls the tab list into view.",
+  "rules": [
+    {
+      "selector": "ul[role=\"tablist\"]:has(> li > #tab1) > li > button[role=\"tab\"]",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "ul[role=\"tablist\"]:has(> li > #tab1)",
+      "items": "ul[role=\"tablist\"]:has(> li > #tab1) > li > button[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

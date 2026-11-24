@@ -1,0 +1,96 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-0cc76370f21d-a17b13ec",
+    "url": "https://www.fluco.store/",
+    "persona": "keyboard-only",
+    "task": "Expand “What infections does Fluconazole treat?” with the keyboard and read “Fluconazole treats a broad range of fungal and yeast infections, including vaginal candidiasis, oral”.",
+    "controlTask": "Click “What infections does Fluconazole treat?” and read “Fluconazole treats a broad range of fungal and yeast infections, including vaginal candidiasis, oral”.",
+    "observedSelector": "#fluconazoleFaq > div:nth-of-type(2) > h3 > button",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#faq2",
+        "equals": "Fluconazole treats a broad range of fungal and yeast infections, including vaginal candidiasis, oral"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#faq2"
+    ],
+    "journey": [
+      {
+        "selector": "#fluconazoleFaq > div:nth-of-type(2) > h3 > button",
+        "action": "activate"
+      },
+      {
+        "selector": "#faq2",
+        "action": "observe"
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "unresolved",
+  "reason": "Journey step 1 could not be seen while focused: clipped or off-screen.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-0cc76370f21d-a17b13ec/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 1 could not be seen while focused: clipped or off-screen.",
+      "file": "proof/heldout-v5/local/v5-0cc76370f21d-a17b13ec/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "fail",
+      "reason": "Journey step 1 could not be seen while focused: clipped or off-screen.",
+      "file": "proof/heldout-v5/local/v5-0cc76370f21d-a17b13ec/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-2/after",
+      "persona": "keyboard-only",
+      "iteration": 2,
+      "status": "fail",
+      "reason": "Tab traversal missed journey step 1.",
+      "file": "proof/heldout-v5/local/v5-0cc76370f21d-a17b13ec/attempt-2/after.json"
+    },
+    {
+      "name": "attempt-3/after",
+      "persona": "keyboard-only",
+      "iteration": 3,
+      "status": "fail",
+      "reason": "Journey step 1 could not be seen while focused: clipped or off-screen.",
+      "file": "proof/heldout-v5/local/v5-0cc76370f21d-a17b13ec/attempt-3/after.json"
+    },
+    {
+      "name": "attempt-4/after",
+      "persona": "keyboard-only",
+      "iteration": 4,
+      "status": "fail",
+      "reason": "Journey step 1 could not be seen while focused: clipped or off-screen.",
+      "file": "proof/heldout-v5/local/v5-0cc76370f21d-a17b13ec/attempt-4/after.json"
+    },
+    {
+      "name": "attempt-5/after",
+      "persona": "keyboard-only",
+      "iteration": 5,
+      "status": "fail",
+      "reason": "Journey step 1 could not be seen while focused: clipped or off-screen.",
+      "file": "proof/heldout-v5/local/v5-0cc76370f21d-a17b13ec/attempt-5/after.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

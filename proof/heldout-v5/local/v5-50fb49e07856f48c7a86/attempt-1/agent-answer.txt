@@ -1,0 +1,44 @@
+{
+  "barrier": "At 320 CSS pixels, the 1,000-pixel desktop layout places the 460-pixel article row at x=270. Horizontal clipping hides most of the passage, which sits in a fixed-width text column beside the thumbnail.",
+  "rules": [
+    {
+      "selector": "div.layout:has(div.main-column)",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "div.layout div.main-column",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.main-column > div.area > div.topics__article > ul > li",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "div.main-column > div.area > div.topics__article > ul > li > div.topics__article--contents",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "height": "auto",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

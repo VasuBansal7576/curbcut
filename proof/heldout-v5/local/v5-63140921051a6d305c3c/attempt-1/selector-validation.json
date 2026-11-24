@@ -1,0 +1,49 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#b-home #header",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "header",
+          "id": "header",
+          "classes": [
+            "site-header",
+            "row"
+          ],
+          "role": "banner",
+          "label": "University of Notre Dame AcademicsAdmissionsResearchGlobalFaithCommunityAbout LanguageEN University "
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "#b-home #content, #b-home #content > div.page-secondary.full-width",
+      "count": 2,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "main",
+          "id": "content",
+          "classes": [
+            "site-content"
+          ],
+          "label": "Health and well-being From preventing certain UTIs to developing mental health interventions, Notre "
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "page-secondary",
+            "full-width"
+          ],
+          "label": "Where challenge meets hope. Notre Dame scholars and researchers pursue breakthroughs for a world in "
+        }
+      ]
+    }
+  ]
+}

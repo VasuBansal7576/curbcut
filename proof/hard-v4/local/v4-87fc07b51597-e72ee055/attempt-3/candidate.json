@@ -1,0 +1,75 @@
+{
+  "id": "v4-87fc07b51597-e72ee055",
+  "url": "https://reshak.ru/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, hover “3 класс”, click “Английский” and confirm /tag/3klass_eng.html.",
+  "controlTask": "Hover “3 класс”, click “Английский” and confirm /tag/3klass_eng.html.",
+  "observedSelector": "div > header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/tag/3klass_eng.html"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "div > header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1)",
+    "div > header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > div"
+  ],
+  "journey": [
+    {
+      "selector": "div > header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "div > header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "div > header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > div > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "reshak.ru",
+  "match": "https://reshak.ru/",
+  "barrier": "At 320 CSS pixels, the “3 класс” link and its submenu have zero rendered width, and focusing the link leaves focus on the body.",
+  "rules": [
+    {
+      "selector": "div.topline.wrapper",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "nav.topmenu.flex-1",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "100%",
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "ul.nav-class.flexbox",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "div > header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

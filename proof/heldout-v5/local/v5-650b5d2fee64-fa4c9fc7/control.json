@@ -1,0 +1,1564 @@
+{
+  "runner": "playwright",
+  "status": "pass",
+  "reason": "The complete journey reached the declared outcome.",
+  "steps": [
+    {
+      "selector": "#menu-item-150538 > a",
+      "action": "focus"
+    },
+    {
+      "selector": "#menu-item-150538 > a",
+      "action": "key",
+      "key": "ArrowDown"
+    },
+    {
+      "selector": "#menu-item-150538 > div > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "url": "https://www.celebritynetworth.com/category/richest-athletes/richest-baseball/",
+  "checks": [
+    true
+  ],
+  "snapshot": {
+    "url": "https://www.celebritynetworth.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "#cnw_body_element",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#menu-item-150538 > a",
+          "parent": "#menu-item-150538",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "Athletes",
+          "children": [
+            "span.dropdown_indicator"
+          ],
+          "box": [
+            160,
+            75,
+            81,
+            26
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-150538",
+          "parent": "#menu-top-menu-2015",
+          "tag": "li",
+          "attributes": {
+            "id": "menu-item-150538",
+            "class": "menu-item menu-item-type-taxonomy menu-item-object-category menu-item-150538"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a",
+            "div.dropdown_item"
+          ],
+          "box": [
+            160,
+            75,
+            81,
+            26
+          ],
+          "style": {
+            "display": "inline-block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-top-menu-2015",
+          "parent": "#nav-content",
+          "tag": "ul",
+          "attributes": {
+            "id": "menu-top-menu-2015",
+            "class": "inline_menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-item-150538",
+            "#menu-item-150539",
+            "#menu-item-150540",
+            "#menu-item-150541",
+            "#menu-item-150536"
+          ],
+          "box": [
+            160,
+            75,
+            470,
+            26
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#nav-content",
+          "parent": "#main_nav",
+          "tag": "div",
+          "attributes": {
+            "id": "nav-content",
+            "class": "cnw_waist_band flex-between"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-top-menu-2015",
+            "ul.inline_menu.inline_menu-right_side"
+          ],
+          "box": [
+            160,
+            75,
+            960,
+            26
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#main_nav",
+          "parent": "#cnw_body_element",
+          "tag": "nav",
+          "attributes": {
+            "id": "main_nav"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.mobile_nav_bg",
+            "div.mobile_nav_button",
+            "#nav-content"
+          ],
+          "box": [
+            0,
+            72,
+            1280,
+            38
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#cnw_body_element",
+          "tag": "body",
+          "attributes": {
+            "class": "home blog wp-embed-responsive wp-theme-cnw_2023 cnw_responsive_theme adthrive-device-desktop",
+            "id": "cnw_body_element"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "noscript",
+            "#site_header",
+            "#main_nav",
+            "div.scrollable_bubbles.scrollable_bubbles-trending",
+            "main.cnw_waist_band.homepage_grid",
+            "footer"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            17445
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-150538 > div",
+          "parent": "#menu-item-150538",
+          "tag": "div",
+          "attributes": {
+            "class": "dropdown_item"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.dropdown_menu"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "6",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-150538 > div > ul > li:nth-of-type(1) > a",
+          "parent": "#menu-item-150538 > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "Baseball Players",
+          "children": [],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-150538 > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "parent": "#menu-item-150538 > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-150538 > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "parent": "#menu-item-150538 > div",
+          "tag": "ul",
+          "attributes": {
+            "class": "dropdown_menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li",
+            "li",
+            "li",
+            "li",
+            "li",
+            "li"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": ".inline_menu > li:hover > a",
+          "declarations": "color: var(--darkgreen);",
+          "conditions": [
+            "screen and (min-width: 771px)"
+          ]
+        },
+        {
+          "selector": ".inline_menu > li > a:hover",
+          "declarations": "text-decoration: underline;",
+          "conditions": [
+            "screen and (min-width: 771px)"
+          ]
+        },
+        {
+          "selector": ".inline_menu > li:hover > a .arrow::before",
+          "declarations": "border-color: var(--darkgreen);",
+          "conditions": [
+            "screen and (min-width: 771px)"
+          ]
+        },
+        {
+          "selector": ".inline_menu > li:hover .dropdown_item",
+          "declarations": "display: inline-block;",
+          "conditions": [
+            "screen and (min-width: 771px)"
+          ]
+        },
+        {
+          "selector": ".inline_menu > li:hover .dropdown_item a:hover",
+          "declarations": "text-decoration: underline;",
+          "conditions": [
+            "screen and (min-width: 771px)"
+          ]
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#menu-item-150538",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 160,
+        "width": 81
+      },
+      {
+        "selector": "#menu-item-150538 > div",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#menu-item-150538 > a",
+        "role": "link",
+        "name": "Athletes",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 160,
+        "width": 81
+      },
+      {
+        "selector": "#menu-item-150538 > div > ul > li:nth-of-type(1) > a",
+        "role": "link",
+        "name": "Baseball Players",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "span.dropdown_indicator",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "span",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 223,
+        "width": 14
+      },
+      {
+        "selector": "#menu-top-menu-2015",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 160,
+        "width": 470
+      },
+      {
+        "selector": "#cnw_body_element",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "noscript",
+        "role": "text",
+        "name": "<iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-5PMF8Z7P\" height=0 width=0 style=display:none;visibility:hidden></iframe>",
+        "state": "",
+        "tag": "noscript",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#site_header",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#main_nav",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.scrollable_bubbles.scrollable_bubbles-trending",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "main.cnw_waist_band.homepage_grid",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tag": "main",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "grid",
+        "left": 160,
+        "width": 960
+      },
+      {
+        "selector": "#header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "grid",
+        "left": 160,
+        "width": 960
+      },
+      {
+        "selector": "#logo",
+        "role": "heading",
+        "name": "Celebrity Net Worth logo",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 172,
+        "width": 468
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Map View",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 981,
+        "width": 72
+      },
+      {
+        "selector": "img.svg",
+        "role": "img",
+        "name": "Celebrity Net Worth logo",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 172,
+        "width": 290
+      },
+      {
+        "selector": "#brand_search",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 640,
+        "width": 468
+      },
+      {
+        "selector": "form.search",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tag": "form",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 834,
+        "width": 274
+      },
+      {
+        "selector": "#cnw_header_query",
+        "role": "textbox",
+        "name": "",
+        "state": "",
+        "tag": "input",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 834,
+        "width": 238
+      },
+      {
+        "selector": "button.submit",
+        "role": "button",
+        "name": "",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1072,
+        "width": 36
+      },
+      {
+        "selector": "div.mobile_nav_bg",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.mobile_nav_button",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": 0,
+        "tabIndexAttribute": "0",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#nav-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 160,
+        "width": 960
+      },
+      {
+        "selector": "#menu-item-150539",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 247,
+        "width": 88
+      },
+      {
+        "selector": "#menu-item-150540",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 341,
+        "width": 98
+      },
+      {
+        "selector": "#menu-item-150541",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 445,
+        "width": 96
+      },
+      {
+        "selector": "#menu-item-150536",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 547,
+        "width": 77
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 160,
+        "width": 152
+      },
+      {
+        "selector": "a.btn-random",
+        "role": "link",
+        "name": "Random",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 1056,
+        "width": 64
+      },
+      {
+        "selector": "div.homepage_grid_item-main",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 160,
+        "width": 636
+      },
+      {
+        "selector": "h2.homepage_header",
+        "role": "heading",
+        "name": "Today's Celebrity Net Worth Articles",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 160,
+        "width": 636
+      },
+      {
+        "selector": "div.top_article",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 160,
+        "width": 636
+      },
+      {
+        "selector": "a.article_item.lead",
+        "role": "link",
+        "name": "The 25 Highest-Paid NFL Players in 2026: Contracts, Salaries and Guaranteed Money The 25 Highest-Paid NFL Players in 2026: Contracts, Salaries and Guaranteed Money From record-breaking quarterback dea",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 160,
+        "width": 636
+      },
+      {
+        "selector": "img.image",
+        "role": "img",
+        "name": "\"NCIS\" Creator Donald Bellisario Just Sold His Backend Rights For A Massive Lump Sum Payout (And We Know How Much He Was Making Every Year)",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 160,
+        "width": 636
+      },
+      {
+        "selector": "div.meta",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 160,
+        "width": 636
+      },
+      {
+        "selector": "h3.title",
+        "role": "heading",
+        "name": "The 25 Highest-Paid NFL Players in 2026: Contracts, Salaries and Guaranteed Money",
+        "state": "",
+        "tag": "h3",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 175,
+        "width": 606
+      },
+      {
+        "selector": "div.description",
+        "role": "text",
+        "name": "From record-breaking quarterback deals to defensive stars earning $50 million a year, here's how the NFL's biggest contracts stack up in 2026.",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 175,
+        "width": 606
+      },
+      {
+        "selector": "img.image.lozad",
+        "role": "img",
+        "name": "The 25 Highest-Paid NFL Players in 2026: Contracts, Salaries and Guaranteed Money",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 160,
+        "width": 636
+      },
+      {
+        "selector": "div.pagination",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 160,
+        "width": 636
+      },
+      {
+        "selector": "a.paginate_button.paginate_button__next",
+        "role": "link",
+        "name": "Next",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 462,
+        "width": 33
+      },
+      {
+        "selector": "div.homepage_widget_grid",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "grid",
+        "left": 160,
+        "width": 636
+      },
+      {
+        "selector": "div.homepage_widget.most_popular",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 160,
+        "width": 309
+      },
+      {
+        "selector": "h2.homepage_widget-header",
+        "role": "heading",
+        "name": "Most Popular Celebrities",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 160,
+        "width": 309
+      },
+      {
+        "selector": "a.anchor",
+        "role": "link",
+        "name": "Kylie Jenner Net Worth Kylie Jenner Net Worth",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 160,
+        "width": 152
+      },
+      {
+        "selector": "img.image.ggnoads",
+        "role": "img",
+        "name": "Elon Musk Net Worth",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 318,
+        "width": 152
+      },
+      {
+        "selector": "h4.title",
+        "role": "heading",
+        "name": "Elon Musk Net Worth",
+        "state": "",
+        "tag": "h4",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 318,
+        "width": 152
+      },
+      {
+        "selector": "div.text",
+        "role": "text",
+        "name": "Elon Musk Net Worth",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 318,
+        "width": 152
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#menu-item-150538 > a",
+          "parent": "#menu-item-150538",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "Athletes",
+          "children": [
+            "span.dropdown_indicator"
+          ],
+          "box": [
+            160,
+            75,
+            81,
+            26
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-150538",
+          "parent": "#menu-top-menu-2015",
+          "tag": "li",
+          "attributes": {
+            "id": "menu-item-150538",
+            "class": "menu-item menu-item-type-taxonomy menu-item-object-category menu-item-150538"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a",
+            "div.dropdown_item"
+          ],
+          "box": [
+            160,
+            75,
+            81,
+            26
+          ],
+          "style": {
+            "display": "inline-block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-top-menu-2015",
+          "parent": "#nav-content",
+          "tag": "ul",
+          "attributes": {
+            "id": "menu-top-menu-2015",
+            "class": "inline_menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-item-150538",
+            "#menu-item-150539",
+            "#menu-item-150540",
+            "#menu-item-150541",
+            "#menu-item-150536"
+          ],
+          "box": [
+            160,
+            75,
+            470,
+            26
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#nav-content",
+          "parent": "#main_nav",
+          "tag": "div",
+          "attributes": {
+            "id": "nav-content",
+            "class": "cnw_waist_band flex-between"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-top-menu-2015",
+            "ul.inline_menu.inline_menu-right_side"
+          ],
+          "box": [
+            160,
+            75,
+            960,
+            26
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#main_nav",
+          "parent": "#cnw_body_element",
+          "tag": "nav",
+          "attributes": {
+            "id": "main_nav"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.mobile_nav_bg",
+            "div.mobile_nav_button",
+            "#nav-content"
+          ],
+          "box": [
+            0,
+            72,
+            1280,
+            38
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#cnw_body_element",
+          "tag": "body",
+          "attributes": {
+            "class": "home blog wp-embed-responsive wp-theme-cnw_2023 cnw_responsive_theme adthrive-device-desktop",
+            "id": "cnw_body_element"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "noscript",
+            "#site_header",
+            "#main_nav",
+            "div.scrollable_bubbles.scrollable_bubbles-trending",
+            "main.cnw_waist_band.homepage_grid",
+            "footer"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            17446
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-150538 > div",
+          "parent": "#menu-item-150538",
+          "tag": "div",
+          "attributes": {
+            "class": "dropdown_item"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.dropdown_menu"
+          ],
+          "box": [
+            160,
+            95,
+            139,
+            377
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "6",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-150538 > div > ul > li:nth-of-type(1) > a",
+          "parent": "#menu-item-150538 > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "Baseball Players",
+          "children": [],
+          "box": [
+            169,
+            116,
+            121,
+            25
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-150538 > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "parent": "#menu-item-150538 > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a"
+          ],
+          "box": [
+            169,
+            116,
+            121,
+            25
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-150538 > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "parent": "#menu-item-150538 > div",
+          "tag": "ul",
+          "attributes": {
+            "class": "dropdown_menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li",
+            "li",
+            "li",
+            "li",
+            "li",
+            "li"
+          ],
+          "box": [
+            160,
+            107,
+            139,
+            365
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": ".inline_menu > li:hover > a",
+          "declarations": "color: var(--darkgreen);",
+          "conditions": [
+            "screen and (min-width: 771px)"
+          ]
+        },
+        {
+          "selector": ".inline_menu > li > a:hover",
+          "declarations": "text-decoration: underline;",
+          "conditions": [
+            "screen and (min-width: 771px)"
+          ]
+        },
+        {
+          "selector": ".inline_menu > li:hover > a .arrow::before",
+          "declarations": "border-color: var(--darkgreen);",
+          "conditions": [
+            "screen and (min-width: 771px)"
+          ]
+        },
+        {
+          "selector": ".inline_menu > li:hover .dropdown_item",
+          "declarations": "display: inline-block;",
+          "conditions": [
+            "screen and (min-width: 771px)"
+          ]
+        },
+        {
+          "selector": ".inline_menu > li:hover .dropdown_item a:hover",
+          "declarations": "text-decoration: underline;",
+          "conditions": [
+            "screen and (min-width: 771px)"
+          ]
+        }
+      ]
+    }
+  }
+}

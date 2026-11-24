@@ -1,0 +1,9 @@
+{
+  "barrier": "The submenu opens when its parent list item is hovered or receives visible focus. Keyboard focus lands on the “Notre identité” link inside that item, leaving the submenu at display: none and the destination link unavailable.",
+  "rules": [
+    {
+      "selector": "nav.header-inverted__nav > ul.header-inverted__menu > li.menu-item--has-dropdown-menu:first-of-type",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

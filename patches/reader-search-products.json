@@ -1,0 +1,66 @@
+{
+  "id": "reader-search-products",
+  "url": "http://127.0.0.1:4317/fixtures/shop/",
+  "site": "127.0.0.1",
+  "match": "http://127.0.0.1:4317/fixtures/shop/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, first assert the exact row label ‘searchbox · Search products’ is present. Use that named searchbox to type speaker and submit. Confirm one result named Porch Speaker.",
+  "barrier": "The product search input has the searchbox role but no accessible name, so Reading view lacks the required row “searchbox · Search products”.",
+  "rules": [
+    {
+      "selector": "#search",
+      "action": "addLabel",
+      "value": "Search products"
+    }
+  ],
+  "status": "retired",
+  "evidence": {
+    "before": "proof/kane/reader-search-products/2026-11-21T19-42-45.357Z/before/recording.mp4",
+    "after": "proof/kane/reader-search-products/2026-11-21T19-42-45.357Z/attempt-1/after/recording.mp4",
+    "control": "proof/kane/reader-search-products/2026-11-21T19-42-45.357Z/control/recording.mp4",
+    "verifiedAt": "2026-11-21T19:45:55.046Z",
+    "kaneRunIds": [
+      "8bbef480-298c-45df-984e-a689a2d117dc",
+      "3383820e-7c36-414a-8a33-36948532bb3b",
+      "8cea418d-be68-4a63-8147-befade4e56ba"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-21T19:45:55.046Z",
+      "event": "verified",
+      "before": "8bbef480-298c-45df-984e-a689a2d117dc",
+      "control": "3383820e-7c36-414a-8a33-36948532bb3b",
+      "after": "8cea418d-be68-4a63-8147-befade4e56ba"
+    },
+    {
+      "at": "2026-11-21T19:49:13.853Z",
+      "event": "rechecked",
+      "without": "inconclusive",
+      "runId": "e8688650-a6f0-4952-87c4-8e09722bf839",
+      "video": "proof/kane/reader-search-products/2026-11-21T19-48-03.277Z/recheck-without/recording.mp4",
+      "with": "pass",
+      "after": "bd007d34-7365-45dc-a7c3-c4ab60987d15",
+      "afterVideo": "proof/kane/reader-search-products/2026-11-21T19-48-03.277Z/recheck-with/recording.mp4",
+      "reasonCode": "agent_error.child_failed"
+    },
+    {
+      "at": "2026-11-21T19:52:09.001Z",
+      "event": "rechecked",
+      "without": "inconclusive",
+      "runId": "c2baff32-7113-4164-b49d-5e3e9237953a",
+      "video": "proof/kane/reader-search-products/2026-11-21T19-50-36.101Z/recheck-without/recording.mp4",
+      "with": "pass",
+      "after": "bc43e3bd-faa8-42ec-8ebb-5a0293b9bfe7",
+      "afterVideo": "proof/kane/reader-search-products/2026-11-21T19-50-36.101Z/recheck-with/recording.mp4",
+      "reasonCode": "assertion_error.step_not_achievable"
+    },
+    {
+      "at": "2026-11-21T19:56:30.223Z",
+      "event": "retired",
+      "without": "pass",
+      "runId": "1e24a3cc-7e16-42a2-9112-3a23ff03fbfe",
+      "video": "proof/kane/reader-search-products/2026-11-21T19-53-46.356Z/recheck-without/recording.mp4"
+    }
+  ]
+}

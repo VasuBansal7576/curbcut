@@ -1,0 +1,10 @@
+{
+  "barrier": "The search input has a searchbox role but no accessible name, so screen-reader users cannot find it as “Search news” in Reading view.",
+  "rules": [
+    {
+      "selector": "#root > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div > input",
+      "action": "addLabel",
+      "value": "Search news"
+    }
+  ]
+}

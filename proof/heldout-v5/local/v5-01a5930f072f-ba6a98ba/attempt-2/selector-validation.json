@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "trigger",
+      "selector": "button[aria-controls=\"mega-menu\"][aria-describedby=\"header_search-input-mega-menu-cta-desc\"]",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "hidden",
+            "h-full",
+            "cursor-pointer",
+            "items-center"
+          ],
+          "label": "Locations"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "target",
+      "selector": "#mega-menu",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "mega-menu",
+          "classes": [
+            "hidden",
+            "search-panel",
+            "absolute",
+            "top-[78px]"
+          ],
+          "label": "Popular locations India Thailand Japan United Arab Emirates Vietnam Sri Lanka Singapore Indonesia Tu"
+        }
+      ]
+    }
+  ]
+}

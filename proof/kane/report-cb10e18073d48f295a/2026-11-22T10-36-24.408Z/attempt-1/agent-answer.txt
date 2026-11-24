@@ -1,0 +1,9 @@
+{
+  "barrier": "The color swatch next to the search field is a non-focusable div, so Tab and Shift+Tab skip it and keyboard users cannot open the picker.",
+  "rules": [
+    {"selector": "div.sp-replacer.sp-light", "action": "makeFocusable"},
+    {"selector": "div.sp-replacer.sp-light", "action": "setRole", "value": "button"},
+    {"selector": "div.sp-replacer.sp-light", "action": "bindEnterToClick"},
+    {"selector": "div.sp-replacer.sp-light", "action": "restoreFocusOutline"}
+  ]
+}

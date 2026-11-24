@@ -1,0 +1,65 @@
+{
+  "id": "cloudconvert-com-tr2",
+  "url": "https://cloudconvert.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Vendor engines and open-source converters selected per file type”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "controlTask": "At normal width, read the passage beginning “Vendor engines and open-source converters selected per file type” and verify all its text is visible without horizontal scrolling.",
+  "observedSelector": "#app > main > div > div > section > section > div:nth-of-type(3) > aside > ul > li:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#app > main > div > div > section > section > div:nth-of-type(3) > aside > ul > li:nth-of-type(1)",
+      "equals": "Vendor engines and open-source converters selected per file type"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#app > main > div > div > section > section > div:nth-of-type(3) > aside > ul > li:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "cloudconvert.com",
+  "match": "https://cloudconvert.com/",
+  "barrier": "The grid track extends the passage’s list item to x=377 in a 320 CSS pixel viewport, where horizontal clipping cuts off the overflow.",
+  "rules": [
+    {
+      "selector": "div.grid.gap-x-20",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v3/runs/cloudconvert-com-tr2/before/recording.mp4",
+    "after": "proof/heldout-v3/runs/cloudconvert-com-tr2/attempt-1/after/recording.mp4",
+    "control": "proof/heldout-v3/runs/cloudconvert-com-tr2/control/recording.mp4",
+    "verifiedAt": "2026-11-23T05:31:06.237Z",
+    "kaneRunIds": [
+      "5e97e502-0672-4af1-a8ef-3e3e3dd05b67",
+      "b44410ac-2107-4e72-a46c-2dc6134804de",
+      "8d678131-f9d8-460a-a0ac-90496a5c2967"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-23T05:31:06.237Z",
+      "event": "verified",
+      "before": "5e97e502-0672-4af1-a8ef-3e3e3dd05b67",
+      "control": "b44410ac-2107-4e72-a46c-2dc6134804de",
+      "after": "8d678131-f9d8-460a-a0ac-90496a5c2967"
+    }
+  ]
+}

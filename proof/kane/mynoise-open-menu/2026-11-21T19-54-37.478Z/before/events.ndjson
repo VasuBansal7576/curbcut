@@ -1,0 +1,29 @@
+{"type":"stream_start","cli_version":"0.10.7","surface":"run","pid":26088,"v":1,"ts":"2026-11-21T19:54:50.261Z"}
+{"type":"recording_state","enabled":true,"session_id":"acbf8ba4-aa31-4773-b1c1-67499b297f70","persist":false,"v":1,"ts":"2026-11-21T19:54:50.304Z"}
+{"type":"skill_update_available","current":null,"latest":"0.1.4","install_cmd":"kane-cli install skill","v":1,"ts":"2026-11-21T19:54:51.004Z"}
+{"type":"bifurcation","flows":["Navigate to https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php then Use Tab, Shift+Tab, arrow keys, Page Up, Page Down, Home, End, text entry, Space and Enter only.\nRemain on this public site.\nStop before sign-in, registration or payment.\nNever change fixture settings.\nUse only visible controls.\nVerify the final result on the page.\nUse Tab and Enter to activate the Menu icon at the top of the White Noise Generator.\nVerify the site navigation opens and the Full Index link is visible."],"count":1,"v":1,"ts":"2026-11-21T19:55:14.117Z"}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-21T19:55:45.488Z"}
+{"step":2,"status":"done","remark":"navigate: Navigate to https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php","v":1,"ts":"2026-11-21T19:55:45.496Z"}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-21T19:56:02.349Z"}
+{"step":3,"status":"done","remark":"press_key: PRIMARY: press the Tab key","v":1,"ts":"2026-11-21T19:56:06.427Z"}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-21T19:56:16.697Z"}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-21T19:58:20.196Z"}
+{"step":5,"status":"done","remark":"press_key: PRIMARY: press the Shift+Tab key","v":1,"ts":"2026-11-21T19:58:25.945Z"}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-21T19:58:31.138Z"}
+{"step":6,"status":"done","remark":"press_key: PRIMARY: press the Tab key","v":1,"ts":"2026-11-21T19:58:38.601Z"}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-21T19:58:42.179Z"}
+{"step":7,"status":"done","remark":"press_key: PRIMARY: Use Tab and Enter to activate the Menu icon at the top of the White Noi","v":1,"ts":"2026-11-21T19:58:49.257Z"}
+{"step":8,"status":"running","remark":"Step 7","v":1,"ts":"2026-11-21T19:58:51.508Z"}
+{"step":8,"status":"done","remark":"press_key: PRIMARY: press the Tab key","v":1,"ts":"2026-11-21T19:59:07.296Z"}
+{"step":9,"status":"running","remark":"Step 8","v":1,"ts":"2026-11-21T19:59:09.588Z"}
+{"step":9,"status":"done","remark":"press_key: PRIMARY: press the Shift+Tab key","v":1,"ts":"2026-11-21T19:59:16.215Z"}
+{"step":10,"status":"running","remark":"Step 9","v":1,"ts":"2026-11-21T19:59:18.428Z"}
+{"step":10,"status":"done","remark":"press_key: PRIMARY: press the Shift+Tab key","v":1,"ts":"2026-11-21T19:59:22.125Z"}
+{"step":11,"status":"running","remark":"Step 10","v":1,"ts":"2026-11-21T19:59:24.700Z"}
+{"step":11,"status":"done","remark":"press_key: PRIMARY: press the Shift+Tab key","v":1,"ts":"2026-11-21T19:59:30.485Z"}
+{"step":12,"status":"running","remark":"Step 11","v":1,"ts":"2026-11-21T19:59:33.341Z"}
+{"step":12,"status":"done","remark":"press_key: PRIMARY: press the Shift+Tab key","v":1,"ts":"2026-11-21T19:59:49.091Z"}
+{"step":13,"status":"running","remark":"Step 12","v":1,"ts":"2026-11-21T19:59:51.363Z"}
+{"step":13,"status":"failed","remark":"wait: Waiting after checking keyboard accessibility of the Menu icon","v":1,"ts":"2026-11-21T19:59:58.657Z"}
+{"type":"coverage","status":"skipped","reason":"not_assurance_project","pack":"/Users/vasu/.testmuai/kaneai/sessions/acbf8ba4-aa31-4773-b1c1-67499b297f70/evidence/fcfe48f8-4d7e-43cf-bce4-368dac21cd1d.evidence","v":1,"ts":"2026-11-21T20:00:18.985Z"}
+{"type":"run_end","status":"failed","summary":"You asked to open the White Noise Generator’s top menu using only Tab and Enter.\nThe White Noise Generator page was reached, but the site navigation was not opened and the Full Index link did not become visible.\nThe Menu icon could not be selected with the Tab key because it is not keyboard-focusable, so pressing Enter could not activate it under the required keyboard-only controls.","one_liner":"attempted to open the menu on myNoise.net","final_state":{"url":"https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php"},"reason":"The Menu icon is a non-focusable DIV without tabindex, so Tab and Enter cannot activate it.","duration":306.9,"bifurcated":false,"total_runs":1,"context":{"memory":{},"variables":{},"pointer":"(failed) attempted to open the menu on myNoise.net"},"credits_consumed":28.487182500000003,"session_dir":"/Users/vasu/.testmuai/kaneai/sessions/acbf8ba4-aa31-4773-b1c1-67499b297f70","run_dir":"/Users/vasu/.testmuai/kaneai/sessions/acbf8ba4-aa31-4773-b1c1-67499b297f70/runs/0","result_code":750,"reason_code":"assertion_error.step_not_achievable","per_flow_metadata":[{"result_code":"750","reason_code":"assertion_error.step_not_achievable","error_message":"The Menu icon is a non-focusable DIV without tabindex, so Tab and Enter cannot activate it.","summary":"You asked to open the White Noise Generator’s top menu using only Tab and Enter.\nThe White Noise Generator page was reached, but the site navigation was not opened and the Full Index link did not become visible.\nThe Menu icon could not be selected with the Tab key because it is not keyboard-focusable, so pressing Enter could not activate it under the required keyboard-only controls.","one_liner":"attempted to open the menu on myNoise.net","credits_consumed":28.487182500000003}],"run_id":"run-0","coverage":{"status":"skipped"},"v":1,"ts":"2026-11-21T20:00:18.985Z"}

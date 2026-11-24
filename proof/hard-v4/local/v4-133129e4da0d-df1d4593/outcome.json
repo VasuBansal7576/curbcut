@@ -1,0 +1,175 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-133129e4da0d-df1d4593",
+    "url": "https://bsky.network/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels with vertical scrolling only, hover “English”, click “日本語” and confirm /ja/.",
+    "controlTask": "Hover “English”, click “日本語” and confirm /ja/.",
+    "observedSelector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/ja/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+      "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > ul > li:nth-of-type(2) > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "Journey step 1 was unavailable after the prior step.",
+    "steps": [
+      {
+        "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+        "action": "focus"
+      }
+    ],
+    "url": "https://bsky.network/"
+  },
+  "registeredControl": {
+    "status": "pass",
+    "reason": "The complete journey reached the declared outcome.",
+    "steps": [
+      {
+        "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+        "action": "focus"
+      },
+      {
+        "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+        "action": "key",
+        "key": "ArrowDown"
+      },
+      {
+        "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > ul > li:nth-of-type(2) > a",
+        "action": "activate"
+      }
+    ],
+    "url": "https://bsky.network/ja/",
+    "checks": [
+      true
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-133129e4da0d-df1d4593/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "low-vision",
+      "status": "fail",
+      "reason": "Journey step 1 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-133129e4da0d-df1d4593/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "low-vision",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-133129e4da0d-df1d4593/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-133129e4da0d-df1d4593/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v4-133129e4da0d-df1d4593",
+    "url": "https://bsky.network/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels with vertical scrolling only, hover “English”, click “日本語” and confirm /ja/.",
+    "controlTask": "Hover “English”, click “日本語” and confirm /ja/.",
+    "observedSelector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/ja/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+      "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > ul > li:nth-of-type(2) > a",
+        "action": "activate"
+      }
+    ],
+    "site": "bsky.network",
+    "match": "https://bsky.network/",
+    "barrier": "At 320 CSS pixels, the language dropdown container has display:none, so the English trigger cannot be hovered or focused to reveal the Japanese link.",
+    "rules": [
+      {
+        "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+        "action": "injectCSS",
+        "value": {
+          "display": "block"
+        }
+      },
+      {
+        "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+        "action": "mirrorHoverToFocus"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/hard-v4/local/v4-133129e4da0d-df1d4593/attempt-1"
+}

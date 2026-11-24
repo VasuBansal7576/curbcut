@@ -1,0 +1,1178 @@
+{
+  "initial": 1501.4977,
+  "floor": 251.4976999999999,
+  "selection": {
+    "commit": "de0323515ceebd2788440e8c5bce9d7cd21e026c",
+    "blob": "9557efa3090f5a404b4e346920aead33e8df340f"
+  },
+  "startedAt": "2026-11-23T15:41:04.970Z",
+  "runner": "kane",
+  "finishedAt": "2026-11-23T16:40:03.531Z",
+  "end": 533.8893,
+  "spent": 967.6083999999998,
+  "selected": 21,
+  "stopped": "Balance 533.8893 cannot fund before above the protected 251.4976999999999 credits.",
+  "unrun": [
+    "v4-a91e388df654-553cb250",
+    "v4-d6e539b7f1e2-f9d079ea",
+    "v4-b35dcf923211-caeef8bd",
+    "v4-ea505998d794-7cb232c6",
+    "v4-7bdf9ab9e9af-32363b5e",
+    "v4-6d69e52234b5-eb01526e",
+    "v4-358d06a5be14-68acbc65"
+  ],
+  "fixed": 2,
+  "total": 14,
+  "counts": {
+    "inconclusive": 3,
+    "blocked": 3,
+    "verified": 2,
+    "unresolved": 1,
+    "already-accessible": 4,
+    "budget stop": 1
+  },
+  "byClass": {
+    "1": {
+      "fixed": 2,
+      "total": 11,
+      "counts": {
+        "blocked": 3,
+        "verified": 2,
+        "already-accessible": 4,
+        "inconclusive": 1,
+        "budget stop": 1
+      }
+    },
+    "2": {
+      "fixed": 0,
+      "total": 3,
+      "counts": {
+        "inconclusive": 2,
+        "unresolved": 1
+      }
+    }
+  },
+  "byPersona": {
+    "screen-reader-view": {
+      "fixed": 0,
+      "total": 1,
+      "counts": {
+        "inconclusive": 1
+      }
+    },
+    "keyboard-only": {
+      "fixed": 2,
+      "total": 11,
+      "counts": {
+        "blocked": 3,
+        "verified": 2,
+        "unresolved": 1,
+        "already-accessible": 4,
+        "budget stop": 1
+      }
+    },
+    "low-vision": {
+      "fixed": 0,
+      "total": 2,
+      "counts": {
+        "inconclusive": 2
+      }
+    }
+  },
+  "results": [
+    {
+      "task": {
+        "id": "v4-8db63969d2dd-03167342",
+        "url": "https://moz.com/",
+        "persona": "screen-reader-view",
+        "task": "In Reading view, activate the button named “Market visibility” and read the expanded answer.",
+        "controlTask": "Click “Market visibility” and read “Outrank rivals and grow your market presence with powerful share of voice metrics and robust competi”.",
+        "observedSelector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "#expandable-list-answer-712-1 > div > p",
+            "equals": "Outrank rivals and grow your market presence with powerful share of voice metrics and robust competi"
+          }
+        ],
+        "barrierClass": 2,
+        "relatedSelectors": [
+          "#expandable-list-answer-712-1"
+        ],
+        "journey": [
+          {
+            "selector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+            "action": "activate",
+            "reader": {
+              "role": "button",
+              "name": "Market visibility"
+            }
+          },
+          {
+            "selector": "#expandable-list-answer-712-1 > div > p",
+            "action": "observe"
+          }
+        ]
+      },
+      "status": "inconclusive",
+      "phases": [
+        {
+          "name": "before",
+          "balance": 1501.4977,
+          "after": 1486.3916,
+          "status": "inconclusive",
+          "runner": "kane",
+          "runId": "a1f5bbc1-efec-4123-9955-606d59164350",
+          "credits": 12.779975,
+          "reason": "complete-journey-not-witnessed",
+          "video": "proof/hard-v4/kane/v4-8db63969d2dd-03167342/before/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-8db63969d2dd-03167342/before/8200f6dc-c586-4c30-916a-189372ba3f00.evidence",
+          "basis": "complete-journey-not-witnessed"
+        },
+        {
+          "name": "control",
+          "balance": 1486.3916,
+          "after": 1465.977,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "3b95cced-4c1a-4532-93ba-d7ad29fa0d23",
+          "credits": 18.155147499999998,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-8db63969d2dd-03167342/control/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-8db63969d2dd-03167342/control/340ffdde-aa5b-4a4b-acbc-c58b5e1a8e46.evidence",
+          "basis": "recorded-journey-and-outcome"
+        },
+        {
+          "name": "attempt-1/after",
+          "balance": 1465.977,
+          "after": 1451.8108,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "90a7fd85-d421-4a78-95ee-f60469b0c28b",
+          "credits": 10.157127499999998,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-8db63969d2dd-03167342/attempt-1/after/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-8db63969d2dd-03167342/attempt-1/after/b1ed8321-ada0-41ea-9605-d509a31ce2a4.evidence",
+          "basis": "recorded-journey-and-outcome"
+        }
+      ],
+      "localProposal": "proof/hard-v4/local/v4-8db63969d2dd-03167342/attempt-1",
+      "reason": "Objective completed",
+      "finishedAt": "2026-11-23T15:44:00.762Z"
+    },
+    {
+      "task": {
+        "id": "v4-0a57adb0d3db-c95f0ca7",
+        "url": "https://www.first.org/",
+        "persona": "keyboard-only",
+        "task": "Open “About FIRST” from keyboard focus or with Arrow Down and follow “Mission Statement”. Confirm the public destination /about/mission.",
+        "controlTask": "Hover “About FIRST”, click “Mission Statement” and confirm /about/mission.",
+        "observedSelector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/about/mission"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1)",
+          "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ]
+      },
+      "status": "blocked",
+      "phases": [
+        {
+          "name": "before",
+          "balance": 1451.8108,
+          "after": 1420.6268,
+          "status": "blocked",
+          "runner": "kane",
+          "runId": "357345f3-f141-4cb4-91a6-fa695d118d18",
+          "credits": 21.301502499999998,
+          "reason": "Recorded browser access failed: Browser navigation error",
+          "video": "proof/hard-v4/kane/v4-0a57adb0d3db-c95f0ca7/before/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-0a57adb0d3db-c95f0ca7/before/c12dcbe2-a8f5-4166-a6c9-2d3daa69d71d.evidence"
+        }
+      ],
+      "localProposal": "proof/hard-v4/local/v4-0a57adb0d3db-c95f0ca7/attempt-1",
+      "reason": "Recorded browser access failed: Browser navigation error",
+      "finishedAt": "2026-11-23T15:45:37.232Z"
+    },
+    {
+      "task": {
+        "id": "v4-8e846cd4fb4e-f025deca",
+        "url": "https://builtin.com/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels with vertical scrolling only, click “Expand Button” and read “Remote Tech Companies Companies Hiring Remotely Fully Remote Companies More ResourcesTech + Startup ”.",
+        "controlTask": "Click “Expand Button” and read “Remote Tech Companies Companies Hiring Remotely Fully Remote Companies More ResourcesTech + Startup ”.",
+        "observedSelector": "div:nth-of-type(2) > main > div > div:nth-of-type(2) > div:nth-of-type(4) > div > button",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "#drop-data-explore",
+            "equals": "Remote Tech Companies Companies Hiring Remotely Fully Remote Companies More ResourcesTech + Startup "
+          }
+        ],
+        "barrierClass": 2,
+        "relatedSelectors": [
+          "#drop-data-explore"
+        ],
+        "journey": [
+          {
+            "selector": "div:nth-of-type(2) > main > div > div:nth-of-type(2) > div:nth-of-type(4) > div > button",
+            "action": "activate"
+          },
+          {
+            "selector": "#drop-data-explore",
+            "action": "observe"
+          }
+        ]
+      },
+      "status": "inconclusive",
+      "phases": [
+        {
+          "name": "before",
+          "balance": 1420.6268,
+          "after": 1394.1087,
+          "status": "inconclusive",
+          "runner": "kane",
+          "runId": "a1fcc792-f392-4b70-af22-74e241c2211f",
+          "credits": 18.3972475,
+          "reason": "complete-journey-not-witnessed",
+          "video": "proof/hard-v4/kane/v4-8e846cd4fb4e-f025deca/before/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-8e846cd4fb4e-f025deca/before/5ed6b51e-2afe-4cb2-b56c-b3d96678a4d2.evidence",
+          "basis": "complete-journey-not-witnessed"
+        },
+        {
+          "name": "control",
+          "balance": 1394.1087,
+          "after": 1370.1038,
+          "status": "inconclusive",
+          "runner": "kane",
+          "runId": "108afd51-6415-4f27-8fcc-e58439ec8ec9",
+          "credits": 21.9083275,
+          "reason": "complete-journey-not-witnessed",
+          "video": "proof/hard-v4/kane/v4-8e846cd4fb4e-f025deca/control/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-8e846cd4fb4e-f025deca/control/563fb17f-bb33-4072-8673-8dcc23cd5c57.evidence",
+          "basis": "complete-journey-not-witnessed"
+        },
+        {
+          "name": "attempt-1/after",
+          "balance": 1370.1038,
+          "after": 1351.342,
+          "status": "inconclusive",
+          "runner": "kane",
+          "runId": "f3e60b9f-5be5-44ee-ab3a-479d38ba6e48",
+          "credits": 18.036751499999998,
+          "reason": "complete-journey-not-witnessed",
+          "video": "proof/hard-v4/kane/v4-8e846cd4fb4e-f025deca/attempt-1/after/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-8e846cd4fb4e-f025deca/attempt-1/after/4f45dd2c-f9de-4dae-89f7-5f87910f81b6.evidence",
+          "basis": "complete-journey-not-witnessed"
+        },
+        {
+          "name": "attempt-1/after-retry",
+          "balance": 1351.342,
+          "after": 1336.7125,
+          "status": "inconclusive",
+          "runner": "kane",
+          "runId": "526e2701-9861-485d-8629-83f888e6c7f9",
+          "credits": 12.525287500000001,
+          "reason": "complete-journey-not-witnessed",
+          "video": "proof/hard-v4/kane/v4-8e846cd4fb4e-f025deca/attempt-1/after-retry/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-8e846cd4fb4e-f025deca/attempt-1/after-retry/8dba9114-07a4-4974-b72f-cc627794c8ef.evidence",
+          "basis": "complete-journey-not-witnessed"
+        }
+      ],
+      "localProposal": "proof/hard-v4/local/v4-8e846cd4fb4e-f025deca/attempt-2",
+      "reason": "complete-journey-not-witnessed",
+      "finishedAt": "2026-11-23T15:50:47.264Z"
+    },
+    {
+      "task": {
+        "id": "v4-86f207deeb57-7bc09a21",
+        "url": "https://www.mass.edu/",
+        "persona": "keyboard-only",
+        "task": "Open “About” from keyboard focus or with Arrow Down and follow “The DHE”. Confirm the public destination /about/aboutdhe.asp.",
+        "controlTask": "Hover “About”, click “The DHE” and confirm /about/aboutdhe.asp.",
+        "observedSelector": "#mainnav > nav > ul > li:nth-of-type(1) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/about/aboutdhe.asp"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#mainnav > nav > ul > li:nth-of-type(1)",
+          "#mainnav > nav > ul > li:nth-of-type(1) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#mainnav > nav > ul > li:nth-of-type(1) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#mainnav > nav > ul > li:nth-of-type(1) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#mainnav > nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ]
+      },
+      "status": "verified",
+      "phases": [
+        {
+          "name": "before",
+          "balance": 1336.7125,
+          "after": 1301.0526,
+          "status": "fail",
+          "runner": "kane",
+          "runId": "efcfdd9f-fe30-4b4e-a7e7-f95a0d71eba3",
+          "credits": 33.285855,
+          "reason": "Step 2 failed: Arrow Down left About focused and no visible or accessible “The DHE” control appeared.",
+          "video": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/before/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/before/2849afe4-60bc-40c2-babf-75270db8c7d8.evidence",
+          "basis": "recorded-journey-failed"
+        },
+        {
+          "name": "control",
+          "balance": 1301.0526,
+          "after": 1271.6794,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "385196a9-e165-4f24-8616-8fe5ceca6d61",
+          "credits": 19.23193,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/control/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/control/3eae0ffe-c163-4bec-a190-ede57e94f437.evidence",
+          "basis": "recorded-journey-and-outcome"
+        },
+        {
+          "name": "attempt-1/after",
+          "balance": 1271.6794,
+          "after": 1248.579,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "cb96e3af-bc33-467f-adce-1b4d19ce6cde",
+          "credits": 22.195352500000002,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/70a47b25-b707-443b-98dd-d8849884cec2.evidence",
+          "basis": "recorded-journey-and-outcome"
+        }
+      ],
+      "localProposal": "proof/hard-v4/local/v4-86f207deeb57-7bc09a21/attempt-1",
+      "reason": "Objective completed",
+      "finishedAt": "2026-11-23T15:56:29.818Z"
+    },
+    {
+      "task": {
+        "id": "v4-785089b6fcc2-26f574b6",
+        "url": "https://www.earthcam.com/",
+        "persona": "keyboard-only",
+        "task": "Expand “Menu” with the keyboard and read “Construction Monitoring”.",
+        "controlTask": "Click “Menu” and read “Construction Monitoring”.",
+        "observedSelector": "#ec-header > div > button:nth-of-type(2)",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "#ec-header-nav > ul > li:nth-of-type(3)",
+            "equals": "Construction Monitoring"
+          }
+        ],
+        "barrierClass": 2,
+        "relatedSelectors": [
+          "#ec-header-nav"
+        ],
+        "journey": [
+          {
+            "selector": "#ec-header > div > button:nth-of-type(2)",
+            "action": "activate"
+          },
+          {
+            "selector": "#ec-header-nav > ul > li:nth-of-type(3)",
+            "action": "observe"
+          }
+        ]
+      },
+      "status": "unresolved",
+      "phases": [
+        {
+          "name": "before",
+          "balance": 1248.579,
+          "after": 1222.0756,
+          "status": "fail",
+          "runner": "kane",
+          "runId": "280e0e65-dc2f-4ee5-8100-7ee001de1f4b",
+          "credits": 24.350762500000002,
+          "reason": "Task step 1 failed: the visible desktop header has links but no Menu control to expand.",
+          "video": "proof/hard-v4/kane/v4-785089b6fcc2-26f574b6/before/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-785089b6fcc2-26f574b6/before/d2a1f777-920d-49fc-bec1-7e6f04e54d34.evidence",
+          "basis": "recorded-journey-failed"
+        },
+        {
+          "name": "control",
+          "balance": 1222.0756,
+          "after": 1203.8984,
+          "status": "inconclusive",
+          "runner": "kane",
+          "runId": "f6eec9df-037b-4356-a056-9ea2ef830d2a",
+          "credits": 15.903995,
+          "reason": "complete-journey-not-witnessed",
+          "video": "proof/hard-v4/kane/v4-785089b6fcc2-26f574b6/control/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-785089b6fcc2-26f574b6/control/e759503e-3a9a-4431-bfb7-116b36e80ecf.evidence",
+          "basis": "complete-journey-not-witnessed"
+        },
+        {
+          "name": "attempt-1/after",
+          "balance": 1203.8984,
+          "after": 1176.3997,
+          "status": "fail",
+          "runner": "kane",
+          "runId": "df73a457-0b3a-4567-a5de-2c9b9903d199",
+          "credits": 25.2849525,
+          "reason": "Step 1 failed: privacy dialog traps focus and no visible Menu control is present.",
+          "video": "proof/hard-v4/kane/v4-785089b6fcc2-26f574b6/attempt-1/after/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-785089b6fcc2-26f574b6/attempt-1/after/f0febae5-ae4c-45af-9bb0-e4f496698fe2.evidence",
+          "basis": "recorded-journey-failed"
+        }
+      ],
+      "localProposal": "proof/hard-v4/local/v4-785089b6fcc2-26f574b6/attempt-1",
+      "reason": "Step 1 failed: privacy dialog traps focus and no visible Menu control is present.",
+      "finishedAt": "2026-11-23T16:00:57.554Z"
+    },
+    {
+      "task": {
+        "id": "v4-27c6f312c486-51e6e4ad",
+        "url": "https://csc.gov.in/",
+        "persona": "keyboard-only",
+        "task": "Open “ABOUT” from keyboard focus or with Arrow Down and follow “About MeitY”. Confirm the public destination /meity.",
+        "controlTask": "Hover “ABOUT”, click “About MeitY” and confirm /meity.",
+        "observedSelector": "#menuzord > ul > li:nth-of-type(2) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/meity"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#menuzord > ul > li:nth-of-type(2)",
+          "#menuzord > ul > li:nth-of-type(2) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menuzord > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+            "action": "activate"
+          }
+        ]
+      },
+      "status": "verified",
+      "phases": [
+        {
+          "name": "before",
+          "balance": 1176.3997,
+          "after": 1144.1435,
+          "status": "fail",
+          "runner": "kane",
+          "runId": "ad931ab3-4cf2-4a29-92b0-6e6c9a988dbc",
+          "credits": 29.884400000000003,
+          "reason": "Step 1 failed: ABOUT retained focus but Arrow Down, Enter, and Space never exposed About MeitY.",
+          "video": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/before/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/before/b7c5b95b-5119-4e73-9c1b-0ba053db146a.evidence",
+          "basis": "recorded-journey-failed"
+        },
+        {
+          "name": "control",
+          "balance": 1144.1435,
+          "after": 1124.6826,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "1dff095d-b268-4388-97a2-90d491b4c91f",
+          "credits": 15.5968975,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/control/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/control/3f8967e1-a82b-4a50-b1fa-800cc292b572.evidence",
+          "basis": "recorded-journey-and-outcome"
+        },
+        {
+          "name": "attempt-1/after",
+          "balance": 1124.6826,
+          "after": 1084.7612,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "ebcd0a03-29f8-4c4f-9f6d-c068c2920ad6",
+          "credits": 31.34266750000001,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/attempt-1/after/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/attempt-1/after/3471470a-c1d5-4bb6-ac9b-1d528853c2aa.evidence",
+          "basis": "recorded-journey-and-outcome"
+        }
+      ],
+      "localProposal": "proof/hard-v4/local/v4-27c6f312c486-51e6e4ad/attempt-1",
+      "reason": "Objective completed",
+      "finishedAt": "2026-11-23T16:06:39.567Z"
+    },
+    {
+      "task": {
+        "id": "v4-cc24dd9e10e4-3d3faa5f",
+        "url": "https://www.um-surabaya.ac.id/",
+        "persona": "keyboard-only",
+        "task": "Open “TENTANG UMSURA” from keyboard focus or with Arrow Down and follow “Penghargaan dan Prestasi”. Confirm the public destination /about/penghargaan.",
+        "controlTask": "Hover “TENTANG UMSURA”, click “Penghargaan dan Prestasi” and confirm /about/penghargaan.",
+        "observedSelector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/about/penghargaan"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#desktop-nav > ul > li:nth-of-type(1)",
+          "#desktop-nav > ul > li:nth-of-type(1) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#desktop-nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a:nth-of-type(5)",
+            "action": "activate"
+          }
+        ]
+      },
+      "status": "blocked",
+      "phases": [
+        {
+          "name": "before",
+          "balance": 1084.7612,
+          "after": 1051.2912,
+          "status": "blocked",
+          "runner": "kane",
+          "runId": "f5e4ffa4-fb35-4f29-8143-10b7687cd219",
+          "credits": 31.096775,
+          "reason": "Recorded browser access failed: Browser navigation error",
+          "video": "proof/hard-v4/kane/v4-cc24dd9e10e4-3d3faa5f/before/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-cc24dd9e10e4-3d3faa5f/before/c2c8188d-3436-4a76-a98a-c6d17bd4d582.evidence"
+        }
+      ],
+      "localProposal": "proof/hard-v4/local/v4-cc24dd9e10e4-3d3faa5f/attempt-1",
+      "reason": "Recorded browser access failed: Browser navigation error",
+      "finishedAt": "2026-11-23T16:08:45.097Z"
+    },
+    {
+      "task": {
+        "id": "v4-52c7859b6fdc-1dbfa8c6",
+        "url": "https://www.audience.io/",
+        "persona": "keyboard-only",
+        "task": "Open “Platform” from keyboard focus or with Arrow Down and follow “Promotions”. Confirm the public destination /promotions.",
+        "controlTask": "Hover “Platform”, click “Promotions” and confirm /promotions.",
+        "observedSelector": "#w-dropdown-toggle-0",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/promotions"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#w-node-_0fc76abe-e44c-d547-de15-6c3e7f8f7cd3-7f8f7ccf > div:nth-of-type(1)",
+          "#w-dropdown-list-0"
+        ],
+        "journey": [
+          {
+            "selector": "#w-dropdown-toggle-0",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-toggle-0",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-list-0 > a:nth-of-type(1)",
+            "action": "activate"
+          }
+        ]
+      },
+      "status": "already-accessible",
+      "phases": [
+        {
+          "name": "before",
+          "balance": 1051.2912,
+          "after": 1028.0965,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "bf033f36-c4de-4ad1-8a3b-b9a584315f14",
+          "credits": 20.1296875,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-52c7859b6fdc-1dbfa8c6/before/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-52c7859b6fdc-1dbfa8c6/before/88a1af74-2b8a-4b9d-aa6d-5978a4691902.evidence",
+          "basis": "recorded-journey-and-outcome"
+        },
+        {
+          "name": "control",
+          "balance": 1028.0965,
+          "after": 1008.9721,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "efb31ce2-7780-4687-bb91-8170155373e2",
+          "credits": 15.058902499999997,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-52c7859b6fdc-1dbfa8c6/control/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-52c7859b6fdc-1dbfa8c6/control/693e4c88-36aa-44c8-bbcf-22379e8523a4.evidence",
+          "basis": "recorded-journey-and-outcome"
+        },
+        {
+          "name": "attempt-1/after",
+          "balance": 1008.9721,
+          "after": 990.014,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "ae4b93d0-8625-4542-8ab6-ceff442884d9",
+          "credits": 17.455679000000003,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-52c7859b6fdc-1dbfa8c6/attempt-1/after/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-52c7859b6fdc-1dbfa8c6/attempt-1/after/5cbd6ad6-6cb1-457b-b636-6df81e7cbb4e.evidence",
+          "basis": "recorded-journey-and-outcome"
+        }
+      ],
+      "localProposal": "proof/hard-v4/local/v4-52c7859b6fdc-1dbfa8c6/attempt-1",
+      "reason": "Objective completed",
+      "finishedAt": "2026-11-23T16:12:15.324Z"
+    },
+    {
+      "task": {
+        "id": "v4-d14950f24a8c-24c68b67",
+        "url": "https://www.outsystems.com/",
+        "persona": "keyboard-only",
+        "task": "Open “Platform” from keyboard focus or with Arrow Down and follow “Agentic Systems EngineeringBuild with Mentor or any agentic coding tool”. Confirm the public destination /platform/agentic-systems-engineering.",
+        "controlTask": "Hover “Platform”, click “Agentic Systems EngineeringBuild with Mentor or any agentic coding tool” and confirm /platform/agentic-systems-engineering.",
+        "observedSelector": "#w-dropdown-toggle-1",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/platform/agentic-systems-engineering"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "div > div:nth-of-type(2) > div:nth-of-type(3) > div > nav > div:nth-of-type(1) > div:nth-of-type(1)",
+          "#w-dropdown-list-1"
+        ],
+        "journey": [
+          {
+            "selector": "#w-dropdown-toggle-1",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-dropdown-toggle-1",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#w-node-_7fd0a54d-c089-af38-c8b9-5e546296b9c9-6296b9b3 > a:nth-of-type(2)",
+            "action": "activate"
+          }
+        ]
+      },
+      "status": "already-accessible",
+      "phases": [
+        {
+          "name": "before",
+          "balance": 990.014,
+          "after": 949.3179,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "0b1c7bd1-6631-4f56-8c2b-8a5ccf0cce8f",
+          "credits": 37.34554750000001,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-d14950f24a8c-24c68b67/before/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-d14950f24a8c-24c68b67/before/38660daf-8406-431a-8f5d-1985a9e846b1.evidence",
+          "basis": "recorded-journey-and-outcome"
+        },
+        {
+          "name": "control",
+          "balance": 949.3179,
+          "after": 918.8285,
+          "status": "inconclusive",
+          "runner": "kane",
+          "runId": "147d656c-5ae1-49e5-ba6a-bce95084a65e",
+          "credits": 22.2057,
+          "reason": "complete-journey-not-witnessed",
+          "video": "proof/hard-v4/kane/v4-d14950f24a8c-24c68b67/control/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-d14950f24a8c-24c68b67/control/1e9430f1-fc00-4b4d-b9cc-4fa958f8c241.evidence",
+          "basis": "complete-journey-not-witnessed"
+        },
+        {
+          "name": "attempt-1/after",
+          "balance": 918.8285,
+          "after": 889.1723,
+          "status": "fail",
+          "runner": "kane",
+          "runId": "179b6a90-7e21-4dee-a262-8b9d6b597c8f",
+          "credits": 28.895822,
+          "reason": "Step 1 failed: the cookie dialog traps keyboard focus and its acceptance controls cannot be activated without changing fixture settings.",
+          "video": "proof/hard-v4/kane/v4-d14950f24a8c-24c68b67/attempt-1/after/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-d14950f24a8c-24c68b67/attempt-1/after/a26106a5-972a-4e4d-b718-5125825fe2a3.evidence",
+          "basis": "recorded-journey-failed"
+        }
+      ],
+      "localProposal": "proof/hard-v4/local/v4-d14950f24a8c-24c68b67/attempt-1",
+      "reason": "Step 1 failed: the cookie dialog traps keyboard focus and its acceptance controls cannot be activated without changing fixture settings.",
+      "finishedAt": "2026-11-23T16:18:15.681Z"
+    },
+    {
+      "task": {
+        "id": "v4-133129e4da0d-df1d4593",
+        "url": "https://bsky.network/",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels with vertical scrolling only, hover “English”, click “日本語” and confirm /ja/.",
+        "controlTask": "Hover “English”, click “日本語” and confirm /ja/.",
+        "observedSelector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/ja/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+          "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > ul > li:nth-of-type(2) > a",
+            "action": "activate"
+          }
+        ]
+      },
+      "status": "inconclusive",
+      "phases": [
+        {
+          "name": "before",
+          "balance": 889.1723,
+          "after": 858.4749,
+          "status": "inconclusive",
+          "runner": "kane",
+          "runId": "e4a5d4fd-97cf-4868-96ef-d41e77fb0fa6",
+          "credits": 27.689044999999997,
+          "reason": "complete-journey-not-witnessed",
+          "video": "proof/hard-v4/kane/v4-133129e4da0d-df1d4593/before/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-133129e4da0d-df1d4593/before/0a883786-3387-47d8-86c1-f1456eb3dcc6.evidence",
+          "basis": "complete-journey-not-witnessed"
+        },
+        {
+          "name": "control",
+          "balance": 858.4749,
+          "after": 794.0239,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "19ad8833-8f5d-4670-b7ed-5d8e555e53f4",
+          "credits": 22.44807,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-133129e4da0d-df1d4593/control/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-133129e4da0d-df1d4593/control/ff6492be-97d7-43c8-af81-2acc1574767d.evidence",
+          "basis": "recorded-journey-and-outcome"
+        },
+        {
+          "name": "attempt-1/after",
+          "balance": 794.0239,
+          "after": 772.8998,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "275ffa49-51ec-4b3e-ba8b-25fc3b06ee0d",
+          "credits": 18.758192499999996,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-133129e4da0d-df1d4593/attempt-1/after/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-133129e4da0d-df1d4593/attempt-1/after/b07ab3c7-5930-4808-9e8e-049928bb5aae.evidence",
+          "basis": "recorded-journey-and-outcome"
+        }
+      ],
+      "localProposal": "proof/hard-v4/local/v4-133129e4da0d-df1d4593/attempt-1",
+      "reason": "Objective completed",
+      "finishedAt": "2026-11-23T16:26:21.382Z"
+    },
+    {
+      "task": {
+        "id": "v4-9e4636960a02-49f50676",
+        "url": "https://www.ycombinator.com/",
+        "persona": "keyboard-only",
+        "task": "Open “About” from keyboard focus or with Arrow Down and follow “YC Interview Guide”. Confirm the public destination /interviews.",
+        "controlTask": "Hover “About”, click “YC Interview Guide” and confirm /interviews.",
+        "observedSelector": "#why-yc-page > div > div:nth-of-type(1) > div > header > nav:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/interviews"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#why-yc-page > div > div:nth-of-type(1) > div > header > nav:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "#why-yc-page > div > div:nth-of-type(1) > div > header > nav:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div"
+        ],
+        "journey": [
+          {
+            "selector": "#why-yc-page > div > div:nth-of-type(1) > div > header > nav:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#why-yc-page > div > div:nth-of-type(1) > div > header > nav:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#why-yc-page > div > div:nth-of-type(1) > div > header > nav:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div > div > div > a:nth-of-type(3)",
+            "action": "activate"
+          }
+        ]
+      },
+      "status": "blocked",
+      "phases": [
+        {
+          "name": "before",
+          "balance": 772.8998,
+          "after": 746.6776,
+          "status": "blocked",
+          "runner": "kane",
+          "runId": "3a224095-ea2b-42f6-bd6c-b9442a5d5fa6",
+          "credits": 22.045589999999997,
+          "reason": "Recorded browser access failed: Browser navigation error",
+          "video": "proof/hard-v4/kane/v4-9e4636960a02-49f50676/before/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-9e4636960a02-49f50676/before/ce0e432a-9d3d-451e-9839-61758fe5b2cd.evidence"
+        }
+      ],
+      "localProposal": "proof/hard-v4/local/v4-9e4636960a02-49f50676/attempt-2",
+      "reason": "Recorded browser access failed: Browser navigation error",
+      "finishedAt": "2026-11-23T16:27:40.209Z"
+    },
+    {
+      "task": {
+        "id": "v4-3b4eda89b814-c75d4162",
+        "url": "https://www.moveworks.com/",
+        "persona": "keyboard-only",
+        "task": "Open “Solutions” from keyboard focus or with Arrow Down and follow “Employee Experience”. Confirm the public destination /us/en/solutions/employee-experience.",
+        "controlTask": "Hover “Solutions”, click “Employee Experience” and confirm /us/en/solutions/employee-experience.",
+        "observedSelector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > button",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/us/en/solutions/employee-experience"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2)",
+          "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > div"
+        ],
+        "journey": [
+          {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > button",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > button",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > div > div > div:nth-of-type(1) > ul > li:nth-of-type(2) > a",
+            "action": "activate"
+          }
+        ]
+      },
+      "status": "already-accessible",
+      "phases": [
+        {
+          "name": "before",
+          "balance": 746.6776,
+          "after": 709.2326,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "b87ce004-aed3-4d7c-a33c-f77a93b36754",
+          "credits": 28.272354999999997,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-3b4eda89b814-c75d4162/before/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-3b4eda89b814-c75d4162/before/7c79baba-2b22-46a1-8783-d986eaa5a9c8.evidence",
+          "basis": "recorded-journey-and-outcome"
+        },
+        {
+          "name": "control",
+          "balance": 709.2326,
+          "after": 687.2588,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "176b94c2-4dfc-4b9d-a984-f800ae0d1daf",
+          "credits": 18.0541175,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-3b4eda89b814-c75d4162/control/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-3b4eda89b814-c75d4162/control/8cf1b613-320f-40d1-9bcb-e767240a6077.evidence",
+          "basis": "recorded-journey-and-outcome"
+        },
+        {
+          "name": "attempt-1/after",
+          "balance": 687.2588,
+          "after": 653.759,
+          "status": "inconclusive",
+          "runner": "kane",
+          "runId": "df95592d-ff8e-40ab-a391-6dcaa2a4bf8b",
+          "credits": 25.7881275,
+          "reason": "complete-journey-not-witnessed",
+          "video": "proof/hard-v4/kane/v4-3b4eda89b814-c75d4162/attempt-1/after/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-3b4eda89b814-c75d4162/attempt-1/after/01706c89-a857-4a64-8165-9d1b43474c3c.evidence",
+          "basis": "complete-journey-not-witnessed"
+        },
+        {
+          "name": "attempt-1/after-retry",
+          "balance": 653.759,
+          "after": 627.2861,
+          "status": "inconclusive",
+          "runner": "kane",
+          "runId": "12d7f3b2-89f4-4bc7-a0dc-1f07f58ad040",
+          "credits": 16.4859425,
+          "reason": "complete-journey-not-witnessed",
+          "video": "proof/hard-v4/kane/v4-3b4eda89b814-c75d4162/attempt-1/after-retry/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-3b4eda89b814-c75d4162/attempt-1/after-retry/d46bbc26-ecd2-4dad-ba1d-7fc633147c13.evidence",
+          "basis": "complete-journey-not-witnessed"
+        }
+      ],
+      "localProposal": "proof/hard-v4/local/v4-3b4eda89b814-c75d4162/attempt-1",
+      "reason": "complete-journey-not-witnessed",
+      "finishedAt": "2026-11-23T16:34:01.326Z"
+    },
+    {
+      "task": {
+        "id": "v4-a2c44b1b92d5-916d2c8a",
+        "url": "https://raptortech.com/",
+        "persona": "keyboard-only",
+        "task": "Open “Products” from keyboard focus or with Arrow Down and follow “Emergency Alerting & Management Emergency Management Software Prepare staff, coordinate response, and recover after a crisis.”. Confirm the public destination /protect-your-school/raptor-emergency-management-system/.",
+        "controlTask": "Hover “Products”, click “Emergency Alerting & Management Emergency Management Software Prepare staff, coordinate response, and recover after a crisis.” and confirm /protect-your-school/raptor-emergency-management-system/.",
+        "observedSelector": "#products-link",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/protect-your-school/raptor-emergency-management-system/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#primary-nav > li:nth-of-type(2)",
+          "#primary-nav > li:nth-of-type(2) > div"
+        ],
+        "journey": [
+          {
+            "selector": "#products-link",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#products-link",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#emergency-management > div > div:nth-of-type(1) > a:nth-of-type(1)",
+            "action": "activate"
+          }
+        ]
+      },
+      "status": "already-accessible",
+      "phases": [
+        {
+          "name": "before",
+          "balance": 627.2861,
+          "after": 588.5868,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "f1fb9506-f938-442d-9b03-8743c598cd7b",
+          "credits": 35.45614499999999,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-a2c44b1b92d5-916d2c8a/before/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-a2c44b1b92d5-916d2c8a/before/462b7b54-5d64-4bd8-91c8-749ec2963768.evidence",
+          "basis": "recorded-journey-and-outcome"
+        },
+        {
+          "name": "control",
+          "balance": 588.5868,
+          "after": 566.9233,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "83dddf07-107c-4448-9afb-17f029ef2267",
+          "credits": 18.246565,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-a2c44b1b92d5-916d2c8a/control/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-a2c44b1b92d5-916d2c8a/control/808d2b92-15aa-40bb-88c4-780b0fab44c8.evidence",
+          "basis": "recorded-journey-and-outcome"
+        },
+        {
+          "name": "attempt-1/after",
+          "balance": 566.9233,
+          "after": 533.8893,
+          "status": "pass",
+          "runner": "kane",
+          "runId": "c6137aa9-fbf1-48bc-a19c-a2e5ea1b1a74",
+          "credits": 31.360961,
+          "reason": "Objective completed",
+          "video": "proof/hard-v4/kane/v4-a2c44b1b92d5-916d2c8a/attempt-1/after/recording.mp4",
+          "evidencePack": "proof/hard-v4/kane/v4-a2c44b1b92d5-916d2c8a/attempt-1/after/00362e48-e369-4374-9e69-90144b4e4549.evidence",
+          "basis": "recorded-journey-and-outcome"
+        }
+      ],
+      "localProposal": "proof/hard-v4/local/v4-a2c44b1b92d5-916d2c8a/attempt-1",
+      "reason": "Objective completed",
+      "finishedAt": "2026-11-23T16:39:59.744Z"
+    },
+    {
+      "task": {
+        "id": "v4-142834493081-935ef579",
+        "url": "https://sana.sy/",
+        "persona": "keyboard-only",
+        "task": "Open “سوريا” from keyboard focus or with Arrow Down and follow “رئاسة الجمهورية”. Confirm the public destination /presidency/.",
+        "controlTask": "Hover “سوريا”, click “رئاسة الجمهورية” and confirm /presidency/.",
+        "observedSelector": "#menu-item-2257213 > a",
+        "outcomeChecks": [
+          {
+            "kind": "url-path",
+            "equals": "/presidency/"
+          }
+        ],
+        "barrierClass": 1,
+        "relatedSelectors": [
+          "#menu-item-2257213",
+          "#menu-item-2257213 > ul"
+        ],
+        "journey": [
+          {
+            "selector": "#menu-item-2257213 > a",
+            "action": "focus",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-item-2257213 > a",
+            "action": "key",
+            "key": "ArrowDown",
+            "pointer": {
+              "action": "hover"
+            }
+          },
+          {
+            "selector": "#menu-item-2557912 > a",
+            "action": "activate"
+          }
+        ]
+      },
+      "status": "budget stop",
+      "phases": [],
+      "localProposal": "proof/hard-v4/local/v4-142834493081-935ef579/attempt-1",
+      "reason": "Balance 533.8893 cannot fund before above the protected 251.4976999999999 credits.",
+      "finishedAt": "2026-11-23T16:40:02.443Z"
+    }
+  ]
+}

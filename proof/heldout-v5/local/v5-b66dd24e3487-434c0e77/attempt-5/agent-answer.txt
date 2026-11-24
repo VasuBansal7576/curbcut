@@ -1,0 +1,19 @@
+{
+  "barrier": "Tab traversal reaches Progressive rollout, but the focused tab is clipped or off-screen before ArrowRight can be used. The page wrapper has overflow clipping, and changing the tab list layout did not resolve the failure.",
+  "rules": [
+    {
+      "selector": "div.min-h-dvh.overflow-x-clip:has(#tour-sioluy-tab-rollout)",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.screen-tour > div.screen-tour-tabs[role=\"tablist\"][aria-label=\"Inside the console\"]",
+      "items": "div.screen-tour-tabs[aria-label=\"Inside the console\"] > button.screen-tour-tab[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

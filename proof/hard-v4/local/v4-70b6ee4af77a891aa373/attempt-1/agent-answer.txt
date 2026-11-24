@@ -1,0 +1,24 @@
+{
+  "barrier": "At 320 CSS pixels, the 1240-pixel-wide footer flex row leaves the copyright paragraph 812 pixels wide and extending to x=912, where page-level horizontal clipping cuts off the passage.",
+  "rules": [
+    {
+      "selector": "div.footer-main-top",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.footer-div-first",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

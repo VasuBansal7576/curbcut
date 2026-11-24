@@ -1,0 +1,13 @@
+{
+  "barrier": "The UFAL and Institucional menus rely on CSS hover to reveal their dropdowns. Focusing Institucional or pressing Arrow Down leaves its submenu hidden and collapsed, so Apresentação cannot be reached.",
+  "rules": [
+    {
+      "selector": "#global-menu > li.ufal.has_subtree",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "selector": "#global-menu > li.ufal.has_subtree > ul.dropdown > li.institucional.has_subtree",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

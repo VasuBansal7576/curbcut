@@ -1,0 +1,41 @@
+{
+  "id": "v5-0cc76370f21d-a17b13ec",
+  "url": "https://www.fluco.store/",
+  "persona": "keyboard-only",
+  "task": "Expand “What infections does Fluconazole treat?” with the keyboard and read “Fluconazole treats a broad range of fungal and yeast infections, including vaginal candidiasis, oral”.",
+  "controlTask": "Click “What infections does Fluconazole treat?” and read “Fluconazole treats a broad range of fungal and yeast infections, including vaginal candidiasis, oral”.",
+  "observedSelector": "#fluconazoleFaq > div:nth-of-type(2) > h3 > button",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#faq2",
+      "equals": "Fluconazole treats a broad range of fungal and yeast infections, including vaginal candidiasis, oral"
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#faq2"
+  ],
+  "journey": [
+    {
+      "selector": "#fluconazoleFaq > div:nth-of-type(2) > h3 > button",
+      "action": "activate"
+    },
+    {
+      "selector": "#faq2",
+      "action": "observe"
+    }
+  ],
+  "site": "www.fluco.store",
+  "match": "https://www.fluco.store/",
+  "barrier": "Tab reaches the FAQ button, but the button is clipped or off-screen when focused. Pointer activation brings it into view and expands the answer.",
+  "rules": [
+    {
+      "selector": "#fluconazoleFaq button[data-bs-target=\"#faq2\"]",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

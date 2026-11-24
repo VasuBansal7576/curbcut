@@ -1,0 +1,2277 @@
+{
+  "runner": "playwright",
+  "status": "fail",
+  "reason": "Journey step 3 was unavailable after the prior step.",
+  "steps": [
+    {
+      "selector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > a",
+      "action": "focus",
+      "traversal": {
+        "reached": true,
+        "tabs": 5
+      },
+      "visibility": null
+    },
+    {
+      "selector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > a",
+      "action": "key",
+      "key": "ArrowDown"
+    },
+    {
+      "selector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > div > div > div > div:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "url": "https://www.online-convert.com/",
+  "snapshot": {
+    "url": "https://www.online-convert.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body.lang-en",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > a",
+          "parent": "div.dropdown.border-left",
+          "tag": "a",
+          "attributes": {
+            "class": "bg-white pr-4 pl-4 dropdown-toggle main-language-selector d-flex flex-column h-100 align-items-center justify-content-center fg-normal fg-main-hover fg-main-dropdown-show position-",
+            "role": "button",
+            "aria-haspopup": "true",
+            "aria-expanded": "false"
+          },
+          "hoverHandlers": [],
+          "text": "EN",
+          "children": [
+            "svg.nav-shortcut-svg"
+          ],
+          "box": [
+            1135,
+            0,
+            67,
+            60
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.dropdown.border-left",
+          "parent": "div.px-3.pl-3 > div:nth-of-type(1) > nav:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "dropdown border-left d-none d-md-block h-100"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.bg-white.pr-4",
+            "div.main-language-dropdown.dropdown-menu"
+          ],
+          "box": [
+            1134,
+            0,
+            68,
+            60
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.px-3.pl-3 > div:nth-of-type(1) > nav:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1)",
+          "parent": "div.px-3.pl-3 > div:nth-of-type(1) > nav:nth-of-type(2) > div:nth-of-type(2)",
+          "tag": "div",
+          "attributes": {
+            "class": "h-100 font-weight-bold pr-0 pl-0 ml-0"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.dropdown.border-left"
+          ],
+          "box": [
+            1134,
+            0,
+            68,
+            60
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.px-3.pl-3 > div:nth-of-type(1) > nav:nth-of-type(2) > div:nth-of-type(2)",
+          "parent": "div.px-3.pl-3 > div:nth-of-type(1) > nav:nth-of-type(2)",
+          "tag": "div",
+          "attributes": {
+            "class": "h-100 d-none d-md-block"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.h-100.font-weight-bold"
+          ],
+          "box": [
+            1134,
+            0,
+            68,
+            60
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.px-3.pl-3 > div:nth-of-type(1) > nav:nth-of-type(2)",
+          "parent": "div.px-3.pl-3 > div:nth-of-type(1)",
+          "tag": "nav",
+          "attributes": {
+            "class": "navbar header-navbar d-flex pr-0 pl-0 pt-0 pb-0 position-static h-100"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.h-100.align-items-center",
+            "div.h-100.d-none",
+            "#notifications-placeholder-icon",
+            "#NotificationsDropdown",
+            "#recent-tasks-placeholder-icon",
+            "#RecentTasksDropdown"
+          ],
+          "box": [
+            1009,
+            0,
+            255,
+            60
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.px-3.pl-3 > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "d-flex justify-content-between h-100"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "nav.navbar.header-navbar",
+            "nav.navbar.header-navbar"
+          ],
+          "box": [
+            16,
+            0,
+            1248,
+            60
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > div",
+          "parent": "div.dropdown.border-left",
+          "tag": "div",
+          "attributes": {
+            "class": "main-language-dropdown dropdown-menu dropdown-menu-right dropdown-menu-hover w-100 bg-white p-3 border"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.pl-3.pr-3"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "-1",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > div > div > div > div:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+          "parent": "div.pl-3.pr-3 > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "class": "pd-1 pr-2 d-block language-selector-link font-weight-normal"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "bdi.notranslate"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.pl-3.pr-3 > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "parent": "div.pl-3.pr-3 > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "rounded cursor-pointer text-indent-05"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.pd-1.pr-2"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.pl-3.pr-3 > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "parent": "div.pl-3.pr-3 > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "list-unstyled no-margin w-100"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.rounded.cursor-pointer",
+            "li.rounded.cursor-pointer",
+            "li.rounded.cursor-pointer",
+            "li.rounded.cursor-pointer",
+            "li.rounded.cursor-pointer"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.pl-3.pr-3 > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "div.pl-3.pr-3 > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "col-md-6 no-padding"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.list-unstyled.no-margin"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.pl-3.pr-3 > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "row"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.col-md-6.no-padding",
+            "div.col-md-6.no-padding"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "--bs-link-color-rgb: var(--bs-link-hover-color-rgb);",
+          "conditions": []
+        },
+        {
+          "selector": ".cursor-pointer, .cursor-pointer:hover",
+          "declarations": "cursor: pointer;",
+          "conditions": []
+        },
+        {
+          "selector": ".fg-main-hover:hover, .fg-menu-badge:hover, :is(.fg-main-hover:hover, .fg-menu-badge:hover) .nav-shortcut-svg",
+          "declarations": "color: var(--sat-project-main);",
+          "conditions": []
+        },
+        {
+          "selector": ".main-language-dropdown li a:hover, .main-nav-dropdown li a:hover",
+          "declarations": "color: rgb(46, 46, 46) !important;",
+          "conditions": []
+        },
+        {
+          "selector": ".main-language-dropdown li:hover",
+          "declarations": "background: rgb(238, 238, 238) !important; border-radius: 4px !important;",
+          "conditions": []
+        },
+        {
+          "selector": ".dropdown-menu-hover-effect, .dropdown:hover .dropdown-menu-hover",
+          "declarations": "display: block; margin-top: 0px;",
+          "conditions": [
+            "(min-width: 1050px)"
+          ]
+        },
+        {
+          "selector": "a:hover .nav-shortcut-svg",
+          "declarations": "color: rgb(13, 71, 161);",
+          "conditions": []
+        },
+        {
+          "selector": ".cursor-pointer, .cursor-pointer:hover, .tile",
+          "declarations": "cursor: pointer;",
+          "conditions": []
+        },
+        {
+          "selector": ".fg-main-hover:hover, .fg-menu-badge:hover, :is(.fg-main-hover:hover, .fg-menu-badge:hover) .nav-shortcut-svg",
+          "declarations": "color: var(--sat-project-main);",
+          "conditions": []
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1134,
+        "width": 68
+      },
+      {
+        "selector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > div",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > a",
+        "role": "button",
+        "name": "EN",
+        "state": "expanded false",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 1135,
+        "width": 67
+      },
+      {
+        "selector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > div > div > div > div:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+        "role": "link",
+        "name": "Deutsch",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "svg.nav-shortcut-svg",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "svg",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 1159,
+        "width": 19
+      },
+      {
+        "selector": "div.h-100.font-weight-bold",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1264,
+        "width": 0
+      },
+      {
+        "selector": "body.lang-en",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#userNotifications",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "script",
+        "role": "text",
+        "name": "window.UserButtonsConfig = JSON.parse('\\u007B\\u0022links\\u0022\\u003A\\u007B\\u0022register\\u0022\\u003A\\u0022https\\u003A\\\\\\/\\\\\\/www.online\\u002Dconvert.com\\\\\\/pricing\\u0022,\\u0022invoices\\u0022\\u003A\\u00",
+        "state": "",
+        "tag": "script",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#post-header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.px-3.pl-3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.d-flex.justify-content-between",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 16,
+        "width": 1248
+      },
+      {
+        "selector": "nav.navbar.header-navbar",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1009,
+        "width": 255
+      },
+      {
+        "selector": "div.d-flex.h-100",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 16,
+        "width": 304
+      },
+      {
+        "selector": "a.navbar-brand.pr-4",
+        "role": "link",
+        "name": "Online-Convert.com",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 20,
+        "width": 300
+      },
+      {
+        "selector": "img.header-logo-responsive.d-none",
+        "role": "img",
+        "name": "Online-Convert.com",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 20,
+        "width": 276
+      },
+      {
+        "selector": "li.dropdown.position-static",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 320,
+        "width": 155
+      },
+      {
+        "selector": "a.bg-white.pl-md-4",
+        "role": "button",
+        "name": "All tools",
+        "state": "expanded false",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 321,
+        "width": 153
+      },
+      {
+        "selector": "div.h-100.align-items-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1009,
+        "width": 125
+      },
+      {
+        "selector": "li.d-inline-block.px-1",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1079,
+        "width": 39
+      },
+      {
+        "selector": "a.h-100.fg-normal",
+        "role": "link",
+        "name": "Pricing",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 1029,
+        "width": 46
+      },
+      {
+        "selector": "a.fg-normal.fg-main-hover",
+        "role": "link",
+        "name": "Help",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 1083,
+        "width": 31
+      },
+      {
+        "selector": "div.h-100.d-none",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1134,
+        "width": 68
+      },
+      {
+        "selector": "#NotificationsDropdown",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1202,
+        "width": 0
+      },
+      {
+        "selector": "#recent-tasks-placeholder-icon",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1202,
+        "width": 61
+      },
+      {
+        "selector": "div.border-left.h-100",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1202,
+        "width": 61
+      },
+      {
+        "selector": "a.bg-white.pr-3",
+        "role": "button",
+        "name": "",
+        "state": "expanded false",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 1203,
+        "width": 60
+      },
+      {
+        "selector": "#RecentTasksDropdown",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1263,
+        "width": 0
+      },
+      {
+        "selector": "div.h-100.d-block",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1263,
+        "width": 1
+      },
+      {
+        "selector": "#UserButtons",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1264,
+        "width": 0
+      },
+      {
+        "selector": "div.aspect-outer",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1264,
+        "width": 0
+      },
+      {
+        "selector": "div.timeline-item.aspect-inner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1264,
+        "width": 24
+      },
+      {
+        "selector": "div.animated-thumbnail-background.animated-thumbnail-animation",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1276,
+        "width": 0
+      },
+      {
+        "selector": "div.animated-thumbnail-masker.header-top",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1316,
+        "width": 0
+      },
+      {
+        "selector": "div.animated-thumbnail-masker.header-left",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1316,
+        "width": 10
+      },
+      {
+        "selector": "div.animated-thumbnail-masker.header-right",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1576,
+        "width": 0
+      },
+      {
+        "selector": "div.animated-thumbnail-masker.header-bottom",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1316,
+        "width": 0
+      },
+      {
+        "selector": "div.animated-thumbnail-masker.subheader-left",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1316,
+        "width": 10
+      },
+      {
+        "selector": "div.animated-thumbnail-masker.subheader-right",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1506,
+        "width": 0
+      },
+      {
+        "selector": "div.animated-thumbnail-masker.subheader-bottom",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1316,
+        "width": 0
+      },
+      {
+        "selector": "div.animated-thumbnail-masker.content-top",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1276,
+        "width": 0
+      },
+      {
+        "selector": "div.animated-thumbnail-masker.content-first-end",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1656,
+        "width": 0
+      },
+      {
+        "selector": "div.animated-thumbnail-masker.content-second-line",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1276,
+        "width": 0
+      },
+      {
+        "selector": "div.animated-thumbnail-masker.content-second-end",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1696,
+        "width": 0
+      },
+      {
+        "selector": "div.animated-thumbnail-masker.content-third-line",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1276,
+        "width": 0
+      },
+      {
+        "selector": "div.animated-thumbnail-masker.content-third-end",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1576,
+        "width": 0
+      },
+      {
+        "selector": "div.color-stripe.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.bg-main-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 160
+      },
+      {
+        "selector": "div.bg-main-2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 160,
+        "width": 160
+      },
+      {
+        "selector": "div.bg-main-3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 320,
+        "width": 160
+      },
+      {
+        "selector": "div.bg-main-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 480,
+        "width": 160
+      },
+      {
+        "selector": "div.bg-main-5",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 640,
+        "width": 160
+      },
+      {
+        "selector": "div.bg-main-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 800,
+        "width": 160
+      },
+      {
+        "selector": "div.bg-main-7",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 960,
+        "width": 160
+      },
+      {
+        "selector": "div.bg-main-8",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1120,
+        "width": 160
+      },
+      {
+        "selector": "div.bg-main-1.text-white",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container.col-xxl-8",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 71,
+        "width": 1138
+      },
+      {
+        "selector": "div.row.align-items-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 67,
+        "width": 1147
+      },
+      {
+        "selector": "div.col-12.col-md-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 640,
+        "width": 574
+      },
+      {
+        "selector": "h1.display-5.fw-bold",
+        "role": "heading",
+        "name": "Free online file converter",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 82,
+        "width": 544
+      },
+      {
+        "selector": "p.lead.mb-0",
+        "role": "text",
+        "name": "Convert media files online from one format into another. Please select the target format below:",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 82,
+        "width": 544
+      },
+      {
+        "selector": "#conversionPairSelector",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 655,
+        "width": 367
+      },
+      {
+        "selector": "div.d-flex.d-sm-inline-block",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 655,
+        "width": 367
+      },
+      {
+        "selector": "div.d-flex.flex-column",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 718,
+        "width": 409
+      },
+      {
+        "selector": "div.d-inline-flex.align-items-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 776,
+        "width": 246
+      },
+      {
+        "selector": "#sourceCategorySelector",
+        "role": "button",
+        "name": "...",
+        "state": "disabled",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 776,
+        "width": 95
+      },
+      {
+        "selector": "#targetCategorySelector",
+        "role": "button",
+        "name": "...",
+        "state": "disabled",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 927,
+        "width": 95
+      },
+      {
+        "selector": "div.main-content.container-fluid",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.row.tile-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 25,
+        "width": 1230
+      },
+      {
+        "selector": "div.conversion-menu.col-12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 640,
+        "width": 513
+      },
+      {
+        "selector": "div.list-group.h-100",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 644,
+        "width": 505
+      },
+      {
+        "selector": "div.flex-grow-1.bl-main-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 132,
+        "width": 505
+      },
+      {
+        "selector": "div.d-flex.gap-2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 216,
+        "width": 399
+      },
+      {
+        "selector": "a.text-dark",
+        "role": "link",
+        "name": "Image converter Here, you can find an image converter for your needs, for example, a PDF to image converter.",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 216,
+        "width": 381
+      },
+      {
+        "selector": "h3.mb-0.font-size-125",
+        "role": "heading",
+        "name": "Image converter",
+        "state": "",
+        "tag": "h3",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 216,
+        "width": 381
+      },
+      {
+        "selector": "p.mb-0.opacity-75",
+        "role": "text",
+        "name": "Here, you can find an image converter for your needs, for example, a PDF to image converter.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 216,
+        "width": 381
+      },
+      {
+        "selector": "div.tile-sublinks.mt-3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 216,
+        "width": 399
+      },
+      {
+        "selector": "select.w-100.py-1",
+        "role": "combobox",
+        "name": "",
+        "state": "",
+        "tag": "select",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 216,
+        "width": 399
+      },
+      {
+        "selector": "div.flex-grow-1.bl-main-2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 644,
+        "width": 505
+      },
+      {
+        "selector": "div.flex-grow-1.bl-main-3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 132,
+        "width": 505
+      },
+      {
+        "selector": "div.flex-grow-1.bl-main-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 644,
+        "width": 505
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > a",
+          "parent": "div.px-3.pl-3 > div:nth-of-type(1) > nav:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "class": "bg-white pr-4 pl-4 dropdown-toggle main-language-selector d-flex flex-column h-100 align-items-center justify-content-center fg-normal fg-main-hover fg-main-dropdown-show position-",
+            "role": "button",
+            "aria-haspopup": "true",
+            "aria-expanded": "false"
+          },
+          "hoverHandlers": [],
+          "text": "EN",
+          "children": [
+            "svg.nav-shortcut-svg"
+          ],
+          "box": [
+            1073,
+            0,
+            67,
+            60
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.px-3.pl-3 > div:nth-of-type(1) > nav:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "div.px-3.pl-3 > div:nth-of-type(1) > nav:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "dropdown border-left d-none d-md-block h-100"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.bg-white.pr-4",
+            "div.main-language-dropdown.dropdown-menu"
+          ],
+          "box": [
+            1072,
+            0,
+            68,
+            60
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.px-3.pl-3 > div:nth-of-type(1) > nav:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1)",
+          "parent": "div.px-3.pl-3 > div:nth-of-type(1) > nav:nth-of-type(2) > div:nth-of-type(2)",
+          "tag": "div",
+          "attributes": {
+            "class": "h-100 font-weight-bold pr-0 pl-0 ml-0"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.dropdown.border-left"
+          ],
+          "box": [
+            1072,
+            0,
+            68,
+            60
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.px-3.pl-3 > div:nth-of-type(1) > nav:nth-of-type(2) > div:nth-of-type(2)",
+          "parent": "div.px-3.pl-3 > div:nth-of-type(1) > nav:nth-of-type(2)",
+          "tag": "div",
+          "attributes": {
+            "class": "h-100 d-none d-md-block"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.h-100.font-weight-bold"
+          ],
+          "box": [
+            1072,
+            0,
+            68,
+            60
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.px-3.pl-3 > div:nth-of-type(1) > nav:nth-of-type(2)",
+          "parent": "div.px-3.pl-3 > div:nth-of-type(1)",
+          "tag": "nav",
+          "attributes": {
+            "class": "navbar header-navbar d-flex pr-0 pl-0 pt-0 pb-0 position-static h-100"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.h-100.align-items-center",
+            "div.h-100.d-none",
+            "#notifications-placeholder-icon",
+            "#NotificationsDropdown",
+            "#recent-tasks-placeholder-icon",
+            "#RecentTasksDropdown"
+          ],
+          "box": [
+            947,
+            0,
+            317,
+            60
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.px-3.pl-3 > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "d-flex justify-content-between h-100"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "nav.navbar.header-navbar",
+            "nav.navbar.header-navbar"
+          ],
+          "box": [
+            16,
+            0,
+            1248,
+            60
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > div",
+          "parent": "div.px-3.pl-3 > div:nth-of-type(1) > nav:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "main-language-dropdown dropdown-menu dropdown-menu-right dropdown-menu-hover w-100 bg-white p-3 border"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.pl-3.pr-3"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "-1",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > div > div > div > div:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+          "parent": "div.pl-3.pr-3 > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "class": "pd-1 pr-2 d-block language-selector-link font-weight-normal"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "bdi.notranslate"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.pl-3.pr-3 > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "parent": "div.pl-3.pr-3 > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "rounded cursor-pointer text-indent-05"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.pd-1.pr-2"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.pl-3.pr-3 > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "parent": "div.pl-3.pr-3 > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "list-unstyled no-margin w-100"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.rounded.cursor-pointer",
+            "li.rounded.cursor-pointer",
+            "li.rounded.cursor-pointer",
+            "li.rounded.cursor-pointer",
+            "li.rounded.cursor-pointer"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.pl-3.pr-3 > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "div.pl-3.pr-3 > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "col-md-6 no-padding"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.list-unstyled.no-margin"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.pl-3.pr-3 > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "row"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.col-md-6.no-padding",
+            "div.col-md-6.no-padding"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "--bs-link-color-rgb: var(--bs-link-hover-color-rgb);",
+          "conditions": []
+        },
+        {
+          "selector": ".cursor-pointer, .cursor-pointer:hover",
+          "declarations": "cursor: pointer;",
+          "conditions": []
+        },
+        {
+          "selector": ".fg-main-hover:hover, .fg-menu-badge:hover, :is(.fg-main-hover:hover, .fg-menu-badge:hover) .nav-shortcut-svg",
+          "declarations": "color: var(--sat-project-main);",
+          "conditions": []
+        },
+        {
+          "selector": ".main-language-dropdown li a:hover, .main-nav-dropdown li a:hover",
+          "declarations": "color: rgb(46, 46, 46) !important;",
+          "conditions": []
+        },
+        {
+          "selector": ".main-language-dropdown li:hover",
+          "declarations": "background: rgb(238, 238, 238) !important; border-radius: 4px !important;",
+          "conditions": []
+        },
+        {
+          "selector": ".dropdown-menu-hover-effect, .dropdown:hover .dropdown-menu-hover",
+          "declarations": "display: block; margin-top: 0px;",
+          "conditions": [
+            "(min-width: 1050px)"
+          ]
+        },
+        {
+          "selector": "a:hover .nav-shortcut-svg",
+          "declarations": "color: rgb(13, 71, 161);",
+          "conditions": []
+        },
+        {
+          "selector": ".cursor-pointer, .cursor-pointer:hover, .tile",
+          "declarations": "cursor: pointer;",
+          "conditions": []
+        },
+        {
+          "selector": ".fg-main-hover:hover, .fg-menu-badge:hover, :is(.fg-main-hover:hover, .fg-menu-badge:hover) .nav-shortcut-svg",
+          "declarations": "color: var(--sat-project-main);",
+          "conditions": []
+        }
+      ]
+    }
+  }
+}

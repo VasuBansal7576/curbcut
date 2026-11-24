@@ -1,0 +1,77 @@
+{
+  "id": "v5-2f50b19bf48c-e5978111",
+  "url": "https://goznak.ru/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, hover “О ГОЗНАКЕ”, click “Компания сегодня” and confirm /about/today/.",
+  "controlTask": "Hover “О ГОЗНАКЕ”, click “Компания сегодня” and confirm /about/today/.",
+  "observedSelector": "header > div > div:nth-of-type(1) > div > span",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/about/today/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "header > div > div:nth-of-type(1) > div",
+    "header > div > div:nth-of-type(1) > div > div"
+  ],
+  "journey": [
+    {
+      "selector": "header > div > div:nth-of-type(1) > div > span",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "header > div > div:nth-of-type(1) > div > span",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "header > div > div:nth-of-type(1) > div > div > span:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "goznak.ru",
+  "match": "https://goznak.ru/",
+  "barrier": "At 320 CSS pixels, display:none on .header__left hides the «О гознаке» trigger and its submenu. The trigger is a nonfocusable span, and the submenu depends on CSS hover.",
+  "rules": [
+    {
+      "selector": "header > div.container",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "header > div.container > div.header__left",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "header > div.container > div.header__left > div.header__dropdown-wrapper > span",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "header > div.container > div.header__left > div.header__dropdown-wrapper > span",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "selector": "header > div.container > div.header__left > div.header__dropdown-wrapper",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,14 @@
+{
+  "barrier": "Keyboard activation opens the country picker, but Escape leaves it visible while the Bootstrap opening transition is still running.",
+  "rules": [
+    {
+      "action": "makeFocusable",
+      "selector": "#countryPicker"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#countryPicker",
+      "close": "#countryPicker .modal-header > button[data-bs-dismiss=\"modal\"]"
+    }
+  ]
+}

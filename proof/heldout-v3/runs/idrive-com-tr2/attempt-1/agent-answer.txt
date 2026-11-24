@@ -1,0 +1,22 @@
+{
+  "barrier": "The Cloud Applications Backup submenu trigger is a span with tabIndex -1, so Tab skips it and keyboard users cannot reach it to activate the submenu with Enter.",
+  "rules": [
+    {
+      "selector": "header > nav > div > ul > li:nth-of-type(6) > span",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "header > nav > div > ul > li:nth-of-type(6) > span",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "header > nav > div > ul > li:nth-of-type(6) > span",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "header > nav > div > ul > li:nth-of-type(6) > span",
+      "action": "restoreFocusOutline"
+    }
+  ]
+}

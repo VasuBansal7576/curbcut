@@ -1,0 +1,34 @@
+{
+  "id": "v5-987edaaf216b0e19b87b",
+  "url": "https://www.facer.io/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search watch faces” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search watch faces” field and type test without submitting.",
+  "observedSelector": "div:nth-of-type(1) > header > header-v2 > nav > div > div:nth-of-type(2) > ul > header-search > li > form > div > input",
+  "requiredName": "Search watch faces",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "div:nth-of-type(1) > header > header-v2 > nav > div > div:nth-of-type(2) > ul > header-search > li > form > div > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.facer.io",
+  "match": "https://www.facer.io/",
+  "barrier": "The desktop search input has a native textbox role but no accessible name, so it cannot be found as “Search watch faces” in Reading view.",
+  "rules": [
+    {
+      "selector": "nav.app-header--desktop #searchWatchfaces input#srch-term",
+      "action": "addLabel",
+      "value": "Search watch faces"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,14 @@
+{
+  "barrier": "The open Privacy dialog has tabindex=\"-1\", so keyboard navigation skips the dialog itself. Focus was on a page link when the Escape step expected focus inside the dialog.",
+  "rules": [
+    {
+      "selector": "#onetrust-banner-sdk > div[role=\"dialog\"]",
+      "action": "makeFocusable"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#onetrust-banner-sdk",
+      "close": "#onetrust-close-btn-container > button"
+    }
+  ]
+}

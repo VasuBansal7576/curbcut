@@ -1,0 +1,27 @@
+{
+  "barrier": "At 320 CSS pixels the mobile navigation is collapsed, so the Product button has no rendered box and focus stays on the body. The Academy inspiration link is inside the Product dropdown, which has display: none while closed.",
+  "rules": [
+    {
+      "selector": "div.navbar_container",
+      "action": "injectCSS",
+      "value": {"flex-wrap": "wrap"}
+    },
+    {
+      "selector": "nav.navbar_menu.w-nav-menu",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "div.navbar_menu-left",
+      "action": "injectCSS",
+      "value": {"flex-direction": "column"}
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#w-dropdown-toggle-0",
+      "target": "#w-dropdown-list-0",
+      "mode": "display",
+      "display": "block"
+    }
+  ]
+}

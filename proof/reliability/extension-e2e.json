@@ -1,0 +1,4527 @@
+{
+  "runner": "playwright-extension",
+  "checkedAt": "2026-11-24T04:49:32.200Z",
+  "bundleSha256": "8e5ac63a22f3bb30086bc217e8eb204a3c6dfe3e3c6950d1262d44c1261cc2ab",
+  "total": 43,
+  "passed": 43,
+  "counts": {
+    "pass": 43
+  },
+  "journeys": {
+    "total": 3,
+    "passed": 3
+  },
+  "results": [
+    {
+      "id": "asme-org-tr2",
+      "url": "https://www.asme.org/",
+      "persona": "screen-reader-view",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.asme.org/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#home-search",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "input",
+                "id": "home-search",
+                "classes": [],
+                "label": "Search products, events, courses, resource categories..."
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "calculator-net-add-days",
+      "url": "https://www.calculator.net/date-calculator.html",
+      "persona": "screen-reader-view",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.calculator.net/date-calculator.html",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#c2day",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "input",
+                "id": "c2day",
+                "classes": [
+                  "innormal"
+                ],
+                "label": "Days to add"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "cato-org-tr2",
+      "url": "https://www.cato.org/",
+      "persona": "screen-reader-view",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.cato.org/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#query",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "input",
+                "id": "query",
+                "classes": [
+                  "input-group-field",
+                  "form-control"
+                ],
+                "label": "Search"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "cloudconvert-com-tr2",
+      "url": "https://cloudconvert.com/",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://cloudconvert.com/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "div.grid.gap-x-20",
+            "count": 2,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "mt-8",
+                  "grid",
+                  "gap-x-20",
+                  "gap-y-10"
+                ],
+                "label": "Format Catalog CloudConvert handles 200 formats across 11 categories, from common office files to ca"
+              },
+              {
+                "tag": "div",
+                "classes": [
+                  "grid",
+                  "gap-x-20",
+                  "gap-y-10",
+                  "px-2"
+                ],
+                "label": "API & Integrations Build jobs from import, convert and export tasks, then connect them to your own s"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "colorhexa-open-picker",
+      "url": "https://www.colorhexa.com/",
+      "persona": "keyboard-only",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.colorhexa.com/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": ".sp-replacer",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "sp-replacer",
+                  "sp-light"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": ".sp-replacer",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "sp-replacer",
+                  "sp-light"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": ".sp-replacer",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "sp-replacer",
+                  "sp-light"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": ".sp-replacer",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "sp-replacer",
+                  "sp-light"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "discuz-vip-tr2",
+      "url": "https://www.discuz.vip/",
+      "persona": "keyboard-only",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.discuz.vip/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#gaoyanzhi_3__plans > div > div > p > a > span",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "span",
+                "classes": [
+                  "kefu__text_span"
+                ],
+                "role": "button",
+                "label": "更多解决方案请联系官方客服进行交流。"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "#gaoyanzhi_3__plans > div > div > p > a > span",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "span",
+                "classes": [
+                  "kefu__text_span"
+                ],
+                "role": "button",
+                "label": "更多解决方案请联系官方客服进行交流。"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "#gaoyanzhi_3__plans > div > div > p > a > span",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "span",
+                "classes": [
+                  "kefu__text_span"
+                ],
+                "role": "button",
+                "label": "更多解决方案请联系官方客服进行交流。"
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": "#gaoyanzhi_3__plans > div > div > p > a > span",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "span",
+                "classes": [
+                  "kefu__text_span"
+                ],
+                "role": "button",
+                "label": "更多解决方案请联系官方客服进行交流。"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "dol-gov-tr2",
+      "url": "https://www.dol.gov/",
+      "persona": "keyboard-only",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.dol.gov/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#block-dolfootermenu-3 > section > span",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "span",
+                "classes": [
+                  "usa-footer__primary-link"
+                ],
+                "role": "button",
+                "label": "Federal Government"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "#block-dolfootermenu-3 > section > span",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "span",
+                "classes": [
+                  "usa-footer__primary-link"
+                ],
+                "role": "button",
+                "label": "Federal Government"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "#block-dolfootermenu-3 > section > span",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "span",
+                "classes": [
+                  "usa-footer__primary-link"
+                ],
+                "role": "button",
+                "label": "Federal Government"
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": "#block-dolfootermenu-3 > section > span",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "span",
+                "classes": [
+                  "usa-footer__primary-link"
+                ],
+                "role": "button",
+                "label": "Federal Government"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "elm-reflow",
+      "url": "https://guide.elm-lang.org/core_language.html",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://guide.elm-lang.org/core_language.html",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#book-search-results > div:nth-of-type(1) > section > div:nth-of-type(4) > p:nth-of-type(1)",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "p",
+                "classes": [],
+                "label": "> madlib animal adjective = | \"The ostentatious \" ++ animal ++ \" wears \" ++ adjective ++ \" shorts.\" "
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "euronext-com-tr",
+      "url": "https://www.euronext.com/en",
+      "persona": "screen-reader-view",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.euronext.com/en",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#edit-search-site",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "input",
+                "id": "edit-search-site",
+                "classes": [
+                  "header-search-form__input",
+                  "form-control"
+                ],
+                "label": "Sites search"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "flashscore-de-tr",
+      "url": "https://www.flashscore.de/",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.flashscore.de/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "div:nth-of-type(3) > div:nth-of-type(1) > div > h1",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "h1",
+                "classes": [],
+                "label": "U17 Weltmeisterschaft 2026 Fussball Live Ergebnisse, Aktuelle Fussball Ergebnisse, Bundesliga, Champ"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "fourmilab-prepare-latitude",
+      "url": "https://www.fourmilab.ch/cgi-bin/Earth",
+      "persona": "screen-reader-view",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.fourmilab.ch/cgi-bin/Earth",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "input[name=\"lat\"]",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "input",
+                "classes": [],
+                "label": "Latitude"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "gao-about-reflow",
+      "url": "https://www.gao.gov/about",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.gao.gov/about",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "div.row",
+            "count": 2,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "row"
+                ],
+                "label": "What GAO Does Our processes for reports, testimonies and legal decisions; how we serve Congress; and"
+              },
+              {
+                "tag": "div",
+                "classes": [
+                  "row"
+                ],
+                "label": "Contact Us Have a question? Need an expert? Contact us here. For general inquiries: Government Accou"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "geeksforgeeks-open-search",
+      "url": "https://www.geeksforgeeks.org/",
+      "persona": "keyboard-only",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.geeksforgeeks.org/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": ".gs-toggle-icon",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "span",
+                "classes": [
+                  "flexR",
+                  "gs-toggle-icon"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": ".gs-toggle-icon",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "span",
+                "classes": [
+                  "flexR",
+                  "gs-toggle-icon"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": ".gs-toggle-icon",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "span",
+                "classes": [
+                  "flexR",
+                  "gs-toggle-icon"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": ".gs-toggle-icon",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "span",
+                "classes": [
+                  "flexR",
+                  "gs-toggle-icon"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "go-doc-reflow",
+      "url": "https://go.dev/doc/effective_go",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://go.dev/doc/effective_go",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#main-content > article > pre:nth-of-type(55)",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "pre",
+                "classes": [],
+                "label": "// Allocate the top-level slice, the same as before. picture := make([][]uint8, YSize) // One row pe"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "htdp-reflow",
+      "url": "https://htdp.org/2023-8-14/Book/part_prologue.html",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://htdp.org/2023-8-14/Book/part_prologue.html",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "div.maincolumn",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "maincolumn"
+                ],
+                "label": "8.10.0.1 contents ← prev up next → Prologue: How to Program Arithmetic and Arithmetic Inputs and Out"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "div:nth-of-type(2) > div > div:nth-of-type(21) > blockquote > table > tbody > tr:nth-of-type(2) > td",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "td",
+                "classes": [],
+                "label": "function call:expected a function after the open parenthesis, found a number"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "json-org-reflow",
+      "url": "https://www.json.org/json-en.html",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.json.org/json-en.html",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#spec",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "id": "spec",
+                "classes": [],
+                "label": "JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "kidderminster-application-faq",
+      "url": "https://www.kidderminster.ac.uk/good-to-know-articles/how-to-apply-for-a-course/",
+      "persona": "keyboard-only",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.kidderminster.ac.uk/good-to-know-articles/how-to-apply-for-a-course/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "m-expand-header"
+                ],
+                "role": "button",
+                "label": "What is a next of kin?"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "m-expand-header"
+                ],
+                "role": "button",
+                "label": "What is a next of kin?"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "m-expand-header"
+                ],
+                "role": "button",
+                "label": "What is a next of kin?"
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "m-expand-header"
+                ],
+                "role": "button",
+                "label": "What is a next of kin?"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "lua-manual-reflow",
+      "url": "https://www.lua.org/manual/5.4/manual.html",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.lua.org/manual/5.4/manual.html",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "body",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "body",
+                "classes": [],
+                "label": "Lua 5.4 Reference Manual by Roberto Ierusalimschy, Luiz Henrique de Figueiredo, Waldemar Celes Copyr"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "pre:nth-of-type(301)",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "pre",
+                "classes": [],
+                "label": "chunk ::= block block ::= {stat} [retstat] stat ::= ‘;’ | varlist ‘=’ explist | functioncall | label"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "martinfowler-reflow",
+      "url": "https://martinfowler.com/articles/continuousIntegration.html",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://martinfowler.com/articles/continuousIntegration.html",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "div.soundbite",
+            "count": 3,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "soundbite"
+                ],
+                "label": "I should be able to walk up with a laptop loaded with only an operating system, and by using the rep"
+              },
+              {
+                "tag": "div",
+                "classes": [
+                  "soundbite"
+                ],
+                "label": "A sound test suite would never allow a mischievous imp to do any damage without a test turning red."
+              },
+              {
+                "tag": "div",
+                "classes": [
+                  "soundbite"
+                ],
+                "label": "Usually the best way to fix the build is to revert the faulty commit from the mainline, allowing the"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "mynoise-open-menu",
+      "url": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+      "persona": "keyboard-only",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#hamburger",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "id": "hamburger",
+                "classes": [
+                  "powertipS"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "#hamburger",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "id": "hamburger",
+                "classes": [
+                  "powertipS"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "#hamburger",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "id": "hamburger",
+                "classes": [
+                  "powertipS"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": "#hamburger",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "id": "hamburger",
+                "classes": [
+                  "powertipS"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "nullprogram-reflow",
+      "url": "https://nullprogram.com/blog/2016/11/17/",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://nullprogram.com/blog/2016/11/17/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "main > article > pre:nth-of-type(35)",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "pre",
+                "classes": [
+                  "highlight"
+                ],
+                "label": "echo -ne '\\x31\\xFF\\xB8\\x3C\\x00\\x00\\x00\\x0F\\x05' >> true"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "nws-radar-play-pause",
+      "url": "https://radar.weather.gov/",
+      "persona": "keyboard-only",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://radar.weather.gov/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": ".button.button-play",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "button",
+                  "offset",
+                  "button-play",
+                  "disabled"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": ".button.button-play",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "button",
+                  "offset",
+                  "button-play",
+                  "disabled"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": ".button.button-play",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "button",
+                  "offset",
+                  "button-play",
+                  "disabled"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": ".button.button-play",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "button",
+                  "offset",
+                  "button-play",
+                  "disabled"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "online-conversion-length",
+      "url": "https://www.onlineconversion.com/length_common.htm",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.onlineconversion.com/length_common.htm",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "div.content_left",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "content_left"
+                ],
+                "label": "Welcome to OnlineConversion.com Common Length and Distance Conversions <blockquote> <p><font size=\"3"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "div.container",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "container"
+                ],
+                "label": "Home FAQ Message Forum Contact Us Welcome to OnlineConversion.com Common Length and Distance Convers"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "div.main_content",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "main_content"
+                ],
+                "label": "Welcome to OnlineConversion.com Common Length and Distance Conversions <blockquote> <p><font size=\"3"
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": "form[name=\"MainForm\"] table",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "table",
+                "classes": [],
+                "label": "Convert what quantity? From: centimeter feet inch kilometer league league [nautical] meter microinch"
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "field": "selector",
+            "selector": "td",
+            "count": 5,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "td",
+                "classes": [],
+                "label": "Convert what quantity?"
+              },
+              {
+                "tag": "td",
+                "classes": [],
+                "label": "From: centimeter feet inch kilometer league league [nautical] meter microinch mile millimeter yard"
+              },
+              {
+                "tag": "td",
+                "classes": [],
+                "label": "To: centimeter feet inch kilometer league league [nautical] meter microinch mile millimeter yard"
+              },
+              {
+                "tag": "td",
+                "classes": [],
+                "label": ""
+              },
+              {
+                "tag": "td",
+                "classes": [],
+                "label": "Result: See Also: All Length Conversions | Metric Length Conversions"
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "field": "selector",
+            "selector": "input",
+            "count": 3,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "input",
+                "classes": [],
+                "label": ""
+              },
+              {
+                "tag": "input",
+                "classes": [],
+                "label": ""
+              },
+              {
+                "tag": "input",
+                "classes": [],
+                "label": ""
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "openbsd-faq-reflow",
+      "url": "https://www.openbsd.org/faq/faq1.html",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.openbsd.org/faq/faq1.html",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "pre:nth-of-type(3)",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "pre",
+                "classes": [
+                  "cmdbox"
+                ],
+                "label": "From: user@example.com To: bugs@openbsd.org Subject: 3.3-beta panics on a SPARCStation2 OpenBSD 3.2 "
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "poets-org-tr2",
+      "url": "https://poets.org/",
+      "persona": "screen-reader-view",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://poets.org/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "input[placeholder=\"search\"]",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "input",
+                "classes": [
+                  "poets-search__form-input",
+                  "form-control"
+                ],
+                "label": "search"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "procurement-journey-considerations",
+      "url": "https://www.procurementjourney.scot/index.php/route-1/route-1-introduction",
+      "persona": "keyboard-only",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.procurementjourney.scot/index.php/route-1/route-1-introduction",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "accordion__title",
+                  "accordion__title--theme"
+                ],
+                "role": "button",
+                "label": "Considerations Before Proceeding Open or close"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "accordion__title",
+                  "accordion__title--theme"
+                ],
+                "role": "button",
+                "label": "Considerations Before Proceeding Open or close"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "accordion__title",
+                  "accordion__title--theme"
+                ],
+                "role": "button",
+                "label": "Considerations Before Proceeding Open or close"
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "accordion__title",
+                  "accordion__title--theme"
+                ],
+                "role": "button",
+                "label": "Considerations Before Proceeding Open or close"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "report-605ca95e172608f662",
+      "url": "https://www.colorhexa.com/ff0000",
+      "persona": "keyboard-only",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.colorhexa.com/ff0000",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "div.sp-replacer.sp-light",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "sp-replacer",
+                  "sp-light"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "div.sp-replacer.sp-light",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "sp-replacer",
+                  "sp-light"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "div.sp-replacer.sp-light",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "sp-replacer",
+                  "sp-light"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": "div.sp-replacer.sp-light",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "sp-replacer",
+                  "sp-light"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "report-cb10e18073d48f295a",
+      "url": "https://www.colorhexa.com/ff6600",
+      "persona": "keyboard-only",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.colorhexa.com/ff6600",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "div.sp-replacer.sp-light",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "sp-replacer",
+                  "sp-light"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "div.sp-replacer.sp-light",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "sp-replacer",
+                  "sp-light"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "div.sp-replacer.sp-light",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "sp-replacer",
+                  "sp-light"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": "div.sp-replacer.sp-light",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "sp-replacer",
+                  "sp-light"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "report-d6870c43f8831c2d3b",
+      "url": "https://www.colorhexa.com/0066ff",
+      "persona": "keyboard-only",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.colorhexa.com/0066ff",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "div.sp-replacer.sp-light",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "sp-replacer",
+                  "sp-light"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "div.sp-replacer.sp-light",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "sp-replacer",
+                  "sp-light"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "div.sp-replacer.sp-light",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "sp-replacer",
+                  "sp-light"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": "div.sp-replacer.sp-light",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "classes": [
+                  "sp-replacer",
+                  "sp-light"
+                ],
+                "role": "button",
+                "label": ""
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "rust-book-reflow",
+      "url": "https://doc.rust-lang.org/book/ch01-02-hello-world.html",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://doc.rust-lang.org/book/ch01-02-hello-world.html",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "code.language-cmd.hljs",
+            "count": 2,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "code",
+                "classes": [
+                  "language-cmd",
+                  "hljs"
+                ],
+                "label": "> mkdir \"%USERPROFILE%\\projects\" > cd /d \"%USERPROFILE%\\projects\" > mkdir hello_world > cd hello_wor"
+              },
+              {
+                "tag": "code",
+                "classes": [
+                  "language-cmd",
+                  "hljs"
+                ],
+                "label": "> dir /B %= the /B option says to only show the file names =% main.exe main.pdb main.rs"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "sanantonio-library-reader",
+      "url": "https://www.mysapl.org/",
+      "persona": "screen-reader-view",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.mysapl.org/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#searchTermsCatalog",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "input",
+                "id": "searchTermsCatalog",
+                "classes": [],
+                "label": "Search Catalog"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "sedgewick-reflow",
+      "url": "https://algs4.cs.princeton.edu/11model/",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://algs4.cs.princeton.edu/11model/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#content",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "id": "content",
+                "classes": [],
+                "label": "1.1 Programming Model This section under major construction. Our study of algorithms is based upon i"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "table",
+            "count": 10,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "table",
+                "classes": [],
+                "label": ""
+              },
+              {
+                "tag": "table",
+                "classes": [],
+                "label": "int[] a = new int[N]; ... a[i] = 1234; ... int[] b = a; ... b[i] = 5678; // a[i] is now 5678."
+              },
+              {
+                "tag": "table",
+                "classes": [],
+                "label": "PROGRAM DESCRIPTION / JAVADOC StdIn.java read numbers and text from standard input StdOut.java write"
+              },
+              {
+                "tag": "table",
+                "classes": [],
+                "label": "% java Average 10.0 5.0 6.0 3.0 7.0 32.0 3.14 6.67 17.71 <Ctrl-d> Average is 10.05777777777778"
+              },
+              {
+                "tag": "table",
+                "classes": [],
+                "label": "% java Tone 440.0 3.0"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "tbody",
+            "count": 10,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "tbody",
+                "classes": [],
+                "label": ""
+              },
+              {
+                "tag": "tbody",
+                "classes": [],
+                "label": "int[] a = new int[N]; ... a[i] = 1234; ... int[] b = a; ... b[i] = 5678; // a[i] is now 5678."
+              },
+              {
+                "tag": "tbody",
+                "classes": [],
+                "label": "PROGRAM DESCRIPTION / JAVADOC StdIn.java read numbers and text from standard input StdOut.java write"
+              },
+              {
+                "tag": "tbody",
+                "classes": [],
+                "label": "% java Average 10.0 5.0 6.0 3.0 7.0 32.0 3.14 6.67 17.71 <Ctrl-d> Average is 10.05777777777778"
+              },
+              {
+                "tag": "tbody",
+                "classes": [],
+                "label": "% java Tone 440.0 3.0"
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": "tr",
+            "count": 27,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "tr",
+                "classes": [],
+                "label": ""
+              },
+              {
+                "tag": "tr",
+                "classes": [],
+                "label": "int[] a = new int[N]; ... a[i] = 1234; ... int[] b = a; ... b[i] = 5678; // a[i] is now 5678."
+              },
+              {
+                "tag": "tr",
+                "classes": [],
+                "label": "PROGRAM DESCRIPTION / JAVADOC"
+              },
+              {
+                "tag": "tr",
+                "classes": [],
+                "label": "StdIn.java read numbers and text from standard input"
+              },
+              {
+                "tag": "tr",
+                "classes": [],
+                "label": "StdOut.java write numbers and text to standard output"
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "field": "selector",
+            "selector": "td",
+            "count": 46,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "td",
+                "classes": [],
+                "label": ""
+              },
+              {
+                "tag": "td",
+                "classes": [],
+                "label": ""
+              },
+              {
+                "tag": "td",
+                "classes": [],
+                "label": "int[] a = new int[N]; ... a[i] = 1234; ... int[] b = a; ... b[i] = 5678; // a[i] is now 5678."
+              },
+              {
+                "tag": "td",
+                "classes": [],
+                "label": "StdIn.java"
+              },
+              {
+                "tag": "td",
+                "classes": [],
+                "label": "read numbers and text from standard input"
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "field": "selector",
+            "selector": "#content > center:nth-of-type(3) > table > tbody > tr > td:nth-of-type(3)",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "td",
+                "classes": [],
+                "label": "% java Scale mandrill.jpg 200 400"
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "field": "selector",
+            "selector": "img",
+            "count": 18,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "img",
+                "classes": [],
+                "label": ""
+              },
+              {
+                "tag": "img",
+                "classes": [],
+                "label": ""
+              },
+              {
+                "tag": "img",
+                "classes": [],
+                "label": ""
+              },
+              {
+                "tag": "img",
+                "classes": [],
+                "label": ""
+              },
+              {
+                "tag": "img",
+                "classes": [],
+                "label": ""
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "sfmta-pause-carousel",
+      "url": "https://www.sfmta.com/",
+      "persona": "keyboard-only",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.sfmta.com/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "span.play_pause",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "span",
+                "classes": [
+                  "play_pause"
+                ],
+                "role": "button",
+                "label": "Play/Pause"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "span.play_pause",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "span",
+                "classes": [
+                  "play_pause"
+                ],
+                "role": "button",
+                "label": "Play/Pause"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "span.play_pause",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "span",
+                "classes": [
+                  "play_pause"
+                ],
+                "role": "button",
+                "label": "Play/Pause"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "statcounter-edit-chart",
+      "url": "https://gs.statcounter.com/",
+      "persona": "keyboard-only",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://gs.statcounter.com/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#btn-edit-chart",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "id": "btn-edit-chart",
+                "classes": [
+                  "btn"
+                ],
+                "role": "button",
+                "label": "Edit Chart Data"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "#btn-edit-chart",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "id": "btn-edit-chart",
+                "classes": [
+                  "btn"
+                ],
+                "role": "button",
+                "label": "Edit Chart Data"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "#btn-edit-chart",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "id": "btn-edit-chart",
+                "classes": [
+                  "btn"
+                ],
+                "role": "button",
+                "label": "Edit Chart Data"
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": "#btn-edit-chart",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "id": "btn-edit-chart",
+                "classes": [
+                  "btn"
+                ],
+                "role": "button",
+                "label": "Edit Chart Data"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "uline-com-tr2",
+      "url": "https://www.uline.com/",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.uline.com/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#container",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "id": "container",
+                "classes": [
+                  "MasterContainer"
+                ],
+                "label": "<div class=\"noscript-padding\"></div> Enable Accessibility Skip to Main Navigation Skip to Main Conte"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "#divContent",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "id": "divContent",
+                "classes": [
+                  "content"
+                ],
+                "role": "main",
+                "label": ".hp-main { width:980px;margin:0 0 0 -6px;padding:0;background:#f2f2f2; } .hp-left, .hp-right { float"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "#divContentFooterWrap",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "id": "divContentFooterWrap",
+                "classes": [],
+                "label": ".hp-main { width:980px;margin:0 0 0 -6px;padding:0;background:#f2f2f2; } .hp-left, .hp-right { float"
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": "#divFooterwrap",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "id": "divFooterwrap",
+                "classes": [
+                  "footerwrap",
+                  "cookiePreferencesFooter"
+                ],
+                "role": "contentinfo",
+                "label": "Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca / Uline.mx Privacy / Te"
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "field": "selector",
+            "selector": "#newfooter",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "div",
+                "id": "newfooter",
+                "classes": [
+                  "newfooter",
+                  "desktop-footer"
+                ],
+                "label": "Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca / Uline.mx Privacy / Te"
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "field": "selector",
+            "selector": "table",
+            "count": 4,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "table",
+                "classes": [],
+                "label": "All Openings Warehouse Jobs Hiring Events Working at Uline Job Locations Internships Early Careers"
+              },
+              {
+                "tag": "table",
+                "classes": [
+                  "homepage"
+                ],
+                "label": ".hp-main { width:980px;margin:0 0 0 -6px;padding:0;background:#f2f2f2; } .hp-left, .hp-right { float"
+              },
+              {
+                "tag": "table",
+                "classes": [],
+                "label": "Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca / Uline.mx Privacy / Te"
+              },
+              {
+                "tag": "table",
+                "classes": [
+                  "default"
+                ],
+                "label": "Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca / Uline.mx Privacy / Te"
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "field": "selector",
+            "selector": "#tdfooter",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "td",
+                "id": "tdfooter",
+                "classes": [
+                  "default"
+                ],
+                "label": "Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca / Uline.mx Privacy / Te"
+              }
+            ]
+          },
+          {
+            "index": 7,
+            "field": "selector",
+            "selector": "table.default",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "table",
+                "classes": [
+                  "default"
+                ],
+                "label": "Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca / Uline.mx Privacy / Te"
+              }
+            ]
+          },
+          {
+            "index": 8,
+            "field": "selector",
+            "selector": "td.footerCell",
+            "count": 9,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "td",
+                "classes": [
+                  "footerCell"
+                ],
+                "label": "Help"
+              },
+              {
+                "tag": "td",
+                "classes": [
+                  "footerCell"
+                ],
+                "label": "Contact Us"
+              },
+              {
+                "tag": "td",
+                "classes": [
+                  "footerCell"
+                ],
+                "label": "Careers"
+              },
+              {
+                "tag": "td",
+                "classes": [
+                  "footerCell"
+                ],
+                "label": "Shipping Boxes"
+              },
+              {
+                "tag": "td",
+                "classes": [
+                  "footerCell"
+                ],
+                "label": "Plastic Bags"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "unglobalcompact-org-tr2",
+      "url": "https://unglobalcompact.org/",
+      "persona": "screen-reader-view",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://unglobalcompact.org/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#search_keywords",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "input",
+                "id": "search_keywords",
+                "classes": [
+                  "search-field"
+                ],
+                "label": "Search"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "unicode-standard-reflow",
+      "url": "https://www.unicode.org/standard/standard.html",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.unicode.org/standard/standard.html",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "table",
+            "count": 5,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "table",
+                "classes": [],
+                "label": "The Unicode Standard Tech Site | Site Map | Search About the Unicode® Standard Characters for the Wo"
+              },
+              {
+                "tag": "table",
+                "classes": [],
+                "label": "The Unicode Standard Tech Site | Site Map | Search"
+              },
+              {
+                "tag": "table",
+                "classes": [
+                  "subtle"
+                ],
+                "label": "Location Description Updates and Errata Cumulative list of pending corrections Proposed New Characte"
+              },
+              {
+                "tag": "table",
+                "classes": [
+                  "subtle"
+                ],
+                "label": "Location Description Where is my Character? Suggestions on how to find out whether a character has b"
+              },
+              {
+                "tag": "table",
+                "classes": [],
+                "label": ""
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "tr",
+            "count": 19,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "tr",
+                "classes": [],
+                "label": "The Unicode Standard Tech Site | Site Map | Search"
+              },
+              {
+                "tag": "tr",
+                "classes": [],
+                "label": "The Unicode Standard Tech Site | Site Map | Search"
+              },
+              {
+                "tag": "tr",
+                "classes": [],
+                "label": ""
+              },
+              {
+                "tag": "tr",
+                "classes": [],
+                "label": "About the Unicode® Standard Characters for the World The Unicode Standard is the universal character"
+              },
+              {
+                "tag": "tr",
+                "classes": [],
+                "label": "Location Description"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "td",
+            "count": 31,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "td",
+                "classes": [],
+                "label": "The Unicode Standard Tech Site | Site Map | Search"
+              },
+              {
+                "tag": "td",
+                "classes": [
+                  "icon"
+                ],
+                "label": ""
+              },
+              {
+                "tag": "td",
+                "classes": [
+                  "icon"
+                ],
+                "label": "The Unicode Standard"
+              },
+              {
+                "tag": "td",
+                "classes": [
+                  "bar"
+                ],
+                "label": "Tech Site | Site Map | Search"
+              },
+              {
+                "tag": "td",
+                "classes": [
+                  "gray"
+                ],
+                "label": ""
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "unitconverters-length",
+      "url": "https://www.unitconverters.net/",
+      "persona": "low-vision",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.unitconverters.net/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "table",
+            "count": 4,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "table",
+                "classes": [],
+                "label": "From: To: MeterKilometerCentimeterMillimeterMicrometerNanometerMileYardFootInchLight Year MeterKilom"
+              },
+              {
+                "tag": "table",
+                "classes": [],
+                "label": "From Unit: To Unit:"
+              },
+              {
+                "tag": "table",
+                "id": "homelist",
+                "classes": [],
+                "label": "cm to incheskg to lbsCelsius to Fahrenheitmm to inchesmeters to feetkm to milescm to feetgrams to ou"
+              },
+              {
+                "tag": "table",
+                "id": "homelist",
+                "classes": [],
+                "label": "Common Converters Length ConverterWeight and Mass ConverterVolume ConverterTemperature ConverterArea"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "td",
+            "count": 22,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "td",
+                "classes": [],
+                "label": "From:"
+              },
+              {
+                "tag": "td",
+                "classes": [],
+                "label": ""
+              },
+              {
+                "tag": "td",
+                "classes": [],
+                "label": "To:"
+              },
+              {
+                "tag": "td",
+                "classes": [],
+                "label": ""
+              },
+              {
+                "tag": "td",
+                "classes": [],
+                "label": ""
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "v4-27c6f312c486-51e6e4ad",
+      "url": "https://csc.gov.in/",
+      "persona": "keyboard-only",
+      "journey": true,
+      "off": {
+        "enabled": false,
+        "active": false,
+        "landed": "https://csc.gov.in/",
+        "httpStatus": 200,
+        "matchedRules": [],
+        "selectorsConfirmed": false,
+        "selectorMatches": [],
+        "journey": {
+          "status": "fail",
+          "reason": "Journey step 3 was unavailable after the prior step.",
+          "steps": [
+            {
+              "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+              "action": "focus",
+              "traversal": {
+                "reached": true,
+                "tabs": 8
+              },
+              "visibility": null
+            },
+            {
+              "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+              "action": "key",
+              "key": "ArrowDown"
+            },
+            {
+              "selector": "#menuzord > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+              "action": "activate"
+            }
+          ],
+          "url": "https://csc.gov.in/",
+          "snapshot": null
+        }
+      },
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://csc.gov.in/meity",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "trigger",
+            "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "a",
+                "classes": [],
+                "label": "ABOUT"
+              }
+            ]
+          },
+          {
+            "index": 0,
+            "field": "target",
+            "selector": "#menuzord > ul > li:nth-of-type(2) > ul",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "ul",
+                "id": "curbcut-widget-1",
+                "classes": [
+                  "dropdown"
+                ],
+                "label": "About MeitY About Digital India Common Service Centres 2.0 Scheme"
+              }
+            ]
+          }
+        ],
+        "journey": {
+          "status": "pass",
+          "reason": "The complete journey reached the declared outcome.",
+          "steps": [
+            {
+              "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+              "action": "focus",
+              "traversal": {
+                "reached": true,
+                "tabs": 8
+              },
+              "visibility": null
+            },
+            {
+              "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+              "action": "key",
+              "key": "ArrowDown"
+            },
+            {
+              "selector": "#menuzord > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+              "action": "activate",
+              "traversal": {
+                "reached": true,
+                "tabs": 1
+              },
+              "visibility": null
+            }
+          ],
+          "url": "https://csc.gov.in/meity",
+          "checks": [
+            true
+          ],
+          "snapshot": null
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "id": "v4-86f207deeb57-7bc09a21",
+      "url": "https://www.mass.edu/",
+      "persona": "keyboard-only",
+      "journey": true,
+      "off": {
+        "enabled": false,
+        "active": false,
+        "landed": "https://www.mass.edu/",
+        "httpStatus": 200,
+        "matchedRules": [],
+        "selectorsConfirmed": false,
+        "selectorMatches": [],
+        "journey": {
+          "status": "fail",
+          "reason": "Journey step 3 was unavailable after the prior step.",
+          "steps": [
+            {
+              "selector": "#mainnav > nav > ul > li:nth-of-type(1) > a",
+              "action": "focus",
+              "traversal": {
+                "reached": true,
+                "tabs": 10
+              },
+              "visibility": null
+            },
+            {
+              "selector": "#mainnav > nav > ul > li:nth-of-type(1) > a",
+              "action": "key",
+              "key": "ArrowDown"
+            },
+            {
+              "selector": "#mainnav > nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+              "action": "activate"
+            }
+          ],
+          "url": "https://www.mass.edu/",
+          "snapshot": null
+        }
+      },
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.mass.edu/about/aboutdhe.asp",
+        "httpStatus": 200,
+        "matchedRules": [
+          0
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#mainnav > nav > ul > li:nth-of-type(1)",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "li",
+                "classes": [
+                  "pureCssMenui"
+                ],
+                "label": "About The DHE Commissioner Commissioner Search The Board Board Members Student Advisory Council The "
+              }
+            ]
+          }
+        ],
+        "journey": {
+          "status": "pass",
+          "reason": "The complete journey reached the declared outcome.",
+          "steps": [
+            {
+              "selector": "#mainnav > nav > ul > li:nth-of-type(1) > a",
+              "action": "focus",
+              "traversal": {
+                "reached": true,
+                "tabs": 10
+              },
+              "visibility": null
+            },
+            {
+              "selector": "#mainnav > nav > ul > li:nth-of-type(1) > a",
+              "action": "key",
+              "key": "ArrowDown"
+            },
+            {
+              "selector": "#mainnav > nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+              "action": "activate",
+              "traversal": {
+                "reached": true,
+                "tabs": 1
+              },
+              "visibility": null
+            }
+          ],
+          "url": "https://www.mass.edu/about/aboutdhe.asp",
+          "checks": [
+            true
+          ],
+          "snapshot": null
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "id": "v5-c22b9bdca86b-71a63d77",
+      "url": "https://marinespecies.org/",
+      "persona": "keyboard-only",
+      "journey": true,
+      "off": {
+        "enabled": false,
+        "active": false,
+        "landed": "https://marinespecies.org/",
+        "httpStatus": 200,
+        "matchedRules": [],
+        "selectorsConfirmed": false,
+        "selectorMatches": [],
+        "journey": {
+          "status": "fail",
+          "reason": "Tab traversal missed journey step 1.",
+          "steps": [
+            {
+              "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+              "action": "activate",
+              "traversal": {
+                "reached": false,
+                "tabs": 63,
+                "exhausted": true
+              }
+            }
+          ],
+          "url": "https://marinespecies.org/",
+          "snapshot": null
+        }
+      },
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://marinespecies.org/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "a",
+                "classes": [
+                  "dropdown-toggle"
+                ],
+                "role": "button",
+                "label": "Tools"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "trigger",
+            "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "a",
+                "classes": [
+                  "dropdown-toggle"
+                ],
+                "role": "button",
+                "label": "Tools"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "target",
+            "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7)",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "li",
+                "id": "curbcut-widget-1",
+                "classes": [
+                  "dropdown"
+                ],
+                "label": "Tools Match taxa Webservices Taxon tree IDKeys"
+              }
+            ]
+          }
+        ],
+        "journey": {
+          "status": "pass",
+          "reason": "The complete journey reached the declared outcome.",
+          "steps": [
+            {
+              "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+              "action": "activate",
+              "traversal": {
+                "reached": true,
+                "tabs": 18
+              },
+              "visibility": null
+            },
+            {
+              "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > ul > li:nth-of-type(1) > a",
+              "action": "observe"
+            },
+            {
+              "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > ul > li:nth-of-type(1) > a",
+              "action": "focus",
+              "traversal": {
+                "reached": true,
+                "tabs": 1
+              },
+              "visibility": null
+            }
+          ],
+          "url": "https://marinespecies.org/",
+          "checks": [
+            true,
+            true,
+            true
+          ],
+          "snapshot": null
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "id": "ventusky-precipitation",
+      "url": "https://www.ventusky.com/",
+      "persona": "keyboard-only",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.ventusky.com/",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#i > a:has(> span.rain)",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "a",
+                "classes": [],
+                "role": "button",
+                "label": "Precipitation"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "#i > a:has(> span.rain)",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "a",
+                "classes": [],
+                "role": "button",
+                "label": "Precipitation"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "#i > a:has(> span.rain)",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "a",
+                "classes": [],
+                "role": "button",
+                "label": "Precipitation"
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": "#i > a:has(> span.rain)",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "a",
+                "classes": [],
+                "role": "button",
+                "label": "Precipitation"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "id": "w3schools-select-swatch",
+      "url": "https://www.w3schools.com/colors/colors_picker.asp#main",
+      "persona": "keyboard-only",
+      "journey": false,
+      "on": {
+        "enabled": true,
+        "active": true,
+        "landed": "https://www.w3schools.com/colors/colors_picker.asp#main",
+        "httpStatus": 200,
+        "matchedRules": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selectorsConfirmed": true,
+        "selectorMatches": [
+          {
+            "index": 0,
+            "field": "selector",
+            "selector": "#colormap area[alt=\"#003366\"]",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "area",
+                "classes": [],
+                "role": "button",
+                "label": "#003366"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "field": "selector",
+            "selector": "#colormap area[alt=\"#003366\"]",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "area",
+                "classes": [],
+                "role": "button",
+                "label": "#003366"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "field": "selector",
+            "selector": "#colormap area[alt=\"#003366\"]",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "area",
+                "classes": [],
+                "role": "button",
+                "label": "#003366"
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "field": "selector",
+            "selector": "#colormap area[alt=\"#003366\"]",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "area",
+                "classes": [],
+                "role": "button",
+                "label": "#003366"
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "field": "selector",
+            "selector": "#colormap area[alt=\"#003366\"]",
+            "count": 1,
+            "issue": null,
+            "matches": [
+              {
+                "tag": "area",
+                "classes": [],
+                "role": "button",
+                "label": "#003366"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "pass"
+    }
+  ],
+  "twins": {
+    "total": 43,
+    "serving": 9,
+    "passed": 9,
+    "counts": {
+      "cross-host-redirect": 23,
+      "probe-error": 3,
+      "http-status": 1,
+      "unavailable": 7,
+      "pass": 9
+    },
+    "results": [
+      {
+        "id": "asme-org-tr2",
+        "url": "https://asme.org/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.asme.org/",
+          "reason": "Redirects to www.asme.org."
+        }
+      },
+      {
+        "id": "calculator-net-add-days",
+        "url": "https://calculator.net/date-calculator.html",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.calculator.net/date-calculator.html",
+          "reason": "Redirects to www.calculator.net."
+        }
+      },
+      {
+        "id": "cato-org-tr2",
+        "url": "https://cato.org/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.cato.org/",
+          "reason": "Redirects to www.cato.org."
+        }
+      },
+      {
+        "id": "cloudconvert-com-tr2",
+        "url": "https://www.cloudconvert.com/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://cloudconvert.com/",
+          "reason": "Redirects to cloudconvert.com."
+        }
+      },
+      {
+        "id": "colorhexa-open-picker",
+        "url": "https://colorhexa.com/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.colorhexa.com/",
+          "reason": "Redirects to www.colorhexa.com."
+        }
+      },
+      {
+        "id": "discuz-vip-tr2",
+        "url": "https://discuz.vip/",
+        "status": "probe-error",
+        "probe": {
+          "status": "probe-error",
+          "reason": "ERR_TLS_CERT_ALTNAME_INVALID"
+        }
+      },
+      {
+        "id": "dol-gov-tr2",
+        "url": "https://dol.gov/",
+        "status": "http-status",
+        "probe": {
+          "status": "http-status",
+          "httpStatus": 403,
+          "landed": "https://dol.gov/",
+          "reason": "HTTP 403"
+        }
+      },
+      {
+        "id": "elm-reflow",
+        "url": "https://www.guide.elm-lang.org/core_language.html",
+        "status": "unavailable",
+        "probe": {
+          "status": "unavailable",
+          "reason": "ENOTFOUND"
+        }
+      },
+      {
+        "id": "euronext-com-tr",
+        "url": "https://euronext.com/en",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.euronext.com/en",
+          "reason": "Redirects to www.euronext.com."
+        }
+      },
+      {
+        "id": "flashscore-de-tr",
+        "url": "https://flashscore.de/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.flashscore.de/",
+          "reason": "Redirects to www.flashscore.de."
+        }
+      },
+      {
+        "id": "fourmilab-prepare-latitude",
+        "url": "https://fourmilab.ch/cgi-bin/Earth",
+        "persona": "screen-reader-view",
+        "journey": false,
+        "on": {
+          "enabled": true,
+          "active": true,
+          "landed": "https://fourmilab.ch/cgi-bin/Earth",
+          "httpStatus": 200,
+          "matchedRules": [
+            0
+          ],
+          "selectorsConfirmed": true,
+          "selectorMatches": [
+            {
+              "index": 0,
+              "field": "selector",
+              "selector": "input[name=\"lat\"]",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "input",
+                  "classes": [],
+                  "label": "Latitude"
+                }
+              ]
+            }
+          ]
+        },
+        "status": "pass",
+        "probe": {
+          "status": "serving",
+          "httpStatus": 200,
+          "landed": "https://fourmilab.ch/cgi-bin/Earth"
+        }
+      },
+      {
+        "id": "gao-about-reflow",
+        "url": "https://gao.gov/about",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 302,
+          "location": "https://www.gao.gov/about",
+          "reason": "Redirects to www.gao.gov."
+        }
+      },
+      {
+        "id": "geeksforgeeks-open-search",
+        "url": "https://geeksforgeeks.org/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.geeksforgeeks.org/",
+          "reason": "Redirects to www.geeksforgeeks.org."
+        }
+      },
+      {
+        "id": "go-doc-reflow",
+        "url": "https://www.go.dev/doc/effective_go",
+        "status": "unavailable",
+        "probe": {
+          "status": "unavailable",
+          "reason": "ENOTFOUND"
+        }
+      },
+      {
+        "id": "htdp-reflow",
+        "url": "https://www.htdp.org/2023-8-14/Book/part_prologue.html",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://htdp.org/2023-8-14/Book/part_prologue.html",
+          "reason": "Redirects to htdp.org."
+        }
+      },
+      {
+        "id": "json-org-reflow",
+        "url": "https://json.org/json-en.html",
+        "persona": "low-vision",
+        "journey": false,
+        "on": {
+          "enabled": true,
+          "active": true,
+          "landed": "https://json.org/json-en.html",
+          "httpStatus": 200,
+          "matchedRules": [
+            0
+          ],
+          "selectorsConfirmed": true,
+          "selectorMatches": [
+            {
+              "index": 0,
+              "field": "selector",
+              "selector": "#spec",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "div",
+                  "id": "spec",
+                  "classes": [],
+                  "label": "JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to"
+                }
+              ]
+            }
+          ]
+        },
+        "status": "pass",
+        "probe": {
+          "status": "serving",
+          "httpStatus": 200,
+          "landed": "https://json.org/json-en.html"
+        }
+      },
+      {
+        "id": "kidderminster-application-faq",
+        "url": "https://kidderminster.ac.uk/good-to-know-articles/how-to-apply-for-a-course/",
+        "status": "probe-error",
+        "probe": {
+          "status": "probe-error",
+          "reason": "ERR_TLS_CERT_ALTNAME_INVALID"
+        }
+      },
+      {
+        "id": "lua-manual-reflow",
+        "url": "https://lua.org/manual/5.4/manual.html",
+        "persona": "low-vision",
+        "journey": false,
+        "on": {
+          "enabled": true,
+          "active": true,
+          "landed": "https://lua.org/manual/5.4/manual.html",
+          "httpStatus": 200,
+          "matchedRules": [
+            0,
+            1
+          ],
+          "selectorsConfirmed": true,
+          "selectorMatches": [
+            {
+              "index": 0,
+              "field": "selector",
+              "selector": "body",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "body",
+                  "classes": [],
+                  "label": "Lua 5.4 Reference Manual by Roberto Ierusalimschy, Luiz Henrique de Figueiredo, Waldemar Celes Copyr"
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "field": "selector",
+              "selector": "pre:nth-of-type(301)",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "pre",
+                  "classes": [],
+                  "label": "chunk ::= block block ::= {stat} [retstat] stat ::= ‘;’ | varlist ‘=’ explist | functioncall | label"
+                }
+              ]
+            }
+          ]
+        },
+        "status": "pass",
+        "probe": {
+          "status": "serving",
+          "httpStatus": 200,
+          "landed": "https://lua.org/manual/5.4/manual.html"
+        }
+      },
+      {
+        "id": "martinfowler-reflow",
+        "url": "https://www.martinfowler.com/articles/continuousIntegration.html",
+        "persona": "low-vision",
+        "journey": false,
+        "on": {
+          "enabled": true,
+          "active": true,
+          "landed": "https://www.martinfowler.com/articles/continuousIntegration.html",
+          "httpStatus": 200,
+          "matchedRules": [
+            0
+          ],
+          "selectorsConfirmed": true,
+          "selectorMatches": [
+            {
+              "index": 0,
+              "field": "selector",
+              "selector": "div.soundbite",
+              "count": 3,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "div",
+                  "classes": [
+                    "soundbite"
+                  ],
+                  "label": "I should be able to walk up with a laptop loaded with only an operating system, and by using the rep"
+                },
+                {
+                  "tag": "div",
+                  "classes": [
+                    "soundbite"
+                  ],
+                  "label": "A sound test suite would never allow a mischievous imp to do any damage without a test turning red."
+                },
+                {
+                  "tag": "div",
+                  "classes": [
+                    "soundbite"
+                  ],
+                  "label": "Usually the best way to fix the build is to revert the faulty commit from the mainline, allowing the"
+                }
+              ]
+            }
+          ]
+        },
+        "status": "pass",
+        "probe": {
+          "status": "serving",
+          "httpStatus": 200,
+          "landed": "https://www.martinfowler.com/articles/continuousIntegration.html"
+        }
+      },
+      {
+        "id": "mynoise-open-menu",
+        "url": "https://www.mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+          "reason": "Redirects to mynoise.net."
+        }
+      },
+      {
+        "id": "nullprogram-reflow",
+        "url": "https://www.nullprogram.com/blog/2016/11/17/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://nullprogram.com/blog/2016/11/17/",
+          "reason": "Redirects to nullprogram.com."
+        }
+      },
+      {
+        "id": "nws-radar-play-pause",
+        "url": "https://www.radar.weather.gov/",
+        "status": "unavailable",
+        "probe": {
+          "status": "unavailable",
+          "reason": "ENOTFOUND"
+        }
+      },
+      {
+        "id": "online-conversion-length",
+        "url": "https://onlineconversion.com/length_common.htm",
+        "persona": "low-vision",
+        "journey": false,
+        "on": {
+          "enabled": true,
+          "active": true,
+          "landed": "https://onlineconversion.com/length_common.htm",
+          "httpStatus": 200,
+          "matchedRules": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "selectorsConfirmed": true,
+          "selectorMatches": [
+            {
+              "index": 0,
+              "field": "selector",
+              "selector": "div.content_left",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "div",
+                  "classes": [
+                    "content_left"
+                  ],
+                  "label": "Welcome to OnlineConversion.com Common Length and Distance Conversions <blockquote> <p><font size=\"3"
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "field": "selector",
+              "selector": "div.container",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "div",
+                  "classes": [
+                    "container"
+                  ],
+                  "label": "Home FAQ Message Forum Contact Us Welcome to OnlineConversion.com Common Length and Distance Convers"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "field": "selector",
+              "selector": "div.main_content",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "div",
+                  "classes": [
+                    "main_content"
+                  ],
+                  "label": "Welcome to OnlineConversion.com Common Length and Distance Conversions <blockquote> <p><font size=\"3"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "field": "selector",
+              "selector": "form[name=\"MainForm\"] table",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "table",
+                  "classes": [],
+                  "label": "Convert what quantity? From: centimeter feet inch kilometer league league [nautical] meter microinch"
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "field": "selector",
+              "selector": "td",
+              "count": 5,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "td",
+                  "classes": [],
+                  "label": "Convert what quantity?"
+                },
+                {
+                  "tag": "td",
+                  "classes": [],
+                  "label": "From: centimeter feet inch kilometer league league [nautical] meter microinch mile millimeter yard"
+                },
+                {
+                  "tag": "td",
+                  "classes": [],
+                  "label": "To: centimeter feet inch kilometer league league [nautical] meter microinch mile millimeter yard"
+                },
+                {
+                  "tag": "td",
+                  "classes": [],
+                  "label": ""
+                },
+                {
+                  "tag": "td",
+                  "classes": [],
+                  "label": "Result: See Also: All Length Conversions | Metric Length Conversions"
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "field": "selector",
+              "selector": "input",
+              "count": 3,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "input",
+                  "classes": [],
+                  "label": ""
+                },
+                {
+                  "tag": "input",
+                  "classes": [],
+                  "label": ""
+                },
+                {
+                  "tag": "input",
+                  "classes": [],
+                  "label": ""
+                }
+              ]
+            }
+          ]
+        },
+        "status": "pass",
+        "probe": {
+          "status": "serving",
+          "httpStatus": 200,
+          "landed": "https://onlineconversion.com/length_common.htm"
+        }
+      },
+      {
+        "id": "openbsd-faq-reflow",
+        "url": "https://openbsd.org/faq/faq1.html",
+        "status": "probe-error",
+        "probe": {
+          "status": "probe-error",
+          "reason": "ERR_SSL_TLSV1_ALERT_DECODE_ERROR"
+        }
+      },
+      {
+        "id": "poets-org-tr2",
+        "url": "https://www.poets.org/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://poets.org/",
+          "reason": "Redirects to poets.org."
+        }
+      },
+      {
+        "id": "procurement-journey-considerations",
+        "url": "https://procurementjourney.scot/index.php/route-1/route-1-introduction",
+        "persona": "keyboard-only",
+        "journey": false,
+        "on": {
+          "enabled": true,
+          "active": true,
+          "landed": "https://procurementjourney.scot/index.php/route-1/route-1-introduction",
+          "httpStatus": 200,
+          "matchedRules": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "selectorsConfirmed": true,
+          "selectorMatches": [
+            {
+              "index": 0,
+              "field": "selector",
+              "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "div",
+                  "classes": [
+                    "accordion__title",
+                    "accordion__title--theme"
+                  ],
+                  "role": "button",
+                  "label": "Considerations Before Proceeding Open or close"
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "field": "selector",
+              "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "div",
+                  "classes": [
+                    "accordion__title",
+                    "accordion__title--theme"
+                  ],
+                  "role": "button",
+                  "label": "Considerations Before Proceeding Open or close"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "field": "selector",
+              "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "div",
+                  "classes": [
+                    "accordion__title",
+                    "accordion__title--theme"
+                  ],
+                  "role": "button",
+                  "label": "Considerations Before Proceeding Open or close"
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "field": "selector",
+              "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "div",
+                  "classes": [
+                    "accordion__title",
+                    "accordion__title--theme"
+                  ],
+                  "role": "button",
+                  "label": "Considerations Before Proceeding Open or close"
+                }
+              ]
+            }
+          ]
+        },
+        "status": "pass",
+        "probe": {
+          "status": "serving",
+          "httpStatus": 200,
+          "landed": "https://procurementjourney.scot/index.php/route-1/route-1-introduction"
+        }
+      },
+      {
+        "id": "report-605ca95e172608f662",
+        "url": "https://colorhexa.com/ff0000",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.colorhexa.com/ff0000",
+          "reason": "Redirects to www.colorhexa.com."
+        }
+      },
+      {
+        "id": "report-cb10e18073d48f295a",
+        "url": "https://colorhexa.com/ff6600",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.colorhexa.com/ff6600",
+          "reason": "Redirects to www.colorhexa.com."
+        }
+      },
+      {
+        "id": "report-d6870c43f8831c2d3b",
+        "url": "https://colorhexa.com/0066ff",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.colorhexa.com/0066ff",
+          "reason": "Redirects to www.colorhexa.com."
+        }
+      },
+      {
+        "id": "rust-book-reflow",
+        "url": "https://www.doc.rust-lang.org/book/ch01-02-hello-world.html",
+        "status": "unavailable",
+        "probe": {
+          "status": "unavailable",
+          "reason": "ENOTFOUND"
+        }
+      },
+      {
+        "id": "sanantonio-library-reader",
+        "url": "https://mysapl.org/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.mysapl.org/",
+          "reason": "Redirects to www.mysapl.org."
+        }
+      },
+      {
+        "id": "sedgewick-reflow",
+        "url": "https://www.algs4.cs.princeton.edu/11model/",
+        "status": "unavailable",
+        "probe": {
+          "status": "unavailable",
+          "reason": "ENOTFOUND"
+        }
+      },
+      {
+        "id": "sfmta-pause-carousel",
+        "url": "https://sfmta.com/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.sfmta.com/",
+          "reason": "Redirects to www.sfmta.com."
+        }
+      },
+      {
+        "id": "statcounter-edit-chart",
+        "url": "https://www.gs.statcounter.com/",
+        "status": "unavailable",
+        "probe": {
+          "status": "unavailable",
+          "reason": "ENOTFOUND"
+        }
+      },
+      {
+        "id": "uline-com-tr2",
+        "url": "https://uline.com/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.uline.com/",
+          "reason": "Redirects to www.uline.com."
+        }
+      },
+      {
+        "id": "unglobalcompact-org-tr2",
+        "url": "https://www.unglobalcompact.org/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "http://unglobalcompact.org/",
+          "reason": "Redirects to unglobalcompact.org."
+        }
+      },
+      {
+        "id": "unicode-standard-reflow",
+        "url": "https://unicode.org/standard/standard.html",
+        "persona": "low-vision",
+        "journey": false,
+        "on": {
+          "enabled": true,
+          "active": true,
+          "landed": "https://unicode.org/standard/standard.html",
+          "httpStatus": 200,
+          "matchedRules": [
+            0,
+            1,
+            2
+          ],
+          "selectorsConfirmed": true,
+          "selectorMatches": [
+            {
+              "index": 0,
+              "field": "selector",
+              "selector": "table",
+              "count": 5,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "table",
+                  "classes": [],
+                  "label": "The Unicode Standard Tech Site | Site Map | Search About the Unicode® Standard Characters for the Wo"
+                },
+                {
+                  "tag": "table",
+                  "classes": [],
+                  "label": "The Unicode Standard Tech Site | Site Map | Search"
+                },
+                {
+                  "tag": "table",
+                  "classes": [
+                    "subtle"
+                  ],
+                  "label": "Location Description Updates and Errata Cumulative list of pending corrections Proposed New Characte"
+                },
+                {
+                  "tag": "table",
+                  "classes": [
+                    "subtle"
+                  ],
+                  "label": "Location Description Where is my Character? Suggestions on how to find out whether a character has b"
+                },
+                {
+                  "tag": "table",
+                  "classes": [],
+                  "label": ""
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "field": "selector",
+              "selector": "tr",
+              "count": 19,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "tr",
+                  "classes": [],
+                  "label": "The Unicode Standard Tech Site | Site Map | Search"
+                },
+                {
+                  "tag": "tr",
+                  "classes": [],
+                  "label": "The Unicode Standard Tech Site | Site Map | Search"
+                },
+                {
+                  "tag": "tr",
+                  "classes": [],
+                  "label": ""
+                },
+                {
+                  "tag": "tr",
+                  "classes": [],
+                  "label": "About the Unicode® Standard Characters for the World The Unicode Standard is the universal character"
+                },
+                {
+                  "tag": "tr",
+                  "classes": [],
+                  "label": "Location Description"
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "field": "selector",
+              "selector": "td",
+              "count": 31,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "td",
+                  "classes": [],
+                  "label": "The Unicode Standard Tech Site | Site Map | Search"
+                },
+                {
+                  "tag": "td",
+                  "classes": [
+                    "icon"
+                  ],
+                  "label": ""
+                },
+                {
+                  "tag": "td",
+                  "classes": [
+                    "icon"
+                  ],
+                  "label": "The Unicode Standard"
+                },
+                {
+                  "tag": "td",
+                  "classes": [
+                    "bar"
+                  ],
+                  "label": "Tech Site | Site Map | Search"
+                },
+                {
+                  "tag": "td",
+                  "classes": [
+                    "gray"
+                  ],
+                  "label": ""
+                }
+              ]
+            }
+          ]
+        },
+        "status": "pass",
+        "probe": {
+          "status": "serving",
+          "httpStatus": 200,
+          "landed": "https://unicode.org/standard/standard.html"
+        }
+      },
+      {
+        "id": "unitconverters-length",
+        "url": "https://unitconverters.net/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.unitconverters.net/",
+          "reason": "Redirects to www.unitconverters.net."
+        }
+      },
+      {
+        "id": "v4-27c6f312c486-51e6e4ad",
+        "url": "https://www.csc.gov.in/",
+        "persona": "keyboard-only",
+        "journey": true,
+        "off": {
+          "enabled": false,
+          "active": false,
+          "landed": "https://www.csc.gov.in/",
+          "httpStatus": 200,
+          "matchedRules": [],
+          "selectorsConfirmed": false,
+          "selectorMatches": [],
+          "journey": {
+            "status": "fail",
+            "reason": "Journey step 3 was unavailable after the prior step.",
+            "steps": [
+              {
+                "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+                "action": "focus",
+                "traversal": {
+                  "reached": true,
+                  "tabs": 8
+                },
+                "visibility": null
+              },
+              {
+                "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+                "action": "key",
+                "key": "ArrowDown"
+              },
+              {
+                "selector": "#menuzord > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+                "action": "activate"
+              }
+            ],
+            "url": "https://www.csc.gov.in/",
+            "snapshot": null
+          }
+        },
+        "on": {
+          "enabled": true,
+          "active": true,
+          "landed": "https://csc.gov.in/meity",
+          "httpStatus": 200,
+          "matchedRules": [
+            0
+          ],
+          "selectorsConfirmed": true,
+          "selectorMatches": [
+            {
+              "index": 0,
+              "field": "trigger",
+              "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "a",
+                  "classes": [],
+                  "label": "ABOUT"
+                }
+              ]
+            },
+            {
+              "index": 0,
+              "field": "target",
+              "selector": "#menuzord > ul > li:nth-of-type(2) > ul",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "ul",
+                  "id": "curbcut-widget-1",
+                  "classes": [
+                    "dropdown"
+                  ],
+                  "label": "About MeitY About Digital India Common Service Centres 2.0 Scheme"
+                }
+              ]
+            }
+          ],
+          "journey": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome.",
+            "steps": [
+              {
+                "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+                "action": "focus",
+                "traversal": {
+                  "reached": true,
+                  "tabs": 8
+                },
+                "visibility": null
+              },
+              {
+                "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+                "action": "key",
+                "key": "ArrowDown"
+              },
+              {
+                "selector": "#menuzord > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+                "action": "activate",
+                "traversal": {
+                  "reached": true,
+                  "tabs": 1
+                },
+                "visibility": null
+              }
+            ],
+            "url": "https://csc.gov.in/meity",
+            "checks": [
+              true
+            ],
+            "snapshot": null
+          }
+        },
+        "status": "pass",
+        "probe": {
+          "status": "serving",
+          "httpStatus": 200,
+          "landed": "https://www.csc.gov.in/"
+        }
+      },
+      {
+        "id": "v4-86f207deeb57-7bc09a21",
+        "url": "https://mass.edu/",
+        "status": "unavailable",
+        "probe": {
+          "status": "unavailable",
+          "reason": "ENOTFOUND"
+        }
+      },
+      {
+        "id": "v5-c22b9bdca86b-71a63d77",
+        "url": "https://www.marinespecies.org/",
+        "persona": "keyboard-only",
+        "journey": true,
+        "off": {
+          "enabled": false,
+          "active": false,
+          "landed": "https://www.marinespecies.org/",
+          "httpStatus": 200,
+          "matchedRules": [],
+          "selectorsConfirmed": false,
+          "selectorMatches": [],
+          "journey": {
+            "status": "fail",
+            "reason": "Tab traversal missed journey step 1.",
+            "steps": [
+              {
+                "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+                "action": "activate",
+                "traversal": {
+                  "reached": false,
+                  "tabs": 62,
+                  "exhausted": true
+                }
+              }
+            ],
+            "url": "https://www.marinespecies.org/",
+            "snapshot": null
+          }
+        },
+        "on": {
+          "enabled": true,
+          "active": true,
+          "landed": "https://www.marinespecies.org/",
+          "httpStatus": 200,
+          "matchedRules": [
+            0,
+            1
+          ],
+          "selectorsConfirmed": true,
+          "selectorMatches": [
+            {
+              "index": 0,
+              "field": "selector",
+              "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "a",
+                  "classes": [
+                    "dropdown-toggle"
+                  ],
+                  "role": "button",
+                  "label": "Tools"
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "field": "trigger",
+              "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "a",
+                  "classes": [
+                    "dropdown-toggle"
+                  ],
+                  "role": "button",
+                  "label": "Tools"
+                }
+              ]
+            },
+            {
+              "index": 1,
+              "field": "target",
+              "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7)",
+              "count": 1,
+              "issue": null,
+              "matches": [
+                {
+                  "tag": "li",
+                  "id": "curbcut-widget-1",
+                  "classes": [
+                    "dropdown"
+                  ],
+                  "label": "Tools Match taxa Webservices Taxon tree IDKeys"
+                }
+              ]
+            }
+          ],
+          "journey": {
+            "status": "pass",
+            "reason": "The complete journey reached the declared outcome.",
+            "steps": [
+              {
+                "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+                "action": "activate",
+                "traversal": {
+                  "reached": true,
+                  "tabs": 18
+                },
+                "visibility": null
+              },
+              {
+                "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > ul > li:nth-of-type(1) > a",
+                "action": "observe"
+              },
+              {
+                "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > ul > li:nth-of-type(1) > a",
+                "action": "focus",
+                "traversal": {
+                  "reached": true,
+                  "tabs": 1
+                },
+                "visibility": null
+              }
+            ],
+            "url": "https://www.marinespecies.org/",
+            "checks": [
+              true,
+              true,
+              true
+            ],
+            "snapshot": null
+          }
+        },
+        "status": "pass",
+        "probe": {
+          "status": "serving",
+          "httpStatus": 200,
+          "landed": "https://www.marinespecies.org/"
+        }
+      },
+      {
+        "id": "ventusky-precipitation",
+        "url": "https://ventusky.com/",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.ventusky.com/",
+          "reason": "Redirects to www.ventusky.com."
+        }
+      },
+      {
+        "id": "w3schools-select-swatch",
+        "url": "https://w3schools.com/colors/colors_picker.asp#main",
+        "status": "cross-host-redirect",
+        "probe": {
+          "status": "cross-host-redirect",
+          "httpStatus": 301,
+          "location": "https://www.w3schools.com/colors/colors_picker.asp",
+          "reason": "Redirects to www.w3schools.com."
+        }
+      }
+    ]
+  }
+}

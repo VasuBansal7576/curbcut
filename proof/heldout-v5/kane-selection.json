@@ -1,0 +1,50 @@
+{
+  "version": 5,
+  "seed": "curbcut-v5-verified-subset-2026-11-23",
+  "selectedAt": "2026-11-23T20:36:15.028Z",
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "local": {
+    "commit": "4579bdf9c40ffd307a793448c3db7defcb77b640",
+    "blob": "28d4dfe41211f6c8ff75aec28f332bf1d41850f9"
+  },
+  "available": 533.8893,
+  "budget": 380,
+  "reserve": 150,
+  "phaseReserve": 100,
+  "estimatedPerCase": 80,
+  "capacity": 4,
+  "targets": [
+    {
+      "id": "v5-c22b9bdca86b-71a63d77",
+      "persona": "keyboard-only",
+      "barrierClass": 2,
+      "proposal": "proof/heldout-v5/local/v5-c22b9bdca86b-71a63d77/attempt-1",
+      "patchSha256": "1481c32fc2ffddd1065fe49e70376d4199fdddeb1d632e98a60b0f8a45e1274b"
+    },
+    {
+      "id": "v5-cc3cea40d183-52a181e1",
+      "persona": "keyboard-only",
+      "barrierClass": 3,
+      "proposal": "proof/heldout-v5/local/v5-cc3cea40d183-52a181e1/attempt-2",
+      "patchSha256": "7497a4843d14e9af2811cb4a3f8df4b32531592e435927086b5659204461d791"
+    },
+    {
+      "id": "v5-39c81de4ef43-33ae7f34",
+      "persona": "keyboard-only",
+      "barrierClass": 5,
+      "proposal": "proof/heldout-v5/local/v5-39c81de4ef43-33ae7f34/attempt-1",
+      "patchSha256": "2fbd38cf327e068b9972e9db32e51caf902aa4c25f022b416cab7de1b99d2b78"
+    },
+    {
+      "id": "v5-873b26b255a2-924a9a17",
+      "persona": "keyboard-only",
+      "barrierClass": 1,
+      "proposal": "proof/heldout-v5/local/v5-873b26b255a2-924a9a17/attempt-1",
+      "patchSha256": "70416984e4e777eb30391e083356fe8c16a099f736c3a51a808ddd0484f89253"
+    }
+  ],
+  "method": "Take seeded samples within hard classes in seeded round-robin order. Use single controls only if fewer hard repairs qualify."
+}

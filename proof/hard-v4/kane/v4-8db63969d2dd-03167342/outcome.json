@@ -1,0 +1,80 @@
+{
+  "task": {
+    "id": "v4-8db63969d2dd-03167342",
+    "url": "https://moz.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, activate the button named “Market visibility” and read the expanded answer.",
+    "controlTask": "Click “Market visibility” and read “Outrank rivals and grow your market presence with powerful share of voice metrics and robust competi”.",
+    "observedSelector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#expandable-list-answer-712-1 > div > p",
+        "equals": "Outrank rivals and grow your market presence with powerful share of voice metrics and robust competi"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#expandable-list-answer-712-1"
+    ],
+    "journey": [
+      {
+        "selector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+        "action": "activate",
+        "reader": {
+          "role": "button",
+          "name": "Market visibility"
+        }
+      },
+      {
+        "selector": "#expandable-list-answer-712-1 > div > p",
+        "action": "observe"
+      }
+    ]
+  },
+  "status": "inconclusive",
+  "phases": [
+    {
+      "name": "before",
+      "balance": 1501.4977,
+      "after": 1486.3916,
+      "status": "inconclusive",
+      "runner": "kane",
+      "runId": "a1f5bbc1-efec-4123-9955-606d59164350",
+      "credits": 12.779975,
+      "reason": "complete-journey-not-witnessed",
+      "video": "proof/hard-v4/kane/v4-8db63969d2dd-03167342/before/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-8db63969d2dd-03167342/before/8200f6dc-c586-4c30-916a-189372ba3f00.evidence",
+      "basis": "complete-journey-not-witnessed"
+    },
+    {
+      "name": "control",
+      "balance": 1486.3916,
+      "after": 1465.977,
+      "status": "pass",
+      "runner": "kane",
+      "runId": "3b95cced-4c1a-4532-93ba-d7ad29fa0d23",
+      "credits": 18.155147499999998,
+      "reason": "Objective completed",
+      "video": "proof/hard-v4/kane/v4-8db63969d2dd-03167342/control/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-8db63969d2dd-03167342/control/340ffdde-aa5b-4a4b-acbc-c58b5e1a8e46.evidence",
+      "basis": "recorded-journey-and-outcome"
+    },
+    {
+      "name": "attempt-1/after",
+      "balance": 1465.977,
+      "after": 1451.8108,
+      "status": "pass",
+      "runner": "kane",
+      "runId": "90a7fd85-d421-4a78-95ee-f60469b0c28b",
+      "credits": 10.157127499999998,
+      "reason": "Objective completed",
+      "video": "proof/hard-v4/kane/v4-8db63969d2dd-03167342/attempt-1/after/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-8db63969d2dd-03167342/attempt-1/after/b1ed8321-ada0-41ea-9605-d509a31ce2a4.evidence",
+      "basis": "recorded-journey-and-outcome"
+    }
+  ],
+  "localProposal": "proof/hard-v4/local/v4-8db63969d2dd-03167342/attempt-1",
+  "reason": "Objective completed",
+  "finishedAt": "2026-11-23T15:44:00.762Z"
+}

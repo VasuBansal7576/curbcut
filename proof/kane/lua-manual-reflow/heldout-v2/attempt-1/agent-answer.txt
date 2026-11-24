@@ -1,0 +1,21 @@
+{
+  "barrier": "At 320 CSS pixels, the 354-pixel body extends beyond the viewport, and the grammar block’s white-space: pre prevents its lines from wrapping, producing 828 pixels of content that is clipped on the right.",
+  "rules": [
+    {
+      "selector": "body",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "pre:nth-of-type(301)",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "pre-wrap",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

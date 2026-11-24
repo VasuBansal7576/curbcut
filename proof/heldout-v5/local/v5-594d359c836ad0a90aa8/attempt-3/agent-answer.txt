@@ -1,0 +1,58 @@
+{
+  "barrier": "At 320 CSS pixels, the passage starts 15 pixels from the left but its 550-pixel paragraph extends to x=565. The desktop-width wrapper also shifts the passage offscreen when its width is capped without removing its positioning.",
+  "rules": [
+    {
+      "selector": "body.lang_en.front, #page, #main",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "body.front #middle:has(#newMedia)",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "selector": "div.pageContainer:has(#newMedia), #mainContent, #newsBlock, #newMedia, #newMedia > .newsItem.videoItem",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#newMedia > .newsItem.videoItem > .newsBlurb, #newMedia > .newsItem.videoItem > .newsBlurb > .newsDesc",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "height": "auto",
+        "max-height": "none"
+      }
+    },
+    {
+      "selector": "#newMedia > .newsItem.videoItem > .newsBlurb > .newsDesc > p",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "height": "auto",
+        "max-height": "none",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    },
+    {
+      "selector": "#newMedia > .newsItem.videoItem > .newsBlurb > .videoThumb, #newMedia img.newsThumb",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ]
+}

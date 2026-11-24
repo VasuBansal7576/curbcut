@@ -1,0 +1,12 @@
+{
+  "barrier": "The grid track extends the passage’s list item to x=377 in a 320 CSS pixel viewport, where horizontal clipping cuts off the overflow.",
+  "rules": [
+    {
+      "selector": "div.grid.gap-x-20",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ]
+}

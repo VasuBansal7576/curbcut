@@ -1,0 +1,52 @@
+{
+  "id": "v5-6af2720aeb97-5ddb9105",
+  "url": "https://www.boerse-online.de/",
+  "persona": "keyboard-only",
+  "task": "Open “Börse” from keyboard focus or with Arrow Down and follow “Experten”. Confirm the public destination /experten.",
+  "controlTask": "Hover “Börse”, click “Experten” and confirm /experten.",
+  "observedSelector": "#header-quick-navigation > ul > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/experten"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#header-quick-navigation > ul > li:nth-of-type(1)",
+    "#boerse-quick-sub"
+  ],
+  "journey": [
+    {
+      "selector": "#header-quick-navigation > ul > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#header-quick-navigation > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#boerse-quick-sub > li:nth-of-type(2) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.boerse-online.de",
+  "match": "https://www.boerse-online.de/",
+  "barrier": "The Börse submenu opens on pointer hover only. Keyboard focus reaches Experten, but the submenu remains at opacity 0 and its parent clips the links.",
+  "rules": [
+    {
+      "selector": "#header-quick-navigation > ul > li:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

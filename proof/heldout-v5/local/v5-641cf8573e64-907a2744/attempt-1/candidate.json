@@ -1,0 +1,52 @@
+{
+  "id": "v5-641cf8573e64-907a2744",
+  "url": "https://www.pdflib.com/",
+  "persona": "keyboard-only",
+  "task": "Open “PRODUCTS” from keyboard focus or with Arrow Down and follow “Product Overview”. Confirm the public destination /products/product-overview/.",
+  "controlTask": "Hover “PRODUCTS”, click “Product Overview” and confirm /products/product-overview/.",
+  "observedSelector": "div:nth-of-type(2) > div > div:nth-of-type(1) > div > aside > nav:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/products/product-overview/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "div:nth-of-type(2) > div > div:nth-of-type(1) > div > aside > nav:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1)",
+    "div:nth-of-type(2) > div > div:nth-of-type(1) > div > aside > nav:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "div:nth-of-type(2) > div > div:nth-of-type(1) > div > aside > nav:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "div:nth-of-type(2) > div > div:nth-of-type(1) > div > aside > nav:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "div:nth-of-type(2) > div > div:nth-of-type(1) > div > aside > nav:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.pdflib.com",
+  "match": "https://www.pdflib.com/",
+  "barrier": "The Products submenu is hidden until its parent list item is hovered. Keyboard focus and Arrow Down leave Product Overview hidden.",
+  "rules": [
+    {
+      "selector": "nav.mfc_verticalMenuDesktopFlyout > ul:first-of-type > li:first-of-type",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

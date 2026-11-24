@@ -1,0 +1,34 @@
+{
+  "id": "mynoise-open-menu",
+  "url": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+  "persona": "keyboard-only",
+  "task": "First assert that the Menu icon at the top of the White Noise Generator is in the sequential keyboard focus order. Use Tab and Enter to open it. Verify the site navigation opens and the Full Index link is visible.",
+  "controlTask": "Click the Menu icon at the top of the White Noise Generator. Verify the navigation opens and the Full Index link is visible.",
+  "observedSelector": "#hamburger",
+  "successSelector": "#menuOverlay",
+  "site": "mynoise.net",
+  "match": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+  "barrier": "The clickable Menu icon (#hamburger) has tabIndex -1, so Tab skips it.",
+  "rules": [
+    {
+      "selector": "#hamburger",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#hamburger",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#hamburger",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#hamburger",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

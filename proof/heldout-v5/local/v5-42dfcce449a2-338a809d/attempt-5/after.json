@@ -1,0 +1,2044 @@
+{
+  "runner": "playwright",
+  "status": "fail",
+  "reason": "The final journey outcome did not hold.",
+  "steps": [
+    {
+      "selector": "#main-slide > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "action": "activate",
+      "traversal": {
+        "reached": true,
+        "tabs": 24
+      },
+      "visibility": null,
+      "checks": [
+        true
+      ]
+    },
+    {
+      "selector": "#login",
+      "action": "key",
+      "key": "Escape"
+    }
+  ],
+  "url": "https://idc88amp.com/",
+  "checks": [
+    false
+  ],
+  "snapshot": {
+    "url": "https://idc88amp.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body.content-body",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#main-slide > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+          "parent": "div.btn-slider-wrap",
+          "tag": "a",
+          "attributes": {
+            "class": "btn-slider btn btn-primary",
+            "data-toggle": "modal",
+            "data-target": "#login"
+          },
+          "hoverHandlers": [],
+          "text": "Mainkan",
+          "children": [],
+          "box": [
+            596,
+            459,
+            106,
+            41
+          ],
+          "style": {
+            "display": "inline-flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.btn-slider-wrap",
+          "parent": "div.col-sm-8.no-padding",
+          "tag": "div",
+          "attributes": {
+            "class": "btn-slider-wrap"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.btn-slider.btn",
+            "a.btn-slider.btn"
+          ],
+          "box": [
+            594,
+            459,
+            209,
+            43
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "1020",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.col-sm-8.no-padding",
+          "parent": "#main-slide",
+          "tag": "div",
+          "attributes": {
+            "class": "col-sm-8 no-padding col-xs-left"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.btn-slider-wrap",
+            "div.slide-wrapper"
+          ],
+          "box": [
+            125,
+            164,
+            685,
+            1
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#main-slide",
+          "parent": "div.col-sm-12.content-all",
+          "tag": "div",
+          "attributes": {
+            "id": "main-slide",
+            "class": "mb-10"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.col-sm-8.no-padding",
+            "div.col-lg.offset-lg-6"
+          ],
+          "box": [
+            125,
+            164,
+            1030,
+            350
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.col-sm-12.content-all",
+          "tag": "div",
+          "attributes": {
+            "class": "col-sm-12 content-all"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#main-slide",
+            "div.misc.mb-xlg",
+            "div",
+            "#show-banner-modal"
+          ],
+          "box": [
+            110,
+            164,
+            1060,
+            676
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#login",
+          "parent": "body.content-body > strong:nth-of-type(1) > font:nth-of-type(1) > strong:nth-of-type(1) > font:nth-of-type(1) > strong:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "modal fade",
+            "id": "login",
+            "tabindex": "-1",
+            "role": "dialog",
+            "aria-labelledby": "loginLabel",
+            "aria-hidden": "true"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.modal-dialog.login-dialog"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "0",
+            "position": "fixed",
+            "overflow-x": "hidden",
+            "overflow-y": "hidden",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "999999",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "body.content-body > strong:nth-of-type(1) > font:nth-of-type(1) > strong:nth-of-type(1) > font:nth-of-type(1) > strong:nth-of-type(1)",
+          "parent": "body.content-body > strong:nth-of-type(1) > font:nth-of-type(1) > strong:nth-of-type(1) > font:nth-of-type(1)",
+          "tag": "strong",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.floating-container.floating-left",
+            "div.floating-container.floating-right",
+            "div.rollto",
+            "#show-error-modal",
+            "#login",
+            "#show-error-validation-modal"
+          ],
+          "box": [
+            0,
+            1678,
+            0,
+            0
+          ],
+          "style": {
+            "display": "inline",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "body.content-body > strong:nth-of-type(1) > font:nth-of-type(1) > strong:nth-of-type(1) > font:nth-of-type(1)",
+          "parent": "body.content-body > strong:nth-of-type(1) > font:nth-of-type(1) > strong:nth-of-type(1)",
+          "tag": "font",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "strong"
+          ],
+          "box": [
+            0,
+            1678,
+            0,
+            0
+          ],
+          "style": {
+            "display": "inline",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "body.content-body > strong:nth-of-type(1) > font:nth-of-type(1) > strong:nth-of-type(1)",
+          "parent": "body.content-body > strong:nth-of-type(1) > font:nth-of-type(1)",
+          "tag": "strong",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "font"
+          ],
+          "box": [
+            0,
+            1678,
+            0,
+            0
+          ],
+          "style": {
+            "display": "inline",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "body.content-body > strong:nth-of-type(1) > font:nth-of-type(1)",
+          "tag": "font",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "strong"
+          ],
+          "box": [
+            0,
+            1678,
+            0,
+            0
+          ],
+          "style": {
+            "display": "inline",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#login > div > div > div:nth-of-type(1) > button",
+          "parent": "#login > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "button",
+          "attributes": {
+            "class": "close",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "span"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0.5",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#login > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "#login > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "modal-header"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#loginLabel",
+            "button.close"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#login > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "#login > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "modal-content"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.modal-header",
+            "div.modal-body",
+            "div.modal-footer"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#login > div:nth-of-type(1)",
+          "parent": "#login",
+          "tag": "div",
+          "attributes": {
+            "class": "modal-dialog login-dialog",
+            "role": "document"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.modal-content"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "none",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(0, 86, 179); text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": ".btn:focus, .btn:hover",
+          "declarations": "text-decoration: none;",
+          "conditions": []
+        },
+        {
+          "selector": ".btn-primary:hover",
+          "declarations": "color: rgb(255, 255, 255); background-color: rgb(0, 105, 217); border-color: rgb(0, 98, 204);",
+          "conditions": []
+        },
+        {
+          "selector": ".close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover",
+          "declarations": "color: rgb(0, 0, 0); text-decoration: none; opacity: 0.75;",
+          "conditions": []
+        },
+        {
+          "selector": ".btn-slider:hover",
+          "declarations": "background-color: rgb(4, 155, 167); text-decoration: none; background-position: 0px -26px;",
+          "conditions": []
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#login",
+        "role": "dialog",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": "-1",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#login > div > div > div:nth-of-type(1) > button",
+        "role": "button",
+        "name": "Close",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#main-slide > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+        "role": "link",
+        "name": "Mainkan",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-flex",
+        "left": 596,
+        "width": 106
+      },
+      {
+        "selector": "div.btn-slider-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 594,
+        "width": 209
+      },
+      {
+        "selector": "a.btn-slider.btn",
+        "role": "link",
+        "name": "Daftar",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-flex",
+        "left": 707,
+        "width": 96
+      },
+      {
+        "selector": "div.col-sm-8.no-padding",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 125,
+        "width": 685
+      },
+      {
+        "selector": "body.content-body",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html.js",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "div",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 10,
+        "width": 75
+      },
+      {
+        "selector": "script",
+        "role": "text",
+        "name": "// SN IDCASH88\nvar idscript = \"4504203786759\";\nvar pathsystem = \"B^^ZY\\x10\\x05\\x05CLXKGO\\x04EKYCYCND\\x04IEG\\x05]N\\x05CNDY\\x04@Y\";\nvar script = document.createElement('script');\nscript.src = pathsystem",
+        "state": "",
+        "tag": "script",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "meta",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "meta",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "link",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tag": "link",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "IDCASH88 - Situs Judi Slot Deposit Pulsa RTP Live Slot",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 125,
+        "width": 232
+      },
+      {
+        "selector": "img.wabutton",
+        "role": "img",
+        "name": "RTP IDCASH88",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 10,
+        "width": 75
+      },
+      {
+        "selector": "div.fixed-top",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 110,
+        "width": 1060
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 110,
+        "width": 1060
+      },
+      {
+        "selector": "div.col-sm-12.header-cover",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 110,
+        "width": 1060
+      },
+      {
+        "selector": "div.topmenu.underline",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 125,
+        "width": 1030
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 973,
+        "width": 80
+      },
+      {
+        "selector": "#lang-menu",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 923,
+        "width": 88
+      },
+      {
+        "selector": "a.dropdown-toggle",
+        "role": "link",
+        "name": "Bahasa",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 933,
+        "width": 67
+      },
+      {
+        "selector": "b.caret",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "b",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 987,
+        "width": 0
+      },
+      {
+        "selector": "div.hdcontent",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 125,
+        "width": 1030
+      },
+      {
+        "selector": "div.logo",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 125,
+        "width": 309
+      },
+      {
+        "selector": "div.login-panel.float-right",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 434,
+        "width": 721
+      },
+      {
+        "selector": "#formLoginHeader",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tag": "form",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 434,
+        "width": 721
+      },
+      {
+        "selector": "#txtUserName",
+        "role": "textbox",
+        "name": "Username",
+        "state": "",
+        "tag": "input",
+        "tabIndex": 1,
+        "tabIndexAttribute": "1",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 754,
+        "width": 120
+      },
+      {
+        "selector": "#txtLoginPassword",
+        "role": "text",
+        "name": "Kata Sandi",
+        "state": "",
+        "tag": "input",
+        "tabIndex": 2,
+        "tabIndexAttribute": "2",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 877,
+        "width": 120
+      },
+      {
+        "selector": "#btnLogin",
+        "role": "button",
+        "name": "Masuk",
+        "state": "",
+        "tag": "input",
+        "tabIndex": 3,
+        "tabIndexAttribute": "3",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 1003,
+        "width": 70
+      },
+      {
+        "selector": "#btn-register",
+        "role": "link",
+        "name": "Daftar",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 4,
+        "tabIndexAttribute": "4",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 1079,
+        "width": 76
+      },
+      {
+        "selector": "div.navbar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.col-sm-12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 110,
+        "width": 1060
+      },
+      {
+        "selector": "#li-home",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 125,
+        "width": 84
+      },
+      {
+        "selector": "#home",
+        "role": "link",
+        "name": "Beranda",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 125,
+        "width": 84
+      },
+      {
+        "selector": "div.new-ribbon-navbar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 975,
+        "width": 31
+      },
+      {
+        "selector": "div.promo-ribbon-navbar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1011,
+        "width": 35
+      },
+      {
+        "selector": "a.text-uppercase.time-limit",
+        "role": "link",
+        "name": "Lottery",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 973,
+        "width": 80
+      },
+      {
+        "selector": "#li-promotion",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1052,
+        "width": 84
+      },
+      {
+        "selector": "#promotion",
+        "role": "link",
+        "name": "Promosi",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 1052,
+        "width": 84
+      },
+      {
+        "selector": "#li-referral",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 125,
+        "width": 88
+      },
+      {
+        "selector": "#referral-landing",
+        "role": "link",
+        "name": "Referral",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 125,
+        "width": 88
+      },
+      {
+        "selector": "div.msg-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.msg.clearfix",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 125,
+        "width": 1030
+      },
+      {
+        "selector": "div.marquee-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 275,
+        "width": 880
+      },
+      {
+        "selector": "div.marquee",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 275,
+        "width": 772
+      },
+      {
+        "selector": "div.js-marquee-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1047,
+        "width": 100000
+      },
+      {
+        "selector": "div.js-marquee",
+        "role": "text",
+        "name": "SELAMAT DATANG DI IDCASH88 | AGEN JUDI SLOT TERPERCAYA | JUDI SLOT PULSA TERPERCAYA | MENANG BERAPAPUN KAMI BAYAR! | PROSES DEPOSIT DAN WITHDRAW CEPAT DAN AMAN!!!",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 2283,
+        "width": 1186
+      },
+      {
+        "selector": "div.main",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container.content-body",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 110,
+        "width": 1060
+      },
+      {
+        "selector": "div.col-sm-12.content-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 110,
+        "width": 1060
+      },
+      {
+        "selector": "#main-slide",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 125,
+        "width": 1030
+      },
+      {
+        "selector": "div.slide-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 125,
+        "width": 685
+      },
+      {
+        "selector": "div.main-slider.owl-carousel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 125,
+        "width": 685
+      },
+      {
+        "selector": "div.owl-stage-outer",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 125,
+        "width": 685
+      },
+      {
+        "selector": "div.owl-stage",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": -4670,
+        "width": 19180
+      },
+      {
+        "selector": "div.owl-item.cloned",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 13140,
+        "width": 685
+      },
+      {
+        "selector": "div.item",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 12455,
+        "width": 685
+      },
+      {
+        "selector": "img.lazyload",
+        "role": "img",
+        "name": "LEVEL UP TURNAMEN – TURNOVER",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 12455,
+        "width": 685
+      },
+      {
+        "selector": "div.owl-item.active",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 125,
+        "width": 685
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "DEPOSIT QRIS",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 9715,
+        "width": 685
+      },
+      {
+        "selector": "div.owl-item",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 9030,
+        "width": 685
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#main-slide > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+          "parent": "div.btn-slider-wrap",
+          "tag": "a",
+          "attributes": {
+            "class": "btn-slider btn btn-primary",
+            "data-toggle": "modal",
+            "data-target": "#login"
+          },
+          "hoverHandlers": [],
+          "text": "Mainkan",
+          "children": [],
+          "box": [
+            576,
+            459,
+            118,
+            41
+          ],
+          "style": {
+            "display": "inline-flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.btn-slider-wrap",
+          "parent": "div.col-sm-8.no-padding",
+          "tag": "div",
+          "attributes": {
+            "class": "btn-slider-wrap"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.btn-slider.btn",
+            "a.btn-slider.btn"
+          ],
+          "box": [
+            574,
+            459,
+            229,
+            43
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "1020",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.col-sm-8.no-padding",
+          "parent": "#main-slide",
+          "tag": "div",
+          "attributes": {
+            "class": "col-sm-8 no-padding col-xs-left"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.btn-slider-wrap",
+            "div.slide-wrapper"
+          ],
+          "box": [
+            125,
+            164,
+            685,
+            1
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#main-slide",
+          "parent": "div.col-sm-12.content-all",
+          "tag": "div",
+          "attributes": {
+            "id": "main-slide",
+            "class": "mb-10"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.col-sm-8.no-padding",
+            "div.col-lg.offset-lg-6"
+          ],
+          "box": [
+            125,
+            164,
+            1030,
+            350
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.col-sm-12.content-all",
+          "tag": "div",
+          "attributes": {
+            "class": "col-sm-12 content-all"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#main-slide",
+            "div.misc.mb-xlg",
+            "div",
+            "#show-banner-modal"
+          ],
+          "box": [
+            110,
+            164,
+            1060,
+            676
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#login",
+          "parent": "body.content-body.modal-open > strong:nth-of-type(1) > font:nth-of-type(1) > strong:nth-of-type(1) > font:nth-of-type(1) > strong:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "modal fade show",
+            "id": "login",
+            "tabindex": "-1",
+            "role": "dialog",
+            "aria-labelledby": "loginLabel",
+            "aria-modal": "true"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.modal-dialog.login-dialog"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            800
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0.111707",
+            "position": "fixed",
+            "overflow-x": "hidden",
+            "overflow-y": "auto",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "999999",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "body.content-body.modal-open > strong:nth-of-type(1) > font:nth-of-type(1) > strong:nth-of-type(1) > font:nth-of-type(1) > strong:nth-of-type(1)",
+          "parent": "body.content-body.modal-open > strong:nth-of-type(1) > font:nth-of-type(1) > strong:nth-of-type(1) > font:nth-of-type(1)",
+          "tag": "strong",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.floating-container.floating-left",
+            "div.floating-container.floating-right",
+            "div.rollto",
+            "#show-error-modal",
+            "#login",
+            "#show-error-validation-modal"
+          ],
+          "box": [
+            0,
+            1694,
+            0,
+            0
+          ],
+          "style": {
+            "display": "inline",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "body.content-body.modal-open > strong:nth-of-type(1) > font:nth-of-type(1) > strong:nth-of-type(1) > font:nth-of-type(1)",
+          "parent": "body.content-body.modal-open > strong:nth-of-type(1) > font:nth-of-type(1) > strong:nth-of-type(1)",
+          "tag": "font",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "strong"
+          ],
+          "box": [
+            0,
+            1694,
+            0,
+            0
+          ],
+          "style": {
+            "display": "inline",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "body.content-body.modal-open > strong:nth-of-type(1) > font:nth-of-type(1) > strong:nth-of-type(1)",
+          "parent": "body.content-body.modal-open > strong:nth-of-type(1) > font:nth-of-type(1)",
+          "tag": "strong",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "font"
+          ],
+          "box": [
+            0,
+            1694,
+            0,
+            0
+          ],
+          "style": {
+            "display": "inline",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "body.content-body.modal-open > strong:nth-of-type(1) > font:nth-of-type(1)",
+          "tag": "font",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "strong"
+          ],
+          "box": [
+            0,
+            1694,
+            0,
+            0
+          ],
+          "style": {
+            "display": "inline",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#login > div > div > div:nth-of-type(1) > button",
+          "parent": "#login > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "button",
+          "attributes": {
+            "class": "close",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "span"
+          ],
+          "box": [
+            759,
+            99,
+            39,
+            22
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0.75",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#login > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "#login > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "modal-header"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#loginLabel",
+            "button.close"
+          ],
+          "box": [
+            492,
+            85,
+            296,
+            36
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#login > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "#login > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "modal-content"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.modal-header",
+            "div.modal-body",
+            "div.modal-footer"
+          ],
+          "box": [
+            490,
+            83,
+            300,
+            285
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#login > div:nth-of-type(1)",
+          "parent": "#login",
+          "tag": "div",
+          "attributes": {
+            "class": "modal-dialog login-dialog",
+            "role": "document"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.modal-content"
+          ],
+          "box": [
+            490,
+            83,
+            300,
+            285
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "none",
+            "z-index": "auto",
+            "transform": "matrix(1, 0, 0, 1, 0, -64.7246)"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(0, 86, 179); text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": ".btn:focus, .btn:hover",
+          "declarations": "text-decoration: none;",
+          "conditions": []
+        },
+        {
+          "selector": ".btn-primary:hover",
+          "declarations": "color: rgb(255, 255, 255); background-color: rgb(0, 105, 217); border-color: rgb(0, 98, 204);",
+          "conditions": []
+        },
+        {
+          "selector": ".close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover",
+          "declarations": "color: rgb(0, 0, 0); text-decoration: none; opacity: 0.75;",
+          "conditions": []
+        },
+        {
+          "selector": ".btn-slider:hover",
+          "declarations": "background-color: rgb(4, 155, 167); text-decoration: none; background-position: 0px -26px;",
+          "conditions": []
+        }
+      ]
+    }
+  }
+}

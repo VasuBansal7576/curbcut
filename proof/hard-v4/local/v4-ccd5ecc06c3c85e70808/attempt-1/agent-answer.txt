@@ -1,0 +1,13 @@
+{
+  "barrier": "At 320 CSS pixels, the bundle URL uses white-space: pre, so it cannot wrap. The passage requires 395 pixels inside a 288-pixel container, forcing horizontal scrolling.",
+  "rules": [
+    {
+      "selector": "#polyfill-bundle-url",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "pre-wrap",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "barrier": "The domain search textbox has no accessible name, so users cannot identify it as “Find your dream domain” in Reading view.",
+  "rules": [
+    {
+      "selector": "#wg-das-top-section4 > div > div > div:nth-of-type(1) > input",
+      "action": "addLabel",
+      "value": "Find your dream domain"
+    }
+  ]
+}

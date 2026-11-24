@@ -1,0 +1,89 @@
+{
+  "task": {
+    "id": "v4-8e846cd4fb4e-f025deca",
+    "url": "https://builtin.com/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels with vertical scrolling only, click “Expand Button” and read “Remote Tech Companies Companies Hiring Remotely Fully Remote Companies More ResourcesTech + Startup ”.",
+    "controlTask": "Click “Expand Button” and read “Remote Tech Companies Companies Hiring Remotely Fully Remote Companies More ResourcesTech + Startup ”.",
+    "observedSelector": "div:nth-of-type(2) > main > div > div:nth-of-type(2) > div:nth-of-type(4) > div > button",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#drop-data-explore",
+        "equals": "Remote Tech Companies Companies Hiring Remotely Fully Remote Companies More ResourcesTech + Startup "
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#drop-data-explore"
+    ],
+    "journey": [
+      {
+        "selector": "div:nth-of-type(2) > main > div > div:nth-of-type(2) > div:nth-of-type(4) > div > button",
+        "action": "activate"
+      },
+      {
+        "selector": "#drop-data-explore",
+        "action": "observe"
+      }
+    ]
+  },
+  "status": "inconclusive",
+  "phases": [
+    {
+      "name": "before",
+      "balance": 1420.6268,
+      "after": 1394.1087,
+      "status": "inconclusive",
+      "runner": "kane",
+      "runId": "a1fcc792-f392-4b70-af22-74e241c2211f",
+      "credits": 18.3972475,
+      "reason": "complete-journey-not-witnessed",
+      "video": "proof/hard-v4/kane/v4-8e846cd4fb4e-f025deca/before/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-8e846cd4fb4e-f025deca/before/5ed6b51e-2afe-4cb2-b56c-b3d96678a4d2.evidence",
+      "basis": "complete-journey-not-witnessed"
+    },
+    {
+      "name": "control",
+      "balance": 1394.1087,
+      "after": 1370.1038,
+      "status": "inconclusive",
+      "runner": "kane",
+      "runId": "108afd51-6415-4f27-8fcc-e58439ec8ec9",
+      "credits": 21.9083275,
+      "reason": "complete-journey-not-witnessed",
+      "video": "proof/hard-v4/kane/v4-8e846cd4fb4e-f025deca/control/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-8e846cd4fb4e-f025deca/control/563fb17f-bb33-4072-8673-8dcc23cd5c57.evidence",
+      "basis": "complete-journey-not-witnessed"
+    },
+    {
+      "name": "attempt-1/after",
+      "balance": 1370.1038,
+      "after": 1351.342,
+      "status": "inconclusive",
+      "runner": "kane",
+      "runId": "f3e60b9f-5be5-44ee-ab3a-479d38ba6e48",
+      "credits": 18.036751499999998,
+      "reason": "complete-journey-not-witnessed",
+      "video": "proof/hard-v4/kane/v4-8e846cd4fb4e-f025deca/attempt-1/after/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-8e846cd4fb4e-f025deca/attempt-1/after/4f45dd2c-f9de-4dae-89f7-5f87910f81b6.evidence",
+      "basis": "complete-journey-not-witnessed"
+    },
+    {
+      "name": "attempt-1/after-retry",
+      "balance": 1351.342,
+      "after": 1336.7125,
+      "status": "inconclusive",
+      "runner": "kane",
+      "runId": "526e2701-9861-485d-8629-83f888e6c7f9",
+      "credits": 12.525287500000001,
+      "reason": "complete-journey-not-witnessed",
+      "video": "proof/hard-v4/kane/v4-8e846cd4fb4e-f025deca/attempt-1/after-retry/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-8e846cd4fb4e-f025deca/attempt-1/after-retry/8dba9114-07a4-4974-b72f-cc627794c8ef.evidence",
+      "basis": "complete-journey-not-witnessed"
+    }
+  ],
+  "localProposal": "proof/hard-v4/local/v4-8e846cd4fb4e-f025deca/attempt-2",
+  "reason": "complete-journey-not-witnessed",
+  "finishedAt": "2026-11-23T15:50:47.264Z"
+}

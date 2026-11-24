@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#onetrust-banner-sdk > div[role=\"dialog\"]",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [],
+          "role": "dialog",
+          "label": "Privacy"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "dialog",
+      "selector": "#onetrust-banner-sdk",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "onetrust-banner-sdk",
+          "classes": [
+            "otFlat",
+            "bottom",
+            "ot-wo-title",
+            "vertical-align-content"
+          ],
+          "label": "We use essential cookies to operate our website and, with your consent, analytics and marketing cook"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "close",
+      "selector": "#onetrust-close-btn-container > button",
+      "scope": "#onetrust-banner-sdk",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "onetrust-close-btn-handler",
+            "onetrust-close-btn-ui",
+            "banner-close-button",
+            "ot-close-icon"
+          ],
+          "label": "Close"
+        }
+      ]
+    }
+  ]
+}

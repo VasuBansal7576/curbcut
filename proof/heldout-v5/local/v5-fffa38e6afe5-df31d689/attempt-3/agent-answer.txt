@@ -1,0 +1,12 @@
+{
+  "barrier": "At 320 CSS pixels, the disclosure reports that it is expanded, but its absolutely positioned panel sits 15,984 pixels left of the viewport. Horizontal clipping keeps the guidance out of view, even though the text check passes.",
+  "rules": [
+    {
+      "selector": "#topOfPage > .usa-accordion:has(> .usa-banner__header > .usa-banner__inner > button[aria-controls=\"gov-banner-default-default\"][aria-expanded=\"true\"]) > #gov-banner-default-default:not([hidden])",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "barrier": "The main grid has a 1170px minimum width. At a 320px viewport, the story item is 750px wide and extends to x=765px, where horizontal clipping cuts off the passage.",
+  "rules": [
+    {
+      "selector": "div.grid.grid_version_2-1",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "div.grid__content.grid__content_full-width_false",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.grid__main.grid__main_sticky_none",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto"
+      }
+    },
+    {
+      "selector": "div.grid__module.grid__module_loaded_true",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.story-list",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "ul.story-list__list",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#main > div > div > div:nth-of-type(6) > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > ul > li:nth-of-type(1)",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.story-list__photo",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "div.story-list__text",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "div.app-footer",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "app-footer"
+          ],
+          "label": "Our website uses cookies to help us ensure that it is working as expected, optional analytics cookie"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "div.app-footer > div.app-notice.active",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "app-notice",
+            "active"
+          ],
+          "label": "Our website uses cookies to help us ensure that it is working as expected, optional analytics cookie"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "field": "selector",
+      "selector": "div.app-notice.active > p.app-notice__tips",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "p",
+          "classes": [
+            "app-notice__tips"
+          ],
+          "label": "Our website uses cookies to help us ensure that it is working as expected, optional analytics cookie"
+        }
+      ]
+    }
+  ]
+}

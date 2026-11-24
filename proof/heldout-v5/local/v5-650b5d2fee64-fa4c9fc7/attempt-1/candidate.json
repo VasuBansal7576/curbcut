@@ -1,0 +1,66 @@
+{
+  "id": "v5-650b5d2fee64-fa4c9fc7",
+  "url": "https://www.celebritynetworth.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, hover “Athletes”, click “Baseball Players” and confirm /category/richest-athletes/richest-baseball/.",
+  "controlTask": "Hover “Athletes”, click “Baseball Players” and confirm /category/richest-athletes/richest-baseball/.",
+  "observedSelector": "#menu-item-150538 > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/category/richest-athletes/richest-baseball/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menu-item-150538",
+    "#menu-item-150538 > div"
+  ],
+  "journey": [
+    {
+      "selector": "#menu-item-150538 > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-item-150538 > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-item-150538 > div > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.celebritynetworth.com",
+  "match": "https://www.celebritynetworth.com/",
+  "barrier": "At 320 CSS pixels, the mobile navigation drawer translates the Athletes link entirely offscreen. The hover rule that opens its submenu only applies at widths of 771 CSS pixels and above.",
+  "rules": [
+    {
+      "selector": "body.adthrive-device-phone #main_nav > #nav-content",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "selector": "#menu-item-150538",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#menu-item-150538",
+      "items": "#menu-item-150538 > a, #menu-item-150538 > div.dropdown_item > ul.dropdown_menu > li > a",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

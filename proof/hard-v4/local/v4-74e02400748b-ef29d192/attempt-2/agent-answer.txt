@@ -1,0 +1,29 @@
+{
+  "barrier": "At 320 CSS pixels, focusing “GIÁO ÁN - ĐỀ THI” and pressing ArrowDown leaves its submenu at display: none, so the Grade 1 lesson plans link is unavailable.",
+  "rules": [
+    {
+      "selector": "ul.nav.navbar-nav",
+      "action": "injectCSS",
+      "value": {
+        "flex-wrap": "wrap",
+        "min-width": "0",
+        "white-space": "normal"
+      }
+    },
+    {
+      "selector": "#scroll-menu > ul > li:nth-of-type(14) > ul",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "white-space": "normal"
+      }
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#scroll-menu > ul > li:nth-of-type(14) > a",
+      "target": "#scroll-menu > ul > li:nth-of-type(14) > ul",
+      "mode": "display",
+      "display": "block"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "barrier": "Activation expands the banner and removes the panel's hidden attribute, but the panel is absolutely positioned far to the left. Its text can satisfy the automated check while remaining outside the visible viewport.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#topOfPage button.usa-banner__button[aria-controls=\"gov-banner-default-default\"]",
+      "target": "#gov-banner-default-default",
+      "mode": "display",
+      "display": "contents"
+    },
+    {
+      "selector": "#gov-banner-default-default > div.grid-row.grid-gap-lg",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ]
+}

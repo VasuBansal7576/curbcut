@@ -1,0 +1,9 @@
+{
+  "barrier": "The desktop dropdown becomes visible only when its parent list item is hovered. Focusing WordPress xel and pressing Arrow Down leaves the WordPress Veiligxel link hidden.",
+  "rules": [
+    {
+      "selector": "#menu-primary-navigation > li.menu__item--wordpress-xel",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

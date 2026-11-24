@@ -1,0 +1,181 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-cc24dd9e10e4-3d3faa5f",
+    "url": "https://www.um-surabaya.ac.id/",
+    "persona": "keyboard-only",
+    "task": "Open “TENTANG UMSURA” from keyboard focus or with Arrow Down and follow “Penghargaan dan Prestasi”. Confirm the public destination /about/penghargaan.",
+    "controlTask": "Hover “TENTANG UMSURA”, click “Penghargaan dan Prestasi” and confirm /about/penghargaan.",
+    "observedSelector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/about/penghargaan"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#desktop-nav > ul > li:nth-of-type(1)",
+      "#desktop-nav > ul > li:nth-of-type(1) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#desktop-nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a:nth-of-type(5)",
+        "action": "activate"
+      }
+    ]
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "Journey step 3 was unavailable after the prior step.",
+    "steps": [
+      {
+        "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+        "action": "focus",
+        "traversal": {
+          "reached": true,
+          "tabs": 9
+        }
+      },
+      {
+        "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown"
+      },
+      {
+        "selector": "#desktop-nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a:nth-of-type(5)",
+        "action": "activate"
+      }
+    ],
+    "url": "https://www.um-surabaya.ac.id/"
+  },
+  "registeredControl": {
+    "status": "pass",
+    "reason": "The complete journey reached the declared outcome.",
+    "steps": [
+      {
+        "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+        "action": "focus"
+      },
+      {
+        "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown"
+      },
+      {
+        "selector": "#desktop-nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a:nth-of-type(5)",
+        "action": "activate"
+      }
+    ],
+    "url": "https://www.um-surabaya.ac.id/about/penghargaan",
+    "checks": [
+      true
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-cc24dd9e10e4-3d3faa5f/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 3 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-cc24dd9e10e4-3d3faa5f/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-cc24dd9e10e4-3d3faa5f/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-cc24dd9e10e4-3d3faa5f/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v4-cc24dd9e10e4-3d3faa5f",
+    "url": "https://www.um-surabaya.ac.id/",
+    "persona": "keyboard-only",
+    "task": "Open “TENTANG UMSURA” from keyboard focus or with Arrow Down and follow “Penghargaan dan Prestasi”. Confirm the public destination /about/penghargaan.",
+    "controlTask": "Hover “TENTANG UMSURA”, click “Penghargaan dan Prestasi” and confirm /about/penghargaan.",
+    "observedSelector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/about/penghargaan"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#desktop-nav > ul > li:nth-of-type(1)",
+      "#desktop-nav > ul > li:nth-of-type(1) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#desktop-nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a:nth-of-type(5)",
+        "action": "activate"
+      }
+    ],
+    "site": "www.um-surabaya.ac.id",
+    "match": "https://www.um-surabaya.ac.id/",
+    "barrier": "Hovering over TENTANG UMSURA reveals the submenu, but focusing the trigger and pressing Arrow Down leaves the Penghargaan dan Prestasi link unavailable.",
+    "rules": [
+      {
+        "selector": "#desktop-nav > ul > li:nth-of-type(1)",
+        "action": "mirrorHoverToFocus"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/hard-v4/local/v4-cc24dd9e10e4-3d3faa5f/attempt-1"
+}

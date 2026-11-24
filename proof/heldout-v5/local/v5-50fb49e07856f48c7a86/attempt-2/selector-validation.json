@@ -1,0 +1,83 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "div.layout:has(> div.main-column)",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "layout"
+          ],
+          "label": "おすすめWiki 注目攻略Wiki GTA6攻略Wiki ルミナサーガ攻略Wiki ヤンサバ攻略Wiki HoloCozy攻略Wiki ゆうめつ攻略Wiki 時オカ リメイク攻略Wiki クライムライ"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "div.layout > div.main-column",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "main-column"
+          ],
+          "label": "おすすめWiki 注目攻略Wiki GTA6攻略Wiki ルミナサーガ攻略Wiki ヤンサバ攻略Wiki HoloCozy攻略Wiki ゆうめつ攻略Wiki 時オカ リメイク攻略Wiki クライムライ"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "field": "selector",
+      "selector": "div.main-column > div.area > div.topics__article > ul > li.category5:first-child",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "li",
+          "classes": [
+            "category5"
+          ],
+          "label": "事前登録・リリース情報 『Tower of Babel: Survivors of Chaos』全世界累計販売本数20万本突破！ 6日まえ"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "field": "selector",
+      "selector": "div.topics__article > ul > li.category5:first-child > div.topics__article--contents",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "topics__article--contents"
+          ],
+          "label": "事前登録・リリース情報 『Tower of Babel: Survivors of Chaos』全世界累計販売本数20万本突破！ 6日まえ"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "field": "selector",
+      "selector": "div.topics__article > ul > li.category5:first-child > div.topics__article--contents p",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "p",
+          "classes": [],
+          "label": "『Tower of Babel: Survivors of Chaos』全世界累計販売本数20万本突破！"
+        }
+      ]
+    }
+  ]
+}

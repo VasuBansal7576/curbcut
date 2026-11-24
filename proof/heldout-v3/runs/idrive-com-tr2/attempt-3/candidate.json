@@ -1,0 +1,43 @@
+{
+  "id": "idrive-com-tr2",
+  "url": "https://www.idrive.com/",
+  "persona": "keyboard-only",
+  "task": "Use Tab and Enter to reach and activate “Cloud Applications Backup”. Verify its content becomes visible.",
+  "controlTask": "Click “Cloud Applications Backup” and verify its content becomes visible.",
+  "observedSelector": "header > nav > div > ul > li:nth-of-type(6) > span",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "header > nav > div > ul > li:nth-of-type(6) > ul"
+    }
+  ],
+  "minimumTabPresses": 2,
+  "probe": {
+    "action": "click"
+  },
+  "site": "www.idrive.com",
+  "match": "https://www.idrive.com/",
+  "barrier": "The Cloud Applications Backup menu trigger is a span with no tabindex, so Tab skips it and Enter cannot activate it.",
+  "rules": [
+    {
+      "selector": "header > nav > div > ul > li:nth-of-type(6) > span",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "header > nav > div > ul > li:nth-of-type(6) > span",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "header > nav > div > ul > li:nth-of-type(6) > span",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "header > nav > div > ul > li:nth-of-type(6) > span",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

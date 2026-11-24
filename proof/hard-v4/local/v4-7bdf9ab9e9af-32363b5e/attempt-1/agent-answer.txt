@@ -1,0 +1,9 @@
+{
+  "barrier": "Pointer hover reveals the INSIGHT submenu, but focusing INSIGHT and pressing Arrow Down leaves the “Issue briefs and reports” link unavailable.",
+  "rules": [
+    {
+      "selector": "#primary-nav > li:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

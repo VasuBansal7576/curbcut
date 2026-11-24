@@ -1,0 +1,25 @@
+{
+  "barrier": "The keyboard run reached the focusable Yearbook span, but the desktop submenu remained unavailable after activation. The pointer click took the same disclosure into its opening transition and exposed Students & Families.",
+  "rules": [
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#main-nav > ul.navbar-nav",
+      "items": "#main-nav > ul.navbar-nav > li > .nav-link[tabindex=\"0\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    },
+    {
+      "selector": "#yearbook-dropdown > span[data-toggle=\"collapse\"]",
+      "action": "addLabel",
+      "value": "Yearbook"
+    },
+    {
+      "selector": "#yearbook-dropdown > span[data-toggle=\"collapse\"]",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#yearbook-dropdown > span[data-toggle=\"collapse\"]",
+      "action": "restoreFocusOutline"
+    }
+  ]
+}

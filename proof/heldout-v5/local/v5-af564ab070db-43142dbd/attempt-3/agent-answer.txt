@@ -1,0 +1,20 @@
+{
+  "barrier": "Tab reaches Sinterklaas, but the viewport stays at the top of the page while the focused button is more than 5,800 pixels below it. Making the button focusable and restoring its outline did not bring it into view.",
+  "rules": [
+    {
+      "selector": "html.html.js, body.navigation\\:mobile",
+      "action": "injectCSS",
+      "value": {
+        "height": "auto",
+        "max-height": "none"
+      }
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "ul[role=\"tablist\"]:has(> li > #tab1)",
+      "items": "ul[role=\"tablist\"]:has(> li > #tab1) > li > button[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

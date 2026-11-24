@@ -1,0 +1,154 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-d733df02c68b-e1ef840e",
+    "url": "https://www.kyndryl.com/in/en",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels with vertical scrolling only, click “What we do” and read “Agentic modernization”.",
+    "controlTask": "Click “What we do” and read “Agentic modernization”.",
+    "observedSelector": "#globalnav-ab8fd7542b > div:nth-of-type(1) > div > div:nth-of-type(2) > ul > li:nth-of-type(1) > button",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#item_1-tabpanel > div > div > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(1) > ul > li:nth-of-type(1)",
+        "equals": "Agentic modernization"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#item_1-tabpanel"
+    ],
+    "journey": [
+      {
+        "selector": "#globalnav-ab8fd7542b > div:nth-of-type(1) > div > div:nth-of-type(2) > ul > li:nth-of-type(1) > button",
+        "action": "activate"
+      },
+      {
+        "selector": "#item_1-tabpanel > div > div > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(1) > ul > li:nth-of-type(1)",
+        "action": "observe"
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-d733df02c68b-e1ef840e/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "low-vision",
+      "status": "fail",
+      "reason": "Journey step 1 was unavailable after the prior step.",
+      "file": "proof/heldout-v5/local/v5-d733df02c68b-e1ef840e/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "low-vision",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-d733df02c68b-e1ef840e/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-d733df02c68b-e1ef840e/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v5-d733df02c68b-e1ef840e",
+    "url": "https://www.kyndryl.com/in/en",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels with vertical scrolling only, click “What we do” and read “Agentic modernization”.",
+    "controlTask": "Click “What we do” and read “Agentic modernization”.",
+    "observedSelector": "#globalnav-ab8fd7542b > div:nth-of-type(1) > div > div:nth-of-type(2) > ul > li:nth-of-type(1) > button",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#item_1-tabpanel > div > div > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(1) > ul > li:nth-of-type(1)",
+        "equals": "Agentic modernization"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#item_1-tabpanel"
+    ],
+    "journey": [
+      {
+        "selector": "#globalnav-ab8fd7542b > div:nth-of-type(1) > div > div:nth-of-type(2) > ul > li:nth-of-type(1) > button",
+        "action": "activate"
+      },
+      {
+        "selector": "#item_1-tabpanel > div > div > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(1) > ul > li:nth-of-type(1)",
+        "action": "observe"
+      }
+    ],
+    "site": "www.kyndryl.com",
+    "match": "https://www.kyndryl.com/in/en",
+    "barrier": "At 320 CSS pixels, the responsive header hides the “What we do” button and its flyout wrapper with display:none, so the button cannot be clicked and the flyout cannot be read.",
+    "rules": [
+      {
+        "selector": "#globalnav-ab8fd7542b .cmp-globalnav__main-row",
+        "action": "injectCSS",
+        "value": {
+          "flex-wrap": "wrap",
+          "height": "auto"
+        }
+      },
+      {
+        "selector": "#globalnav-ab8fd7542b .cmp-globalnav__primary",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "min-width": "0",
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "#globalnav-ab8fd7542b .cmp-globalnav__tablist",
+        "action": "injectCSS",
+        "value": {
+          "flex-wrap": "wrap"
+        }
+      },
+      {
+        "selector": "#globalnav-ab8fd7542b > .cmp-globalnav__tab-panels-wrapper",
+        "action": "injectCSS",
+        "value": {
+          "display": "block"
+        }
+      },
+      {
+        "selector": "#item_1-tabpanel",
+        "action": "injectCSS",
+        "value": {
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      },
+      {
+        "selector": "#item_1-tabpanel div:has(> .kd-grid__col--sm-4.kd-grid__col--md-8.kd-grid__col--lg-3 > .cmp-globalnav-flyout-column--navigation)",
+        "action": "injectCSS",
+        "value": {
+          "display": "block"
+        }
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/heldout-v5/local/v5-d733df02c68b-e1ef840e/attempt-1"
+}

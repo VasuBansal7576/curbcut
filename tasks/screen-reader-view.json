@@ -1,0 +1,25 @@
+{
+  "id": "reader-search-products",
+  "url": "http://127.0.0.1:4317/fixtures/shop/",
+  "task": "In Reading view, first assert the exact row label ‘searchbox · Search products’ is present. Use that named searchbox to type speaker and submit. Confirm one result named Porch Speaker.",
+  "controlTask": "Use the visible search field to search for speaker; confirm 1 product found and Porch Speaker is the only product.",
+  "persona": "screen-reader-view",
+  "observedSelector": "#search",
+  "requiredName": "Search products",
+  "outcomeChecks": [
+    {
+      "selector": "#search",
+      "kind": "value",
+      "equals": "speaker"
+    },
+    {
+      "selector": "#search-status",
+      "kind": "text",
+      "equals": "1 product found."
+    },
+    {
+      "selector": "[data-product=speaker]",
+      "kind": "visible"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "barrier": "The Assistenza button is reachable by Tab, but keyboard activation leaves its panel at display: none. Pointer hover over the enclosing section reveals the panel.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#hdr-menu button[aria-controls=\"hdr-assistenza\"]",
+      "target": "#hdr-assistenza",
+      "mode": "display",
+      "display": "block"
+    }
+  ]
+}

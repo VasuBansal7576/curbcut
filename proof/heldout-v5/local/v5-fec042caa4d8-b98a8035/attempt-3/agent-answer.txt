@@ -1,0 +1,16 @@
+{
+  "barrier": "Tab traversal reaches AI Workspace, but focus moves away before ArrowDown can be used in the vertical tab list.",
+  "rules": [
+    {
+      "selector": "#product-tab-0",
+      "action": "removeFocusTrap"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.ProductTabberTabs_tab-list__4f2_0[role=\"tablist\"]",
+      "items": "button[role=\"tab\"][id^=\"product-tab-\"]",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-3fad1dd531a0-2b866958",
+    "url": "https://skorozvon.ru/",
+    "persona": "keyboard-only",
+    "task": "Expand “Продукты” with the keyboard and read “Продукты AI-тренер продажДиалоговый AI тренажёр для отработки навыков продаж Исходящий обзвонАвтомат”.",
+    "controlTask": "Click “Продукты” and read “Продукты AI-тренер продажДиалоговый AI тренажёр для отработки навыков продаж Исходящий обзвонАвтомат”.",
+    "observedSelector": "#menu-item-20688 > a",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#mega-products > div > div > aside > ul > li:nth-of-type(1)",
+        "equals": "Продукты AI-тренер продажДиалоговый AI тренажёр для отработки навыков продаж Исходящий обзвонАвтомат"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#mega-products"
+    ],
+    "journey": [
+      {
+        "selector": "#menu-item-20688 > a",
+        "action": "activate"
+      },
+      {
+        "selector": "#mega-products > div > div > aside > ul > li:nth-of-type(1)",
+        "action": "observe"
+      }
+    ]
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "Journey step 2 was unavailable after the prior step.",
+    "steps": [
+      {
+        "selector": "#menu-item-20688 > a",
+        "action": "activate",
+        "traversal": {
+          "reached": true,
+          "tabs": 6
+        }
+      },
+      {
+        "selector": "#mega-products > div > div > aside > ul > li:nth-of-type(1)",
+        "action": "observe"
+      }
+    ],
+    "url": "https://skorozvon.ru/#"
+  },
+  "registeredControl": {
+    "status": "pass",
+    "reason": "The complete journey reached the declared outcome.",
+    "steps": [
+      {
+        "selector": "#menu-item-20688 > a",
+        "action": "activate"
+      },
+      {
+        "selector": "#mega-products > div > div > aside > ul > li:nth-of-type(1)",
+        "action": "observe"
+      }
+    ],
+    "url": "https://skorozvon.ru/#",
+    "checks": [
+      true
+    ]
+  },
+  "runner": "playwright",
+  "status": "unresolved",
+  "reason": "Journey step 2 was unavailable after the prior step.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-3fad1dd531a0-2b866958/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 2 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-3fad1dd531a0-2b866958/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "fail",
+      "reason": "Journey step 2 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-3fad1dd531a0-2b866958/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-2/after",
+      "persona": "keyboard-only",
+      "iteration": 2,
+      "status": "fail",
+      "reason": "Journey step 2 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-3fad1dd531a0-2b866958/attempt-2/after.json"
+    },
+    {
+      "name": "attempt-3/after",
+      "persona": "keyboard-only",
+      "iteration": 3,
+      "status": "fail",
+      "reason": "Journey step 2 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-3fad1dd531a0-2b866958/attempt-3/after.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

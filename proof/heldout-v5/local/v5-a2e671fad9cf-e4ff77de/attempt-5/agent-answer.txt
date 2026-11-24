@@ -1,0 +1,37 @@
+{
+  "barrier": "At 320 CSS pixels, the main navigation is hidden. Restoring the navigation made Solutions reachable in earlier runs, but For Advisors remained unavailable after ArrowDown.",
+  "rules": [
+    {
+      "selector": "header.header.header-marketing > div.header-container.container",
+      "action": "injectCSS",
+      "value": {"flex-wrap": "wrap", "height": "auto"}
+    },
+    {
+      "selector": "#menu-main-navigation",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "100%", "min-width": "0"}
+    },
+    {
+      "selector": "#menu-main-navigation > div.header-mainmenu-item.dropdown:first-of-type",
+      "action": "injectCSS",
+      "value": {"display": "block"}
+    },
+    {
+      "selector": "#menu-main-navigation > div.header-mainmenu-item.dropdown:first-of-type > div.dropdown-menu",
+      "action": "injectCSS",
+      "value": {"display": "contents"}
+    },
+    {
+      "selector": "#menu-main-navigation > div.header-mainmenu-item.dropdown:first-of-type > div.dropdown-menu > a.dropdown-item",
+      "action": "injectCSS",
+      "value": {"white-space": "normal", "box-sizing": "border-box", "max-width": "100%"}
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#menu-main-navigation > div.header-mainmenu-item.dropdown:first-of-type",
+      "items": "#menu-main-navigation > div.header-mainmenu-item.dropdown:first-of-type > a.dropdown-toggle, #menu-main-navigation > div.header-mainmenu-item.dropdown:first-of-type > div.dropdown-menu > a.dropdown-item",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ]
+}

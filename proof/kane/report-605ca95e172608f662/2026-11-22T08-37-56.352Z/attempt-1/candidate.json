@@ -1,0 +1,31 @@
+{
+  "id": "report-605ca95e172608f662",
+  "url": "https://www.colorhexa.com/ff0000",
+  "persona": "keyboard-only",
+  "task": "Open the color picker from the red swatch next to the search field. Press Tab through at least three controls unless the swatch gets focus sooner. If it gets focus, press Enter. Verify the color spectrum and hue slider appear.",
+  "site": "www.colorhexa.com",
+  "match": "https://www.colorhexa.com/ff0000",
+  "barrier": "The red swatch next to the search field is a div with tabIndex -1 and no tabindex attribute, so Tab skips the color picker trigger.",
+  "rules": [
+    {
+      "selector": "div.sp-replacer.sp-light",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "div.sp-replacer.sp-light",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "div.sp-replacer.sp-light",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "div.sp-replacer.sp-light",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

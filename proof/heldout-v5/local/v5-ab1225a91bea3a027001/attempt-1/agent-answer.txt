@@ -1,0 +1,8 @@
+{
+  "barrier": "At a 320 CSS pixel viewport, the body's 900px minimum width keeps the wrapper 900px wide and the privacy passage 585px wide, leaving part of the text outside the visible area.",
+  "rules": [
+    {"selector":"body","action":"injectCSS","value":{"min-width":"0"}},
+    {"selector":"body > div.wrapper","action":"injectCSS","value":{"max-width":"100%","box-sizing":"border-box"}},
+    {"selector":"body > div.wrapper > div.main_column","action":"injectCSS","value":{"max-width":"100%","box-sizing":"border-box","overflow-wrap":"anywhere"}}
+  ]
+}

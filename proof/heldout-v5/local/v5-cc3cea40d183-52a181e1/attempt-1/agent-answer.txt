@@ -1,0 +1,19 @@
+{
+  "barrier": "Keyboard activation made the next slide active, but its rendered height was zero. The same slide had a height of 318 pixels after pointer activation.",
+  "rules": [
+    {
+      "selector": "#swiper1 > .swiper-wrapper > .swiper-slide",
+      "action": "injectCSS",
+      "value": {
+        "height": "auto"
+      }
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#swiper1",
+      "items": "#swiper1 > .swiper-button-prev, #swiper1 > .swiper-button-next",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

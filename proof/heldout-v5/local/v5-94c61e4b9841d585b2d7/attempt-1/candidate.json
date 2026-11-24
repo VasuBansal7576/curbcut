@@ -1,0 +1,38 @@
+{
+  "id": "v5-94c61e4b9841d585b2d7",
+  "url": "https://rufus.ie/en/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Rufus is a utility that helps format and create bootable USB flash” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Rufus is a utility that helps format and create bootable USB flash” at normal width.",
+  "observedSelector": "#about > p:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#about > p:nth-of-type(1)",
+      "equals": "Rufus is a utility that helps format and create bootable USB flash"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#about > p:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "rufus.ie",
+  "match": "https://rufus.ie/en/",
+  "barrier": "At 320 CSS pixels, the paragraph inherits the 735-pixel width of its container, and horizontal clipping on the page hides the text beyond the viewport.",
+  "rules": [
+    {
+      "selector": "#container",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

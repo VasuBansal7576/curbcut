@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "dialog",
+      "selector": "#shareModal",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "shareModal",
+          "classes": [
+            "modal",
+            "fade"
+          ],
+          "role": "dialog",
+          "label": "Share this page ... ScienceDaily: Your source for the latest research news https://www.sciencedaily."
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "opener",
+      "selector": "#contents .tools-top > a[data-toggle=\"modal\"][data-target=\"#shareModal\"]",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "a",
+          "classes": [
+            "btn",
+            "btn-default",
+            "black"
+          ],
+          "role": "button",
+          "label": "Share"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "close",
+      "selector": "#shareModal .modal-footer > button[data-dismiss=\"modal\"]",
+      "scope": "#shareModal",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "btn",
+            "btn-default"
+          ],
+          "label": "Close"
+        }
+      ]
+    }
+  ]
+}

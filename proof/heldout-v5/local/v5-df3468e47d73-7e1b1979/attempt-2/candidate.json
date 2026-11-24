@@ -1,0 +1,55 @@
+{
+  "id": "v5-df3468e47d73-7e1b1979",
+  "url": "https://asm.org/",
+  "persona": "keyboard-only",
+  "task": "Open “Who We Are” from keyboard focus or with Arrow Down and follow “About ASM”. Confirm the public destination /about-asm.",
+  "controlTask": "Hover “Who We Are”, click “About ASM” and confirm /about-asm.",
+  "observedSelector": "#header > header > nav:nth-of-type(2) > ul > li:nth-of-type(1) > button",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/about-asm"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#header > header > nav:nth-of-type(2) > ul > li:nth-of-type(1)",
+    "#who_we_are"
+  ],
+  "journey": [
+    {
+      "selector": "#header > header > nav:nth-of-type(2) > ul > li:nth-of-type(1) > button",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#header > header > nav:nth-of-type(2) > ul > li:nth-of-type(1) > button",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#who_we_are > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "asm.org",
+  "match": "https://asm.org/",
+  "barrier": "Tab reaches the Who We Are button, but focus leaves the trigger before Arrow Down can act. The submenu remains collapsed with display:none, keeping About ASM out of the tab order.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#header .header-nav-menu > li.header-nav-item > button[aria-controls=\"who_we_are\"]",
+      "target": "#who_we_are",
+      "mode": "class",
+      "className": "is-active"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

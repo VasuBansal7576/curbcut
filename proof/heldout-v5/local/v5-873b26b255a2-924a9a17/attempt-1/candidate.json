@@ -1,0 +1,52 @@
+{
+  "id": "v5-873b26b255a2-924a9a17",
+  "url": "https://www.mordorintelligence.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Reports” from keyboard focus or with Arrow Down and follow “Aerospace & Defense”. Confirm the public destination /market-analysis/aerospace-defense.",
+  "controlTask": "Hover “Reports”, click “Aerospace & Defense” and confirm /market-analysis/aerospace-defense.",
+  "observedSelector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/market-analysis/aerospace-defense"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1)",
+    "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.mordorintelligence.com",
+  "match": "https://www.mordorintelligence.com/",
+  "barrier": "The Reports dropdown becomes visible only when its parent list item is hovered. Focusing Reports and pressing Arrow Down leaves the Aerospace & Defense link hidden.",
+  "rules": [
+    {
+      "selector": "#header nav.nav-items-container > ul.nav-items > li.has-dropdown.store-item",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,78 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#searchModal",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "searchModal",
+          "classes": [
+            "modal",
+            "fade"
+          ],
+          "role": "dialog",
+          "label": "× Search Our Site Search Close"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "dialog",
+      "selector": "#searchModal",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "searchModal",
+          "classes": [
+            "modal",
+            "fade"
+          ],
+          "role": "dialog",
+          "label": "× Search Our Site Search Close"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "opener",
+      "selector": "#portal-globalnav > li:nth-of-type(8) > button",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "siteSearchButton",
+            "nav-link"
+          ],
+          "label": "Open Search"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "close",
+      "selector": "#searchModal > div > div > div:nth-of-type(1) > button",
+      "scope": "#searchModal",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "close",
+            "cancel"
+          ],
+          "label": "Close"
+        }
+      ]
+    }
+  ]
+}

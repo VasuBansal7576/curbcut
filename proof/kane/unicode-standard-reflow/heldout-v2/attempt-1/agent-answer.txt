@@ -1,0 +1,30 @@
+{
+  "barrier": "The header table keeps its three cells in one row that is 441 CSS pixels wide. The “Tech Site | Site Map | Search” cell extends from x=225 to x=441, so horizontal clipping hides part of it in the 320-pixel viewport.",
+  "rules": [
+    {
+      "selector": "table",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "tr",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "flex-wrap": "wrap"
+      }
+    },
+    {
+      "selector": "td",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2807 @@
+[
+  {
+    "id": "asme-org-tr2",
+    "url": "https://www.asme.org/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, locate the searchbox named “Search products, events, courses, resource categories...”. Enter the text test and confirm the field contains it. Do not submit.",
+    "controlTask": "Click the public text field with the visible hint “Search products, events, courses, resource categories...”, type test and confirm the value. Do not submit.",
+    "observedSelector": "#home-search",
+    "requiredName": "Search products, events, courses, resource categories...",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#home-search",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "searchbox"
+    },
+    "site": "www.asme.org",
+    "match": "https://www.asme.org/",
+    "barrier": "The task’s target input #home-search has the searchbox role but no accessible name, so a screen reader cannot find it by the requested name.",
+    "rules": [
+      {
+        "selector": "#home-search",
+        "action": "addLabel",
+        "value": "Search products, events, courses, resource categories..."
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v3/runs/asme-org-tr2/before/recording.mp4",
+      "after": "proof/heldout-v3/runs/asme-org-tr2/attempt-1/after/recording.mp4",
+      "control": "proof/heldout-v3/runs/asme-org-tr2/control/recording.mp4",
+      "verifiedAt": "2026-11-23T05:42:51.804Z",
+      "kaneRunIds": [
+        "dffdcb17-8db4-4bd1-b59e-1a36c48fea2b",
+        "ce1c01b8-efe2-4032-9d97-f8a0b810c697",
+        "1bb0ccfd-5c83-4e1e-9e75-70c4dfbc09df"
+      ],
+      "kaneVerdicts": {
+        "before": "inconclusive",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-23T05:42:51.804Z",
+        "event": "verified",
+        "before": "dffdcb17-8db4-4bd1-b59e-1a36c48fea2b",
+        "control": "ce1c01b8-efe2-4032-9d97-f8a0b810c697",
+        "after": "1bb0ccfd-5c83-4e1e-9e75-70c4dfbc09df"
+      }
+    ]
+  },
+  {
+    "id": "calculator-net-add-days",
+    "url": "https://www.calculator.net/date-calculator.html",
+    "site": "www.calculator.net",
+    "match": "https://www.calculator.net/date-calculator.html",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, first assert that the exact row ‘textbox · Days to add’ is present. Set that textbox to 2 in Add to or Subtract from a Date. Activate the Calculate control for that section, then verify the displayed date is two days after the start date.",
+    "barrier": "The #c2day textbox has no accessible name, so Reading view cannot identify it as “Days to add.”",
+    "rules": [
+      {
+        "selector": "#c2day",
+        "action": "addLabel",
+        "value": "Days to add"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/calculator-net-add-days/2026-11-21T19-46-40.781Z/before/recording.mp4",
+      "after": "proof/kane/calculator-net-add-days/runtime-replay/attempt-1/after/recording.mp4",
+      "control": "proof/kane/calculator-net-add-days/2026-11-21T19-46-40.781Z/control/recording.mp4",
+      "verifiedAt": "2026-11-21T19:58:32.722Z",
+      "kaneRunIds": [
+        "dd3fe745-35dd-47e6-a38e-d7e932cbfdf6",
+        "1f663588-b62e-4cb3-9e7d-1a63e38af852",
+        "15e8f204-b925-455f-bb0d-62d41867f890"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-21T19:58:32.722Z",
+        "event": "verified",
+        "before": "dd3fe745-35dd-47e6-a38e-d7e932cbfdf6",
+        "control": "1f663588-b62e-4cb3-9e7d-1a63e38af852",
+        "after": "15e8f204-b925-455f-bb0d-62d41867f890"
+      },
+      {
+        "at": "2026-11-22T10:43:30.631Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "455d4314-a8c8-47ec-941f-275b3a2fce96",
+        "video": "proof/kane/calculator-net-add-days/2026-11-22T10-42-44.839Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "cfd7b66e-6a38-4371-9bc5-599580e9be62",
+        "afterVideo": "proof/kane/calculator-net-add-days/2026-11-22T10-42-44.839Z/recheck-with/recording.mp4"
+      }
+    ],
+    "observedSelector": "#c2day",
+    "requiredName": "Days to add",
+    "successSelector": "h2.h2result",
+    "controlTask": "Under Add to or Subtract from a Date, set the visibly labeled days field to 2. Click that section’s Calculate button and verify the resulting date is two days after the start date."
+  },
+  {
+    "id": "cato-org-tr2",
+    "url": "https://www.cato.org/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, locate the searchbox named “Search”. Enter the text test and confirm the field contains it. Do not submit.",
+    "controlTask": "Click the public text field with the visible hint “Search”, type test and confirm the value. Do not submit.",
+    "observedSelector": "#query",
+    "requiredName": "Search",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#query",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "searchbox"
+    },
+    "site": "www.cato.org",
+    "match": "https://www.cato.org/",
+    "barrier": "In Reading view, the searchbox #query has no accessible name, so screen reader users cannot locate it by the name “Search”.",
+    "rules": [
+      {
+        "selector": "#query",
+        "action": "addLabel",
+        "value": "Search"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v3/runs/cato-org-tr2/before/recording.mp4",
+      "after": "proof/heldout-v3/runs/cato-org-tr2/attempt-1/after/recording.mp4",
+      "control": "proof/heldout-v3/runs/cato-org-tr2/control/recording.mp4",
+      "verifiedAt": "2026-11-23T05:46:57.711Z",
+      "kaneRunIds": [
+        "7c1f6ee3-b6ff-47e1-8f90-55a221e2f8b4",
+        "b65ebf6c-b54f-4a94-92f9-b8d557ed95e6",
+        "7db69880-3e8a-4458-af67-3adffe976385"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-23T05:46:57.711Z",
+        "event": "verified",
+        "before": "7c1f6ee3-b6ff-47e1-8f90-55a221e2f8b4",
+        "control": "b65ebf6c-b54f-4a94-92f9-b8d557ed95e6",
+        "after": "7db69880-3e8a-4458-af67-3adffe976385"
+      }
+    ]
+  },
+  {
+    "id": "cloudconvert-com-tr2",
+    "url": "https://cloudconvert.com/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “Vendor engines and open-source converters selected per file type”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+    "controlTask": "At normal width, read the passage beginning “Vendor engines and open-source converters selected per file type” and verify all its text is visible without horizontal scrolling.",
+    "observedSelector": "#app > main > div > div > section > section > div:nth-of-type(3) > aside > ul > li:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#app > main > div > div > section > section > div:nth-of-type(3) > aside > ul > li:nth-of-type(1)",
+        "equals": "Vendor engines and open-source converters selected per file type"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#app > main > div > div > section > section > div:nth-of-type(3) > aside > ul > li:nth-of-type(1)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "cloudconvert.com",
+    "match": "https://cloudconvert.com/",
+    "barrier": "The grid track extends the passage’s list item to x=377 in a 320 CSS pixel viewport, where horizontal clipping cuts off the overflow.",
+    "rules": [
+      {
+        "selector": "div.grid.gap-x-20",
+        "action": "injectCSS",
+        "value": {
+          "display": "block"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v3/runs/cloudconvert-com-tr2/before/recording.mp4",
+      "after": "proof/heldout-v3/runs/cloudconvert-com-tr2/attempt-1/after/recording.mp4",
+      "control": "proof/heldout-v3/runs/cloudconvert-com-tr2/control/recording.mp4",
+      "verifiedAt": "2026-11-23T05:31:06.237Z",
+      "kaneRunIds": [
+        "5e97e502-0672-4af1-a8ef-3e3e3dd05b67",
+        "b44410ac-2107-4e72-a46c-2dc6134804de",
+        "8d678131-f9d8-460a-a0ac-90496a5c2967"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-23T05:31:06.237Z",
+        "event": "verified",
+        "before": "5e97e502-0672-4af1-a8ef-3e3e3dd05b67",
+        "control": "b44410ac-2107-4e72-a46c-2dc6134804de",
+        "after": "8d678131-f9d8-460a-a0ac-90496a5c2967"
+      }
+    ]
+  },
+  {
+    "id": "colorhexa-open-picker",
+    "url": "https://www.colorhexa.com/",
+    "persona": "keyboard-only",
+    "task": "First assert the red color swatch next to the color search box is in the sequential keyboard focus order. Open that swatch with Tab and Enter. Verify the color picker panel with the color spectrum and hue slider is visible.",
+    "controlTask": "Click the red color swatch next to the color search box. Verify the color picker panel with the color spectrum and hue slider is visible.",
+    "observedSelector": ".sp-replacer",
+    "successSelector": ".sp-picker-container",
+    "site": "www.colorhexa.com",
+    "match": "https://www.colorhexa.com/",
+    "barrier": "The red swatch (.sp-replacer) has tabIndex -1 and is exposed as text, so Tab skips the color picker trigger.",
+    "rules": [
+      {
+        "selector": ".sp-replacer",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": ".sp-replacer",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": ".sp-replacer",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": ".sp-replacer",
+        "action": "restoreFocusOutline"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/colorhexa-open-picker/resume-2026-11-22T03-33-20.437Z/before/recording.mp4",
+      "after": "proof/kane/colorhexa-open-picker/resume-2026-11-22T03-33-20.437Z/attempt-1/after/recording.mp4",
+      "control": "proof/kane/colorhexa-open-picker/resume-2026-11-22T03-33-20.437Z/control/recording.mp4",
+      "verifiedAt": "2026-11-22T03:36:41.404Z",
+      "kaneRunIds": [
+        "b5819fca-5d89-41d7-aaa2-6e69f1520b52",
+        "3887cc4e-dd27-4319-99cb-8bfc74442eb6",
+        "931741ab-d134-4943-b9a8-d86fc1d3a330"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T03:36:41.404Z",
+        "event": "verified",
+        "before": "b5819fca-5d89-41d7-aaa2-6e69f1520b52",
+        "control": "3887cc4e-dd27-4319-99cb-8bfc74442eb6",
+        "after": "931741ab-d134-4943-b9a8-d86fc1d3a330"
+      },
+      {
+        "at": "2026-11-22T10:44:01.846Z",
+        "event": "rechecked",
+        "without": "inconclusive",
+        "runId": "731d3753-a217-4cdf-bc49-eadf42f33d1f",
+        "video": "proof/kane/colorhexa-open-picker/2026-11-22T10-42-44.846Z/recheck-without/recording.mp4"
+      }
+    ]
+  },
+  {
+    "id": "discuz-vip-tr2",
+    "url": "https://www.discuz.vip/",
+    "persona": "keyboard-only",
+    "task": "Use Tab and Enter to reach and activate “更多解决方案请联系官方客服进行交流。”. Verify its content becomes visible.",
+    "controlTask": "Click “更多解决方案请联系官方客服进行交流。” and verify its content becomes visible.",
+    "observedSelector": "#gaoyanzhi_3__plans > div > div > p > a > span",
+    "outcomeChecks": [
+      {
+        "kind": "visible",
+        "selector": "section:nth-of-type(4) > div > div:nth-of-type(2) > div:nth-of-type(1)"
+      }
+    ],
+    "minimumTabPresses": 2,
+    "probe": {
+      "action": "click"
+    },
+    "site": "www.discuz.vip",
+    "match": "https://www.discuz.vip/",
+    "barrier": "The exact target is a text span with no tabindex, so Tab skips it. The prior repair made its parent anchor focusable.",
+    "rules": [
+      {
+        "selector": "#gaoyanzhi_3__plans > div > div > p > a > span",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": "#gaoyanzhi_3__plans > div > div > p > a > span",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": "#gaoyanzhi_3__plans > div > div > p > a > span",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": "#gaoyanzhi_3__plans > div > div > p > a > span",
+        "action": "restoreFocusOutline"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v3/runs/discuz-vip-tr2/before/recording.mp4",
+      "after": "proof/heldout-v3/runs/discuz-vip-tr2/attempt-2/after/recording.mp4",
+      "control": "proof/heldout-v3/runs/discuz-vip-tr2/control/recording.mp4",
+      "verifiedAt": "2026-11-23T05:39:36.180Z",
+      "kaneRunIds": [
+        "8287f79a-9102-4626-928a-d06f3fc0a4f5",
+        "75bb431b-9b2d-42dd-a23a-35040a4badb6",
+        "cec6d56f-3783-4140-90f6-24007d32438a"
+      ],
+      "kaneVerdicts": {
+        "before": "inconclusive",
+        "control": "fail",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-23T05:39:36.180Z",
+        "event": "verified",
+        "before": "8287f79a-9102-4626-928a-d06f3fc0a4f5",
+        "control": "75bb431b-9b2d-42dd-a23a-35040a4badb6",
+        "after": "cec6d56f-3783-4140-90f6-24007d32438a"
+      }
+    ]
+  },
+  {
+    "id": "dol-gov-tr2",
+    "url": "https://www.dol.gov/",
+    "persona": "keyboard-only",
+    "task": "Use Tab and Enter to reach and activate “FEDERAL GOVERNMENT”. Verify its content becomes visible.",
+    "controlTask": "Click “FEDERAL GOVERNMENT” and verify its content becomes visible.",
+    "observedSelector": "#block-dolfootermenu-3 > section > span",
+    "outcomeChecks": [
+      {
+        "kind": "visible",
+        "selector": "div:nth-of-type(1) > div > footer > div:nth-of-type(1) > a"
+      }
+    ],
+    "minimumTabPresses": 2,
+    "probe": {
+      "action": "click"
+    },
+    "site": "www.dol.gov",
+    "match": "https://www.dol.gov/",
+    "barrier": "The Federal Government footer trigger is a span exposed as text with a tabIndex of -1, so Tab skips it and keyboard users cannot reach it to activate it with Enter.",
+    "rules": [
+      {
+        "selector": "#block-dolfootermenu-3 > section > span",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": "#block-dolfootermenu-3 > section > span",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": "#block-dolfootermenu-3 > section > span",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": "#block-dolfootermenu-3 > section > span",
+        "action": "restoreFocusOutline"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v3/runs/dol-gov-tr2/before/recording.mp4",
+      "after": "proof/heldout-v3/runs/dol-gov-tr2/attempt-1/after/recording.mp4",
+      "control": "proof/heldout-v3/runs/dol-gov-tr2/control/recording.mp4",
+      "verifiedAt": "2026-11-23T05:54:57.391Z",
+      "kaneRunIds": [
+        "25c40444-823c-4c61-8d28-4051f38dd66b",
+        "99cca2f3-749d-41a1-98a8-2ab78aa9d888",
+        "daebfc1c-b797-45e2-a223-c3f94de253aa"
+      ],
+      "kaneVerdicts": {
+        "before": "inconclusive",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-23T05:54:57.391Z",
+        "event": "verified",
+        "before": "25c40444-823c-4c61-8d28-4051f38dd66b",
+        "control": "99cca2f3-749d-41a1-98a8-2ab78aa9d888",
+        "after": "daebfc1c-b797-45e2-a223-c3f94de253aa"
+      }
+    ]
+  },
+  {
+    "id": "elm-reflow",
+    "url": "https://guide.elm-lang.org/core_language.html",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “> madlib animal adjective = | \"The ostentatious \" ++ animal”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+    "controlTask": "At normal width, read the passage beginning “> madlib animal adjective = | \"The ostentatious \" ++ animal” and verify all its text is visible without horizontal scrolling.",
+    "observedSelector": "#book-search-results > div:nth-of-type(1) > section > div:nth-of-type(4) > p:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#book-search-results > div:nth-of-type(1) > section > div:nth-of-type(4) > p:nth-of-type(1)",
+        "equals": "> madlib animal adjective = | \"The ostentatious \" ++ animal"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#book-search-results > div:nth-of-type(1) > section > div:nth-of-type(4) > p:nth-of-type(1)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "guide.elm-lang.org",
+    "match": "https://guide.elm-lang.org/core_language.html",
+    "barrier": "At 320 CSS pixels, white-space: pre prevents the madlib passage from wrapping. Its content spans 718 pixels inside a 251-pixel paragraph, and the enclosing section clips the overflow.",
+    "rules": [
+      {
+        "selector": "#book-search-results > div:nth-of-type(1) > section > div:nth-of-type(4) > p:nth-of-type(1)",
+        "action": "injectCSS",
+        "value": {
+          "white-space": "pre-wrap",
+          "overflow-wrap": "anywhere"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/elm-reflow/heldout-v2/before/recording.mp4",
+      "after": "proof/kane/elm-reflow/heldout-v2/attempt-1/after/recording.mp4",
+      "control": "proof/kane/elm-reflow/heldout-v2/control/recording.mp4",
+      "verifiedAt": "2026-11-22T15:34:13.362Z",
+      "kaneRunIds": [
+        "2a8eb0a4-fbb3-42c1-af11-b39a952069a4",
+        "6a2c9caa-d27f-4bc0-a18a-d651b3593374",
+        "075dfc0d-46dc-47f2-966e-0f3a6cd38830"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T15:34:13.362Z",
+        "event": "verified",
+        "before": "2a8eb0a4-fbb3-42c1-af11-b39a952069a4",
+        "control": "6a2c9caa-d27f-4bc0-a18a-d651b3593374",
+        "after": "075dfc0d-46dc-47f2-966e-0f3a6cd38830"
+      }
+    ]
+  },
+  {
+    "id": "euronext-com-tr",
+    "url": "https://www.euronext.com/en",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, locate the textbox named “Sites search”. Enter the text test and confirm the field contains it. Do not submit.",
+    "controlTask": "Click the public text field with the visible hint “Sites search”, type test and confirm the value. Do not submit.",
+    "observedSelector": "#edit-search-site",
+    "requiredName": "Sites search",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#edit-search-site",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.euronext.com",
+    "match": "https://www.euronext.com/en",
+    "barrier": "The site search textbox has no accessible name, so it cannot be located as “Sites search” in Reading view.",
+    "rules": [
+      {
+        "selector": "#edit-search-site",
+        "action": "addLabel",
+        "value": "Sites search"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v3/runs/euronext-com-tr/before/recording.mp4",
+      "after": "proof/heldout-v3/runs/euronext-com-tr/attempt-1/after/recording.mp4",
+      "control": "proof/heldout-v3/runs/euronext-com-tr/control/recording.mp4",
+      "verifiedAt": "2026-11-23T05:19:51.215Z",
+      "kaneRunIds": [
+        "7c5102a9-94be-4e4d-b9d6-954259995e12",
+        "c904d104-5b8d-42bb-aeb9-57d23073d119",
+        "9aeb5f1b-e641-4d97-85de-517c3b184fc5"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-23T05:19:51.215Z",
+        "event": "verified",
+        "before": "7c5102a9-94be-4e4d-b9d6-954259995e12",
+        "control": "c904d104-5b8d-42bb-aeb9-57d23073d119",
+        "after": "9aeb5f1b-e641-4d97-85de-517c3b184fc5"
+      }
+    ]
+  },
+  {
+    "id": "flashscore-de-tr",
+    "url": "https://www.flashscore.de/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “U17 Weltmeisterschaft 2026 Fussball Live Ergebnisse, Aktuelle Fussball Ergebnisse, Bundesliga, Champions”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+    "controlTask": "At normal width, read the passage beginning “U17 Weltmeisterschaft 2026 Fussball Live Ergebnisse, Aktuelle Fussball Ergebnisse, Bundesliga, Champions” and verify all its text is visible without horizontal scrolling.",
+    "observedSelector": "div:nth-of-type(3) > div:nth-of-type(1) > div > h1",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "div:nth-of-type(3) > div:nth-of-type(1) > div > h1",
+        "equals": "U17 Weltmeisterschaft 2026 Fussball Live Ergebnisse, Aktuelle Fussball Ergebnisse, Bundesliga, Champions"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "div:nth-of-type(3) > div:nth-of-type(1) > div > h1"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "www.flashscore.de",
+    "match": "https://www.flashscore.de/",
+    "barrier": "The heading uses white-space: nowrap, so its text spans 619 CSS pixels inside a 320-pixel container and requires horizontal scrolling.",
+    "rules": [
+      {
+        "selector": "div:nth-of-type(3) > div:nth-of-type(1) > div > h1",
+        "action": "injectCSS",
+        "value": {
+          "white-space": "normal"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v3/runs/flashscore-de-tr/before/recording.mp4",
+      "after": "proof/heldout-v3/runs/flashscore-de-tr/attempt-1/after/recording.mp4",
+      "control": "proof/heldout-v3/runs/flashscore-de-tr/control/recording.mp4",
+      "verifiedAt": "2026-11-23T05:23:23.274Z",
+      "kaneRunIds": [
+        "5ae1d6ea-b3ce-414a-9435-509999296cd2",
+        "97e62f2a-2358-45d2-8831-ba52d60213cd",
+        "bf0fe7a7-3883-41b0-b79d-4d060cbd5867"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-23T05:23:23.274Z",
+        "event": "verified",
+        "before": "5ae1d6ea-b3ce-414a-9435-509999296cd2",
+        "control": "97e62f2a-2358-45d2-8831-ba52d60213cd",
+        "after": "bf0fe7a7-3883-41b0-b79d-4d060cbd5867"
+      }
+    ]
+  },
+  {
+    "id": "fourmilab-prepare-latitude",
+    "url": "https://www.fourmilab.ch/cgi-bin/Earth",
+    "site": "www.fourmilab.ch",
+    "match": "https://www.fourmilab.ch/cgi-bin/Earth",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, first assert that the exact row ‘textbox · Latitude’ is present. Set that textbox to 10 and press Tab to commit the change. Verify its value is 10 and the ‘radio · Lat: · checked’ row confirms custom latitude mode. Stop at that selection without using Update.",
+    "barrier": "The latitude textbox has no accessible name, so Reading view cannot display the exact row ‘textbox · Latitude’.",
+    "rules": [
+      {
+        "selector": "input[name=\"lat\"]",
+        "action": "addLabel",
+        "value": "Latitude"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/fourmilab-prepare-latitude/2026-11-21T19-50-18.388Z/before/recording.mp4",
+      "after": "proof/kane/fourmilab-prepare-latitude/2026-11-21T19-50-18.388Z/attempt-1/after/recording.mp4",
+      "control": "proof/kane/fourmilab-prepare-latitude/2026-11-21T19-50-18.388Z/control/recording.mp4",
+      "verifiedAt": "2026-11-21T19:53:12.452Z",
+      "kaneRunIds": [
+        "b34808ae-3ab2-4eda-aab8-8a1a588d7897",
+        "592a6158-2060-420c-89cd-eac2d4b8adf7",
+        "e2bdbf3a-68fe-4e00-ad0a-aca05fd75b00"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-21T19:53:12.452Z",
+        "event": "verified",
+        "before": "b34808ae-3ab2-4eda-aab8-8a1a588d7897",
+        "control": "592a6158-2060-420c-89cd-eac2d4b8adf7",
+        "after": "e2bdbf3a-68fe-4e00-ad0a-aca05fd75b00"
+      },
+      {
+        "at": "2026-11-22T10:43:27.936Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "8fbeae78-8e1d-4ccf-ab5c-71a9850d2425",
+        "video": "proof/kane/fourmilab-prepare-latitude/2026-11-22T10-42-44.885Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "27d83a96-0d2a-4fbd-81ed-e8e688527b60",
+        "afterVideo": "proof/kane/fourmilab-prepare-latitude/2026-11-22T10-42-44.885Z/recheck-with/recording.mp4"
+      }
+    ]
+  },
+  {
+    "id": "gao-about-reflow",
+    "url": "https://www.gao.gov/about",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “Learn about our role in the government, plus our history, performance,”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+    "controlTask": "At normal width, read the passage beginning “Learn about our role in the government, plus our history, performance,” and verify all its text is visible without horizontal scrolling.",
+    "observedSelector": "#block--gao-about-teasers-contact-info > div:nth-of-type(1) > div:nth-of-type(3) > a > div > p",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#block--gao-about-teasers-contact-info > div:nth-of-type(1) > div:nth-of-type(3) > a > div > p",
+        "equals": "Learn about our role in the government, plus our history, performance,"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#block--gao-about-teasers-contact-info > div:nth-of-type(1) > div:nth-of-type(3) > a > div > p"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "www.gao.gov",
+    "match": "https://www.gao.gov/about",
+    "barrier": "At 320 CSS pixels, the teaser row keeps three cards side by side, placing the requested passage entirely beyond the right edge at x=456–554.",
+    "rules": [
+      {
+        "selector": "div.row",
+        "action": "injectCSS",
+        "value": {
+          "display": "block"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/gao-about-reflow/heldout-v2/before/recording.mp4",
+      "after": "proof/kane/gao-about-reflow/heldout-v2/attempt-1/after/recording.mp4",
+      "control": "proof/kane/gao-about-reflow/heldout-v2/control/recording.mp4",
+      "verifiedAt": "2026-11-22T14:39:48.288Z",
+      "kaneRunIds": [
+        "e5d68f72-1bf5-4190-bd36-68a0daf94235",
+        "097e438b-77d5-4b9b-b9c6-4ba130ad25c5",
+        "4084e3f0-cb28-4c46-a536-62fb61d9cc85"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T14:39:48.288Z",
+        "event": "verified",
+        "before": "e5d68f72-1bf5-4190-bd36-68a0daf94235",
+        "control": "097e438b-77d5-4b9b-b9c6-4ba130ad25c5",
+        "after": "4084e3f0-cb28-4c46-a536-62fb61d9cc85"
+      }
+    ]
+  },
+  {
+    "id": "geeksforgeeks-open-search",
+    "url": "https://www.geeksforgeeks.org/",
+    "persona": "keyboard-only",
+    "task": "First assert the search icon in the homepage header is in sequential keyboard focus order. Use Tab and Enter to open the site search. Verify the Search text box is visible.",
+    "controlTask": "Click the search icon in the homepage header. Verify the Search text box opens and is visible.",
+    "observedSelector": ".gs-toggle-icon",
+    "successSelector": ".gs-input_wrapper.gs-show-search-bar form.gs-form input.gs-input",
+    "site": "www.geeksforgeeks.org",
+    "match": "https://www.geeksforgeeks.org/",
+    "barrier": "The header search toggle is a span with tabIndex -1, so Tab skips it.",
+    "rules": [
+      {
+        "selector": ".gs-toggle-icon",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": ".gs-toggle-icon",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": ".gs-toggle-icon",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": ".gs-toggle-icon",
+        "action": "restoreFocusOutline"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/geeksforgeeks-open-search/2026-11-22T11-06-33.087Z/before/recording.mp4",
+      "after": "proof/kane/geeksforgeeks-open-search/resume-2026-11-22T03-40-55.719Z/attempt-1/after/recording.mp4",
+      "control": "proof/kane/geeksforgeeks-open-search/resume-2026-11-22T03-40-55.719Z/control/recording.mp4",
+      "verifiedAt": "2026-11-22T03:43:23.669Z",
+      "kaneRunIds": [
+        "be57692b-7d07-4262-b4b8-faa6f3ecbf02",
+        "4cb865bf-3f65-433d-b457-e48e75862893",
+        "9ce17c2d-6422-4fc6-83ed-e23b8b0a8a89"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T03:43:23.669Z",
+        "event": "verified",
+        "before": "53fedd9d-0cf3-4b93-a04b-71c5da1b81e4",
+        "control": "4cb865bf-3f65-433d-b457-e48e75862893",
+        "after": "9ce17c2d-6422-4fc6-83ed-e23b8b0a8a89"
+      },
+      {
+        "at": "2026-11-22T10:46:02.864Z",
+        "event": "rechecked",
+        "without": "inconclusive",
+        "runId": "549aee89-f6c9-4fc8-b65c-c1b55f20cc6e",
+        "video": "proof/kane/geeksforgeeks-open-search/2026-11-22T10-44-15.437Z/recheck-without/recording.mp4"
+      },
+      {
+        "at": "2026-11-22T11:08:32.902Z",
+        "event": "baseline-strengthened",
+        "replacedBaseline": "53fedd9d-0cf3-4b93-a04b-71c5da1b81e4",
+        "runId": "be57692b-7d07-4262-b4b8-faa6f3ecbf02",
+        "video": "proof/kane/geeksforgeeks-open-search/2026-11-22T11-06-33.087Z/before/recording.mp4",
+        "after": "0b298663-2773-4a4d-a71f-cf15c831e278",
+        "afterVideo": "proof/kane/geeksforgeeks-open-search/2026-11-22T11-06-33.087Z/after/recording.mp4"
+      }
+    ]
+  },
+  {
+    "id": "go-doc-reflow",
+    "url": "https://go.dev/doc/effective_go",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “// Allocate the top-level slice, the same as before. picture :=”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+    "controlTask": "At normal width, read the passage beginning “// Allocate the top-level slice, the same as before. picture :=” and verify all its text is visible without horizontal scrolling.",
+    "observedSelector": "#main-content > article > pre:nth-of-type(55)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#main-content > article > pre:nth-of-type(55)",
+        "equals": "// Allocate the top-level slice, the same as before. picture :="
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#main-content > article > pre:nth-of-type(55)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "go.dev",
+    "match": "https://go.dev/doc/effective_go",
+    "barrier": "At a 320 CSS pixel viewport, the preformatted code block prevents lines from wrapping, so its 776-pixel scroll width exceeds its 272-pixel visible width and requires horizontal scrolling.",
+    "rules": [
+      {
+        "selector": "#main-content > article > pre:nth-of-type(55)",
+        "action": "injectCSS",
+        "value": {
+          "white-space": "pre-wrap",
+          "overflow-wrap": "anywhere"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/go-doc-reflow/heldout-v2/before/recording.mp4",
+      "after": "proof/kane/go-doc-reflow/heldout-v2/attempt-1/after/recording.mp4",
+      "control": "proof/kane/go-doc-reflow/heldout-v2/control/recording.mp4",
+      "verifiedAt": "2026-11-22T15:27:10.628Z",
+      "kaneRunIds": [
+        "4019a447-a62c-4231-9e75-dc0de126a000",
+        "8f57b6d1-c998-4265-a932-fb1707ef5cd7",
+        "3d9e0e3a-5caf-4ca2-9268-f58699eb8e7c"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T15:27:10.628Z",
+        "event": "verified",
+        "before": "4019a447-a62c-4231-9e75-dc0de126a000",
+        "control": "8f57b6d1-c998-4265-a932-fb1707ef5cd7",
+        "after": "3d9e0e3a-5caf-4ca2-9268-f58699eb8e7c"
+      }
+    ]
+  },
+  {
+    "id": "htdp-reflow",
+    "url": "https://htdp.org/2023-8-14/Book/part_prologue.html",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “function call:expected a function after the open parenthesis, found a number”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+    "controlTask": "At normal width, read the passage beginning “function call:expected a function after the open parenthesis, found a number” and verify all its text is visible without horizontal scrolling.",
+    "observedSelector": "div:nth-of-type(2) > div > div:nth-of-type(21) > blockquote > table > tbody > tr:nth-of-type(2) > td",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "div:nth-of-type(2) > div > div:nth-of-type(21) > blockquote > table > tbody > tr:nth-of-type(2) > td",
+        "equals": "function call:expected a function after the open parenthesis, found a number"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "div:nth-of-type(2) > div > div:nth-of-type(21) > blockquote > table > tbody > tr:nth-of-type(2) > td"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "htdp.org",
+    "match": "https://htdp.org/2023-8-14/Book/part_prologue.html",
+    "barrier": "The error-message cell uses white-space: pre, which prevents wrapping and pushes its right edge to 479 CSS pixels. The main column also has a 370-pixel minimum width, and the page clips content beyond the 320-pixel viewport.",
+    "rules": [
+      {
+        "selector": "div.maincolumn",
+        "action": "injectCSS",
+        "value": {
+          "min-width": "0"
+        }
+      },
+      {
+        "selector": "div:nth-of-type(2) > div > div:nth-of-type(21) > blockquote > table > tbody > tr:nth-of-type(2) > td",
+        "action": "injectCSS",
+        "value": {
+          "white-space": "pre-wrap",
+          "overflow-wrap": "anywhere"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/htdp-reflow/heldout-v2/before/recording.mp4",
+      "after": "proof/kane/htdp-reflow/heldout-v2/attempt-1/after/recording.mp4",
+      "control": "proof/kane/htdp-reflow/heldout-v2/control/recording.mp4",
+      "verifiedAt": "2026-11-22T14:43:56.635Z",
+      "kaneRunIds": [
+        "51f6f29f-8f4e-43ca-8518-036c9c3069c5",
+        "ddc1f68e-d0de-47ec-ad42-6cbbe562f7b7",
+        "dae2063b-f9b1-4e68-b8eb-a17f7cf646bc"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T14:43:56.635Z",
+        "event": "verified",
+        "before": "51f6f29f-8f4e-43ca-8518-036c9c3069c5",
+        "control": "ddc1f68e-d0de-47ec-ad42-6cbbe562f7b7",
+        "after": "dae2063b-f9b1-4e68-b8eb-a17f7cf646bc"
+      }
+    ]
+  },
+  {
+    "id": "json-org-reflow",
+    "url": "https://www.json.org/json-en.html",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “character '0020' . '10FFFF' - '\"' - '\\' '\\' escape”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+    "controlTask": "At normal width, read the passage beginning “character '0020' . '10FFFF' - '\"' - '\\' '\\' escape” and verify all its text is visible without horizontal scrolling.",
+    "observedSelector": "#box > p:nth-of-type(11)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#box > p:nth-of-type(11)",
+        "equals": "character '0020' . '10FFFF' - '\"' - '\\' '\\' escape"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#box > p:nth-of-type(11)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "www.json.org",
+    "match": "https://www.json.org/json-en.html",
+    "barrier": "At 320 CSS pixels, the side-by-side grid in #spec places the grammar passage from x=220 to x=433, so its right side is clipped.",
+    "rules": [
+      {
+        "selector": "#spec",
+        "action": "injectCSS",
+        "value": {
+          "display": "block"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/json-org-reflow/heldout-v2/before/recording.mp4",
+      "after": "proof/kane/json-org-reflow/heldout-v2/attempt-1/after/recording.mp4",
+      "control": "proof/kane/json-org-reflow/heldout-v2/control/recording.mp4",
+      "verifiedAt": "2026-11-22T15:14:25.305Z",
+      "kaneRunIds": [
+        "958472fb-1e46-4b72-9362-607e7279835e",
+        "09eb1f7d-1193-42dc-836a-37d12b02df0b",
+        "78b04afa-fc98-4b0d-a235-492f5e6024d4"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T15:14:25.305Z",
+        "event": "verified",
+        "before": "958472fb-1e46-4b72-9362-607e7279835e",
+        "control": "09eb1f7d-1193-42dc-836a-37d12b02df0b",
+        "after": "78b04afa-fc98-4b0d-a235-492f5e6024d4"
+      }
+    ]
+  },
+  {
+    "id": "kidderminster-application-faq",
+    "url": "https://www.kidderminster.ac.uk/good-to-know-articles/how-to-apply-for-a-course/",
+    "persona": "keyboard-only",
+    "task": "First assert the FAQ disclosure What is a next of kin? is in the sequential keyboard focus order. Open it with Tab and Enter. Verify the answer beginning A next of kin is a relative is visible. Stay on the public information page.",
+    "controlTask": "On the public How To Apply For a Course page, click the Frequently Asked Questions item What is a next of kin? Verify the answer beginning A next of kin is a relative is visible.",
+    "observedSelector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+    "successSelector": "#expand-f28d3621-47c4-495b-8993-bd8210e37d66.show",
+    "site": "www.kidderminster.ac.uk",
+    "match": "https://www.kidderminster.ac.uk/good-to-know-articles/how-to-apply-for-a-course/",
+    "barrier": "The clickable div for “What is a next of kin?” has tabIndex -1, so Tab skips the disclosure.",
+    "rules": [
+      {
+        "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+        "action": "restoreFocusOutline"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/kidderminster-application-faq/2026-11-22T10-44-57.576Z/recheck-without/recording.mp4",
+      "after": "proof/kane/kidderminster-application-faq/resume-2026-11-22T03-36-30.188Z/attempt-1/after/recording.mp4",
+      "control": "proof/kane/kidderminster-application-faq/resume-2026-11-22T03-32-20.479Z/control/recording.mp4",
+      "verifiedAt": "2026-11-22T03:39:25.809Z",
+      "kaneRunIds": [
+        "f2b2fda5-445b-42c9-999e-0bcbd292de0a",
+        "ba03fd24-2603-4a12-9f89-cdd58b382d0d",
+        "6f5385b0-d658-4193-af58-1302492f8a10"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T03:39:25.809Z",
+        "event": "verified",
+        "before": "746a0a2b-5612-42be-b9e5-83b59eb02de9",
+        "control": "ba03fd24-2603-4a12-9f89-cdd58b382d0d",
+        "after": "6f5385b0-d658-4193-af58-1302492f8a10"
+      },
+      {
+        "at": "2026-11-22T10:47:05.025Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "f2b2fda5-445b-42c9-999e-0bcbd292de0a",
+        "video": "proof/kane/kidderminster-application-faq/2026-11-22T10-44-57.576Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "e52f1dec-04f0-4ad0-af4d-4c62455a194d",
+        "afterVideo": "proof/kane/kidderminster-application-faq/2026-11-22T10-44-57.576Z/recheck-with/recording.mp4",
+        "replacedBaseline": "746a0a2b-5612-42be-b9e5-83b59eb02de9"
+      }
+    ]
+  },
+  {
+    "id": "lua-manual-reflow",
+    "url": "https://www.lua.org/manual/5.4/manual.html",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “chunk ::= block block ::= {stat} [retstat] stat ::= ‘;’ |”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+    "controlTask": "At normal width, read the passage beginning “chunk ::= block block ::= {stat} [retstat] stat ::= ‘;’ |” and verify all its text is visible without horizontal scrolling.",
+    "observedSelector": "pre:nth-of-type(301)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "pre:nth-of-type(301)",
+        "equals": "chunk ::= block block ::= {stat} [retstat] stat ::= ‘;’ |"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "pre:nth-of-type(301)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "www.lua.org",
+    "match": "https://www.lua.org/manual/5.4/manual.html",
+    "barrier": "At 320 CSS pixels, the 354-pixel body extends beyond the viewport, and the grammar block’s white-space: pre prevents its lines from wrapping, producing 828 pixels of content that is clipped on the right.",
+    "rules": [
+      {
+        "selector": "body",
+        "action": "injectCSS",
+        "value": {
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      },
+      {
+        "selector": "pre:nth-of-type(301)",
+        "action": "injectCSS",
+        "value": {
+          "white-space": "pre-wrap",
+          "overflow-wrap": "anywhere"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/lua-manual-reflow/heldout-v2/before/recording.mp4",
+      "after": "proof/kane/lua-manual-reflow/heldout-v2/attempt-1/after/recording.mp4",
+      "control": "proof/kane/lua-manual-reflow/heldout-v2/control/recording.mp4",
+      "verifiedAt": "2026-11-22T14:53:51.881Z",
+      "kaneRunIds": [
+        "b83f00cf-c90e-49d4-8ae2-4a6a4f310fc0",
+        "3472d244-23e5-41fa-8a90-587c7aa5d2cb",
+        "06702ffd-7a8c-4145-b63e-a070b5bc9912"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T14:53:51.881Z",
+        "event": "verified",
+        "before": "b83f00cf-c90e-49d4-8ae2-4a6a4f310fc0",
+        "control": "3472d244-23e5-41fa-8a90-587c7aa5d2cb",
+        "after": "06702ffd-7a8c-4145-b63e-a070b5bc9912"
+      }
+    ]
+  },
+  {
+    "id": "martinfowler-reflow",
+    "url": "https://martinfowler.com/articles/continuousIntegration.html",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “Usually the best way to fix the build is to revert”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+    "controlTask": "At normal width, read the passage beginning “Usually the best way to fix the build is to revert” and verify all its text is visible without horizontal scrolling.",
+    "observedSelector": "#FixBrokenBuildsImmediately > div > p",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#FixBrokenBuildsImmediately > div > p",
+        "equals": "Usually the best way to fix the build is to revert"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#FixBrokenBuildsImmediately > div > p"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "martinfowler.com",
+    "match": "https://martinfowler.com/articles/continuousIntegration.html",
+    "barrier": "The soundbite container is 418 CSS pixels wide inside a 300 CSS pixel section. At a 320 CSS pixel viewport, the paragraph extends to x=407 and is clipped by the main content container.",
+    "rules": [
+      {
+        "selector": "div.soundbite",
+        "action": "injectCSS",
+        "value": {
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/martinfowler-reflow/heldout-v2/before/recording.mp4",
+      "after": "proof/kane/martinfowler-reflow/heldout-v2/attempt-1/after/recording.mp4",
+      "control": "proof/kane/martinfowler-reflow/heldout-v2/control/recording.mp4",
+      "verifiedAt": "2026-11-22T14:59:23.458Z",
+      "kaneRunIds": [
+        "f031352b-1b1b-4bb9-939a-7a3759d03f2f",
+        "505fae71-bccf-4078-a602-00017edef53b",
+        "a0edaaf1-3574-41b5-9d46-96f41f93a543"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T14:59:23.458Z",
+        "event": "verified",
+        "before": "f031352b-1b1b-4bb9-939a-7a3759d03f2f",
+        "control": "505fae71-bccf-4078-a602-00017edef53b",
+        "after": "a0edaaf1-3574-41b5-9d46-96f41f93a543"
+      }
+    ]
+  },
+  {
+    "id": "mynoise-open-menu",
+    "url": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+    "persona": "keyboard-only",
+    "task": "First assert that the Menu icon at the top of the White Noise Generator is in the sequential keyboard focus order. Use Tab and Enter to open it. Verify the site navigation opens and the Full Index link is visible.",
+    "controlTask": "Click the Menu icon at the top of the White Noise Generator. Verify the navigation opens and the Full Index link is visible.",
+    "observedSelector": "#hamburger",
+    "successSelector": "#menuOverlay",
+    "site": "mynoise.net",
+    "match": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+    "barrier": "The clickable Menu icon (#hamburger) has tabIndex -1, so Tab skips it.",
+    "rules": [
+      {
+        "selector": "#hamburger",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": "#hamburger",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": "#hamburger",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": "#hamburger",
+        "action": "restoreFocusOutline"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/mynoise-open-menu/resume-2026-11-22T03-31-34.469Z/before/recording.mp4",
+      "after": "proof/kane/mynoise-open-menu/resume-2026-11-22T03-40-55.735Z/attempt-1/after/recording.mp4",
+      "control": "proof/kane/mynoise-open-menu/resume-2026-11-22T03-31-34.469Z/control/recording.mp4",
+      "verifiedAt": "2026-11-22T03:42:05.087Z",
+      "kaneRunIds": [
+        "9188ab4a-437f-4536-aa41-c4b3244e2d21",
+        "3c79c7d9-b09d-4072-ad36-a96e5b7790ce",
+        "680d1400-a8c3-4916-a717-40a3f132ef3f"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T03:42:05.087Z",
+        "event": "verified",
+        "before": "9188ab4a-437f-4536-aa41-c4b3244e2d21",
+        "control": "3c79c7d9-b09d-4072-ad36-a96e5b7790ce",
+        "after": "680d1400-a8c3-4916-a717-40a3f132ef3f"
+      },
+      {
+        "at": "2026-11-22T10:50:14.637Z",
+        "event": "rechecked",
+        "without": "inconclusive",
+        "runId": "94c3a8bc-c3b6-4dce-bd4c-fcfbe2b086c8",
+        "video": "proof/kane/mynoise-open-menu/2026-11-22T10-48-43.265Z/recheck-without/recording.mp4"
+      }
+    ]
+  },
+  {
+    "id": "nullprogram-reflow",
+    "url": "https://nullprogram.com/blog/2016/11/17/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “echo -ne '\\x31\\xFF\\xB8\\x3C\\x00\\x00\\x00\\x0F\\x05' >> true”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+    "controlTask": "At normal width, read the passage beginning “echo -ne '\\x31\\xFF\\xB8\\x3C\\x00\\x00\\x00\\x0F\\x05' >> true” and verify all its text is visible without horizontal scrolling.",
+    "observedSelector": "main > article > pre:nth-of-type(35)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "main > article > pre:nth-of-type(35)",
+        "equals": "echo -ne '\\x31\\xFF\\xB8\\x3C\\x00\\x00\\x00\\x0F\\x05' >> true"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "main > article > pre:nth-of-type(35)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "nullprogram.com",
+    "match": "https://nullprogram.com/blog/2016/11/17/",
+    "barrier": "At 320 CSS pixels, white-space: pre prevents the code line from wrapping, giving the block a scroll width of 513 pixels and a client width of 270 pixels.",
+    "rules": [
+      {
+        "selector": "main > article > pre:nth-of-type(35)",
+        "action": "injectCSS",
+        "value": {
+          "white-space": "pre-wrap",
+          "overflow-wrap": "anywhere"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/nullprogram-reflow/heldout-v2/before/recording.mp4",
+      "after": "proof/kane/nullprogram-reflow/heldout-v2/attempt-1/after/recording.mp4",
+      "control": "proof/kane/nullprogram-reflow/heldout-v2/control/recording.mp4",
+      "verifiedAt": "2026-11-22T15:05:06.049Z",
+      "kaneRunIds": [
+        "369f3837-a6c7-4b5e-bb0a-d975ac08b4e3",
+        "c4dd0c0e-bd90-4d6a-917f-12de14adde81",
+        "067d24f5-232c-4616-956e-fcd3f47259dc"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T15:05:06.049Z",
+        "event": "verified",
+        "before": "369f3837-a6c7-4b5e-bb0a-d975ac08b4e3",
+        "control": "c4dd0c0e-bd90-4d6a-917f-12de14adde81",
+        "after": "067d24f5-232c-4616-956e-fcd3f47259dc"
+      }
+    ]
+  },
+  {
+    "id": "nws-radar-play-pause",
+    "url": "https://radar.weather.gov/",
+    "persona": "keyboard-only",
+    "task": "Press Tab twice before making any accessibility assertion. Continue using Tab or Shift+Tab through the controls to reach Play in the radar animation timeline. Press Enter and verify the animation begins and the control changes to Pause.",
+    "controlTask": "Click Play in the animation timeline of the public National Weather Service radar map. Verify that the radar animation starts and Play changes to Pause.",
+    "observedSelector": ".button.button-play",
+    "successSelector": ".button-pause",
+    "minimumTabPresses": 2,
+    "site": "radar.weather.gov",
+    "match": "https://radar.weather.gov/",
+    "barrier": "The radar timeline’s Play control is a clickable div with a tabIndex of -1, so Tab and Shift+Tab skip it.",
+    "rules": [
+      {
+        "selector": ".button.button-play",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": ".button.button-play",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": ".button.button-play",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": ".button.button-play",
+        "action": "restoreFocusOutline"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/nws-radar-play-pause/2026-11-22T10-39-10.170Z/before/recording.mp4",
+      "after": "proof/kane/nws-radar-play-pause/2026-11-22T11-04-37.984Z/attempt-1/after/recording.mp4",
+      "control": "proof/kane/nws-radar-play-pause/2026-11-22T10-39-10.170Z/control/recording.mp4",
+      "verifiedAt": "2026-11-22T11:05:45.098Z",
+      "kaneRunIds": [
+        "1eb14750-7d2e-42f0-82b6-022636b796f6",
+        "6f3bfd87-2046-4189-8612-c67ab2b5cdf3",
+        "4b4103c0-6910-4793-8935-e65ac74db402"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T11:05:45.098Z",
+        "event": "verified",
+        "before": "1eb14750-7d2e-42f0-82b6-022636b796f6",
+        "control": "6f3bfd87-2046-4189-8612-c67ab2b5cdf3",
+        "after": "4b4103c0-6910-4793-8935-e65ac74db402"
+      },
+      {
+        "at": "2026-11-22T11:07:42.293Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "1c2c3e7f-8163-43e9-b77b-852f06bd7192",
+        "video": "proof/kane/nws-radar-play-pause/2026-11-22T11-06-33.141Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "a057efd1-e234-4b03-a9c1-baddd930e760",
+        "afterVideo": "proof/kane/nws-radar-play-pause/2026-11-22T11-06-33.141Z/recheck-with/recording.mp4"
+      }
+    ]
+  },
+  {
+    "id": "online-conversion-length",
+    "url": "https://www.onlineconversion.com/length_common.htm",
+    "site": "www.onlineconversion.com",
+    "match": "https://www.onlineconversion.com/length_common.htm",
+    "persona": "low-vision",
+    "task": "In Common Length and Distance Conversions, assert that the To unit list fits entirely within the 320-pixel viewport. Without horizontal scrolling, enter 1, choose feet in From and inch in To, and activate Convert. Verify the result reads 1 feet = 12 inch.",
+    "barrier": "At 320 pixels, the 503-pixel conversion table places the To listbox at x=329, entirely beyond the viewport.",
+    "rules": [
+      {
+        "selector": "div.content_left",
+        "action": "injectCSS",
+        "value": {
+          "width": "100%",
+          "min-width": "0",
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      },
+      {
+        "selector": "div.container",
+        "action": "injectCSS",
+        "value": {
+          "width": "100%",
+          "min-width": "0",
+          "box-sizing": "border-box"
+        }
+      },
+      {
+        "selector": "div.main_content",
+        "action": "injectCSS",
+        "value": {
+          "width": "auto",
+          "min-width": "0",
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "form[name=\"MainForm\"] table",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "width": "100%",
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      },
+      {
+        "selector": "td",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "width": "auto",
+          "min-width": "0",
+          "white-space": "normal"
+        }
+      },
+      {
+        "selector": "input",
+        "action": "injectCSS",
+        "value": {
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/online-conversion-length/2026-11-21T19-47-43.889Z/before/recording.mp4",
+      "after": "proof/kane/online-conversion-length/2026-11-21T19-47-43.889Z/attempt-1/after/recording.mp4",
+      "control": "proof/kane/online-conversion-length/2026-11-21T19-47-43.889Z/control/recording.mp4",
+      "verifiedAt": "2026-11-21T19:50:32.928Z",
+      "kaneRunIds": [
+        "41a9761d-5ff9-4739-ba6b-f3b817f0f49c",
+        "771d8a02-576c-4f1e-849b-bb710f3f76de",
+        "d5820bf6-598a-4e58-b1dc-59a4564c66de"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-21T19:50:32.928Z",
+        "event": "verified",
+        "before": "41a9761d-5ff9-4739-ba6b-f3b817f0f49c",
+        "control": "771d8a02-576c-4f1e-849b-bb710f3f76de",
+        "after": "d5820bf6-598a-4e58-b1dc-59a4564c66de"
+      },
+      {
+        "at": "2026-11-22T10:50:35.528Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "d710ee59-d836-448c-9cbe-3bded18c66d1",
+        "video": "proof/kane/online-conversion-length/2026-11-22T10-49-48.745Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "b6e8ab78-4354-4b5d-8112-907abc21aec5",
+        "afterVideo": "proof/kane/online-conversion-length/2026-11-22T10-49-48.745Z/recheck-with/recording.mp4"
+      }
+    ]
+  },
+  {
+    "id": "openbsd-faq-reflow",
+    "url": "https://www.openbsd.org/faq/faq1.html",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “From: user@example.com To: bugs@openbsd.org Subject: 3.3-beta panics on a SPARCStation2 OpenBSD”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+    "controlTask": "At normal width, read the passage beginning “From: user@example.com To: bugs@openbsd.org Subject: 3.3-beta panics on a SPARCStation2 OpenBSD” and verify all its text is visible without horizontal scrolling.",
+    "observedSelector": "pre:nth-of-type(3)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "pre:nth-of-type(3)",
+        "equals": "From: user@example.com To: bugs@openbsd.org Subject: 3.3-beta panics on a SPARCStation2 OpenBSD"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "pre:nth-of-type(3)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "www.openbsd.org",
+    "match": "https://www.openbsd.org/faq/faq1.html",
+    "barrier": "At a 320 CSS pixel viewport, the bug report sample uses white-space: pre, so its lines do not wrap. Its scroll width is 615 CSS pixels and its client width is 298 CSS pixels.",
+    "rules": [
+      {
+        "selector": "pre:nth-of-type(3)",
+        "action": "injectCSS",
+        "value": {
+          "white-space": "pre-wrap",
+          "overflow-wrap": "anywhere"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/openbsd-faq-reflow/heldout-v2/before/recording.mp4",
+      "after": "proof/kane/openbsd-faq-reflow/heldout-v2/attempt-1/after/recording.mp4",
+      "control": "proof/kane/openbsd-faq-reflow/heldout-v2/control/recording.mp4",
+      "verifiedAt": "2026-11-22T14:39:18.297Z",
+      "kaneRunIds": [
+        "6a2d7209-1ee5-4bd1-b65e-7b4cf9c371fd",
+        "8f980a9e-99aa-4842-b3a0-057bde42f302",
+        "96a83db9-497a-4b81-aade-25ca01e8f12f"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T14:39:18.297Z",
+        "event": "verified",
+        "before": "6a2d7209-1ee5-4bd1-b65e-7b4cf9c371fd",
+        "control": "8f980a9e-99aa-4842-b3a0-057bde42f302",
+        "after": "96a83db9-497a-4b81-aade-25ca01e8f12f"
+      }
+    ]
+  },
+  {
+    "id": "poets-org-tr2",
+    "url": "https://poets.org/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, locate the searchbox named “search”. Enter the text test and confirm the field contains it. Do not submit.",
+    "controlTask": "Click the public text field with the visible hint “search”, type test and confirm the value. Do not submit.",
+    "observedSelector": "input[placeholder=\"search\"]",
+    "requiredName": "search",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "input[placeholder=\"search\"]",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "searchbox"
+    },
+    "site": "poets.org",
+    "match": "https://poets.org/",
+    "barrier": "The Reading view searchbox has an empty accessible name despite displaying the placeholder “search”.",
+    "rules": [
+      {
+        "selector": "input[placeholder=\"search\"]",
+        "action": "addLabel",
+        "value": "search"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v3/runs/poets-org-tr2/before/recording.mp4",
+      "after": "proof/heldout-v3/runs/poets-org-tr2/attempt-1/after/recording.mp4",
+      "control": "proof/heldout-v3/runs/poets-org-tr2/control/recording.mp4",
+      "verifiedAt": "2026-11-23T05:28:23.772Z",
+      "kaneRunIds": [
+        "a6039b7a-2d1d-40c2-91b1-04593fcbd871",
+        "f773f524-c19a-4b56-bd9f-16289c00a68d",
+        "68fac404-263b-461c-b97f-c4aae40f2fe5"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-23T05:28:23.772Z",
+        "event": "verified",
+        "before": "a6039b7a-2d1d-40c2-91b1-04593fcbd871",
+        "control": "f773f524-c19a-4b56-bd9f-16289c00a68d",
+        "after": "68fac404-263b-461c-b97f-c4aae40f2fe5"
+      }
+    ]
+  },
+  {
+    "id": "procurement-journey-considerations",
+    "url": "https://www.procurementjourney.scot/index.php/route-1/route-1-introduction",
+    "persona": "keyboard-only",
+    "task": "First assert the Considerations Before Proceeding accordion title is in the sequential keyboard focus order. Dismiss the cookie banner with Reject using the keyboard if it covers the page. Open Considerations Before Proceeding with Tab and Enter. Verify the first question, Are the good/services you are buying business critical?, is visible.",
+    "controlTask": "Dismiss the cookie banner with Reject if it covers the page, then click Considerations Before Proceeding. Verify the first question, Are the good/services you are buying business critical?, is visible.",
+    "observedSelector": ".accordion__container > .accordion__item:first-child .accordion__title",
+    "successSelector": ".accordion__container > .accordion__item:first-child .accordion__content ol li:first-child",
+    "site": "www.procurementjourney.scot",
+    "match": "https://www.procurementjourney.scot/index.php/route-1/route-1-introduction",
+    "barrier": "The Considerations Before Proceeding accordion title is exposed as text with tabIndex -1, so Tab skips the clickable title.",
+    "rules": [
+      {
+        "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+        "action": "restoreFocusOutline"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/procurement-journey-considerations/resume-2026-11-22T03-32-20.478Z/before/recording.mp4",
+      "after": "proof/kane/procurement-journey-considerations/resume-2026-11-22T03-32-20.478Z/attempt-1/after/recording.mp4",
+      "control": "proof/kane/procurement-journey-considerations/resume-2026-11-22T03-32-20.478Z/control/recording.mp4",
+      "verifiedAt": "2026-11-22T03:38:42.261Z",
+      "kaneRunIds": [
+        "643d778f-0790-4ac3-acdc-b460b52e6581",
+        "bc09b927-b8eb-4034-9c25-ca3350da9a18",
+        "97f4a622-59cc-4d3f-a327-2421fc656e19"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T03:38:42.261Z",
+        "event": "verified",
+        "before": "643d778f-0790-4ac3-acdc-b460b52e6581",
+        "control": "bc09b927-b8eb-4034-9c25-ca3350da9a18",
+        "after": "97f4a622-59cc-4d3f-a327-2421fc656e19"
+      },
+      {
+        "at": "2026-11-22T10:52:45.444Z",
+        "event": "rechecked",
+        "without": "inconclusive",
+        "runId": "74ec2f78-71cd-49f8-a98b-2207b2123e4f",
+        "video": "proof/kane/procurement-journey-considerations/2026-11-22T10-49-59.964Z/recheck-without/recording.mp4"
+      }
+    ]
+  },
+  {
+    "id": "report-605ca95e172608f662",
+    "url": "https://www.colorhexa.com/ff0000",
+    "persona": "keyboard-only",
+    "task": "Open the color picker from the red swatch next to the search field. Press Tab through at least three controls unless the swatch gets focus sooner. If it gets focus, press Enter. Verify the color spectrum and hue slider appear.",
+    "site": "www.colorhexa.com",
+    "match": "https://www.colorhexa.com/ff0000",
+    "barrier": "The red swatch next to the search field is a div with tabIndex -1 and no tabindex attribute, so Tab skips the color picker trigger.",
+    "rules": [
+      {
+        "selector": "div.sp-replacer.sp-light",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": "div.sp-replacer.sp-light",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": "div.sp-replacer.sp-light",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": "div.sp-replacer.sp-light",
+        "action": "restoreFocusOutline"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/report-605ca95e172608f662/2026-11-22T08-37-56.352Z/before/recording.mp4",
+      "after": "proof/kane/report-605ca95e172608f662/2026-11-22T08-37-56.352Z/attempt-1/after/recording.mp4",
+      "control": "proof/kane/report-605ca95e172608f662/2026-11-22T08-37-56.352Z/control/recording.mp4",
+      "verifiedAt": "2026-11-22T08:43:08.299Z",
+      "kaneRunIds": [
+        "6720c02b-9036-4249-b024-7595cd02a99f",
+        "068d27c9-2a32-4a17-822e-b4506ed26fb7",
+        "4974ddb7-cbc1-4bb5-884a-41d71d5f980d"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T08:43:08.299Z",
+        "event": "verified",
+        "before": "6720c02b-9036-4249-b024-7595cd02a99f",
+        "control": "068d27c9-2a32-4a17-822e-b4506ed26fb7",
+        "after": "4974ddb7-cbc1-4bb5-884a-41d71d5f980d"
+      },
+      {
+        "at": "2026-11-22T10:45:41.806Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "41ac2ac8-ccba-45cd-9465-a84f698c9ce3",
+        "video": "proof/kane/report-605ca95e172608f662/2026-11-22T10-44-02.093Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "9fb1a907-b63c-4521-b901-1c3de1ad3c65",
+        "afterVideo": "proof/kane/report-605ca95e172608f662/2026-11-22T10-44-02.093Z/recheck-with/recording.mp4"
+      }
+    ]
+  },
+  {
+    "id": "report-cb10e18073d48f295a",
+    "url": "https://www.colorhexa.com/ff6600",
+    "persona": "keyboard-only",
+    "task": "Open the color picker using the swatch next to the color search field. Stop when the color spectrum panel and hue slider are visible.",
+    "site": "www.colorhexa.com",
+    "match": "https://www.colorhexa.com/ff6600",
+    "barrier": "The color swatch next to the search field is a non-focusable div, so Tab and Shift+Tab skip it and keyboard users cannot open the picker.",
+    "rules": [
+      {
+        "selector": "div.sp-replacer.sp-light",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": "div.sp-replacer.sp-light",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": "div.sp-replacer.sp-light",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": "div.sp-replacer.sp-light",
+        "action": "restoreFocusOutline"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/report-cb10e18073d48f295a/2026-11-22T10-36-24.408Z/before/recording.mp4",
+      "after": "proof/kane/report-cb10e18073d48f295a/2026-11-22T10-36-24.408Z/attempt-1/after/recording.mp4",
+      "control": "proof/kane/report-cb10e18073d48f295a/2026-11-22T10-36-24.408Z/control/recording.mp4",
+      "verifiedAt": "2026-11-22T10:38:46.617Z",
+      "kaneRunIds": [
+        "2ae38955-0460-4dce-8ac9-04a6ad432feb",
+        "101907ec-59a0-4b59-a225-b855c62461ba",
+        "68d9f2ee-2aa1-4387-8330-95f8d54a4e68"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T10:38:46.617Z",
+        "event": "verified",
+        "before": "2ae38955-0460-4dce-8ac9-04a6ad432feb",
+        "control": "101907ec-59a0-4b59-a225-b855c62461ba",
+        "after": "68d9f2ee-2aa1-4387-8330-95f8d54a4e68"
+      },
+      {
+        "at": "2026-11-22T10:47:55.419Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "2825dd5b-91ad-4968-aee2-763e69448559",
+        "video": "proof/kane/report-cb10e18073d48f295a/2026-11-22T10-46-59.451Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "4a0d9dcd-8154-4164-b900-ecc517486693",
+        "afterVideo": "proof/kane/report-cb10e18073d48f295a/2026-11-22T10-46-59.451Z/recheck-with/recording.mp4"
+      }
+    ]
+  },
+  {
+    "id": "report-d6870c43f8831c2d3b",
+    "url": "https://www.colorhexa.com/0066ff",
+    "persona": "keyboard-only",
+    "task": "Open the color picker using the swatch next to the color search field. Stop when the color spectrum panel and hue slider are visible.",
+    "site": "www.colorhexa.com",
+    "match": "https://www.colorhexa.com/0066ff",
+    "barrier": "The color swatch next to the search field is a clickable div that Tab skips, so keyboard users cannot reach it to open the color picker.",
+    "rules": [
+      {
+        "selector": "div.sp-replacer.sp-light",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": "div.sp-replacer.sp-light",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": "div.sp-replacer.sp-light",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": "div.sp-replacer.sp-light",
+        "action": "restoreFocusOutline"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/before/recording.mp4",
+      "after": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/attempt-1/after/recording.mp4",
+      "control": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/control/recording.mp4",
+      "verifiedAt": "2026-11-22T11:04:09.374Z",
+      "kaneRunIds": [
+        "3c57743a-4f8b-4c78-9f77-d6e4630e9d31",
+        "dedca760-0bbb-4e0d-8c38-384f23fbe12d",
+        "cbcbc771-f785-4a3c-aaa9-e9fdcc8e9f65"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T11:04:09.374Z",
+        "event": "verified",
+        "before": "3c57743a-4f8b-4c78-9f77-d6e4630e9d31",
+        "control": "dedca760-0bbb-4e0d-8c38-384f23fbe12d",
+        "after": "cbcbc771-f785-4a3c-aaa9-e9fdcc8e9f65"
+      },
+      {
+        "at": "2026-11-22T11:08:59.592Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "12547fe8-7147-4b45-a813-3669d1af1177",
+        "video": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-08-05.103Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "402f819e-f5de-4821-98e0-13b6cc803fa0",
+        "afterVideo": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-08-05.103Z/recheck-with/recording.mp4"
+      }
+    ]
+  },
+  {
+    "id": "rust-book-reflow",
+    "url": "https://doc.rust-lang.org/book/ch01-02-hello-world.html",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “> dir /B %= the /B option says to only show”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+    "controlTask": "At normal width, read the passage beginning “> dir /B %= the /B option says to only show” and verify all its text is visible without horizontal scrolling.",
+    "observedSelector": "#mdbook-content > main > pre:nth-of-type(9)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#mdbook-content > main > pre:nth-of-type(9)",
+        "equals": "> dir /B %= the /B option says to only show"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#mdbook-content > main > pre:nth-of-type(9)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "doc.rust-lang.org",
+    "match": "https://doc.rust-lang.org/book/ch01-02-hello-world.html",
+    "barrier": "At 320 CSS pixels, white-space: pre keeps the CMD passage on an unwrapped line, giving the code block a scroll width of 532 px within 280 px of visible width.",
+    "rules": [
+      {
+        "selector": "code.language-cmd.hljs",
+        "action": "injectCSS",
+        "value": {
+          "white-space": "pre-wrap"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/rust-book-reflow/heldout-v2/before/recording.mp4",
+      "after": "proof/kane/rust-book-reflow/heldout-v2/attempt-1/after/recording.mp4",
+      "control": "proof/kane/rust-book-reflow/heldout-v2/control/recording.mp4",
+      "verifiedAt": "2026-11-22T15:27:54.041Z",
+      "kaneRunIds": [
+        "e4ff09da-ae37-4e6b-b609-a5a30ed3e76e",
+        "fa72607f-1dab-4294-b288-def12605c76c",
+        "b04ddb19-6c75-405e-b78b-2f18d11b124e"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T15:27:54.041Z",
+        "event": "verified",
+        "before": "e4ff09da-ae37-4e6b-b609-a5a30ed3e76e",
+        "control": "fa72607f-1dab-4294-b288-def12605c76c",
+        "after": "b04ddb19-6c75-405e-b78b-2f18d11b124e"
+      }
+    ]
+  },
+  {
+    "id": "sanantonio-library-reader",
+    "url": "https://www.mysapl.org/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, locate the textbox named “Search Catalog”. Enter the text test and confirm the field contains it. Do not submit.",
+    "controlTask": "Click the public text field with the visible hint “Search Catalog”, type test and confirm the value. Do not submit.",
+    "observedSelector": "#searchTermsCatalog",
+    "requiredName": "Search Catalog",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#searchTermsCatalog",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.mysapl.org",
+    "match": "https://www.mysapl.org/",
+    "barrier": "The catalog search input has no accessible name, so Reading view lists it as an unnamed textbox.",
+    "rules": [
+      {
+        "selector": "#searchTermsCatalog",
+        "action": "addLabel",
+        "value": "Search Catalog"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/sanantonio-library-reader/heldout-v2/before/recording.mp4",
+      "after": "proof/kane/sanantonio-library-reader/heldout-v2/attempt-1/after/recording.mp4",
+      "control": "proof/kane/sanantonio-library-reader/heldout-v2/control/recording.mp4",
+      "verifiedAt": "2026-11-22T14:34:12.039Z",
+      "kaneRunIds": [
+        "d7b5a631-abdd-41c0-b714-94d511df5b15",
+        "b58e7824-0ce9-4f71-a23e-6db155779cd0",
+        "36fb53a9-1e55-4230-a9da-8cdd3de7a8ce"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T14:34:12.039Z",
+        "event": "verified",
+        "before": "d7b5a631-abdd-41c0-b714-94d511df5b15",
+        "control": "b58e7824-0ce9-4f71-a23e-6db155779cd0",
+        "after": "36fb53a9-1e55-4230-a9da-8cdd3de7a8ce"
+      }
+    ]
+  },
+  {
+    "id": "sedgewick-reflow",
+    "url": "https://algs4.cs.princeton.edu/11model/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “% java Scale mandrill.jpg 200 400”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+    "controlTask": "At normal width, read the passage beginning “% java Scale mandrill.jpg 200 400” and verify all its text is visible without horizontal scrolling.",
+    "observedSelector": "#content > center:nth-of-type(3) > table > tbody > tr > td:nth-of-type(3)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#content > center:nth-of-type(3) > table > tbody > tr > td:nth-of-type(3)",
+        "equals": "% java Scale mandrill.jpg 200 400"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#content > center:nth-of-type(3) > table > tbody > tr > td:nth-of-type(3)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "algs4.cs.princeton.edu",
+    "match": "https://algs4.cs.princeton.edu/11model/",
+    "barrier": "At 320 CSS pixels, the sidebar offset leaves the reading column only 102 pixels wide. The 917-pixel table row places the passage at x=891, beyond the viewport, where horizontal clipping hides it.",
+    "rules": [
+      {
+        "selector": "#content",
+        "action": "injectCSS",
+        "value": {
+          "display": "contents"
+        }
+      },
+      {
+        "selector": "table",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      },
+      {
+        "selector": "tbody",
+        "action": "injectCSS",
+        "value": {
+          "display": "block"
+        }
+      },
+      {
+        "selector": "tr",
+        "action": "injectCSS",
+        "value": {
+          "display": "block"
+        }
+      },
+      {
+        "selector": "td",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "width": "auto",
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      },
+      {
+        "selector": "#content > center:nth-of-type(3) > table > tbody > tr > td:nth-of-type(3)",
+        "action": "injectCSS",
+        "value": {
+          "white-space": "pre-wrap",
+          "overflow-wrap": "anywhere"
+        }
+      },
+      {
+        "selector": "img",
+        "action": "injectCSS",
+        "value": {
+          "max-width": "100%",
+          "height": "auto"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/sedgewick-reflow/heldout-v2/before/recording.mp4",
+      "after": "proof/kane/sedgewick-reflow/heldout-v2/attempt-1/after/recording.mp4",
+      "control": "proof/kane/sedgewick-reflow/heldout-v2/control/recording.mp4",
+      "verifiedAt": "2026-11-22T14:51:46.402Z",
+      "kaneRunIds": [
+        "035de390-b0b6-417d-a112-45ca76f46841",
+        "7b66edf0-0f93-4681-a93b-57ec96d56626",
+        "2a86e20d-930b-47c0-a192-0c7836f51718"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T14:51:46.402Z",
+        "event": "verified",
+        "before": "035de390-b0b6-417d-a112-45ca76f46841",
+        "control": "7b66edf0-0f93-4681-a93b-57ec96d56626",
+        "after": "2a86e20d-930b-47c0-a192-0c7836f51718"
+      }
+    ]
+  },
+  {
+    "id": "sfmta-pause-carousel",
+    "url": "https://www.sfmta.com/",
+    "persona": "keyboard-only",
+    "task": "Assert that the visible Play/Pause control for the homepage carousel is keyboard focusable. Activate it with Tab and Enter to pause the carousel. Verify the control reports aria-pressed false.",
+    "controlTask": "Click Play/Pause on the rotating homepage carousel to pause it. Verify the control reports aria-pressed false.",
+    "observedSelector": "span.play_pause",
+    "successSelector": "span.play_pause[aria-pressed=\"false\"]",
+    "site": "www.sfmta.com",
+    "match": "https://www.sfmta.com/",
+    "barrier": "The visible carousel Play/Pause control is a span with a button role and tabIndex -1, so Tab skips it.",
+    "rules": [
+      {
+        "selector": "span.play_pause",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": "span.play_pause",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": "span.play_pause",
+        "action": "restoreFocusOutline"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/sfmta-pause-carousel/2026-11-21T19-54-37.487Z/before/recording.mp4",
+      "after": "proof/kane/sfmta-pause-carousel/resume-2026-11-22T03-37-05.332Z/attempt-1/after/recording.mp4",
+      "control": "proof/kane/sfmta-pause-carousel/2026-11-21T19-54-37.487Z/control/recording.mp4",
+      "verifiedAt": "2026-11-22T03:40:14.102Z",
+      "kaneRunIds": [
+        "cf5ef348-c917-42a8-88c6-a12b55a51dc1",
+        "e8c80f58-6d81-4087-888d-496ad11882f7",
+        "19b9337d-a774-4d11-81ed-a96824e48fd0"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T03:40:14.102Z",
+        "event": "verified",
+        "before": "cf5ef348-c917-42a8-88c6-a12b55a51dc1",
+        "control": "e8c80f58-6d81-4087-888d-496ad11882f7",
+        "after": "19b9337d-a774-4d11-81ed-a96824e48fd0"
+      },
+      {
+        "at": "2026-11-22T10:53:42.693Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "ea41b548-420a-4e9e-a463-c2e71d05f51f",
+        "video": "proof/kane/sfmta-pause-carousel/2026-11-22T10-50-14.915Z/recheck-without/recording.mp4",
+        "with": "inconclusive",
+        "after": "b46f289c-47aa-4c7f-b845-d7f72e644763",
+        "afterVideo": "proof/kane/sfmta-pause-carousel/2026-11-22T10-50-14.915Z/recheck-with/recording.mp4"
+      }
+    ]
+  },
+  {
+    "id": "statcounter-edit-chart",
+    "url": "https://gs.statcounter.com/",
+    "persona": "keyboard-only",
+    "task": "Assert that the Edit Chart Data control below the main chart is keyboard focusable. Open it using the keyboard and verify the chart settings form shows the Region selector.",
+    "controlTask": "Click Edit Chart Data below the main chart. Verify the chart settings form shows the Region selector.",
+    "observedSelector": "#btn-edit-chart",
+    "successSelector": "form#statistics select#region",
+    "site": "gs.statcounter.com",
+    "match": "https://gs.statcounter.com/",
+    "barrier": "The snapshot exposes Edit Chart Data as text with tabIndex -1, leaving it out of the keyboard tab order.",
+    "rules": [
+      {
+        "selector": "#btn-edit-chart",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": "#btn-edit-chart",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": "#btn-edit-chart",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": "#btn-edit-chart",
+        "action": "restoreFocusOutline"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/statcounter-edit-chart/2026-11-22T10-51-35.095Z/recheck-without/recording.mp4",
+      "after": "proof/kane/statcounter-edit-chart/resume-2026-11-22T03-34-12.618Z/attempt-1/after/recording.mp4",
+      "control": "proof/kane/statcounter-edit-chart/resume-2026-11-22T03-30-36.444Z/control/recording.mp4",
+      "verifiedAt": "2026-11-22T03:35:35.039Z",
+      "kaneRunIds": [
+        "f55589b9-3c10-473c-ad12-810a1318a2a0",
+        "3440409a-ddc0-4aab-8970-c15388c4ef01",
+        "f48152cc-02a0-4c6b-bb2c-baac48869a75"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T03:35:35.039Z",
+        "event": "verified",
+        "before": "795097ec-b1b1-4511-9a13-2f68c5fa359b",
+        "control": "3440409a-ddc0-4aab-8970-c15388c4ef01",
+        "after": "f48152cc-02a0-4c6b-bb2c-baac48869a75"
+      },
+      {
+        "at": "2026-11-22T10:53:44.630Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "f55589b9-3c10-473c-ad12-810a1318a2a0",
+        "video": "proof/kane/statcounter-edit-chart/2026-11-22T10-51-35.095Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "603fcec9-a1a4-4497-956d-2678697066d7",
+        "afterVideo": "proof/kane/statcounter-edit-chart/2026-11-22T10-51-35.095Z/recheck-with/recording.mp4",
+        "replacedBaseline": "795097ec-b1b1-4511-9a13-2f68c5fa359b"
+      }
+    ]
+  },
+  {
+    "id": "uline-com-tr2",
+    "url": "https://www.uline.com/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+    "controlTask": "At normal width, read the passage beginning “Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca” and verify all its text is visible without horizontal scrolling.",
+    "observedSelector": "#tdfooter",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#tdfooter",
+        "equals": "Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#tdfooter"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "www.uline.com",
+    "match": "https://www.uline.com/",
+    "barrier": "At 320 CSS pixels, #tdfooter is 980 pixels wide and lays out the passage in a single 877-pixel row. Horizontal clipping cuts off the links beyond the viewport.",
+    "rules": [
+      {
+        "selector": "#container",
+        "action": "injectCSS",
+        "value": {
+          "min-width": "0",
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "#divContent",
+        "action": "injectCSS",
+        "value": {
+          "min-width": "0",
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "#divContentFooterWrap",
+        "action": "injectCSS",
+        "value": {
+          "min-width": "0",
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "#divFooterwrap",
+        "action": "injectCSS",
+        "value": {
+          "min-width": "0",
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "#newfooter",
+        "action": "injectCSS",
+        "value": {
+          "min-width": "0",
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "table",
+        "action": "injectCSS",
+        "value": {
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "#tdfooter",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "width": "auto",
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      },
+      {
+        "selector": "table.default",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "min-width": "0",
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "td.footerCell",
+        "action": "injectCSS",
+        "value": {
+          "display": "inline-block",
+          "max-width": "100%",
+          "box-sizing": "border-box",
+          "white-space": "normal",
+          "overflow-wrap": "anywhere"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v3/runs/uline-com-tr2/before/recording.mp4",
+      "after": "proof/heldout-v3/runs/uline-com-tr2/attempt-1/after/recording.mp4",
+      "control": "proof/heldout-v3/runs/uline-com-tr2/control/recording.mp4",
+      "verifiedAt": "2026-11-23T05:38:40.240Z",
+      "kaneRunIds": [
+        "7c9b662c-baad-446a-b711-427de114e305",
+        "8df9e40c-d299-46a4-949c-6abb22c5f400",
+        "1bcdba5e-99a6-45db-b735-5338ff6aee95"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-23T05:38:40.240Z",
+        "event": "verified",
+        "before": "7c9b662c-baad-446a-b711-427de114e305",
+        "control": "8df9e40c-d299-46a4-949c-6abb22c5f400",
+        "after": "1bcdba5e-99a6-45db-b735-5338ff6aee95"
+      }
+    ]
+  },
+  {
+    "id": "unglobalcompact-org-tr2",
+    "url": "https://unglobalcompact.org/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, locate the textbox named “Search”. Enter the text test and confirm the field contains it. Do not submit.",
+    "controlTask": "Click the public text field with the visible hint “Search”, type test and confirm the value. Do not submit.",
+    "observedSelector": "#search_keywords",
+    "requiredName": "Search",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#search_keywords",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "unglobalcompact.org",
+    "match": "https://unglobalcompact.org/",
+    "barrier": "The search input has no accessible name, so Reading view exposes it as an unnamed textbox.",
+    "rules": [
+      {
+        "selector": "#search_keywords",
+        "action": "addLabel",
+        "value": "Search"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v3/runs/unglobalcompact-org-tr2/before/recording.mp4",
+      "after": "proof/heldout-v3/runs/unglobalcompact-org-tr2/attempt-1/after/recording.mp4",
+      "control": "proof/heldout-v3/runs/unglobalcompact-org-tr2/control/recording.mp4",
+      "verifiedAt": "2026-11-23T05:33:21.516Z",
+      "kaneRunIds": [
+        "4f5b267c-d24a-42b3-ace1-4f820f11c118",
+        "41f120b2-7c1d-4413-a135-3b97bc64c070",
+        "6170405c-3ccc-47f0-b294-bb9c625ef702"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-23T05:33:21.516Z",
+        "event": "verified",
+        "before": "4f5b267c-d24a-42b3-ace1-4f820f11c118",
+        "control": "41f120b2-7c1d-4413-a135-3b97bc64c070",
+        "after": "6170405c-3ccc-47f0-b294-bb9c625ef702"
+      }
+    ]
+  },
+  {
+    "id": "unicode-standard-reflow",
+    "url": "https://www.unicode.org/standard/standard.html",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “Tech Site | Site Map | Search”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+    "controlTask": "At normal width, read the passage beginning “Tech Site | Site Map | Search” and verify all its text is visible without horizontal scrolling.",
+    "observedSelector": "table > tbody > tr:nth-of-type(1) > td > table > tbody > tr > td:nth-of-type(3)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "table > tbody > tr:nth-of-type(1) > td > table > tbody > tr > td:nth-of-type(3)",
+        "equals": "Tech Site | Site Map | Search"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "table > tbody > tr:nth-of-type(1) > td > table > tbody > tr > td:nth-of-type(3)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "www.unicode.org",
+    "match": "https://www.unicode.org/standard/standard.html",
+    "barrier": "The header table keeps its three cells in one row that is 441 CSS pixels wide. The “Tech Site | Site Map | Search” cell extends from x=225 to x=441, so horizontal clipping hides part of it in the 320-pixel viewport.",
+    "rules": [
+      {
+        "selector": "table",
+        "action": "injectCSS",
+        "value": {
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "tr",
+        "action": "injectCSS",
+        "value": {
+          "display": "flex",
+          "flex-wrap": "wrap"
+        }
+      },
+      {
+        "selector": "td",
+        "action": "injectCSS",
+        "value": {
+          "min-width": "0",
+          "max-width": "100%",
+          "box-sizing": "border-box",
+          "overflow-wrap": "anywhere"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/unicode-standard-reflow/heldout-v2/before/recording.mp4",
+      "after": "proof/kane/unicode-standard-reflow/heldout-v2/attempt-1/after/recording.mp4",
+      "control": "proof/kane/unicode-standard-reflow/heldout-v2/control/recording.mp4",
+      "verifiedAt": "2026-11-22T15:09:04.415Z",
+      "kaneRunIds": [
+        "c2ffd38a-25c1-4c2e-a1ba-038995c281fd",
+        "40d95c87-85fa-46e5-a225-98c1de0d5c4c",
+        "c7f3783a-11cb-483c-a120-5b385f7b671e"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T15:09:04.415Z",
+        "event": "verified",
+        "before": "c2ffd38a-25c1-4c2e-a1ba-038995c281fd",
+        "control": "40d95c87-85fa-46e5-a225-98c1de0d5c4c",
+        "after": "c7f3783a-11cb-483c-a120-5b385f7b671e"
+      }
+    ]
+  },
+  {
+    "id": "unitconverters-length",
+    "url": "https://www.unitconverters.net/",
+    "persona": "low-vision",
+    "task": "In the Length converter, assert that the complete To value field fits within the 320-pixel viewport. Enter 1 in From with Meter and Kilometer selected. Verify 0.001 appears in To without horizontal scrolling.",
+    "controlTask": "In the Length converter, select Meter and Kilometer if needed, type 1 in From, and verify 0.001 appears in To.",
+    "observedSelector": "table:has(#fromVal)",
+    "site": "www.unitconverters.net",
+    "match": "https://www.unitconverters.net/",
+    "barrier": "The Length converter lays out From and To in side-by-side table cells, placing the To field’s right edge at 351 pixels in a 320-pixel viewport.",
+    "rules": [
+      {
+        "selector": "table",
+        "action": "injectCSS",
+        "value": {
+          "display": "block"
+        }
+      },
+      {
+        "selector": "td",
+        "action": "injectCSS",
+        "value": {
+          "display": "block"
+        }
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/unitconverters-length/2026-11-22T10-52-45.985Z/recheck-without/recording.mp4",
+      "after": "proof/kane/unitconverters-length/2026-11-22T11-06-33.087Z/attempt-1/after/recording.mp4",
+      "control": "proof/kane/unitconverters-length/2026-11-22T11-06-33.087Z/control/recording.mp4",
+      "verifiedAt": "2026-11-22T11:08:04.844Z",
+      "kaneRunIds": [
+        "a496782e-9c55-4b05-86a4-5523941bb947",
+        "e12b4dae-6a65-4197-b490-eb2c796b3bb7",
+        "595c3531-393f-4c70-abd0-e5cd5093e8f7"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-21T19:50:04.037Z",
+        "event": "verified",
+        "before": "ea7fce95-82ed-4aba-a793-28df2ef33ebc",
+        "control": "7490470d-28a5-4bdd-aae8-5dc15271e6ca",
+        "after": "9f52a831-f32f-457e-a984-3dcd2f8034c8"
+      },
+      {
+        "at": "2026-11-22T10:53:28.158Z",
+        "event": "broken",
+        "without": "fail",
+        "runId": "a496782e-9c55-4b05-86a4-5523941bb947",
+        "video": "proof/kane/unitconverters-length/2026-11-22T10-52-45.985Z/recheck-without/recording.mp4",
+        "with": "fail",
+        "after": "46e6832d-8f7e-4238-807b-5aa3c7740af3",
+        "afterVideo": "proof/kane/unitconverters-length/2026-11-22T10-52-45.985Z/recheck-with/recording.mp4"
+      },
+      {
+        "at": "2026-11-22T11:08:04.844Z",
+        "event": "re-patched",
+        "before": "a496782e-9c55-4b05-86a4-5523941bb947",
+        "control": "e12b4dae-6a65-4197-b490-eb2c796b3bb7",
+        "after": "595c3531-393f-4c70-abd0-e5cd5093e8f7"
+      }
+    ]
+  },
+  {
+    "id": "v4-27c6f312c486-51e6e4ad",
+    "url": "https://csc.gov.in/",
+    "persona": "keyboard-only",
+    "task": "Open “ABOUT” from keyboard focus or with Arrow Down and follow “About MeitY”. Confirm the public destination /meity.",
+    "controlTask": "Hover “ABOUT”, click “About MeitY” and confirm /meity.",
+    "observedSelector": "#menuzord > ul > li:nth-of-type(2) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/meity"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#menuzord > ul > li:nth-of-type(2)",
+      "#menuzord > ul > li:nth-of-type(2) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ],
+    "site": "csc.gov.in",
+    "match": "https://csc.gov.in/",
+    "barrier": "Pointer hover opens the ABOUT submenu, but keyboard focus and Arrow Down leave it at display:none, so About MeitY cannot be reached.",
+    "rules": [
+      {
+        "action": "toggleOnActivate",
+        "trigger": "#menuzord > ul > li:nth-of-type(2) > a",
+        "target": "#menuzord > ul > li:nth-of-type(2) > ul",
+        "mode": "display",
+        "display": "block"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/before/recording.mp4",
+      "control": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/control/recording.mp4",
+      "after": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/attempt-1/after/recording.mp4",
+      "verifiedAt": "2026-11-23T16:06:39.566Z",
+      "kaneRunIds": [
+        "ad931ab3-4cf2-4a29-92b0-6e6c9a988dbc",
+        "1dff095d-b268-4388-97a2-90d491b4c91f",
+        "ebcd0a03-29f8-4c4f-9f6d-c068c2920ad6"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-23T16:06:39.566Z",
+        "event": "verified",
+        "before": "ad931ab3-4cf2-4a29-92b0-6e6c9a988dbc",
+        "control": "1dff095d-b268-4388-97a2-90d491b4c91f",
+        "after": "ebcd0a03-29f8-4c4f-9f6d-c068c2920ad6"
+      }
+    ]
+  },
+  {
+    "id": "v4-86f207deeb57-7bc09a21",
+    "url": "https://www.mass.edu/",
+    "persona": "keyboard-only",
+    "task": "Open “About” from keyboard focus or with Arrow Down and follow “The DHE”. Confirm the public destination /about/aboutdhe.asp.",
+    "controlTask": "Hover “About”, click “The DHE” and confirm /about/aboutdhe.asp.",
+    "observedSelector": "#mainnav > nav > ul > li:nth-of-type(1) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/about/aboutdhe.asp"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#mainnav > nav > ul > li:nth-of-type(1)",
+      "#mainnav > nav > ul > li:nth-of-type(1) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#mainnav > nav > ul > li:nth-of-type(1) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#mainnav > nav > ul > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#mainnav > nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ],
+    "site": "www.mass.edu",
+    "match": "https://www.mass.edu/",
+    "barrier": "The About submenu opens on pointer hover but remains hidden after keyboard focus and Arrow Down, leaving The DHE link unavailable.",
+    "rules": [
+      {
+        "selector": "#mainnav > nav > ul > li:nth-of-type(1)",
+        "action": "mirrorHoverToFocus"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/before/recording.mp4",
+      "control": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/control/recording.mp4",
+      "after": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/recording.mp4",
+      "verifiedAt": "2026-11-23T15:56:29.817Z",
+      "kaneRunIds": [
+        "efcfdd9f-fe30-4b4e-a7e7-f95a0d71eba3",
+        "385196a9-e165-4f24-8616-8fe5ceca6d61",
+        "cb96e3af-bc33-467f-adce-1b4d19ce6cde"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      }
+    },
+    "history": [
+      {
+        "at": "2026-11-23T15:56:29.817Z",
+        "event": "verified",
+        "before": "efcfdd9f-fe30-4b4e-a7e7-f95a0d71eba3",
+        "control": "385196a9-e165-4f24-8616-8fe5ceca6d61",
+        "after": "cb96e3af-bc33-467f-adce-1b4d19ce6cde"
+      }
+    ]
+  },
+  {
+    "id": "v5-c22b9bdca86b-71a63d77",
+    "url": "https://marinespecies.org/",
+    "persona": "keyboard-only",
+    "task": "Open “Tools” using the keyboard and read “Match taxa”.",
+    "controlTask": "Click “Tools” and read “Match taxa”.",
+    "observedSelector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+    "outcomeChecks": [
+      {
+        "kind": "visible",
+        "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > ul > li:nth-of-type(1) > a"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+        "action": "activate"
+      },
+      {
+        "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > ul > li:nth-of-type(1) > a",
+        "action": "observe"
+      }
+    ],
+    "site": "marinespecies.org",
+    "match": "https://marinespecies.org/",
+    "barrier": "The Tools trigger is an anchor without an href or explicit tabindex, so Tab skips it and keyboard users cannot open the dropdown containing Match taxa.",
+    "rules": [
+      {
+        "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+        "action": "makeFocusable"
+      },
+      {
+        "trigger": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+        "target": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7)",
+        "action": "toggleOnActivate",
+        "mode": "class",
+        "className": "open"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/before/recording.mp4",
+      "control": "proof/heldout-v5/kane/v5-c22b9bdca86b-71a63d77/control/recording.mp4",
+      "after": "proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/after/recording.mp4",
+      "verifiedAt": "2026-11-24T03:51:32.782Z",
+      "kaneRunIds": [
+        "997b7c62-125d-4613-8769-90ffafd35782",
+        "1ee0357f-4309-495b-b4c5-431c7a8aee5c",
+        "bc62f31e-4ff9-4ba8-880c-4dccdafe284d"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-24T03:51:32.782Z",
+        "event": "verified",
+        "before": "997b7c62-125d-4613-8769-90ffafd35782",
+        "control": "1ee0357f-4309-495b-b4c5-431c7a8aee5c",
+        "after": "bc62f31e-4ff9-4ba8-880c-4dccdafe284d"
+      }
+    ]
+  },
+  {
+    "id": "ventusky-precipitation",
+    "url": "https://www.ventusky.com/",
+    "persona": "keyboard-only",
+    "task": "First assert the Precipitation anchor in the Forecast panel has either a link destination or an explicit tabindex of 0. Use Tab and Enter to switch from Temperature to Precipitation and verify the 3 hours accumulation option.",
+    "controlTask": "Click Precipitation in the Forecast panel. Verify that the page shows the Precipitation map and the 3 hours accumulation option.",
+    "observedSelector": "#i > a:has(> span.rain)",
+    "successSelector": "#i > a.p:has(> span.rain)",
+    "site": "www.ventusky.com",
+    "match": "https://www.ventusky.com/",
+    "barrier": "The Forecast panel’s Precipitation control is an anchor exposed as text with no href or explicit tabindex, so it lacks native Tab focus and Enter activation.",
+    "rules": [
+      {
+        "selector": "#i > a:has(> span.rain)",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": "#i > a:has(> span.rain)",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": "#i > a:has(> span.rain)",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": "#i > a:has(> span.rain)",
+        "action": "restoreFocusOutline"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/ventusky-precipitation/2026-11-22T10-55-11.916Z/recheck-without/recording.mp4",
+      "after": "proof/kane/ventusky-precipitation/resume-2026-11-22T03-36-41.810Z/attempt-1/after/recording.mp4",
+      "control": "proof/kane/ventusky-precipitation/resume-2026-11-22T03-36-41.810Z/control/recording.mp4",
+      "verifiedAt": "2026-11-22T03:40:21.390Z",
+      "kaneRunIds": [
+        "c78d6006-c215-48b2-9e3b-6d4519c89c45",
+        "ee2bae32-d42c-4d5c-b0d9-54c82b6e4fe7",
+        "8559edaa-1afe-42f7-9068-5e7048846ba8"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T03:40:21.390Z",
+        "event": "verified",
+        "before": "aefafb4e-c1c2-49d7-9ee8-18a7c615aa28",
+        "control": "ee2bae32-d42c-4d5c-b0d9-54c82b6e4fe7",
+        "after": "8559edaa-1afe-42f7-9068-5e7048846ba8"
+      },
+      {
+        "at": "2026-11-22T10:59:23.102Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "c78d6006-c215-48b2-9e3b-6d4519c89c45",
+        "video": "proof/kane/ventusky-precipitation/2026-11-22T10-55-11.916Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "2f0d2a79-5516-4a7a-b642-0474f8b3edad",
+        "afterVideo": "proof/kane/ventusky-precipitation/2026-11-22T10-55-11.916Z/recheck-with/recording.mp4",
+        "replacedBaseline": "aefafb4e-c1c2-49d7-9ee8-18a7c615aa28"
+      }
+    ]
+  },
+  {
+    "id": "w3schools-select-swatch",
+    "url": "https://www.w3schools.com/colors/colors_picker.asp#main",
+    "persona": "keyboard-only",
+    "task": "First assert that the leftmost swatch in the top row of the color map, labeled #003366, has a link destination or an explicit tabindex of 0. Select that swatch with Tab and Enter, and verify the selected color reads #003366.",
+    "controlTask": "Click the leftmost dark blue hexagon in the top row of the color map. Verify the selected color reads #003366.",
+    "observedSelector": "#colormap area[alt=\"#003366\"]",
+    "successSelector": "#selectedcolor[style*=\"rgb(0, 51, 102)\"]",
+    "site": "www.w3schools.com",
+    "match": "https://www.w3schools.com/colors/colors_picker.asp",
+    "barrier": "The #003366 image-map area has no link destination or explicit tabindex and is exposed as unnamed text. The consent dialog holds focus, so keyboard activation could not be verified.",
+    "rules": [
+      {
+        "selector": "#colormap area[alt=\"#003366\"]",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": "#colormap area[alt=\"#003366\"]",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": "#colormap area[alt=\"#003366\"]",
+        "action": "addLabel",
+        "value": "#003366"
+      },
+      {
+        "selector": "#colormap area[alt=\"#003366\"]",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": "#colormap area[alt=\"#003366\"]",
+        "action": "restoreFocusOutline"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane/w3schools-select-swatch/resume-2026-11-22T03-44-36.344Z/before/recording.mp4",
+      "after": "proof/kane/w3schools-select-swatch/resume-2026-11-22T03-51-28.359Z/attempt-1/after/recording.mp4",
+      "control": "proof/kane/w3schools-select-swatch/resume-2026-11-22T03-44-36.344Z/control/recording.mp4",
+      "verifiedAt": "2026-11-22T03:53:09.774Z",
+      "kaneRunIds": [
+        "7666526b-ae9b-491c-8b07-5dffb0ed9f55",
+        "de5015b3-1e03-47aa-9b06-0bd09b66caf4",
+        "7bb23ef6-4d42-4a5f-8364-49a462a58513"
+      ]
+    },
+    "history": [
+      {
+        "at": "2026-11-22T03:53:09.774Z",
+        "event": "verified",
+        "before": "7666526b-ae9b-491c-8b07-5dffb0ed9f55",
+        "control": "de5015b3-1e03-47aa-9b06-0bd09b66caf4",
+        "after": "7bb23ef6-4d42-4a5f-8364-49a462a58513"
+      },
+      {
+        "at": "2026-11-22T10:59:00.995Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "e401c7ac-6b5c-47fe-ae31-8da3cdbf19f0",
+        "video": "proof/kane/w3schools-select-swatch/2026-11-22T10-55-38.882Z/recheck-without/recording.mp4",
+        "with": "inconclusive",
+        "after": "2484ecef-7287-44df-b3bc-abb8b396e170",
+        "afterVideo": "proof/kane/w3schools-select-swatch/2026-11-22T10-55-38.882Z/recheck-with/recording.mp4"
+      }
+    ]
+  }
+]

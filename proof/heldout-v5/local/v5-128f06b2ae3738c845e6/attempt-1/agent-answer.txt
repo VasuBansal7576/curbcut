@@ -1,0 +1,30 @@
+{
+  "barrier": "At 320 CSS pixels, the desktop flex layout places the 480-pixel-wide article row at x=320. Horizontal clipping leaves the passage outside the visible area.",
+  "rules": [
+    {
+      "selector": "main > section.first_wrap.row > div.wrap",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "auto", "min-width": "0", "max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "main > section.first_wrap.row > div.wrap > div.col_left",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "auto", "min-width": "0", "max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "main > section.first_wrap.row > div.wrap > div.col_left > ul.lank7",
+      "action": "injectCSS",
+      "value": {"width": "auto", "min-width": "0", "max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "main > section.first_wrap.row > div.wrap > div.col_left > ul.lank7 > li:first-of-type",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "auto", "min-width": "0", "max-width": "100%", "height": "auto", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "main > section.first_wrap.row > div.wrap > div.col_left > ul.lank7 > li:first-of-type > div.text",
+      "action": "injectCSS",
+      "value": {"width": "auto", "min-width": "0", "max-width": "100%", "height": "auto", "max-height": "none", "white-space": "normal", "overflow-wrap": "anywhere"}
+    }
+  ]
+}

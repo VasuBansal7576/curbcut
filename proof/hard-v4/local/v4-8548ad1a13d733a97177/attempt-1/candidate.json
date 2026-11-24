@@ -1,0 +1,69 @@
+{
+  "id": "v4-8548ad1a13d733a97177",
+  "url": "https://barracudacentral.org/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Welcome to BarracudaCentral.org, devoted to sharing information with Barracuda Networks customers and” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Welcome to BarracudaCentral.org, devoted to sharing information with Barracuda Networks customers and” at normal width.",
+  "observedSelector": "#content > div > div > p:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#content > div > div > p:nth-of-type(1)",
+      "equals": "Welcome to BarracudaCentral.org, devoted to sharing information with Barracuda Networks customers and"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#content > div > div > p:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "barracudacentral.org",
+  "match": "https://barracudacentral.org/",
+  "barrier": "The page wrapper is 950 pixels wide with a 750-pixel minimum. The nested column layout places the welcome paragraph between x=202 and x=680, so horizontal clipping cuts off the passage in the 320-pixel viewport.",
+  "rules": [
+    {
+      "selector": "#doc2",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "#bd",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "flex-direction": "column"
+      }
+    },
+    {
+      "selector": "div.yui-b",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "selector": "div.yui-gc",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto"
+      }
+    },
+    {
+      "selector": "div.yui-u.first",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,184 @@
+{
+  "runner": "playwright-cdp",
+  "checkedAt": "2026-11-23T17:54:53.102Z",
+  "historicalFinding": "All three historical runs loaded the task page and followed a parent /about link outside the registered journey. The browser route guard aborted that path, producing ERR_FAILED.",
+  "total": 3,
+  "passed": 3,
+  "rows": [
+    {
+      "id": "v4-0a57adb0d3db-c95f0ca7",
+      "url": "https://www.first.org/",
+      "historical": {
+        "kaneRunId": "357345f3-f141-4cb4-91a6-fa695d118d18",
+        "sessionLogAvailable": true,
+        "resultFile": "proof/hard-v4/kane/v4-0a57adb0d3db-c95f0ca7/before/result.json",
+        "evidencePack": "proof/hard-v4/kane/v4-0a57adb0d3db-c95f0ca7/before/c12dcbe2-a8f5-4166-a6c9-2d3daa69d71d.evidence",
+        "reason": "Step 2 failed: About FIRST opened https://www.first.org/about, which shows ERR_FAILED, so Mission Statement is inaccessible.",
+        "parentLink": "/about",
+        "allowedPaths": [
+          "/",
+          "/about/mission"
+        ],
+        "requests": [
+          {
+            "url": "https://www.first.org/",
+            "status": 200
+          },
+          {
+            "url": "https://www.first.org/about",
+            "status": 0
+          },
+          {
+            "url": "https://www.first.org/about",
+            "status": 0
+          },
+          {
+            "url": "https://www.first.org/about",
+            "status": 0
+          }
+        ],
+        "balanceDebited": 31.18399999999997
+      },
+      "access": {
+        "runner": "playwright-cdp",
+        "status": "pass",
+        "lanes": [
+          {
+            "persona": "keyboard-only",
+            "status": "pass",
+            "url": "https://www.first.org/",
+            "httpStatus": 200,
+            "width": 1280,
+            "browser": "159.0.8154.6"
+          },
+          {
+            "persona": "control",
+            "status": "pass",
+            "url": "https://www.first.org/",
+            "httpStatus": 200,
+            "width": 1280,
+            "browser": "159.0.8154.6"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v4-cc24dd9e10e4-3d3faa5f",
+      "url": "https://www.um-surabaya.ac.id/",
+      "historical": {
+        "kaneRunId": "f5e4ffa4-fb35-4f29-8143-10b7687cd219",
+        "sessionLogAvailable": true,
+        "resultFile": "proof/hard-v4/kane/v4-cc24dd9e10e4-3d3faa5f/before/result.json",
+        "evidencePack": "proof/hard-v4/kane/v4-cc24dd9e10e4-3d3faa5f/before/c2c8188d-3436-4a76-a98a-c6d17bd4d582.evidence",
+        "reason": "Step 2 failed: activating TENTANG UMSURA led to a site-unreachable error, leaving Penghargaan dan Prestasi inaccessible.",
+        "parentLink": "/about",
+        "allowedPaths": [
+          "/",
+          "/about/penghargaan"
+        ],
+        "requests": [
+          {
+            "url": "https://www.um-surabaya.ac.id/",
+            "status": 200
+          },
+          {
+            "url": "https://www.um-surabaya.ac.id/about",
+            "status": 0
+          },
+          {
+            "url": "https://www.um-surabaya.ac.id/about",
+            "status": 0
+          },
+          {
+            "url": "https://www.um-surabaya.ac.id/about",
+            "status": 0
+          }
+        ],
+        "balanceDebited": 33.47000000000003
+      },
+      "access": {
+        "runner": "playwright-cdp",
+        "status": "pass",
+        "lanes": [
+          {
+            "persona": "keyboard-only",
+            "status": "pass",
+            "url": "https://www.um-surabaya.ac.id/",
+            "httpStatus": 200,
+            "width": 1280,
+            "browser": "159.0.8154.6"
+          },
+          {
+            "persona": "control",
+            "status": "pass",
+            "url": "https://www.um-surabaya.ac.id/",
+            "httpStatus": 200,
+            "width": 1280,
+            "browser": "159.0.8154.6"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v4-9e4636960a02-49f50676",
+      "url": "https://www.ycombinator.com/",
+      "historical": {
+        "kaneRunId": "3a224095-ea2b-42f6-bd6c-b9442a5d5fa6",
+        "sessionLogAvailable": true,
+        "resultFile": "proof/hard-v4/kane/v4-9e4636960a02-49f50676/before/result.json",
+        "evidencePack": "proof/hard-v4/kane/v4-9e4636960a02-49f50676/before/ce0e432a-9d3d-451e-9839-61758fe5b2cd.evidence",
+        "reason": "Child agent failed: Failed at opening About: ycombinator.com/about shows ERR_FAILED, so the required keyboard journey cannot continue.",
+        "parentLink": "/about",
+        "allowedPaths": [
+          "/",
+          "/interviews"
+        ],
+        "requests": [
+          {
+            "url": "https://www.ycombinator.com/",
+            "status": 200
+          },
+          {
+            "url": "https://www.ycombinator.com/about",
+            "status": 0
+          },
+          {
+            "url": "https://www.ycombinator.com/about",
+            "status": 0
+          },
+          {
+            "url": "https://www.ycombinator.com/about",
+            "status": 0
+          },
+          {
+            "url": "https://www.ycombinator.com/about",
+            "status": 0
+          }
+        ],
+        "balanceDebited": 26.222200000000043
+      },
+      "access": {
+        "runner": "playwright-cdp",
+        "status": "pass",
+        "lanes": [
+          {
+            "persona": "keyboard-only",
+            "status": "pass",
+            "url": "https://www.ycombinator.com/",
+            "httpStatus": 200,
+            "width": 1280,
+            "browser": "159.0.8154.6"
+          },
+          {
+            "persona": "control",
+            "status": "pass",
+            "url": "https://www.ycombinator.com/",
+            "httpStatus": 200,
+            "width": 1280,
+            "browser": "159.0.8154.6"
+          }
+        ]
+      }
+    }
+  ]
+}

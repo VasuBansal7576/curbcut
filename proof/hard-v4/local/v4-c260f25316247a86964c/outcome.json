@@ -1,0 +1,106 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-c260f25316247a86964c",
+    "url": "https://www.11alive.com/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “Atlanta Police investigating Saturday night shooting at Target parking deck near Atlantic” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “Atlanta Police investigating Saturday night shooting at Target parking deck near Atlantic” at normal width.",
+    "observedSelector": "#main > div > div > div:nth-of-type(6) > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > ul > li:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#main > div > div > div:nth-of-type(6) > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > ul > li:nth-of-type(1)",
+        "equals": "Atlanta Police investigating Saturday night shooting at Target parking deck near Atlantic"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#main > div > div > div:nth-of-type(6) > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > ul > li:nth-of-type(1)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    }
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "The target does not fit the visible width.",
+    "geometry": {
+      "left": 330,
+      "right": 747.34375,
+      "width": 320,
+      "scrollX": 0,
+      "clientWidth": 750,
+      "scrollWidth": 750,
+      "inView": false,
+      "fits": false
+    }
+  },
+  "registeredControl": {
+    "geometry": {
+      "left": 385,
+      "right": 802.34375,
+      "width": 1280,
+      "scrollX": 0,
+      "clientWidth": 750,
+      "scrollWidth": 750,
+      "inView": false,
+      "fits": true
+    },
+    "url": "https://www.11alive.com/",
+    "checks": [
+      true,
+      true
+    ],
+    "status": "pass",
+    "reason": "Checked the declared outcome after the read action."
+  },
+  "runner": "playwright",
+  "status": "unresolved",
+  "reason": "The target does not fit the visible width.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/hard-v4/local/v4-c260f25316247a86964c/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "low-vision",
+      "status": "fail",
+      "reason": "The target does not fit the visible width.",
+      "file": "proof/hard-v4/local/v4-c260f25316247a86964c/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "low-vision",
+      "iteration": 1,
+      "status": "fail",
+      "reason": "The target does not fit the visible width.",
+      "file": "proof/hard-v4/local/v4-c260f25316247a86964c/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-2/after",
+      "persona": "low-vision",
+      "iteration": 2,
+      "status": "fail",
+      "reason": "The target does not fit the visible width.",
+      "file": "proof/hard-v4/local/v4-c260f25316247a86964c/attempt-2/after.json"
+    },
+    {
+      "name": "attempt-3/after",
+      "persona": "low-vision",
+      "iteration": 3,
+      "status": "fail",
+      "reason": "The target does not fit the visible width.",
+      "file": "proof/hard-v4/local/v4-c260f25316247a86964c/attempt-3/after.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

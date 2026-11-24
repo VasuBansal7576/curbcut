@@ -1,0 +1,110 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-63140921051a6d305c3c",
+    "url": "https://www.nd.edu/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “Notre Dame scholars and researchers pursue breakthroughs for a world in need.” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “Notre Dame scholars and researchers pursue breakthroughs for a world in need.” at normal width.",
+    "observedSelector": "#content > div:nth-of-type(2) > section:nth-of-type(1) > div > p:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#content > div:nth-of-type(2) > section:nth-of-type(1) > div > p:nth-of-type(1)",
+        "equals": "Notre Dame scholars and researchers pursue breakthroughs for a world in need."
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#content > div:nth-of-type(2) > section:nth-of-type(1) > div > p:nth-of-type(1)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    }
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "Checked the declared outcome after the read action.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/heldout-v5/local/v5-63140921051a6d305c3c/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "low-vision",
+      "status": "fail",
+      "reason": "The target does not fit the visible width.",
+      "file": "proof/heldout-v5/local/v5-63140921051a6d305c3c/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "low-vision",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/heldout-v5/local/v5-63140921051a6d305c3c/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/heldout-v5/local/v5-63140921051a6d305c3c/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v5-63140921051a6d305c3c",
+    "url": "https://www.nd.edu/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “Notre Dame scholars and researchers pursue breakthroughs for a world in need.” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “Notre Dame scholars and researchers pursue breakthroughs for a world in need.” at normal width.",
+    "observedSelector": "#content > div:nth-of-type(2) > section:nth-of-type(1) > div > p:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#content > div:nth-of-type(2) > section:nth-of-type(1) > div > p:nth-of-type(1)",
+        "equals": "Notre Dame scholars and researchers pursue breakthroughs for a world in need."
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#content > div:nth-of-type(2) > section:nth-of-type(1) > div > p:nth-of-type(1)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "www.nd.edu",
+    "match": "https://www.nd.edu/",
+    "barrier": "At 320 CSS pixels, the main grid and its secondary content are 344 pixels wide. The passage starts at pixel 16 and extends to pixel 328, where horizontal clipping hides its right edge.",
+    "rules": [
+      {
+        "selector": "#b-home #header",
+        "action": "injectCSS",
+        "value": {
+          "min-width": "0",
+          "flex-wrap": "wrap"
+        }
+      },
+      {
+        "selector": "#b-home #content, #b-home #content > div.page-secondary.full-width",
+        "action": "injectCSS",
+        "value": {
+          "min-width": "0",
+          "max-width": "100%"
+        }
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/heldout-v5/local/v5-63140921051a6d305c3c/attempt-1"
+}

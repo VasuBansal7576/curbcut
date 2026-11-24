@@ -1,0 +1,2251 @@
+{
+  "runner": "playwright",
+  "status": "fail",
+  "reason": "Tab traversal missed journey step 3.",
+  "steps": [
+    {
+      "selector": "#main-navigation > ul > li:nth-of-type(6) > button",
+      "action": "focus",
+      "traversal": {
+        "reached": true,
+        "tabs": 6
+      },
+      "visibility": null
+    },
+    {
+      "selector": "#main-navigation > ul > li:nth-of-type(6) > button",
+      "action": "key",
+      "key": "ArrowDown"
+    },
+    {
+      "selector": "#submenu-resources > div > div > dl:nth-of-type(1) > dd:nth-of-type(1) > dl > dd:nth-of-type(2) > a",
+      "action": "activate",
+      "traversal": {
+        "reached": false,
+        "tabs": 6,
+        "exhausted": true
+      }
+    }
+  ],
+  "url": "https://stackoverflow.co/",
+  "snapshot": {
+    "url": "https://stackoverflow.co/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#main-navigation > ul > li:nth-of-type(6) > button",
+          "parent": "ul.nav.list-reset > li:nth-of-type(6)",
+          "tag": "button",
+          "attributes": {
+            "aria-haspopup": "true",
+            "aria-expanded": "false",
+            "aria-controls": "submenu-resources",
+            "class": "nav__link",
+            "tabindex": "0"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "span",
+            "svg.nav__arrow.z-active"
+          ],
+          "box": [
+            856,
+            32,
+            101,
+            29
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.nav.list-reset > li:nth-of-type(6)",
+          "parent": "ul.nav.list-reset",
+          "tag": "li",
+          "attributes": {
+            "class": "nav__item"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "button.nav__link",
+            "#submenu-resources"
+          ],
+          "box": [
+            856,
+            32,
+            101,
+            29
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.nav.list-reset",
+          "parent": "#main-navigation",
+          "tag": "ul",
+          "attributes": {
+            "class": "nav list-reset fl-grow1"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.nav__item",
+            "li.nav__item",
+            "li.nav__item",
+            "li.nav__spacer",
+            "li.nav__item",
+            "li.nav__item"
+          ],
+          "box": [
+            235,
+            32,
+            724,
+            29
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#main-navigation",
+          "parent": "header.header.ps-fixed",
+          "tag": "nav",
+          "attributes": {
+            "class": "fl-grow1",
+            "id": "main-navigation",
+            "aria-label": "Main navigation"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.nav.list-reset"
+          ],
+          "box": [
+            235,
+            32,
+            724,
+            29
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "header.header.ps-fixed",
+          "parent": "#__nuxt",
+          "tag": "header",
+          "attributes": {
+            "class": "header ps-fixed t0 r0 l0 header--inverted"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.bg-black.header__bg",
+            "a.logo.ps-relative",
+            "#main-navigation",
+            "div.ml12.d-flex",
+            "button.s-btn.s-btn__clear"
+          ],
+          "box": [
+            12,
+            12,
+            1256,
+            69
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "fixed",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "1000",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#__nuxt",
+          "tag": "div",
+          "attributes": {
+            "id": "__nuxt"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.nuxt-loading-indicator",
+            "header.header.ps-fixed",
+            "div.header-padding.fc-white",
+            "main",
+            "#footer-global"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            4736
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#submenu-resources",
+          "parent": "ul.nav.list-reset > li:nth-of-type(6)",
+          "tag": "div",
+          "attributes": {
+            "role": "menu",
+            "id": "submenu-resources",
+            "class": "d-none nav__component"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.wmx4.ml-auto"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "100",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#submenu-resources > div > div > dl:nth-of-type(1) > dd:nth-of-type(1) > dl > dd:nth-of-type(2) > a",
+          "parent": "dl.mb6 > dd:nth-of-type(2)",
+          "tag": "a",
+          "attributes": {
+            "class": "d-block py2"
+          },
+          "hoverHandlers": [],
+          "text": "Stack Ads",
+          "children": [
+            "svg.svg-icon.IconArrowRight"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "dl.mb6 > dd:nth-of-type(2)",
+          "parent": "dl.mb6",
+          "tag": "dd",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.d-block.py2"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "dl.mb6",
+          "parent": "div.menu-resources.d-flex > dl:nth-of-type(1) > dd:nth-of-type(1)",
+          "tag": "dl",
+          "attributes": {
+            "class": "mb6"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "dt.fw-medium.mb4",
+            "dd",
+            "dd"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.menu-resources.d-flex > dl:nth-of-type(1) > dd:nth-of-type(1)",
+          "parent": "div.menu-resources.d-flex > dl:nth-of-type(1)",
+          "tag": "dd",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "dl.mb6"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.menu-resources.d-flex > dl:nth-of-type(1)",
+          "tag": "dl",
+          "attributes": {
+            "class": "flex--item6"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "dt.fw-semibold.bb",
+            "dd",
+            "dd",
+            "dd"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": ".nav__link[data-v-77333656]::after, .nav__link[data-v-77333656]:hover",
+          "declarations": "background: var(--color-orange); color: var(--white) !important;",
+          "conditions": []
+        },
+        {
+          "selector": ".header--inverted .nav__link[data-v-77333656]::after, .header--inverted .nav__link[data-v-77333656]:hover",
+          "declarations": "background: var(--black-500); color: var(--white) !important;",
+          "conditions": []
+        },
+        {
+          "selector": ".nav__link[data-v-77333656]:hover::before",
+          "declarations": "transform: scaleY(0);",
+          "conditions": []
+        },
+        {
+          "selector": ".nav__link[data-v-77333656]:hover::after",
+          "declarations": "transform: scale(1);",
+          "conditions": []
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#main-navigation > ul > li:nth-of-type(6)",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 856,
+        "width": 101
+      },
+      {
+        "selector": "#submenu-resources",
+        "role": "menu",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#main-navigation > ul > li:nth-of-type(6) > button",
+        "role": "button",
+        "name": "Resources",
+        "state": "expanded false",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": "0",
+        "expanded": "false",
+        "controls": "submenu-resources",
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 856,
+        "width": 101
+      },
+      {
+        "selector": "#submenu-resources > div > div > dl:nth-of-type(1) > dd:nth-of-type(1) > dl > dd:nth-of-type(2) > a",
+        "role": "link",
+        "name": "Stack Ads",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "span",
+        "role": "text",
+        "name": "Resources",
+        "state": "",
+        "tag": "span",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 868,
+        "width": 57
+      },
+      {
+        "selector": "svg.nav__arrow.z-active",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "svg",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 933,
+        "width": 12
+      },
+      {
+        "selector": "ul.nav.list-reset",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 235,
+        "width": 724
+      },
+      {
+        "selector": "body",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#__nuxt",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#teleports",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "script",
+        "role": "text",
+        "name": "window.__NUXT__={};window.__NUXT__.config={public:{branch:\"main\",baseUrl:\"https://stackoverflow.co\",context:\"production\",googleAnalytics:\"G-XQX7D4T574\",onetrust:\"d06435e0-17fb-4659-9a14-1930a6e0be80\",",
+        "state": "",
+        "tag": "script",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#__NUXT_DATA__",
+        "role": "text",
+        "name": "[{\"state\":1,\"once\":5,\"_errors\":6,\"serverRendered\":8,\"prerenderedAt\":-1},[\"Reactive\",2],{\"$ssanity-preview\":3,\"$scontactModal\":3,\"$ssanity-preview-environment\":4},false,\"checking\",[\"Set\"],[\"ShallowReac",
+        "state": "",
+        "tag": "script",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "div.nuxt-loading-indicator",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "header.header.ps-fixed",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 12,
+        "width": 1256
+      },
+      {
+        "selector": "div.bg-black.header__bg",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 12,
+        "width": 1256
+      },
+      {
+        "selector": "a.logo.ps-relative",
+        "role": "link",
+        "name": "Go to homepage",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 36,
+        "width": 175
+      },
+      {
+        "selector": "#main-navigation",
+        "role": "navigation",
+        "name": "Main navigation",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 235,
+        "width": 724
+      },
+      {
+        "selector": "li.nav__item",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 760,
+        "width": 92
+      },
+      {
+        "selector": "a.nav__link.nav--dim-on-active",
+        "role": "link",
+        "name": "Stack Ads",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 3,
+        "tabIndexAttribute": "3",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 488,
+        "width": 80
+      },
+      {
+        "selector": "a.nav__link",
+        "role": "link",
+        "name": "Partnerships",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 5,
+        "tabIndexAttribute": "5",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 760,
+        "width": 92
+      },
+      {
+        "selector": "div.ml12.d-flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 971,
+        "width": 273
+      },
+      {
+        "selector": "a.s-btn--bright.primary-cta",
+        "role": "link",
+        "name": "Get started",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 971,
+        "width": 111
+      },
+      {
+        "selector": "button.s-btn--bright.primary-cta",
+        "role": "button",
+        "name": "Contact sales",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1094,
+        "width": 150
+      },
+      {
+        "selector": "div.header-padding.fc-white",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.wmx11.mx-auto",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 80,
+        "width": 1120
+      },
+      {
+        "selector": "div.flex--item5.md\\:mb48",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 104,
+        "width": 427
+      },
+      {
+        "selector": "h1.fs-display2.ff-stack-sans-headline-notch",
+        "role": "heading",
+        "name": "We know knowledge",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 104,
+        "width": 427
+      },
+      {
+        "selector": "p.fs-subheading.fc-black-250",
+        "role": "text",
+        "name": "Helping communities of people and AI get trusted knowledge since 2008. We’re building the products that put it to work.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 104,
+        "width": 427
+      },
+      {
+        "selector": "a.s-btn.s-btn__tonal",
+        "role": "link",
+        "name": "See Stack Internal",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-flex",
+        "left": 104,
+        "width": 144
+      },
+      {
+        "selector": "div.flex--item7.sm\\:ml0",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 579,
+        "width": 597
+      },
+      {
+        "selector": "div.stats.fc-black",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 579,
+        "width": 597
+      },
+      {
+        "selector": "div.stat.flex--item6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 604,
+        "width": 572
+      },
+      {
+        "selector": "div.stat__header.d-flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 604,
+        "width": 290
+      },
+      {
+        "selector": "div.stat__value.px12",
+        "role": "text",
+        "name": "113",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 604,
+        "width": 108
+      },
+      {
+        "selector": "div.stat__unit.fl1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 711,
+        "width": 182
+      },
+      {
+        "selector": "div.stat__text.fc-black-350",
+        "role": "text",
+        "name": "times knowledge has been reused",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 893,
+        "width": 262
+      },
+      {
+        "selector": "div.ps-absolute.l0",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "main",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tag": "main",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.h64.py12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.marquee-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.marquee-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.marquee-item",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 4182,
+        "width": 154
+      },
+      {
+        "selector": "img.p-logo--monochrome.p-logo",
+        "role": "img",
+        "name": "Microsoft logo",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 4198,
+        "width": 122
+      },
+      {
+        "selector": "#products",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "h2.fs-headline1.ff-stack-sans-headline",
+        "role": "heading",
+        "name": "Other ways we can help",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 104,
+        "width": 512
+      },
+      {
+        "selector": "div.d-flex.md\\:fd-column",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 98,
+        "width": 1084
+      },
+      {
+        "selector": "div.flex--item4.d-flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 104,
+        "width": 357
+      },
+      {
+        "selector": "div.d-flex.fw-medium",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 678,
+        "width": 343
+      },
+      {
+        "selector": "div.bg-black-600.fc-black-200",
+        "role": "text",
+        "name": "77%",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 678,
+        "width": 67
+      },
+      {
+        "selector": "div.lh-sm",
+        "role": "text",
+        "name": "of devs have a Stack Overflow account",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 753,
+        "width": 268
+      },
+      {
+        "selector": "h2.fs-headline2.ff-stack-sans-headline",
+        "role": "heading",
+        "name": "We want to be the world’s most vital source for technologists",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 104,
+        "width": 512
+      },
+      {
+        "selector": "p.fc-black-500.fs-body3",
+        "role": "text",
+        "name": "Engage developers where it matters — in their daily workflow.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 678,
+        "width": 344
+      },
+      {
+        "selector": "div.d-flex.mt-auto",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 136,
+        "width": 293
+      },
+      {
+        "selector": "a.s-btn.s-btn--bright",
+        "role": "link",
+        "name": "Explore integrations",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 136,
+        "width": 206
+      },
+      {
+        "selector": "div.flex--item8.as-end",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 461,
+        "width": 715
+      },
+      {
+        "selector": "img.us-none.pe-none",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 461,
+        "width": 703
+      },
+      {
+        "selector": "div.bg-blue-extra-light.fc-blue-dark",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 116,
+        "width": 1048
+      },
+      {
+        "selector": "div.ps-relative",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 116,
+        "width": 1048
+      },
+      {
+        "selector": "div.scroll-container-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 116,
+        "width": 1048
+      },
+      {
+        "selector": "div.d-flex.gs32",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 100,
+        "width": 1080
+      },
+      {
+        "selector": "div.flex--item4.wmn2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 825,
+        "width": 307
+      },
+      {
+        "selector": "h3.ff-stack-sans-headline.fs-subheading",
+        "role": "heading",
+        "name": "Protect",
+        "state": "",
+        "tag": "h3",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 825,
+        "width": 307
+      },
+      {
+        "selector": "p.fs-body1.mb0",
+        "role": "text",
+        "name": "Stack Internal is an auditable, secure perimeter for your proprietary knowledge. Humans and agents only access what they need.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 825,
+        "width": 307
+      },
+      {
+        "selector": "div.flex--item6.bg-off-white",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 646,
+        "width": 530
+      },
+      {
+        "selector": "div.d-flex.ai-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 136,
+        "width": 227
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "2024 & 2025",
+        "state": "",
+        "tag": "strong",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 176,
+        "width": 85
+      },
+      {
+        "selector": "div.d-flex.gsy",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 136,
+        "width": 466
+      },
+      {
+        "selector": "a.flex--item.mt-auto",
+        "role": "link",
+        "name": "Our solutions",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 678,
+        "width": 159
+      },
+      {
+        "selector": "a.fc-black.h\\:fc-blue",
+        "role": "link",
+        "name": "(source)",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 975,
+        "width": 46
+      },
+      {
+        "selector": "div.d-flex.ai-end",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 678,
+        "width": 466
+      },
+      {
+        "selector": "section.bg-blue-dark.fc-white",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.d-flex.g1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 104,
+        "width": 268
+      },
+      {
+        "selector": "button.s-btn.bar0",
+        "role": "button",
+        "name": "Show next testimonial",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 139,
+        "width": 34
+      },
+      {
+        "selector": "div.ml-auto.bg-blue-light",
+        "role": "text",
+        "name": "1 / 0",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 174,
+        "width": 65
+      },
+      {
+        "selector": "div.bg-white.as-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 256,
+        "width": 100
+      },
+      {
+        "selector": "div.h6.bg-orange",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 256,
+        "width": 0
+      },
+      {
+        "selector": "div.quotes.d-flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 104,
+        "width": 1072
+      },
+      {
+        "selector": "section.wmx11.mx-auto",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 80,
+        "width": 1120
+      },
+      {
+        "selector": "p.fs-body3.fc-black-400",
+        "role": "text",
+        "name": "To get there, we’re working to cultivate community, power learning and unlock growth — for developers, teams and businesses across the world.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 104,
+        "width": 512
+      },
+      {
+        "selector": "div.d-flex.gs16",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 96,
+        "width": 1088
+      },
+      {
+        "selector": "div.solution--active.solution",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 104,
+        "width": 347
+      },
+      {
+        "selector": "button.solution__header.ff-stack-sans",
+        "role": "button",
+        "name": "Communities that last",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 104,
+        "width": 347
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#main-navigation > ul > li:nth-of-type(6) > button",
+          "parent": "ul.nav.list-reset > li:nth-of-type(6)",
+          "tag": "button",
+          "attributes": {
+            "aria-haspopup": "true",
+            "aria-expanded": "true",
+            "aria-controls": "submenu-resources",
+            "class": "nav__link nav__link--active",
+            "tabindex": "0"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "span",
+            "svg.nav__arrow.z-active"
+          ],
+          "box": [
+            809,
+            31,
+            119,
+            32
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.nav.list-reset > li:nth-of-type(6)",
+          "parent": "ul.nav.list-reset",
+          "tag": "li",
+          "attributes": {
+            "class": "nav__item"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "button.nav__link.nav__link--active",
+            "#submenu-resources"
+          ],
+          "box": [
+            809,
+            31,
+            119,
+            32
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.nav.list-reset",
+          "parent": "#main-navigation",
+          "tag": "ul",
+          "attributes": {
+            "class": "nav list-reset fl-grow1"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.nav__item",
+            "li.nav__item",
+            "li.nav__item",
+            "li.nav__spacer",
+            "li.nav__item",
+            "li.nav__item"
+          ],
+          "box": [
+            235,
+            31,
+            695,
+            32
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#main-navigation",
+          "parent": "header.header.ps-fixed",
+          "tag": "nav",
+          "attributes": {
+            "class": "fl-grow1",
+            "id": "main-navigation",
+            "aria-label": "Main navigation"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.nav.list-reset"
+          ],
+          "box": [
+            235,
+            31,
+            695,
+            32
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "header.header.ps-fixed",
+          "parent": "#__nuxt",
+          "tag": "header",
+          "attributes": {
+            "class": "header ps-fixed t0 r0 l0 header--inverted"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.bg-black.header__bg",
+            "a.logo.ps-relative",
+            "#main-navigation",
+            "div.ml12.d-flex",
+            "button.s-btn.s-btn__clear"
+          ],
+          "box": [
+            12,
+            12,
+            1256,
+            69
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "fixed",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "1000",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#__nuxt",
+          "tag": "div",
+          "attributes": {
+            "id": "__nuxt"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.nuxt-loading-indicator",
+            "header.header.ps-fixed",
+            "div.header-padding.fc-white",
+            "main",
+            "#footer-global"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            5163
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#submenu-resources",
+          "parent": "ul.nav.list-reset > li:nth-of-type(6)",
+          "tag": "div",
+          "attributes": {
+            "role": "menu",
+            "id": "submenu-resources",
+            "class": "d-block nav__component"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.wmx4.ml-auto"
+          ],
+          "box": [
+            12,
+            81,
+            1256,
+            210
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "100",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#submenu-resources > div > div > dl:nth-of-type(1) > dd:nth-of-type(1) > dl > dd:nth-of-type(2) > a",
+          "parent": "dl.mb6 > dd:nth-of-type(2)",
+          "tag": "a",
+          "attributes": {
+            "class": "d-block py2"
+          },
+          "hoverHandlers": [],
+          "text": "Stack Ads",
+          "children": [
+            "svg.svg-icon.IconArrowRight"
+          ],
+          "box": [
+            844,
+            189,
+            188,
+            26
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "dl.mb6 > dd:nth-of-type(2)",
+          "parent": "dl.mb6",
+          "tag": "dd",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.d-block.py2"
+          ],
+          "box": [
+            844,
+            189,
+            188,
+            26
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "dl.mb6",
+          "parent": "div.menu-resources.d-flex > dl:nth-of-type(1) > dd:nth-of-type(1)",
+          "tag": "dl",
+          "attributes": {
+            "class": "mb6"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "dt.fw-medium.mb4",
+            "dd",
+            "dd"
+          ],
+          "box": [
+            844,
+            139,
+            188,
+            76
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.menu-resources.d-flex > dl:nth-of-type(1) > dd:nth-of-type(1)",
+          "parent": "div.menu-resources.d-flex > dl:nth-of-type(1)",
+          "tag": "dd",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "dl.mb6"
+          ],
+          "box": [
+            844,
+            139,
+            188,
+            76
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.menu-resources.d-flex > dl:nth-of-type(1)",
+          "tag": "dl",
+          "attributes": {
+            "class": "flex--item6"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "dt.fw-semibold.bb",
+            "dd",
+            "dd",
+            "dd"
+          ],
+          "box": [
+            844,
+            98,
+            188,
+            177
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": ".nav__link[data-v-77333656]::after, .nav__link[data-v-77333656]:hover",
+          "declarations": "background: var(--color-orange); color: var(--white) !important;",
+          "conditions": []
+        },
+        {
+          "selector": ".header--inverted .nav__link[data-v-77333656]::after, .header--inverted .nav__link[data-v-77333656]:hover",
+          "declarations": "background: var(--black-500); color: var(--white) !important;",
+          "conditions": []
+        },
+        {
+          "selector": ".nav__link[data-v-77333656]:hover::before",
+          "declarations": "transform: scaleY(0);",
+          "conditions": []
+        },
+        {
+          "selector": ".nav__link[data-v-77333656]:hover::after",
+          "declarations": "transform: scale(1);",
+          "conditions": []
+        },
+        {
+          "selector": ".header:hover a[data-v-7442e526]",
+          "declarations": "opacity: 1;",
+          "conditions": []
+        }
+      ]
+    }
+  }
+}

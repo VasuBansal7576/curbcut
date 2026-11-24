@@ -1,0 +1,9 @@
+{
+  "barrier": "Pointer hover opens the PROFIL submenu, but keyboard focus and Arrow Down leave it at display: none, so the Profil Perusahaan link cannot be activated.",
+  "rules": [
+    {
+      "selector": "#navbarCollapse ul.main-nav > li:nth-of-type(2)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

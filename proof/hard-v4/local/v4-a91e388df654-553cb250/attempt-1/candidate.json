@@ -1,0 +1,52 @@
+{
+  "id": "v4-a91e388df654-553cb250",
+  "url": "https://cardano.org/",
+  "persona": "keyboard-only",
+  "task": "Open “English” from keyboard focus or with Arrow Down and follow “Deutsch85%”. Confirm the public destination /de/.",
+  "controlTask": "Hover “English”, click “Deutsch85%” and confirm /de/.",
+  "observedSelector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/de/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)",
+    "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(2) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "cardano.org",
+  "match": "https://cardano.org/",
+  "barrier": "The English language dropdown opens on pointer hover, but focusing English and pressing Arrow Down leaves Deutsch85% unavailable for keyboard activation.",
+  "rules": [
+    {
+      "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

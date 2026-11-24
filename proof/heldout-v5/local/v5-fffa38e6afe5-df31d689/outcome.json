@@ -1,0 +1,96 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-fffa38e6afe5-df31d689",
+    "url": "https://grants.gov/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels with vertical scrolling only, click “Here's how you know” and read “Official websites use .govA .gov website belongs to an official government organization in the Unite”.",
+    "controlTask": "Click “Here's how you know” and read “Official websites use .govA .gov website belongs to an official government organization in the Unite”.",
+    "observedSelector": "#topOfPage > div > header > div > button",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#gov-banner-default-default > div > div:nth-of-type(1) > div > p",
+        "equals": "Official websites use .govA .gov website belongs to an official government organization in the Unite"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#gov-banner-default-default"
+    ],
+    "journey": [
+      {
+        "selector": "#topOfPage > div > header > div > button",
+        "action": "activate"
+      },
+      {
+        "selector": "#gov-banner-default-default > div > div:nth-of-type(1) > div > p",
+        "action": "observe"
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "unresolved",
+  "reason": "The journey outcome already holds.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-fffa38e6afe5-df31d689/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "low-vision",
+      "status": "fail",
+      "reason": "Journey step 2 extends past the visible width.",
+      "file": "proof/heldout-v5/local/v5-fffa38e6afe5-df31d689/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "low-vision",
+      "iteration": 1,
+      "status": "inconclusive",
+      "reason": "The journey outcome already holds.",
+      "file": "proof/heldout-v5/local/v5-fffa38e6afe5-df31d689/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-2/after",
+      "persona": "low-vision",
+      "iteration": 2,
+      "status": "inconclusive",
+      "reason": "The journey outcome already holds.",
+      "file": "proof/heldout-v5/local/v5-fffa38e6afe5-df31d689/attempt-2/after.json"
+    },
+    {
+      "name": "attempt-3/after",
+      "persona": "low-vision",
+      "iteration": 3,
+      "status": "fail",
+      "reason": "Journey step 2 extends past the visible width.",
+      "file": "proof/heldout-v5/local/v5-fffa38e6afe5-df31d689/attempt-3/after.json"
+    },
+    {
+      "name": "attempt-4/after",
+      "persona": "low-vision",
+      "iteration": 4,
+      "status": "inconclusive",
+      "reason": "The journey outcome already holds.",
+      "file": "proof/heldout-v5/local/v5-fffa38e6afe5-df31d689/attempt-4/after.json"
+    },
+    {
+      "name": "attempt-5/after",
+      "persona": "low-vision",
+      "iteration": 5,
+      "status": "inconclusive",
+      "reason": "The journey outcome already holds.",
+      "file": "proof/heldout-v5/local/v5-fffa38e6afe5-df31d689/attempt-5/after.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

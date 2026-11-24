@@ -1,0 +1,22 @@
+{
+  "barrier": "At 320 CSS pixels, Solutions receives focus, but ArrowDown leaves its dropdown at display:none, so For Advisors cannot be activated.",
+  "rules": [
+    {
+      "selector": "header.header.header-marketing > div.header-container.container",
+      "action": "injectCSS",
+      "value": {"flex-wrap": "wrap", "height": "auto"}
+    },
+    {
+      "selector": "#menu-main-navigation",
+      "action": "injectCSS",
+      "value": {"display": "flex", "flex-wrap": "wrap", "max-width": "100%", "min-width": "0"}
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#menu-main-navigation > div:nth-of-type(1) > a.dropdown-toggle",
+      "target": "#menu-main-navigation > div:nth-of-type(1) > div.dropdown-menu",
+      "mode": "display",
+      "display": "block"
+    }
+  ]
+}

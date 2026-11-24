@@ -1,0 +1,27 @@
+{
+  "barrier": "At 320 CSS pixels, the collapsed mobile navigation leaves the Product trigger out of view, so hovering times out and the Academy inspiration link stays hidden.",
+  "rules": [
+    {
+      "selector": "div.navbar_container",
+      "action": "injectCSS",
+      "value": {"flex-wrap": "wrap"}
+    },
+    {
+      "selector": "nav.navbar_menu.w-nav-menu",
+      "action": "injectCSS",
+      "value": {"display": "contents"}
+    },
+    {
+      "selector": "div.navbar_menu-left",
+      "action": "injectCSS",
+      "value": {"width": "100%", "min-width": "0", "flex-direction": "column"}
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#w-dropdown-toggle-0",
+      "target": "#w-dropdown-list-0",
+      "mode": "display",
+      "display": "block"
+    }
+  ]
+}

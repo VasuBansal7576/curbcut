@@ -1,0 +1,53 @@
+{
+  "id": "v5-df3468e47d73-7e1b1979",
+  "url": "https://asm.org/",
+  "persona": "keyboard-only",
+  "task": "Open “Who We Are” from keyboard focus or with Arrow Down and follow “About ASM”. Confirm the public destination /about-asm.",
+  "controlTask": "Hover “Who We Are”, click “About ASM” and confirm /about-asm.",
+  "observedSelector": "#header > header > nav:nth-of-type(2) > ul > li:nth-of-type(1) > button",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/about-asm"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#header > header > nav:nth-of-type(2) > ul > li:nth-of-type(1)",
+    "#who_we_are"
+  ],
+  "journey": [
+    {
+      "selector": "#header > header > nav:nth-of-type(2) > ul > li:nth-of-type(1) > button",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#header > header > nav:nth-of-type(2) > ul > li:nth-of-type(1) > button",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#who_we_are > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "asm.org",
+  "match": "https://asm.org/",
+  "barrier": "Hovering over Who We Are opens the submenu, but keyboard traversal reaches the button with the submenu still hidden, and the button lacks focus at the Arrow Down step.",
+  "rules": [
+    {
+      "selector": "#header .header-nav-menu > li.header-nav-item:has(> #who_we_are)",
+      "action": "mirrorHoverEventToFocus",
+      "value": "pointerover"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

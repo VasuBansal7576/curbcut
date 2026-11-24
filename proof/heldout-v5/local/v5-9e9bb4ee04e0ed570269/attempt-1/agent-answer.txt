@@ -1,0 +1,44 @@
+{
+  "barrier": "The table-based layout holds the main content at 1000 CSS pixels. At a 320 CSS pixel viewport, the passage extends from x=10 to x=675, where the page’s horizontal clipping cuts off the text.",
+  "rules": [
+    {
+      "selector": "#main-table, #main-table > tbody, #main-table > tbody > tr, #main-table > tbody > tr > td:nth-of-type(2)",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#main-table > tbody > tr > td:nth-of-type(2) > div, #main-table > tbody > tr > td:nth-of-type(2) > div > div:nth-of-type(2), #main-table main[role=\"main\"]",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#main-table main[role=\"main\"] > .row.row-layout",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#main-table main[role=\"main\"] > .row.row-layout > .col.col-layout:first-of-type",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#main-table, #main-table > tbody, #main-table > tbody > tr, #main-table > tbody > tr > td:nth-of-type(2)",
+      "count": 4,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "table",
+          "id": "main-table",
+          "classes": [
+            "table",
+            "table-borderless",
+            "table-sm"
+          ],
+          "label": "Sign In Can You RUN ItCan I Run AIGame ListsMy Computer DetailsRate My PCWhat Will RUN ItGPU Compare"
+        },
+        {
+          "tag": "tbody",
+          "classes": [],
+          "label": "Sign In Can You RUN ItCan I Run AIGame ListsMy Computer DetailsRate My PCWhat Will RUN ItGPU Compare"
+        },
+        {
+          "tag": "tr",
+          "classes": [],
+          "label": "Sign In Can You RUN ItCan I Run AIGame ListsMy Computer DetailsRate My PCWhat Will RUN ItGPU Compare"
+        },
+        {
+          "tag": "td",
+          "classes": [],
+          "label": "Sign In Can You RUN ItCan I Run AIGame ListsMy Computer DetailsRate My PCWhat Will RUN ItGPU Compare"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "#main-table > tbody > tr > td:nth-of-type(2) > div, #main-table > tbody > tr > td:nth-of-type(2) > div > div:nth-of-type(2), #main-table main[role=\"main\"]",
+      "count": 3,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [],
+          "label": "Sign In Can You RUN ItCan I Run AIGame ListsMy Computer DetailsRate My PCWhat Will RUN ItGPU Compare"
+        },
+        {
+          "tag": "div",
+          "classes": [],
+          "label": "Can I Run It? System Requirements Lab analyzes your computer in just seconds, and it's FREE. See for"
+        },
+        {
+          "tag": "main",
+          "classes": [],
+          "role": "main",
+          "label": "Can I Run It? System Requirements Lab analyzes your computer in just seconds, and it's FREE. See for"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "field": "selector",
+      "selector": "#main-table main[role=\"main\"] > .row.row-layout",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "row",
+            "row-layout"
+          ],
+          "label": "Can I Run It? System Requirements Lab analyzes your computer in just seconds, and it's FREE. See for"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "field": "selector",
+      "selector": "#main-table main[role=\"main\"] > .row.row-layout > .col.col-layout:first-of-type",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "col",
+            "col-layout"
+          ],
+          "label": "Can I Run It? System Requirements Lab analyzes your computer in just seconds, and it's FREE. See for"
+        }
+      ]
+    }
+  ]
+}

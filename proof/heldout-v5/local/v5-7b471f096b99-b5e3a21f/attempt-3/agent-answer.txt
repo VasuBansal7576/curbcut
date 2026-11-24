@@ -1,0 +1,10 @@
+{
+  "barrier": "Keyboard opening gives the Products panel its open class but leaves its opacity at 0, so ScreenMeet AI can receive focus while invisible. Hovering the Products toggle makes the panel visible.",
+  "rules": [
+    {
+      "selector": "#w-dropdown-toggle-0",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseenter"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "barrier": "The application tabs are anchors without href or explicit tabindex. Sequential Tab navigation skipped the first tab, and the anchors need keyboard activation to use the existing panel-switching behavior.",
+  "rules": [
+    {
+      "selector": "a[role='tab'][data-toggle='tab'][data-target^='#tab-content-9007d95a-2b70-4ee8-8a7a-8ab9615c229c ']",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "a[role='tab'][data-toggle='tab'][data-target^='#tab-content-9007d95a-2b70-4ee8-8a7a-8ab9615c229c ']",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "ul.nav.nav-tabs[role='tablist']:has(> li.nav-item > a[aria-controls='intelligent-and-unified-applications'])",
+      "items": "a[role='tab'][data-toggle='tab'][data-target^='#tab-content-9007d95a-2b70-4ee8-8a7a-8ab9615c229c ']",
+      "orientation": "horizontal",
+      "activate": "focus"
+    },
+    {
+      "selector": "a[role='tab'][data-toggle='tab'][data-target^='#tab-content-9007d95a-2b70-4ee8-8a7a-8ab9615c229c ']",
+      "action": "bindEnterToClick"
+    }
+  ]
+}

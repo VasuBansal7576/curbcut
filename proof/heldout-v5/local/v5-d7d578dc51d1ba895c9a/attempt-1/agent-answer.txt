@@ -1,0 +1,15 @@
+{
+  "barrier": "The first product section’s flex container and text column stay 860 CSS pixels wide in a 320 CSS pixel viewport, so the page’s horizontal clipping cuts off the passage.",
+  "rules": [
+    {
+      "selector": "#products > section:first-of-type > .section-content.odd",
+      "action": "injectCSS",
+      "value": {"min-width": "0", "max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "#product1-right, #product1-right > p.content-subtitle",
+      "action": "injectCSS",
+      "value": {"min-width": "0", "max-width": "100%", "box-sizing": "border-box", "overflow-wrap": "anywhere"}
+    }
+  ]
+}

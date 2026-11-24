@@ -1,0 +1,13 @@
+{
+  "barrier": "Tab traversal stopped before reaching the Yearbook disclosure, even though its trigger already had tabindex=\"0\". The desktop panel containing Students & Families was hidden until the trigger was clicked.",
+  "rules": [
+    {
+      "selector": "div:has(#onetrust-policy):not(div:has(#onetrust-policy) div)",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "#yearbook-dropdown > span",
+      "action": "bindEnterToClick"
+    }
+  ]
+}

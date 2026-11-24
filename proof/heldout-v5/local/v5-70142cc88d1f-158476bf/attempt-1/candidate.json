@@ -1,0 +1,53 @@
+{
+  "id": "v5-70142cc88d1f-158476bf",
+  "url": "https://stackoverflow.co/",
+  "persona": "keyboard-only",
+  "task": "Open “Resources” from keyboard focus or with Arrow Down and follow “Stack Ads”. Confirm the public destination /advertising/resources.",
+  "controlTask": "Hover “Resources”, click “Stack Ads” and confirm /advertising/resources.",
+  "observedSelector": "#main-navigation > ul > li:nth-of-type(6) > button",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/advertising/resources"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#main-navigation > ul > li:nth-of-type(6)",
+    "#submenu-resources"
+  ],
+  "journey": [
+    {
+      "selector": "#main-navigation > ul > li:nth-of-type(6) > button",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#main-navigation > ul > li:nth-of-type(6) > button",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#submenu-resources > div > div > dl:nth-of-type(1) > dd:nth-of-type(1) > dl > dd:nth-of-type(2) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "stackoverflow.co",
+  "match": "https://stackoverflow.co/",
+  "barrier": "Focus and Arrow Down leave the Resources submenu at display:none, keeping the Stack Ads link unavailable to keyboard users. Pointer hover opens the submenu and updates the button’s expanded state.",
+  "rules": [
+    {
+      "selector": "#main-navigation > ul > li.nav__item > button[aria-controls=\"submenu-resources\"]",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseenter"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

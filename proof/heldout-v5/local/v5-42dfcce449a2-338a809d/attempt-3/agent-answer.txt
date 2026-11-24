@@ -1,0 +1,10 @@
+{
+  "barrier": "MAINKAN opens the login dialog by keyboard, but Escape leaves it open. The dialog already has a working Close button.",
+  "rules": [
+    {
+      "action": "dialogBehavior",
+      "dialog": "#login",
+      "close": "#login .modal-header > button.close[data-dismiss=\"modal\"]"
+    }
+  ]
+}

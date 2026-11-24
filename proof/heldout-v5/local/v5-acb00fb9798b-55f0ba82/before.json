@@ -1,0 +1,1787 @@
+{
+  "runner": "playwright",
+  "status": "pass",
+  "reason": "The complete journey reached the declared outcome.",
+  "steps": [
+    {
+      "selector": "#menu-item-175123 > a",
+      "action": "activate",
+      "traversal": {
+        "reached": true,
+        "tabs": 4
+      },
+      "visibility": null
+    },
+    {
+      "selector": "#menu-item-175129",
+      "action": "observe"
+    }
+  ],
+  "url": "https://www.iab.com/",
+  "checks": [
+    true
+  ],
+  "snapshot": {
+    "url": "https://www.iab.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body.home.wp-singular",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#menu-item-175123 > a",
+          "parent": "#menu-item-175123",
+          "tag": "a",
+          "attributes": {
+            "class": "iab-meganav-el",
+            "role": "button",
+            "aria-haspopup": "true",
+            "aria-expanded": "false",
+            "aria-controls": "bigmenu-dropdown-175123"
+          },
+          "hoverHandlers": [],
+          "text": "Market Intelligence & Best Practices",
+          "children": [],
+          "box": [
+            291,
+            0,
+            224,
+            52
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-175123",
+          "parent": "#primary_navigation",
+          "tag": "li",
+          "attributes": {
+            "id": "menu-item-175123",
+            "class": "menu-market-intelligence-best-practices custom-link",
+            "role": "none"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.iab-meganav-el",
+            "#bigmenu-dropdown-175123"
+          ],
+          "box": [
+            261,
+            0,
+            254,
+            52
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#primary_navigation",
+          "parent": "div.main-menu",
+          "tag": "ul",
+          "attributes": {
+            "id": "primary_navigation",
+            "class": "menu uk-navbar-nav iab-bigmenu",
+            "aria-label": "Main navigation"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-item-175122",
+            "#menu-item-175123",
+            "#menu-item-175124",
+            "#menu-item-175125"
+          ],
+          "box": [
+            85,
+            0,
+            708,
+            52
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main-menu",
+          "parent": "div.uk-navbar-left",
+          "tag": "div",
+          "attributes": {
+            "class": "main-menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#primary_navigation"
+          ],
+          "box": [
+            85,
+            0,
+            708,
+            52
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.uk-navbar-left",
+          "tag": "div",
+          "attributes": {
+            "class": "uk-navbar-left"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.uk-hidden.mobile-navigation-top",
+            "h1.uk-navbar-item.uk-logo",
+            "div.main-menu"
+          ],
+          "box": [
+            0,
+            0,
+            793,
+            51
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#bigmenu-dropdown-175123",
+          "parent": "#menu-item-175123",
+          "tag": "div",
+          "attributes": {
+            "class": "iab-bigmenu-dropdown depth-0 uk-navbar-dropdown uk-drop uk-dropdown",
+            "id": "bigmenu-dropdown-175123",
+            "role": "menu",
+            "aria-label": "Market Intelligence & Best Practices submenu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.iab-bigmenu-dropdown-wrapper"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "1020",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-175129",
+          "parent": "#bigmenu-dropdown-175123 > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "id": "menu-item-175129",
+            "class": "menu-guidelines-best-practices custom-link",
+            "role": "none"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.iab-meganav-el"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#bigmenu-dropdown-175123 > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "parent": "#bigmenu-dropdown-175123 > div:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "primary uk-nav uk-navbar-dropdown-nav uk-width-large",
+            "role": "none"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-item-175129",
+            "#menu-item-175135",
+            "#menu-item-209963",
+            "#menu-item-175133",
+            "#menu-item-175137",
+            "#menu-item-204985"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#bigmenu-dropdown-175123 > div:nth-of-type(1)",
+          "parent": "#bigmenu-dropdown-175123",
+          "tag": "div",
+          "attributes": {
+            "class": "iab-bigmenu-dropdown-wrapper"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.primary.uk-nav",
+            "#bigmenu-secondary-region-175123",
+            "#bigmenu-features-175123"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": ".navigation-top .uk-navbar-container .uk-navbar-nav > li > a:hover, .navigation-top .uk-navbar-container .uk-navbar-nav > li > a[aria-expanded=\"true\"], .navigation-top .uk-navbar-container .uk-navbar-nav > li > button:hover, .navigation-top .uk-navbar-container .uk-navbar-nav > li > button[aria-expanded=\"true\"]",
+          "declarations": "border-bottom-color: rgb(220, 41, 30);",
+          "conditions": []
+        },
+        {
+          "selector": ".navigation-top .uk-navbar-container .uk-navbar-dropdown li:hover",
+          "declarations": "background-color: rgb(245, 245, 245);",
+          "conditions": []
+        },
+        {
+          "selector": ".navigation-top .uk-navbar-container .uk-navbar-dropdown li:hover a",
+          "declarations": "color: rgb(220, 41, 30);",
+          "conditions": []
+        },
+        {
+          "selector": ".navigation-top .uk-navbar-container .uk-navbar-dropdown li:hover a .sub",
+          "declarations": "color: rgb(89, 89, 89);",
+          "conditions": []
+        },
+        {
+          "selector": "a:hover em",
+          "declarations": "color: rgb(220, 41, 30);",
+          "conditions": []
+        },
+        {
+          "selector": "a:active, a:hover",
+          "declarations": "outline: 0px;",
+          "conditions": []
+        },
+        {
+          "selector": "a:hover, a:active, a:focus",
+          "declarations": "color: rgb(220, 41, 30);",
+          "conditions": []
+        },
+        {
+          "selector": "a:hover .cta__arrow",
+          "declarations": "background-color: rgb(0, 0, 0);",
+          "conditions": []
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#bigmenu-dropdown-175123",
+        "role": "menu",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#menu-item-175123 > a",
+        "role": "button",
+        "name": "Market Intelligence & Best Practices",
+        "state": "expanded false",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": "bigmenu-dropdown-175123",
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 291,
+        "width": 224
+      },
+      {
+        "selector": "#menu-item-175129",
+        "role": "none",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#menu-item-175123",
+        "role": "none",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 261,
+        "width": 254
+      },
+      {
+        "selector": "#primary_navigation",
+        "role": "list",
+        "name": "Main navigation",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 85,
+        "width": 708
+      },
+      {
+        "selector": "body.home.wp-singular",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html.js.flexbox",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "noscript",
+        "role": "text",
+        "name": "<iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-PVTW9BSK\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>",
+        "state": "",
+        "tag": "noscript",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#error-dialog",
+        "role": "dialog",
+        "name": "",
+        "state": "",
+        "tag": "dialog",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "style",
+        "role": "text",
+        "name": "#error-dialog {\n    background: white;\n    border: 1px solid #dadada;\n    z-index: 9999999;\n    top: 25%;\n    min-width: 300px;\n    max-width: 400px;\n    border-radius: 5px;\n  }\n  #error-dialog #error",
+        "state": "",
+        "tag": "style",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "svg",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "svg",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "div.uk-container.uk-container-expand",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flow-root",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "a.skip-link.screen-reader-text",
+        "role": "link",
+        "name": "Skip to content",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": -1,
+        "width": 1
+      },
+      {
+        "selector": "header.new-header.uk-sticky",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.clearfix",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.navigation-top",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "nav.uk-navbar-container.uk-navbar",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.uk-navbar-left",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 793
+      },
+      {
+        "selector": "h1.uk-navbar-item.uk-logo",
+        "role": "heading",
+        "name": "IAB",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 85
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "2027 IAB Connected Commerce Summit | Register Today Apr 20, 2027",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 1026,
+        "width": 174
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Menu",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 920,
+        "width": 16
+      },
+      {
+        "selector": "div.main-menu",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 708
+      },
+      {
+        "selector": "#menu-item-175122",
+        "role": "none",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 85,
+        "width": 176
+      },
+      {
+        "selector": "a.iab-meganav-el",
+        "role": "button",
+        "name": "Get Involved",
+        "state": "expanded false",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": "bigmenu-dropdown-175125",
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 715,
+        "width": 79
+      },
+      {
+        "selector": "#menu-item-175124",
+        "role": "none",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 515,
+        "width": 169
+      },
+      {
+        "selector": "#menu-item-175125",
+        "role": "none",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 685,
+        "width": 109
+      },
+      {
+        "selector": "div.uk-navbar-right",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1100,
+        "width": 180
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 991,
+        "width": 249
+      },
+      {
+        "selector": "div.navbar-overlay",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1100,
+        "width": 50
+      },
+      {
+        "selector": "button.uk-navbar-toggle.uk-icon",
+        "role": "button",
+        "name": "Open search",
+        "state": "expanded false",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1115,
+        "width": 20
+      },
+      {
+        "selector": "a.uk-icon",
+        "role": "link",
+        "name": "Cart",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 1180,
+        "width": 20
+      },
+      {
+        "selector": "button.user-icon",
+        "role": "button",
+        "name": "Login",
+        "state": "expanded false",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 1245,
+        "width": 20
+      },
+      {
+        "selector": "#main-content",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tag": "main",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flow-root",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#home",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "section.module-hero-module",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.uk-grid-small.uk-grid",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": -15,
+        "width": 1295
+      },
+      {
+        "selector": "div.uk-width-3-4\\@l.uk-width-2-3\\@m",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": -15,
+        "width": 971
+      },
+      {
+        "selector": "div.tile-main-column",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 956
+      },
+      {
+        "selector": "li.uk-first-column",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 4,
+        "width": 238
+      },
+      {
+        "selector": "article.iab-feature-tile.uk-cover-container",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tag": "article",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 495,
+        "width": 461
+      },
+      {
+        "selector": "div.uk-height-1-1.uk-width-1-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 495,
+        "width": 461
+      },
+      {
+        "selector": "div.uk-overlay.uk-light",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 495,
+        "width": 461
+      },
+      {
+        "selector": "a.uk-text-decoration-none.uk-button",
+        "role": "link",
+        "name": "Retail Media",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 754,
+        "width": 89
+      },
+      {
+        "selector": "button.uk-text-decoration-none.uk-button",
+        "role": "button",
+        "name": "+5",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 851,
+        "width": 36
+      },
+      {
+        "selector": "a.uk-link-reset",
+        "role": "link",
+        "name": "The AI-Era Attribution Blueprint",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 525,
+        "width": 401
+      },
+      {
+        "selector": "div.module-headline2",
+        "role": "text",
+        "name": "The AI-Era Attribution Blueprint",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 525,
+        "width": 401
+      },
+      {
+        "selector": "article.uk-card.uk-card-default",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tag": "article",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 733,
+        "width": 223
+      },
+      {
+        "selector": "div.uk-card-media-top.tile-card-image",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 734,
+        "width": 221
+      },
+      {
+        "selector": "div.tile-card-body",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 734,
+        "width": 221
+      },
+      {
+        "selector": "p.tile-card-title",
+        "role": "text",
+        "name": "2027 IAB Connected Commerce Summit | Register Today",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 754,
+        "width": 181
+      },
+      {
+        "selector": "div.tile-card-footer",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 734,
+        "width": 221
+      },
+      {
+        "selector": "a.search-results-red-arrow",
+        "role": "link",
+        "name": "Menu",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 920,
+        "width": 16
+      },
+      {
+        "selector": "li.uk-grid-margin.uk-first-column",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 4,
+        "width": 238
+      },
+      {
+        "selector": "li.uk-grid-margin",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 718,
+        "width": 238
+      },
+      {
+        "selector": "div.uk-width-1-4\\@l.uk-width-1-3\\@m",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 956,
+        "width": 324
+      },
+      {
+        "selector": "div.upcoming-sidebar.uk-padding",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 971,
+        "width": 309
+      },
+      {
+        "selector": "h3.module-headline2.uk-padding",
+        "role": "heading",
+        "name": "Upcoming at IAB",
+        "state": "",
+        "tag": "h3",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 991,
+        "width": 249
+      },
+      {
+        "selector": "h5.title",
+        "role": "heading",
+        "name": "2027 IAB Connected Commerce Summit | Register Today",
+        "state": "",
+        "tag": "h5",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1026,
+        "width": 174
+      },
+      {
+        "selector": "div.module-hero-module__footer-non-mobile.uk-grid-collapse",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.uk-flex.uk-flex-column",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 308,
+        "width": 153
+      },
+      {
+        "selector": "#homepage_RedBanner_conferences-and-webinars",
+        "role": "link",
+        "name": "Conferences and Webinars Industry leading events",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 67,
+        "width": 206
+      },
+      {
+        "selector": "h4.module-hero-module__footer-link-title",
+        "role": "heading",
+        "name": "Public Policy",
+        "state": "",
+        "tag": "h4",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 308,
+        "width": 153
+      },
+      {
+        "selector": "div.module-hero-module__footer-link-icon-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 67,
+        "width": 20
+      },
+      {
+        "selector": "#homepage_RedBanner_public-policy",
+        "role": "link",
+        "name": "Public Policy CCPA, GDPR, and more",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 308,
+        "width": 153
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#menu-item-175123 > a",
+          "parent": "#menu-item-175123",
+          "tag": "a",
+          "attributes": {
+            "class": "iab-meganav-el",
+            "role": "button",
+            "aria-haspopup": "true",
+            "aria-expanded": "true",
+            "aria-controls": "bigmenu-dropdown-175123"
+          },
+          "hoverHandlers": [],
+          "text": "Market Intelligence & Best Practices",
+          "children": [],
+          "box": [
+            291,
+            0,
+            224,
+            52
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-175123",
+          "parent": "#primary_navigation",
+          "tag": "li",
+          "attributes": {
+            "id": "menu-item-175123",
+            "class": "menu-market-intelligence-best-practices custom-link",
+            "role": "none"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.iab-meganav-el",
+            "#bigmenu-dropdown-175123"
+          ],
+          "box": [
+            261,
+            0,
+            254,
+            52
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#primary_navigation",
+          "parent": "div.main-menu",
+          "tag": "ul",
+          "attributes": {
+            "id": "primary_navigation",
+            "class": "menu uk-navbar-nav iab-bigmenu",
+            "aria-label": "Main navigation"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-item-175122",
+            "#menu-item-175123",
+            "#menu-item-175124",
+            "#menu-item-175125"
+          ],
+          "box": [
+            85,
+            0,
+            708,
+            52
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.main-menu",
+          "parent": "div.uk-navbar-left",
+          "tag": "div",
+          "attributes": {
+            "class": "main-menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#primary_navigation"
+          ],
+          "box": [
+            85,
+            0,
+            708,
+            52
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.uk-navbar-left",
+          "tag": "div",
+          "attributes": {
+            "class": "uk-navbar-left"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.uk-hidden.mobile-navigation-top",
+            "h1.uk-navbar-item.uk-logo",
+            "div.main-menu"
+          ],
+          "box": [
+            0,
+            0,
+            793,
+            51
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#bigmenu-dropdown-175123",
+          "parent": "#menu-item-175123",
+          "tag": "div",
+          "attributes": {
+            "class": "iab-bigmenu-dropdown depth-0 uk-navbar-dropdown uk-drop uk-dropdown uk-open uk-animation-fade uk-animation uk-animation-enter uk-togglable-enter",
+            "id": "bigmenu-dropdown-175123",
+            "role": "menu",
+            "aria-label": "Market Intelligence & Best Practices submenu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.iab-bigmenu-dropdown-wrapper"
+          ],
+          "box": [
+            15,
+            52,
+            923,
+            426
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0.749805",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "1020",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-175129",
+          "parent": "#bigmenu-dropdown-175123 > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "id": "menu-item-175129",
+            "class": "menu-guidelines-best-practices custom-link",
+            "role": "none"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.iab-meganav-el"
+          ],
+          "box": [
+            45,
+            87,
+            230,
+            73
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#bigmenu-dropdown-175123 > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "parent": "#bigmenu-dropdown-175123 > div:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "primary uk-nav uk-navbar-dropdown-nav uk-width-large",
+            "role": "none"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-item-175129",
+            "#menu-item-175135",
+            "#menu-item-209963",
+            "#menu-item-175133",
+            "#menu-item-175137",
+            "#menu-item-204985"
+          ],
+          "box": [
+            30,
+            72,
+            507,
+            386
+          ],
+          "style": {
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#bigmenu-dropdown-175123 > div:nth-of-type(1)",
+          "parent": "#bigmenu-dropdown-175123",
+          "tag": "div",
+          "attributes": {
+            "class": "iab-bigmenu-dropdown-wrapper"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.primary.uk-nav",
+            "#bigmenu-secondary-region-175123",
+            "#bigmenu-features-175123"
+          ],
+          "box": [
+            15,
+            72,
+            923,
+            386
+          ],
+          "style": {
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": ".navigation-top .uk-navbar-container .uk-navbar-nav > li > a:hover, .navigation-top .uk-navbar-container .uk-navbar-nav > li > a[aria-expanded=\"true\"], .navigation-top .uk-navbar-container .uk-navbar-nav > li > button:hover, .navigation-top .uk-navbar-container .uk-navbar-nav > li > button[aria-expanded=\"true\"]",
+          "declarations": "border-bottom-color: rgb(220, 41, 30);",
+          "conditions": []
+        },
+        {
+          "selector": ".navigation-top .uk-navbar-container .uk-navbar-dropdown li:hover",
+          "declarations": "background-color: rgb(245, 245, 245);",
+          "conditions": []
+        },
+        {
+          "selector": ".navigation-top .uk-navbar-container .uk-navbar-dropdown li:hover a",
+          "declarations": "color: rgb(220, 41, 30);",
+          "conditions": []
+        },
+        {
+          "selector": ".navigation-top .uk-navbar-container .uk-navbar-dropdown li:hover a .sub",
+          "declarations": "color: rgb(89, 89, 89);",
+          "conditions": []
+        },
+        {
+          "selector": "a:hover em",
+          "declarations": "color: rgb(220, 41, 30);",
+          "conditions": []
+        },
+        {
+          "selector": "a:active, a:hover",
+          "declarations": "outline: 0px;",
+          "conditions": []
+        },
+        {
+          "selector": "a:hover, a:active, a:focus",
+          "declarations": "color: rgb(220, 41, 30);",
+          "conditions": []
+        },
+        {
+          "selector": "a:hover .cta__arrow",
+          "declarations": "background-color: rgb(0, 0, 0);",
+          "conditions": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "barrier": "Activating “Se connecter” makes the dialog visible while keyboard focus is still on the body. Earlier rules that also wired the Close button reached the Escape step, but the dialog stayed visible.",
+  "rules": [
+    {
+      "action": "dialogBehavior",
+      "dialog": "#authentificationModal",
+      "opener": "header .toggle-account > a[data-bs-target=\"#authentificationModal\"]"
+    }
+  ]
+}

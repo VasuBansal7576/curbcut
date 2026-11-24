@@ -1,0 +1,134 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-6af2720aeb97-5ddb9105",
+    "url": "https://www.boerse-online.de/",
+    "persona": "keyboard-only",
+    "task": "Open “Börse” from keyboard focus or with Arrow Down and follow “Experten”. Confirm the public destination /experten.",
+    "controlTask": "Hover “Börse”, click “Experten” and confirm /experten.",
+    "observedSelector": "#header-quick-navigation > ul > li:nth-of-type(1) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/experten"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#header-quick-navigation > ul > li:nth-of-type(1)",
+      "#boerse-quick-sub"
+    ],
+    "journey": [
+      {
+        "selector": "#header-quick-navigation > ul > li:nth-of-type(1) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#header-quick-navigation > ul > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#boerse-quick-sub > li:nth-of-type(2) > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-6af2720aeb97-5ddb9105/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 3 could not be seen while focused: opacity below 0.1.",
+      "file": "proof/heldout-v5/local/v5-6af2720aeb97-5ddb9105/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-6af2720aeb97-5ddb9105/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-6af2720aeb97-5ddb9105/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v5-6af2720aeb97-5ddb9105",
+    "url": "https://www.boerse-online.de/",
+    "persona": "keyboard-only",
+    "task": "Open “Börse” from keyboard focus or with Arrow Down and follow “Experten”. Confirm the public destination /experten.",
+    "controlTask": "Hover “Börse”, click “Experten” and confirm /experten.",
+    "observedSelector": "#header-quick-navigation > ul > li:nth-of-type(1) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/experten"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#header-quick-navigation > ul > li:nth-of-type(1)",
+      "#boerse-quick-sub"
+    ],
+    "journey": [
+      {
+        "selector": "#header-quick-navigation > ul > li:nth-of-type(1) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#header-quick-navigation > ul > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#boerse-quick-sub > li:nth-of-type(2) > a",
+        "action": "activate"
+      }
+    ],
+    "site": "www.boerse-online.de",
+    "match": "https://www.boerse-online.de/",
+    "barrier": "The Börse submenu opens on pointer hover only. Keyboard focus reaches Experten, but the submenu remains at opacity 0 and its parent clips the links.",
+    "rules": [
+      {
+        "selector": "#header-quick-navigation > ul > li:nth-of-type(1)",
+        "action": "mirrorHoverToFocus"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/heldout-v5/local/v5-6af2720aeb97-5ddb9105/attempt-1"
+}

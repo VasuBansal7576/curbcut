@@ -1,0 +1,10 @@
+{
+  "barrier": "Keyboard activation opens the search dialog, but Escape is sent while the dialog is still fading in and focus remains on the page body. The dialog stays open.",
+  "rules": [
+    {
+      "action": "dialogBehavior",
+      "dialog": "#searchModal",
+      "close": "#searchModal .modal-header > button.close.cancel[data-bs-dismiss=\"modal\"]"
+    }
+  ]
+}

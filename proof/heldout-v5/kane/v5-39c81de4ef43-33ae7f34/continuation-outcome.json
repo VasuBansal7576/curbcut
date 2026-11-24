@@ -1,0 +1,140 @@
+{
+  "task": {
+    "id": "v5-39c81de4ef43-33ae7f34",
+    "url": "https://tikfinity.com/",
+    "persona": "keyboard-only",
+    "task": "Focus “Show Alert”, press Arrow Down to open it, move from “Show Alert” to “Read Text (TTS)” and select it with Enter.",
+    "controlTask": "Click “Show Alert” and select “Read Text (TTS)”. Confirm the selected value.",
+    "observedSelector": "#builder > div > div:nth-of-type(3) > div > button",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#builder > div > div:nth-of-type(3) > div > button",
+        "equals": "Read Text (TTS)"
+      }
+    ],
+    "barrierClass": 5,
+    "relatedSelectors": [
+      "#v-3-2-liste",
+      "[role=option]"
+    ],
+    "journey": [
+      {
+        "selector": "#builder > div > div:nth-of-type(3) > div > button",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#builder > div > div:nth-of-type(3) > div > button",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "click"
+        }
+      },
+      {
+        "selector": "#v-3-2-o0",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover",
+          "selector": "#v-3-2-o1"
+        }
+      },
+      {
+        "selector": "#v-3-2-o1",
+        "action": "key",
+        "key": "Enter",
+        "pointer": {
+          "action": "click"
+        }
+      }
+    ]
+  },
+  "status": "inconclusive",
+  "phases": [
+    {
+      "name": "before",
+      "balance": 335.843,
+      "after": 303.0509,
+      "status": "inconclusive",
+      "runner": "kane",
+      "runId": "a659a3e6-053b-443a-9916-a9e861a66f9e",
+      "rawKaneStatus": "inconclusive",
+      "evidenceValid": true,
+      "credits": 30.3002225,
+      "reason": "complete-journey-not-witnessed",
+      "video": "proof/heldout-v5/kane/v5-39c81de4ef43-33ae7f34/before/recording.mp4",
+      "evidencePack": "proof/heldout-v5/kane/v5-39c81de4ef43-33ae7f34/before/a8364069-cf24-4157-b2f2-321f1282cfdc.evidence"
+    },
+    {
+      "name": "control",
+      "balance": 303.0509,
+      "after": 282.3595,
+      "status": "pass",
+      "runner": "kane",
+      "runId": "8e63d7c8-e6c4-4db4-a74c-811217024714",
+      "rawKaneStatus": "pass",
+      "evidenceValid": true,
+      "credits": 18.4515625,
+      "reason": "Objective completed",
+      "video": "proof/heldout-v5/kane/v5-39c81de4ef43-33ae7f34/control/recording.mp4",
+      "evidencePack": "proof/heldout-v5/kane/v5-39c81de4ef43-33ae7f34/control/ace4269d-39ba-4316-9251-030d7d258754.evidence"
+    },
+    {
+      "name": "attempt-1/after",
+      "balance": 282.3595,
+      "after": 260.9256,
+      "status": "inconclusive",
+      "runner": "kane",
+      "runId": "dc9e43c3-3926-4310-b219-5d2226da6d64",
+      "rawKaneStatus": "inconclusive",
+      "evidenceValid": true,
+      "credits": 19.268524999999997,
+      "reason": "complete-journey-not-witnessed",
+      "video": "proof/heldout-v5/kane/v5-39c81de4ef43-33ae7f34/attempt-1/after/recording.mp4",
+      "evidencePack": "proof/heldout-v5/kane/v5-39c81de4ef43-33ae7f34/attempt-1/after/319dbb5d-4b75-4e09-b6c3-04aed7560853.evidence"
+    },
+    {
+      "name": "attempt-1/after-retry",
+      "balance": 260.9256,
+      "after": 227.475,
+      "status": "inconclusive",
+      "runner": "kane",
+      "runId": "7b8acd38-4f52-42d1-8b7c-f76d4e5028ed",
+      "rawKaneStatus": "inconclusive",
+      "evidenceValid": true,
+      "credits": 32.7500475,
+      "reason": "complete-journey-not-witnessed",
+      "video": "proof/heldout-v5/kane/v5-39c81de4ef43-33ae7f34/attempt-1/after-retry/recording.mp4",
+      "evidencePack": "proof/heldout-v5/kane/v5-39c81de4ef43-33ae7f34/attempt-1/after-retry/32dfd290-7da9-4ea5-8305-4604a8edb3f8.evidence"
+    }
+  ],
+  "localProposal": "proof/heldout-v5/local/v5-39c81de4ef43-33ae7f34/attempt-1",
+  "preflight": {
+    "runner": "playwright-cdp",
+    "status": "pass",
+    "lanes": [
+      {
+        "persona": "keyboard-only",
+        "status": "pass",
+        "url": "https://tikfinity.com/",
+        "httpStatus": 200,
+        "width": 1280,
+        "browser": "159.0.8154.6"
+      },
+      {
+        "persona": "control",
+        "status": "pass",
+        "url": "https://tikfinity.com/",
+        "httpStatus": 200,
+        "width": 1280,
+        "browser": "159.0.8154.6"
+      }
+    ]
+  },
+  "reason": "complete-journey-not-witnessed",
+  "finishedAt": "2026-11-23T21:03:04.918Z"
+}

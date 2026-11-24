@@ -1,0 +1,37 @@
+{
+  "id": "rust-book-reflow",
+  "url": "https://doc.rust-lang.org/book/ch01-02-hello-world.html",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “> dir /B %= the /B option says to only show”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "controlTask": "At normal width, read the passage beginning “> dir /B %= the /B option says to only show” and verify all its text is visible without horizontal scrolling.",
+  "observedSelector": "#mdbook-content > main > pre:nth-of-type(9)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#mdbook-content > main > pre:nth-of-type(9)",
+      "equals": "> dir /B %= the /B option says to only show"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#mdbook-content > main > pre:nth-of-type(9)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "doc.rust-lang.org",
+  "match": "https://doc.rust-lang.org/book/ch01-02-hello-world.html",
+  "barrier": "At 320 CSS pixels, white-space: pre keeps the CMD passage on an unwrapped line, giving the code block a scroll width of 532 px within 280 px of visible width.",
+  "rules": [
+    {
+      "selector": "code.language-cmd.hljs",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "pre-wrap"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

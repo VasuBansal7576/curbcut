@@ -1,0 +1,11 @@
+{
+  "barrier": "Keyboard activation opens #login, but focus stays on the page body when the Escape step begins, leaving the dialog without keyboard focus.",
+  "rules": [
+    {
+      "action": "dialogBehavior",
+      "dialog": "#login",
+      "opener": "#main-slide .btn-slider-wrap > a[data-toggle=\"modal\"][data-target=\"#login\"]",
+      "close": "#login .modal-header > button.close[data-dismiss=\"modal\"]"
+    }
+  ]
+}

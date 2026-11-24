@@ -1,0 +1,132 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-529879974882-f9e50a7b",
+    "url": "https://www.eeoc.gov/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels with vertical scrolling only, click “Here’s how you know” and read “Official websites use .gov A .gov website belongs to an official government organization in the Unit”.",
+    "controlTask": "Click “Here’s how you know” and read “Official websites use .gov A .gov website belongs to an official government organization in the Unit”.",
+    "observedSelector": "div:nth-of-type(1) > section > div > header > div > button",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#gov-banner-default > div > div:nth-of-type(1) > div > p",
+        "equals": "Official websites use .gov A .gov website belongs to an official government organization in the Unit"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#gov-banner-default"
+    ],
+    "journey": [
+      {
+        "selector": "div:nth-of-type(1) > section > div > header > div > button",
+        "action": "activate"
+      },
+      {
+        "selector": "#gov-banner-default > div > div:nth-of-type(1) > div > p",
+        "action": "observe"
+      }
+    ]
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "Journey step 2 extends past the visible width.",
+    "steps": [
+      {
+        "selector": "div:nth-of-type(1) > section > div > header > div > button",
+        "action": "activate",
+        "geometry": {
+          "left": 0,
+          "right": 320,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 320,
+          "scrollWidth": 320,
+          "inView": true,
+          "fits": true
+        }
+      },
+      {
+        "selector": "#gov-banner-default > div > div:nth-of-type(1) > div > p",
+        "action": "observe",
+        "geometry": {
+          "left": -15928,
+          "right": -15680,
+          "width": 320,
+          "scrollX": 0,
+          "clientWidth": 248,
+          "scrollWidth": 248,
+          "inView": true,
+          "fits": false
+        }
+      }
+    ],
+    "url": "https://www.eeoc.gov/"
+  },
+  "registeredControl": {
+    "status": "pass",
+    "reason": "The complete journey reached the declared outcome.",
+    "steps": [
+      {
+        "selector": "div:nth-of-type(1) > section > div > header > div > button",
+        "action": "activate"
+      },
+      {
+        "selector": "#gov-banner-default > div > div:nth-of-type(1) > div > p",
+        "action": "observe"
+      }
+    ],
+    "url": "https://www.eeoc.gov/",
+    "checks": [
+      true
+    ]
+  },
+  "runner": "playwright",
+  "status": "unresolved",
+  "reason": "Journey step 2 extends past the visible width.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-529879974882-f9e50a7b/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "low-vision",
+      "status": "fail",
+      "reason": "Journey step 2 extends past the visible width.",
+      "file": "proof/hard-v4/local/v4-529879974882-f9e50a7b/before.json"
+    },
+    {
+      "name": "proposal",
+      "iteration": 1,
+      "status": "rejected",
+      "reason": "Invalid patch proposal: [{\"instancePath\":\"/rules\",\"schemaPath\":\"#/properties/rules/minItems\",\"keyword\":\"minItems\",\"params\":{\"limit\":1},\"message\":\"must NOT have fewer than 1 items\"}]",
+      "file": "proof/hard-v4/local/v4-529879974882-f9e50a7b/attempt-1/rejection.json"
+    },
+    {
+      "name": "attempt-2/after",
+      "persona": "low-vision",
+      "iteration": 2,
+      "status": "inconclusive",
+      "reason": "The journey outcome already holds.",
+      "file": "proof/hard-v4/local/v4-529879974882-f9e50a7b/attempt-2/after.json"
+    },
+    {
+      "name": "attempt-3/after",
+      "persona": "low-vision",
+      "iteration": 3,
+      "status": "fail",
+      "reason": "Journey step 2 extends past the visible width.",
+      "file": "proof/hard-v4/local/v4-529879974882-f9e50a7b/attempt-3/after.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

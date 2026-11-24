@@ -1,0 +1,78 @@
+{
+  "task": {
+    "id": "unitconverters-length",
+    "url": "https://www.unitconverters.net/",
+    "persona": "low-vision",
+    "observedSelector": "table:has(#fromVal)",
+    "task": "In the Length converter, assert that the complete To value field fits within the 320-pixel viewport. Enter 1 in From with Meter and Kilometer selected. Verify 0.001 appears in To without horizontal scrolling.",
+    "controlTask": "In the Length converter, select Meter and Kilometer if needed, type 1 in From, and verify 0.001 appears in To."
+  },
+  "result": {
+    "status": "verified",
+    "patch": {
+      "id": "unitconverters-length",
+      "url": "https://www.unitconverters.net/",
+      "persona": "low-vision",
+      "task": "In the Length converter, assert that the complete To value field fits within the 320-pixel viewport. Enter 1 in From with Meter and Kilometer selected. Verify 0.001 appears in To without horizontal scrolling.",
+      "controlTask": "In the Length converter, select Meter and Kilometer if needed, type 1 in From, and verify 0.001 appears in To.",
+      "observedSelector": "table:has(#fromVal)",
+      "site": "www.unitconverters.net",
+      "match": "https://www.unitconverters.net/",
+      "barrier": "The Length converter lays out From and To in side-by-side table cells, placing the To field’s right edge at 351 pixels in a 320-pixel viewport.",
+      "rules": [
+        {
+          "selector": "table",
+          "action": "injectCSS",
+          "value": {
+            "display": "block"
+          }
+        },
+        {
+          "selector": "td",
+          "action": "injectCSS",
+          "value": {
+            "display": "block"
+          }
+        }
+      ],
+      "status": "verified",
+      "evidence": {
+        "before": "proof/kane/unitconverters-length/2026-11-22T10-52-45.985Z/recheck-without/recording.mp4",
+        "after": "proof/kane/unitconverters-length/2026-11-22T11-06-33.087Z/attempt-1/after/recording.mp4",
+        "control": "proof/kane/unitconverters-length/2026-11-22T11-06-33.087Z/control/recording.mp4",
+        "verifiedAt": "2026-11-22T11:08:04.844Z",
+        "kaneRunIds": [
+          "a496782e-9c55-4b05-86a4-5523941bb947",
+          "e12b4dae-6a65-4197-b490-eb2c796b3bb7",
+          "595c3531-393f-4c70-abd0-e5cd5093e8f7"
+        ]
+      },
+      "history": [
+        {
+          "at": "2026-11-21T19:50:04.037Z",
+          "event": "verified",
+          "before": "ea7fce95-82ed-4aba-a793-28df2ef33ebc",
+          "control": "7490470d-28a5-4bdd-aae8-5dc15271e6ca",
+          "after": "9f52a831-f32f-457e-a984-3dcd2f8034c8"
+        },
+        {
+          "at": "2026-11-22T10:53:28.158Z",
+          "event": "broken",
+          "without": "fail",
+          "runId": "a496782e-9c55-4b05-86a4-5523941bb947",
+          "video": "proof/kane/unitconverters-length/2026-11-22T10-52-45.985Z/recheck-without/recording.mp4",
+          "with": "fail",
+          "after": "46e6832d-8f7e-4238-807b-5aa3c7740af3",
+          "afterVideo": "proof/kane/unitconverters-length/2026-11-22T10-52-45.985Z/recheck-with/recording.mp4"
+        },
+        {
+          "at": "2026-11-22T11:08:04.844Z",
+          "event": "re-patched",
+          "before": "a496782e-9c55-4b05-86a4-5523941bb947",
+          "control": "e12b4dae-6a65-4197-b490-eb2c796b3bb7",
+          "after": "595c3531-393f-4c70-abd0-e5cd5093e8f7"
+        }
+      ]
+    }
+  }
+}

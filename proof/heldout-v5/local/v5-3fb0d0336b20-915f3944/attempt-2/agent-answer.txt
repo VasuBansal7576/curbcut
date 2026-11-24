@@ -1,0 +1,13 @@
+{
+  "barrier": "Tab reaches the native Next button, but the visibility check fails while it is focused. Its 25-pixel box extends 10 pixels past the carousel’s right edge.",
+  "rules": [
+    {
+      "selector": ".icons-text-slider .slider-row > .col-12 > .slider > button.slick-next.slick-arrow:focus-visible",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ]
+}

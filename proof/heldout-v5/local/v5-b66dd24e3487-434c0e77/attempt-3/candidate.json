@@ -1,0 +1,72 @@
+{
+  "id": "v5-b66dd24e3487-434c0e77",
+  "url": "https://capgo.app/",
+  "persona": "keyboard-only",
+  "task": "Focus “01 Progressive rollout”, move once with ArrowRight, activate “02 Live release” and read its panel.",
+  "controlTask": "Click “02 Live release” and read its panel.",
+  "observedSelector": "#tour-sioluy-tab-rollout",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#tour-sioluy-panel-live-release"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "#main-content > div > section:nth-of-type(6) > div > div:nth-of-type(2) > div > div:nth-of-type(1)",
+    "[role=tab]",
+    "#tour-sioluy-panel-live-release"
+  ],
+  "journey": [
+    {
+      "selector": "#tour-sioluy-tab-rollout",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#tour-sioluy-tab-rollout",
+      "action": "key",
+      "key": "ArrowRight",
+      "pointer": {
+        "action": "click",
+        "selector": "#tour-sioluy-tab-live-release"
+      }
+    },
+    {
+      "selector": "#tour-sioluy-tab-live-release",
+      "action": "activate",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#tour-sioluy-panel-live-release",
+      "action": "observe"
+    }
+  ],
+  "site": "capgo.app",
+  "match": "https://capgo.app/",
+  "barrier": "Keyboard traversal reaches Progressive rollout, but its tablist uses display: contents and has a zero-sized box in the failing run, where the focused tab is reported as clipped or off-screen.",
+  "rules": [
+    {
+      "selector": "div.screen-tour > div.screen-tour-tabs[role=\"tablist\"][aria-label=\"Inside the console\"]",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "flex-wrap": "wrap"
+      }
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.screen-tour > div.screen-tour-tabs[role=\"tablist\"][aria-label=\"Inside the console\"]",
+      "items": "div.screen-tour-tabs[aria-label=\"Inside the console\"] > button.screen-tour-tab[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

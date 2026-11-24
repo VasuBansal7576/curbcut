@@ -1,0 +1,9 @@
+{
+  "id": "w3schools-select-swatch",
+  "url": "https://www.w3schools.com/colors/colors_picker.asp#main",
+  "persona": "keyboard-only",
+  "observedSelector": "#colormap area[alt=\"#003366\"]",
+  "successSelector": "#selectedcolor[style*=\"rgb(0, 51, 102)\"]",
+  "task": "First assert that the leftmost swatch in the top row of the color map, labeled #003366, has a link destination or an explicit tabindex of 0. Select that swatch with Tab and Enter, and verify the selected color reads #003366.",
+  "controlTask": "Click the leftmost dark blue hexagon in the top row of the color map. Verify the selected color reads #003366."
+}

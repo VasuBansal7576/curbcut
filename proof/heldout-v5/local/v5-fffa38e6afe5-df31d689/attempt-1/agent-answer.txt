@@ -1,0 +1,12 @@
+{
+  "barrier": "At 320 CSS pixels, the button opens the disclosure, but its absolutely positioned panel starts 15,984 pixels to the left of the viewport, placing the guidance outside the visible area.",
+  "rules": [
+    {
+      "selector": "#gov-banner-default-default:not([hidden])",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "barrier": "The free domain opener can be reached and activated by keyboard after repair, but Escape leaves the Bootstrap dialog visible.",
+  "rules": [
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#exampleModalToggle1",
+      "close": "#exampleModalToggle1 .modal-footer > button[data-bs-dismiss='modal']"
+    }
+  ]
+}

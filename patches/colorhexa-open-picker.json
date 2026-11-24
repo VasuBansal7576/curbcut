@@ -1,0 +1,59 @@
+{
+  "id": "colorhexa-open-picker",
+  "url": "https://www.colorhexa.com/",
+  "persona": "keyboard-only",
+  "task": "First assert the red color swatch next to the color search box is in the sequential keyboard focus order. Open that swatch with Tab and Enter. Verify the color picker panel with the color spectrum and hue slider is visible.",
+  "controlTask": "Click the red color swatch next to the color search box. Verify the color picker panel with the color spectrum and hue slider is visible.",
+  "observedSelector": ".sp-replacer",
+  "successSelector": ".sp-picker-container",
+  "site": "www.colorhexa.com",
+  "match": "https://www.colorhexa.com/",
+  "barrier": "The red swatch (.sp-replacer) has tabIndex -1 and is exposed as text, so Tab skips the color picker trigger.",
+  "rules": [
+    {
+      "selector": ".sp-replacer",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": ".sp-replacer",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": ".sp-replacer",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": ".sp-replacer",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane/colorhexa-open-picker/resume-2026-11-22T03-33-20.437Z/before/recording.mp4",
+    "after": "proof/kane/colorhexa-open-picker/resume-2026-11-22T03-33-20.437Z/attempt-1/after/recording.mp4",
+    "control": "proof/kane/colorhexa-open-picker/resume-2026-11-22T03-33-20.437Z/control/recording.mp4",
+    "verifiedAt": "2026-11-22T03:36:41.404Z",
+    "kaneRunIds": [
+      "b5819fca-5d89-41d7-aaa2-6e69f1520b52",
+      "3887cc4e-dd27-4319-99cb-8bfc74442eb6",
+      "931741ab-d134-4943-b9a8-d86fc1d3a330"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-22T03:36:41.404Z",
+      "event": "verified",
+      "before": "b5819fca-5d89-41d7-aaa2-6e69f1520b52",
+      "control": "3887cc4e-dd27-4319-99cb-8bfc74442eb6",
+      "after": "931741ab-d134-4943-b9a8-d86fc1d3a330"
+    },
+    {
+      "at": "2026-11-22T10:44:01.846Z",
+      "event": "rechecked",
+      "without": "inconclusive",
+      "runId": "731d3753-a217-4cdf-bc49-eadf42f33d1f",
+      "video": "proof/kane/colorhexa-open-picker/2026-11-22T10-42-44.846Z/recheck-without/recording.mp4"
+    }
+  ]
+}

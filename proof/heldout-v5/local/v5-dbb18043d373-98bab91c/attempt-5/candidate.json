@@ -1,0 +1,64 @@
+{
+  "id": "v5-dbb18043d373-98bab91c",
+  "url": "https://twicsy.com/",
+  "persona": "keyboard-only",
+  "task": "Focus “Buy Instagram Followers”, move once with ArrowDown, activate “Buy Instagram Likes” and read its panel.",
+  "controlTask": "Click “Buy Instagram Likes” and read its panel.",
+  "observedSelector": "#_r276R_0_-tab-buy-instagram-followers",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#_r276R_0_-panel-buy-instagram-likes"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "#services > div:nth-of-type(2) > div > div:nth-of-type(1) > div",
+    "[role=tab]",
+    "#_r276R_0_-panel-buy-instagram-likes"
+  ],
+  "journey": [
+    {
+      "selector": "#_r276R_0_-tab-buy-instagram-followers",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#_r276R_0_-tab-buy-instagram-followers",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "click",
+        "selector": "#_r276R_0_-tab-buy-instagram-likes"
+      }
+    },
+    {
+      "selector": "#_r276R_0_-tab-buy-instagram-likes",
+      "action": "activate",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#_r276R_0_-panel-buy-instagram-likes",
+      "action": "observe"
+    }
+  ],
+  "site": "twicsy.com",
+  "match": "https://twicsy.com/",
+  "barrier": "Keyboard traversal reaches Buy Instagram Followers, but ArrowDown leaves focus on the page body instead of moving it to Buy Instagram Likes in the vertical Services tablist.",
+  "rules": [
+    {
+      "action": "arrowKeyNavigation",
+      "container": "body.antialiased",
+      "items": "#services [role=\"tablist\"][aria-label=\"Services\"] > button[role=\"tab\"]",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

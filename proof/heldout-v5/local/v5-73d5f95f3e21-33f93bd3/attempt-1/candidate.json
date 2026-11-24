@@ -1,0 +1,52 @@
+{
+  "id": "v5-73d5f95f3e21-33f93bd3",
+  "url": "https://www.xel.nl/",
+  "persona": "keyboard-only",
+  "task": "Open “WordPress xel” from keyboard focus or with Arrow Down and follow “WordPress Veiligxel”. Confirm the public destination /veilig/.",
+  "controlTask": "Hover “WordPress xel”, click “WordPress Veiligxel” and confirm /veilig/.",
+  "observedSelector": "#menu-primary-navigation > li:nth-of-type(2) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/veilig/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menu-primary-navigation > li:nth-of-type(2)",
+    "#menu-primary-navigation > li:nth-of-type(2) > div"
+  ],
+  "journey": [
+    {
+      "selector": "#menu-primary-navigation > li:nth-of-type(2) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-primary-navigation > li:nth-of-type(2) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-primary-navigation > li:nth-of-type(2) > div > div > div:nth-of-type(1) > ul > li:nth-of-type(3) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.xel.nl",
+  "match": "https://www.xel.nl/",
+  "barrier": "The desktop dropdown becomes visible only when its parent list item is hovered. Focusing WordPress xel and pressing Arrow Down leaves the WordPress Veiligxel link hidden.",
+  "rules": [
+    {
+      "selector": "#menu-primary-navigation > li.menu__item--wordpress-xel",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,97 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-5f22528618352a280b18",
+    "url": "https://www.india.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search on india.com...” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search on india.com...” field and type test without submitting.",
+    "observedSelector": "#t2",
+    "requiredName": "Search on india.com...",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#t2",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    }
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "Checked the declared outcome after the type action.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "Checked the declared outcome after the type action.",
+      "file": "proof/heldout-v5/local/v5-5f22528618352a280b18/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "screen-reader-view",
+      "status": "fail",
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "file": "proof/heldout-v5/local/v5-5f22528618352a280b18/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "screen-reader-view",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the type action.",
+      "file": "proof/heldout-v5/local/v5-5f22528618352a280b18/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the type action.",
+      "file": "proof/heldout-v5/local/v5-5f22528618352a280b18/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v5-5f22528618352a280b18",
+    "url": "https://www.india.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search on india.com...” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search on india.com...” field and type test without submitting.",
+    "observedSelector": "#t2",
+    "requiredName": "Search on india.com...",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#t2",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.india.com",
+    "match": "https://www.india.com/",
+    "barrier": "The visible search input #t2 has a native textbox role but no accessible name, so it cannot be found by its expected name in Reading view.",
+    "rules": [
+      {
+        "selector": "#t2",
+        "action": "addLabel",
+        "value": "Search on india.com..."
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/heldout-v5/local/v5-5f22528618352a280b18/attempt-1"
+}

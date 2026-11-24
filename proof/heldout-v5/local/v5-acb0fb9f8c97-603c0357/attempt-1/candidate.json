@@ -1,0 +1,52 @@
+{
+  "id": "v5-acb0fb9f8c97-603c0357",
+  "url": "https://wpbrigade.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Products” from keyboard focus or with Arrow Down and follow “Under Construction Maintenance Mode Create a Coming Soon or Maintenance Mode page instantly for your website.”. Confirm the public destination /products/under-construction-maintenance-mode/.",
+  "controlTask": "Hover “Products”, click “Under Construction Maintenance Mode Create a Coming Soon or Maintenance Mode page instantly for your website.” and confirm /products/under-construction-maintenance-mode/.",
+  "observedSelector": "div > header > div:nth-of-type(1) > div > nav:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/products/under-construction-maintenance-mode/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "div > header > div:nth-of-type(1) > div > nav:nth-of-type(2) > ul > li:nth-of-type(1)",
+    "div > header > div:nth-of-type(1) > div > nav:nth-of-type(2) > ul > li:nth-of-type(1) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "div > header > div:nth-of-type(1) > div > nav:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "div > header > div:nth-of-type(1) > div > nav:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "div > header > div:nth-of-type(1) > div > nav:nth-of-type(2) > ul > li:nth-of-type(1) > ul > li:nth-of-type(4) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "wpbrigade.com",
+  "match": "https://wpbrigade.com/",
+  "barrier": "Hovering Products reveals its submenu, but keyboard focus and Arrow Down do not reliably keep it visible while focus moves to the Under Construction Maintenance Mode link.",
+  "rules": [
+    {
+      "selector": "nav.mega-menu-nav > ul.mega-menu > li.mega-menu-item:first-of-type",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

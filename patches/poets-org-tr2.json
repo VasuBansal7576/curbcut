@@ -1,0 +1,62 @@
+{
+  "id": "poets-org-tr2",
+  "url": "https://poets.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, locate the searchbox named “search”. Enter the text test and confirm the field contains it. Do not submit.",
+  "controlTask": "Click the public text field with the visible hint “search”, type test and confirm the value. Do not submit.",
+  "observedSelector": "input[placeholder=\"search\"]",
+  "requiredName": "search",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "input[placeholder=\"search\"]",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "searchbox"
+  },
+  "site": "poets.org",
+  "match": "https://poets.org/",
+  "barrier": "The Reading view searchbox has an empty accessible name despite displaying the placeholder “search”.",
+  "rules": [
+    {
+      "selector": "input[placeholder=\"search\"]",
+      "action": "addLabel",
+      "value": "search"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v3/runs/poets-org-tr2/before/recording.mp4",
+    "after": "proof/heldout-v3/runs/poets-org-tr2/attempt-1/after/recording.mp4",
+    "control": "proof/heldout-v3/runs/poets-org-tr2/control/recording.mp4",
+    "verifiedAt": "2026-11-23T05:28:23.772Z",
+    "kaneRunIds": [
+      "a6039b7a-2d1d-40c2-91b1-04593fcbd871",
+      "f773f524-c19a-4b56-bd9f-16289c00a68d",
+      "68fac404-263b-461c-b97f-c4aae40f2fe5"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-23T05:28:23.772Z",
+      "event": "verified",
+      "before": "a6039b7a-2d1d-40c2-91b1-04593fcbd871",
+      "control": "f773f524-c19a-4b56-bd9f-16289c00a68d",
+      "after": "68fac404-263b-461c-b97f-c4aae40f2fe5"
+    }
+  ]
+}

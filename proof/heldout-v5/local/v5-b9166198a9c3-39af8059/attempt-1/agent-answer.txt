@@ -1,0 +1,16 @@
+{
+  "barrier": "The QUICK LINKS trigger is an anchor with no href or explicit tabindex, so Tab skips it and the Canvas link stays hidden inside the closed dropdown.",
+  "rules": [
+    {
+      "selector": "#desktop-header #dropdownMenuQuick",
+      "action": "makeFocusable"
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#desktop-header #dropdownMenuQuick",
+      "target": "#desktop-header #dropdownMenuQuick + ul.dropdown-menu-quick[aria-labelledby='dropdownMenuQuick']",
+      "mode": "class",
+      "className": "show"
+    }
+  ]
+}

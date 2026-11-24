@@ -1,0 +1,9 @@
+{
+  "barrier": "Tab traversal skipped the Eng div. The replay snapshot shows it now has tabindex=\"0\" and a button role, but the click probe did not verify that the language content opened.",
+  "rules": [
+    {"selector":"#header > div > div > div:nth-of-type(1)","action":"makeFocusable"},
+    {"selector":"#header > div > div > div:nth-of-type(1)","action":"setRole","value":"button"},
+    {"selector":"#header > div > div > div:nth-of-type(1)","action":"bindEnterToClick"},
+    {"selector":"#header > div > div > div:nth-of-type(1)","action":"restoreFocusOutline"}
+  ]
+}

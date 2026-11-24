@@ -1,0 +1,57 @@
+{
+  "id": "v5-99e07c17f3a049d8c582",
+  "url": "https://megasoft.ru/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Мы специализируемся на создании и поддержке информационных систем и торговых площадок на” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Мы специализируемся на создании и поддержке информационных систем и торговых площадок на” at normal width.",
+  "observedSelector": "#content > div > div > p:nth-of-type(3)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#content > div > div > p:nth-of-type(3)",
+      "equals": "Мы специализируемся на создании и поддержке информационных систем и торговых площадок на"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#content > div > div > p:nth-of-type(3)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "megasoft.ru",
+  "match": "https://megasoft.ru/",
+  "barrier": "The content column starts 280 CSS pixels from the left of a 900-pixel wrapper. At a 320-pixel viewport, the 590-pixel paragraph extends to pixel 885 and is clipped by the page’s horizontal overflow setting.",
+  "rules": [
+    {
+      "selector": "#wrapper",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "flex-direction": "column",
+        "max-width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#wrapper > #content",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "selector": "#content > .main, #content > .main > .text",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,123 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-78c6473662e589ae4e3e",
+    "url": "https://lawphil.net/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice” at normal width.",
+    "observedSelector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+        "equals": "About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    }
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "Checked the declared outcome after the read action.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/heldout-v5/local/v5-78c6473662e589ae4e3e/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "low-vision",
+      "status": "fail",
+      "reason": "The target does not fit the visible width.",
+      "file": "proof/heldout-v5/local/v5-78c6473662e589ae4e3e/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "low-vision",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/heldout-v5/local/v5-78c6473662e589ae4e3e/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/heldout-v5/local/v5-78c6473662e589ae4e3e/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v5-78c6473662e589ae4e3e",
+    "url": "https://lawphil.net/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice” at normal width.",
+    "observedSelector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+        "equals": "About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "lawphil.net",
+    "match": "https://lawphil.net/",
+    "barrier": "The footer paragraph inherits a 518-pixel width from its table cell. At 320 CSS pixels, horizontal clipping cuts off the links that extend past the viewport.",
+    "rules": [
+      {
+        "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+        "action": "injectCSS",
+        "value": {
+          "max-width": "100%",
+          "width": "auto",
+          "white-space": "normal",
+          "overflow-wrap": "anywhere"
+        }
+      },
+      {
+        "selector": "center > table:nth-of-type(2)",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      },
+      {
+        "selector": "center > table:nth-of-type(2) > tbody, center > table:nth-of-type(2) > tbody > tr:nth-of-type(7), center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "width": "auto",
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/heldout-v5/local/v5-78c6473662e589ae4e3e/attempt-1"
+}

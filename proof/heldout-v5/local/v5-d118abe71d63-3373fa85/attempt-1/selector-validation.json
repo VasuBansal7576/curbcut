@@ -1,0 +1,139 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "div.homepage-section.full-width:has(> div.resources-for), div.resources-for > div.resources-for__inner",
+      "count": 2,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "homepage-section",
+            "full-width"
+          ],
+          "label": "Resources for: Careers Contracting Education Grants Working at NRC The NRC represents a career oppor"
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "resources-for__inner"
+          ],
+          "label": "Careers Contracting Education Grants Working at NRC The NRC represents a career opportunity that you"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "div.resources-for__tabs[role=\"tablist\"] > button[role=\"tab\"]",
+      "count": 4,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "id": "rcs-tab-rcs-744076",
+          "classes": [
+            "resources-for__tab",
+            "is-active"
+          ],
+          "role": "tab",
+          "label": "Careers"
+        },
+        {
+          "tag": "button",
+          "id": "rcs-tab-rcs-744161",
+          "classes": [
+            "resources-for__tab"
+          ],
+          "role": "tab",
+          "label": "Contracting"
+        },
+        {
+          "tag": "button",
+          "id": "rcs-tab-rcs-744181",
+          "classes": [
+            "resources-for__tab"
+          ],
+          "role": "tab",
+          "label": "Education"
+        },
+        {
+          "tag": "button",
+          "id": "rcs-tab-rcs-744066",
+          "classes": [
+            "resources-for__tab"
+          ],
+          "role": "tab",
+          "label": "Grants"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "field": "container",
+      "selector": "div.resources-for__tabs[role=\"tablist\"]",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "resources-for__tabs"
+          ],
+          "role": "tablist",
+          "label": "Resources for:"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "field": "items",
+      "selector": "div.resources-for__tabs[role=\"tablist\"] > button[role=\"tab\"]",
+      "scope": "div.resources-for__tabs[role=\"tablist\"]",
+      "count": 4,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "id": "rcs-tab-rcs-744076",
+          "classes": [
+            "resources-for__tab",
+            "is-active"
+          ],
+          "role": "tab",
+          "label": "Careers"
+        },
+        {
+          "tag": "button",
+          "id": "rcs-tab-rcs-744161",
+          "classes": [
+            "resources-for__tab"
+          ],
+          "role": "tab",
+          "label": "Contracting"
+        },
+        {
+          "tag": "button",
+          "id": "rcs-tab-rcs-744181",
+          "classes": [
+            "resources-for__tab"
+          ],
+          "role": "tab",
+          "label": "Education"
+        },
+        {
+          "tag": "button",
+          "id": "rcs-tab-rcs-744066",
+          "classes": [
+            "resources-for__tab"
+          ],
+          "role": "tab",
+          "label": "Grants"
+        }
+      ]
+    }
+  ]
+}

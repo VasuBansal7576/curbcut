@@ -1,0 +1,34 @@
+{
+  "id": "v5-9bd39ced7538954cd6f4",
+  "url": "https://www.talabat.com/uae",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search for area, street name, landmark...” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search for area, street name, landmark...” field and type test without submitting.",
+  "observedSelector": "#search-box-map-first",
+  "requiredName": "Search for area, street name, landmark...",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#search-box-map-first",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.talabat.com",
+  "match": "https://www.talabat.com/uae",
+  "barrier": "The location input has a native textbox role but no accessible name, so it cannot be found by the requested name in Reading view.",
+  "rules": [
+    {
+      "selector": "#search-box-map-first",
+      "action": "addLabel",
+      "value": "Search for area, street name, landmark..."
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

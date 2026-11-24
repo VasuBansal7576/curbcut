@@ -1,0 +1,86 @@
+{
+  "id": "sedgewick-reflow",
+  "url": "https://algs4.cs.princeton.edu/11model/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “% java Scale mandrill.jpg 200 400”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "controlTask": "At normal width, read the passage beginning “% java Scale mandrill.jpg 200 400” and verify all its text is visible without horizontal scrolling.",
+  "observedSelector": "#content > center:nth-of-type(3) > table > tbody > tr > td:nth-of-type(3)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#content > center:nth-of-type(3) > table > tbody > tr > td:nth-of-type(3)",
+      "equals": "% java Scale mandrill.jpg 200 400"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#content > center:nth-of-type(3) > table > tbody > tr > td:nth-of-type(3)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "algs4.cs.princeton.edu",
+  "match": "https://algs4.cs.princeton.edu/11model/",
+  "barrier": "At 320 CSS pixels, the sidebar offset leaves the reading column only 102 pixels wide. The 917-pixel table row places the passage at x=891, beyond the viewport, where horizontal clipping hides it.",
+  "rules": [
+    {
+      "selector": "#content",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "selector": "table",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "tbody",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "tr",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "td",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#content > center:nth-of-type(3) > table > tbody > tr > td:nth-of-type(3)",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "pre-wrap",
+        "overflow-wrap": "anywhere"
+      }
+    },
+    {
+      "selector": "img",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

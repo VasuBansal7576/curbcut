@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#menu-td-demo-header-menu-1 > li.menu-item-27719",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "li",
+          "classes": [
+            "menu-item",
+            "menu-item-type-taxonomy",
+            "menu-item-object-category",
+            "menu-item-has-children"
+          ],
+          "label": "Soap opera Beautiful La forza di una donna Forbidden fruit La Promessa Tempesta D’amore Il Paradiso "
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "#menu-td-demo-header-menu-1 > li.menu-item-27719 > a, #menu-td-demo-header-menu-1 > li.menu-item-27719 > ul.sub-menu > li > a",
+      "count": 10,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "a",
+          "classes": [
+            "sf-with-ul"
+          ],
+          "label": "Soap opera"
+        },
+        {
+          "tag": "a",
+          "classes": [],
+          "label": "Beautiful"
+        },
+        {
+          "tag": "a",
+          "classes": [],
+          "label": "La forza di una donna"
+        },
+        {
+          "tag": "a",
+          "classes": [],
+          "label": "Forbidden fruit"
+        },
+        {
+          "tag": "a",
+          "classes": [],
+          "label": "La Promessa"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "mynoise-open-menu",
+  "url": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+  "persona": "keyboard-only",
+  "task": "First assert that the Menu icon at the top of the White Noise Generator is in the sequential keyboard focus order. Use Tab and Enter to open it. Verify the site navigation opens and the Full Index link is visible.",
+  "controlTask": "Click the Menu icon at the top of the White Noise Generator. Verify the navigation opens and the Full Index link is visible.",
+  "observedSelector": "#hamburger",
+  "successSelector": "#menuOverlay",
+  "site": "mynoise.net",
+  "match": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+  "barrier": "The clickable Menu icon (#hamburger) has tabIndex -1, so Tab skips it.",
+  "rules": [
+    {
+      "selector": "#hamburger",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#hamburger",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#hamburger",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#hamburger",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane/mynoise-open-menu/resume-2026-11-22T03-31-34.469Z/before/recording.mp4",
+    "after": "proof/kane/mynoise-open-menu/resume-2026-11-22T03-40-55.735Z/attempt-1/after/recording.mp4",
+    "control": "proof/kane/mynoise-open-menu/resume-2026-11-22T03-31-34.469Z/control/recording.mp4",
+    "verifiedAt": "2026-11-22T03:42:05.087Z",
+    "kaneRunIds": [
+      "9188ab4a-437f-4536-aa41-c4b3244e2d21",
+      "3c79c7d9-b09d-4072-ad36-a96e5b7790ce",
+      "680d1400-a8c3-4916-a717-40a3f132ef3f"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-22T03:42:05.087Z",
+      "event": "verified",
+      "before": "9188ab4a-437f-4536-aa41-c4b3244e2d21",
+      "control": "3c79c7d9-b09d-4072-ad36-a96e5b7790ce",
+      "after": "680d1400-a8c3-4916-a717-40a3f132ef3f"
+    },
+    {
+      "at": "2026-11-22T10:50:14.637Z",
+      "event": "rechecked",
+      "without": "inconclusive",
+      "runId": "94c3a8bc-c3b6-4dce-bd4c-fcfbe2b086c8",
+      "video": "proof/kane/mynoise-open-menu/2026-11-22T10-48-43.265Z/recheck-without/recording.mp4"
+    }
+  ]
+}

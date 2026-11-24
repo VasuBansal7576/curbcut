@@ -1,0 +1,17 @@
+{
+  "barrier": "The Products submenu is hidden on keyboard focus. A focus-only repair exposed the destination link, but keyboard activation still did not reach the product page. The revealed link was also observed with tabindex=\"-1\".",
+  "rules": [
+    {
+      "selector": "nav.mega-menu-nav > ul.mega-menu > li.mega-menu-item:first-of-type",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "selector": "nav.mega-menu-nav > ul.mega-menu > li.mega-menu-item:first-of-type > ul.mega-menu-dropdown > li:nth-of-type(4) > a.mega-menu-child",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "nav.mega-menu-nav > ul.mega-menu > li.mega-menu-item:first-of-type > ul.mega-menu-dropdown > li:nth-of-type(4) > a.mega-menu-child",
+      "action": "bindEnterToClick"
+    }
+  ]
+}

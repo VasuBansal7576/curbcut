@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stillroom Supply</title>
+<link rel="stylesheet" href="shop.css">
+<script src="shop.js" defer></script>
+</head>
+<body>
+<header class="masthead">
+  <a class="wordmark" href="./">Stillroom Supply</a>
+  <button id="cart" type="button">Cart (0)</button>
+</header>
+<main>
+  <section class="hero">
+    <p class="eyebrow">The listening collection</p>
+    <h1>Make room<br>for sound.</h1>
+    <p>Everyday audio for quieter rituals.</p>
+  </section>
+  <section class="catalog" aria-labelledby="catalog-heading">
+    <h2 id="catalog-heading">Shop the collection</h2>
+    <form id="search-form">
+      <label id="search-label" hidden for="search">Search products</label>
+      <input id="search" type="search">
+      <button type="submit">Search</button>
+    </form>
+    <p id="search-status" role="status"></p>
+    <div id="products">
+      <article class="product" data-product="headphones">
+        <div class="art headphone-art" aria-hidden="true"><span></span></div>
+        <div class="product-copy">
+          <p class="eyebrow">Over-ear audio</p>
+          <h3>Field Headphones</h3>
+          <p>Soft cushions and a warm, balanced sound.</p>
+          <div class="purchase"><strong>$89</strong><div class="add-to-cart">Add to cart</div></div>
+        </div>
+      </article>
+      <article class="product" data-product="speaker">
+        <div class="art speaker-art" aria-hidden="true"><span></span></div>
+        <div class="product-copy">
+          <p class="eyebrow">Portable audio</p>
+          <h3>Porch Speaker</h3>
+          <p>A compact speaker for slow mornings.</p>
+          <div class="purchase"><strong>$64</strong><button type="button" data-add>Add to cart</button></div>
+        </div>
+      </article>
+    </div>
+    <p id="cart-status" role="status"></p>
+    <button type="button" id="shipping">Shipping details</button>
+    <button type="button" id="start-reservation">Start a cart reservation</button>
+    <p id="reservation-status" role="status"></p>
+    <p id="shop-error" role="alert" hidden></p>
+  </section>
+</main>
+<dialog id="shipping-dialog" aria-labelledby="shipping-title">
+  <h2 id="shipping-title">Shipping details</h2>
+  <p>Orders ship in two business days.</p>
+  <button type="button" id="close-shipping">Close shipping details</button>
+</dialog>
+<dialog id="cart-dialog" aria-labelledby="cart-title">
+  <h2 id="cart-title">Your cart</h2>
+  <ul id="cart-items"></ul>
+  <form method="dialog"><button>Close cart</button></form>
+</dialog>
+<footer>
+  <span>Stillroom Supply · Demo shop</span>
+  <label><input id="native-fix" type="checkbox"> Native fixes</label>
+</footer>
+</body>
+</html>

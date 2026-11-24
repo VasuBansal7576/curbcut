@@ -1,0 +1,73 @@
+{
+  "id": "meteoblue-weather-radar",
+  "url": "https://www.meteoblue.com/en/weather/maps/",
+  "persona": "keyboard-only",
+  "task": "First assert the Weather Radar option in Popular Maps is in sequential keyboard focus order. If a consent dialog appears, use Manage options and Confirm choices. Select Weather Radar with Tab and Enter. Verify the map switches to Weather Radar.",
+  "controlTask": "If a consent dialog appears, use Manage options and Confirm choices. Click Weather Radar in Popular Maps and verify it becomes the selected map.",
+  "observedSelector": "[data-map-id=\"radar\"]",
+  "successSelector": "[data-map-id=\"radar\"][class*=\" active-\"]",
+  "site": "www.meteoblue.com",
+  "match": "https://www.meteoblue.com/en/weather/maps/",
+  "barrier": "The clickable Weather Radar option in Popular Maps is a div with tabIndex -1, so Tab skips it and keyboard users cannot reach it to activate it with Enter.",
+  "rules": [
+    {
+      "selector": "[data-map-id=\"radar\"]",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "[data-map-id=\"radar\"]",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "[data-map-id=\"radar\"]",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "[data-map-id=\"radar\"]",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "retired",
+  "evidence": {
+    "before": "proof/kane/meteoblue-weather-radar/resume-2026-11-22T03-40-19.199Z/before/recording.mp4",
+    "after": "proof/kane/meteoblue-weather-radar/resume-2026-11-22T03-47-55.923Z/attempt-1/after/recording.mp4",
+    "control": "proof/kane/meteoblue-weather-radar/resume-2026-11-22T03-40-19.199Z/control/recording.mp4",
+    "verifiedAt": "2026-11-22T03:50:08.127Z",
+    "kaneRunIds": [
+      "876f1634-e477-45e8-8197-960a5ab82c67",
+      "4bcad883-d37b-44d5-8d96-d56e33bf76b1",
+      "f6e2e4e0-3e20-45b9-b1ce-5339af098e51"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-22T03:50:08.127Z",
+      "event": "verified",
+      "before": "876f1634-e477-45e8-8197-960a5ab82c67",
+      "control": "4bcad883-d37b-44d5-8d96-d56e33bf76b1",
+      "after": "f6e2e4e0-3e20-45b9-b1ce-5339af098e51"
+    },
+    {
+      "at": "2026-11-22T10:49:59.378Z",
+      "event": "rechecked",
+      "without": "inconclusive",
+      "runId": "8a04d392-5a22-456f-98d6-3178a2f3cc17",
+      "video": "proof/kane/meteoblue-weather-radar/2026-11-22T10-46-03.183Z/recheck-without/recording.mp4"
+    },
+    {
+      "at": "2026-11-23T18:14:16.078Z",
+      "event": "local-broken",
+      "runner": "playwright",
+      "without": "fail",
+      "with": "fail"
+    },
+    {
+      "at": "2026-11-23T18:14:47.520Z",
+      "event": "local-retired",
+      "runner": "playwright",
+      "reason": "Tab traversal did not reach the target.",
+      "evidence": "proof/reliability/nightly.json"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "barrier": "At 320 CSS pixels, the “3 класс” link and its submenu have zero rendered width, and focusing the link leaves focus on the body.",
+  "rules": [
+    {"selector":"div.topline.wrapper","action":"injectCSS","value":{"display":"block"}},
+    {"selector":"nav.topmenu.flex-1","action":"injectCSS","value":{"display":"block","width":"100%","min-width":"0"}},
+    {"selector":"ul.nav-class.flexbox","action":"injectCSS","value":{"display":"block"}},
+    {"selector":"div > header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1)","action":"mirrorHoverToFocus"}
+  ]
+}

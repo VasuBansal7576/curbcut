@@ -1,0 +1,18 @@
+{
+  "barrier": "The open Privacy dialog has tabindex=\"-1\", which excludes the dialog itself from sequential keyboard focus. The run reached the Cookie settings button and failed to focus the dialog for the Escape step.",
+  "rules": [
+    {
+      "selector": "#onetrust-banner-sdk > div[role=\"dialog\"]",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "#onetrust-banner-sdk > div[role=\"dialog\"]",
+      "action": "makeFocusable"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#onetrust-banner-sdk > div[role=\"dialog\"]",
+      "close": "#onetrust-close-btn-container > button"
+    }
+  ]
+}

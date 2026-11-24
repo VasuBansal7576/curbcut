@@ -1,0 +1,10 @@
+{
+  "barrier": "Tab reaches the Who We Are button, but keyboard focus leaves its submenu hidden. Pointer hover opens the submenu and exposes the About ASM link.",
+  "rules": [
+    {
+      "selector": "#header .header-nav-menu > li.header-nav-item:has(> button[aria-controls=\"who_we_are\"])",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseenter"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "trigger",
+      "selector": "#topOfPage button.usa-banner__button[aria-controls=\"gov-banner-default-default\"]",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "usa-accordion__button",
+            "usa-banner__button"
+          ],
+          "label": "Here's how you know"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "target",
+      "selector": "#gov-banner-default-default",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "gov-banner-default-default",
+          "classes": [
+            "usa-banner__content",
+            "usa-accordion__content"
+          ],
+          "label": "Official websites use .govA .gov website belongs to an official government organization in the Unite"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "#gov-banner-default-default > div.grid-row.grid-gap-lg",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "grid-row",
+            "grid-gap-lg"
+          ],
+          "label": "Official websites use .govA .gov website belongs to an official government organization in the Unite"
+        }
+      ]
+    }
+  ]
+}

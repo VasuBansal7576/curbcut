@@ -1,0 +1,14 @@
+{
+  "barrier": "The search input has no accessible name, and the open Reading view dialog holds focus while the input is outside it.",
+  "rules": [
+    {
+      "selector": "dialog[aria-label=\"Curb Cut reading view\"]",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "#search-input",
+      "action": "addLabel",
+      "value": "Search Games"
+    }
+  ]
+}

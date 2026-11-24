@@ -1,0 +1,65 @@
+{
+  "id": "flashscore-de-tr",
+  "url": "https://www.flashscore.de/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “U17 Weltmeisterschaft 2026 Fussball Live Ergebnisse, Aktuelle Fussball Ergebnisse, Bundesliga, Champions”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "controlTask": "At normal width, read the passage beginning “U17 Weltmeisterschaft 2026 Fussball Live Ergebnisse, Aktuelle Fussball Ergebnisse, Bundesliga, Champions” and verify all its text is visible without horizontal scrolling.",
+  "observedSelector": "div:nth-of-type(3) > div:nth-of-type(1) > div > h1",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "div:nth-of-type(3) > div:nth-of-type(1) > div > h1",
+      "equals": "U17 Weltmeisterschaft 2026 Fussball Live Ergebnisse, Aktuelle Fussball Ergebnisse, Bundesliga, Champions"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "div:nth-of-type(3) > div:nth-of-type(1) > div > h1"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.flashscore.de",
+  "match": "https://www.flashscore.de/",
+  "barrier": "The heading uses white-space: nowrap, so its text spans 619 CSS pixels inside a 320-pixel container and requires horizontal scrolling.",
+  "rules": [
+    {
+      "selector": "div:nth-of-type(3) > div:nth-of-type(1) > div > h1",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "normal"
+      }
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v3/runs/flashscore-de-tr/before/recording.mp4",
+    "after": "proof/heldout-v3/runs/flashscore-de-tr/attempt-1/after/recording.mp4",
+    "control": "proof/heldout-v3/runs/flashscore-de-tr/control/recording.mp4",
+    "verifiedAt": "2026-11-23T05:23:23.274Z",
+    "kaneRunIds": [
+      "5ae1d6ea-b3ce-414a-9435-509999296cd2",
+      "97e62f2a-2358-45d2-8831-ba52d60213cd",
+      "bf0fe7a7-3883-41b0-b79d-4d060cbd5867"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-23T05:23:23.274Z",
+      "event": "verified",
+      "before": "5ae1d6ea-b3ce-414a-9435-509999296cd2",
+      "control": "97e62f2a-2358-45d2-8831-ba52d60213cd",
+      "after": "bf0fe7a7-3883-41b0-b79d-4d060cbd5867"
+    }
+  ]
+}

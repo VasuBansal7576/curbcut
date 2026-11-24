@@ -1,0 +1,21 @@
+{
+  "id": "low-vision-shop-speaker",
+  "url": "http://127.0.0.1:4317/fixtures/shop/",
+  "site": "127.0.0.1",
+  "match": "http://127.0.0.1:4317/fixtures/shop/",
+  "persona": "low-vision",
+  "task": "In the unfiltered collection, scroll vertically to Porch Speaker. Assert that its Add to cart control fits fully within the visible width. Add the speaker and confirm Cart (1).",
+  "barrier": "The #products grid places Porch Speaker in a horizontal column, with its Add to cart button starting at x=504 in a 320-pixel viewport.",
+  "rules": [
+    {
+      "selector": "#products",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

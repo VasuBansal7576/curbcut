@@ -1,0 +1,20 @@
+{
+  "stage": 7,
+  "caseReserve": {
+    "original": 300,
+    "continuation": 120
+  },
+  "reason": "The original 300-credit case reserve blocked the next case with 276.3363 credits available under the cap. The only v5 case observed so far cost 103.6637 credits, including a patched retry. The 120-credit reserve adds 16.3363 credits of margin to that observation.",
+  "budget": 380,
+  "floor": 153.8893,
+  "phaseMinimumAboveFloor": 100,
+  "priorSummary": {
+    "commit": "1433cc97d4dcaa4e6d48e970fbb02a863e6f7c9e",
+    "blob": "6cbc70ed6125980a955d29646431f4c9aadfe2fd"
+  },
+  "selection": {
+    "commit": "b225627864d1d6adb7d64ea73fd1cc0bec30ba40",
+    "blob": "78d95f80fbeda66cd130d7855bc1fa8116a2198f"
+  },
+  "application": "Apply the 120-credit reserve to the three planned phases of each remaining case, with two thirds reserved before control and one third before patched replay. The existing 100-credit minimum above the floor still applies to every hosted run, including retries. Continue exactly the unrun targets in selection order."
+}

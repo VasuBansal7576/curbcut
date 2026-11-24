@@ -1,0 +1,59 @@
+{
+  "id": "v5-d286cd4e5d75-a722d795",
+  "url": "https://www.cabq.gov/",
+  "persona": "keyboard-only",
+  "task": "Open “Open Search” by keyboard. Confirm the dialog appeared, then press Escape and confirm it closed.",
+  "controlTask": "Click “Open Search” and confirm that the dialog opens. Click “Close” to close it.",
+  "observedSelector": "#portal-globalnav > li:nth-of-type(8) > button",
+  "outcomeChecks": [
+    {
+      "kind": "hidden",
+      "selector": "#searchModal"
+    }
+  ],
+  "barrierClass": 4,
+  "relatedSelectors": [
+    "#searchModal",
+    "#searchModal > div > div > div:nth-of-type(1) > button"
+  ],
+  "journey": [
+    {
+      "selector": "#portal-globalnav > li:nth-of-type(8) > button",
+      "action": "activate",
+      "checks": [
+        {
+          "kind": "visible",
+          "selector": "#searchModal"
+        }
+      ]
+    },
+    {
+      "selector": "#searchModal",
+      "action": "key",
+      "key": "Escape",
+      "pointer": {
+        "action": "click",
+        "selector": "#searchModal > div > div > div:nth-of-type(1) > button"
+      }
+    }
+  ],
+  "site": "www.cabq.gov",
+  "match": "https://www.cabq.gov/",
+  "barrier": "The search dialog becomes visible during its opening transition while focus remains on the page body, so an immediate Escape does not reach the dialog’s keyboard handler.",
+  "rules": [
+    {
+      "action": "extendTimeout",
+      "selector": "#searchModal",
+      "value": 1000
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#searchModal",
+      "opener": "#portal-globalnav > li:nth-of-type(8) > button",
+      "close": "#searchModal > div > div > div:nth-of-type(1) > button"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

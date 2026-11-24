@@ -1,0 +1,49 @@
+{
+  "id": "v5-d7d578dc51d1ba895c9a",
+  "url": "https://stardust-tv.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Riveting Short Dramas Await Your Exploration” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Riveting Short Dramas Await Your Exploration” at normal width.",
+  "observedSelector": "#product1-right > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#product1-right > p",
+      "equals": "Riveting Short Dramas Await Your Exploration"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#product1-right > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "stardust-tv.com",
+  "match": "https://stardust-tv.com/",
+  "barrier": "The first product section’s flex container and text column stay 860 CSS pixels wide in a 320 CSS pixel viewport, so the page’s horizontal clipping cuts off the passage.",
+  "rules": [
+    {
+      "selector": "#products > section:first-of-type > .section-content.odd",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#product1-right, #product1-right > p.content-subtitle",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

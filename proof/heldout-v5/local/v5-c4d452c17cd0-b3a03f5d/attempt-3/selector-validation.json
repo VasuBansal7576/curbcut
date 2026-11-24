@@ -1,0 +1,224 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#features > div.relative.mt-8 > div.no-scrollbar.overflow-x-auto",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "no-scrollbar",
+            "overflow-x-auto",
+            "scroll-smooth",
+            "[mask-image:linear-gradient(to_right,transparent,black_14%,black_86%,transparent)]"
+          ],
+          "label": "Reader Streaks Jobs Discussions Squads Feed Customize Briefing Breaking Spotlight Bookmarks"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "#features [role='tablist'][aria-label='daily.dev features']",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "flex",
+            "w-max",
+            "items-center",
+            "gap-2.5"
+          ],
+          "role": "tablist",
+          "label": "daily.dev features"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "field": "selector",
+      "selector": "#features [role='tablist'][aria-label='daily.dev features'] > button.tour-tab[role='tab']",
+      "count": 11,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "id": "tour-tab-readmode",
+          "classes": [
+            "tour-tab",
+            "flex-none",
+            "cursor-pointer",
+            "whitespace-nowrap"
+          ],
+          "role": "tab",
+          "label": "Reader"
+        },
+        {
+          "tag": "button",
+          "id": "tour-tab-streak",
+          "classes": [
+            "tour-tab",
+            "flex-none",
+            "cursor-pointer",
+            "whitespace-nowrap"
+          ],
+          "role": "tab",
+          "label": "Streaks"
+        },
+        {
+          "tag": "button",
+          "id": "tour-tab-jobs",
+          "classes": [
+            "tour-tab",
+            "flex-none",
+            "cursor-pointer",
+            "whitespace-nowrap"
+          ],
+          "role": "tab",
+          "label": "Jobs"
+        },
+        {
+          "tag": "button",
+          "id": "tour-tab-reader",
+          "classes": [
+            "tour-tab",
+            "flex-none",
+            "cursor-pointer",
+            "whitespace-nowrap"
+          ],
+          "role": "tab",
+          "label": "Discussions"
+        },
+        {
+          "tag": "button",
+          "id": "tour-tab-squads",
+          "classes": [
+            "tour-tab",
+            "flex-none",
+            "cursor-pointer",
+            "whitespace-nowrap"
+          ],
+          "role": "tab",
+          "label": "Squads"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "field": "selector",
+      "selector": "#tour-tab-newtab",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "id": "tour-tab-newtab",
+          "classes": [
+            "tour-tab",
+            "flex-none",
+            "cursor-pointer",
+            "whitespace-nowrap"
+          ],
+          "role": "tab",
+          "label": "Feed"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "field": "container",
+      "selector": "#features [role='tablist'][aria-label='daily.dev features']",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "flex",
+            "w-max",
+            "items-center",
+            "gap-2.5"
+          ],
+          "role": "tablist",
+          "label": "daily.dev features"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "field": "items",
+      "selector": "#features [role='tablist'][aria-label='daily.dev features'] > button.tour-tab[role='tab']",
+      "scope": "#features [role='tablist'][aria-label='daily.dev features']",
+      "count": 11,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "id": "tour-tab-readmode",
+          "classes": [
+            "tour-tab",
+            "flex-none",
+            "cursor-pointer",
+            "whitespace-nowrap"
+          ],
+          "role": "tab",
+          "label": "Reader"
+        },
+        {
+          "tag": "button",
+          "id": "tour-tab-streak",
+          "classes": [
+            "tour-tab",
+            "flex-none",
+            "cursor-pointer",
+            "whitespace-nowrap"
+          ],
+          "role": "tab",
+          "label": "Streaks"
+        },
+        {
+          "tag": "button",
+          "id": "tour-tab-jobs",
+          "classes": [
+            "tour-tab",
+            "flex-none",
+            "cursor-pointer",
+            "whitespace-nowrap"
+          ],
+          "role": "tab",
+          "label": "Jobs"
+        },
+        {
+          "tag": "button",
+          "id": "tour-tab-reader",
+          "classes": [
+            "tour-tab",
+            "flex-none",
+            "cursor-pointer",
+            "whitespace-nowrap"
+          ],
+          "role": "tab",
+          "label": "Discussions"
+        },
+        {
+          "tag": "button",
+          "id": "tour-tab-squads",
+          "classes": [
+            "tour-tab",
+            "flex-none",
+            "cursor-pointer",
+            "whitespace-nowrap"
+          ],
+          "role": "tab",
+          "label": "Squads"
+        }
+      ]
+    }
+  ]
+}

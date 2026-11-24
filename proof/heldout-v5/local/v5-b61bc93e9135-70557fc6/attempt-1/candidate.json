@@ -1,0 +1,52 @@
+{
+  "id": "v5-b61bc93e9135-70557fc6",
+  "url": "https://www.onecause.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Solutions” from keyboard focus or with Arrow Down and follow “Event Fundraising”. Confirm the public destination /solutions/auction-events/event-fundraising/.",
+  "controlTask": "Hover “Solutions”, click “Event Fundraising” and confirm /solutions/auction-events/event-fundraising/.",
+  "observedSelector": "#header--main__nav > ul > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/solutions/auction-events/event-fundraising/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#header--main__nav > ul > li:nth-of-type(1)",
+    "#header--menu__nav--dropdown-69614"
+  ],
+  "journey": [
+    {
+      "selector": "#header--main__nav > ul > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#header--main__nav > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#header--menu__nav--dropdown__inner-67255 > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.onecause.com",
+  "match": "https://www.onecause.com/",
+  "barrier": "The desktop Solutions dropdown opens on hover of its parent list item. Keyboard focus and Arrow Down leave the panel at display: none, so the Event Fundraising link is unavailable.",
+  "rules": [
+    {
+      "selector": "#header--main__nav > ul > li.menu-solutions",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

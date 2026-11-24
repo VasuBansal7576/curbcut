@@ -1,0 +1,112 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-1b0ce5c57b500551ae39",
+    "url": "https://www.expansion.com/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “PÓDCAST EN ACCIÓNCómo ganar en la Bolsa española más allá de los” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “PÓDCAST EN ACCIÓNCómo ganar en la Bolsa española más allá de los” at normal width.",
+    "observedSelector": "#alerta > ul:nth-of-type(1) > li:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#alerta > ul:nth-of-type(1) > li:nth-of-type(1)",
+        "equals": "PÓDCAST EN ACCIÓNCómo ganar en la Bolsa española más allá de los"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#alerta > ul:nth-of-type(1) > li:nth-of-type(1)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    }
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "Checked the declared outcome after the read action.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/heldout-v5/local/v5-1b0ce5c57b500551ae39/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "low-vision",
+      "status": "fail",
+      "reason": "The target does not fit the visible width.",
+      "file": "proof/heldout-v5/local/v5-1b0ce5c57b500551ae39/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "low-vision",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/heldout-v5/local/v5-1b0ce5c57b500551ae39/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/heldout-v5/local/v5-1b0ce5c57b500551ae39/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v5-1b0ce5c57b500551ae39",
+    "url": "https://www.expansion.com/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “PÓDCAST EN ACCIÓNCómo ganar en la Bolsa española más allá de los” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “PÓDCAST EN ACCIÓNCómo ganar en la Bolsa española más allá de los” at normal width.",
+    "observedSelector": "#alerta > ul:nth-of-type(1) > li:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#alerta > ul:nth-of-type(1) > li:nth-of-type(1)",
+        "equals": "PÓDCAST EN ACCIÓNCómo ganar en la Bolsa española más allá de los"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#alerta > ul:nth-of-type(1) > li:nth-of-type(1)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "www.expansion.com",
+    "match": "https://www.expansion.com/",
+    "barrier": "At 320 CSS pixels, the alert paragraph clips 402 pixels of nonwrapping text inside a 200-pixel box.",
+    "rules": [
+      {
+        "selector": "#alerta, #alerta > ul:first-of-type, #alerta > ul:first-of-type > li.alerta-item",
+        "action": "injectCSS",
+        "value": {
+          "height": "auto",
+          "max-height": "none"
+        }
+      },
+      {
+        "selector": "#alerta > ul:first-of-type > li.alerta-item > p",
+        "action": "injectCSS",
+        "value": {
+          "white-space": "normal",
+          "overflow-wrap": "anywhere",
+          "height": "auto",
+          "max-height": "none"
+        }
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/heldout-v5/local/v5-1b0ce5c57b500551ae39/attempt-1"
+}

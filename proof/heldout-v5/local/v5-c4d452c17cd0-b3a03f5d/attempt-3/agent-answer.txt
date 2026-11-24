@@ -1,0 +1,37 @@
+{
+  "barrier": "Tab reaches Feed, but the focused button is clipped or outside the viewport when checked. The feature tabs sit inside a masked horizontal scroller, and the page uses smooth scrolling.",
+  "rules": [
+    {
+      "selector": "#features > div.relative.mt-8 > div.no-scrollbar.overflow-x-auto",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "#features [role='tablist'][aria-label='daily.dev features']",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto"
+      }
+    },
+    {
+      "selector": "#features [role='tablist'][aria-label='daily.dev features'] > button.tour-tab[role='tab']",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "selector": "#tour-tab-newtab",
+      "action": "extendTimeout",
+      "value": 1500
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#features [role='tablist'][aria-label='daily.dev features']",
+      "items": "#features [role='tablist'][aria-label='daily.dev features'] > button.tour-tab[role='tab']",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

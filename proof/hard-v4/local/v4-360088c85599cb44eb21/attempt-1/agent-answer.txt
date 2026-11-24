@@ -1,0 +1,31 @@
+{
+  "barrier": "At 320 CSS pixels, the side-by-side table columns push the passage to x=178 and give it a width of 493 pixels. Horizontal clipping cuts off the portion beyond the viewport.",
+  "rules": [
+    {
+      "selector": "table",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "tr",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "td",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

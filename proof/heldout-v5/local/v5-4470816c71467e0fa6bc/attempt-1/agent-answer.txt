@@ -1,0 +1,12 @@
+{
+  "barrier": "At 320 CSS pixels, the About Magna grid gives the passage a 320-pixel-wide column starting 30 pixels from the left, so the final 30 pixels extend beyond the viewport and are clipped.",
+  "rules": [
+    {
+      "selector": "#BodyRegion_C087_Col00 > div:nth-of-type(2) > div.l-grid-layout__two-column",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ]
+}

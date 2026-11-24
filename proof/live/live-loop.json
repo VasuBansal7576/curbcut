@@ -1,0 +1,93 @@
+{
+  "runner": "headed Chromium with installed extension and trusted Playwright key input",
+  "videos": [
+    "proof/live/chrome.mp4",
+    "proof/live/extension.mp4"
+  ],
+  "url": "https://www.colorhexa.com/0066ff",
+  "task": "Open the color picker using the swatch next to the color search field. Stop when the color spectrum panel and hue slider are visible.",
+  "job": "152e07cf-15b8-423a-a971-62928f01d7a7",
+  "startTabIndex": -1,
+  "traversed": [
+    "A.",
+    "INPUT.",
+    "INPUT.",
+    "A."
+  ],
+  "afterTraversal": [
+    {
+      "key": "Shift+Tab",
+      "focused": "DIV.sp-replacer"
+    }
+  ],
+  "snapshot": {
+    "focused": "#search-input",
+    "nodeCount": 180
+  },
+  "patchId": "report-d6870c43f8831c2d3b",
+  "kaneRunIds": [
+    "3c57743a-4f8b-4c78-9f77-d6e4630e9d31",
+    "dedca760-0bbb-4e0d-8c38-384f23fbe12d",
+    "cbcbc771-f785-4a3c-aaa9-e9fdcc8e9f65"
+  ],
+  "timeline": [
+    {
+      "event": "Keyboard traversal on original page",
+      "at": "2026-11-22T11:01:49.315Z",
+      "seconds": 1.587
+    },
+    {
+      "event": "Chrome extension hotkey",
+      "at": "2026-11-22T11:01:49.409Z",
+      "seconds": 1.681
+    },
+    {
+      "event": "Task submitted to curbcut serve",
+      "at": "2026-11-22T11:01:51.095Z",
+      "seconds": 3.367
+    },
+    {
+      "event": "reproducing",
+      "at": "2026-11-22T11:01:51.903Z",
+      "seconds": 4.175
+    },
+    {
+      "event": "checking-control",
+      "at": "2026-11-22T11:02:40.314Z",
+      "seconds": 52.586
+    },
+    {
+      "event": "writing-patch",
+      "at": "2026-11-22T11:03:14.173Z",
+      "seconds": 86.445
+    },
+    {
+      "event": "verifying",
+      "at": "2026-11-22T11:03:23.037Z",
+      "seconds": 95.309
+    },
+    {
+      "event": "publishing",
+      "at": "2026-11-22T11:04:09.433Z",
+      "seconds": 141.705
+    },
+    {
+      "event": "Kane verified and published patch",
+      "at": "2026-11-22T11:04:09.835Z",
+      "seconds": 142.107
+    },
+    {
+      "event": "Installed extension applied new feed to the original tab",
+      "at": "2026-11-22T11:04:12.123Z",
+      "seconds": 144.395
+    },
+    {
+      "event": "Tab and Enter opened the repaired color picker",
+      "at": "2026-11-22T11:04:13.688Z",
+      "seconds": 145.96
+    }
+  ],
+  "terminalTranscript": "proof/live/terminal.txt",
+  "sameTabApplied": true,
+  "outcome": "Color picker visible after Tab and Enter"
+}

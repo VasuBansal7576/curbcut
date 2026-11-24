@@ -1,0 +1,66 @@
+{
+  "id": "v5-95f8a51f17b0a17effa9",
+  "url": "https://nbqfbj.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “食品饮料 实现商品保质期、近效期、批次等方面管理，更有仓库物流运输、库龄分析、智能补货等深度行业应用。 查看详情 五金建材 实现上万种类零部件商品管理，以及往来客户分布广泛的信用额度管控、操作简单、应用易上手。 查看详情 汽配汽修 汽配维修、送修、上门维修、整机更换。从维修接件、到维修业务处理、维修费用核算、维修取件及服务回访等环节进行严格把关。 查看详情 ” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “食品饮料 实现商品保质期、近效期、批次等方面管理，更有仓库物流运输、库龄分析、智能补货等深度行业应用。 查看详情 五金建材 实现上万种类零部件商品管理，以及往来客户分布广泛的信用额度管控、操作简单、应用易上手。 查看详情 汽配汽修 汽配维修、送修、上门维修、整机更换。从维修接件、到维修业务处理、维修费用核算、维修取件及服务回访等环节进行严格把关。 查看详情 ” at normal width.",
+  "observedSelector": "#myCarousel1 > div:nth-of-type(1) > div:nth-of-type(1) > ul > li",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#myCarousel1 > div:nth-of-type(1) > div:nth-of-type(1) > ul > li",
+      "equals": "食品饮料 实现商品保质期、近效期、批次等方面管理，更有仓库物流运输、库龄分析、智能补货等深度行业应用。 查看详情 五金建材 实现上万种类零部件商品管理，以及往来客户分布广泛的信用额度管控、操作简单、应用易上手。 查看详情 汽配汽修 汽配维修、送修、上门维修、整机更换。从维修接件、到维修业务处理、维修费用核算、维修取件及服务回访等环节进行严格把关。 查看详情 "
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#myCarousel1 > div:nth-of-type(1) > div:nth-of-type(1) > ul > li"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "nbqfbj.com",
+  "match": "https://nbqfbj.com/",
+  "barrier": "The carousel’s active slide measures only 20 pixels high, the target list has no readable text in the snapshot, and the carousel wrapper clips overflow on both axes. The previous width and wrapping changes left the target invisible.",
+  "rules": [
+    {
+      "selector": "#myCarousel1 > .carousel-inner",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "selector": "#myCarousel1 #cont > ul.list-inline",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "height": "auto",
+        "max-height": "none"
+      }
+    },
+    {
+      "selector": "#myCarousel1 #cont > ul.list-inline > li",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "max-width": "100%",
+        "height": "auto",
+        "max-height": "none",
+        "box-sizing": "border-box",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    },
+    {
+      "selector": "#myCarousel1 #cont",
+      "action": "extendTimeout",
+      "value": 15000
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,57 @@
+{
+  "id": "v5-ffa5b846356dc17b179d",
+  "url": "https://www.chemnet.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Home | Products | Suppliers | Offer to Buy | Offer to” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Home | Products | Suppliers | Offer to Buy | Offer to” at normal width.",
+  "observedSelector": "#nav > ul > li:nth-of-type(2)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#nav > ul > li:nth-of-type(2)",
+      "equals": "Home | Products | Suppliers | Offer to Buy | Offer to"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#nav > ul > li:nth-of-type(2)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.chemnet.com",
+  "match": "https://www.chemnet.com/",
+  "barrier": "At 320 CSS pixels, the fixed-width header places the 715-pixel navigation row 203 pixels from the left edge. The row and its containers clip the links that extend beyond the viewport.",
+  "rules": [
+    {
+      "selector": "body, #header",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "#header > .header02, #nav, #nav > ul, #nav > ul > li.nav_bg02",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "max-width": "100%",
+        "height": "auto",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#nav > ul > li.nav_bg02, #nav > ul > li.nav_bg02 > a",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

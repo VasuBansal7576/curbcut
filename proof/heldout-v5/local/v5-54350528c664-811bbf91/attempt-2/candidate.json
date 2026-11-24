@@ -1,0 +1,53 @@
+{
+  "id": "v5-54350528c664-811bbf91",
+  "url": "https://bangmod.cloud/",
+  "persona": "keyboard-only",
+  "task": "Open “Services” from keyboard focus or with Arrow Down and follow “DDoS Protection”. Confirm the public destination /ddos-protection/.",
+  "controlTask": "Hover “Services”, click “DDoS Protection” and confirm /ddos-protection/.",
+  "observedSelector": "#jet-mega-menu-item-29645 > div:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/ddos-protection/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#jet-mega-menu-item-29645",
+    "#jet-mega-menu-item-29645 > div:nth-of-type(2)"
+  ],
+  "journey": [
+    {
+      "selector": "#jet-mega-menu-item-29645 > div:nth-of-type(1)",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#jet-mega-menu-item-29645 > div:nth-of-type(1)",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#e-n-tab-content-728245511 > div > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div > ul > li > a",
+      "action": "activate"
+    }
+  ],
+  "site": "bangmod.cloud",
+  "match": "https://bangmod.cloud/",
+  "barrier": "Hovering Services expands the mega menu, but focusing the Services button and pressing Arrow Down leave the panel hidden and the DDoS Protection link unavailable.",
+  "rules": [
+    {
+      "selector": "#jet-mega-menu-item-29645 > div.jet-mega-menu-item__inner",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseover"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

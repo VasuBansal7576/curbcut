@@ -1,0 +1,20 @@
+{
+  "barrier": "The Products submenu is hidden in its resting state. The prior hover-to-focus rule let keyboard traversal reach the fourth product link, but activation left the browser on the home page.",
+  "rules": [
+    {
+      "selector": "nav.mega-menu-nav > ul.mega-menu > li.mega-menu-item:first-of-type",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "nav.mega-menu-nav > ul.mega-menu > li.mega-menu-item:first-of-type",
+      "items": "nav.mega-menu-nav > ul.mega-menu > li.mega-menu-item:first-of-type > a.is-clickable, nav.mega-menu-nav > ul.mega-menu > li.mega-menu-item:first-of-type > ul.mega-menu-dropdown > li.mega-menu-child-item > a.mega-menu-child",
+      "orientation": "vertical",
+      "activate": "focus"
+    },
+    {
+      "selector": "nav.mega-menu-nav > ul.mega-menu > li.mega-menu-item:first-of-type > ul.mega-menu-dropdown > li:nth-of-type(4) > a.mega-menu-child",
+      "action": "bindEnterToClick"
+    }
+  ]
+}

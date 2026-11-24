@@ -1,0 +1,15 @@
+{
+  "barrier": "At 320 CSS pixels, the main grid and its secondary content are 344 pixels wide. The passage starts at pixel 16 and extends to pixel 328, where horizontal clipping hides its right edge.",
+  "rules": [
+    {
+      "selector": "#b-home #header",
+      "action": "injectCSS",
+      "value": {"min-width": "0", "flex-wrap": "wrap"}
+    },
+    {
+      "selector": "#b-home #content, #b-home #content > div.page-secondary.full-width",
+      "action": "injectCSS",
+      "value": {"min-width": "0", "max-width": "100%"}
+    }
+  ]
+}

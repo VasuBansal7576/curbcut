@@ -1,0 +1,40 @@
+{
+  "barrier": "The passage and its wrapper are 980 CSS pixels wide and start 18 pixels from the left edge. At a 320 CSS pixel viewport, horizontal clipping cuts off the text beyond the right edge.",
+  "rules": [
+    {
+      "selector": "#site-root",
+      "action": "injectCSS",
+      "value": {"min-width": "0"}
+    },
+    {
+      "selector": "#masterPage",
+      "action": "injectCSS",
+      "value": {"grid-template-columns": "minmax(0, 1fr)"}
+    },
+    {
+      "selector": "#SITE_PAGES_TRANSITION_GROUP",
+      "action": "injectCSS",
+      "value": {"grid-template-columns": "minmax(0, 1fr)"}
+    },
+    {
+      "selector": "#comp-l9siuban",
+      "action": "injectCSS",
+      "value": {"min-width": "0", "max-width": "100%"}
+    },
+    {
+      "selector": "#comp-l9siubbp",
+      "action": "injectCSS",
+      "value": {"min-width": "0", "max-width": "100%"}
+    },
+    {
+      "selector": "#comp-ir225ikb",
+      "action": "injectCSS",
+      "value": {"width": "auto", "min-width": "0", "overflow-wrap": "anywhere"}
+    },
+    {
+      "selector": "#comp-ir225ikb > p",
+      "action": "injectCSS",
+      "value": {"width": "auto", "max-width": "100%", "box-sizing": "border-box"}
+    }
+  ]
+}

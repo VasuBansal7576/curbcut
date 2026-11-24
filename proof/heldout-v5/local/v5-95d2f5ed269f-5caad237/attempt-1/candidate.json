@@ -1,0 +1,52 @@
+{
+  "id": "v5-95d2f5ed269f-5caad237",
+  "url": "https://www.llnl.gov/",
+  "persona": "keyboard-only",
+  "task": "Open “Our Purpose” from keyboard focus or with Arrow Down and follow “Management and Sponsors”. Confirm the public destination /purpose/management-sponsors.",
+  "controlTask": "Hover “Our Purpose”, click “Management and Sponsors” and confirm /purpose/management-sponsors.",
+  "observedSelector": "#block-primary-menu-sierra > ul > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/purpose/management-sponsors"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#block-primary-menu-sierra > ul > li:nth-of-type(1)",
+    "#block-primary-menu-sierra > ul > li:nth-of-type(1) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#block-primary-menu-sierra > ul > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#block-primary-menu-sierra > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#block-primary-menu-sierra > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.llnl.gov",
+  "match": "https://www.llnl.gov/",
+  "barrier": "The Our Purpose submenu uses a CSS hover rule on its parent list item to change display from none to block. Focusing the trigger and pressing Arrow Down left Management and Sponsors unavailable.",
+  "rules": [
+    {
+      "selector": "#block-primary-menu-sierra > ul.nav-level-0 > li.nav-item.dropdown:first-of-type",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

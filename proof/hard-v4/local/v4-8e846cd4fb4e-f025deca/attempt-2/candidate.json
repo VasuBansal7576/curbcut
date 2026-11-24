@@ -1,0 +1,46 @@
+{
+  "id": "v4-8e846cd4fb4e-f025deca",
+  "url": "https://builtin.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, click “Expand Button” and read “Remote Tech Companies Companies Hiring Remotely Fully Remote Companies More ResourcesTech + Startup ”.",
+  "controlTask": "Click “Expand Button” and read “Remote Tech Companies Companies Hiring Remotely Fully Remote Companies More ResourcesTech + Startup ”.",
+  "observedSelector": "div:nth-of-type(2) > main > div > div:nth-of-type(2) > div:nth-of-type(4) > div > button",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#drop-data-explore",
+      "equals": "Remote Tech Companies Companies Hiring Remotely Fully Remote Companies More ResourcesTech + Startup "
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#drop-data-explore"
+  ],
+  "journey": [
+    {
+      "selector": "div:nth-of-type(2) > main > div > div:nth-of-type(2) > div:nth-of-type(4) > div > button",
+      "action": "activate"
+    },
+    {
+      "selector": "#drop-data-explore",
+      "action": "observe"
+    }
+  ],
+  "site": "builtin.com",
+  "match": "https://builtin.com/",
+  "barrier": "At 320 CSS pixels, the expanded panel has a 288-pixel client width and a 304-pixel scroll width, so its content does not fit with vertical scrolling alone.",
+  "rules": [
+    {
+      "selector": "div.row.px-sm",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

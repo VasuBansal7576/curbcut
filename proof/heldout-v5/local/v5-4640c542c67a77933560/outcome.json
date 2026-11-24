@@ -1,0 +1,112 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-4640c542c67a77933560",
+    "url": "https://lmgtfy.com/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “Let Me Google That For You (LMGTFY) is for all those people” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “Let Me Google That For You (LMGTFY) is for all those people” at normal width.",
+    "observedSelector": "#tsf > div:nth-of-type(2) > div:nth-of-type(6) > center:nth-of-type(2) > div > p:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#tsf > div:nth-of-type(2) > div:nth-of-type(6) > center:nth-of-type(2) > div > p:nth-of-type(1)",
+        "equals": "Let Me Google That For You (LMGTFY) is for all those people"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#tsf > div:nth-of-type(2) > div:nth-of-type(6) > center:nth-of-type(2) > div > p:nth-of-type(1)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    }
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "Checked the declared outcome after the read action.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/heldout-v5/local/v5-4640c542c67a77933560/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "low-vision",
+      "status": "fail",
+      "reason": "The target does not fit the visible width.",
+      "file": "proof/heldout-v5/local/v5-4640c542c67a77933560/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "low-vision",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/heldout-v5/local/v5-4640c542c67a77933560/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/heldout-v5/local/v5-4640c542c67a77933560/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v5-4640c542c67a77933560",
+    "url": "https://lmgtfy.com/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “Let Me Google That For You (LMGTFY) is for all those people” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “Let Me Google That For You (LMGTFY) is for all those people” at normal width.",
+    "observedSelector": "#tsf > div:nth-of-type(2) > div:nth-of-type(6) > center:nth-of-type(2) > div > p:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#tsf > div:nth-of-type(2) > div:nth-of-type(6) > center:nth-of-type(2) > div > p:nth-of-type(1)",
+        "equals": "Let Me Google That For You (LMGTFY) is for all those people"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#tsf > div:nth-of-type(2) > div:nth-of-type(6) > center:nth-of-type(2) > div > p:nth-of-type(1)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "lmgtfy.com",
+    "match": "https://lmgtfy.com/",
+    "barrier": "At 320 CSS pixels, #searchform retains an 820px minimum width, placing the 640px-wide passage 90px from the left edge and clipping its right side.",
+    "rules": [
+      {
+        "selector": "#searchform",
+        "action": "injectCSS",
+        "value": {
+          "min-width": "0",
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      },
+      {
+        "selector": "div.jhp.VlcLAe > center:nth-of-type(2) > div:nth-of-type(1)",
+        "action": "injectCSS",
+        "value": {
+          "max-width": "100%",
+          "box-sizing": "border-box",
+          "overflow-wrap": "anywhere"
+        }
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/heldout-v5/local/v5-4640c542c67a77933560/attempt-1"
+}

@@ -1,0 +1,10 @@
+{
+  "barrier": "Tab reaches the first FAQ button, but the button is still outside the viewport when the runner checks focus visibility.",
+  "rules": [
+    {
+      "selector": "#q1 > button",
+      "action": "extendTimeout",
+      "value": 2000
+    }
+  ]
+}

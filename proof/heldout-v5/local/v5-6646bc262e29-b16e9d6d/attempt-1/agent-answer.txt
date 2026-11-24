@@ -1,0 +1,28 @@
+{
+  "barrier": "The “free domain” modal trigger is a clickable span with no tabindex, so Tab skips it.",
+  "rules": [
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#exampleModalToggle1",
+      "opener": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "close": "#exampleModalToggle1 .modal-footer > button[data-bs-dismiss='modal']"
+    }
+  ]
+}

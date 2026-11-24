@@ -1,0 +1,107 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-acb0fb9f8c97-603c0357",
+    "url": "https://wpbrigade.com/",
+    "persona": "keyboard-only",
+    "task": "Open “Products” from keyboard focus or with Arrow Down and follow “Under Construction Maintenance Mode Create a Coming Soon or Maintenance Mode page instantly for your website.”. Confirm the public destination /products/under-construction-maintenance-mode/.",
+    "controlTask": "Hover “Products”, click “Under Construction Maintenance Mode Create a Coming Soon or Maintenance Mode page instantly for your website.” and confirm /products/under-construction-maintenance-mode/.",
+    "observedSelector": "div > header > div:nth-of-type(1) > div > nav:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/products/under-construction-maintenance-mode/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "div > header > div:nth-of-type(1) > div > nav:nth-of-type(2) > ul > li:nth-of-type(1)",
+      "div > header > div:nth-of-type(1) > div > nav:nth-of-type(2) > ul > li:nth-of-type(1) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "div > header > div:nth-of-type(1) > div > nav:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "div > header > div:nth-of-type(1) > div > nav:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "div > header > div:nth-of-type(1) > div > nav:nth-of-type(2) > ul > li:nth-of-type(1) > ul > li:nth-of-type(4) > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "unresolved",
+  "reason": "The final journey outcome did not hold.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-acb0fb9f8c97-603c0357/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-acb0fb9f8c97-603c0357/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-acb0fb9f8c97-603c0357/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-2/after",
+      "persona": "keyboard-only",
+      "iteration": 2,
+      "status": "fail",
+      "reason": "Tab traversal missed journey step 3.",
+      "file": "proof/heldout-v5/local/v5-acb0fb9f8c97-603c0357/attempt-2/after.json"
+    },
+    {
+      "name": "attempt-3/after",
+      "persona": "keyboard-only",
+      "iteration": 3,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-acb0fb9f8c97-603c0357/attempt-3/after.json"
+    },
+    {
+      "name": "attempt-4/after",
+      "persona": "keyboard-only",
+      "iteration": 4,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-acb0fb9f8c97-603c0357/attempt-4/after.json"
+    },
+    {
+      "name": "attempt-5/after",
+      "persona": "keyboard-only",
+      "iteration": 5,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-acb0fb9f8c97-603c0357/attempt-5/after.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

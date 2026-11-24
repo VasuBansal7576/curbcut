@@ -1,0 +1,60 @@
+{
+  "id": "v5-b69c0c4bbc71-11274908",
+  "url": "https://www.a8.net/",
+  "persona": "keyboard-only",
+  "task": "Activate “Next slide” from the keyboard and confirm the next slide is shown.",
+  "controlTask": "Click “Next slide” and confirm the next slide is shown.",
+  "observedSelector": "#slideArea > div > div:nth-of-type(3)",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#slick-slide01.slick-current"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "#slideArea > div",
+    "#slideArea > div > div:nth-of-type(1)",
+    "#slick-slide01"
+  ],
+  "journey": [
+    {
+      "selector": "#slideArea > div > div:nth-of-type(3)",
+      "action": "activate"
+    },
+    {
+      "selector": "#slick-slide01.slick-current",
+      "action": "observe"
+    }
+  ],
+  "site": "www.a8.net",
+  "match": "https://www.a8.net/",
+  "barrier": "The Next slide arrow is a clickable div with no tabindex, button role, or accessible name, so Tab skips it. The carousel CSS also removes its focus outline.",
+  "rules": [
+    {
+      "selector": "#slideArea > .slideBox > div.slick-next.slick-arrow",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#slideArea > .slideBox > div.slick-next.slick-arrow",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#slideArea > .slideBox > div.slick-next.slick-arrow",
+      "action": "addLabel",
+      "value": "Next slide"
+    },
+    {
+      "selector": "#slideArea > .slideBox > div.slick-next.slick-arrow",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#slideArea > .slideBox > div.slick-next.slick-arrow",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

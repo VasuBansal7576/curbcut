@@ -1,0 +1,34 @@
+{
+  "barrier": "The header has a 990px minimum width, and its horizontal navigation places the 酒店 link at x=426–506, entirely beyond the clipped 320px viewport.",
+  "rules": [
+    {
+      "selector": "#header",
+      "action": "injectCSS",
+      "value": {"min-width": "0", "max-width": "100%"}
+    },
+    {
+      "selector": "#menuNavOuter",
+      "action": "injectCSS",
+      "value": {"min-width": "0", "max-width": "100%"}
+    },
+    {
+      "selector": "#menuNavWrapper",
+      "action": "injectCSS",
+      "value": {"max-width": "100%"}
+    },
+    {
+      "selector": "#menuNavPanel",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "auto", "max-width": "100%", "height": "auto"}
+    },
+    {
+      "selector": "#menuNav",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "auto"}
+    },
+    {
+      "selector": "#menuNav > li:nth-of-type(2)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

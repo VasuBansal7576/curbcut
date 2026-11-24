@@ -1,0 +1,58 @@
+{
+  "id": "v5-d286cd4e5d75-a722d795",
+  "url": "https://www.cabq.gov/",
+  "persona": "keyboard-only",
+  "task": "Open “Open Search” by keyboard. Confirm the dialog appeared, then press Escape and confirm it closed.",
+  "controlTask": "Click “Open Search” and confirm that the dialog opens. Click “Close” to close it.",
+  "observedSelector": "#portal-globalnav > li:nth-of-type(8) > button",
+  "outcomeChecks": [
+    {
+      "kind": "hidden",
+      "selector": "#searchModal"
+    }
+  ],
+  "barrierClass": 4,
+  "relatedSelectors": [
+    "#searchModal",
+    "#searchModal > div > div > div:nth-of-type(1) > button"
+  ],
+  "journey": [
+    {
+      "selector": "#portal-globalnav > li:nth-of-type(8) > button",
+      "action": "activate",
+      "checks": [
+        {
+          "kind": "visible",
+          "selector": "#searchModal"
+        }
+      ]
+    },
+    {
+      "selector": "#searchModal",
+      "action": "key",
+      "key": "Escape",
+      "pointer": {
+        "action": "click",
+        "selector": "#searchModal > div > div > div:nth-of-type(1) > button"
+      }
+    }
+  ],
+  "site": "www.cabq.gov",
+  "match": "https://www.cabq.gov/",
+  "barrier": "Open Search opens the dialog from the keyboard, but the dialog has no tabindex before opening and is still fading in when Escape is sent. The key does not dismiss it.",
+  "rules": [
+    {
+      "action": "makeFocusable",
+      "selector": "#searchModal"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#searchModal",
+      "opener": "#portal-globalnav > li:nth-of-type(8) > button",
+      "close": "#searchModal > div > div > div:nth-of-type(1) > button"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

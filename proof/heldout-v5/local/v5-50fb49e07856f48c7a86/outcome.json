@@ -1,0 +1,89 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-50fb49e07856f48c7a86",
+    "url": "https://gamerch.com/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “事前登録・リリース情報 『Tower of Babel: Survivors of Chaos』全世界累計販売本数20万本突破！ 6日まえ” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “事前登録・リリース情報 『Tower of Babel: Survivors of Chaos』全世界累計販売本数20万本突破！ 6日まえ” at normal width.",
+    "observedSelector": "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div > ul > li:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div > ul > li:nth-of-type(1)",
+        "equals": "事前登録・リリース情報 『Tower of Babel: Survivors of Chaos』全世界累計販売本数20万本突破！ 6日まえ"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div > ul > li:nth-of-type(1)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    }
+  },
+  "runner": "playwright",
+  "status": "unresolved",
+  "reason": "The unique target was not visible.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/heldout-v5/local/v5-50fb49e07856f48c7a86/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "low-vision",
+      "status": "fail",
+      "reason": "The target does not fit the visible width.",
+      "file": "proof/heldout-v5/local/v5-50fb49e07856f48c7a86/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "low-vision",
+      "iteration": 1,
+      "status": "inconclusive",
+      "reason": "The unique target was not visible.",
+      "file": "proof/heldout-v5/local/v5-50fb49e07856f48c7a86/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-2/after",
+      "persona": "low-vision",
+      "iteration": 2,
+      "status": "inconclusive",
+      "reason": "The unique target was not visible.",
+      "file": "proof/heldout-v5/local/v5-50fb49e07856f48c7a86/attempt-2/after.json"
+    },
+    {
+      "name": "attempt-3/after",
+      "persona": "low-vision",
+      "iteration": 3,
+      "status": "inconclusive",
+      "reason": "The unique target was not visible.",
+      "file": "proof/heldout-v5/local/v5-50fb49e07856f48c7a86/attempt-3/after.json"
+    },
+    {
+      "name": "attempt-4/after",
+      "persona": "low-vision",
+      "iteration": 4,
+      "status": "inconclusive",
+      "reason": "The unique target was not visible.",
+      "file": "proof/heldout-v5/local/v5-50fb49e07856f48c7a86/attempt-4/after.json"
+    },
+    {
+      "name": "attempt-5/after",
+      "persona": "low-vision",
+      "iteration": 5,
+      "status": "inconclusive",
+      "reason": "The unique target was not visible.",
+      "file": "proof/heldout-v5/local/v5-50fb49e07856f48c7a86/attempt-5/after.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

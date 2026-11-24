@@ -1,0 +1,32 @@
+{
+  "source": "local-playwright",
+  "published": false,
+  "patch": {
+    "id": "low-vision-shop-speaker",
+    "url": "http://127.0.0.1:4317/fixtures/shop/?fixed=1",
+    "site": "127.0.0.1",
+    "match": "http://127.0.0.1:4317/fixtures/shop/",
+    "persona": "low-vision",
+    "task": "Without scrolling horizontally, find Porch Speaker in the unfiltered collection and add it to the cart. Confirm Cart (1).",
+    "barrier": "The #products grid places Porch Speaker in a second column, with its Add to cart button starting at x=504 outside the 320px viewport.",
+    "rules": [
+      {
+        "selector": "#products",
+        "action": "injectCSS",
+        "value": {
+          "display": "block"
+        }
+      }
+    ],
+    "status": "retired",
+    "evidence": {},
+    "history": [
+      {
+        "at": "2026-11-21T19:07:16.183Z",
+        "event": "retired",
+        "without": "pass",
+        "video": "proof/local/low-vision/recheck-without.mp4"
+      }
+    ]
+  }
+}

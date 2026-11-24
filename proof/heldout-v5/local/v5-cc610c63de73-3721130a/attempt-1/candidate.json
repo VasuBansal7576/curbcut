@@ -1,0 +1,52 @@
+{
+  "id": "v5-cc610c63de73-3721130a",
+  "url": "https://thethaiger.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Thailand” from keyboard focus or with Arrow Down and follow “Economy”. Confirm the public destination /hot-news/economy.",
+  "controlTask": "Hover “Thailand”, click “Economy” and confirm /hot-news/economy.",
+  "observedSelector": "#menu-item-1014687 > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/hot-news/economy"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menu-item-1014687",
+    "#menu-item-1014687 > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#menu-item-1014687 > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-item-1014687 > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-item-1014696 > a",
+      "action": "activate"
+    }
+  ],
+  "site": "thethaiger.com",
+  "match": "https://thethaiger.com/",
+  "barrier": "The Thailand submenu stays at display: none after keyboard focus and Arrow Down. Hovering its parent list item reveals the Economy link.",
+  "rules": [
+    {
+      "selector": "#menu-item-1014687",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

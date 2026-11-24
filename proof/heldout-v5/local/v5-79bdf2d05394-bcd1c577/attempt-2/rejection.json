@@ -1,0 +1,25 @@
+{
+  "reason": "Live selector validation failed. selector \"#navbarCollapse ul.main-nav > li:nth-of-type(2):focus-within > ul.level1-nav\": no matches",
+  "rules": [
+    {
+      "selector": "#navbarCollapse ul.main-nav > li:nth-of-type(2):focus-within > ul.level1-nav",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ],
+  "selectorValidation": {
+    "ok": false,
+    "matches": [
+      {
+        "index": 0,
+        "field": "selector",
+        "selector": "#navbarCollapse ul.main-nav > li:nth-of-type(2):focus-within > ul.level1-nav",
+        "count": 0,
+        "issue": "no matches",
+        "matches": []
+      }
+    ]
+  }
+}

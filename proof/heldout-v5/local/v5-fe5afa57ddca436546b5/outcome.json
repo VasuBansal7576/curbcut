@@ -1,0 +1,42 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-fe5afa57ddca436546b5",
+    "url": "https://land.gov.bd/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “LSG সিটিজেন ইউজার ম্যানুয়াল: সিটিজেন মোবাইল নম্বর পরিবর্তন এবং জাতীয় পরিচয়পত্র (NID)” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “LSG সিটিজেন ইউজার ম্যানুয়াল: সিটিজেন মোবাইল নম্বর পরিবর্তন এবং জাতীয় পরিচয়পত্র (NID)” at normal width.",
+    "observedSelector": "div:nth-of-type(3) > div:nth-of-type(3) > div > section:nth-of-type(1) > div > div > div:nth-of-type(1) > div > div > ul > li:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "div:nth-of-type(3) > div:nth-of-type(3) > div > section:nth-of-type(1) > div > div > div:nth-of-type(1) > div > div > ul > li:nth-of-type(1)",
+        "equals": "LSG সিটিজেন ইউজার ম্যানুয়াল: সিটিজেন মোবাইল নম্বর পরিবর্তন এবং জাতীয় পরিচয়পত্র (NID)"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "div:nth-of-type(3) > div:nth-of-type(3) > div > section:nth-of-type(1) > div > div > div:nth-of-type(1) > div > div > ul > li:nth-of-type(1)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    }
+  },
+  "runner": "playwright",
+  "status": "control-fail",
+  "reason": "Checked the declared outcome after the read action.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "fail",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/heldout-v5/local/v5-fe5afa57ddca436546b5/control.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

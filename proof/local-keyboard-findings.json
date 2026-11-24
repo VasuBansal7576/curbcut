@@ -1,0 +1,39 @@
+{
+  "runner": "local-chromium-playwright",
+  "findings": [
+    {
+      "taskId": "worldtimebuddy-select-tomorrow",
+      "url": "https://www.worldtimebuddy.com/",
+      "target": ".date-jump[idx=\"2\"] > .date-jump-txt",
+      "outcome": ".date-jump[idx=\"2\"].current-cell",
+      "attrs": {
+        "tag": "span",
+        "tabIndex": -1,
+        "role": null,
+        "hasClickHandler": false
+      },
+      "before": false,
+      "hover": false,
+      "pressed": false,
+      "released": true,
+      "observation": "The next day became selected after the pointer was released. Enter with the click binding left the effective date unchanged when tested on both the date item and the inner text.",
+      "disposition": "Open. A click binding alone did not complete the observed interaction."
+    },
+    {
+      "taskId": "openseamap-view-menu",
+      "url": "https://map.openseamap.org/",
+      "target": "#topmenu > ul > li:has(> img[alt=\"view\"])",
+      "outcome": "#checkLayerSeamark",
+      "attrs": {
+        "tag": "li",
+        "tabIndex": -1,
+        "role": null,
+        "hasClickHandler": false
+      },
+      "before": false,
+      "hover": true,
+      "observation": "Hovering over View revealed the Sea Marks checkbox. The menu entry is a list item without an explicit keyboard focus stop or inline click handler.",
+      "disposition": "Open. The current rule set has no focus-triggered disclosure for this hover menu."
+    }
+  ]
+}

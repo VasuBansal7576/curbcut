@@ -1,0 +1,34 @@
+{
+  "id": "asme-org-tr2",
+  "url": "https://www.asme.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, locate the searchbox named “Search products, events, courses, resource categories...”. Enter the text test and confirm the field contains it. Do not submit.",
+  "controlTask": "Click the public text field with the visible hint “Search products, events, courses, resource categories...”, type test and confirm the value. Do not submit.",
+  "observedSelector": "#home-search",
+  "requiredName": "Search products, events, courses, resource categories...",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#home-search",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "searchbox"
+  },
+  "site": "www.asme.org",
+  "match": "https://www.asme.org/",
+  "barrier": "The task’s target input #home-search has the searchbox role but no accessible name, so a screen reader cannot find it by the requested name.",
+  "rules": [
+    {
+      "selector": "#home-search",
+      "action": "addLabel",
+      "value": "Search products, events, courses, resource categories..."
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

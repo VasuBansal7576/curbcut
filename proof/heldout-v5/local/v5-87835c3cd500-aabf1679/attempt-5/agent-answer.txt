@@ -1,0 +1,7 @@
+{
+  "barrier": "Tab reaches the first FAQ button, but the button remains outside the visible viewport. The supplied rules cannot scroll it into view. The answer panel also lacks an accessible name.",
+  "rules": [
+    {"selector":"#a1","action":"setRole","value":"region"},
+    {"selector":"#a1","action":"addLabel","value":"1. What is Bupropion?"}
+  ]
+}

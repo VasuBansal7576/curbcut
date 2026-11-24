@@ -1,0 +1,14 @@
+{
+  "barrier": "The wrapper has a 1000px minimum width, and the news text sits beside an inline date column. At 320 CSS pixels the paragraph starts at x=217 and extends to x=656, where horizontal clipping cuts it off.",
+  "rules": [
+    {"selector":"#wrapper","action":"injectCSS","value":{"min-width":"0","max-width":"100%"}},
+    {"selector":"div.main","action":"injectCSS","value":{"width":"auto"}},
+    {"selector":"div.inside","action":"injectCSS","value":{"width":"auto"}},
+    {"selector":"div.main-t.table","action":"injectCSS","value":{"display":"block","width":"auto"}},
+    {"selector":"div.td","action":"injectCSS","value":{"display":"block","width":"auto"}},
+    {"selector":"div.mainsearch.inline-block","action":"injectCSS","value":{"display":"block","width":"auto"}},
+    {"selector":"div.news.ulnews","action":"injectCSS","value":{"width":"auto"}},
+    {"selector":"div.indexdate","action":"injectCSS","value":{"display":"block"}},
+    {"selector":"div.indextitle","action":"injectCSS","value":{"display":"block","width":"auto","overflow-wrap":"anywhere"}}
+  ]
+}

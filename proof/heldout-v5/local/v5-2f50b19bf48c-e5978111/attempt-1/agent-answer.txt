@@ -1,0 +1,27 @@
+{
+  "barrier": "At 320 CSS pixels, display:none on .header__left hides the «О гознаке» trigger and its submenu. The trigger is a nonfocusable span, and the submenu depends on CSS hover.",
+  "rules": [
+    {
+      "selector": "header > div.container",
+      "action": "injectCSS",
+      "value": {"display": "block", "height": "auto"}
+    },
+    {
+      "selector": "header > div.container > div.header__left",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "auto", "min-width": "0"}
+    },
+    {
+      "selector": "header > div.container > div.header__left > div.header__dropdown-wrapper > span",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "header > div.container > div.header__left > div.header__dropdown-wrapper > span",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "selector": "header > div.container > div.header__left > div.header__dropdown-wrapper",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

@@ -1,0 +1,1944 @@
+{
+  "runner": "playwright",
+  "status": "fail",
+  "reason": "The final journey outcome did not hold.",
+  "steps": [
+    {
+      "selector": "#portal-globalnav > li:nth-of-type(8) > button",
+      "action": "activate",
+      "traversal": {
+        "reached": true,
+        "tabs": 11
+      },
+      "visibility": null,
+      "checks": [
+        true
+      ]
+    },
+    {
+      "selector": "#searchModal",
+      "action": "key",
+      "key": "Escape"
+    }
+  ],
+  "url": "https://www.cabq.gov/",
+  "checks": [
+    false
+  ],
+  "snapshot": {
+    "url": "https://www.cabq.gov/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "#visual-portal-wrapper",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#portal-globalnav > li:nth-of-type(8) > button",
+          "parent": "#portal-globalnav > li:nth-of-type(8)",
+          "tag": "button",
+          "attributes": {
+            "class": "siteSearchButton nav-link",
+            "data-bs-toggle": "modal",
+            "data-bs-target": "#searchModal",
+            "aria-label": "Open Search"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "span.fa.fa-search",
+            "span.siteSearchText"
+          ],
+          "box": [
+            1170,
+            65,
+            80,
+            41
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#portal-globalnav > li:nth-of-type(8)",
+          "parent": "#portal-globalnav",
+          "tag": "li",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "button.siteSearchButton.nav-link"
+          ],
+          "box": [
+            1165,
+            68,
+            90,
+            38
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#portal-globalnav",
+          "parent": "#portal-mainnavigation",
+          "tag": "ul",
+          "attributes": {
+            "class": "navbar-nav",
+            "id": "portal-globalnav"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.businesses.has_subtree",
+            "li.residents.has_subtree",
+            "li.things-to-do.has_subtree",
+            "li.bus-and-bike.has_subtree",
+            "li.jobs.has_subtree",
+            "li.transparency.has_subtree"
+          ],
+          "box": [
+            374,
+            68,
+            881,
+            38
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#portal-mainnavigation",
+          "parent": "div.link-group",
+          "tag": "div",
+          "attributes": {
+            "id": "portal-mainnavigation"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#portal-globalnav",
+            "#navcall"
+          ],
+          "box": [
+            359,
+            17,
+            891,
+            89
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.link-group",
+          "tag": "div",
+          "attributes": {
+            "class": "link-group"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#portal-mainnavigation"
+          ],
+          "box": [
+            359,
+            17,
+            891,
+            89
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#searchModal",
+          "parent": "#visual-portal-wrapper",
+          "tag": "div",
+          "attributes": {
+            "id": "searchModal",
+            "class": "modal fade",
+            "role": "dialog",
+            "aria-labelledby": "searchModalTitle",
+            "aria-modal": "true"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.modal-dialog"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "0",
+            "position": "fixed",
+            "overflow-x": "hidden",
+            "overflow-y": "auto",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "1055",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#visual-portal-wrapper",
+          "parent": "html.h-100",
+          "tag": "body",
+          "attributes": {
+            "id": "visual-portal-wrapper",
+            "class": "col-content col-two frontend icons-on pat-cabq-markspeciallinks portaltype-document section-homepage site-Plone template-layout thumbs-on userrole-anonymous viewpermission-none lay"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "noscript",
+            "#wrap",
+            "#translatePopup",
+            "#searchModal",
+            "script"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            800
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "auto",
+            "overflow-y": "auto",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "html.h-100",
+          "tag": "html",
+          "attributes": {
+            "class": "h-100"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "head",
+            "#visual-portal-wrapper"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            800
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#searchModal > div > div > div:nth-of-type(1) > button",
+          "parent": "#searchModal > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "button",
+          "attributes": {
+            "class": "close cancel",
+            "data-dismiss": "modal",
+            "data-bs-dismiss": "modal",
+            "aria-label": "Close"
+          },
+          "hoverHandlers": [],
+          "text": "×",
+          "children": [],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#searchModal > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "#searchModal > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "modal-header"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "button.close.cancel",
+            "#searchModalTitle"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#searchModal > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "#searchModal > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "modal-content"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.modal-header",
+            "div.modal-body",
+            "div.modal-footer"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#searchModal > div:nth-of-type(1)",
+          "parent": "#searchModal",
+          "tag": "div",
+          "attributes": {
+            "class": "modal-dialog",
+            "role": "document"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.modal-content"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "none",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": ".cabq-tabs .nav-tabs li a:focus, .cabq-tabs .nav-tabs li a:hover, .nav-link:focus, .nav-link:hover, body.plone-toolbar-left #edit-zone li a:focus, body.plone-toolbar-left #edit-zone li a:hover",
+          "declarations": "color: var(--bs-nav-link-hover-color);",
+          "conditions": []
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#searchModal",
+        "role": "dialog",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#searchModal > div > div > div:nth-of-type(1) > button",
+        "role": "button",
+        "name": "Close",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#portal-globalnav > li:nth-of-type(8) > button",
+        "role": "button",
+        "name": "Open Search",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1170,
+        "width": 80
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 1071,
+        "width": 94
+      },
+      {
+        "selector": "span.fa.fa-search",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "span",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 1170,
+        "width": 17
+      },
+      {
+        "selector": "span.siteSearchText",
+        "role": "text",
+        "name": "SEARCH",
+        "state": "",
+        "tag": "span",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 1191,
+        "width": 59
+      },
+      {
+        "selector": "#portal-globalnav",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 374,
+        "width": 881
+      },
+      {
+        "selector": "#visual-portal-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html.h-100",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "noscript",
+        "role": "text",
+        "name": "<iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-NJWBZ6D\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>",
+        "state": "",
+        "tag": "noscript",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#translatePopup",
+        "role": "dialog",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "script",
+        "role": "text",
+        "name": "document.getElementById('searchModal').addEventListener('shown.bs.modal', function () {\n        document.getElementById('siteSearchInput').focus();\n      });",
+        "state": "",
+        "tag": "script",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#skipToContent",
+        "role": "link",
+        "name": "Skip to main content",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 14,
+        "width": 1
+      },
+      {
+        "selector": "div.col-12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 12,
+        "width": 1256
+      },
+      {
+        "selector": "#navbar",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#navbar-large",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": -15,
+        "width": 1280
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Toys for Tots Registration Online registration will begin on October 1, 2026, andclose on December 6, 2026. If you prefer to register in person, several registration events will be available beginning",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 12,
+        "width": 1006
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Green chiles in baskets.",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 515,
+        "width": 503
+      },
+      {
+        "selector": "div.link-group",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 359,
+        "width": 891
+      },
+      {
+        "selector": "#portal-mainnavigation",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 359,
+        "width": 891
+      },
+      {
+        "selector": "li.businesses.has_subtree",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 374,
+        "width": 124
+      },
+      {
+        "selector": "a.state-published.nav-link",
+        "role": "link",
+        "name": "Transparency",
+        "state": "expanded false",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 928,
+        "width": 138
+      },
+      {
+        "selector": "li.residents.has_subtree",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 497,
+        "width": 113
+      },
+      {
+        "selector": "li.things-to-do.has_subtree",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 610,
+        "width": 133
+      },
+      {
+        "selector": "li.bus-and-bike.has_subtree",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 744,
+        "width": 112
+      },
+      {
+        "selector": "li.jobs.has_subtree",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 855,
+        "width": 68
+      },
+      {
+        "selector": "li.transparency.has_subtree",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 923,
+        "width": 148
+      },
+      {
+        "selector": "a.translateButton.nav-link",
+        "role": "button",
+        "name": "Translate",
+        "state": "expanded false",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 1076,
+        "width": 84
+      },
+      {
+        "selector": "#navcall",
+        "role": "group",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 684,
+        "width": 566
+      },
+      {
+        "selector": "a.btn.btn-secondary",
+        "role": "link",
+        "name": "Get Involved",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 1106,
+        "width": 144
+      },
+      {
+        "selector": "#rightnav",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1030,
+        "width": 250
+      },
+      {
+        "selector": "#sitealert",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#global-alert-message",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#site-alert-message",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#main",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tag": "main",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#mainleft",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#content-long",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#content-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.col-12.pageContent",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 12,
+        "width": 1256
+      },
+      {
+        "selector": "#content",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tag": "article",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 24,
+        "width": 1232
+      },
+      {
+        "selector": "div.mosaic-grid-row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 12,
+        "width": 1256
+      },
+      {
+        "selector": "div.mosaic-grid-cell.mosaic-width-full",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 12,
+        "width": 1256
+      },
+      {
+        "selector": "div.movable.removable",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 12,
+        "width": 1006
+      },
+      {
+        "selector": "div.mosaic-tile-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 12,
+        "width": 1006
+      },
+      {
+        "selector": "#hero",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 12,
+        "width": 1256
+      },
+      {
+        "selector": "#focusnow",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 390,
+        "width": 500
+      },
+      {
+        "selector": "div.story",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 390,
+        "width": 500
+      },
+      {
+        "selector": "div.icon",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 520,
+        "width": 148
+      },
+      {
+        "selector": "div.texta",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 668,
+        "width": 345
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "City Accomplishments",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 585,
+        "width": 293
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 183,
+        "width": 303
+      },
+      {
+        "selector": "#call-to-action",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 12,
+        "width": 1256
+      },
+      {
+        "selector": "h1.visually-hidden",
+        "role": "heading",
+        "name": "Call To Action",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 640,
+        "width": 1
+      },
+      {
+        "selector": "div.aspect-ratio-box-inside",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "grid",
+        "left": 75,
+        "width": 1130
+      },
+      {
+        "selector": "div.action",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1017,
+        "width": 188
+      },
+      {
+        "selector": "a.action-label",
+        "role": "link",
+        "name": "Sustainability",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 1044,
+        "width": 134
+      },
+      {
+        "selector": "div.sections",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 12,
+        "width": 1006
+      },
+      {
+        "selector": "section",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 12,
+        "width": 1006
+      },
+      {
+        "selector": "div.sec-row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 12,
+        "width": 1006
+      },
+      {
+        "selector": "div.text-bloc.sec-cell",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 515,
+        "width": 503
+      },
+      {
+        "selector": "div.titleandtext",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 686,
+        "width": 303
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Toys for Tots Registration",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 686,
+        "width": 303
+      },
+      {
+        "selector": "div.highlightDescription",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 686,
+        "width": 303
+      },
+      {
+        "selector": "div.image-bloc.sec-cell",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 515,
+        "width": 503
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#portal-globalnav > li:nth-of-type(8) > button",
+          "parent": "#portal-globalnav > li:nth-of-type(8)",
+          "tag": "button",
+          "attributes": {
+            "class": "siteSearchButton nav-link",
+            "data-bs-toggle": "modal",
+            "data-bs-target": "#searchModal",
+            "aria-label": "Open Search"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "span.fa.fa-search",
+            "span.siteSearchText"
+          ],
+          "box": [
+            1170,
+            65,
+            80,
+            41
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#portal-globalnav > li:nth-of-type(8)",
+          "parent": "#portal-globalnav",
+          "tag": "li",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "button.siteSearchButton.nav-link"
+          ],
+          "box": [
+            1165,
+            68,
+            90,
+            38
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#portal-globalnav",
+          "parent": "#portal-mainnavigation",
+          "tag": "ul",
+          "attributes": {
+            "class": "navbar-nav",
+            "id": "portal-globalnav"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.businesses.has_subtree",
+            "li.residents.has_subtree",
+            "li.things-to-do.has_subtree",
+            "li.bus-and-bike.has_subtree",
+            "li.jobs.has_subtree",
+            "li.transparency.has_subtree"
+          ],
+          "box": [
+            374,
+            68,
+            881,
+            38
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#portal-mainnavigation",
+          "parent": "div.link-group",
+          "tag": "div",
+          "attributes": {
+            "id": "portal-mainnavigation"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#portal-globalnav",
+            "#navcall"
+          ],
+          "box": [
+            359,
+            17,
+            891,
+            89
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.link-group",
+          "tag": "div",
+          "attributes": {
+            "class": "link-group"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#portal-mainnavigation"
+          ],
+          "box": [
+            359,
+            17,
+            891,
+            89
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#searchModal",
+          "parent": "#visual-portal-wrapper",
+          "tag": "div",
+          "attributes": {
+            "id": "searchModal",
+            "class": "modal fade show",
+            "role": "dialog",
+            "aria-labelledby": "searchModalTitle",
+            "aria-modal": "true",
+            "tabindex": "-1"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.modal-dialog"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            800
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0.22254",
+            "position": "fixed",
+            "overflow-x": "hidden",
+            "overflow-y": "auto",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "1055",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#visual-portal-wrapper",
+          "parent": "html.h-100",
+          "tag": "body",
+          "attributes": {
+            "id": "visual-portal-wrapper",
+            "class": "col-content col-two frontend icons-on pat-cabq-markspeciallinks portaltype-document section-homepage site-Plone template-layout thumbs-on userrole-anonymous viewpermission-none lay"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "noscript",
+            "#wrap",
+            "#translatePopup",
+            "#searchModal",
+            "script",
+            "div.modal-backdrop.fade"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            800
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "hidden",
+            "overflow-y": "hidden",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "html.h-100",
+          "tag": "html",
+          "attributes": {
+            "class": "h-100"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "head",
+            "#visual-portal-wrapper"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            800
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#searchModal > div > div > div:nth-of-type(1) > button",
+          "parent": "#searchModal > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "button",
+          "attributes": {
+            "class": "close cancel",
+            "data-dismiss": "modal",
+            "data-bs-dismiss": "modal",
+            "aria-label": "Close"
+          },
+          "hoverHandlers": [],
+          "text": "×",
+          "children": [],
+          "box": [
+            829,
+            -12,
+            60,
+            86
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#searchModal > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "#searchModal > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "modal-header"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "button.close.cancel",
+            "#searchModalTitle"
+          ],
+          "box": [
+            391,
+            -12,
+            498,
+            102
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#searchModal > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "#searchModal > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "modal-content"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.modal-header",
+            "div.modal-body",
+            "div.modal-footer"
+          ],
+          "box": [
+            390,
+            -13,
+            500,
+            254
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#searchModal > div:nth-of-type(1)",
+          "parent": "#searchModal",
+          "tag": "div",
+          "attributes": {
+            "class": "modal-dialog",
+            "role": "document"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.modal-content"
+          ],
+          "box": [
+            390,
+            -13,
+            500,
+            254
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "none",
+            "z-index": "auto",
+            "transform": "matrix(1, 0, 0, 1, 0, -41.1102)"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": ".cabq-tabs .nav-tabs li a:focus, .cabq-tabs .nav-tabs li a:hover, .nav-link:focus, .nav-link:hover, body.plone-toolbar-left #edit-zone li a:focus, body.plone-toolbar-left #edit-zone li a:hover",
+          "declarations": "color: var(--bs-nav-link-hover-color);",
+          "conditions": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "barrier": "The search textbox has no accessible name, and focus is held by the Reading view dialog outside the search form.",
+  "rules": [
+    {"selector": "dialog", "action": "removeFocusTrap"},
+    {"selector": "#search", "action": "addLabel", "value": "Search torrents..."}
+  ]
+}

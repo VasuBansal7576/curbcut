@@ -1,0 +1,1875 @@
+{
+  "status": "fail",
+  "runId": "86be868e-d2ca-4b4f-85af-ee5c24885a8c",
+  "reason": "Forward Tab navigation reached the Trip Planner submit control, so reaching Play/Pause now requires reversing, prohibited by the task.",
+  "summary": "The agent did not keep a verified, forward-only Tab sequence from a fresh focus state. Its queued actions moved through other controls, including Quick Links and carousel Next, and it continued until the Trip Planner field/control was reached.\nRestart with fresh page focus. Press only Tab, record the focused control after each press, and stop at the control immediately after the carousel page indicator; then press Enter once and read its pressed state.",
+  "resultCode": 750,
+  "reasonCode": "assertion_error.step_not_achievable",
+  "credits": 24.682917499999995,
+  "exitCode": 1,
+  "steps": [
+    "press_key: Press Tab",
+    "press_key: Press Tab",
+    "press_key: Press Tab",
+    "press_key: Press Tab",
+    "wait: queued plan (6 steps): press_key \"Next\"; press_key \"Next\"; press_key \"Next\"; pre",
+    "press_key: Press Tab",
+    "press_key: Press Tab",
+    "press_key: Press Tab",
+    "press_key: Press Tab",
+    "press_key: Press Tab",
+    "press_key: Press Tab",
+    "wait: Waiting after missing the carousel Play/Pause focus target"
+  ],
+  "evidencePack": "proof/kane/sfmta-pause-carousel/resume-2026-11-22T03-31-23.868Z/attempt-1/after/bd92b75f-952c-4553-8163-58612ccff35e.evidence",
+  "evidenceValid": true,
+  "observedOutcome": {
+    "selector": "span.play_pause[aria-pressed=\"false\"]",
+    "visible": false
+  },
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "keyboard-only",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920,
+      "keys": {
+        "tab": 24,
+        "activate": 0,
+        "other": 0
+      },
+      "patchId": "sfmta-pause-carousel"
+    },
+    "readerVisible": false,
+    "width": 1280,
+    "fixtureFixed": false,
+    "ruleMatches": [
+      {
+        "action": "makeFocusable",
+        "selector": "span.play_pause",
+        "count": 1
+      },
+      {
+        "action": "bindEnterToClick",
+        "selector": "span.play_pause",
+        "count": 1
+      },
+      {
+        "action": "restoreFocusOutline",
+        "selector": "span.play_pause",
+        "count": 1
+      }
+    ]
+  },
+  "snapshot": {
+    "url": "https://www.sfmta.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "button.btn.btn-primary",
+    "nodes": [
+      {
+        "selector": "span.play_pause",
+        "role": "button",
+        "name": "Play/Pause",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1220,
+        "width": 45
+      },
+      {
+        "selector": "div.controls",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1220,
+        "width": 45
+      },
+      {
+        "selector": "a.visually-hidden.focusable",
+        "role": "link",
+        "name": "Skip to main content",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 625,
+        "width": 30
+      },
+      {
+        "selector": "div.dialog-off-canvas-main-canvas",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#header",
+        "role": "banner",
+        "name": "Site header",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#navbar-main",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "a.navbar-brand.notranslate",
+        "role": "link",
+        "name": "Home SFMTA",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 0,
+        "width": 161
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Home",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 56
+      },
+      {
+        "selector": "#main-navbar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 176,
+        "width": 656
+      },
+      {
+        "selector": "#block-mainnavigation",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 176,
+        "width": 656
+      },
+      {
+        "selector": "ul.clearfix.nav",
+        "role": "menubar",
+        "name": "Site navigation",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 181,
+        "width": 646
+      },
+      {
+        "selector": "li.notranslate.nav-item",
+        "role": "none",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 181,
+        "width": 110
+      },
+      {
+        "selector": "a.nav-link.nav-link--getting-around-san-francisco",
+        "role": "menuitem",
+        "name": "Getting Around",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 181,
+        "width": 110
+      },
+      {
+        "selector": "li.notranslate.nav-item",
+        "role": "none",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 290,
+        "width": 60
+      },
+      {
+        "selector": "a.nav-link.nav-link--sfmta-projects",
+        "role": "menuitem",
+        "name": "Projects",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 290,
+        "width": 60
+      },
+      {
+        "selector": "li.notranslate.nav-item",
+        "role": "none",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 350,
+        "width": 67
+      },
+      {
+        "selector": "a.nav-link.nav-link--meetings-events",
+        "role": "menuitem",
+        "name": "Calendar",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 350,
+        "width": 67
+      },
+      {
+        "selector": "li.notranslate.nav-item",
+        "role": "none",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 417,
+        "width": 61
+      },
+      {
+        "selector": "a.nav-link.nav-link--sfmta-services",
+        "role": "menuitem",
+        "name": "Services",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 417,
+        "width": 61
+      },
+      {
+        "selector": "li.notranslate.nav-item",
+        "role": "none",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 478,
+        "width": 46
+      },
+      {
+        "selector": "a.nav-link.nav-link--blog",
+        "role": "menuitem",
+        "name": "News",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 478,
+        "width": 46
+      },
+      {
+        "selector": "li.notranslate.nav-item",
+        "role": "none",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 524,
+        "width": 69
+      },
+      {
+        "selector": "a.nav-link.nav-link--about-sfmta",
+        "role": "menuitem",
+        "name": "About Us",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 524,
+        "width": 69
+      },
+      {
+        "selector": "li.notranslate.nav-item",
+        "role": "none",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 593,
+        "width": 58
+      },
+      {
+        "selector": "a.nav-link.nav-link--sfmta-career-center",
+        "role": "menuitem",
+        "name": "Careers",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 593,
+        "width": 58
+      },
+      {
+        "selector": "#block-commontasks",
+        "role": "navigation",
+        "name": "Quick Links",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 847,
+        "width": 144
+      },
+      {
+        "selector": "summary",
+        "role": "button",
+        "name": "Quick Links",
+        "state": "",
+        "tabIndex": 0,
+        "display": "list-item",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "#block-commontasks-menu",
+        "role": "heading",
+        "name": "Quick Links",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "li.notranslate.nav-item",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "a.nav-link.nav-link--getting-around-drive-park-citations",
+        "role": "link",
+        "name": "Pay a Parking Ticket",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "li.notranslate.nav-item",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "a.nav-link.nav-link--getting-around-muni-routes-stops",
+        "role": "link",
+        "name": "Routes & Stops",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "li.notranslate.nav-item",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "a.nav-link.nav-link--getting-around-muni-fares",
+        "role": "link",
+        "name": "Fares",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "li.notranslate.nav-item",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "a.nav-link.nav-link--getting-around-muni-cable-cars",
+        "role": "link",
+        "name": "Cable Cars",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "li.notranslate.nav-item",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "a.nav-link.nav-link--muni-transit",
+        "role": "link",
+        "name": "Muni Transit",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "li.notranslate.nav-item",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "a.nav-link.nav-link--permits-residential-parking-permits-rpp",
+        "role": "link",
+        "name": "Residential Parking Permits",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "li.notranslate.nav-item",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "a.nav-link.nav-link--getting-around-san-francisco",
+        "role": "link",
+        "name": "Getting Around San Francisco",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "li.notranslate.nav-item",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "a.nav-link.nav-link--getting-around-drive-park-holiday-enforcement-schedule",
+        "role": "link",
+        "name": "Holiday Enforcement Schedule",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "li.notranslate.nav-item",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "a.nav-link.nav-link--request-administrative-hearing",
+        "role": "link",
+        "name": "Request a Hearing",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 853,
+        "width": 132
+      },
+      {
+        "selector": "form",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1006,
+        "width": 144
+      },
+      {
+        "selector": "input.form-control",
+        "role": "searchbox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1006,
+        "width": 144
+      },
+      {
+        "selector": "input",
+        "role": "button",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1006,
+        "width": 20
+      },
+      {
+        "selector": "#block-languageswitcherdropdown",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1165,
+        "width": 100
+      },
+      {
+        "selector": "#languageDropdown",
+        "role": "button",
+        "name": "Open language selection options",
+        "state": "expanded false",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1165,
+        "width": 100
+      },
+      {
+        "selector": "#block-alertblock",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#alert_block_38",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 68,
+        "width": 947
+      },
+      {
+        "selector": "a.more-link",
+        "role": "link",
+        "name": "(More: 20 in last 48 hours)",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 854,
+        "width": 160
+      },
+      {
+        "selector": "div.subscribe_button",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1130,
+        "width": 83
+      },
+      {
+        "selector": "a.btn.btn-danger",
+        "role": "link",
+        "name": "Subscribe",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 1135,
+        "width": 78
+      },
+      {
+        "selector": "#content_top",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#block-slides",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.field--type-entity-reference-revisions.field--name-field-slides",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.slideshow.slideshow--dots",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "button.slick-prev.slick-arrow",
+        "role": "button",
+        "name": "Previous",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 0,
+        "width": 52
+      },
+      {
+        "selector": "div.slick-list.draggable",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.slick-track",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 6400
+      },
+      {
+        "selector": "#slick-slide00",
+        "role": "tabpanel",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.slide",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "article",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "a.teaser-text",
+        "role": "link",
+        "name": "Muni Historic Streecar turning on Market St with Ferry Building behind. Lights shooting overhead Bay Area Chooses Transit as Funding Measures Pass",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "img.img-fluid",
+        "role": "img",
+        "name": "Muni Historic Streecar turning on Market St with Ferry Building behind. Lights shooting overhead",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.text.container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Bay Area Chooses Transit as Funding Measures Pass",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 75,
+        "width": 368
+      },
+      {
+        "selector": "button.slick-next.slick-arrow",
+        "role": "button",
+        "name": "Next",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1228,
+        "width": 52
+      },
+      {
+        "selector": "ul.slick-dots",
+        "role": "tablist",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "li.slick-active",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1065,
+        "width": 16
+      },
+      {
+        "selector": "#slick-slide-control00",
+        "role": "tab",
+        "name": "1 of 5",
+        "state": "selected true",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 1065,
+        "width": 16
+      },
+      {
+        "selector": "li",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1096,
+        "width": 16
+      },
+      {
+        "selector": "#slick-slide-control01",
+        "role": "tab",
+        "name": "2 of 5",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 1096,
+        "width": 16
+      },
+      {
+        "selector": "li",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1127,
+        "width": 16
+      },
+      {
+        "selector": "#slick-slide-control02",
+        "role": "tab",
+        "name": "3 of 5",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 1127,
+        "width": 16
+      },
+      {
+        "selector": "li",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1158,
+        "width": 16
+      },
+      {
+        "selector": "#slick-slide-control03",
+        "role": "tab",
+        "name": "4 of 5",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 1158,
+        "width": 16
+      },
+      {
+        "selector": "li",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1189,
+        "width": 16
+      },
+      {
+        "selector": "#slick-slide-control04",
+        "role": "tab",
+        "name": "5 of 5",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 1189,
+        "width": 16
+      },
+      {
+        "selector": "#block-fp-theme-tripplanner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.trip-planner-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "form.trip-planner",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 420,
+        "width": 575
+      },
+      {
+        "selector": "div.startLocation",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 420,
+        "width": 201
+      },
+      {
+        "selector": "#startLocation",
+        "role": "textbox",
+        "name": "Starting Location",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 420,
+        "width": 201
+      },
+      {
+        "selector": "div.endLocation",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 620,
+        "width": 201
+      },
+      {
+        "selector": "#endLocation",
+        "role": "textbox",
+        "name": "Ending Location",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 620,
+        "width": 201
+      },
+      {
+        "selector": "#travelMode",
+        "role": "combobox",
+        "name": "How I want to travel",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 821,
+        "width": 79
+      },
+      {
+        "selector": "#submit-trip",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 900,
+        "width": 94
+      },
+      {
+        "selector": "button.btn.btn-primary",
+        "role": "button",
+        "name": "Let's Go...",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 900,
+        "width": 94
+      },
+      {
+        "selector": "#block-fp-theme-routlepromobanner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container.py-3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.alert.alert-light",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 274,
+        "width": 732
+      },
+      {
+        "selector": "a.d-flex.flex-column",
+        "role": "link",
+        "name": "Want to test your knowledge and love of Muni?Play today's Routle puzzle! Routle logo Red Muni worm logo",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 290,
+        "width": 700
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "Play today's Routle puzzle!",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 625,
+        "width": 198
+      },
+      {
+        "selector": "svg",
+        "role": "img",
+        "name": "Routle logo",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 839,
+        "width": 80
+      },
+      {
+        "selector": "svg",
+        "role": "img",
+        "name": "Red Muni worm logo",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 923,
+        "width": 60
+      },
+      {
+        "selector": "#block-clients-theme-block-7",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.row1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "a.ride.col",
+        "role": "link",
+        "name": "Muni",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 75,
+        "width": 188
+      },
+      {
+        "selector": "a.walk.col",
+        "role": "link",
+        "name": "Walk",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 264,
+        "width": 188
+      },
+      {
+        "selector": "a.bike.col",
+        "role": "link",
+        "name": "Bike",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 452,
+        "width": 188
+      },
+      {
+        "selector": "a.park-drive.col",
+        "role": "link",
+        "name": "Drive & Park",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 640,
+        "width": 188
+      },
+      {
+        "selector": "a.taxi.col",
+        "role": "link",
+        "name": "Taxi",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 828,
+        "width": 188
+      },
+      {
+        "selector": "a.accessibility.col",
+        "role": "link",
+        "name": "Accessibility",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1017,
+        "width": 188
+      },
+      {
+        "selector": "#main-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "grid",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "#main",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "#block-section1feature",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 85,
+        "width": 1110
+      },
+      {
+        "selector": "div.feature.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 160,
+        "width": 960
+      },
+      {
+        "selector": "div.label",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 960
+      },
+      {
+        "selector": "h2.section-title",
+        "role": "heading",
+        "name": "What can we help with?",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 960
+      },
+      {
+        "selector": "div.field__items",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "grid",
+        "left": 160,
+        "width": 960
+      },
+      {
+        "selector": "div.feature.field__item",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 310
+      },
+      {
+        "selector": "#¶-6",
+        "role": "article",
+        "name": "Muni Routes & Stops: Explore Muni train, bus and historic streetcar and cable car routes",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 310
+      },
+      {
+        "selector": "a.teaser-text",
+        "role": "link",
+        "name": "Muni Routes & Stops Explore Muni train, bus and historic streetcar and cable car routes",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 168,
+        "width": 295
+      },
+      {
+        "selector": "h1.title",
+        "role": "heading",
+        "name": "Muni Routes & Stops",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 178,
+        "width": 275
+      },
+      {
+        "selector": "div.feature.field__item",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 485,
+        "width": 310
+      },
+      {
+        "selector": "#¶-7",
+        "role": "article",
+        "name": "For Visitors: See San Francisco by Muni transit, bike, foot or car",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 485,
+        "width": 310
+      },
+      {
+        "selector": "a.teaser-text",
+        "role": "link",
+        "name": "For Visitors See San Francisco by Muni transit, bike, foot or car",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 493,
+        "width": 295
+      },
+      {
+        "selector": "h1.title",
+        "role": "heading",
+        "name": "For Visitors",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 503,
+        "width": 275
+      },
+      {
+        "selector": "div.feature.field__item",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 810,
+        "width": 310
+      },
+      {
+        "selector": "#¶-6363",
+        "role": "article",
+        "name": "Neighborhoods: Find Muni service and SFMTA projects in your neighborhood",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 810,
+        "width": 310
+      },
+      {
+        "selector": "a.teaser-text",
+        "role": "link",
+        "name": "Neighborhoods Find Muni service and SFMTA projects in your neighborhood",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 818,
+        "width": 295
+      },
+      {
+        "selector": "h1.title",
+        "role": "heading",
+        "name": "Neighborhoods",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 828,
+        "width": 275
+      },
+      {
+        "selector": "div.feature.field__item",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 310
+      },
+      {
+        "selector": "#¶-22",
+        "role": "article",
+        "name": "Projects: See transportation projects happening near you",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 310
+      },
+      {
+        "selector": "a.teaser-text",
+        "role": "link",
+        "name": "Projects See transportation projects happening near you",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 168,
+        "width": 295
+      },
+      {
+        "selector": "h1.title",
+        "role": "heading",
+        "name": "Projects",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 178,
+        "width": 275
+      },
+      {
+        "selector": "div.feature.field__item",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 485,
+        "width": 310
+      },
+      {
+        "selector": "#¶-19",
+        "role": "article",
+        "name": "Permits: Apply for parking permits or street closures",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 485,
+        "width": 310
+      },
+      {
+        "selector": "a.teaser-text",
+        "role": "link",
+        "name": "Permits Apply for parking permits or street closures",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 493,
+        "width": 295
+      },
+      {
+        "selector": "h1.title",
+        "role": "heading",
+        "name": "Permits",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 503,
+        "width": 275
+      },
+      {
+        "selector": "div.feature.field__item",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 810,
+        "width": 310
+      },
+      {
+        "selector": "#¶-23",
+        "role": "article",
+        "name": "Citations: Pay a parking ticket, transit citation, or get towing information",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 810,
+        "width": 310
+      },
+      {
+        "selector": "a.teaser-text",
+        "role": "link",
+        "name": "Citations Pay a parking ticket, transit citation, or get towing information",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 818,
+        "width": 295
+      },
+      {
+        "selector": "h1.title",
+        "role": "heading",
+        "name": "Citations",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 828,
+        "width": 275
+      },
+      {
+        "selector": "#block-teasers",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 85,
+        "width": 1110
+      },
+      {
+        "selector": "div.field--type-entity-reference-revisions.field--name-field-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 960
+      },
+      {
+        "selector": "div.field__items",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 960
+      },
+      {
+        "selector": "div.field__item",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 960
+      },
+      {
+        "selector": "#§-7490",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 155,
+        "width": 970
+      },
+      {
+        "selector": "div.col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 155,
+        "width": 323
+      },
+      {
+        "selector": "#¶-7487",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 313
+      },
+      {
+        "selector": "div.field--type-viewsreference.field--name-field-views-reference",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 313
+      },
+      {
+        "selector": "div.field__items",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 313
+      },
+      {
+        "selector": "div.notranslate.field__item",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 313
+      },
+      {
+        "selector": "div.views-element-container.type--view",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 313
+      },
+      {
+        "selector": "div.viewsreference--view-title",
+        "role": "text",
+        "name": "Latest News & Blog",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 313
+      },
+      {
+        "selector": "div.view.view-recent-blog-posts",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 313
+      },
+      {
+        "selector": "div.view-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 313
+      },
+      {
+        "selector": "div.teaser-link.views-row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 313
+      },
+      {
+        "selector": "article.node--published.has-teaser-image",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 160,
+        "width": 313
+      },
+      {
+        "selector": "img.image-style-teaser-col-4.img-fluid",
+        "role": "img",
+        "name": "Public transit trains and cars on a wet street as the rain falls",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 175,
+        "width": 63
+      },
+      {
+        "selector": "div.list-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 253,
+        "width": 200
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Upcoming Fix It! Week Helps Prepare Muni for El Niño",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 253,
+        "width": 200
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Upcoming Fix It! Week Helps Prepare Muni for El Niño",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 253,
+        "width": 184
+      },
+      {
+        "selector": "div.teaser-link.views-row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 313
+      },
+      {
+        "selector": "article.node--published.has-teaser-image",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 160,
+        "width": 313
+      },
+      {
+        "selector": "img.image-style-teaser-col-4.img-fluid",
+        "role": "img",
+        "name": "People walking near a bus that is pulled over to the sidewalk across the street from City Hall.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 175,
+        "width": 63
+      },
+      {
+        "selector": "div.list-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 253,
+        "width": 200
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Take One More Official Tour of the SFMTA Photo Archive Exhibit",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 253,
+        "width": 200
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Take One More Official Tour of the SFMTA Photo Archive Exhibit",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 253,
+        "width": 181
+      },
+      {
+        "selector": "div.view-footer",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 313
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 160,
+        "width": 313
+      },
+      {
+        "selector": "a.read-more",
+        "role": "link",
+        "name": "View all blog posts",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 160,
+        "width": 144
+      },
+      {
+        "selector": "div.col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 478,
+        "width": 323
+      },
+      {
+        "selector": "#¶-7488",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 483,
+        "width": 313
+      },
+      {
+        "selector": "div.field--type-viewsreference.field--name-field-views-reference",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 483,
+        "width": 313
+      },
+      {
+        "selector": "div.field__items",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 483,
+        "width": 313
+      },
+      {
+        "selector": "div.notranslate.field__item",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 483,
+        "width": 313
+      },
+      {
+        "selector": "div.views-element-container.type--view",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 483,
+        "width": 313
+      },
+      {
+        "selector": "div.viewsreference--view-title",
+        "role": "text",
+        "name": "Calendar",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 483,
+        "width": 313
+      },
+      {
+        "selector": "div.view.view-events-front",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 483,
+        "width": 313
+      },
+      {
+        "selector": "div.view-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 483,
+        "width": 313
+      },
+      {
+        "selector": "article.node--published.node",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "grid",
+        "left": 483,
+        "width": 313
+      },
+      {
+        "selector": "div.field--type-daterange.field--name-field-start-and-end-date-local",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 493,
+        "width": 48
+      },
+      {
+        "selector": "div.field__items",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 493,
+        "width": 48
+      }
+    ]
+  },
+  "video": "proof/kane/sfmta-pause-carousel/resume-2026-11-22T03-31-23.868Z/attempt-1/after/recording.mp4"
+}

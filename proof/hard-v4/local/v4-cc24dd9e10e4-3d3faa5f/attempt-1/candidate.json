@@ -1,0 +1,52 @@
+{
+  "id": "v4-cc24dd9e10e4-3d3faa5f",
+  "url": "https://www.um-surabaya.ac.id/",
+  "persona": "keyboard-only",
+  "task": "Open “TENTANG UMSURA” from keyboard focus or with Arrow Down and follow “Penghargaan dan Prestasi”. Confirm the public destination /about/penghargaan.",
+  "controlTask": "Hover “TENTANG UMSURA”, click “Penghargaan dan Prestasi” and confirm /about/penghargaan.",
+  "observedSelector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/about/penghargaan"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#desktop-nav > ul > li:nth-of-type(1)",
+    "#desktop-nav > ul > li:nth-of-type(1) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#desktop-nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a:nth-of-type(5)",
+      "action": "activate"
+    }
+  ],
+  "site": "www.um-surabaya.ac.id",
+  "match": "https://www.um-surabaya.ac.id/",
+  "barrier": "Hovering over TENTANG UMSURA reveals the submenu, but focusing the trigger and pressing Arrow Down leaves the Penghargaan dan Prestasi link unavailable.",
+  "rules": [
+    {
+      "selector": "#desktop-nav > ul > li:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,970 @@
+{
+  "status": "fail",
+  "runId": "b5819fca-5d89-41d7-aaa2-6e69f1520b52",
+  "reason": "Checkpoint assertion failed: \"the red color swatch next to the color search box is in the sequential keyboard focus order\"",
+  "summary": "The test compared the expected result with the unresolved placeholder \"{{red_color_swatch_keyboard_focus_order}}\" instead of an observed true-or-false focus result. The screenshots show the swatch is present, but they do not prove whether it can be reached with Tab.\nRepair the assertion so it actually tabs through the visible controls and records whether focus reaches the red swatch. Only classify this as a site accessibility issue if that corrected check still fails.",
+  "resultCode": 720,
+  "reasonCode": "assertion_error.checkpoint_failed",
+  "credits": 16.93208,
+  "exitCode": 1,
+  "steps": [
+    "navigate: Navigate to https://www.colorhexa.com/",
+    "analyze: ANALYZE(textual_visual, 'the red color swatch next to the color search box is in",
+    "assert: the red color swatch next to the color search box is in the sequential keyboard "
+  ],
+  "objective": "Use Tab, Shift+Tab, arrow keys, Page Up, Page Down, Home, End, text entry, Space and Enter only. Remain on this public site. Stop before sign-in, registration or payment. Never change fixture settings. Use only visible controls. Verify the final result on the page. First assert the red color swatch next to the color search box is in the sequential keyboard focus order. Open that swatch with Tab and Enter. Verify the color picker panel with the color spectrum and hue slider is visible.",
+  "evidencePack": "proof/kane/colorhexa-open-picker/resume-2026-11-22T03-33-20.437Z/before/78de2d90-e585-461c-b795-7070185a3b9c.evidence",
+  "evidenceValid": true,
+  "observedOutcome": {
+    "selector": ".sp-picker-container",
+    "visible": false
+  },
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "keyboard-only",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920,
+      "keys": {
+        "tab": 0,
+        "activate": 0,
+        "other": 0
+      }
+    },
+    "readerVisible": false,
+    "width": 1280,
+    "fixtureFixed": false,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "https://www.colorhexa.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body",
+    "nodes": [
+      {
+        "selector": ".sp-replacer",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 166,
+        "width": 42
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 166,
+        "width": 948
+      },
+      {
+        "selector": "#header",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.wrap.clear",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 140,
+        "width": 1000
+      },
+      {
+        "selector": "#logo",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 155,
+        "width": 970
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "ColorHexa",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 530,
+        "width": 220
+      },
+      {
+        "selector": "#header-title",
+        "role": "heading",
+        "name": "Color encyclopedia : Information and conversion.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 155,
+        "width": 970
+      },
+      {
+        "selector": "#article",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#search",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 140,
+        "width": 1000
+      },
+      {
+        "selector": "div.main-search",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 155,
+        "width": 970
+      },
+      {
+        "selector": "form",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 166,
+        "width": 948
+      },
+      {
+        "selector": "div.sp-preview",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 176,
+        "width": 22
+      },
+      {
+        "selector": "div.sp-preview-inner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 176,
+        "width": 22
+      },
+      {
+        "selector": "#search-input",
+        "role": "textbox",
+        "name": "search",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 166,
+        "width": 828
+      },
+      {
+        "selector": "#search-submit",
+        "role": "button",
+        "name": "Search",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 994,
+        "width": 120
+      },
+      {
+        "selector": "div.wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 140,
+        "width": 1000
+      },
+      {
+        "selector": "div.main",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 155,
+        "width": 970
+      },
+      {
+        "selector": "#navigation",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 176,
+        "width": 928
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 267,
+        "width": 76
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Examples",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 267,
+        "width": 76
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 356,
+        "width": 133
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Gradient generator",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 356,
+        "width": 133
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 502,
+        "width": 99
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Color blender",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 502,
+        "width": 99
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 615,
+        "width": 121
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Color subtraction",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 615,
+        "width": 121
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 749,
+        "width": 138
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "216 web safe colors",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 749,
+        "width": 138
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 901,
+        "width": 112
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Colors by name",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 901,
+        "width": 112
+      },
+      {
+        "selector": "p.light-description",
+        "role": "text",
+        "name": "ColorHexa.com is a free color tool providing information about any color and generating matching color palettes for your designs (such as complementary, analogous, triadic, tetradic or monochromatic c",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 222,
+        "width": 835
+      },
+      {
+        "selector": "p.light-description",
+        "role": "text",
+        "name": "Just type any in the search field and ColorHexa will offer a detailed description and automatically convert it to its equivalent in Hexadecimal, RGB, CMYK, HSL, HSV, CIE-LAB / LUV / LCH, Hunter-Lab, X",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 222,
+        "width": 835
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "color value",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 327,
+        "width": 77
+      },
+      {
+        "selector": "section.simple-demo",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 176,
+        "width": 928
+      },
+      {
+        "selector": "div.demo",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 185,
+        "width": 445
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "Convert, generate palettes, and get any color information",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 185,
+        "width": 445
+      },
+      {
+        "selector": "div.tiny",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 205,
+        "width": 405
+      },
+      {
+        "selector": "li.odd",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 220,
+        "width": 200
+      },
+      {
+        "selector": "li.even",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 220,
+        "width": 200
+      },
+      {
+        "selector": "li.odd",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 220,
+        "width": 200
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Enter any Hex, RGB or HSL .",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 366,
+        "width": 229
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "values",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 549,
+        "width": 42
+      },
+      {
+        "selector": "div.demo",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 649,
+        "width": 445
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "Blend, subtract or create a gradient between two colors",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 649,
+        "width": 445
+      },
+      {
+        "selector": "div.tiny",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 669,
+        "width": 405
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 681,
+        "width": 26
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 707,
+        "width": 26
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 733,
+        "width": 26
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 759,
+        "width": 26
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 785,
+        "width": 26
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Separate your query with +, - or to.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 826,
+        "width": 237
+      },
+      {
+        "selector": "div.gradients.index-gradient",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 155,
+        "width": 970
+      },
+      {
+        "selector": "div.scheme",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 185,
+        "width": 910
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 185,
+        "width": 70
+      },
+      {
+        "selector": "a.tb",
+        "role": "link",
+        "name": "#17fb21",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 185,
+        "width": 70
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 255,
+        "width": 70
+      },
+      {
+        "selector": "a.tb",
+        "role": "link",
+        "name": "#21ea2b",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 255,
+        "width": 70
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 325,
+        "width": 70
+      },
+      {
+        "selector": "a.tb",
+        "role": "link",
+        "name": "#2bd936",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 325,
+        "width": 70
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 395,
+        "width": 70
+      },
+      {
+        "selector": "a.tb",
+        "role": "link",
+        "name": "#35c840",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 395,
+        "width": 70
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 465,
+        "width": 70
+      },
+      {
+        "selector": "a.tb",
+        "role": "link",
+        "name": "#3fb74a",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 465,
+        "width": 70
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 535,
+        "width": 70
+      },
+      {
+        "selector": "a.tw",
+        "role": "link",
+        "name": "#49a655",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 535,
+        "width": 70
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 605,
+        "width": 70
+      },
+      {
+        "selector": "a.tw",
+        "role": "link",
+        "name": "#53955f",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 605,
+        "width": 70
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 675,
+        "width": 70
+      },
+      {
+        "selector": "a.tw",
+        "role": "link",
+        "name": "#5d8569",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 675,
+        "width": 70
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 745,
+        "width": 70
+      },
+      {
+        "selector": "a.tw",
+        "role": "link",
+        "name": "#677474",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 745,
+        "width": 70
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 815,
+        "width": 70
+      },
+      {
+        "selector": "a.tw",
+        "role": "link",
+        "name": "#71637e",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 815,
+        "width": 70
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 885,
+        "width": 70
+      },
+      {
+        "selector": "a.tw",
+        "role": "link",
+        "name": "#7b5288",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 885,
+        "width": 70
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 955,
+        "width": 70
+      },
+      {
+        "selector": "a.tw",
+        "role": "link",
+        "name": "#854193",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 955,
+        "width": 70
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 1025,
+        "width": 70
+      },
+      {
+        "selector": "a.tw",
+        "role": "link",
+        "name": "#8f309d",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1025,
+        "width": 70
+      },
+      {
+        "selector": "#footer",
+        "role": "contentinfo",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 140,
+        "width": 1000
+      },
+      {
+        "selector": "div.fluid-footer.clear",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 155,
+        "width": 970
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Terms",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 218,
+        "width": 36
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Privacy",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 268,
+        "width": 43
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "ColorHexa",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 968,
+        "width": 62
+      },
+      {
+        "selector": "#support",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1130,
+        "width": 90
+      },
+      {
+        "selector": "div.text",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 1152,
+        "width": 45
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 1152,
+        "width": 46
+      },
+      {
+        "selector": "a.icon-facebook",
+        "role": "link",
+        "name": "Facebook",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1152,
+        "width": 46
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 1152,
+        "width": 46
+      },
+      {
+        "selector": "a.icon-twitter",
+        "role": "link",
+        "name": "Twitter",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1152,
+        "width": 46
+      }
+    ]
+  },
+  "video": "proof/kane/colorhexa-open-picker/resume-2026-11-22T03-33-20.437Z/before/recording.mp4"
+}

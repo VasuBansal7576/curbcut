@@ -1,0 +1,184 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-27c6f312c486-51e6e4ad",
+    "url": "https://csc.gov.in/",
+    "persona": "keyboard-only",
+    "task": "Open “ABOUT” from keyboard focus or with Arrow Down and follow “About MeitY”. Confirm the public destination /meity.",
+    "controlTask": "Hover “ABOUT”, click “About MeitY” and confirm /meity.",
+    "observedSelector": "#menuzord > ul > li:nth-of-type(2) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/meity"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#menuzord > ul > li:nth-of-type(2)",
+      "#menuzord > ul > li:nth-of-type(2) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "Journey step 3 was unavailable after the prior step.",
+    "steps": [
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+        "action": "focus",
+        "traversal": {
+          "reached": true,
+          "tabs": 8
+        }
+      },
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+        "action": "key",
+        "key": "ArrowDown"
+      },
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ],
+    "url": "https://csc.gov.in/"
+  },
+  "registeredControl": {
+    "status": "pass",
+    "reason": "The complete journey reached the declared outcome.",
+    "steps": [
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+        "action": "focus"
+      },
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+        "action": "key",
+        "key": "ArrowDown"
+      },
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ],
+    "url": "https://csc.gov.in/meity",
+    "checks": [
+      true
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-27c6f312c486-51e6e4ad/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 3 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-27c6f312c486-51e6e4ad/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-27c6f312c486-51e6e4ad/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-27c6f312c486-51e6e4ad/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v4-27c6f312c486-51e6e4ad",
+    "url": "https://csc.gov.in/",
+    "persona": "keyboard-only",
+    "task": "Open “ABOUT” from keyboard focus or with Arrow Down and follow “About MeitY”. Confirm the public destination /meity.",
+    "controlTask": "Hover “ABOUT”, click “About MeitY” and confirm /meity.",
+    "observedSelector": "#menuzord > ul > li:nth-of-type(2) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/meity"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#menuzord > ul > li:nth-of-type(2)",
+      "#menuzord > ul > li:nth-of-type(2) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ],
+    "site": "csc.gov.in",
+    "match": "https://csc.gov.in/",
+    "barrier": "Pointer hover opens the ABOUT submenu, but keyboard focus and Arrow Down leave it at display:none, so About MeitY cannot be reached.",
+    "rules": [
+      {
+        "action": "toggleOnActivate",
+        "trigger": "#menuzord > ul > li:nth-of-type(2) > a",
+        "target": "#menuzord > ul > li:nth-of-type(2) > ul",
+        "mode": "display",
+        "display": "block"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/hard-v4/local/v4-27c6f312c486-51e6e4ad/attempt-1"
+}

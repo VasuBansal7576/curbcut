@@ -1,0 +1,43 @@
+{
+  "id": "gbnews-com-tr",
+  "url": "https://www.gbnews.com/",
+  "persona": "keyboard-only",
+  "task": "Use Tab and Enter to reach and activate “Previous Slide”. Verify its content becomes visible.",
+  "controlTask": "Click “Previous Slide” and verify its content becomes visible.",
+  "observedSelector": "#backBtn",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#sHome_0_0_7_0_0_1_0_7_0 > div:nth-of-type(2) > div > div > div:nth-of-type(3) > div > div > div > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div > div > div > button"
+    }
+  ],
+  "minimumTabPresses": 2,
+  "probe": {
+    "action": "click"
+  },
+  "site": "www.gbnews.com",
+  "match": "https://www.gbnews.com/",
+  "barrier": "The clickable Previous Slide div (#backBtn) has a tabIndex of -1 and no tabindex attribute, so Tab skips it and keyboard users cannot reach it to activate it with Enter.",
+  "rules": [
+    {
+      "selector": "#backBtn",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#backBtn",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#backBtn",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#backBtn",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,16 @@
+{
+  "barrier": "At 320 CSS pixels, the language dropdown container has display:none, so the English trigger cannot be hovered or focused to reveal the Japanese link.",
+  "rules": [
+    {
+      "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

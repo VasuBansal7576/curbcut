@@ -1,0 +1,9 @@
+{
+  "barrier": "Forward and backward tabbing did not consistently reach PRODUCTS, although the run reported focus once and the snapshot shows tabindex=\"0\". The click replay also failed to reveal the dropdown, so forwarding Enter to click has no verified opening behavior to reuse.",
+  "rules": [
+    {
+      "selector": "nav > div > div:nth-of-type(1) > div:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > span",
+      "action": "restoreFocusOutline"
+    }
+  ]
+}

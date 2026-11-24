@@ -1,0 +1,34 @@
+{
+  "id": "statcounter-edit-chart",
+  "url": "https://gs.statcounter.com/",
+  "persona": "keyboard-only",
+  "task": "Assert that the Edit Chart Data control below the main chart is keyboard focusable. Open it using the keyboard and verify the chart settings form shows the Region selector.",
+  "controlTask": "Click Edit Chart Data below the main chart. Verify the chart settings form shows the Region selector.",
+  "observedSelector": "#btn-edit-chart",
+  "successSelector": "form#statistics select#region",
+  "site": "gs.statcounter.com",
+  "match": "https://gs.statcounter.com/",
+  "barrier": "The snapshot exposes Edit Chart Data as text with tabIndex -1, leaving it out of the keyboard tab order.",
+  "rules": [
+    {
+      "selector": "#btn-edit-chart",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#btn-edit-chart",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#btn-edit-chart",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#btn-edit-chart",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

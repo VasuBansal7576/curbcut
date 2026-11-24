@@ -1,0 +1,33 @@
+{
+  "id": "v4-cd36cbb5aa0795e45d9c",
+  "url": "https://www.riu.com/en",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Filter by destination” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Filter by destination” field and type test without submitting.",
+  "observedSelector": "#riu-hotels > div:nth-of-type(1) > div > div:nth-of-type(2) > riu-ui-select > div > div > div > div > form > input",
+  "requiredName": "Filter by destination",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#riu-hotels > div:nth-of-type(1) > div > div:nth-of-type(2) > riu-ui-select > div > div > div > div > form > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.riu.com",
+  "match": "https://www.riu.com/en",
+  "barrier": "Focus is on the Reading view dialog, and the input already named “Filter by destination” is exposed as a combobox. The available rules cannot expose the input as the requested textbox.",
+  "rules": [
+    {
+      "selector": "dialog",
+      "action": "removeFocusTrap"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,20 @@
+{
+  "barrier": "Tab reaches Feed, but it remains outside the visible viewport. In the failed keyboard run, the padded feature tablist renders as a 176px-tall block instead of the 62px flex strip observed in the pointer run.",
+  "rules": [
+    {
+      "selector": "#features > div:nth-of-type(2) > div.no-scrollbar.overflow-x-auto > [role='tablist']",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "width": "fit-content"
+      }
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#features [role='tablist'][aria-label='daily.dev features']",
+      "items": "#features [role='tablist'][aria-label='daily.dev features'] > button.tour-tab[role='tab']",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

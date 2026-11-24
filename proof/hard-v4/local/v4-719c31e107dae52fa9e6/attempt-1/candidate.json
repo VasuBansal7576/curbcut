@@ -1,0 +1,34 @@
+{
+  "id": "v4-719c31e107dae52fa9e6",
+  "url": "https://www.whatmobile.com.pk/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search” field and type test without submitting.",
+  "observedSelector": "#searchInput",
+  "requiredName": "Search",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#searchInput",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.whatmobile.com.pk",
+  "match": "https://www.whatmobile.com.pk/",
+  "barrier": "The search input has a textbox role but no accessible name, so it cannot be found as “Search” in Reading view.",
+  "rules": [
+    {
+      "selector": "#searchInput",
+      "action": "addLabel",
+      "value": "Search"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

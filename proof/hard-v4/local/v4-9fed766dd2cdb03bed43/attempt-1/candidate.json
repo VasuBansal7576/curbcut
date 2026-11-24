@@ -1,0 +1,39 @@
+{
+  "id": "v4-9fed766dd2cdb03bed43",
+  "url": "https://www.chehejia.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “公司地址：北京市顺义区高丽营镇恒兴路4号院1幢105室(科技创新功能区) 联系电话：4006860900 联系邮箱：press@chehejia.com” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “公司地址：北京市顺义区高丽营镇恒兴路4号院1幢105室(科技创新功能区) 联系电话：4006860900 联系邮箱：press@chehejia.com” at normal width.",
+  "observedSelector": "div:nth-of-type(4) > div:nth-of-type(2) > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "div:nth-of-type(4) > div:nth-of-type(2) > p",
+      "equals": "公司地址：北京市顺义区高丽营镇恒兴路4号院1幢105室(科技创新功能区) 联系电话：4006860900 联系邮箱：press@chehejia.com"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "div:nth-of-type(4) > div:nth-of-type(2) > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.chehejia.com",
+  "match": "https://www.chehejia.com/",
+  "barrier": "The contact paragraph is 1000 CSS pixels wide inside a 320 CSS pixel footer that clips horizontal overflow.",
+  "rules": [
+    {
+      "selector": "div:nth-of-type(4) > div:nth-of-type(2) > p",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

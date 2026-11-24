@@ -1,0 +1,14 @@
+{
+  "barrier": "Focus is on the Reading view dialog, which blocks access to the page’s dictionary textbox. The textbox also has no accessible name.",
+  "rules": [
+    {
+      "selector": "dialog",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "#dictSearchText",
+      "action": "addLabel",
+      "value": "Find Meaning..."
+    }
+  ]
+}

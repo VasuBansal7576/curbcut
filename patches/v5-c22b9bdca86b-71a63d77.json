@@ -1,0 +1,65 @@
+{
+  "id": "v5-c22b9bdca86b-71a63d77",
+  "url": "https://marinespecies.org/",
+  "persona": "keyboard-only",
+  "task": "Open “Tools” using the keyboard and read “Match taxa”.",
+  "controlTask": "Click “Tools” and read “Match taxa”.",
+  "observedSelector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > ul > li:nth-of-type(1) > a"
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+      "action": "activate"
+    },
+    {
+      "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > ul > li:nth-of-type(1) > a",
+      "action": "observe"
+    }
+  ],
+  "site": "marinespecies.org",
+  "match": "https://marinespecies.org/",
+  "barrier": "The Tools trigger is an anchor without an href or explicit tabindex, so Tab skips it and keyboard users cannot open the dropdown containing Match taxa.",
+  "rules": [
+    {
+      "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+      "action": "makeFocusable"
+    },
+    {
+      "trigger": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+      "target": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7)",
+      "action": "toggleOnActivate",
+      "mode": "class",
+      "className": "open"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/before/recording.mp4",
+    "control": "proof/heldout-v5/kane/v5-c22b9bdca86b-71a63d77/control/recording.mp4",
+    "after": "proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/after/recording.mp4",
+    "verifiedAt": "2026-11-24T03:51:32.782Z",
+    "kaneRunIds": [
+      "997b7c62-125d-4613-8769-90ffafd35782",
+      "1ee0357f-4309-495b-b4c5-431c7a8aee5c",
+      "bc62f31e-4ff9-4ba8-880c-4dccdafe284d"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-24T03:51:32.782Z",
+      "event": "verified",
+      "before": "997b7c62-125d-4613-8769-90ffafd35782",
+      "control": "1ee0357f-4309-495b-b4c5-431c7a8aee5c",
+      "after": "bc62f31e-4ff9-4ba8-880c-4dccdafe284d"
+    }
+  ]
+}

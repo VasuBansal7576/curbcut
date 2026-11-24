@@ -1,0 +1,32 @@
+{
+  "barrier": "At 320 CSS pixels, the passage starts 54 pixels from the left and remains 650 pixels wide inside a 1140-pixel flex row. The page clips the portion beyond the viewport.",
+  "rules": [
+    {
+      "selector": "#goinvest div:has(#show-sticky), #show-sticky, #show-sticky div:has(> div p.aXVKh2.HXVKh2.pWiO7O._6WiO7O), #show-sticky div:has(> p.aXVKh2.HXVKh2.pWiO7O._6WiO7O)",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#show-sticky div.acIQqU.gcIQqU.pcIQqU:has(> div.kcIQqU.lcIQqU > div > p.aXVKh2.HXVKh2.pWiO7O._6WiO7O)",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "#show-sticky p.aXVKh2.HXVKh2.pWiO7O._6WiO7O",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "max-width": "100%",
+        "height": "auto",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

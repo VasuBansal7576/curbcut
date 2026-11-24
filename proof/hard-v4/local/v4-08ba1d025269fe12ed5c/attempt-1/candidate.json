@@ -1,0 +1,92 @@
+{
+  "id": "v4-08ba1d025269fe12ed5c",
+  "url": "https://research-panel.jp/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “簡単なアンケートにお答えいただくだけで、ポイントが貯まります。貯めたポイントは、現金やギフト券、電子マネーに交換できます。” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “簡単なアンケートにお答えいただくだけで、ポイントが貯まります。貯めたポイントは、現金やギフト券、電子マネーに交換できます。” at normal width.",
+  "observedSelector": "div:nth-of-type(2) > div:nth-of-type(2) > section:nth-of-type(1) > div > div:nth-of-type(1) > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "div:nth-of-type(2) > div:nth-of-type(2) > section:nth-of-type(1) > div > div:nth-of-type(1) > p",
+      "equals": "簡単なアンケートにお答えいただくだけで、ポイントが貯まります。貯めたポイントは、現金やギフト券、電子マネーに交換できます。"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "div:nth-of-type(2) > div:nth-of-type(2) > section:nth-of-type(1) > div > div:nth-of-type(1) > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "research-panel.jp",
+  "match": "https://research-panel.jp/",
+  "barrier": "At 320 CSS pixels, the body's 960px minimum width and the side-by-side table layout place the 480px-wide paragraph from x=84 to x=564, clipping its right side.",
+  "rules": [
+    {
+      "selector": "body",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "div.wrap",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "div.no-login",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "section.about-rp",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "div.about-rp__inner.no-login__box",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.about-rp__text-wrapper",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "div:nth-of-type(2) > div:nth-of-type(2) > section:nth-of-type(1) > div > div:nth-of-type(1) > p",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "img.about-rp__image",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "max-width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,9 @@
+{
+  "barrier": "The About submenu opens on pointer hover but remains hidden after keyboard focus and Arrow Down, leaving The DHE link unavailable.",
+  "rules": [
+    {
+      "selector": "#mainnav > nav > ul > li:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

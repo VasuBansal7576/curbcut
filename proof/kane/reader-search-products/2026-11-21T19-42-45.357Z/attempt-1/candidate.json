@@ -1,0 +1,19 @@
+{
+  "id": "reader-search-products",
+  "url": "http://127.0.0.1:4317/fixtures/shop/",
+  "site": "127.0.0.1",
+  "match": "http://127.0.0.1:4317/fixtures/shop/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, first verify the exact row label ‘searchbox · Search products’. If that named searchbox is absent, report a failure and stop. Use only the named searchbox to type speaker and submit. Confirm one result named Porch Speaker.",
+  "barrier": "The product search input has the searchbox role but no accessible name, so Reading view lacks the required row “searchbox · Search products”.",
+  "rules": [
+    {
+      "selector": "#search",
+      "action": "addLabel",
+      "value": "Search products"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,9 @@
+{
+  "barrier": "Tab reaches the first FAQ button while it is still off-screen. The nearby FAQ Navigation control is skipped because it is an unfocusable div.",
+  "rules": [
+    {"selector":"#faq-toc-toggle","action":"makeFocusable"},
+    {"selector":"#faq-toc-toggle","action":"setRole","value":"button"},
+    {"selector":"#faq-toc-toggle","action":"bindEnterToClick"},
+    {"selector":"#faq-toc-toggle","action":"restoreFocusOutline"}
+  ]
+}

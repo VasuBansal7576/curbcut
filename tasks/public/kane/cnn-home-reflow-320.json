@@ -1,0 +1,14 @@
+{
+  "id": "cnn-home-reflow-320",
+  "url": "https://edition.cnn.com/",
+  "persona": "low-vision",
+  "observedSelector": "li.card.container__item",
+  "outcomeChecks": [
+    {
+      "selector": "html",
+      "kind": "fits-width"
+    }
+  ],
+  "task": "Scroll vertically through the public CNN homepage at 320 CSS pixels to read the main news headlines and first shelf of cards. Verify the page fits the viewport and no card pushes the page outside the visible right edge. Stop on the public homepage.",
+  "controlTask": "In the normal desktop viewport, read the lead news headlines and first shelf of cards on the CNN homepage. Verify that the first headline is readable."
+}

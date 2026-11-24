@@ -1,0 +1,46 @@
+{
+  "id": "berkshire-letter",
+  "url": "https://www.berkshirehathaway.com/letters/1999htm.html",
+  "persona": "low-vision",
+  "task": "Read the first financial-results paragraph in the 1999 shareholder letter at 320 CSS pixels without panning horizontally.",
+  "status": "locally-reproduced",
+  "runner": "local-playwright",
+  "phases": {
+    "before": {
+      "title": "Chairman's Letter - 1999",
+      "width": 320,
+      "left": 11,
+      "right": 513,
+      "passageLength": 365,
+      "scrollX": 0,
+      "digest": "6698729f6af89603649adcf65b33677ee67396c7d185704f49a81b76acb277a8",
+      "pass": false,
+      "video": "proof/public/berkshire-letter/before.mp4",
+      "observedAt": "2026-11-21T19:08:08.053Z"
+    },
+    "control": {
+      "title": "Chairman's Letter - 1999",
+      "width": 1280,
+      "left": 11,
+      "right": 639,
+      "passageLength": 365,
+      "scrollX": 0,
+      "digest": "6698729f6af89603649adcf65b33677ee67396c7d185704f49a81b76acb277a8",
+      "pass": true,
+      "video": "proof/public/berkshire-letter/control.mp4",
+      "observedAt": "2026-11-21T19:08:15.244Z"
+    },
+    "after": {
+      "title": "Chairman's Letter - 1999",
+      "width": 320,
+      "left": 9,
+      "right": 300,
+      "passageLength": 365,
+      "scrollX": 0,
+      "digest": "6698729f6af89603649adcf65b33677ee67396c7d185704f49a81b76acb277a8",
+      "pass": true,
+      "video": "proof/public/berkshire-letter/after.mp4",
+      "observedAt": "2026-11-21T19:08:21.868Z"
+    }
+  }
+}

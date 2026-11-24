@@ -1,0 +1,10 @@
+{
+  "id": "nws-radar-play-pause",
+  "url": "https://radar.weather.gov/",
+  "persona": "keyboard-only",
+  "observedSelector": ".button.button-play",
+  "minimumTabPresses": 2,
+  "successSelector": ".button-pause",
+  "task": "Press Tab twice before making any accessibility assertion. Continue using Tab or Shift+Tab through the controls to reach Play in the radar animation timeline. Press Enter and verify the animation begins and the control changes to Pause.",
+  "controlTask": "Click Play in the animation timeline of the public National Weather Service radar map. Verify that the radar animation starts and Play changes to Pause."
+}

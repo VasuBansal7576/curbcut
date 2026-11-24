@@ -1,0 +1,15 @@
+{
+  "barrier": "Keyboard activation of MAINKAN opens the login dialog, but Escape leaves it visible. The dialog container has tabindex=\"-1\", which excludes it from sequential keyboard focus.",
+  "rules": [
+    {
+      "action": "makeFocusable",
+      "selector": "#login"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#login",
+      "opener": "#main-slide > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "close": "#login > div > div > div:nth-of-type(1) > button"
+    }
+  ]
+}

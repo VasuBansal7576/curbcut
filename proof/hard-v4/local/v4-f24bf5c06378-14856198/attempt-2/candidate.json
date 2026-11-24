@@ -1,0 +1,55 @@
+{
+  "id": "v4-f24bf5c06378-14856198",
+  "url": "https://www.lafayette.edu/",
+  "persona": "keyboard-only",
+  "task": "Open “about us: the college” from keyboard focus or with Arrow Down and follow “Lafayette at a Glance”. Confirm the public destination /lafayette-at-a-glance/.",
+  "controlTask": "Hover “about us: the college”, click “Lafayette at a Glance” and confirm /lafayette-at-a-glance/.",
+  "observedSelector": "#header > div:nth-of-type(1) > div > div > div > div > nav > ul > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/lafayette-at-a-glance/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#header > div:nth-of-type(1) > div > div > div > div > nav > ul > li:nth-of-type(1)",
+    "#header > div:nth-of-type(1) > div > div > div > div > nav > ul > li:nth-of-type(1) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#header > div:nth-of-type(1) > div > div > div > div > nav > ul > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#header > div:nth-of-type(1) > div > div > div > div > nav > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#header > div:nth-of-type(1) > div > div > div > div > nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.lafayette.edu",
+  "match": "https://www.lafayette.edu/",
+  "barrier": "Hovering over “about us: the college” reveals its submenu, but focusing the link and pressing Arrow Down leaves “Lafayette at a Glance” unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#header > div:nth-of-type(1) > div > div > div > div > nav > ul > li:nth-of-type(1) > a",
+      "target": "#header > div:nth-of-type(1) > div > div > div > div > nav > ul > li:nth-of-type(1) > ul",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

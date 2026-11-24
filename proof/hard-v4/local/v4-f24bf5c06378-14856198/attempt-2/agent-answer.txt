@@ -1,0 +1,12 @@
+{
+  "barrier": "Hovering over “about us: the college” reveals its submenu, but focusing the link and pressing Arrow Down leaves “Lafayette at a Glance” unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#header > div:nth-of-type(1) > div > div > div > div > nav > ul > li:nth-of-type(1) > a",
+      "target": "#header > div:nth-of-type(1) > div > div > div > div > nav > ul > li:nth-of-type(1) > ul",
+      "mode": "display",
+      "display": "block"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#gov-banner-default-default:not([hidden])",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "gov-banner-default-default",
+          "classes": [
+            "usa-banner__content",
+            "usa-accordion__content"
+          ],
+          "label": "Official websites use .govA .gov website belongs to an official government organization in the Unite"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "#gov-banner-default-default > .grid-row.grid-gap-lg",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "grid-row",
+            "grid-gap-lg"
+          ],
+          "label": "Official websites use .govA .gov website belongs to an official government organization in the Unite"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "field": "selector",
+      "selector": "#gov-banner-default-default > .grid-row > .usa-banner__guidance > .usa-media-block__body",
+      "count": 2,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "usa-media-block__body"
+          ],
+          "label": "Official websites use .govA .gov website belongs to an official government organization in the Unite"
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "usa-media-block__body"
+          ],
+          "label": "Secure .gov websites use HTTPSA lock ( LockLocked padlock icon) or https:// means you've safely conn"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "field": "selector",
+      "selector": "#gov-banner-default-default > .grid-row > .usa-banner__guidance > .usa-media-block__body > p",
+      "count": 2,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "p",
+          "classes": [],
+          "label": "Official websites use .govA .gov website belongs to an official government organization in the Unite"
+        },
+        {
+          "tag": "p",
+          "classes": [],
+          "label": "Secure .gov websites use HTTPSA lock ( LockLocked padlock icon) or https:// means you've safely conn"
+        }
+      ]
+    }
+  ]
+}

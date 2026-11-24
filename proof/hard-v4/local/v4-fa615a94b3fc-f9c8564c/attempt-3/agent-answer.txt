@@ -1,0 +1,22 @@
+{
+  "barrier": "At 320 CSS pixels, the collapsed navigation gives the PASLAUGOS menu no layout box, and the journey’s trigger has display: none. Focus stays on the body, so ArrowDown cannot open the submenu.",
+  "rules": [
+    {
+      "action": "injectCSS",
+      "selector": "#navMenu",
+      "value": {"display": "block"}
+    },
+    {
+      "action": "injectCSS",
+      "selector": "#navMenu > div > div:nth-of-type(1) > a:nth-of-type(1)",
+      "value": {"display": "block"}
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#navMenu > div > div:nth-of-type(1) > a:nth-of-type(1)",
+      "target": "#navMenu > div > div:nth-of-type(1) > div",
+      "mode": "display",
+      "display": "block"
+    }
+  ]
+}

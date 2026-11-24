@@ -1,0 +1,34 @@
+{
+  "id": "v5-2cdebc725e6217cd5bea",
+  "url": "https://www.definitions.net/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search for dictionary definitions” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search for dictionary definitions” field and type test without submitting.",
+  "observedSelector": "#search",
+  "requiredName": "Search for dictionary definitions",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#search",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.definitions.net",
+  "match": "https://www.definitions.net/",
+  "barrier": "The native textbox #search has no accessible name, so it cannot be found by its expected name in Reading view.",
+  "rules": [
+    {
+      "selector": "input#search",
+      "action": "addLabel",
+      "value": "Search for dictionary definitions"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

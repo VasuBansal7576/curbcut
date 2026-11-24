@@ -1,0 +1,30 @@
+{
+  "barrier": "The 320 CSS pixel run could not see the passage. At normal width, the passage sits in a 460 CSS pixel flex row with the thumbnail and text side by side. Earlier width and wrapping changes left the visibility failure unresolved.",
+  "rules": [
+    {
+      "selector": "html, body",
+      "action": "injectCSS",
+      "value": {"min-width": "0"}
+    },
+    {
+      "selector": "div.layout:has(div.topics__article), div.layout div:has(> div.main-column)",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "auto", "min-width": "0", "max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "div.main-column, div.main-column > div.area:has(> div.topics__article), div.main-column > div.area > div.topics__article, div.topics__article > ul",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "auto", "min-width": "0", "max-width": "100%", "height": "auto", "max-height": "none", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "div.topics__article > ul > li",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "auto", "min-width": "0", "height": "auto", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "div.topics__article > ul > li > div.topics__article--contents",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "auto", "min-width": "0", "height": "auto", "max-height": "none", "white-space": "normal", "overflow-wrap": "anywhere"}
+    }
+  ]
+}

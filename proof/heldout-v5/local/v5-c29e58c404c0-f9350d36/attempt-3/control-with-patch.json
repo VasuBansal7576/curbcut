@@ -1,0 +1,2026 @@
+{
+  "runner": "playwright",
+  "status": "pass",
+  "reason": "The complete journey reached the declared outcome.",
+  "steps": [
+    {
+      "selector": "#menu > ul > li:nth-of-type(1) > a",
+      "action": "focus"
+    },
+    {
+      "selector": "#menu > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown"
+    },
+    {
+      "selector": "#menu > ul > li:nth-of-type(1) > ul > li:nth-of-type(3) > ul:nth-of-type(2) > li:nth-of-type(2) > a",
+      "action": "activate"
+    }
+  ],
+  "url": "https://www.snhu.edu/online-degrees/associate",
+  "checks": [
+    true
+  ],
+  "snapshot": {
+    "url": "https://www.snhu.edu/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#menu > ul > li:nth-of-type(1) > a",
+          "parent": "ul.navbar-nav > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "class": "nav-link d-none d-lg-block"
+          },
+          "hoverHandlers": [],
+          "text": "Academic Programs",
+          "children": [],
+          "box": [
+            85,
+            108,
+            278,
+            27
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.navbar-nav > li:nth-of-type(1)",
+          "parent": "ul.navbar-nav",
+          "tag": "li",
+          "attributes": {
+            "class": "nav-menuItem dropdown"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.nav-link.d-none",
+            "button.nav-link.text-black-72",
+            "ul.dropdown-menu"
+          ],
+          "box": [
+            85,
+            96,
+            278,
+            78
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.navbar-nav",
+          "parent": "#menu",
+          "tag": "ul",
+          "attributes": {
+            "class": "navbar-nav"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.nav-menuItem.dropdown",
+            "li.nav-menuItem.dropdown",
+            "li.nav-menuItem.dropdown",
+            "li.nav-menuItem.dropdown"
+          ],
+          "box": [
+            85,
+            96,
+            1110,
+            78
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu",
+          "parent": "nav.navbar.navbar-nav > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "collapse navbar-collapse",
+            "id": "menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#headerSearchContainer",
+            "ul.navbar-nav"
+          ],
+          "box": [
+            85,
+            96,
+            1110,
+            78
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav.navbar.navbar-nav > div:nth-of-type(1)",
+          "parent": "nav.navbar.navbar-nav",
+          "tag": "div",
+          "attributes": {
+            "class": "container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "button.d-lg-none.navbar-toggler",
+            "#menu"
+          ],
+          "box": [
+            70,
+            96,
+            1140,
+            78
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav.navbar.navbar-nav",
+          "tag": "nav",
+          "attributes": {
+            "class": "navbar navbar-nav navbar-expand-lg mega-menu",
+            "aria-label": "Primary Navigation"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.container"
+          ],
+          "box": [
+            0,
+            96,
+            1280,
+            78
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu > ul > li:nth-of-type(1) > ul",
+          "parent": "ul.navbar-nav > li:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "dropdown-menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li",
+            "li",
+            "li.row"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "1000",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu > ul > li:nth-of-type(1) > ul > li:nth-of-type(3) > ul:nth-of-type(2) > li:nth-of-type(2) > a",
+          "parent": "ul.navbar-nav > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > ul:nth-of-type(2) > li:nth-of-type(2)",
+          "tag": "a",
+          "attributes": {
+            "class": "dropdown-item"
+          },
+          "hoverHandlers": [],
+          "text": "Associate Degrees",
+          "children": [],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.navbar-nav > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > ul:nth-of-type(2) > li:nth-of-type(2)",
+          "parent": "ul.navbar-nav > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > ul:nth-of-type(2)",
+          "tag": "li",
+          "attributes": {
+            "class": ""
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.dropdown-item"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.navbar-nav > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > ul:nth-of-type(2)",
+          "parent": "ul.navbar-nav > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3)",
+          "tag": "ul",
+          "attributes": {
+            "class": "col-xl col-lg-3"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.menu-header.text-black-90",
+            "li",
+            "li",
+            "li",
+            "li",
+            "li"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.navbar-nav > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3)",
+          "parent": "#menu > ul > li:nth-of-type(1) > ul",
+          "tag": "li",
+          "attributes": {
+            "class": "row"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.col-xl.col-lg-3",
+            "ul.col-xl.col-lg-3",
+            "ul.col-xl.col-lg-6"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(32, 102, 162); text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": ".dropdown-item:focus, .dropdown-item:hover",
+          "declarations": "color: rgb(22, 24, 27); text-decoration: none; background-color: rgb(248, 249, 250);",
+          "conditions": []
+        },
+        {
+          "selector": ".nav-link:focus, .nav-link:hover",
+          "declarations": "text-decoration: none;",
+          "conditions": []
+        },
+        {
+          "selector": ".navbar-nav > li.nav-menuItem:hover a, .navbar-nav > li.nav-menuItem:hover button.nav-link",
+          "declarations": "color: rgb(0, 36, 78);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".navbar-nav > li.nav-menuItem:hover a::after, .navbar-nav > li.nav-menuItem:hover button.nav-link::after",
+          "declarations": "color: rgb(0, 36, 78);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".navbar-nav > li.nav-menuItem a.dropdown-item:active, .navbar-nav > li.nav-menuItem a.dropdown-item:focus, .navbar-nav > li.nav-menuItem a.dropdown-item:hover",
+          "declarations": "background-color: transparent;",
+          "conditions": []
+        },
+        {
+          "selector": ".navbar-nav > li.nav-menuItem a.dropdown-item:active, .navbar-nav > li.nav-menuItem a.dropdown-item:focus, .navbar-nav > li.nav-menuItem a.dropdown-item:hover",
+          "declarations": "background-color: rgba(0, 0, 0, 0.1);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".navbar-nav > li.nav-menuItem.keypress-show, .navbar-nav > li.nav-menuItem:hover",
+          "declarations": "background-color: rgba(0, 0, 0, 0.3);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".navbar-nav > li.nav-menuItem.keypress-show button, .navbar-nav > li.nav-menuItem.keypress-show > a, .navbar-nav > li.nav-menuItem:hover button, .navbar-nav > li.nav-menuItem:hover > a",
+          "declarations": "color: rgb(255, 255, 255);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".navbar-nav > li.nav-menuItem.keypress-show button::after, .navbar-nav > li.nav-menuItem.keypress-show > a::after, .navbar-nav > li.nav-menuItem:hover button::after, .navbar-nav > li.nav-menuItem:hover > a::after",
+          "declarations": "background-image: url(\"data:image/svg+xml,<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" height=\\\"16\\\" width=\\\"16\\\" viewBox=\\\"0 0 16 16\\\"><path fill=\\\"none\\\" d=\\\"M5 2L11 8L5 14\\\" stroke=\\\"white\\\" stroke-width=\\\"2\\\" stroke-miterlimit=\\\"10\\\" stroke-opacity=\\\"1\\\"/></svg>\"); transform: rotate(-90deg);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".navbar-nav > li.nav-menuItem .navbar-nav > li.nav-menuItem .dropdown-menu.show, .navbar-nav > li.nav-menuItem:hover > .dropdown-menu",
+          "declarations": "display: block; background-color: rgb(245, 245, 245); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 0px; box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px; min-width: 100%; padding: 1.625rem 0px; margin-top: 0px;",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(32, 102, 162); text-decoration-line: underline; text-decoration-thickness: 2px;",
+          "conditions": []
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#menu > ul > li:nth-of-type(1)",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 85,
+        "width": 278
+      },
+      {
+        "selector": "#menu > ul > li:nth-of-type(1) > ul",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#menu > ul > li:nth-of-type(1) > a",
+        "role": "link",
+        "name": "Academic Programs",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 85,
+        "width": 278
+      },
+      {
+        "selector": "#menu > ul > li:nth-of-type(1) > ul > li:nth-of-type(3) > ul:nth-of-type(2) > li:nth-of-type(2) > a",
+        "role": "link",
+        "name": "Associate Degrees",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "button.nav-link.text-black-72",
+        "role": "button",
+        "name": "About SNHU",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 1096,
+        "width": 0
+      },
+      {
+        "selector": "ul.navbar-nav",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 85,
+        "width": 1110
+      },
+      {
+        "selector": "body",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#_vis_opt_path_hides",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "noscript",
+        "role": "text",
+        "name": "<iframe\n        src=\"https://www.googletagmanager.com/ns.html?id=GTM-TPV7WCR\"\n        height=\"0\"\n        width=\"0\"\n        style=\"display: none; visibility: hidden\"\n    ></iframe\n>",
+        "state": "",
+        "tag": "noscript",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "header",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "script",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "script",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#main-content",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tag": "main",
+        "tabIndex": -1,
+        "tabIndexAttribute": "-1",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "footer",
+        "role": "contentinfo",
+        "name": "",
+        "state": "",
+        "tag": "footer",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.row.no-gutters",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 85,
+        "width": 540
+      },
+      {
+        "selector": "a.btn.btn-cta",
+        "role": "button",
+        "name": "Apply now",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 845,
+        "width": 350
+      },
+      {
+        "selector": "div.col-3.col-lg-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 370
+      },
+      {
+        "selector": "div.navbar.logo",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 85,
+        "width": 220
+      },
+      {
+        "selector": "a.navbar-brand",
+        "role": "link",
+        "name": "Southern New Hampshire University",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 85,
+        "width": 220
+      },
+      {
+        "selector": "img.desktopLogoImg",
+        "role": "img",
+        "name": "Southern New Hampshire University",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 85,
+        "width": 220
+      },
+      {
+        "selector": "div.col-7.col-lg-8",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 455,
+        "width": 740
+      },
+      {
+        "selector": "nav.utility",
+        "role": "navigation",
+        "name": "Header Utility Links",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 619,
+        "width": 502
+      },
+      {
+        "selector": "div.d-flex.text-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 619,
+        "width": 502
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 962,
+        "width": 159
+      },
+      {
+        "selector": "a.flex-shrink-1.btn",
+        "role": "link",
+        "name": "SNHU Campus",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 970,
+        "width": 151
+      },
+      {
+        "selector": "div.search-toggle-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1161,
+        "width": 34
+      },
+      {
+        "selector": "nav.navbar.navbar-nav",
+        "role": "navigation",
+        "name": "Primary Navigation",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#menu",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 1110
+      },
+      {
+        "selector": "li.nav-menuItem.dropdown",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 918,
+        "width": 278
+      },
+      {
+        "selector": "a.nav-link.d-none",
+        "role": "link",
+        "name": "About SNHU",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 993,
+        "width": 98
+      },
+      {
+        "selector": "div.masthead-hero",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container-fluid.position-relative",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 682,
+        "width": 406
+      },
+      {
+        "selector": "img.masthead-image.w-100",
+        "role": "img",
+        "name": "A Collage of SNHU students",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.row.flex-row-reverse",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.col-lg-6.my-auto",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 640,
+        "width": 490
+      },
+      {
+        "selector": "div.col-12.content-box",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 640,
+        "width": 490
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Get your degree, your way",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 682,
+        "width": 406
+      },
+      {
+        "selector": "div.my-spacing-1.display-5",
+        "role": "text",
+        "name": "As an on-campus and online university, we offer the flexibility you need to succeed.",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 682,
+        "width": 406
+      },
+      {
+        "selector": "div.content-box--buttons.pt-spacing-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "grid",
+        "left": 682,
+        "width": 406
+      },
+      {
+        "selector": "a.btn.btn-outline-primary",
+        "role": "button",
+        "name": "Request Info",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 682,
+        "width": 406
+      },
+      {
+        "selector": "div.pb-spacing-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.row.pt-spacing-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.col-12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.card-deck",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 450,
+        "width": 760
+      },
+      {
+        "selector": "div.card-deck-body.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 450,
+        "width": 760
+      },
+      {
+        "selector": "div.col-12.col-lg-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 380
+      },
+      {
+        "selector": "div.card.my-3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 85,
+        "width": 540
+      },
+      {
+        "selector": "div.card-body",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 540
+      },
+      {
+        "selector": "div.col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 540
+      },
+      {
+        "selector": "div.card-media",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 655,
+        "width": 540
+      },
+      {
+        "selector": "img.card-img.img-background",
+        "role": "img",
+        "name": "Icon of two arrows pointed in opposite directions",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 845,
+        "width": 350
+      },
+      {
+        "selector": "div.card-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 85,
+        "width": 540
+      },
+      {
+        "selector": "div.card-text",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 540
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Discover how SNHU can help you spend less",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 540
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Plus, you could save even more by transferring up to 90 credits – something 68% of our online bachelor’s students did during the 2023-24 academic year.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 540
+      },
+      {
+        "selector": "div.col-12.col-lg-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 640,
+        "width": 570
+      },
+      {
+        "selector": "div.ytplaceholder.embed-responsive",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 655,
+        "width": 540
+      },
+      {
+        "selector": "img.ytcover",
+        "role": "img",
+        "name": "Affordable College Tuition",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 655,
+        "width": 540
+      },
+      {
+        "selector": "div.card-footer",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 540
+      },
+      {
+        "selector": "a.btn.btn-primary",
+        "role": "button",
+        "name": "See More Ways to Save",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 85,
+        "width": 250
+      },
+      {
+        "selector": "div.pb-spacing-4.bg-inkblue",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.my-3.contentCopy",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 350
+      },
+      {
+        "selector": "div.col-12.col-lg-8",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 450,
+        "width": 760
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Campus term starts",
+        "state": "",
+        "tag": "h3",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 845,
+        "width": 350
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "January 4, 2027",
+        "state": "",
+        "tag": "strong",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 959,
+        "width": 123
+      },
+      {
+        "selector": "div.col.text-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 845,
+        "width": 350
+      },
+      {
+        "selector": "div.pb-spacing-4.bg-gray",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#menu > ul > li:nth-of-type(1) > a",
+          "parent": "ul.navbar-nav > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "class": "nav-link d-none d-lg-block"
+          },
+          "hoverHandlers": [],
+          "text": "Academic Programs",
+          "children": [],
+          "box": [
+            85,
+            108,
+            278,
+            27
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.navbar-nav > li:nth-of-type(1)",
+          "parent": "ul.navbar-nav",
+          "tag": "li",
+          "attributes": {
+            "class": "nav-menuItem dropdown"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.nav-link.d-none",
+            "button.nav-link.text-black-72",
+            "ul.dropdown-menu"
+          ],
+          "box": [
+            85,
+            96,
+            278,
+            78
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.navbar-nav",
+          "parent": "#menu",
+          "tag": "ul",
+          "attributes": {
+            "class": "navbar-nav"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.nav-menuItem.dropdown",
+            "li.nav-menuItem.dropdown",
+            "li.nav-menuItem.dropdown",
+            "li.nav-menuItem.dropdown"
+          ],
+          "box": [
+            85,
+            96,
+            1110,
+            78
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu",
+          "parent": "nav.navbar.navbar-nav > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "collapse navbar-collapse",
+            "id": "menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#headerSearchContainer",
+            "ul.navbar-nav"
+          ],
+          "box": [
+            85,
+            96,
+            1110,
+            78
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav.navbar.navbar-nav > div:nth-of-type(1)",
+          "parent": "nav.navbar.navbar-nav",
+          "tag": "div",
+          "attributes": {
+            "class": "container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "button.d-lg-none.navbar-toggler",
+            "#menu"
+          ],
+          "box": [
+            70,
+            96,
+            1140,
+            78
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav.navbar.navbar-nav",
+          "tag": "nav",
+          "attributes": {
+            "class": "navbar navbar-nav navbar-expand-lg mega-menu",
+            "aria-label": "Primary Navigation"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.container"
+          ],
+          "box": [
+            0,
+            96,
+            1280,
+            78
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu > ul > li:nth-of-type(1) > ul",
+          "parent": "ul.navbar-nav > li:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "dropdown-menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li",
+            "li",
+            "li.row"
+          ],
+          "box": [
+            0,
+            175,
+            1280,
+            1066
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "1000",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu > ul > li:nth-of-type(1) > ul > li:nth-of-type(3) > ul:nth-of-type(2) > li:nth-of-type(2) > a",
+          "parent": "ul.navbar-nav > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > ul:nth-of-type(2) > li:nth-of-type(2)",
+          "tag": "a",
+          "attributes": {
+            "class": "dropdown-item"
+          },
+          "hoverHandlers": [],
+          "text": "Associate Degrees",
+          "children": [],
+          "box": [
+            112,
+            435,
+            1056,
+            55
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.navbar-nav > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > ul:nth-of-type(2) > li:nth-of-type(2)",
+          "parent": "ul.navbar-nav > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > ul:nth-of-type(2)",
+          "tag": "li",
+          "attributes": {
+            "class": ""
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.dropdown-item"
+          ],
+          "box": [
+            112,
+            435,
+            1056,
+            55
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.navbar-nav > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3) > ul:nth-of-type(2)",
+          "parent": "ul.navbar-nav > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3)",
+          "tag": "ul",
+          "attributes": {
+            "class": "col-xl col-lg-3"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.menu-header.text-black-90",
+            "li",
+            "li",
+            "li",
+            "li",
+            "li"
+          ],
+          "box": [
+            112,
+            373,
+            1056,
+            393
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.navbar-nav > li:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3)",
+          "parent": "#menu > ul > li:nth-of-type(1) > ul",
+          "tag": "li",
+          "attributes": {
+            "class": "row"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.col-xl.col-lg-3",
+            "ul.col-xl.col-lg-3",
+            "ul.col-xl.col-lg-6"
+          ],
+          "box": [
+            70,
+            201,
+            1140,
+            1014
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(32, 102, 162); text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": ".dropdown-item:focus, .dropdown-item:hover",
+          "declarations": "color: rgb(22, 24, 27); text-decoration: none; background-color: rgb(248, 249, 250);",
+          "conditions": []
+        },
+        {
+          "selector": ".nav-link:focus, .nav-link:hover",
+          "declarations": "text-decoration: none;",
+          "conditions": []
+        },
+        {
+          "selector": ".navbar-nav > li.nav-menuItem:hover a, .navbar-nav > li.nav-menuItem:hover button.nav-link",
+          "declarations": "color: rgb(0, 36, 78);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".navbar-nav > li.nav-menuItem:hover a::after, .navbar-nav > li.nav-menuItem:hover button.nav-link::after",
+          "declarations": "color: rgb(0, 36, 78);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".navbar-nav > li.nav-menuItem a.dropdown-item:active, .navbar-nav > li.nav-menuItem a.dropdown-item:focus, .navbar-nav > li.nav-menuItem a.dropdown-item:hover",
+          "declarations": "background-color: transparent;",
+          "conditions": []
+        },
+        {
+          "selector": ".navbar-nav > li.nav-menuItem a.dropdown-item:active, .navbar-nav > li.nav-menuItem a.dropdown-item:focus, .navbar-nav > li.nav-menuItem a.dropdown-item:hover",
+          "declarations": "background-color: rgba(0, 0, 0, 0.1);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".navbar-nav > li.nav-menuItem.keypress-show, .navbar-nav > li.nav-menuItem:hover",
+          "declarations": "background-color: rgba(0, 0, 0, 0.3);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".navbar-nav > li.nav-menuItem.keypress-show button, .navbar-nav > li.nav-menuItem.keypress-show > a, .navbar-nav > li.nav-menuItem:hover button, .navbar-nav > li.nav-menuItem:hover > a",
+          "declarations": "color: rgb(255, 255, 255);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".navbar-nav > li.nav-menuItem.keypress-show button::after, .navbar-nav > li.nav-menuItem.keypress-show > a::after, .navbar-nav > li.nav-menuItem:hover button::after, .navbar-nav > li.nav-menuItem:hover > a::after",
+          "declarations": "background-image: url(\"data:image/svg+xml,<svg xmlns=\\\"http://www.w3.org/2000/svg\\\" height=\\\"16\\\" width=\\\"16\\\" viewBox=\\\"0 0 16 16\\\"><path fill=\\\"none\\\" d=\\\"M5 2L11 8L5 14\\\" stroke=\\\"white\\\" stroke-width=\\\"2\\\" stroke-miterlimit=\\\"10\\\" stroke-opacity=\\\"1\\\"/></svg>\"); transform: rotate(-90deg);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".navbar-nav > li.nav-menuItem .navbar-nav > li.nav-menuItem .dropdown-menu.show, .navbar-nav > li.nav-menuItem:hover > .dropdown-menu",
+          "declarations": "display: block; background-color: rgb(245, 245, 245); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; border-radius: 0px; box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px; min-width: 100%; padding: 1.625rem 0px; margin-top: 0px;",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(32, 102, 162); text-decoration-line: underline; text-decoration-thickness: 2px;",
+          "conditions": []
+        }
+      ]
+    }
+  }
+}

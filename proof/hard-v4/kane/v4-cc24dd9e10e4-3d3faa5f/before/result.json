@@ -1,0 +1,513 @@
+{
+  "status": "blocked",
+  "runId": "f5e4ffa4-fb35-4f29-8143-10b7687cd219",
+  "reason": "Step 2 failed: activating TENTANG UMSURA led to a site-unreachable error, leaving Penghargaan dan Prestasi inaccessible.",
+  "summary": "The browser could not retrieve the site's own /about page at that moment. The record contains a network failure rather than a page response or proof that the menu or destination is broken.\nRetry the journey from a stable network connection. If the /about request continues to fail while the home page works, have the site or hosting team check connectivity and availability for that route.\nevidence: network_failure: GET https://www.um-surabaya.ac.id/about -> None FAILED (net::ERR_FAILED)",
+  "resultCode": 750,
+  "reasonCode": "assertion_error.step_not_achievable",
+  "credits": 31.096775,
+  "exitCode": 1,
+  "exitSignal": null,
+  "steps": [
+    "press_key: PRIMARY: press the Tab key",
+    "press_key: PRIMARY: press the Tab key",
+    "press_key: PRIMARY: press the Tab key",
+    "press_key: PRIMARY: press the Tab key",
+    "press_key: PRIMARY: press the Tab key",
+    "press_key: PRIMARY: press the Tab key",
+    "press_key: PRIMARY: press the Tab key",
+    "press_key: PRIMARY: press the Tab key",
+    "press_key: PRIMARY: Open “TENTANG UMSURA” from keyboard focus or with Arrow Down; role=link",
+    "press_key: PRIMARY: Open “TENTANG UMSURA” from keyboard focus or with Arrow Down; role=link",
+    "press_key: PRIMARY: Open “TENTANG UMSURA” from keyboard focus or with Arrow Down; role=link",
+    "wait: Waiting after the TENTANG UMSURA activation error"
+  ],
+  "objective": "Use only keyboard input. Use Tab or Shift+Tab to move focus and Enter or Space to activate the exact control. Move in whichever direction is shorter. Group repeated Tab presses if supported, checking focus frequently. Do not click, focus elements directly, use JavaScript, or navigate directly to the destination. Complete the registered journey in order and check each requested outcome. For keyboard operation, use the declared arrow keys and Escape as needed. Do not use a substitute destination or control. If a required control or outcome is inaccessible, report the exact step that failed. Stay on this public site. Do not sign in, register, pay, or interact with a CAPTCHA or access challenge. Leave fixture settings unchanged. Use visible controls only. Open “TENTANG UMSURA” from keyboard focus or with Arrow Down and follow “Penghargaan dan Prestasi”. Confirm the public destination /about/penghargaan.",
+  "kaneStatus": "fail",
+  "limits": {
+    "maxSteps": 24,
+    "timeout": 180,
+    "assertionMode": "dom"
+  },
+  "evidencePack": "proof/hard-v4/kane/v4-cc24dd9e10e4-3d3faa5f/before/c2c8188d-3436-4a76-a98a-c6d17bd4d582.evidence",
+  "evidenceValid": true,
+  "integrity": "Recorded browser access failed: Browser navigation error",
+  "outcomeChecks": [
+    false
+  ],
+  "runner": "kane",
+  "recordingTrail": [
+    {
+      "index": 0,
+      "events": [
+        {
+          "type": "document",
+          "documentId": "f49fe188-8cc2-4692-8894-ba22d1713833",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "document",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": false,
+          "stepTargets": [],
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": true,
+          "stepTargets": [
+            "#desktop-nav > ul > li:nth-of-type(1) > a"
+          ],
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "key",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": true,
+          "stepTargets": [
+            "#desktop-nav > ul > li:nth-of-type(1) > a"
+          ],
+          "key": "ArrowDown",
+          "top": true
+        },
+        {
+          "type": "activate",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": true,
+          "stepTargets": [
+            "#desktop-nav > ul > li:nth-of-type(1) > a"
+          ],
+          "key": " ",
+          "top": true
+        },
+        {
+          "type": "activate",
+          "documentId": "d61e64f8-9b98-43dd-ab39-45d54cc80f0c",
+          "url": "https://www.um-surabaya.ac.id/",
+          "targetMatches": true,
+          "stepTargets": [
+            "#desktop-nav > ul > li:nth-of-type(1) > a"
+          ],
+          "key": "Enter",
+          "top": true
+        }
+      ]
+    }
+  ],
+  "inspection": {
+    "readerVisible": false,
+    "width": 1280,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "null/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body.neterror",
+    "nodes": [
+      {
+        "selector": "body.neterror",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 1264
+      },
+      {
+        "selector": "html",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 1264
+      },
+      {
+        "selector": "#offline-resources",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "script",
+        "role": "text",
+        "name": "var loadTimeDataRaw = {\"details\":\"Details\",\"errorCode\":\"ERR_FAILED\",\"fontfamily\":\"system-ui, sans-serif\",\"fontfamilyMd\":\"system-ui, sans-serif\",\"fontsize\":\"75%\",\"heading\":{\"msg\":\"This site can’t be re",
+        "state": "",
+        "tag": "script",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#main-frame-error",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 340,
+        "width": 600
+      },
+      {
+        "selector": "#main-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 340,
+        "width": 600
+      },
+      {
+        "selector": "div.icon.icon-generic",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 340,
+        "width": 72
+      },
+      {
+        "selector": "#main-message",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 340,
+        "width": 600
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "This site can’t be reached",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 340,
+        "width": 600
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "The web page at might be temporarily down or it may have moved permanently to a new web address.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 340,
+        "width": 585
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "https://www.um-surabaya.ac.id/about",
+        "state": "",
+        "tag": "strong",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 458,
+        "width": 280
+      },
+      {
+        "selector": "div.error-code",
+        "role": "text",
+        "name": "ERR_FAILED",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 340,
+        "width": 600
+      },
+      {
+        "selector": "#buttons",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 340,
+        "width": 600
+      }
+    ]
+  },
+  "video": "proof/hard-v4/kane/v4-cc24dd9e10e4-3d3faa5f/before/recording.mp4"
+}

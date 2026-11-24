@@ -1,0 +1,9 @@
+{
+  "barrier": "The AIRLINES submenu uses a CSS :hover rule to switch from display: none to display: flex. Focusing AIRLINES and pressing Arrow Down leave the submenu hidden, so the Strategy link is unavailable to the keyboard.",
+  "rules": [
+    {
+      "selector": "#menu-item-271307",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

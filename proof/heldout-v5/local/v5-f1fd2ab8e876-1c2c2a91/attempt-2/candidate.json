@@ -1,0 +1,44 @@
+{
+  "id": "v5-f1fd2ab8e876-1c2c2a91",
+  "url": "https://www.fastweb.it/",
+  "persona": "keyboard-only",
+  "task": "Expand “Assistenza” with the keyboard and read “Assistenza Casa e Mobile Energia”.",
+  "controlTask": "Click “Assistenza” and read “Assistenza Casa e Mobile Energia”.",
+  "observedSelector": "#hdr-menu > div > div:nth-of-type(3) > div:nth-of-type(1) > button",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#hdr-assistenza",
+      "equals": "Assistenza Casa e Mobile Energia"
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#hdr-assistenza"
+  ],
+  "journey": [
+    {
+      "selector": "#hdr-menu > div > div:nth-of-type(3) > div:nth-of-type(1) > button",
+      "action": "activate"
+    },
+    {
+      "selector": "#hdr-assistenza",
+      "action": "observe"
+    }
+  ],
+  "site": "www.fastweb.it",
+  "match": "https://www.fastweb.it/",
+  "barrier": "The Assistenza button is reachable by Tab, but keyboard activation leaves its panel at display: none. Pointer hover over the enclosing section reveals the panel.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#hdr-menu button[aria-controls=\"hdr-assistenza\"]",
+      "target": "#hdr-assistenza",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

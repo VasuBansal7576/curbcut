@@ -1,0 +1,98 @@
+{
+  "id": "online-conversion-length",
+  "url": "https://www.onlineconversion.com/length_common.htm",
+  "site": "www.onlineconversion.com",
+  "match": "https://www.onlineconversion.com/length_common.htm",
+  "persona": "low-vision",
+  "task": "In Common Length and Distance Conversions, assert that the To unit list fits entirely within the 320-pixel viewport. Without horizontal scrolling, enter 1, choose feet in From and inch in To, and activate Convert. Verify the result reads 1 feet = 12 inch.",
+  "barrier": "At 320 pixels, the 503-pixel conversion table places the To listbox at x=329, entirely beyond the viewport.",
+  "rules": [
+    {
+      "selector": "div.content_left",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.container",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.main_content",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "form[name=\"MainForm\"] table",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "100%",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "td",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "min-width": "0",
+        "white-space": "normal"
+      }
+    },
+    {
+      "selector": "input",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane/online-conversion-length/2026-11-21T19-47-43.889Z/before/recording.mp4",
+    "after": "proof/kane/online-conversion-length/2026-11-21T19-47-43.889Z/attempt-1/after/recording.mp4",
+    "control": "proof/kane/online-conversion-length/2026-11-21T19-47-43.889Z/control/recording.mp4",
+    "verifiedAt": "2026-11-21T19:50:32.928Z",
+    "kaneRunIds": [
+      "41a9761d-5ff9-4739-ba6b-f3b817f0f49c",
+      "771d8a02-576c-4f1e-849b-bb710f3f76de",
+      "d5820bf6-598a-4e58-b1dc-59a4564c66de"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-21T19:50:32.928Z",
+      "event": "verified",
+      "before": "41a9761d-5ff9-4739-ba6b-f3b817f0f49c",
+      "control": "771d8a02-576c-4f1e-849b-bb710f3f76de",
+      "after": "d5820bf6-598a-4e58-b1dc-59a4564c66de"
+    },
+    {
+      "at": "2026-11-22T10:50:35.528Z",
+      "event": "rechecked",
+      "without": "fail",
+      "runId": "d710ee59-d836-448c-9cbe-3bded18c66d1",
+      "video": "proof/kane/online-conversion-length/2026-11-22T10-49-48.745Z/recheck-without/recording.mp4",
+      "with": "pass",
+      "after": "b6e8ab78-4354-4b5d-8112-907abc21aec5",
+      "afterVideo": "proof/kane/online-conversion-length/2026-11-22T10-49-48.745Z/recheck-with/recording.mp4"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"barrier":"Features receives keyboard focus, but Arrow Down leaves its dropdown at display:none and opacity:0, so the Assessment link is unavailable. Pointer hover opens the dropdown by changing its DOM state.","rules":[{"selector":"nav.nav-menu.w-nav-menu > div.dropdown.w-dropdown:has(> #w-dropdown-toggle-0)","action":"mirrorHoverEventToFocus","value":"mouseenter"}]}

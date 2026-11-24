@@ -1,0 +1,189 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-08ba1d025269fe12ed5c",
+    "url": "https://research-panel.jp/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “簡単なアンケートにお答えいただくだけで、ポイントが貯まります。貯めたポイントは、現金やギフト券、電子マネーに交換できます。” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “簡単なアンケートにお答えいただくだけで、ポイントが貯まります。貯めたポイントは、現金やギフト券、電子マネーに交換できます。” at normal width.",
+    "observedSelector": "div:nth-of-type(2) > div:nth-of-type(2) > section:nth-of-type(1) > div > div:nth-of-type(1) > p",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "div:nth-of-type(2) > div:nth-of-type(2) > section:nth-of-type(1) > div > div:nth-of-type(1) > p",
+        "equals": "簡単なアンケートにお答えいただくだけで、ポイントが貯まります。貯めたポイントは、現金やギフト券、電子マネーに交換できます。"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "div:nth-of-type(2) > div:nth-of-type(2) > section:nth-of-type(1) > div > div:nth-of-type(1) > p"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    }
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "The target does not fit the visible width.",
+    "geometry": {
+      "left": 84,
+      "right": 550.03125,
+      "width": 320,
+      "scrollX": 0,
+      "clientWidth": 480,
+      "scrollWidth": 480,
+      "inView": true,
+      "fits": false
+    }
+  },
+  "registeredControl": {
+    "geometry": {
+      "left": 244,
+      "right": 710.03125,
+      "width": 1280,
+      "scrollX": 0,
+      "clientWidth": 480,
+      "scrollWidth": 480,
+      "inView": true,
+      "fits": true
+    },
+    "url": "https://research-panel.jp/",
+    "checks": [
+      true,
+      true
+    ],
+    "status": "pass",
+    "reason": "Checked the declared outcome after the read action."
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "Checked the declared outcome after the read action.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/hard-v4/local/v4-08ba1d025269fe12ed5c/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "low-vision",
+      "status": "fail",
+      "reason": "The target does not fit the visible width.",
+      "file": "proof/hard-v4/local/v4-08ba1d025269fe12ed5c/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "low-vision",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/hard-v4/local/v4-08ba1d025269fe12ed5c/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/hard-v4/local/v4-08ba1d025269fe12ed5c/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v4-08ba1d025269fe12ed5c",
+    "url": "https://research-panel.jp/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “簡単なアンケートにお答えいただくだけで、ポイントが貯まります。貯めたポイントは、現金やギフト券、電子マネーに交換できます。” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “簡単なアンケートにお答えいただくだけで、ポイントが貯まります。貯めたポイントは、現金やギフト券、電子マネーに交換できます。” at normal width.",
+    "observedSelector": "div:nth-of-type(2) > div:nth-of-type(2) > section:nth-of-type(1) > div > div:nth-of-type(1) > p",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "div:nth-of-type(2) > div:nth-of-type(2) > section:nth-of-type(1) > div > div:nth-of-type(1) > p",
+        "equals": "簡単なアンケートにお答えいただくだけで、ポイントが貯まります。貯めたポイントは、現金やギフト券、電子マネーに交換できます。"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "div:nth-of-type(2) > div:nth-of-type(2) > section:nth-of-type(1) > div > div:nth-of-type(1) > p"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "research-panel.jp",
+    "match": "https://research-panel.jp/",
+    "barrier": "At 320 CSS pixels, the body's 960px minimum width and the side-by-side table layout place the 480px-wide paragraph from x=84 to x=564, clipping its right side.",
+    "rules": [
+      {
+        "selector": "body",
+        "action": "injectCSS",
+        "value": {
+          "min-width": "0"
+        }
+      },
+      {
+        "selector": "div.wrap",
+        "action": "injectCSS",
+        "value": {
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "div.no-login",
+        "action": "injectCSS",
+        "value": {
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "section.about-rp",
+        "action": "injectCSS",
+        "value": {
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "div.about-rp__inner.no-login__box",
+        "action": "injectCSS",
+        "value": {
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      },
+      {
+        "selector": "div.about-rp__text-wrapper",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "div:nth-of-type(2) > div:nth-of-type(2) > section:nth-of-type(1) > div > div:nth-of-type(1) > p",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "max-width": "100%",
+          "box-sizing": "border-box"
+        }
+      },
+      {
+        "selector": "img.about-rp__image",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "max-width": "100%",
+          "height": "auto"
+        }
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/hard-v4/local/v4-08ba1d025269fe12ed5c/attempt-1"
+}

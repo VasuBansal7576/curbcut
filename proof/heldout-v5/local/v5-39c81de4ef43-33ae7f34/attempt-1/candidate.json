@@ -1,0 +1,68 @@
+{
+  "id": "v5-39c81de4ef43-33ae7f34",
+  "url": "https://tikfinity.com/",
+  "persona": "keyboard-only",
+  "task": "Focus “Show Alert”, press Arrow Down to open it, move from “Show Alert” to “Read Text (TTS)” and select it with Enter.",
+  "controlTask": "Click “Show Alert” and select “Read Text (TTS)”. Confirm the selected value.",
+  "observedSelector": "#builder > div > div:nth-of-type(3) > div > button",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#builder > div > div:nth-of-type(3) > div > button",
+      "equals": "Read Text (TTS)"
+    }
+  ],
+  "barrierClass": 5,
+  "relatedSelectors": [
+    "#v-3-2-liste",
+    "[role=option]"
+  ],
+  "journey": [
+    {
+      "selector": "#builder > div > div:nth-of-type(3) > div > button",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#builder > div > div:nth-of-type(3) > div > button",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "click"
+      }
+    },
+    {
+      "selector": "#v-3-2-o0",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover",
+        "selector": "#v-3-2-o1"
+      }
+    },
+    {
+      "selector": "#v-3-2-o1",
+      "action": "key",
+      "key": "Enter",
+      "pointer": {
+        "action": "click"
+      }
+    }
+  ],
+  "site": "tikfinity.com",
+  "match": "https://tikfinity.com/",
+  "barrier": "The Show Alert combobox marks the first option with aria-activedescendant when open, but DOM focus does not reach that option after Arrow Down. The option has no tabindex.",
+  "rules": [
+    {
+      "action": "listboxBehavior",
+      "trigger": "#builder .pick.action > button[aria-controls='v-3-2-liste']",
+      "list": "#v-3-2-liste",
+      "options": "#v-3-2-liste > li[role='option']"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

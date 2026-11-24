@@ -1,0 +1,114 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-a4b9c9c41e01-05222b52",
+    "url": "https://sacred-texts.com/",
+    "persona": "keyboard-only",
+    "task": "Expand “Categories” with the keyboard and read “Legendary Creatures”.",
+    "controlTask": "Click “Categories” and read “Legendary Creatures”.",
+    "observedSelector": "#bits-s4",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#bits-s5 > ul > li:nth-of-type(39)",
+        "equals": "Legendary Creatures"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#bits-s5"
+    ],
+    "journey": [
+      {
+        "selector": "#bits-s4",
+        "action": "activate"
+      },
+      {
+        "selector": "#bits-s5 > ul > li:nth-of-type(39)",
+        "action": "observe"
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-a4b9c9c41e01-05222b52/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 2 was unavailable after the prior step.",
+      "file": "proof/heldout-v5/local/v5-a4b9c9c41e01-05222b52/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-a4b9c9c41e01-05222b52/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-a4b9c9c41e01-05222b52/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v5-a4b9c9c41e01-05222b52",
+    "url": "https://sacred-texts.com/",
+    "persona": "keyboard-only",
+    "task": "Expand “Categories” with the keyboard and read “Legendary Creatures”.",
+    "controlTask": "Click “Categories” and read “Legendary Creatures”.",
+    "observedSelector": "#bits-s4",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#bits-s5 > ul > li:nth-of-type(39)",
+        "equals": "Legendary Creatures"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#bits-s5"
+    ],
+    "journey": [
+      {
+        "selector": "#bits-s4",
+        "action": "activate"
+      },
+      {
+        "selector": "#bits-s5 > ul > li:nth-of-type(39)",
+        "action": "observe"
+      }
+    ],
+    "site": "sacred-texts.com",
+    "match": "https://sacred-texts.com/",
+    "barrier": "The Categories button receives keyboard focus, but keyboard activation leaves its panel hidden, so Legendary Creatures is unavailable.",
+    "rules": [
+      {
+        "action": "toggleOnActivate",
+        "trigger": "#bits-s4",
+        "target": "#bits-s5",
+        "mode": "attribute"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/heldout-v5/local/v5-a4b9c9c41e01-05222b52/attempt-1"
+}

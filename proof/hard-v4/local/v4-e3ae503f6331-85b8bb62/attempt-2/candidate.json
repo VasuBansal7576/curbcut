@@ -1,0 +1,56 @@
+{
+  "id": "v4-e3ae503f6331-85b8bb62",
+  "url": "https://oct8ne.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Product” from keyboard focus or with Arrow Down and follow “Livechat”. Confirm the public destination /livechat.",
+  "controlTask": "Hover “Product”, click “Livechat” and confirm /livechat.",
+  "observedSelector": "#menu-item-8151 > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/livechat"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menu-item-8151",
+    "#menu-item-8151 > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#menu-item-8151 > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-item-8151 > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-item-8153 > a",
+      "action": "activate"
+    }
+  ],
+  "site": "oct8ne.com",
+  "match": "https://oct8ne.com/",
+  "barrier": "With the cookie consent banner open, Tab traversal never reached the Product link. The Product submenu is hidden with display: none until opened, leaving Livechat unavailable to keyboard users.",
+  "rules": [
+    {
+      "selector": "#CybotCookiebotDialog",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "#menu-item-8151",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

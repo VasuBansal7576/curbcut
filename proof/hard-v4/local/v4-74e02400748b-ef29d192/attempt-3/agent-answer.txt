@@ -1,0 +1,9 @@
+{
+  "barrier": "At 320 CSS pixels, focusing “Giáo án - Đề thi” and pressing ArrowDown leaves its submenu at display: none, so the lớp 1 link has no rendered box and cannot be activated.",
+  "rules": [
+    {
+      "selector": "#scroll-menu > ul > li:nth-of-type(14)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

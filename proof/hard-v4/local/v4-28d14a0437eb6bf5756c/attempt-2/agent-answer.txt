@@ -1,0 +1,31 @@
+{
+  "barrier": "The copyright paragraph is 960 CSS pixels wide, and horizontal clipping on the page cuts it off at the 320 CSS pixel viewport.",
+  "rules": [
+    {
+      "selector": "div.footer",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.ft-logo",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div:nth-of-type(5) > div:nth-of-type(2) > div > div:nth-of-type(1) > p:nth-of-type(2)",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "overflow-wrap": "anywhere",
+        "box-sizing": "border-box"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "barrier": "The desktop navigation disclosure (#desktop-nav) has a tabIndex of -1, so Tab skips the control needed to expand the panel containing Endpoint Solution (SDK).",
+  "rules": [
+    {"selector": "#desktop-nav", "action": "makeFocusable"},
+    {"selector": "#desktop-nav", "action": "restoreFocusOutline"},
+    {"action": "toggleOnActivate", "trigger": "#desktop-nav", "target": "#desktop-nav-content", "mode": "display", "display": "block"}
+  ]
+}

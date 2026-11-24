@@ -1,0 +1,9 @@
+{
+  "barrier": "Keyboard focus and Arrow Down leave the Why Mailinator submenu at display: none, so the Applications/Solutions link is unreachable. Hovering the parent list item reveals the submenu.",
+  "rules": [
+    {
+      "selector": "#menu-item-8021",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

@@ -1,0 +1,683 @@
+{
+  "cohort": "DEV",
+  "previous": "proof/heldout-v2/summary.json",
+  "startedAt": "2026-11-22T15:37:19.244Z",
+  "startCredits": 3505.9383,
+  "budget": 800,
+  "reserve": 1000,
+  "floor": 2705.9383,
+  "attempts": 1,
+  "targets": [
+    "caltech-home-keyboard",
+    "vanderbilt-home-keyboard",
+    "multcolib-reader",
+    "newscientist-reader",
+    "pgcmls-reader",
+    "tcpl-reader",
+    "indypl-reader",
+    "ovh-reader",
+    "getty-about-reflow",
+    "daringfireball-reflow",
+    "mathworld-pi-reflow",
+    "sqlite-faq-reflow",
+    "gwern-about-reflow",
+    "slatestarcodex-moloch-reflow",
+    "perl-intro-reflow",
+    "fsblog-models-reflow",
+    "nginx-core-reflow",
+    "apache-core-reflow",
+    "iana-protocols-reflow",
+    "beepb00p-reflow",
+    "python-tutorial-reflow",
+    "yaml-org-reflow",
+    "toml-io-reflow",
+    "whatwg-dom-reflow",
+    "dwm-suckless-reflow",
+    "racket-guide-reflow"
+  ],
+  "finishedAt": "2026-11-22T15:57:33.665Z",
+  "endCredits": 2803.0331,
+  "spentCredits": 702.9051999999997,
+  "fixed": 6,
+  "total": 25,
+  "registered": 26,
+  "counts": {
+    "Kane error": 2,
+    "fixed": 6,
+    "local access blocked": 1,
+    "no barrier": 2,
+    "unpatchable": 1,
+    "control failed": 1,
+    "budget stop": 13
+  },
+  "byPersona": {
+    "keyboard-only": {
+      "fixed": 1,
+      "total": 2,
+      "registered": 2,
+      "counts": {
+        "Kane error": 1,
+        "fixed": 1
+      }
+    },
+    "screen-reader-view": {
+      "fixed": 4,
+      "total": 5,
+      "registered": 6,
+      "counts": {
+        "fixed": 4,
+        "local access blocked": 1,
+        "Kane error": 1
+      }
+    },
+    "low-vision": {
+      "fixed": 1,
+      "total": 18,
+      "registered": 18,
+      "counts": {
+        "no barrier": 2,
+        "unpatchable": 1,
+        "fixed": 1,
+        "control failed": 1,
+        "budget stop": 13
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "caltech-home-keyboard",
+      "url": "https://www.caltech.edu/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “READ FULL ARTICLE”. Verify the public destination at /about/news/caltech-names-the-bridget-and-william-coughran-department-of-computing-mathematical-sciences.",
+      "startedAt": "2026-11-22T15:37:19.245Z",
+      "outcome": "Kane error",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "8258c9e6-dde8-4479-8c6a-160b0305de79",
+          "credits": 66.94568249999999,
+          "kaneStatus": "inconclusive",
+          "basis": null,
+          "result": "proof/regression-v3/runs/caltech-home-keyboard/before/result.json"
+        }
+      ],
+      "reason": "Child agent failed: Child-agent instructions require reporting the barrier rather than performing the parent task.",
+      "finishedAt": "2026-11-22T15:40:52.291Z"
+    },
+    {
+      "id": "vanderbilt-home-keyboard",
+      "url": "https://www.vanderbilt.edu/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “Prospective Grad & Professional”. Verify its controlled content becomes visible.",
+      "startedAt": "2026-11-22T15:37:19.245Z",
+      "outcome": "fixed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "c1f7f5b8-fff1-43f8-aa93-2fb2547c920b",
+          "credits": 47.0439525,
+          "kaneStatus": "fail",
+          "basis": "target-skipped-by-tab",
+          "result": "proof/regression-v3/runs/vanderbilt-home-keyboard/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "e2be1197-8c23-4334-95eb-8f90cbc08465",
+          "credits": 17.92397,
+          "kaneStatus": "pass",
+          "basis": "trusted-control-activation",
+          "result": "proof/regression-v3/runs/vanderbilt-home-keyboard/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "84f76f82-3148-4edd-95de-066efd162867",
+          "credits": 48.18826000000001,
+          "kaneStatus": "pass",
+          "basis": "trusted-keyboard-interaction",
+          "result": "proof/regression-v3/runs/vanderbilt-home-keyboard/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T15:44:20.133Z"
+    },
+    {
+      "id": "multcolib-reader",
+      "url": "https://multcolib.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the textbox named “Search books, movies and more.”. Enter the text test and confirm the field contains it. Do not submit.",
+      "startedAt": "2026-11-22T15:40:53.693Z",
+      "outcome": "fixed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "5cae7bec-9222-48cd-bf8f-0517b0db932f",
+          "credits": 22.105455,
+          "kaneStatus": "fail",
+          "basis": "required-reader-control-unavailable",
+          "result": "proof/regression-v3/runs/multcolib-reader/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "1d05c6c2-ea34-4bf8-aaf4-f2be14af7639",
+          "credits": 15.920799999999996,
+          "kaneStatus": "pass",
+          "basis": "trusted-control-text",
+          "result": "proof/regression-v3/runs/multcolib-reader/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "8443267b-49fc-49ae-9f38-7337c2961c96",
+          "credits": 11.832395,
+          "kaneStatus": "pass",
+          "basis": "named-reader-interaction",
+          "result": "proof/regression-v3/runs/multcolib-reader/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T15:43:05.916Z"
+    },
+    {
+      "id": "newscientist-reader",
+      "url": "https://www.newscientist.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the textbox named “Enter search keywords”. Enter the text test and confirm the field contains it. Do not submit.",
+      "startedAt": "2026-11-22T15:43:07.318Z",
+      "outcome": "fixed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "608ac184-b3ef-4555-b035-9204e2cdee83",
+          "credits": 12.0296375,
+          "kaneStatus": "fail",
+          "basis": "required-reader-control-unavailable",
+          "result": "proof/regression-v3/runs/newscientist-reader/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "93f13a9c-7541-466b-858d-8bde0b0398ce",
+          "credits": 17.020847500000002,
+          "kaneStatus": "pass",
+          "basis": "trusted-control-text",
+          "result": "proof/regression-v3/runs/newscientist-reader/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "4ca22481-52b7-40ff-b7e7-8aebd826972e",
+          "credits": 12.272067499999999,
+          "kaneStatus": "pass",
+          "basis": "named-reader-interaction",
+          "result": "proof/regression-v3/runs/newscientist-reader/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T15:45:02.703Z"
+    },
+    {
+      "id": "pgcmls-reader",
+      "url": "https://www.pgcmls.info/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the textbox named “Search PGCMLS.info...”. Enter the text test and confirm the field contains it. Do not submit.",
+      "startedAt": "2026-11-22T15:44:21.533Z",
+      "outcome": "fixed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "ba594ab1-3ee6-4316-ab6c-7e04a13f0939",
+          "credits": 11.90221,
+          "kaneStatus": "fail",
+          "basis": "required-reader-control-unavailable",
+          "result": "proof/regression-v3/runs/pgcmls-reader/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "cbdff002-9630-4259-b37f-4de2cdc8c745",
+          "credits": 15.88255,
+          "kaneStatus": "pass",
+          "basis": "trusted-control-text",
+          "result": "proof/regression-v3/runs/pgcmls-reader/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "fc565f57-4560-4d05-971c-2df5c1e2b7a4",
+          "credits": 12.8507575,
+          "kaneStatus": "pass",
+          "basis": "named-reader-interaction",
+          "result": "proof/regression-v3/runs/pgcmls-reader/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T15:46:16.631Z"
+    },
+    {
+      "id": "tcpl-reader",
+      "url": "https://www.tcpl.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the textbox named “Search books, videos, etc.”. Enter the text test and confirm the field contains it. Do not submit.",
+      "startedAt": "2026-11-22T15:45:04.104Z",
+      "outcome": "local access blocked",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "blocked",
+          "runner": "playwright",
+          "sessionId": null,
+          "credits": null,
+          "kaneStatus": null,
+          "basis": null,
+          "result": "proof/regression-v3/runs/tcpl-reader/before/result.json"
+        }
+      ],
+      "reason": "HTTP 403",
+      "finishedAt": "2026-11-22T15:45:06.115Z"
+    },
+    {
+      "id": "indypl-reader",
+      "url": "https://www.indypl.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the textbox named “Search”. Enter the text test and confirm the field contains it. Do not submit.",
+      "startedAt": "2026-11-22T15:45:07.516Z",
+      "outcome": "fixed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "58e3b890-fbbe-4b0f-9cb3-7ee37e85ce67",
+          "credits": 12.468182500000001,
+          "kaneStatus": "fail",
+          "basis": "required-reader-control-unavailable",
+          "result": "proof/regression-v3/runs/indypl-reader/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "fdd87c53-023d-414c-a71e-ef1e50041489",
+          "credits": 17.073954999999998,
+          "kaneStatus": "pass",
+          "basis": "trusted-control-text",
+          "result": "proof/regression-v3/runs/indypl-reader/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "1042bd19-84dc-455e-afd9-aa5d7c0701a9",
+          "credits": 5.419639999999999,
+          "kaneStatus": "pass",
+          "basis": "named-reader-interaction",
+          "result": "proof/regression-v3/runs/indypl-reader/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T15:47:14.913Z"
+    },
+    {
+      "id": "ovh-reader",
+      "url": "https://www.ovhcloud.com/en-in/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the textbox named “Search for a domain name”. Enter the text test and confirm the field contains it. Do not submit.",
+      "startedAt": "2026-11-22T15:46:18.033Z",
+      "outcome": "Kane error",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "inconclusive",
+          "runner": "kane",
+          "sessionId": "bb802951-1a9d-43d0-9173-19302d90ed7b",
+          "credits": null,
+          "kaneStatus": "inconclusive",
+          "basis": null,
+          "result": "proof/regression-v3/runs/ovh-reader/before/result.json"
+        }
+      ],
+      "reason": "Kane exited on SIGKILL before producing validated evidence.",
+      "finishedAt": "2026-11-22T15:52:09.995Z"
+    },
+    {
+      "id": "getty-about-reflow",
+      "url": "https://www.getty.edu/about/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Getty Foundation Grants that advance the arts around the world”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:47:16.315Z",
+      "outcome": "no barrier",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "f36a3e85-f48f-449d-84c6-ee47637eae40",
+          "credits": 25.8301675,
+          "kaneStatus": "pass",
+          "basis": "recorded-passage-width",
+          "result": "proof/regression-v3/runs/getty-about-reflow/before/result.json"
+        }
+      ],
+      "reason": "recorded-passage-width",
+      "finishedAt": "2026-11-22T15:48:52.570Z"
+    },
+    {
+      "id": "daringfireball-reflow",
+      "url": "https://daringfireball.net/projects/markdown/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “The best way to get a feel for Markdown’s formatting syntax”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:48:53.972Z",
+      "outcome": "unpatchable",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "32016cd5-044d-4302-97ed-a3239bd550cb",
+          "credits": 22.7109,
+          "kaneStatus": "fail",
+          "basis": "recorded-passage-width",
+          "result": "proof/regression-v3/runs/daringfireball-reflow/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "474be674-460b-4b08-84ca-84620da755d5",
+          "credits": 18.479805,
+          "kaneStatus": "pass",
+          "basis": "recorded-passage-width",
+          "result": "proof/regression-v3/runs/daringfireball-reflow/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "0fae5c73-bcef-41d0-8356-476235323533",
+          "credits": 15.239822499999999,
+          "kaneStatus": "pass",
+          "basis": "recorded-passage-width",
+          "result": "proof/regression-v3/runs/daringfireball-reflow/attempt-1/after/result.json"
+        }
+      ],
+      "reason": "recorded-passage-width",
+      "finishedAt": "2026-11-22T15:52:04.948Z"
+    },
+    {
+      "id": "mathworld-pi-reflow",
+      "url": "https://mathworld.wolfram.com/Pi.html",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Chudnovsky and Chudnovsky (1984)”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:52:06.350Z",
+      "outcome": "no barrier",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "57ef9ca0-0df4-4744-830e-9bdf0eabacab",
+          "credits": 22.746677499999997,
+          "kaneStatus": "fail",
+          "basis": "recorded-passage-width",
+          "result": "proof/regression-v3/runs/mathworld-pi-reflow/before/result.json"
+        }
+      ],
+      "reason": "recorded-passage-width",
+      "finishedAt": "2026-11-22T15:53:32.586Z"
+    },
+    {
+      "id": "sqlite-faq-reflow",
+      "url": "https://www.sqlite.org/faq.html",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “INSERT INTO t1 VALUES((SELECT max(a) FROM t1)+1,123);”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:52:11.396Z",
+      "outcome": "fixed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "7a2b99a4-7fae-4c71-aa80-f1220c3c57a3",
+          "credits": 20.776824999999995,
+          "kaneStatus": "fail",
+          "basis": "recorded-passage-width",
+          "result": "proof/regression-v3/runs/sqlite-faq-reflow/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "949b8c69-61f6-495e-b7db-225baebf3e8b",
+          "credits": 19.931165,
+          "kaneStatus": "pass",
+          "basis": "recorded-passage-width",
+          "result": "proof/regression-v3/runs/sqlite-faq-reflow/control/result.json"
+        },
+        {
+          "stage": "attempt-1/after",
+          "status": "pass",
+          "runner": "kane",
+          "sessionId": "4d1064ec-0660-4cfe-99f1-f8ee7af76238",
+          "credits": 15.371862499999999,
+          "kaneStatus": "pass",
+          "basis": "recorded-passage-width",
+          "result": "proof/regression-v3/runs/sqlite-faq-reflow/attempt-1/after/result.json"
+        }
+      ],
+      "finishedAt": "2026-11-22T15:55:16.626Z"
+    },
+    {
+      "id": "gwern-about-reflow",
+      "url": "https://gwern.net/about",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “feedback <- read.csv(\"https://gwern.net/doc/traffic/2013-gwern-gwernnet-anonymousfeedback.csv\", colClasses=c(\"”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:53:33.988Z",
+      "outcome": "control failed",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "a23aff3b-e91d-48c3-8e43-b5ad1525103e",
+          "credits": 21.649680000000004,
+          "kaneStatus": "fail",
+          "basis": "recorded-passage-width",
+          "result": "proof/regression-v3/runs/gwern-about-reflow/before/result.json"
+        },
+        {
+          "stage": "control",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "f7dbcaa8-dc1b-405f-833e-478159afed86",
+          "credits": 29.4745675,
+          "kaneStatus": "fail",
+          "basis": "recorded-passage-width",
+          "result": "proof/regression-v3/runs/gwern-about-reflow/control/result.json"
+        }
+      ],
+      "reason": "recorded-passage-width",
+      "finishedAt": "2026-11-22T15:56:20.980Z"
+    },
+    {
+      "id": "slatestarcodex-moloch-reflow",
+      "url": "https://slatestarcodex.com/2014/07/30/meditations-on-moloch/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Scott Elliot says: July 30, 2014 at 1:16 am ~new~ This”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:55:18.028Z",
+      "outcome": "budget stop",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "493e17cf-bbb2-4dae-8bfa-09614b12a1e0",
+          "credits": 22.719179999999998,
+          "kaneStatus": "fail",
+          "basis": "recorded-passage-width",
+          "result": "proof/regression-v3/runs/slatestarcodex-moloch-reflow/before/result.json"
+        }
+      ],
+      "reason": "Credit guard reserved capacity for in-flight Kane runs.",
+      "finishedAt": "2026-11-22T15:57:22.086Z"
+    },
+    {
+      "id": "perl-intro-reflow",
+      "url": "https://perldoc.perl.org/perlintro",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “. a single character \\s a whitespace character (space, tab, newline,”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:56:22.382Z",
+      "outcome": "budget stop",
+      "phases": [
+        {
+          "stage": "before",
+          "status": "fail",
+          "runner": "kane",
+          "sessionId": "9fd2103e-7aac-4f4f-a3f6-b512e98618bd",
+          "credits": 21.049702500000002,
+          "kaneStatus": "fail",
+          "basis": "recorded-passage-width",
+          "result": "proof/regression-v3/runs/perl-intro-reflow/before/result.json"
+        }
+      ],
+      "reason": "Credit guard reserved capacity for in-flight Kane runs.",
+      "finishedAt": "2026-11-22T15:57:23.309Z"
+    },
+    {
+      "id": "fsblog-models-reflow",
+      "url": "https://fs.blog/mental-models/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Mastering the best of what other people have already figured out”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:57:23.488Z",
+      "outcome": "budget stop",
+      "phases": [],
+      "reason": "Credit guard reserved capacity for in-flight Kane runs.",
+      "finishedAt": "2026-11-22T15:57:23.515Z"
+    },
+    {
+      "id": "nginx-core-reflow",
+      "url": "https://nginx.org/en/docs/http/ngx_http_core_module.html",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “listen 127.0.0.1 default_server accept_filter=dataready backlog=1024;”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:57:24.711Z",
+      "outcome": "budget stop",
+      "phases": [],
+      "reason": "Credit guard reserved capacity for in-flight Kane runs.",
+      "finishedAt": "2026-11-22T15:57:25.017Z"
+    },
+    {
+      "id": "apache-core-reflow",
+      "url": "https://httpd.apache.org/docs/2.4/mod/core.html",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “#Example (default format for threaded MPMs) ErrorLogFormat \"[%{u}t] [%-m:%l] [pid %P:tid”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:57:24.917Z",
+      "outcome": "budget stop",
+      "phases": [],
+      "reason": "Credit guard reserved capacity for in-flight Kane runs.",
+      "finishedAt": "2026-11-22T15:57:24.940Z"
+    },
+    {
+      "id": "iana-protocols-reflow",
+      "url": "https://www.iana.org/protocols",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “ANCP Port Management Functions”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:57:26.342Z",
+      "outcome": "budget stop",
+      "phases": [],
+      "reason": "Credit guard reserved capacity for in-flight Kane runs.",
+      "finishedAt": "2026-11-22T15:57:26.369Z"
+    },
+    {
+      "id": "beepb00p-reflow",
+      "url": "https://beepb00p.xyz/annotating.html",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “org-emms: org-mode link handler to start playback at certain timestamp, could”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:57:26.419Z",
+      "outcome": "budget stop",
+      "phases": [],
+      "reason": "Credit guard reserved capacity for in-flight Kane runs.",
+      "finishedAt": "2026-11-22T15:57:26.637Z"
+    },
+    {
+      "id": "python-tutorial-reflow",
+      "url": "https://docs.python.org/3/tutorial/introduction.html",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “>>> s = 'First line.\\nSecond line.' # \\n means newline >>>”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:57:27.772Z",
+      "outcome": "budget stop",
+      "phases": [],
+      "reason": "Credit guard reserved capacity for in-flight Kane runs.",
+      "finishedAt": "2026-11-22T15:57:27.817Z"
+    },
+    {
+      "id": "yaml-org-reflow",
+      "url": "https://yaml.org/spec/1.2.2/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “{ \"A null\": null, \"Also a null\": null, \"Not a null\":”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:57:28.040Z",
+      "outcome": "budget stop",
+      "phases": [],
+      "reason": "Credit guard reserved capacity for in-flight Kane runs.",
+      "finishedAt": "2026-11-22T15:57:28.064Z"
+    },
+    {
+      "id": "toml-io-reflow",
+      "url": "https://toml.io/en/v1.0.0",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “# On a Unix system, the above multi-line string will most”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:57:29.218Z",
+      "outcome": "budget stop",
+      "phases": [],
+      "reason": "Credit guard reserved capacity for in-flight Kane runs.",
+      "finishedAt": "2026-11-22T15:57:29.223Z"
+    },
+    {
+      "id": "whatwg-dom-reflow",
+      "url": "https://dom.spec.whatwg.org/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “If interface is an ASCII case-insensitive match for any of the”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:57:29.467Z",
+      "outcome": "budget stop",
+      "phases": [],
+      "reason": "Credit guard reserved capacity for in-flight Kane runs.",
+      "finishedAt": "2026-11-22T15:57:29.731Z"
+    },
+    {
+      "id": "dwm-suckless-reflow",
+      "url": "https://dwm.suckless.org/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “https://cannibalcandy.wordpress.com/2012/04/26/installing-and-configuring-dwm-under-ubuntu/”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:57:30.625Z",
+      "outcome": "budget stop",
+      "phases": [],
+      "reason": "Credit guard reserved capacity for in-flight Kane runs.",
+      "finishedAt": "2026-11-22T15:57:31.180Z"
+    },
+    {
+      "id": "racket-guide-reflow",
+      "url": "https://docs.racket-lang.org/guide/intro.html",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “If you’ve used DrRacket before with something other than a program”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "startedAt": "2026-11-22T15:57:31.131Z",
+      "outcome": "budget stop",
+      "phases": [],
+      "reason": "Credit guard reserved capacity for in-flight Kane runs.",
+      "finishedAt": "2026-11-22T15:57:31.160Z"
+    }
+  ]
+}

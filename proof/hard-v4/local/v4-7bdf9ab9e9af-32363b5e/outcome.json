@@ -1,0 +1,181 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-7bdf9ab9e9af-32363b5e",
+    "url": "https://www.atlanticcouncil.org/",
+    "persona": "keyboard-only",
+    "task": "Open “INSIGHT” from keyboard focus or with Arrow Down and follow “Issue briefs and reports”. Confirm the public destination /in-depth-research-reports/.",
+    "controlTask": "Hover “INSIGHT”, click “Issue briefs and reports” and confirm /in-depth-research-reports/.",
+    "observedSelector": "#primary-nav > li:nth-of-type(1) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/in-depth-research-reports/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#primary-nav > li:nth-of-type(1)",
+      "#primary-nav > li:nth-of-type(1) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#primary-nav > li:nth-of-type(1) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#primary-nav > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#primary-nav > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "Journey step 3 was unavailable after the prior step.",
+    "steps": [
+      {
+        "selector": "#primary-nav > li:nth-of-type(1) > a",
+        "action": "focus",
+        "traversal": {
+          "reached": true,
+          "tabs": 2
+        }
+      },
+      {
+        "selector": "#primary-nav > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown"
+      },
+      {
+        "selector": "#primary-nav > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ],
+    "url": "https://www.atlanticcouncil.org/"
+  },
+  "registeredControl": {
+    "status": "pass",
+    "reason": "The complete journey reached the declared outcome.",
+    "steps": [
+      {
+        "selector": "#primary-nav > li:nth-of-type(1) > a",
+        "action": "focus"
+      },
+      {
+        "selector": "#primary-nav > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown"
+      },
+      {
+        "selector": "#primary-nav > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ],
+    "url": "https://www.atlanticcouncil.org/in-depth-research-reports/",
+    "checks": [
+      true
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-7bdf9ab9e9af-32363b5e/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 3 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-7bdf9ab9e9af-32363b5e/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-7bdf9ab9e9af-32363b5e/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-7bdf9ab9e9af-32363b5e/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v4-7bdf9ab9e9af-32363b5e",
+    "url": "https://www.atlanticcouncil.org/",
+    "persona": "keyboard-only",
+    "task": "Open “INSIGHT” from keyboard focus or with Arrow Down and follow “Issue briefs and reports”. Confirm the public destination /in-depth-research-reports/.",
+    "controlTask": "Hover “INSIGHT”, click “Issue briefs and reports” and confirm /in-depth-research-reports/.",
+    "observedSelector": "#primary-nav > li:nth-of-type(1) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/in-depth-research-reports/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#primary-nav > li:nth-of-type(1)",
+      "#primary-nav > li:nth-of-type(1) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#primary-nav > li:nth-of-type(1) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#primary-nav > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#primary-nav > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ],
+    "site": "www.atlanticcouncil.org",
+    "match": "https://www.atlanticcouncil.org/",
+    "barrier": "Pointer hover reveals the INSIGHT submenu, but focusing INSIGHT and pressing Arrow Down leaves the “Issue briefs and reports” link unavailable.",
+    "rules": [
+      {
+        "selector": "#primary-nav > li:nth-of-type(1)",
+        "action": "mirrorHoverToFocus"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/hard-v4/local/v4-7bdf9ab9e9af-32363b5e/attempt-1"
+}

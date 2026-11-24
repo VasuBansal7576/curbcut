@@ -1,0 +1,196 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-d24b0515c551f4dafef4",
+    "url": "https://org.ru/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “ICANN опубликовала обновленный список заявок на новые домены” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “ICANN опубликовала обновленный список заявок на новые домены” at normal width.",
+    "observedSelector": "#wrapper > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > div > div:nth-of-type(2) > p:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#wrapper > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > div > div:nth-of-type(2) > p:nth-of-type(1)",
+        "equals": "ICANN опубликовала обновленный список заявок на новые домены"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#wrapper > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > div > div:nth-of-type(2) > p:nth-of-type(1)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    }
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "The target does not fit the visible width.",
+    "geometry": {
+      "left": 216.609375,
+      "right": 655.546875,
+      "width": 320,
+      "scrollX": 0,
+      "clientWidth": 439,
+      "scrollWidth": 439,
+      "inView": true,
+      "fits": false
+    }
+  },
+  "registeredControl": {
+    "geometry": {
+      "left": 356.609375,
+      "right": 795.546875,
+      "width": 1280,
+      "scrollX": 0,
+      "clientWidth": 439,
+      "scrollWidth": 439,
+      "inView": true,
+      "fits": true
+    },
+    "url": "https://org.ru/",
+    "checks": [
+      true,
+      true
+    ],
+    "status": "pass",
+    "reason": "Checked the declared outcome after the read action."
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "Checked the declared outcome after the read action.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/hard-v4/local/v4-d24b0515c551f4dafef4/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "low-vision",
+      "status": "fail",
+      "reason": "The target does not fit the visible width.",
+      "file": "proof/hard-v4/local/v4-d24b0515c551f4dafef4/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "low-vision",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/hard-v4/local/v4-d24b0515c551f4dafef4/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the read action.",
+      "file": "proof/hard-v4/local/v4-d24b0515c551f4dafef4/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v4-d24b0515c551f4dafef4",
+    "url": "https://org.ru/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, read the passage beginning “ICANN опубликовала обновленный список заявок на новые домены” and confirm it fits without horizontal scrolling.",
+    "controlTask": "Read the passage beginning “ICANN опубликовала обновленный список заявок на новые домены” at normal width.",
+    "observedSelector": "#wrapper > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > div > div:nth-of-type(2) > p:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#wrapper > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > div > div:nth-of-type(2) > p:nth-of-type(1)",
+        "equals": "ICANN опубликовала обновленный список заявок на новые домены"
+      },
+      {
+        "kind": "fits-width",
+        "selector": "#wrapper > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > div > div:nth-of-type(2) > p:nth-of-type(1)"
+      }
+    ],
+    "probe": {
+      "action": "read"
+    },
+    "site": "org.ru",
+    "match": "https://org.ru/",
+    "barrier": "The wrapper has a 1000px minimum width, and the news text sits beside an inline date column. At 320 CSS pixels the paragraph starts at x=217 and extends to x=656, where horizontal clipping cuts it off.",
+    "rules": [
+      {
+        "selector": "#wrapper",
+        "action": "injectCSS",
+        "value": {
+          "min-width": "0",
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "div.main",
+        "action": "injectCSS",
+        "value": {
+          "width": "auto"
+        }
+      },
+      {
+        "selector": "div.inside",
+        "action": "injectCSS",
+        "value": {
+          "width": "auto"
+        }
+      },
+      {
+        "selector": "div.main-t.table",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "width": "auto"
+        }
+      },
+      {
+        "selector": "div.td",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "width": "auto"
+        }
+      },
+      {
+        "selector": "div.mainsearch.inline-block",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "width": "auto"
+        }
+      },
+      {
+        "selector": "div.news.ulnews",
+        "action": "injectCSS",
+        "value": {
+          "width": "auto"
+        }
+      },
+      {
+        "selector": "div.indexdate",
+        "action": "injectCSS",
+        "value": {
+          "display": "block"
+        }
+      },
+      {
+        "selector": "div.indextitle",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "width": "auto",
+          "overflow-wrap": "anywhere"
+        }
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/hard-v4/local/v4-d24b0515c551f4dafef4/attempt-1"
+}

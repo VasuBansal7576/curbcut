@@ -1,0 +1,12 @@
+{
+  "barrier": "Tab reaches the FAQ button, but it stays outside the visible viewport. Restoring its focus outline did not bring it into view.",
+  "rules": [
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#fluconazoleFaq",
+      "items": "#fluconazoleFaq > .accordion-item > h3 > button",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ]
+}

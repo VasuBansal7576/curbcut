@@ -1,0 +1,14 @@
+{
+  "barrier": "The Privacy dialog is visible, but keyboard focus stays on the page’s Back to Discover link instead of reaching the dialog for Escape.",
+  "rules": [
+    {
+      "selector": "#onetrust-banner-sdk",
+      "action": "removeFocusTrap"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#onetrust-banner-sdk > div[role=\"dialog\"]",
+      "close": "#onetrust-close-btn-container > button"
+    }
+  ]
+}

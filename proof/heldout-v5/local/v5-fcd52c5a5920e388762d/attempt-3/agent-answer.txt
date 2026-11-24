@@ -1,0 +1,10 @@
+{
+  "barrier": "The game search input has a native textbox role but no accessible name, so it cannot be found by the name “Search Game...” in Reading view.",
+  "rules": [
+    {
+      "selector": "#txt-search1",
+      "action": "addLabel",
+      "value": "Search Game..."
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-8db63969d2dd-03167342",
+    "url": "https://moz.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, activate the button named “Market visibility” and read the expanded answer.",
+    "controlTask": "Click “Market visibility” and read “Outrank rivals and grow your market presence with powerful share of voice metrics and robust competi”.",
+    "observedSelector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#expandable-list-answer-712-1 > div > p",
+        "equals": "Outrank rivals and grow your market presence with powerful share of voice metrics and robust competi"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#expandable-list-answer-712-1"
+    ],
+    "journey": [
+      {
+        "selector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+        "action": "activate",
+        "reader": {
+          "role": "button",
+          "name": "Market visibility"
+        }
+      },
+      {
+        "selector": "#expandable-list-answer-712-1 > div > p",
+        "action": "observe"
+      }
+    ]
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "The declared named control was absent from Reading view.",
+    "steps": [
+      {
+        "selector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+        "action": "activate"
+      }
+    ],
+    "url": "https://moz.com/"
+  },
+  "registeredControl": {
+    "status": "pass",
+    "reason": "The complete journey reached the declared outcome.",
+    "steps": [
+      {
+        "selector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+        "action": "activate"
+      },
+      {
+        "selector": "#expandable-list-answer-712-1 > div > p",
+        "action": "observe"
+      }
+    ],
+    "url": "https://moz.com/",
+    "checks": [
+      true
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-8db63969d2dd-03167342/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "screen-reader-view",
+      "status": "fail",
+      "reason": "The declared named control was absent from Reading view.",
+      "file": "proof/hard-v4/local/v4-8db63969d2dd-03167342/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "screen-reader-view",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-8db63969d2dd-03167342/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-8db63969d2dd-03167342/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v4-8db63969d2dd-03167342",
+    "url": "https://moz.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, activate the button named “Market visibility” and read the expanded answer.",
+    "controlTask": "Click “Market visibility” and read “Outrank rivals and grow your market presence with powerful share of voice metrics and robust competi”.",
+    "observedSelector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#expandable-list-answer-712-1 > div > p",
+        "equals": "Outrank rivals and grow your market presence with powerful share of voice metrics and robust competi"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#expandable-list-answer-712-1"
+    ],
+    "journey": [
+      {
+        "selector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+        "action": "activate",
+        "reader": {
+          "role": "button",
+          "name": "Market visibility"
+        }
+      },
+      {
+        "selector": "#expandable-list-answer-712-1 > div > p",
+        "action": "observe"
+      }
+    ],
+    "site": "moz.com",
+    "match": "https://moz.com/",
+    "barrier": "Reading view exposes the Market visibility disclosure as an unnamed, unfocusable list item, so readers cannot find and activate it as a button to reveal the answer.",
+    "rules": [
+      {
+        "selector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+        "action": "addLabel",
+        "value": "Market visibility"
+      },
+      {
+        "selector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+        "action": "restoreFocusOutline"
+      },
+      {
+        "selector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+        "action": "bindEnterToClick"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/hard-v4/local/v4-8db63969d2dd-03167342/attempt-1"
+}

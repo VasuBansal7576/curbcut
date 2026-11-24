@@ -1,0 +1,34 @@
+{
+  "id": "v4-536f5aabeed4ef336c4d",
+  "url": "https://vignanam.org/#&panel1-1",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search for Stotram...” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search for Stotram...” field and type test without submitting.",
+  "observedSelector": "#searchbar",
+  "requiredName": "Search for Stotram...",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#searchbar",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "vignanam.org",
+  "match": "https://vignanam.org/",
+  "barrier": "The #searchbar textbox has no accessible name in Reading view.",
+  "rules": [
+    {
+      "selector": "#searchbar",
+      "action": "addLabel",
+      "value": "Search for Stotram..."
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

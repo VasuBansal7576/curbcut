@@ -1,0 +1,26 @@
+{
+  "barrier": "At 320 CSS pixels, the Feature navigation row has 640 pixels of content in a 264-pixel horizontal scroller. The open submenu is 1248 pixels wide and places the View all features link at x=1057, beyond the viewport. Focusing Feature did not expose the submenu for the next keyboard step.",
+  "rules": [
+    {
+      "selector": "ul.lg\\:flex.lg\\:items-center",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > ul",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "100%",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ]
+}

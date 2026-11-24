@@ -1,0 +1,97 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#swiper1 > .swiper-wrapper > .swiper-slide",
+      "count": 4,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "swiper-slide",
+            "swiper-slide-duplicate",
+            "swiper-slide-prev",
+            "swiper-slide-duplicate-next"
+          ],
+          "label": ""
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "swiper-slide",
+            "swiper-slide-active"
+          ],
+          "label": ""
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "swiper-slide",
+            "swiper-slide-next",
+            "swiper-slide-duplicate-prev"
+          ],
+          "label": ""
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "swiper-slide",
+            "swiper-slide-duplicate",
+            "swiper-slide-duplicate-active"
+          ],
+          "label": ""
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "container",
+      "selector": "#swiper1",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "swiper1",
+          "classes": [
+            "swiper-container",
+            "swiper-container-initialized",
+            "swiper-container-horizontal"
+          ],
+          "label": ""
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "items",
+      "selector": "#swiper1 > .swiper-button-prev, #swiper1 > .swiper-button-next",
+      "scope": "#swiper1",
+      "count": 2,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "swiper-button-prev",
+            "swiper-button-white"
+          ],
+          "role": "button",
+          "label": "Previous slide"
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "swiper-button-next",
+            "swiper-button-white"
+          ],
+          "role": "button",
+          "label": "Next slide"
+        }
+      ]
+    }
+  ]
+}

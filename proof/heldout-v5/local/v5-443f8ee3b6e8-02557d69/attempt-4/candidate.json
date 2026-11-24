@@ -1,0 +1,64 @@
+{
+  "id": "v5-443f8ee3b6e8-02557d69",
+  "url": "https://ramfincorp.com/",
+  "persona": "keyboard-only",
+  "task": "Activate “Next slide” from the keyboard and confirm the next slide is shown.",
+  "controlTask": "Click “Next slide” and confirm the next slide is shown.",
+  "observedSelector": "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(3)",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2).slick-current"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div",
+    "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1)",
+    "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2)"
+  ],
+  "journey": [
+    {
+      "selector": "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(3)",
+      "action": "activate"
+    },
+    {
+      "selector": "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2).slick-current",
+      "action": "observe"
+    }
+  ],
+  "site": "ramfincorp.com",
+  "match": "https://ramfincorp.com/",
+  "barrier": "Tab reaches the absolutely positioned Next slide arrow, but it remains below the viewport during keyboard traversal. Slick also suppresses the arrow’s focus outline.",
+  "rules": [
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-next",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-next",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-next",
+      "action": "addLabel",
+      "value": "Next slide"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-next",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-next",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-next",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

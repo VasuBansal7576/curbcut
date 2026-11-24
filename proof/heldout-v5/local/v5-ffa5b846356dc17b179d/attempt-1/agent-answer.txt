@@ -1,0 +1,32 @@
+{
+  "barrier": "At 320 CSS pixels, the fixed-width header places the 715-pixel navigation row 203 pixels from the left edge. The row and its containers clip the links that extend beyond the viewport.",
+  "rules": [
+    {
+      "selector": "body, #header",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "#header > .header02, #nav, #nav > ul, #nav > ul > li.nav_bg02",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "max-width": "100%",
+        "height": "auto",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#nav > ul > li.nav_bg02, #nav > ul > li.nav_bg02 > a",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "barrier": "Tab traversal exhausted eight steps without reaching the visible Buy and Sell button. Its dropdown stays closed until the button is activated, leaving Buy a Home hidden.",
+  "rules": [
+    {
+      "selector": "#mega-buy-sell-d",
+      "action": "makeFocusable"
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#mega-buy-sell-d",
+      "target": "#mega-panel-buy-sell-d",
+      "mode": "class",
+      "className": "show"
+    }
+  ]
+}

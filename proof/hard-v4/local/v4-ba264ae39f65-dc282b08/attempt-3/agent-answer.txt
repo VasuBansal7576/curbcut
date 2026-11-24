@@ -1,0 +1,26 @@
+{
+  "barrier": "At 320 CSS pixels, the Feature submenu opens as a 1248-pixel-wide grid and places its first link 1057 pixels from the left edge, beyond the horizontally clipped viewport. The keyboard journey also failed to reach the submenu after focusing Feature.",
+  "rules": [
+    {
+      "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1)",
+      "action": "injectCSS",
+      "value": {
+        "flex-wrap": "wrap"
+      }
+    },
+    {
+      "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > ul",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "100%",
+        "box-sizing": "border-box",
+        "white-space": "normal"
+      }
+    }
+  ]
+}

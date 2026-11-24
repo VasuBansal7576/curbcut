@@ -1,0 +1,16 @@
+{
+  "barrier": "Keyboard traversal reported reaching Sinterklaas, but the tab was still below the viewport and the snapshot recorded focus on the body. The available rules cannot scroll the tab into view when it receives focus.",
+  "rules": [
+    {
+      "selector": "#tab1",
+      "action": "makeFocusable"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "ul[role=\"tablist\"]:has(> li > #tab1)",
+      "items": "ul[role=\"tablist\"]:has(> li > #tab1) > li > button[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "v4-3fad1dd531a0-2b866958",
+  "url": "https://skorozvon.ru/",
+  "persona": "keyboard-only",
+  "task": "Expand “Продукты” with the keyboard and read “Продукты AI-тренер продажДиалоговый AI тренажёр для отработки навыков продаж Исходящий обзвонАвтомат”.",
+  "controlTask": "Click “Продукты” and read “Продукты AI-тренер продажДиалоговый AI тренажёр для отработки навыков продаж Исходящий обзвонАвтомат”.",
+  "observedSelector": "#menu-item-20688 > a",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#mega-products > div > div > aside > ul > li:nth-of-type(1)",
+      "equals": "Продукты AI-тренер продажДиалоговый AI тренажёр для отработки навыков продаж Исходящий обзвонАвтомат"
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#mega-products"
+  ],
+  "journey": [
+    {
+      "selector": "#menu-item-20688 > a",
+      "action": "activate"
+    },
+    {
+      "selector": "#mega-products > div > div > aside > ul > li:nth-of-type(1)",
+      "action": "observe"
+    }
+  ],
+  "site": "skorozvon.ru",
+  "match": "https://skorozvon.ru/",
+  "barrier": "The «Продукты» link receives keyboard focus, but activating it leaves the products panel unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#menu-item-20688 > a",
+      "target": "#mega-products",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

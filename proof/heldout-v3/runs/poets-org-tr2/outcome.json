@@ -1,0 +1,44 @@
+{
+  "id": "poets-org-tr2",
+  "url": "https://poets.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, locate the searchbox named “search”. Enter the text test and confirm the field contains it. Do not submit.",
+  "startedAt": "2026-11-23T05:26:09.249Z",
+  "outcome": "fixed",
+  "phases": [
+    {
+      "stage": "before",
+      "status": "fail",
+      "runner": "kane",
+      "sessionId": "a6039b7a-2d1d-40c2-91b1-04593fcbd871",
+      "credits": 12.350255,
+      "kaneStatus": "fail",
+      "browserStatus": "fail",
+      "basis": "required-reader-control-unavailable",
+      "result": "proof/heldout-v3/runs/poets-org-tr2/before/result.json"
+    },
+    {
+      "stage": "control",
+      "status": "pass",
+      "runner": "kane",
+      "sessionId": "f773f524-c19a-4b56-bd9f-16289c00a68d",
+      "credits": 19.255587499999997,
+      "kaneStatus": "pass",
+      "browserStatus": "pass",
+      "basis": "trusted-control-text",
+      "result": "proof/heldout-v3/runs/poets-org-tr2/control/result.json"
+    },
+    {
+      "stage": "attempt-1/after",
+      "status": "pass",
+      "runner": "kane",
+      "sessionId": "68fac404-263b-461c-b97f-c4aae40f2fe5",
+      "credits": 13.0535375,
+      "kaneStatus": "pass",
+      "browserStatus": "pass",
+      "basis": "named-reader-interaction",
+      "result": "proof/heldout-v3/runs/poets-org-tr2/attempt-1/after/result.json"
+    }
+  ],
+  "finishedAt": "2026-11-23T05:28:23.773Z"
+}

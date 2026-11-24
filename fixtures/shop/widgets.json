@@ -1,0 +1,112 @@
+[
+  {
+    "specimen":"dropdown",
+    "id":"fixture-bootstrap-dropdown",
+    "barrierClass":2,
+    "persona":"keyboard-only",
+    "task":"Use the keyboard to open Guides and confirm the Porch Speaker item is visible.",
+    "controlTask":"Click Guides and confirm the Porch Speaker item is visible.",
+    "observedSelector":"#guide-toggle",
+    "relatedSelectors":["#guide-menu"],
+    "journey":[{"selector":"#guide-toggle","action":"activate"},{"selector":"#guide-menu a","action":"observe"}],
+    "outcomeChecks":[{"selector":"#guide-menu a","kind":"visible"}],
+    "rules":[{"action":"toggleOnActivate","trigger":"#guide-toggle","target":"#guide-menu","mode":"class","className":"show"}]
+  },
+  {
+    "specimen":"slick",
+    "id":"fixture-slick-carousel",
+    "barrierClass":3,
+    "persona":"keyboard-only",
+    "task":"Activate Next specification using the keyboard and read the battery specification.",
+    "controlTask":"Click Next specification and read the battery specification.",
+    "observedSelector":".slick-next",
+    "relatedSelectors":["#slick",".slick-arrow","#slick-battery"],
+    "journey":[{"selector":".slick-next","action":"activate"},{"selector":"#slick-battery.slick-current","action":"observe"}],
+    "outcomeChecks":[{"selector":"#slick-battery.slick-current","kind":"visible"}],
+    "rules":[
+      {"selector":".slick-arrow","action":"makeFocusable"},
+      {"selector":".slick-arrow","action":"setRole","value":"button"},
+      {"selector":".slick-arrow","action":"bindEnterToClick"}
+    ]
+  },
+  {
+    "specimen":"swiper",
+    "id":"fixture-swiper-carousel",
+    "barrierClass":3,
+    "persona":"keyboard-only",
+    "task":"Activate Next placement using the keyboard and read the covered porch instruction.",
+    "controlTask":"Click Next placement and read the covered porch instruction.",
+    "observedSelector":".swiper-button-next",
+    "relatedSelectors":["#swiper",".swiper-button-prev","#swiper-porch"],
+    "journey":[{"selector":".swiper-button-next","action":"activate"},{"selector":"#swiper-porch.swiper-slide-active","action":"observe"}],
+    "outcomeChecks":[{"selector":"#swiper-porch.swiper-slide-active","kind":"visible"}],
+    "rules":[
+      {"selector":".swiper-button-next,.swiper-button-prev","action":"makeFocusable"},
+      {"selector":".swiper-button-next,.swiper-button-prev","action":"setRole","value":"button"},
+      {"selector":".swiper-button-next,.swiper-button-prev","action":"bindEnterToClick"}
+    ]
+  },
+  {
+    "specimen":"select",
+    "id":"fixture-div-select",
+    "barrierClass":5,
+    "persona":"keyboard-only",
+    "task":"Focus the sort trigger. Open it with Arrow Down, move to Price low to high and select it with Enter.",
+    "controlTask":"Click the sort trigger and select Price low to high.",
+    "observedSelector":"#order-toggle",
+    "relatedSelectors":["#order-options",".select-option"],
+    "journey":[
+      {"selector":"#order-toggle","action":"focus","pointer":{"action":"hover"}},
+      {"selector":"#order-toggle","action":"key","key":"ArrowDown","pointer":{"action":"click"}},
+      {"selector":"#order-featured","action":"key","key":"ArrowDown","pointer":{"action":"hover","selector":"#order-price"}},
+      {"selector":"#order-price","action":"key","key":"Enter","pointer":{"action":"click"}}
+    ],
+    "outcomeChecks":[{"selector":"#order-toggle","kind":"text","equals":"Price low to high"},{"selector":"#order-options","kind":"hidden"}],
+    "rules":[{"action":"listboxBehavior","trigger":"#order-toggle","list":"#order-options","options":".select-option"}]
+  },
+  {
+    "specimen":"cookie",
+    "id":"fixture-cookie-modal",
+    "barrierClass":4,
+    "persona":"keyboard-only",
+    "task":"With focus in the cookie notice, press Escape and confirm the notice closed.",
+    "controlTask":"Confirm the cookie notice is visible, then click Close.",
+    "observedSelector":"#cookie-notice",
+    "relatedSelectors":["#cookie-dismiss"],
+    "journey":[
+      {"selector":"#cookie-notice","action":"observe","checks":[{"selector":"#cookie-notice","kind":"visible"}]},
+      {"selector":"#cookie-notice","action":"key","key":"Escape","pointer":{"action":"click","selector":"#cookie-dismiss"}}
+    ],
+    "outcomeChecks":[{"selector":"#cookie-notice","kind":"hidden"}],
+    "rules":[{"action":"dialogBehavior","dialog":"#cookie-notice","close":"#cookie-dismiss"}]
+  },
+  {
+    "specimen":"newsletter",
+    "id":"fixture-newsletter-modal",
+    "barrierClass":4,
+    "persona":"keyboard-only",
+    "task":"Open the newsletter information by keyboard, then press Escape and confirm it closed.",
+    "controlTask":"Click the newsletter information button, then click Close.",
+    "observedSelector":"#newsletter-open",
+    "relatedSelectors":["#newsletter-modal","#newsletter-dismiss"],
+    "journey":[
+      {"selector":"#newsletter-open","action":"activate","checks":[{"selector":"#newsletter-modal","kind":"visible"}]},
+      {"selector":"#newsletter-modal","action":"key","key":"Escape","pointer":{"action":"click","selector":"#newsletter-dismiss"}}
+    ],
+    "outcomeChecks":[{"selector":"#newsletter-modal","kind":"hidden"}],
+    "rules":[{"action":"dialogBehavior","dialog":"#newsletter-modal","opener":"#newsletter-open","close":"#newsletter-dismiss"}]
+  },
+  {
+    "specimen":"mega-menu",
+    "id":"fixture-mouseenter-mega-menu",
+    "barrierClass":1,
+    "persona":"keyboard-only",
+    "task":"Focus Products and follow the visible Porch Speaker link by keyboard.",
+    "controlTask":"Hover Products and click Porch Speaker.",
+    "observedSelector":"#mega-trigger",
+    "relatedSelectors":["#mega-owner","#mega-links"],
+    "journey":[{"selector":"#mega-trigger","action":"focus","pointer":{"action":"hover"}},{"selector":"#mega-porch","action":"activate"}],
+    "outcomeChecks":[{"kind":"url-path","equals":"/fixtures/shop/porch.html"}],
+    "rules":[{"selector":"#mega-owner","action":"mirrorHoverEventToFocus","value":"mouseenter"}]
+  }
+]

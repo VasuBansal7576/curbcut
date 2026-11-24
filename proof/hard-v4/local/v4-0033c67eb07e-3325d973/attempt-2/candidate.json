@@ -1,0 +1,54 @@
+{
+  "id": "v4-0033c67eb07e-3325d973",
+  "url": "https://www.psi.ch/en",
+  "persona": "keyboard-only",
+  "task": "Open “Centers & Labs” by keyboard. Confirm the dialog appeared, then press Escape and confirm it closed.",
+  "controlTask": "Click “Centers & Labs” and confirm that the dialog opens. Click “close” to close it.",
+  "observedSelector": "#block-design2-rebrandingtopcenters-menu",
+  "outcomeChecks": [
+    {
+      "kind": "hidden",
+      "selector": "#block-design2-rebrandingtopcenters-modal"
+    }
+  ],
+  "barrierClass": 4,
+  "relatedSelectors": [
+    "#block-design2-rebrandingtopcenters-modal",
+    "#block-design2-rebrandingtopcenters-modal > div > div > div:nth-of-type(1) > div > a:nth-of-type(2)"
+  ],
+  "journey": [
+    {
+      "selector": "#block-design2-rebrandingtopcenters-menu",
+      "action": "activate",
+      "checks": [
+        {
+          "kind": "visible",
+          "selector": "#block-design2-rebrandingtopcenters-modal"
+        }
+      ]
+    },
+    {
+      "selector": "#block-design2-rebrandingtopcenters-modal",
+      "action": "key",
+      "key": "Escape",
+      "pointer": {
+        "action": "click",
+        "selector": "#block-design2-rebrandingtopcenters-modal > div > div > div:nth-of-type(1) > div > a:nth-of-type(2)"
+      }
+    }
+  ],
+  "site": "www.psi.ch",
+  "match": "https://www.psi.ch/en",
+  "barrier": "Keyboard activation opens the Centers & Labs modal, but pressing Escape does not dismiss it.",
+  "rules": [
+    {
+      "action": "dialogBehavior",
+      "dialog": "#block-design2-rebrandingtopcenters-modal",
+      "opener": "#block-design2-rebrandingtopcenters-menu",
+      "close": "#block-design2-rebrandingtopcenters-modal > div > div > div:nth-of-type(1) > div > a:nth-of-type(2)"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

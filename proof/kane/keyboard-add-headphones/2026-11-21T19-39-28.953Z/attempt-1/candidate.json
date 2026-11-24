@@ -1,0 +1,31 @@
+{
+  "id": "keyboard-add-headphones",
+  "url": "http://127.0.0.1:4317/fixtures/shop/",
+  "site": "127.0.0.1",
+  "match": "http://127.0.0.1:4317/fixtures/shop/",
+  "persona": "keyboard-only",
+  "task": "Using only the keyboard, search for headphones and add Field Headphones to the cart. Confirm Cart (1).",
+  "barrier": "The visible Add to cart control for Field Headphones is a clickable div with tabIndex -1, so Tab skips it and keyboard users cannot activate it.",
+  "rules": [
+    {
+      "selector": "div.add-to-cart",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "div.add-to-cart",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "div.add-to-cart",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "div.add-to-cart",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

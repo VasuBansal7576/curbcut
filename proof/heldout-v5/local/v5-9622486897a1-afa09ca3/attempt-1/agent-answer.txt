@@ -1,0 +1,1 @@
+{"barrier":"Keyboard activation makes the Share dialog visible before focus moves into it, so the dialog does not receive Escape at the next step.","rules":[{"action":"dialogBehavior","dialog":"#shareModal","opener":"#contents .tools-top > a[data-toggle=\"modal\"][data-target=\"#shareModal\"]","close":"#shareModal .modal-footer > button[data-dismiss=\"modal\"]"}]}

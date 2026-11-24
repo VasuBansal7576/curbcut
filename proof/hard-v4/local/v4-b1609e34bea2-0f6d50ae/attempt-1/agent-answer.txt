@@ -1,0 +1,11 @@
+{
+  "barrier": "The Employers submenu stays at display: none after the trigger receives keyboard focus and Arrow Down, leaving Hospitals & Healthcare unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#page > div:nth-of-type(3) > header > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "target": "#page > div:nth-of-type(3) > header > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > div",
+      "mode": "display"
+    }
+  ]
+}

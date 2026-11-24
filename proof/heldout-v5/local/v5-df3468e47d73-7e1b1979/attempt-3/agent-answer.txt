@@ -1,0 +1,10 @@
+{
+  "barrier": "Hovering over Who We Are expands the submenu, but keyboard focus reaches the button without exposing About ASM. Focus is on the page body when the Arrow Down step checks for the button.",
+  "rules": [
+    {
+      "selector": "#header ul.header-nav-menu > li.header-nav-item > button[aria-controls=\"who_we_are\"]",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseover"
+    }
+  ]
+}

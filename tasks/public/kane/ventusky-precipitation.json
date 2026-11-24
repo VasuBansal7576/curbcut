@@ -1,0 +1,9 @@
+{
+  "id": "ventusky-precipitation",
+  "url": "https://www.ventusky.com/",
+  "persona": "keyboard-only",
+  "observedSelector": "#i > a:has(> span.rain)",
+  "successSelector": "#i > a.p:has(> span.rain)",
+  "task": "First assert the Precipitation anchor in the Forecast panel has either a link destination or an explicit tabindex of 0. Use Tab and Enter to switch from Temperature to Precipitation and verify the 3 hours accumulation option.",
+  "controlTask": "Click Precipitation in the Forecast panel. Verify that the page shows the Precipitation map and the 3 hours accumulation option."
+}

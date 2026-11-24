@@ -1,0 +1,38 @@
+{
+  "id": "v4-ccd5ecc06c3c85e70808",
+  "url": "https://polyfill-fastly.io/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “https://polyfill-fastly.io/v3/polyfill.min.js” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “https://polyfill-fastly.io/v3/polyfill.min.js” at normal width.",
+  "observedSelector": "main > form > label:nth-of-type(1) > output > pre",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "main > form > label:nth-of-type(1) > output > pre",
+      "equals": "https://polyfill-fastly.io/v3/polyfill.min.js"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "main > form > label:nth-of-type(1) > output > pre"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "polyfill-fastly.io",
+  "match": "https://polyfill-fastly.io/",
+  "barrier": "At 320 CSS pixels, the bundle URL uses white-space: pre, so it cannot wrap. The passage requires 395 pixels inside a 288-pixel container, forcing horizontal scrolling.",
+  "rules": [
+    {
+      "selector": "#polyfill-bundle-url",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "pre-wrap",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

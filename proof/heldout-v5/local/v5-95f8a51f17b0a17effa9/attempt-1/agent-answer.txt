@@ -1,0 +1,25 @@
+{
+  "barrier": "At 320 CSS pixels, the body keeps a 1280px minimum width and the carousel lays out the passage in a 1192px-wide list item that extends beyond the viewport.",
+  "rules": [
+    {
+      "selector": "body, div.navbar.navbar-inverse",
+      "action": "injectCSS",
+      "value": {"min-width": "0"}
+    },
+    {
+      "selector": "div.container.product, #myCarousel1, #myCarousel1 > .carousel-inner, #myCarousel1 > .carousel-inner > .item, #myCarousel1 > .carousel-inner > .item > ul, #myCarousel1 #cont, #myCarousel1 #cont > ul.list-inline",
+      "action": "injectCSS",
+      "value": {"max-width": "100%", "min-width": "0", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "#myCarousel1 > .carousel-inner > .item > ul, #myCarousel1 #cont, #myCarousel1 #cont > ul.list-inline",
+      "action": "injectCSS",
+      "value": {"width": "100%", "height": "auto"}
+    },
+    {
+      "selector": "#myCarousel1 #cont > ul.list-inline > li",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "auto", "max-width": "100%", "height": "auto", "box-sizing": "border-box", "white-space": "normal", "overflow-wrap": "anywhere"}
+    }
+  ]
+}

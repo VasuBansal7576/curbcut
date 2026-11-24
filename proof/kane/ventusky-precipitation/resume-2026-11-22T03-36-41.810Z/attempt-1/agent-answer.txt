@@ -1,0 +1,9 @@
+{
+  "barrier": "The Forecast panel’s Precipitation control is an anchor exposed as text with no href or explicit tabindex, so it lacks native Tab focus and Enter activation.",
+  "rules": [
+    {"selector":"#i > a:has(> span.rain)","action":"makeFocusable"},
+    {"selector":"#i > a:has(> span.rain)","action":"setRole","value":"button"},
+    {"selector":"#i > a:has(> span.rain)","action":"bindEnterToClick"},
+    {"selector":"#i > a:has(> span.rain)","action":"restoreFocusOutline"}
+  ]
+}

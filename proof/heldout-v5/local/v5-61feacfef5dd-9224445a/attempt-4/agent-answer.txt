@@ -1,0 +1,20 @@
+{
+  "barrier": "Keyboard opening sets the Soap opera submenu to display:block, but without the hover positioning it remains far above the viewport and Tab misses La forza di una donna.",
+  "rules": [
+    {
+      "action": "mirrorHoverToFocus",
+      "selector": "#menu-td-demo-header-menu-1 > li.menu-item-27719"
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#menu-td-demo-header-menu-1 > li.menu-item-27719 > a.sf-with-ul",
+      "target": "#menu-td-demo-header-menu-1 > li.menu-item-27719 > ul.sub-menu",
+      "mode": "display",
+      "display": "block"
+    },
+    {
+      "action": "restoreFocusOutline",
+      "selector": "#menu-td-demo-header-menu-1 > li.menu-item-27719 > a.sf-with-ul, #menu-td-demo-header-menu-1 > li.menu-item-27719 > ul.sub-menu > li > a"
+    }
+  ]
+}

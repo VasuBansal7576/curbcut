@@ -1,0 +1,9 @@
+{
+  "barrier": "The desktop CSS reveals the «میزبانی» submenu only when its parent list item is hovered. The trigger receives keyboard focus, but the submenu stays at display: none after focus and Arrow Down, leaving the Germany cPanel hosting link unavailable.",
+  "rules": [
+    {
+      "selector": "#nav > ul.ItemmenuNoruz03 > div.scrollnavmenu > li.haschild:nth-of-type(2)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

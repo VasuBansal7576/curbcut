@@ -1,0 +1,59 @@
+{
+  "id": "v4-133129e4da0d-df1d4593",
+  "url": "https://bsky.network/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, hover “English”, click “日本語” and confirm /ja/.",
+  "controlTask": "Hover “English”, click “日本語” and confirm /ja/.",
+  "observedSelector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/ja/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+    "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > ul > li:nth-of-type(2) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "bsky.network",
+  "match": "https://bsky.network/",
+  "barrier": "At 320 CSS pixels, the language dropdown container has display:none, so the English trigger cannot be hovered or focused to reveal the Japanese link.",
+  "rules": [
+    {
+      "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "#__docusaurus > nav > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

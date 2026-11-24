@@ -1,0 +1,9 @@
+{
+  "barrier": "The red swatch (.sp-replacer) has tabIndex -1 and is exposed as text, so Tab skips the color picker trigger.",
+  "rules": [
+    {"selector": ".sp-replacer", "action": "makeFocusable"},
+    {"selector": ".sp-replacer", "action": "setRole", "value": "button"},
+    {"selector": ".sp-replacer", "action": "bindEnterToClick"},
+    {"selector": ".sp-replacer", "action": "restoreFocusOutline"}
+  ]
+}

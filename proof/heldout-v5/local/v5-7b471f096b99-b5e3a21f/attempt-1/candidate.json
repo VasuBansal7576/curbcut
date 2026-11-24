@@ -1,0 +1,53 @@
+{
+  "id": "v5-7b471f096b99-b5e3a21f",
+  "url": "https://www.screenmeet.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Products” from keyboard focus or with Arrow Down and follow “ScreenMeet AI”. Confirm the public destination /products/ai/ai-worker.",
+  "controlTask": "Hover “Products”, click “ScreenMeet AI” and confirm /products/ai/ai-worker.",
+  "observedSelector": "#w-dropdown-toggle-0",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/products/ai/ai-worker"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "header > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div > div:nth-of-type(1)",
+    "#w-dropdown-list-0"
+  ],
+  "journey": [
+    {
+      "selector": "#w-dropdown-toggle-0",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-toggle-0",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-list-0 > div > div > div:nth-of-type(1) > a:nth-of-type(1)",
+      "action": "activate"
+    }
+  ],
+  "site": "www.screenmeet.com",
+  "match": "https://www.screenmeet.com/",
+  "barrier": "The Products dropdown opens on pointer hover but remains collapsed after keyboard focus and Arrow Down, leaving the ScreenMeet AI link unavailable.",
+  "rules": [
+    {
+      "selector": "div.menu-3 > div.dropdown.w-dropdown:has(> #w-dropdown-toggle-0)",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseenter"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,1 @@
+{"barrier":"Keyboard activation opens the Search dialog, but focus remains on the page body when the dialog becomes visible, so Escape does not reach the dialog.","rules":[{"action":"dialogBehavior","dialog":"#searchModal","opener":"#wrapper-navbar .header-menu-right-desktop > button.header-search-button[data-target='#searchModal']","close":"#searchModal #search-close"}]}

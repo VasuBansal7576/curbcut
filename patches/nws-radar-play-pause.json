@@ -1,0 +1,63 @@
+{
+  "id": "nws-radar-play-pause",
+  "url": "https://radar.weather.gov/",
+  "persona": "keyboard-only",
+  "task": "Press Tab twice before making any accessibility assertion. Continue using Tab or Shift+Tab through the controls to reach Play in the radar animation timeline. Press Enter and verify the animation begins and the control changes to Pause.",
+  "controlTask": "Click Play in the animation timeline of the public National Weather Service radar map. Verify that the radar animation starts and Play changes to Pause.",
+  "observedSelector": ".button.button-play",
+  "successSelector": ".button-pause",
+  "minimumTabPresses": 2,
+  "site": "radar.weather.gov",
+  "match": "https://radar.weather.gov/",
+  "barrier": "The radar timeline’s Play control is a clickable div with a tabIndex of -1, so Tab and Shift+Tab skip it.",
+  "rules": [
+    {
+      "selector": ".button.button-play",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": ".button.button-play",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": ".button.button-play",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": ".button.button-play",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane/nws-radar-play-pause/2026-11-22T10-39-10.170Z/before/recording.mp4",
+    "after": "proof/kane/nws-radar-play-pause/2026-11-22T11-04-37.984Z/attempt-1/after/recording.mp4",
+    "control": "proof/kane/nws-radar-play-pause/2026-11-22T10-39-10.170Z/control/recording.mp4",
+    "verifiedAt": "2026-11-22T11:05:45.098Z",
+    "kaneRunIds": [
+      "1eb14750-7d2e-42f0-82b6-022636b796f6",
+      "6f3bfd87-2046-4189-8612-c67ab2b5cdf3",
+      "4b4103c0-6910-4793-8935-e65ac74db402"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-22T11:05:45.098Z",
+      "event": "verified",
+      "before": "1eb14750-7d2e-42f0-82b6-022636b796f6",
+      "control": "6f3bfd87-2046-4189-8612-c67ab2b5cdf3",
+      "after": "4b4103c0-6910-4793-8935-e65ac74db402"
+    },
+    {
+      "at": "2026-11-22T11:07:42.293Z",
+      "event": "rechecked",
+      "without": "fail",
+      "runId": "1c2c3e7f-8163-43e9-b77b-852f06bd7192",
+      "video": "proof/kane/nws-radar-play-pause/2026-11-22T11-06-33.141Z/recheck-without/recording.mp4",
+      "with": "pass",
+      "after": "a057efd1-e234-4b03-a9c1-baddd930e760",
+      "afterVideo": "proof/kane/nws-radar-play-pause/2026-11-22T11-06-33.141Z/recheck-with/recording.mp4"
+    }
+  ]
+}

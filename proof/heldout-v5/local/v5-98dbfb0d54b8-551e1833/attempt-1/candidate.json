@@ -1,0 +1,52 @@
+{
+  "id": "v5-98dbfb0d54b8-551e1833",
+  "url": "https://www.online-convert.com/",
+  "persona": "keyboard-only",
+  "task": "Open “EN” from keyboard focus or with Arrow Down and follow “Deutsch”. Confirm the public destination /de.",
+  "controlTask": "Hover “EN”, click “Deutsch” and confirm /de.",
+  "observedSelector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/de"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div",
+    "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > div"
+  ],
+  "journey": [
+    {
+      "selector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#header > div > div > nav:nth-of-type(2) > div:nth-of-type(2) > div > div > div > div > div > div:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.online-convert.com",
+  "match": "https://www.online-convert.com/",
+  "barrier": "The language dropdown stays at display: none when EN receives keyboard focus or Arrow Down. The CSS hover rule on the parent dropdown reveals the panel for pointer users, leaving the Deutsch link unavailable in the keyboard journey.",
+  "rules": [
+    {
+      "selector": "#header div.dropdown.border-left:has(> a.main-language-selector + div.main-language-dropdown.dropdown-menu-hover)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

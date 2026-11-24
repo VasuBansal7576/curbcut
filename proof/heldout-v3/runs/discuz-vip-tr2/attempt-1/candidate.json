@@ -1,0 +1,43 @@
+{
+  "id": "discuz-vip-tr2",
+  "url": "https://www.discuz.vip/",
+  "persona": "keyboard-only",
+  "task": "Use Tab and Enter to reach and activate “更多解决方案请联系官方客服进行交流。”. Verify its content becomes visible.",
+  "controlTask": "Click “更多解决方案请联系官方客服进行交流。” and verify its content becomes visible.",
+  "observedSelector": "#gaoyanzhi_3__plans > div > div > p > a > span",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "section:nth-of-type(4) > div > div:nth-of-type(2) > div:nth-of-type(1)"
+    }
+  ],
+  "minimumTabPresses": 2,
+  "probe": {
+    "action": "click"
+  },
+  "site": "www.discuz.vip",
+  "match": "https://www.discuz.vip/",
+  "barrier": "The customer-service trigger is an anchor without href or an explicit tabindex. Tab and Shift+Tab skipped it, so Enter could not activate its click action.",
+  "rules": [
+    {
+      "selector": "a.zixun_modal_btn",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "a.zixun_modal_btn",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "a.zixun_modal_btn",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "a.zixun_modal_btn",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

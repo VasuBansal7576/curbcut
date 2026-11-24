@@ -1,0 +1,19 @@
+{
+  "barrier": "Pointer hover adds the mega-toggle-on class and reveals the Cybersecurity submenu. Keyboard focus and Arrow Down leave the submenu hidden, so Backup and Recovery cannot be activated.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#mega-menu-item-1213 > a",
+      "target": "#mega-menu-item-1213",
+      "mode": "class",
+      "className": "mega-toggle-on"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#mega-menu-item-1213",
+      "items": "#mega-menu-item-1213 > a",
+      "orientation": "vertical",
+      "activate": "click"
+    }
+  ]
+}

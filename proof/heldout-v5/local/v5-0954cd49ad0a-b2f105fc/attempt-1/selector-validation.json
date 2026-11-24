@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#global-menu > li.ufal.has_subtree",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "li",
+          "classes": [
+            "ufal",
+            "has_subtree",
+            "nav-item"
+          ],
+          "label": "UfalInstitucionalApresentaçãoQuem é QuemReitoriaPró-ReitoriasOs CampiUnidades AcadêmicasÓrgãos de Ap"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "#global-menu > li.ufal.has_subtree > ul.dropdown > li.institucional.has_subtree",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "li",
+          "classes": [
+            "institucional",
+            "has_subtree",
+            "nav-item"
+          ],
+          "label": "InstitucionalApresentaçãoQuem é QuemReitoriaPró-ReitoriasOs CampiUnidades AcadêmicasÓrgãos de ApoioC"
+        }
+      ]
+    }
+  ]
+}

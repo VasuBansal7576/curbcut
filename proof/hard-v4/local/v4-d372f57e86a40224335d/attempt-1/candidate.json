@@ -1,0 +1,34 @@
+{
+  "id": "v4-d372f57e86a40224335d",
+  "url": "https://www.osnews.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search the site” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search the site” field and type test without submitting.",
+  "observedSelector": "#s",
+  "requiredName": "Search the site",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#s",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.osnews.com",
+  "match": "https://www.osnews.com/",
+  "barrier": "The #s textbox has no accessible name, so it cannot be identified as “Search the site” in Reading view.",
+  "rules": [
+    {
+      "selector": "#s",
+      "action": "addLabel",
+      "value": "Search the site"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

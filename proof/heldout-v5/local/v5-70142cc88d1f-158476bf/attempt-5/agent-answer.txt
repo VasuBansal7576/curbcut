@@ -1,0 +1,19 @@
+{
+  "barrier": "The Resources button receives keyboard focus, but Arrow Down leaves its submenu at display:none, keeping the Stack Ads link out of the tab order.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#main-navigation button[aria-controls=\"submenu-resources\"]",
+      "target": "#submenu-resources",
+      "mode": "display",
+      "display": "block"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#main-navigation > ul > li.nav__item:has(> #submenu-resources)",
+      "items": "button[aria-controls=\"submenu-resources\"]",
+      "orientation": "vertical",
+      "activate": "click"
+    }
+  ]
+}

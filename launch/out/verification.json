@@ -1,0 +1,280 @@
+{
+  "master": {
+    "duration": 133.733333,
+    "frames": 4012,
+    "video": "H.264, 1920×1080, 30 fps",
+    "audio": "AAC stereo, 48 kHz",
+    "integrated_LUFS": -16.0,
+    "true_peak_dBTP": -1.6,
+    "full_mean_dBFS": -19.1,
+    "highpass_300Hz_mean_dBFS": -21.2,
+    "difference_dB": -2.1,
+    "aac_packet_sha256": "70baf2c0f699f2e12fed46aa3ccafbcbd9f8d399ea9ce8c1173eadd633f6e1fb",
+    "sha256": "4c6464b39e5efdb3e08b9eb50ae6fe20fe9d90d985cf67820c512283a4f8bbbb",
+    "motion": {
+      "comparison": "Frames n and n+15 at 30 fps, above the subtitle band. Motion requires a luma change of at least 5/255 in at least 0.1% of a 480×232 area-downsample.",
+      "pairs": 267,
+      "first_pair": [
+        0,
+        15
+      ],
+      "last_pair": [
+        3990,
+        4005
+      ],
+      "moving_pairs": 250,
+      "quiet_start_frames": [
+        510,
+        1005,
+        1020,
+        1035,
+        1065,
+        1095,
+        1125,
+        3240,
+        3360,
+        3465,
+        3480,
+        3510,
+        3525,
+        3570,
+        3585,
+        3600,
+        3780
+      ],
+      "pixel_static_start_frames": [],
+      "longest_quiet_interval_seconds": 1.5
+    },
+    "transcript": {
+      "script_words": 380,
+      "matched_words": 375,
+      "lines": 28,
+      "line_match": {
+        "shopping.1": 1.0,
+        "skip.1": 1.0,
+        "skip.2": 1.0,
+        "scale.1": 1.0,
+        "title.1": 1.0,
+        "title.2": 1.0,
+        "test.1": 1.0,
+        "control.1": 1.0,
+        "control.2": 1.0,
+        "rules.1": 1.0,
+        "prove.1": 1.0,
+        "share.1": 1.0,
+        "mass-off.1": 0.929,
+        "mass-off.2": 1.0,
+        "mass-off.3": 1.0,
+        "mass-on.1": 1.0,
+        "mass-proof.1": 1.0,
+        "csc.1": 0.929,
+        "reader.1": 1.0,
+        "zoom.1": 1.0,
+        "swatch.1": 0.909,
+        "results.1": 0.933,
+        "results.2": 1.0,
+        "worms.1": 1.0,
+        "worms.2": 1.0,
+        "verified.1": 0.929,
+        "retire.1": 1.0,
+        "close.1": 1.0
+      },
+      "differences": [
+        "delete | a → ",
+        "replace | blocked → block",
+        "replace | on → in",
+        "replace | locked → lock",
+        "replace | fixes → this"
+      ]
+    }
+  },
+  "teaser": {
+    "duration": 15.0,
+    "frames": 450,
+    "video": "H.264, 1920×1080, 30 fps",
+    "audio": "AAC stereo, 48 kHz",
+    "integrated_LUFS": -16.0,
+    "true_peak_dBTP": -2.2,
+    "full_mean_dBFS": -20.1,
+    "highpass_300Hz_mean_dBFS": -22.2,
+    "difference_dB": -2.1,
+    "aac_packet_sha256": "6f7d3afe9fcf82da67cb2104c5f46f9eb4e4d150d1178bf8b39213fc42af1e20",
+    "sha256": "702e048730828a940f7c0ad8b5b870d8494fb9d82a9f8e3901f7bc4f6231fffb",
+    "motion": {
+      "comparison": "Frames n and n+15 at 30 fps, above the subtitle band. Motion requires a luma change of at least 5/255 in at least 0.1% of a 480×232 area-downsample.",
+      "pairs": 29,
+      "first_pair": [
+        0,
+        15
+      ],
+      "last_pair": [
+        420,
+        435
+      ],
+      "moving_pairs": 29,
+      "quiet_start_frames": [],
+      "pixel_static_start_frames": [],
+      "longest_quiet_interval_seconds": 0
+    },
+    "transcript": {
+      "script_words": 34,
+      "matched_words": 34,
+      "lines": 3,
+      "line_match": {
+        "teaser-before.1": 1.0,
+        "teaser-after.1": 1.0,
+        "teaser-title.1": 1.0
+      },
+      "differences": []
+    }
+  },
+  "contact_frames": 67,
+  "stills_by_frame": {
+    "shopping": 58,
+    "skip": 208,
+    "scale": 352,
+    "title": 530,
+    "test": 825,
+    "control": 912,
+    "rules": 1098,
+    "prove": 1281,
+    "share": 1445,
+    "mass-off": 1730,
+    "mass-on": 1907,
+    "mass-proof": 2140,
+    "csc": 2307,
+    "reader": 2450,
+    "zoom": 2551,
+    "swatch": 2668,
+    "results": 3165,
+    "worms": 3424,
+    "verified": 3573,
+    "retire": 3801,
+    "close": 3883,
+    "teaser-before": 114,
+    "teaser-after": 205,
+    "teaser-title": 328
+  },
+  "decoded_still_vs_lossless_canvas": {
+    "shopping": {
+      "luma_psnr_db": 44.83,
+      "high_contrast_edge_ratio": 1.0
+    },
+    "skip": {
+      "luma_psnr_db": 43.3,
+      "high_contrast_edge_ratio": 0.999
+    },
+    "scale": {
+      "luma_psnr_db": 43.49,
+      "high_contrast_edge_ratio": 0.989
+    },
+    "title": {
+      "luma_psnr_db": 45.39,
+      "high_contrast_edge_ratio": 0.997
+    },
+    "test": {
+      "luma_psnr_db": 43.28,
+      "high_contrast_edge_ratio": 0.999
+    },
+    "control": {
+      "luma_psnr_db": 43.27,
+      "high_contrast_edge_ratio": 0.996
+    },
+    "rules": {
+      "luma_psnr_db": 44.7,
+      "high_contrast_edge_ratio": 0.999
+    },
+    "prove": {
+      "luma_psnr_db": 42.46,
+      "high_contrast_edge_ratio": 0.996
+    },
+    "share": {
+      "luma_psnr_db": 44.92,
+      "high_contrast_edge_ratio": 0.999
+    },
+    "mass-off": {
+      "luma_psnr_db": 45.93,
+      "high_contrast_edge_ratio": 1.001
+    },
+    "mass-on": {
+      "luma_psnr_db": 45.69,
+      "high_contrast_edge_ratio": 0.996
+    },
+    "mass-proof": {
+      "luma_psnr_db": 44.39,
+      "high_contrast_edge_ratio": 0.992
+    },
+    "csc": {
+      "luma_psnr_db": 45.25,
+      "high_contrast_edge_ratio": 0.997
+    },
+    "reader": {
+      "luma_psnr_db": 42.59,
+      "high_contrast_edge_ratio": 0.999
+    },
+    "zoom": {
+      "luma_psnr_db": 46.26,
+      "high_contrast_edge_ratio": 1.002
+    },
+    "swatch": {
+      "luma_psnr_db": 47.39,
+      "high_contrast_edge_ratio": 0.998
+    },
+    "results": {
+      "luma_psnr_db": 44.41,
+      "high_contrast_edge_ratio": 0.995
+    },
+    "worms": {
+      "luma_psnr_db": 44.96,
+      "high_contrast_edge_ratio": 1.001
+    },
+    "verified": {
+      "luma_psnr_db": 45.05,
+      "high_contrast_edge_ratio": 0.996
+    },
+    "retire": {
+      "luma_psnr_db": 43.35,
+      "high_contrast_edge_ratio": 0.996
+    },
+    "close": {
+      "luma_psnr_db": 45.33,
+      "high_contrast_edge_ratio": 0.998
+    },
+    "teaser-before": {
+      "luma_psnr_db": 45.95,
+      "high_contrast_edge_ratio": 0.999
+    },
+    "teaser-after": {
+      "luma_psnr_db": 45.39,
+      "high_contrast_edge_ratio": 0.999
+    },
+    "teaser-title": {
+      "luma_psnr_db": 45.35,
+      "high_contrast_edge_ratio": 0.998
+    }
+  },
+  "bed_energy_200Hz_to_4kHz_percent": 99.99,
+  "voice_over_ducked_bed_rms_dB": 13.3,
+  "speech_energy_200Hz_to_4kHz_percent": 78.93,
+  "minimum_visible_page_percent": {
+    "prove": 78.54,
+    "skip": 81.65,
+    "share": 74.39,
+    "csc": 74.62,
+    "mass-on": 76.39,
+    "worms": 84.82,
+    "reader": 80.81,
+    "test": 80.69,
+    "swatch": 75.94,
+    "mass-proof": 74.78,
+    "mass-off": 80.1,
+    "zoom": 82.66,
+    "shopping": 82.09,
+    "retire": 76.1,
+    "teaser-after": 76.37,
+    "control": 75.06,
+    "teaser-before": 82.33
+  },
+  "evidence_stills_matching_pack": 27,
+  "live_g2p": "fˈɪksᵻz ʃˈɪp ˈoʊnli ˈæftɚ kˈeɪn pɹˈuːvz ðˌɛm. fˈɔːɹɾi θɹˈiː ɑːɹ lˈaɪv ɪnðɪ ɛkstˈɛnʃən tədˈeɪ."
+}

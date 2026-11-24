@@ -1,0 +1,79 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "trigger",
+      "selector": "#w-dropdown-toggle-0",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "w-dropdown-toggle-0",
+          "classes": [
+            "dropdown-toggle",
+            "w-dropdown-toggle"
+          ],
+          "role": "button",
+          "label": "Products"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "target",
+      "selector": "#w-dropdown-list-0",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "nav",
+          "id": "w-dropdown-list-0",
+          "classes": [
+            "navigation-dropdown",
+            "w-dropdown-list"
+          ],
+          "label": "ProductsScreenMeet AIRemote SupportLive CXAI ExcellenceAI SummaryAI SecurityAI AccelerationSolutions"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "container",
+      "selector": "div.menu-3 > div.dropdown.w-dropdown:has(> #w-dropdown-toggle-0)",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "dropdown",
+            "w-dropdown"
+          ],
+          "label": "ProductsProductsScreenMeet AIRemote SupportLive CXAI ExcellenceAI SummaryAI SecurityAI AccelerationS"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "items",
+      "selector": "#w-dropdown-toggle-0",
+      "scope": "div.menu-3 > div.dropdown.w-dropdown:has(> #w-dropdown-toggle-0)",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "w-dropdown-toggle-0",
+          "classes": [
+            "dropdown-toggle",
+            "w-dropdown-toggle"
+          ],
+          "role": "button",
+          "label": "Products"
+        }
+      ]
+    }
+  ]
+}

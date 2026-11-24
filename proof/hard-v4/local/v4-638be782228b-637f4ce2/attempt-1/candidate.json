@@ -1,0 +1,55 @@
+{
+  "id": "v4-638be782228b-637f4ce2",
+  "url": "https://www.napster.com/",
+  "persona": "keyboard-only",
+  "task": "Open “For Developers” from keyboard focus or with Arrow Down and follow “Documentation”. Confirm the public destination /docs.",
+  "controlTask": "Hover “For Developers”, click “Documentation” and confirm /docs.",
+  "observedSelector": "#w-dropdown-toggle-2",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/docs"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "div:nth-of-type(2) > div > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > nav > div:nth-of-type(3)",
+    "#w-dropdown-list-2"
+  ],
+  "journey": [
+    {
+      "selector": "#w-dropdown-toggle-2",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-toggle-2",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-list-2 > a:nth-of-type(2)",
+      "action": "activate"
+    }
+  ],
+  "site": "www.napster.com",
+  "match": "https://www.napster.com/",
+  "barrier": "The For Developers button receives keyboard focus, but the dropdown remains at display:none after Arrow Down, so the Documentation link is unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#w-dropdown-toggle-2",
+      "target": "#w-dropdown-list-2",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

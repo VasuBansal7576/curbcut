@@ -1,0 +1,37 @@
+{
+  "id": "v5-753e8896b66346b8196c",
+  "url": "https://24timezones.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Our World Time Clock & Map has two views. It is an” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Our World Time Clock & Map has two views. It is an” at normal width.",
+  "observedSelector": "#page > div:nth-of-type(5) > div:nth-of-type(2) > p:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#page > div:nth-of-type(5) > div:nth-of-type(2) > p:nth-of-type(1)",
+      "equals": "Our World Time Clock & Map has two views. It is an"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#page > div:nth-of-type(5) > div:nth-of-type(2) > p:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "24timezones.com",
+  "match": "https://24timezones.com/",
+  "barrier": "The body has a 380px minimum width at a 320px viewport, pushing the passage’s right edge to 365px.",
+  "rules": [
+    {
+      "selector": "body",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

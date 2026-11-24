@@ -1,0 +1,1260 @@
+{
+  "runner": "playwright",
+  "status": "fail",
+  "reason": "Journey step 2 did not receive the expected keyboard focus.",
+  "steps": [
+    {
+      "selector": "#onetrust-banner-sdk > div",
+      "action": "observe",
+      "checks": [
+        true
+      ]
+    },
+    {
+      "selector": "#onetrust-banner-sdk > div",
+      "action": "key",
+      "key": "Escape"
+    }
+  ],
+  "url": "https://www.pdq.com/",
+  "snapshot": {
+    "url": "https://www.pdq.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "#onetrust-pc-btn-handler",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#onetrust-close-btn-container > button",
+          "parent": "#onetrust-close-btn-container",
+          "tag": "button",
+          "attributes": {
+            "class": "onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon",
+            "aria-label": "Close"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [],
+          "box": [
+            1245,
+            674,
+            19,
+            20
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#onetrust-close-btn-container",
+          "parent": "#onetrust-banner-sdk > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "id": "onetrust-close-btn-container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "button.onetrust-close-btn-handler.onetrust-close-btn-ui"
+          ],
+          "box": [
+            1235,
+            674,
+            29,
+            36
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          }
+        },
+        {
+          "selector": "#onetrust-banner-sdk > div:nth-of-type(1)",
+          "parent": "#onetrust-banner-sdk",
+          "tag": "div",
+          "attributes": {
+            "role": "dialog",
+            "aria-label": "Privacy",
+            "tabindex": "0",
+            "aria-modal": "true"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.ot-sdk-container",
+            "#onetrust-close-btn-container"
+          ],
+          "box": [
+            0,
+            658,
+            1280,
+            145
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#onetrust-banner-sdk",
+          "parent": "#onetrust-consent-sdk",
+          "tag": "div",
+          "attributes": {
+            "id": "onetrust-banner-sdk",
+            "class": "otFlat bottom ot-wo-title",
+            "tabindex": "0",
+            "role": "region",
+            "aria-label": "Cookie banner"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div"
+          ],
+          "box": [
+            0,
+            658,
+            1280,
+            145
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "fixed",
+            "overflow-x": "hidden",
+            "overflow-y": "auto",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "2147483645",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#onetrust-consent-sdk",
+          "parent": "body.tw-overflow-scroll",
+          "tag": "div",
+          "attributes": {
+            "id": "onetrust-consent-sdk"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.onetrust-pc-dark-filter.ot-hide",
+            "#onetrust-banner-sdk",
+            "#onetrust-pc-sdk",
+            "#ot-sdk-btn-floating"
+          ],
+          "box": [
+            0,
+            5260,
+            1280,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "body.tw-overflow-scroll",
+          "parent": "html",
+          "tag": "body",
+          "attributes": {
+            "class": "tw-overflow-scroll"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#__next",
+            "#__NEXT_DATA__",
+            "#adBlockerCheck",
+            "#onetrust-consent-sdk",
+            "script",
+            "#script-gtm"
+          ],
+          "box": [
+            0,
+            80,
+            1280,
+            5180
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "scroll",
+            "overflow-y": "scroll",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "html",
+          "tag": "html",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "head",
+            "body.tw-overflow-scroll"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            5260
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "#onetrust-banner-sdk .ot-sdk-button:hover, #onetrust-banner-sdk :not(.ot-leg-btn-container) > button:not(.ot-link-btn):hover, #onetrust-banner-sdk :not(.ot-leg-btn-container) > button:not(.ot-link-btn):focus, #onetrust-pc-sdk .ot-sdk-button:hover, #onetrust-pc-sdk :not(.ot-leg-btn-container) > button:not(.ot-link-btn):hover, #onetrust-pc-sdk :not(.ot-leg-btn-container) > button:not(.ot-link-btn):f",
+          "declarations": "color: rgb(51, 51, 51); border-color: rgb(136, 136, 136); opacity: 0.9;",
+          "conditions": []
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#onetrust-banner-sdk > div",
+        "role": "dialog",
+        "name": "Privacy",
+        "state": "",
+        "tag": "div",
+        "tabIndex": 0,
+        "tabIndexAttribute": "0",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#onetrust-close-btn-container > button",
+        "role": "button",
+        "name": "Close",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1245,
+        "width": 19
+      },
+      {
+        "selector": "#onetrust-close-btn-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1235,
+        "width": 29
+      },
+      {
+        "selector": "#onetrust-pc-btn-handler",
+        "role": "button",
+        "name": "Cookie settings, Opens the preference center dialog",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 657,
+        "width": 152
+      },
+      {
+        "selector": "#onetrust-button-group",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 493,
+        "width": 329
+      },
+      {
+        "selector": "#onetrust-accept-btn-handler",
+        "role": "button",
+        "name": "Accept all",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 493,
+        "width": 152
+      },
+      {
+        "selector": "#onetrust-button-group-parent",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 493,
+        "width": 366
+      },
+      {
+        "selector": "#__next",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.__variable_db373b.__variable_c219ed",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.tw-w-full.tw-max-w-full",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.tw-relative.darken-page-default",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "header.tw-z-20.tw-bg-white",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "a.tw-absolute.tw-block",
+        "role": "link",
+        "name": "Skip to content",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 640,
+        "width": 166
+      },
+      {
+        "selector": "div.tw-container.tw-mx-auto",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "nav.tw-h-20.tw-px-5",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.tw-h-full.tw-flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 918,
+        "width": 338
+      },
+      {
+        "selector": "div.tw-flex.tw-items-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 924,
+        "width": 288
+      },
+      {
+        "selector": "a.tw-inline-flex.tw-relative",
+        "role": "link",
+        "name": "PDQ Live icon nav Webinars",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 93,
+        "width": 120
+      },
+      {
+        "selector": "img.tw-max-h-full.tw-h-full",
+        "role": "img",
+        "name": "PDQ logo",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 24,
+        "width": 109
+      },
+      {
+        "selector": "li.tw-relative.tw-h-full",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 405,
+        "width": 57
+      },
+      {
+        "selector": "div.tw-h-\\[3px\\].tw-w-full",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 676,
+        "width": 47
+      },
+      {
+        "selector": "li.tw-mr-5.tw-relative",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 676,
+        "width": 47
+      },
+      {
+        "selector": "div.tw-h-full.md\\:tw-flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1191,
+        "width": 65
+      },
+      {
+        "selector": "div.tw-h-full.tw-relative",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1191,
+        "width": 65
+      },
+      {
+        "selector": "div.tw-relative.tw-w-max",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1215,
+        "width": 41
+      },
+      {
+        "selector": "div.tw-transition-opacity.tw-duration-300",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.tw-transition-opacity.tw-grid",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "grid",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.tw-grid.tw-grid-cols-12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "grid",
+        "left": 12,
+        "width": 824
+      },
+      {
+        "selector": "div.tw-row-start-1.tw-transition-opacity",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 83,
+        "width": 329
+      },
+      {
+        "selector": "div.tw-mb-\\[30px\\]",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 83,
+        "width": 329
+      },
+      {
+        "selector": "p.tw-text-grey-400.tw-uppercase",
+        "role": "text",
+        "name": "LEARN",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 83,
+        "width": 329
+      },
+      {
+        "selector": "p.tw-text-grey-400.tw-text-sm",
+        "role": "text",
+        "name": "Insights to get the most out of PDQ",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 83,
+        "width": 329
+      },
+      {
+        "selector": "li.tw-flex.tw-items-center",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 93,
+        "width": 319
+      },
+      {
+        "selector": "img.tw-mr-2",
+        "role": "img",
+        "name": "PDQ Live icon nav",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 93,
+        "width": 18
+      },
+      {
+        "selector": "div.undefined",
+        "role": "text",
+        "name": "ISL Online",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 496,
+        "width": 175
+      },
+      {
+        "selector": "div.rich-text.tw-text-grey-400",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 496,
+        "width": 175
+      },
+      {
+        "selector": "p.tw-text-sm.\\[\\&_a\\]\\:tw-no-underline",
+        "role": "text",
+        "name": "Advanced remote desktop",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 496,
+        "width": 175
+      },
+      {
+        "selector": "div.tw-h-full.tw-row-span-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "grid",
+        "left": 836,
+        "width": 412
+      },
+      {
+        "selector": "div.tw-absolute.tw-z-\\[-1\\]",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 837,
+        "width": 1051
+      },
+      {
+        "selector": "div.tw-absolute.navbar-featured-column",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 873,
+        "width": 390
+      },
+      {
+        "selector": "div.tw-flex.tw-flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 873,
+        "width": 390
+      },
+      {
+        "selector": "div.tw-text-\\[\\#333333\\].tw-w-\\[288px\\]",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 924,
+        "width": 288
+      },
+      {
+        "selector": "div.tw-overflow-hidden.\\[\\&_img\\]\\:tw-rounded",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 924,
+        "width": 288
+      },
+      {
+        "selector": "img.tw-w-full",
+        "role": "img",
+        "name": "How MSPs manage tenants in Connect white",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 924,
+        "width": 288
+      },
+      {
+        "selector": "p.tw-font-bold.tw-text-md",
+        "role": "text",
+        "name": "Are you an MSP?",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 924,
+        "width": 149
+      },
+      {
+        "selector": "p.tw-mb-4",
+        "role": "text",
+        "name": "Explore the tools and features built exclusively with MSPs in mind",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 924,
+        "width": 288
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#onetrust-close-btn-container > button",
+          "parent": "#onetrust-close-btn-container",
+          "tag": "button",
+          "attributes": {
+            "class": "onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon",
+            "aria-label": "Close"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [],
+          "box": [
+            1245,
+            671,
+            19,
+            20
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#onetrust-close-btn-container",
+          "parent": "#onetrust-banner-sdk > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "id": "onetrust-close-btn-container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "button.onetrust-close-btn-handler.onetrust-close-btn-ui"
+          ],
+          "box": [
+            1235,
+            671,
+            29,
+            36
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          }
+        },
+        {
+          "selector": "#onetrust-banner-sdk > div:nth-of-type(1)",
+          "parent": "#onetrust-banner-sdk",
+          "tag": "div",
+          "attributes": {
+            "role": "dialog",
+            "aria-label": "Privacy",
+            "tabindex": "0",
+            "aria-modal": "true"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.ot-sdk-container",
+            "#onetrust-close-btn-container"
+          ],
+          "box": [
+            0,
+            655,
+            1280,
+            145
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#onetrust-banner-sdk",
+          "parent": "#onetrust-consent-sdk",
+          "tag": "div",
+          "attributes": {
+            "id": "onetrust-banner-sdk",
+            "class": "otFlat bottom ot-wo-title",
+            "tabindex": "0",
+            "role": "region",
+            "aria-label": "Cookie banner"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div"
+          ],
+          "box": [
+            0,
+            655,
+            1280,
+            145
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "fixed",
+            "overflow-x": "hidden",
+            "overflow-y": "auto",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "2147483645",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#onetrust-consent-sdk",
+          "parent": "body.tw-overflow-scroll",
+          "tag": "div",
+          "attributes": {
+            "id": "onetrust-consent-sdk"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.onetrust-pc-dark-filter.ot-hide",
+            "#onetrust-banner-sdk",
+            "#onetrust-pc-sdk",
+            "#ot-sdk-btn-floating"
+          ],
+          "box": [
+            0,
+            5699,
+            1280,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "body.tw-overflow-scroll",
+          "parent": "html",
+          "tag": "body",
+          "attributes": {
+            "class": "tw-overflow-scroll"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#__next",
+            "#__NEXT_DATA__",
+            "#adBlockerCheck",
+            "#onetrust-consent-sdk",
+            "script",
+            "#script-gtm"
+          ],
+          "box": [
+            0,
+            80,
+            1280,
+            5619
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "scroll",
+            "overflow-y": "scroll",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "html",
+          "tag": "html",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "head",
+            "body.tw-overflow-scroll"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            5699
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "#onetrust-banner-sdk .ot-sdk-button:hover, #onetrust-banner-sdk :not(.ot-leg-btn-container) > button:not(.ot-link-btn):hover, #onetrust-banner-sdk :not(.ot-leg-btn-container) > button:not(.ot-link-btn):focus, #onetrust-pc-sdk .ot-sdk-button:hover, #onetrust-pc-sdk :not(.ot-leg-btn-container) > button:not(.ot-link-btn):hover, #onetrust-pc-sdk :not(.ot-leg-btn-container) > button:not(.ot-link-btn):f",
+          "declarations": "color: rgb(51, 51, 51); border-color: rgb(136, 136, 136); opacity: 0.9;",
+          "conditions": []
+        }
+      ]
+    }
+  }
+}

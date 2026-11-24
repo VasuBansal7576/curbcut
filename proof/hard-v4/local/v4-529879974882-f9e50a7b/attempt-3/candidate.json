@@ -1,0 +1,43 @@
+{
+  "id": "v4-529879974882-f9e50a7b",
+  "url": "https://www.eeoc.gov/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, click “Here’s how you know” and read “Official websites use .gov A .gov website belongs to an official government organization in the Unit”.",
+  "controlTask": "Click “Here’s how you know” and read “Official websites use .gov A .gov website belongs to an official government organization in the Unit”.",
+  "observedSelector": "div:nth-of-type(1) > section > div > header > div > button",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#gov-banner-default > div > div:nth-of-type(1) > div > p",
+      "equals": "Official websites use .gov A .gov website belongs to an official government organization in the Unit"
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#gov-banner-default"
+  ],
+  "journey": [
+    {
+      "selector": "div:nth-of-type(1) > section > div > header > div > button",
+      "action": "activate"
+    },
+    {
+      "selector": "#gov-banner-default > div > div:nth-of-type(1) > div > p",
+      "action": "observe"
+    }
+  ],
+  "site": "www.eeoc.gov",
+  "match": "https://www.eeoc.gov/",
+  "barrier": "At 320 CSS pixels, the banner’s previous display override exposes the explanation while the button still reports that the panel is collapsed.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "div:nth-of-type(1) > section > div > header > div > button",
+      "target": "#gov-banner-default",
+      "mode": "attribute"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,37 @@
+{
+  "barrier": "The navigation is measured at 1075 CSS pixels in the narrow layout, and the Product trigger fails the horizontal fit check at 320 CSS pixels. The Academy inspiration link is inside the Product dropdown, which is hidden while collapsed.",
+  "rules": [
+    {
+      "selector": "div.navbar_container",
+      "action": "injectCSS",
+      "value": {
+        "flex-wrap": "wrap"
+      }
+    },
+    {
+      "selector": "nav.navbar_menu.w-nav-menu",
+      "action": "injectCSS",
+      "value": {
+        "flex-direction": "column",
+        "width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.navbar_menu-left",
+      "action": "injectCSS",
+      "value": {
+        "flex-direction": "column",
+        "min-width": "0"
+      }
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#w-dropdown-toggle-0",
+      "target": "#w-dropdown-list-0",
+      "mode": "display",
+      "display": "block"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "barrier": "Hovering Resources reveals the dropdown, but focusing the trigger and pressing Arrow Down leaves the blog link unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#w-dropdown-toggle-2",
+      "target": "#w-dropdown-list-2",
+      "mode": "display",
+      "display": "block"
+    }
+  ]
+}

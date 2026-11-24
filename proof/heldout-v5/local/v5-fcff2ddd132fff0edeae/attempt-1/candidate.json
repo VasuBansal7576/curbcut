@@ -1,0 +1,34 @@
+{
+  "id": "v5-fcff2ddd132fff0edeae",
+  "url": "https://www.forumotion.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search forums” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search forums” field and type test without submitting.",
+  "observedSelector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+  "requiredName": "Search forums",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.forumotion.com",
+  "match": "https://www.forumotion.com/",
+  "barrier": "Reading view names the directory search textbox “Search for a forum in the directory,” so it cannot be found by the expected name “Search forums.”",
+  "rules": [
+    {
+      "selector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+      "action": "addLabel",
+      "value": "Search forums"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

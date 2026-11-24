@@ -1,0 +1,39 @@
+{
+  "id": "w3schools-select-swatch",
+  "url": "https://www.w3schools.com/colors/colors_picker.asp#main",
+  "persona": "keyboard-only",
+  "task": "First assert that the leftmost swatch in the top row of the color map, labeled #003366, has a link destination or an explicit tabindex of 0. Select that swatch with Tab and Enter, and verify the selected color reads #003366.",
+  "controlTask": "Click the leftmost dark blue hexagon in the top row of the color map. Verify the selected color reads #003366.",
+  "observedSelector": "#colormap area[alt=\"#003366\"]",
+  "successSelector": "#selectedcolor[style*=\"rgb(0, 51, 102)\"]",
+  "site": "www.w3schools.com",
+  "match": "https://www.w3schools.com/colors/colors_picker.asp",
+  "barrier": "The #003366 image-map area has no link destination or explicit tabindex and is exposed as unnamed text. The consent dialog holds focus, so keyboard activation could not be verified.",
+  "rules": [
+    {
+      "selector": "#colormap area[alt=\"#003366\"]",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#colormap area[alt=\"#003366\"]",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#colormap area[alt=\"#003366\"]",
+      "action": "addLabel",
+      "value": "#003366"
+    },
+    {
+      "selector": "#colormap area[alt=\"#003366\"]",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#colormap area[alt=\"#003366\"]",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

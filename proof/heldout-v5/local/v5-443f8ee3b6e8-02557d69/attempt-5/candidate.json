@@ -1,0 +1,64 @@
+{
+  "id": "v5-443f8ee3b6e8-02557d69",
+  "url": "https://ramfincorp.com/",
+  "persona": "keyboard-only",
+  "task": "Activate “Next slide” from the keyboard and confirm the next slide is shown.",
+  "controlTask": "Click “Next slide” and confirm the next slide is shown.",
+  "observedSelector": "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(3)",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2).slick-current"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div",
+    "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1)",
+    "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2)"
+  ],
+  "journey": [
+    {
+      "selector": "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(3)",
+      "action": "activate"
+    },
+    {
+      "selector": "main > section:nth-of-type(8) > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2).slick-current",
+      "action": "observe"
+    }
+  ],
+  "site": "ramfincorp.com",
+  "match": "https://ramfincorp.com/",
+  "barrier": "Tab reaches the testimonials carousel’s Next slide arrow, but the page does not bring it into the viewport. Pointer activation scrolls the same arrow into view.",
+  "rules": [
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 div.slick-slider.slick-initialized",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 div.slick-slider.slick-initialized > div.slick-arrow.slick-next",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 div.slick-slider.slick-initialized > div.slick-arrow.slick-next",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 div.slick-slider.slick-initialized > div.slick-arrow.slick-next",
+      "action": "addLabel",
+      "value": "Next slide"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 div.slick-slider.slick-initialized > div.slick-arrow.slick-next",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 div.slick-slider.slick-initialized > div.slick-arrow.slick-next",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

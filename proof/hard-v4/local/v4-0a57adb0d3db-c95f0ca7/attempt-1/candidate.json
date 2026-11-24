@@ -1,0 +1,52 @@
+{
+  "id": "v4-0a57adb0d3db-c95f0ca7",
+  "url": "https://www.first.org/",
+  "persona": "keyboard-only",
+  "task": "Open “About FIRST” from keyboard focus or with Arrow Down and follow “Mission Statement”. Confirm the public destination /about/mission.",
+  "controlTask": "Hover “About FIRST”, click “Mission Statement” and confirm /about/mission.",
+  "observedSelector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/about/mission"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1)",
+    "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.first.org",
+  "match": "https://www.first.org/",
+  "barrier": "Hovering over About FIRST reveals the submenu, but focusing the link and pressing Arrow Down leaves Mission Statement unavailable.",
+  "rules": [
+    {
+      "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

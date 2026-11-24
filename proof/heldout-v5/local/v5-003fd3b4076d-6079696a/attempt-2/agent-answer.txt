@@ -1,0 +1,1 @@
+{"barrier":"The startup page mask drops opacity below 0.1 while keyboard focus is on the Buy and Sell button, preventing the user from seeing the trigger before activation.","rules":[{"selector":"body#content","action":"extendTimeout","value":4000},{"action":"toggleOnActivate","trigger":"#mega-buy-sell-d","target":"#mega-panel-buy-sell-d","mode":"class","className":"show"}]}

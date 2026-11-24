@@ -1,0 +1,44 @@
+{
+  "id": "v4-8e846cd4fb4e-f025deca",
+  "url": "https://builtin.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, click “Expand Button” and read “Remote Tech Companies Companies Hiring Remotely Fully Remote Companies More ResourcesTech + Startup ”.",
+  "controlTask": "Click “Expand Button” and read “Remote Tech Companies Companies Hiring Remotely Fully Remote Companies More ResourcesTech + Startup ”.",
+  "observedSelector": "div:nth-of-type(2) > main > div > div:nth-of-type(2) > div:nth-of-type(4) > div > button",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#drop-data-explore",
+      "equals": "Remote Tech Companies Companies Hiring Remotely Fully Remote Companies More ResourcesTech + Startup "
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#drop-data-explore"
+  ],
+  "journey": [
+    {
+      "selector": "div:nth-of-type(2) > main > div > div:nth-of-type(2) > div:nth-of-type(4) > div > button",
+      "action": "activate"
+    },
+    {
+      "selector": "#drop-data-explore",
+      "action": "observe"
+    }
+  ],
+  "site": "builtin.com",
+  "match": "https://builtin.com/",
+  "barrier": "After Expand Button opens the panel at 320 CSS pixels, the horizontal row extends 16 CSS pixels beyond the panel’s available width.",
+  "rules": [
+    {
+      "selector": "div.row.px-sm",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

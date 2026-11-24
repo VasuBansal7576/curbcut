@@ -1,0 +1,71 @@
+{
+  "id": "v5-6646bc262e29-b16e9d6d",
+  "url": "https://www.webhostingpad.com/",
+  "persona": "keyboard-only",
+  "task": "Open “free domain” by keyboard. Confirm the dialog appeared, then press Escape and confirm it closed.",
+  "controlTask": "Click “free domain” and confirm that the dialog opens. Click “Close” to close it.",
+  "observedSelector": "#canopy-2020 > div > div > div:nth-of-type(1) > p > span:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "hidden",
+      "selector": "#exampleModalToggle1"
+    }
+  ],
+  "barrierClass": 4,
+  "relatedSelectors": [
+    "#exampleModalToggle1",
+    "#exampleModalToggle1 > div > div > div:nth-of-type(2) > button"
+  ],
+  "journey": [
+    {
+      "selector": "#canopy-2020 > div > div > div:nth-of-type(1) > p > span:nth-of-type(1)",
+      "action": "activate",
+      "checks": [
+        {
+          "kind": "visible",
+          "selector": "#exampleModalToggle1"
+        }
+      ]
+    },
+    {
+      "selector": "#exampleModalToggle1",
+      "action": "key",
+      "key": "Escape",
+      "pointer": {
+        "action": "click",
+        "selector": "#exampleModalToggle1 > div > div > div:nth-of-type(2) > button"
+      }
+    }
+  ],
+  "site": "www.webhostingpad.com",
+  "match": "https://www.webhostingpad.com/",
+  "barrier": "The “free domain” modal trigger is a clickable span with no tabindex, so Tab skips it.",
+  "rules": [
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#exampleModalToggle1",
+      "opener": "#canopy-2020 span[data-bs-toggle='modal'][data-bs-target='#exampleModalToggle1']",
+      "close": "#exampleModalToggle1 .modal-footer > button[data-bs-dismiss='modal']"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

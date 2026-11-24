@@ -1,0 +1,41 @@
+{
+  "id": "v4-785089b6fcc2-26f574b6",
+  "url": "https://www.earthcam.com/",
+  "persona": "keyboard-only",
+  "task": "Expand “Menu” with the keyboard and read “Construction Monitoring”.",
+  "controlTask": "Click “Menu” and read “Construction Monitoring”.",
+  "observedSelector": "#ec-header > div > button:nth-of-type(2)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#ec-header-nav > ul > li:nth-of-type(3)",
+      "equals": "Construction Monitoring"
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#ec-header-nav"
+  ],
+  "journey": [
+    {
+      "selector": "#ec-header > div > button:nth-of-type(2)",
+      "action": "activate"
+    },
+    {
+      "selector": "#ec-header-nav > ul > li:nth-of-type(3)",
+      "action": "observe"
+    }
+  ],
+  "site": "www.earthcam.com",
+  "match": "https://www.earthcam.com/",
+  "barrier": "The Menu button was missed in the five-Tab traversal, leaving the navigation that contains Construction Monitoring collapsed.",
+  "rules": [
+    {
+      "selector": "#ec-header > div > button:nth-of-type(2)",
+      "action": "makeFocusable"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

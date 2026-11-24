@@ -1,0 +1,10 @@
+{
+  "barrier": "The search input has no accessible name and is exposed as a combobox, so the Reading view probe cannot find it by the requested textbox role and name. The available rules can supply the name, but cannot assign the textbox role.",
+  "rules": [
+    {
+      "selector": "#gray_hero_bg > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > div > form > div > input",
+      "action": "addLabel",
+      "value": "Search for symptom, condition, or keyword"
+    }
+  ]
+}

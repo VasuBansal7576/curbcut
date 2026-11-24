@@ -1,0 +1,178 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-48688aa70a1b-e410b44c",
+    "url": "https://www.ronet.de/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels with vertical scrolling only, hover “Webhosting”, click “Providerwechsel” and confirm /providerwechsel/.",
+    "controlTask": "Hover “Webhosting”, click “Providerwechsel” and confirm /providerwechsel/.",
+    "observedSelector": "#menu-menu-1 > li:nth-of-type(2) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/providerwechsel/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#menu-menu-1 > li:nth-of-type(2)",
+      "#menu-menu-1 > li:nth-of-type(2) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#menu-menu-1 > li:nth-of-type(2) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menu-menu-1 > li:nth-of-type(2) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menu-menu-1 > li:nth-of-type(2) > ul > li:nth-of-type(2) > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-48688aa70a1b-e410b44c/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "low-vision",
+      "status": "fail",
+      "reason": "Journey step 1 was unavailable after the prior step.",
+      "file": "proof/heldout-v5/local/v5-48688aa70a1b-e410b44c/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "low-vision",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-48688aa70a1b-e410b44c/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-48688aa70a1b-e410b44c/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v5-48688aa70a1b-e410b44c",
+    "url": "https://www.ronet.de/",
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels with vertical scrolling only, hover “Webhosting”, click “Providerwechsel” and confirm /providerwechsel/.",
+    "controlTask": "Hover “Webhosting”, click “Providerwechsel” and confirm /providerwechsel/.",
+    "observedSelector": "#menu-menu-1 > li:nth-of-type(2) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/providerwechsel/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#menu-menu-1 > li:nth-of-type(2)",
+      "#menu-menu-1 > li:nth-of-type(2) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#menu-menu-1 > li:nth-of-type(2) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menu-menu-1 > li:nth-of-type(2) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menu-menu-1 > li:nth-of-type(2) > ul > li:nth-of-type(2) > a",
+        "action": "activate"
+      }
+    ],
+    "site": "www.ronet.de",
+    "match": "https://www.ronet.de/",
+    "barrier": "At 320 CSS pixels, the desktop menu container is set to display:none, so Webhosting has no rendered box and cannot receive hover or focus. Its Providerwechsel submenu also depends on hover for visibility.",
+    "rules": [
+      {
+        "selector": "div.et_pb_menu__menu:has(> nav.et-menu-nav > #menu-menu-1)",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "min-width": "0",
+          "max-width": "100%"
+        }
+      },
+      {
+        "selector": "#menu-menu-1",
+        "action": "injectCSS",
+        "value": {
+          "display": "block",
+          "width": "100%",
+          "min-width": "0"
+        }
+      },
+      {
+        "selector": "#menu-menu-1 > li.menu-item-1484 > ul.sub-menu",
+        "action": "injectCSS",
+        "value": {
+          "box-sizing": "border-box",
+          "width": "100%",
+          "max-width": "100%",
+          "overflow-wrap": "anywhere"
+        }
+      },
+      {
+        "selector": "#menu-menu-1 > li.menu-item-1484 > ul.sub-menu > li > a",
+        "action": "injectCSS",
+        "value": {
+          "box-sizing": "border-box",
+          "width": "auto",
+          "white-space": "normal"
+        }
+      },
+      {
+        "selector": "#menu-menu-1 > li.menu-item-1484",
+        "action": "mirrorHoverToFocus"
+      },
+      {
+        "action": "arrowKeyNavigation",
+        "container": "#menu-menu-1 > li.menu-item-1484",
+        "items": "#menu-menu-1 > li.menu-item-1484 > a, #menu-menu-1 > li.menu-item-1484 > ul.sub-menu > li > a",
+        "orientation": "vertical",
+        "activate": "focus"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/heldout-v5/local/v5-48688aa70a1b-e410b44c/attempt-1"
+}

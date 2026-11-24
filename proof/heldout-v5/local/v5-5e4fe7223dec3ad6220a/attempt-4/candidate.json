@@ -1,0 +1,65 @@
+{
+  "id": "v5-5e4fe7223dec3ad6220a",
+  "url": "https://divar.ir/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “دﯾﻮار، ﭘﺎﯾﮕﺎه ﺧﺮﯾﺪ و ﻓﺮوش ﺑﯽ‌واﺳﻄﻪ‌! اﮔﻪ دﻧﺒﺎل ﭼﯿﺰی ﻫﺴﺘﯽ، ﺷﻬﺮت رو” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “دﯾﻮار، ﭘﺎﯾﮕﺎه ﺧﺮﯾﺪ و ﻓﺮوش ﺑﯽ‌واﺳﻄﻪ‌! اﮔﻪ دﻧﺒﺎل ﭼﯿﺰی ﻫﺴﺘﯽ، ﺷﻬﺮت رو” at normal width.",
+  "observedSelector": "#app > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#app > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > p",
+      "equals": "دﯾﻮار، ﭘﺎﯾﮕﺎه ﺧﺮﯾﺪ و ﻓﺮوش ﺑﯽ‌واﺳﻄﻪ‌! اﮔﻪ دﻧﺒﺎل ﭼﯿﺰی ﻫﺴﺘﯽ، ﺷﻬﺮت رو"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#app > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "divar.ir",
+  "match": "https://divar.ir/",
+  "barrier": "The passage and its flex ancestors measure 566 CSS pixels in the desktop snapshot. The narrow run could not locate the passage, so its visibility and fit at 320 CSS pixels remain unverified.",
+  "rules": [
+    {
+      "selector": "#app > div[class*=\"home-\"]:has(> div[class*=\"home__content-\"])",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#app div[class*=\"home__content-\"], #app div[class*=\"home__cities-\"]",
+      "action": "injectCSS",
+      "value": {
+        "flex-direction": "column",
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#app div[class*=\"home__cities-\"] > p.kt-body--sm",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "min-width": "0",
+        "white-space": "pre-wrap",
+        "overflow-wrap": "anywhere"
+      }
+    },
+    {
+      "selector": "#app div[class*=\"links-row-\"]:has(> a.kt-caption), #app div[class*=\"popular-citites__cards-\"]:has(> a.kt-inline-link)",
+      "action": "injectCSS",
+      "value": {
+        "flex-wrap": "wrap"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

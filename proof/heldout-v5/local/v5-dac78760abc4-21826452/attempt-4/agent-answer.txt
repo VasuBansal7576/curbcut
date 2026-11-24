@@ -1,0 +1,18 @@
+{
+  "barrier": "The banner wrapper and its nested Privacy dialog are both tab stops. The keyboard run failed to focus the nested dialog before sending Escape.",
+  "rules": [
+    {
+      "selector": "#onetrust-banner-sdk",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "#onetrust-banner-sdk > div[aria-label=\"Privacy\"]",
+      "action": "makeFocusable"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#onetrust-banner-sdk",
+      "close": "#onetrust-banner-sdk > div[aria-label=\"Privacy\"] > #onetrust-close-btn-container > button"
+    }
+  ]
+}

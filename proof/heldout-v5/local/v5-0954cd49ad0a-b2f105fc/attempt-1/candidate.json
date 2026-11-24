@@ -1,0 +1,56 @@
+{
+  "id": "v5-0954cd49ad0a-b2f105fc",
+  "url": "https://ufal.br/",
+  "persona": "keyboard-only",
+  "task": "Open “Institucional” from keyboard focus or with Arrow Down and follow “Apresentação”. Confirm the public destination /ufal/institucional/apresentacao.",
+  "controlTask": "Hover “Institucional”, click “Apresentação” and confirm /ufal/institucional/apresentacao.",
+  "observedSelector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/ufal/institucional/apresentacao"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1)",
+    "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#global-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "ufal.br",
+  "match": "https://ufal.br/",
+  "barrier": "The UFAL and Institucional menus rely on CSS hover to reveal their dropdowns. Focusing Institucional or pressing Arrow Down leaves its submenu hidden and collapsed, so Apresentação cannot be reached.",
+  "rules": [
+    {
+      "selector": "#global-menu > li.ufal.has_subtree",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "selector": "#global-menu > li.ufal.has_subtree > ul.dropdown > li.institucional.has_subtree",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

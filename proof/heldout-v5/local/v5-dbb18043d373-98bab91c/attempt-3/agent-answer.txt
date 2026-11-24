@@ -1,0 +1,12 @@
+{
+  "barrier": "After keyboard traversal reaches Buy Instagram Followers, ArrowDown leaves focus on the document body instead of moving it to Buy Instagram Likes. The focus-only repairs reproduced the failure, while clicking Likes selected it and exposed its panel.",
+  "rules": [
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#services [role=\"tablist\"][aria-label=\"Services\"]",
+      "items": "#services [role=\"tablist\"][aria-label=\"Services\"] > button[role=\"tab\"]",
+      "orientation": "vertical",
+      "activate": "click"
+    }
+  ]
+}

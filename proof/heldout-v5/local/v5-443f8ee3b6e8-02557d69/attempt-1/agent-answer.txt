@@ -1,0 +1,27 @@
+{
+  "barrier": "The testimonials carousel’s next arrow is an unlabeled clickable div with no tabindex, so Tab skips it. The carousel’s focus CSS also removes the outline.",
+  "rules": [
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-arrow.slick-next",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-arrow.slick-next",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-arrow.slick-next",
+      "action": "addLabel",
+      "value": "Next slide"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-arrow.slick-next",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-arrow.slick-next",
+      "action": "restoreFocusOutline"
+    }
+  ]
+}

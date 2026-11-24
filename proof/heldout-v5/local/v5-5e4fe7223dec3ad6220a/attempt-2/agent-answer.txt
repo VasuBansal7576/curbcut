@@ -1,0 +1,25 @@
+{
+  "barrier": "The passage sits in nested flex containers that measure 566 CSS pixels at normal width. Width caps alone left the passage unavailable to the 320-pixel read probe.",
+  "rules": [
+    {
+      "selector": "#app > div.home-fc1a2",
+      "action": "injectCSS",
+      "value": {"width": "100%", "min-width": "0", "max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "div.home-fc1a2 > div.home__content-f1a76, div.home__content-f1a76 > div.home__cities-ad155",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "100%", "min-width": "0", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "div.home__cities-ad155 > p.home__description-f0214",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "100%", "min-width": "0", "box-sizing": "border-box", "white-space": "normal", "overflow-wrap": "anywhere"}
+    },
+    {
+      "selector": "div.home-fc1a2 > div.links-row-b93eb, div.home__cities-ad155 div.popular-citites__cards-e6278",
+      "action": "injectCSS",
+      "value": {"flex-wrap": "wrap", "min-width": "0", "max-width": "100%"}
+    }
+  ]
+}

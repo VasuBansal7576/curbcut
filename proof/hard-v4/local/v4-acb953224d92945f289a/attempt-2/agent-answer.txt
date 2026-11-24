@@ -1,0 +1,12 @@
+{
+  "barrier": "At 320 CSS pixels, the 241-pixel navigation column pushes the main content to the right. The passage spans x=257 to x=545, so horizontal clipping cuts off most of it.",
+  "rules": [
+    {
+      "selector": "div.sidebar",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ]
+}

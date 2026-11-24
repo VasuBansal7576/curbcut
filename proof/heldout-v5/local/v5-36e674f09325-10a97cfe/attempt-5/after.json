@@ -1,0 +1,960 @@
+{
+  "runner": "playwright",
+  "status": "fail",
+  "reason": "Journey step 1 was unavailable after the prior step.",
+  "steps": [
+    {
+      "selector": "#yearbook-dropdown > span",
+      "action": "activate"
+    }
+  ],
+  "url": "https://www.jostens.com/",
+  "snapshot": {
+    "url": "https://www.jostens.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body.default.unaffiliated",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#yearbook-dropdown > span",
+          "parent": "#yearbook-dropdown",
+          "tag": "span",
+          "attributes": {
+            "class": "nav-link dropdown-toggle primary-dropdown-toggle collapsed",
+            "data-toggle": "collapse",
+            "role": "button",
+            "aria-expanded": "false",
+            "aria-controls": "yearbook-level-2-nav-desktop yearbook-level-2-nav-mobile",
+            "tabindex": "0",
+            "aria-label": "Yearbook"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.focus-state-container"
+          ],
+          "box": [
+            48,
+            531,
+            1224,
+            18
+          ],
+          "style": {
+            "display": "inline",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#yearbook-dropdown",
+          "parent": "ul.navbar-nav",
+          "tag": "li",
+          "attributes": {
+            "id": "yearbook-dropdown",
+            "class": "nav-item dropdown"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "span.nav-link.dropdown-toggle",
+            "#yearbook-level-2-nav-mobile"
+          ],
+          "box": [
+            48,
+            531,
+            1224,
+            241
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.navbar-nav",
+          "parent": "#main-nav",
+          "tag": "ul",
+          "attributes": {
+            "class": "navbar-nav"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#my-school-dropdown",
+            "#find-school-dropdown",
+            "#yearbook-dropdown",
+            "#Graduation-menu-dropdown",
+            "#Class-Rings-Jewelry-dropdown",
+            "#Letterman-Jackets-dropdown"
+          ],
+          "box": [
+            8,
+            308,
+            1264,
+            2878
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#main-nav",
+          "parent": "#navigation",
+          "tag": "nav",
+          "attributes": {
+            "id": "main-nav",
+            "class": "navbar-collapse collapse",
+            "aria-label": "Main Navigation Items List"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.navbar-nav"
+          ],
+          "box": [
+            8,
+            308,
+            1264,
+            2878
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#navigation",
+          "parent": "#hd-jcom",
+          "tag": "div",
+          "attributes": {
+            "id": "navigation",
+            "class": "navbar navbar-expand-lg navbar-toggleable-md"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.header-logo.navbar-brand",
+            "#nav-icons",
+            "#main-nav",
+            "a.header-logo.navbar-brand"
+          ],
+          "box": [
+            8,
+            166,
+            1264,
+            3080
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#yearbook-level-2-nav-desktop",
+          "parent": "#dropdown-nav-container",
+          "tag": "div",
+          "attributes": {
+            "id": "yearbook-level-2-nav-desktop",
+            "class": "yearbook-level-2-nav collapse nav-box submenu",
+            "aria-expanded": "false"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.link-section.link-section--2-cols",
+            "#yearbook-promo"
+          ],
+          "box": [
+            8,
+            3420,
+            1264,
+            453
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#dropdown-nav-container",
+          "parent": "#hd-jcom",
+          "tag": "div",
+          "attributes": {
+            "id": "dropdown-nav-container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#user-dropdown",
+            "#my-school-level-2-nav-desktop",
+            "#yearbook-level-2-nav-desktop",
+            "#Graduation-menu-level-2-nav-desktop",
+            "#Class-Rings-Jewelry-level-2-nav-desktop",
+            "#Letterman-Jackets-level-2-nav-desktop"
+          ],
+          "box": [
+            8,
+            3262,
+            1264,
+            2423
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#hd-jcom",
+          "parent": "body.default.unaffiliated",
+          "tag": "header",
+          "attributes": {
+            "id": "hd-jcom",
+            "class": "fixed-top unaffiliated"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#utility-bar",
+            "#navigation",
+            "#dropdown-nav-container"
+          ],
+          "box": [
+            8,
+            42,
+            1264,
+            5643
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "body.default.unaffiliated",
+          "parent": "html.sizes.supports",
+          "tag": "body",
+          "attributes": {
+            "class": "default unaffiliated"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#skip-link",
+            "#skip-link",
+            "#hd-jcom",
+            "#content",
+            "footer",
+            "#affiliationModal"
+          ],
+          "box": [
+            8,
+            8,
+            1264,
+            13563
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "0",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "html.sizes.supports",
+          "tag": "html",
+          "attributes": {
+            "class": " sizes supports localstorage sessionstorage svgfilters cookies urlsearchparams history no-ie8compat svg csspointerevents cssremunit rgba no-time inlinesvg canvas textareamaxlength "
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "head",
+            "#_vis_opt_path_hides",
+            "body.default.unaffiliated"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            13579
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "0",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#yearbook-level-2-nav-desktop > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1)",
+          "parent": "#yearbook-level-2-nav-desktop > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "link-section-title"
+          },
+          "hoverHandlers": [],
+          "text": "Students & Families",
+          "children": [],
+          "box": [
+            48,
+            3420,
+            1224,
+            18
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#yearbook-level-2-nav-desktop > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "parent": "#yearbook-level-2-nav-desktop > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "list-unstyled"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.link-section-title",
+            "li.link",
+            "li.link",
+            "li.link",
+            "li.link"
+          ],
+          "box": [
+            8,
+            3420,
+            1264,
+            90
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#yearbook-level-2-nav-desktop > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "#yearbook-level-2-nav-desktop > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "link-list-container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.list-unstyled"
+          ],
+          "box": [
+            8,
+            3420,
+            1264,
+            90
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#yearbook-level-2-nav-desktop > div:nth-of-type(1)",
+          "parent": "#yearbook-level-2-nav-desktop",
+          "tag": "div",
+          "attributes": {
+            "class": "link-section link-section--2-cols"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.link-list-container",
+            "div.link-list-container"
+          ],
+          "box": [
+            8,
+            3420,
+            1264,
+            304
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": []
+    },
+    "nodes": [
+      {
+        "selector": "#yearbook-level-2-nav-desktop",
+        "role": "text",
+        "name": "",
+        "state": "expanded false",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 1264
+      },
+      {
+        "selector": "#yearbook-dropdown > span",
+        "role": "button",
+        "name": "",
+        "state": "expanded false",
+        "tag": "span",
+        "tabIndex": 0,
+        "tabIndexAttribute": "0",
+        "expanded": "false",
+        "controls": "yearbook-level-2-nav-desktop yearbook-level-2-nav-mobile",
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 48,
+        "width": 1224
+      },
+      {
+        "selector": "#yearbook-level-2-nav-desktop > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1)",
+        "role": "listitem",
+        "name": "Students & Families",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 48,
+        "width": 1224
+      },
+      {
+        "selector": "#yearbook-dropdown",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 48,
+        "width": 1224
+      },
+      {
+        "selector": "#yearbook-level-2-nav-mobile",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 48,
+        "width": 1224
+      },
+      {
+        "selector": "div.focus-state-container",
+        "role": "text",
+        "name": "yearbook",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": "-1",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 48,
+        "width": 1224
+      },
+      {
+        "selector": "ul.navbar-nav",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 1264
+      },
+      {
+        "selector": "body.default.unaffiliated",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 1264
+      },
+      {
+        "selector": "html.sizes.supports",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#_vis_opt_path_hides",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#skip-link",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 144,
+        "width": 151
+      },
+      {
+        "selector": "#hd-jcom",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 1264
+      },
+      {
+        "selector": "#content",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tag": "main",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 1264
+      },
+      {
+        "selector": "footer",
+        "role": "contentinfo",
+        "name": "",
+        "state": "",
+        "tag": "footer",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 1264
+      },
+      {
+        "selector": "div",
+        "role": "dialog",
+        "name": "Privacy",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.ot-sdk-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.ot-sdk-row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#onetrust-group-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 704
+      },
+      {
+        "selector": "#onetrust-policy",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 32,
+        "width": 672
+      },
+      {
+        "selector": "#onetrust-policy-text",
+        "role": "text",
+        "name": "We use cookies and similar technologies to process information about your use of our sites, your preferences, your device, and other information about you. These technologies help us operate our sites",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 32,
+        "width": 672
+      },
+      {
+        "selector": "a.ot-imprint-link",
+        "role": "link",
+        "name": "Legal Information, opens in a new tab",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 502,
+        "width": 80
+      },
+      {
+        "selector": "#onetrust-button-group-parent",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 704,
+        "width": 563
+      },
+      {
+        "selector": "#onetrust-button-group",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 773,
+        "width": 426
+      },
+      {
+        "selector": "#onetrust-pc-btn-handler",
+        "role": "button",
+        "name": "Cookies Settings, Opens the preference center dialog",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 773,
+        "width": 125
+      },
+      {
+        "selector": "#onetrust-reject-all-handler",
+        "role": "button",
+        "name": "Reject All",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 915,
+        "width": 125
+      },
+      {
+        "selector": "#onetrust-accept-btn-handler",
+        "role": "button",
+        "name": "Accept All Cookies",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 1057,
+        "width": 129
+      },
+      {
+        "selector": "#onetrust-close-btn-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1214,
+        "width": 44
+      },
+      {
+        "selector": "button.onetrust-close-btn-handler.onetrust-close-btn-ui",
+        "role": "button",
+        "name": "Close",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 1226,
+        "width": 44
+      }
+    ]
+  }
+}

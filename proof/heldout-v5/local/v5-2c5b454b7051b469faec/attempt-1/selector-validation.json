@@ -1,0 +1,34 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "body, #content, #pagefooter",
+      "count": 3,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "body",
+          "classes": [
+            "at-disable-header",
+            "at-disable-content"
+          ],
+          "label": "(function () { if (!/\\.translate\\.goog$/.test(location.hostname)) return; document.body.insertAdjace"
+        },
+        {
+          "tag": "div",
+          "id": "content",
+          "classes": [],
+          "label": "HomeAppsModsTuts News Added alternative map views and customization options: in-game biome color pal"
+        },
+        {
+          "tag": "footer",
+          "id": "pagefooter",
+          "classes": [],
+          "label": "© 2013-2026 chunkbase.com All Rights Reserved.Not an official Minecraft product. Not approved by or "
+        }
+      ]
+    }
+  ]
+}

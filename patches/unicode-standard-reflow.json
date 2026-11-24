@@ -1,0 +1,73 @@
+{
+  "id": "unicode-standard-reflow",
+  "url": "https://www.unicode.org/standard/standard.html",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Tech Site | Site Map | Search”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "controlTask": "At normal width, read the passage beginning “Tech Site | Site Map | Search” and verify all its text is visible without horizontal scrolling.",
+  "observedSelector": "table > tbody > tr:nth-of-type(1) > td > table > tbody > tr > td:nth-of-type(3)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "table > tbody > tr:nth-of-type(1) > td > table > tbody > tr > td:nth-of-type(3)",
+      "equals": "Tech Site | Site Map | Search"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "table > tbody > tr:nth-of-type(1) > td > table > tbody > tr > td:nth-of-type(3)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.unicode.org",
+  "match": "https://www.unicode.org/standard/standard.html",
+  "barrier": "The header table keeps its three cells in one row that is 441 CSS pixels wide. The “Tech Site | Site Map | Search” cell extends from x=225 to x=441, so horizontal clipping hides part of it in the 320-pixel viewport.",
+  "rules": [
+    {
+      "selector": "table",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "tr",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "flex-wrap": "wrap"
+      }
+    },
+    {
+      "selector": "td",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane/unicode-standard-reflow/heldout-v2/before/recording.mp4",
+    "after": "proof/kane/unicode-standard-reflow/heldout-v2/attempt-1/after/recording.mp4",
+    "control": "proof/kane/unicode-standard-reflow/heldout-v2/control/recording.mp4",
+    "verifiedAt": "2026-11-22T15:09:04.415Z",
+    "kaneRunIds": [
+      "c2ffd38a-25c1-4c2e-a1ba-038995c281fd",
+      "40d95c87-85fa-46e5-a225-98c1de0d5c4c",
+      "c7f3783a-11cb-483c-a120-5b385f7b671e"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-22T15:09:04.415Z",
+      "event": "verified",
+      "before": "c2ffd38a-25c1-4c2e-a1ba-038995c281fd",
+      "control": "40d95c87-85fa-46e5-a225-98c1de0d5c4c",
+      "after": "c7f3783a-11cb-483c-a120-5b385f7b671e"
+    }
+  ]
+}

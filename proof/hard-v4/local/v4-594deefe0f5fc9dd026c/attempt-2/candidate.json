@@ -1,0 +1,49 @@
+{
+  "id": "v4-594deefe0f5fc9dd026c",
+  "url": "https://www.vg247.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Psst! Explore our new \"For you\" section and get personalised recommendations about” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Psst! Explore our new \"For you\" section and get personalised recommendations about” at normal width.",
+  "observedSelector": "#content_above > div:nth-of-type(1) > main > div:nth-of-type(1) > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#content_above > div:nth-of-type(1) > main > div:nth-of-type(1) > p",
+      "equals": "Psst! Explore our new \"For you\" section and get personalised recommendations about"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#content_above > div:nth-of-type(1) > main > div:nth-of-type(1) > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.vg247.com",
+  "match": "https://www.vg247.com/",
+  "barrier": "At 320 CSS pixels, the body's 1260-pixel minimum width and the 896-pixel content column push the passage past the viewport's clipped right edge.",
+  "rules": [
+    {
+      "selector": "body",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.page_content",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

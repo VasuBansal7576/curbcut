@@ -1,0 +1,19 @@
+{
+  "barrier": "Keyboard focus and Arrow Down leave the Cybersecurity submenu at visibility: hidden even though the trigger reports aria-expanded=true, so the Backup and Recovery link is unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#mega-menu-item-1213 > a",
+      "target": "#mega-sub-menu-1213",
+      "mode": "display",
+      "display": "block"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#mega-menu-item-1213",
+      "items": "#mega-menu-item-1213 > a",
+      "orientation": "vertical",
+      "activate": "click"
+    }
+  ]
+}

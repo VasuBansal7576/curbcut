@@ -1,0 +1,336 @@
+{
+  "status": "pass",
+  "runId": "1e24a3cc-7e16-42a2-9112-3a23ff03fbfe",
+  "reason": "Objective completed",
+  "summary": "Searched for “speaker” using the Search products field in the Reading view dialog.\nThe search results included Porch Speaker.\nCompleted the requested search on the public shop site without proceeding to sign-in, registration, or payment.",
+  "resultCode": 100,
+  "reasonCode": "success.complete",
+  "credits": 19.8643975,
+  "exitCode": 0,
+  "steps": [
+    "navigate: Navigate to http://127.0.0.1:4317/fixtures/shop/",
+    "analyze: ANALYZE(textual_visual, 'the exact row label ‘searchbox · Search products’ is pr",
+    "assert: the exact row label ‘searchbox · Search products’ is present",
+    "wait: queued plan (2 steps): type \"Search products\"; click \"button · Search\"",
+    "type: Type \"speaker\" into \"Search products\"",
+    "click: Click \"button · Search\"",
+    "analyze: one result named Porch Speaker",
+    "assert: one result named Porch Speaker"
+  ],
+  "evidencePack": "proof/kane/reader-search-products/2026-11-21T19-53-46.356Z/recheck-without/79a6d95b-3359-4e99-aafc-0bee274770ee.evidence",
+  "evidenceValid": true,
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "screen-reader-view",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920,
+      "readerInputs": 1
+    },
+    "readerVisible": true,
+    "width": 1280,
+    "fixtureFixed": true,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "http://127.0.0.1:4317/fixtures/shop/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "button",
+    "nodes": [
+      {
+        "selector": "header.masthead",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "a.wordmark",
+        "role": "link",
+        "name": "Stillroom Supply",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 64,
+        "width": 188
+      },
+      {
+        "selector": "#cart",
+        "role": "button",
+        "name": "Cart (0)",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1130,
+        "width": 86
+      },
+      {
+        "selector": "main",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "section.hero",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "p.eyebrow",
+        "role": "text",
+        "name": "The listening collection",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 102,
+        "width": 1075
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Make roomfor sound.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 102,
+        "width": 1075
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Everyday audio for quieter rituals.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 102,
+        "width": 1075
+      },
+      {
+        "selector": "section.catalog",
+        "role": "region",
+        "name": "Shop the collection",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "#catalog-heading",
+        "role": "heading",
+        "name": "Shop the collection",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 128,
+        "width": 1024
+      },
+      {
+        "selector": "#search-form",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 128,
+        "width": 1024
+      },
+      {
+        "selector": "#search",
+        "role": "searchbox",
+        "name": "Search products",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 128,
+        "width": 352
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "Search",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 488,
+        "width": 80
+      },
+      {
+        "selector": "#search-status",
+        "role": "status",
+        "name": "1 product found.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 128,
+        "width": 1024
+      },
+      {
+        "selector": "#products",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "grid",
+        "left": 128,
+        "width": 1024
+      },
+      {
+        "selector": "article.product",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 128,
+        "width": 1024
+      },
+      {
+        "selector": "div.product-copy",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 129,
+        "width": 1022
+      },
+      {
+        "selector": "p.eyebrow",
+        "role": "text",
+        "name": "Portable audio",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 147,
+        "width": 987
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Porch Speaker",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 147,
+        "width": 987
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "A compact speaker for slow mornings.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 147,
+        "width": 987
+      },
+      {
+        "selector": "div.purchase",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 147,
+        "width": 987
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "$64",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 147,
+        "width": 32
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "Add to cart",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1024,
+        "width": 110
+      },
+      {
+        "selector": "#cart-status",
+        "role": "status",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 128,
+        "width": 1024
+      },
+      {
+        "selector": "#shipping",
+        "role": "button",
+        "name": "Shipping details",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 128,
+        "width": 145
+      },
+      {
+        "selector": "#start-reservation",
+        "role": "button",
+        "name": "Start a cart reservation",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 277,
+        "width": 195
+      },
+      {
+        "selector": "#reservation-status",
+        "role": "status",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 128,
+        "width": 1024
+      },
+      {
+        "selector": "footer",
+        "role": "contentinfo",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#native-fix",
+        "role": "checkbox",
+        "name": "Native fixes",
+        "state": "checked",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 1112,
+        "width": 13
+      }
+    ]
+  },
+  "video": "proof/kane/reader-search-products/2026-11-21T19-53-46.356Z/recheck-without/recording.mp4"
+}

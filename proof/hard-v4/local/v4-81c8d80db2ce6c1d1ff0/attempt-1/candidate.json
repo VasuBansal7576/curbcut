@@ -1,0 +1,34 @@
+{
+  "id": "v4-81c8d80db2ce6c1d1ff0",
+  "url": "https://suzuri.jp/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search” searchbox and type test without submitting.",
+  "controlTask": "Click the visible “Search” field and type test without submitting.",
+  "observedSelector": "#layout > header > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2) > form > div > div > input",
+  "requiredName": "Search",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#layout > header > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2) > form > div > div > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "searchbox"
+  },
+  "site": "suzuri.jp",
+  "match": "https://suzuri.jp/",
+  "barrier": "The search input has no accessible name and is exposed as a combobox. The allowed rules can supply the name Search, but they cannot set the requested searchbox role.",
+  "rules": [
+    {
+      "selector": "#layout > header > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2) > form > div > div > input",
+      "action": "addLabel",
+      "value": "Search"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,26 @@
+{
+  "barrier": "The navigation stays in a single horizontal flex row inside a 310-pixel scroll container, placing the Giáo án - Đề thi link about 1,000 pixels from the left edge and beyond the 320-pixel viewport.",
+  "rules": [
+    {
+      "selector": "ul.nav.navbar-nav",
+      "action": "injectCSS",
+      "value": {
+        "flex-wrap": "wrap",
+        "min-width": "0",
+        "white-space": "normal"
+      }
+    },
+    {
+      "selector": "#scroll-menu > ul > li:nth-of-type(14) > ul",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "white-space": "normal"
+      }
+    },
+    {
+      "selector": "#scroll-menu > ul > li:nth-of-type(14)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-81c8d80db2ce6c1d1ff0",
+    "url": "https://suzuri.jp/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search” searchbox and type test without submitting.",
+    "controlTask": "Click the visible “Search” field and type test without submitting.",
+    "observedSelector": "#layout > header > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2) > form > div > div > input",
+    "requiredName": "Search",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#layout > header > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2) > form > div > div > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "searchbox"
+    }
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "The expected usable role and name were absent from Reading view.",
+    "geometry": {
+      "left": 957.328125,
+      "right": 1126.328125,
+      "width": 1280,
+      "scrollX": 0,
+      "clientWidth": 155,
+      "scrollWidth": 155,
+      "inView": true,
+      "fits": true
+    },
+    "reader": {
+      "role": "combobox",
+      "name": "",
+      "state": "expanded false",
+      "editable": false,
+      "activatable": false
+    }
+  },
+  "registeredControl": {
+    "geometry": {
+      "left": 957.328125,
+      "right": 1126.328125,
+      "width": 1280,
+      "scrollX": 0,
+      "clientWidth": 155,
+      "scrollWidth": 155,
+      "inView": true,
+      "fits": true
+    },
+    "url": "https://suzuri.jp/",
+    "checks": [
+      true
+    ],
+    "status": "pass",
+    "reason": "Checked the declared outcome after the type action."
+  },
+  "runner": "playwright",
+  "status": "unresolved",
+  "reason": "The proposal repeated the previous rules.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "Checked the declared outcome after the type action.",
+      "file": "proof/hard-v4/local/v4-81c8d80db2ce6c1d1ff0/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "screen-reader-view",
+      "status": "fail",
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "file": "proof/hard-v4/local/v4-81c8d80db2ce6c1d1ff0/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "screen-reader-view",
+      "iteration": 1,
+      "status": "fail",
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "file": "proof/hard-v4/local/v4-81c8d80db2ce6c1d1ff0/attempt-1/after.json"
+    },
+    {
+      "name": "proposal",
+      "iteration": 2,
+      "status": "rejected",
+      "reason": "The proposal repeated the previous rules.",
+      "file": "proof/hard-v4/local/v4-81c8d80db2ce6c1d1ff0/attempt-2/rejection.json"
+    },
+    {
+      "name": "proposal",
+      "iteration": 3,
+      "status": "rejected",
+      "reason": "The proposal repeated the previous rules.",
+      "file": "proof/hard-v4/local/v4-81c8d80db2ce6c1d1ff0/attempt-3/rejection.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

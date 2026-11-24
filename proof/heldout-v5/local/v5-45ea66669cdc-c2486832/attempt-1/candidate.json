@@ -1,0 +1,52 @@
+{
+  "id": "v5-45ea66669cdc-c2486832",
+  "url": "https://www.mailinator.com/",
+  "persona": "keyboard-only",
+  "task": "Open “WHY MAILINATOR” from keyboard focus or with Arrow Down and follow “Applications/Solutions”. Confirm the public destination /applications-solutions/.",
+  "controlTask": "Hover “WHY MAILINATOR”, click “Applications/Solutions” and confirm /applications-solutions/.",
+  "observedSelector": "#menu-item-8021 > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/applications-solutions/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menu-item-8021",
+    "#menu-item-8021 > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#menu-item-8021 > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-item-8021 > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-item-8037 > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.mailinator.com",
+  "match": "https://www.mailinator.com/",
+  "barrier": "Keyboard focus and Arrow Down leave the Why Mailinator submenu at display: none, so the Applications/Solutions link is unreachable. Hovering the parent list item reveals the submenu.",
+  "rules": [
+    {
+      "selector": "#menu-item-8021",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

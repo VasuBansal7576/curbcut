@@ -1,0 +1,43 @@
+{
+  "id": "restream-io-tr",
+  "url": "https://restream.io/",
+  "persona": "keyboard-only",
+  "task": "Use Tab and Enter to reach and activate “PRODUCTS”. Verify its content becomes visible.",
+  "controlTask": "Click “PRODUCTS” and verify its content becomes visible.",
+  "observedSelector": "nav > div > div:nth-of-type(1) > div:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > span",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "nav > div > div:nth-of-type(1) > div:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div"
+    }
+  ],
+  "minimumTabPresses": 2,
+  "probe": {
+    "action": "click"
+  },
+  "site": "restream.io",
+  "match": "https://restream.io/",
+  "barrier": "The PRODUCTS dropdown trigger is a span with tabIndex -1 and no tabindex attribute, so Tab and Shift+Tab skip it and keyboard users cannot reach it to activate it with Enter.",
+  "rules": [
+    {
+      "selector": "nav > div > div:nth-of-type(1) > div:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > span",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "nav > div > div:nth-of-type(1) > div:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > span",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "nav > div > div:nth-of-type(1) > div:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > span",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "nav > div > div:nth-of-type(1) > div:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > span",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,45 @@
+{
+  "barrier": "The story list and its text are 750 CSS pixels wide and start 15 pixels from the left edge of the 320-pixel viewport. Horizontal clipping cuts off the passage.",
+  "rules": [
+    {
+      "selector": "div.grid__content.grid__content_full-width_false",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "div.grid__main.grid__main_sticky_none",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "auto"}
+    },
+    {
+      "selector": "div.grid__module.grid__module_loaded_true",
+      "action": "injectCSS",
+      "value": {"width": "auto", "max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "div.story-list",
+      "action": "injectCSS",
+      "value": {"width": "auto", "max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "ul.story-list__list",
+      "action": "injectCSS",
+      "value": {"width": "auto", "max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "#main > div > div > div:nth-of-type(6) > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > ul > li:nth-of-type(1)",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "auto", "max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "div.story-list__photo",
+      "action": "injectCSS",
+      "value": {"max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "div.story-list__text",
+      "action": "injectCSS",
+      "value": {"width": "auto", "max-width": "100%", "box-sizing": "border-box", "overflow-wrap": "anywhere"}
+    }
+  ]
+}

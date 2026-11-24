@@ -1,0 +1,30 @@
+{
+  "barrier": "The 550-pixel paragraph sits inside a 560-pixel news column on a page with a 980-pixel body minimum width. At a 320-pixel viewport, the paragraph extends past the right edge and horizontal clipping cuts off the text.",
+  "rules": [
+    {
+      "selector": "body.lang_en.front, #middle",
+      "action": "injectCSS",
+      "value": {"min-width": "0", "max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "#page, #main, div.pageContainer, #mainContent, #newsBlock, #newMedia, #newMedia > .newsItem.videoItem, #newMedia > .newsItem.videoItem > .newsBlurb, #newMedia > .newsItem.videoItem > .newsBlurb > .newsDesc",
+      "action": "injectCSS",
+      "value": {"max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "#newMedia > .newsItem.videoItem > .newsBlurb, #newMedia > .newsItem.videoItem > .newsBlurb > .newsDesc",
+      "action": "injectCSS",
+      "value": {"display": "block", "height": "auto", "max-height": "none"}
+    },
+    {
+      "selector": "#newMedia > .newsItem.videoItem > .newsBlurb > .newsDesc > p",
+      "action": "injectCSS",
+      "value": {"width": "auto", "height": "auto", "max-height": "none", "white-space": "normal", "overflow-wrap": "anywhere"}
+    },
+    {
+      "selector": "#newMedia img.newsThumb",
+      "action": "injectCSS",
+      "value": {"max-width": "100%", "height": "auto"}
+    }
+  ]
+}

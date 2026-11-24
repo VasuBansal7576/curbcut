@@ -1,0 +1,13 @@
+{
+  "barrier": "The Soap opera submenu stays at display: none after keyboard focus and Arrow Down, so Tab skips the La forza di una donna link. Pointer hover reveals the submenu.",
+  "rules": [
+    {
+      "selector": "#menu-td-demo-header-menu-1 > li.menu-item-27719",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "selector": "#menu-td-demo-header-menu-1 > li.menu-item-27719 > a.sf-with-ul, #menu-td-demo-header-menu-1 > li.menu-item-27719 > ul.sub-menu > li > a",
+      "action": "restoreFocusOutline"
+    }
+  ]
+}

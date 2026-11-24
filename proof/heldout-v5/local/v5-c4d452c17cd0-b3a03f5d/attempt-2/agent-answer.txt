@@ -1,0 +1,28 @@
+{
+  "barrier": "Keyboard traversal reaches Feed, but it fails the visibility check inside the masked horizontal scroller. Wrapping the tablist alone left that clipping container in place.",
+  "rules": [
+    {
+      "selector": "#features > div:nth-of-type(2) > div.no-scrollbar.overflow-x-auto",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "selector": "#features > div:nth-of-type(2) > div.no-scrollbar.overflow-x-auto > [role='tablist']",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "box-sizing": "border-box",
+        "flex-wrap": "wrap"
+      }
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#features > div:nth-of-type(2) > div.no-scrollbar.overflow-x-auto > [role='tablist']",
+      "items": "#features [role='tablist'] > button.tour-tab[role='tab']",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

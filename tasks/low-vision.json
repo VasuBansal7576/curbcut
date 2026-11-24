@@ -1,0 +1,14 @@
+{
+  "id": "low-vision-shop-speaker",
+  "url": "http://127.0.0.1:4317/fixtures/shop/",
+  "task": "In the unfiltered collection, scroll vertically to Porch Speaker. Assert that its Add to cart control fits fully within the visible width. Add the speaker and confirm Cart (1).",
+  "controlTask": "Find Porch Speaker, click Add to cart, and confirm Cart (1).",
+  "persona": "low-vision",
+  "outcomeChecks": [
+    {
+      "selector": "#cart-status",
+      "kind": "text",
+      "equals": "Porch Speaker added to cart."
+    }
+  ]
+}

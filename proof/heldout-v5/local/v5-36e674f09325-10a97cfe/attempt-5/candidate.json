@@ -1,0 +1,57 @@
+{
+  "id": "v5-36e674f09325-10a97cfe",
+  "url": "https://www.jostens.com/",
+  "persona": "keyboard-only",
+  "task": "Expand “Yearbook” with the keyboard and read “Students & Families”.",
+  "controlTask": "Click “Yearbook” and read “Students & Families”.",
+  "observedSelector": "#yearbook-dropdown > span",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#yearbook-level-2-nav-desktop > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1)",
+      "equals": "Students & Families"
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#yearbook-level-2-nav-desktop"
+  ],
+  "journey": [
+    {
+      "selector": "#yearbook-dropdown > span",
+      "action": "activate"
+    },
+    {
+      "selector": "#yearbook-level-2-nav-desktop > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1)",
+      "action": "observe"
+    }
+  ],
+  "site": "www.jostens.com",
+  "match": "https://www.jostens.com/",
+  "barrier": "The keyboard run reached the focusable Yearbook span, but the desktop submenu remained unavailable after activation. The pointer click took the same disclosure into its opening transition and exposed Students & Families.",
+  "rules": [
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#main-nav > ul.navbar-nav",
+      "items": "#main-nav > ul.navbar-nav > li > .nav-link[tabindex=\"0\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    },
+    {
+      "selector": "#yearbook-dropdown > span[data-toggle=\"collapse\"]",
+      "action": "addLabel",
+      "value": "Yearbook"
+    },
+    {
+      "selector": "#yearbook-dropdown > span[data-toggle=\"collapse\"]",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#yearbook-dropdown > span[data-toggle=\"collapse\"]",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

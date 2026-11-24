@@ -1,0 +1,17 @@
+{
+  "barrier": "Keyboard traversal reaches Careers, but the focused tab remains outside the viewport. Changing the display of its enclosing wrappers did not bring it into view.",
+  "rules": [
+    {
+      "selector": "#rcs-tab-rcs-744076",
+      "action": "extendTimeout",
+      "value": 2000
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.resources-for__tabs[role=\"tablist\"]",
+      "items": "div.resources-for__tabs[role=\"tablist\"] > button[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

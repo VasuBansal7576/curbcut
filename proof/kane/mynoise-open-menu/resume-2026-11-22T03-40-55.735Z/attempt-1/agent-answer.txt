@@ -1,0 +1,9 @@
+{
+  "barrier": "The clickable Menu icon (#hamburger) has tabIndex -1, so Tab skips it.",
+  "rules": [
+    {"selector": "#hamburger", "action": "makeFocusable"},
+    {"selector": "#hamburger", "action": "setRole", "value": "button"},
+    {"selector": "#hamburger", "action": "bindEnterToClick"},
+    {"selector": "#hamburger", "action": "restoreFocusOutline"}
+  ]
+}

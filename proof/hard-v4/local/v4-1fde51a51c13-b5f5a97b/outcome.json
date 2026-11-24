@@ -1,0 +1,107 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-1fde51a51c13-b5f5a97b",
+    "url": "https://www.pair.com/",
+    "persona": "keyboard-only",
+    "task": "Open “Domains” from keyboard focus or with Arrow Down and follow “Domains Pricing”. Confirm the public destination /domains-pricing/.",
+    "controlTask": "Hover “Domains”, click “Domains Pricing” and confirm /domains-pricing/.",
+    "observedSelector": "#mega-menu-item-28596 > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/domains-pricing/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#mega-menu-item-28596",
+      "#mega-sub-menu-28596"
+    ],
+    "journey": [
+      {
+        "selector": "#mega-menu-item-28596 > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#mega-menu-item-28596 > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#mega-menu-item-28598 > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "Journey step 3 was unavailable after the prior step.",
+    "steps": [
+      {
+        "selector": "#mega-menu-item-28596 > a",
+        "action": "focus",
+        "traversal": {
+          "reached": true,
+          "tabs": 2
+        }
+      },
+      {
+        "selector": "#mega-menu-item-28596 > a",
+        "action": "key",
+        "key": "ArrowDown"
+      },
+      {
+        "selector": "#mega-menu-item-28598 > a",
+        "action": "activate"
+      }
+    ],
+    "url": "https://www.pair.com/"
+  },
+  "registeredControl": {
+    "status": "pass",
+    "reason": "The complete journey reached the declared outcome.",
+    "steps": [
+      {
+        "selector": "#mega-menu-item-28596 > a",
+        "action": "focus"
+      },
+      {
+        "selector": "#mega-menu-item-28596 > a",
+        "action": "key",
+        "key": "ArrowDown"
+      },
+      {
+        "selector": "#mega-menu-item-28598 > a",
+        "action": "activate"
+      }
+    ],
+    "url": "https://www.pair.com/domains-pricing/",
+    "checks": [
+      true
+    ]
+  },
+  "runner": "playwright",
+  "status": "control-blocked",
+  "reason": "page.goto: Timeout 15000ms exceeded.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "blocked",
+      "reason": "page.goto: Timeout 15000ms exceeded.",
+      "file": "proof/hard-v4/local/v4-1fde51a51c13-b5f5a97b/control.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "dialog",
+      "selector": "#js-cookies-panel",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "js-cookies-panel",
+          "classes": [
+            "modal",
+            "fade",
+            "cookies-panel"
+          ],
+          "label": "Política de cookies Su privacidad Cookies estrictamente necesaria Cookies de preferencia o personali"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "opener",
+      "selector": "div.cookies-banner > button.js-cookies-configure[data-target=\"#js-cookies-panel\"]",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "js-cookies-configure",
+            "se-btn-main"
+          ],
+          "label": "Configurar"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "close",
+      "selector": "#js-cookies-panel .modal-header > button.btn-close[data-dismiss=\"modal\"]",
+      "scope": "#js-cookies-panel",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "btn-close"
+          ],
+          "label": "common.cookies.cerrar"
+        }
+      ]
+    }
+  ]
+}

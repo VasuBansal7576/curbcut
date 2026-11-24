@@ -1,0 +1,47 @@
+{
+  "source": "local-playwright",
+  "published": false,
+  "patch": {
+    "id": "keyboard-add-headphones",
+    "url": "http://127.0.0.1:4317/fixtures/shop/?fixed=1",
+    "site": "127.0.0.1",
+    "match": "http://127.0.0.1:4317/fixtures/shop/",
+    "persona": "keyboard-only",
+    "task": "Using only the keyboard, search for headphones and add Field Headphones to the cart. Confirm Cart (1).",
+    "barrier": "The visible Add to cart control is a div with tabIndex -1, so Tab skips it. The search input also has no accessible name.",
+    "rules": [
+      {
+        "selector": "div.add-to-cart",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": "div.add-to-cart",
+        "action": "setRole",
+        "value": "button"
+      },
+      {
+        "selector": "div.add-to-cart",
+        "action": "bindEnterToClick"
+      },
+      {
+        "selector": "div.add-to-cart",
+        "action": "restoreFocusOutline"
+      },
+      {
+        "selector": "#search",
+        "action": "addLabel",
+        "value": "Search products"
+      }
+    ],
+    "status": "retired",
+    "evidence": {},
+    "history": [
+      {
+        "at": "2026-11-21T19:07:00.533Z",
+        "event": "retired",
+        "without": "pass",
+        "video": "proof/local/keyboard-only/recheck-without.mp4"
+      }
+    ]
+  }
+}

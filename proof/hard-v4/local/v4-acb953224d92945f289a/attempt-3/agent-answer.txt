@@ -1,0 +1,11 @@
+{
+  "barrier": "At 320 CSS pixels, the body has a 1200px minimum width and the passage starts at x=257 in a 1000px-wide section, so most of the text is clipped.",
+  "rules": [
+    {"selector":"body","action":"injectCSS","value":{"min-width":"0"}},
+    {"selector":"#main","action":"injectCSS","value":{"width":"auto","min-width":"0"}},
+    {"selector":"div.home-page","action":"injectCSS","value":{"width":"auto","max-width":"100%","box-sizing":"border-box"}},
+    {"selector":"main.home-blocks","action":"injectCSS","value":{"width":"auto","max-width":"100%","box-sizing":"border-box"}},
+    {"selector":"section.block-tool","action":"injectCSS","value":{"width":"auto","max-width":"100%","box-sizing":"border-box"}},
+    {"selector":"#main > div:nth-of-type(2) > main > section:nth-of-type(2) > p","action":"injectCSS","value":{"max-width":"100%","overflow-wrap":"anywhere"}}
+  ]
+}

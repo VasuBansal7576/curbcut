@@ -1,0 +1,62 @@
+{
+  "id": "cato-org-tr2",
+  "url": "https://www.cato.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, locate the searchbox named “Search”. Enter the text test and confirm the field contains it. Do not submit.",
+  "controlTask": "Click the public text field with the visible hint “Search”, type test and confirm the value. Do not submit.",
+  "observedSelector": "#query",
+  "requiredName": "Search",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#query",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "searchbox"
+  },
+  "site": "www.cato.org",
+  "match": "https://www.cato.org/",
+  "barrier": "In Reading view, the searchbox #query has no accessible name, so screen reader users cannot locate it by the name “Search”.",
+  "rules": [
+    {
+      "selector": "#query",
+      "action": "addLabel",
+      "value": "Search"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v3/runs/cato-org-tr2/before/recording.mp4",
+    "after": "proof/heldout-v3/runs/cato-org-tr2/attempt-1/after/recording.mp4",
+    "control": "proof/heldout-v3/runs/cato-org-tr2/control/recording.mp4",
+    "verifiedAt": "2026-11-23T05:46:57.711Z",
+    "kaneRunIds": [
+      "7c1f6ee3-b6ff-47e1-8f90-55a221e2f8b4",
+      "b65ebf6c-b54f-4a94-92f9-b8d557ed95e6",
+      "7db69880-3e8a-4458-af67-3adffe976385"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-23T05:46:57.711Z",
+      "event": "verified",
+      "before": "7c1f6ee3-b6ff-47e1-8f90-55a221e2f8b4",
+      "control": "b65ebf6c-b54f-4a94-92f9-b8d557ed95e6",
+      "after": "7db69880-3e8a-4458-af67-3adffe976385"
+    }
+  ]
+}

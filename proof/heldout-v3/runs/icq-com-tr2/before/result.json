@@ -1,0 +1,371 @@
+{
+  "status": "fail",
+  "runId": "3478c773-3eeb-4278-8e6d-4eea365c8c60",
+  "reason": "Forward and reverse Tab moves cycled among links while visible Eng never received focus.",
+  "summary": "The page leaves the visible Eng control out of its keyboard focus order. Focus moves only among other links instead.\nAdd the Eng control to the normal keyboard focus order and verify that Tab reaches it and Enter or Space opens its language content.\nevidence: objective_contradiction: Forward and reverse Tab moves cycled among links while visible Eng never received focus.",
+  "resultCode": 740,
+  "reasonCode": "assertion_error.confirmed_product_bug",
+  "credits": 17.3292275,
+  "exitCode": 1,
+  "exitSignal": null,
+  "steps": [
+    "navigate: Navigate to https://icq.com/desktop/en?#mac",
+    "press_key: PRIMARY: press the Tab key",
+    "press_key: PRIMARY: press the Tab key",
+    "press_key: PRIMARY: press the Tab key",
+    "press_key: PRIMARY: press the Shift+Tab keys",
+    "wait: Waiting after keyboard focus traversal barrier"
+  ],
+  "objective": "Use only keyboard input. Use Tab or Shift+Tab to move focus and Enter or Space to activate the exact control. Move in whichever direction is shorter. Group repeated Tab presses if supported, checking focus frequently. Do not click, focus elements directly, use JavaScript, or navigate directly to the destination. Keep focus on the page. If you have checked both Tab directions and the exact control keeps getting skipped, report the barrier and stop. If it receives focus, activate it immediately and check the outcome once. The exact visible target is outside the sequential Tab order in the initial browser state. Check this with several real focus moves, including forward Tab, then report the barrier if the target remains skipped. Do not search for a different control. Stay on this public site. Do not sign in, register, pay, or interact with a CAPTCHA or access challenge. Leave fixture settings unchanged. Use visible controls only. Use Tab and Enter to reach and activate “Eng”. Verify its content becomes visible.",
+  "kaneStatus": "fail",
+  "limits": {
+    "maxSteps": 50,
+    "timeout": 360,
+    "assertionMode": "dom"
+  },
+  "evidencePack": "proof/heldout-v3/runs/icq-com-tr2/before/30b3f00b-0dbe-4122-a51a-b64e987d8486.evidence",
+  "evidenceValid": true,
+  "outcomeChecks": [
+    false
+  ],
+  "browserVerdict": {
+    "status": "fail",
+    "basis": "target-skipped-by-tab",
+    "tabs": 4,
+    "tabIndex": -1
+  },
+  "inspectionTarget": {
+    "visible": true,
+    "tabIndex": -1,
+    "managedKeyboard": false,
+    "reader": null
+  },
+  "runner": "kane",
+  "recordingTrail": [
+    {
+      "index": 0,
+      "events": [
+        {
+          "type": "document",
+          "documentId": "b2793e31-e37e-4073-b1de-fffbc4528fd6",
+          "url": "https://icq.com/desktop/en",
+          "targetMatches": false,
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "b2793e31-e37e-4073-b1de-fffbc4528fd6",
+          "url": "https://icq.com/desktop/en",
+          "targetMatches": false,
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "b2793e31-e37e-4073-b1de-fffbc4528fd6",
+          "url": "https://icq.com/desktop/en",
+          "targetMatches": false,
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "b2793e31-e37e-4073-b1de-fffbc4528fd6",
+          "url": "https://icq.com/desktop/en",
+          "targetMatches": false,
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "b2793e31-e37e-4073-b1de-fffbc4528fd6",
+          "url": "https://icq.com/desktop/en",
+          "targetMatches": false,
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "b2793e31-e37e-4073-b1de-fffbc4528fd6",
+          "url": "https://icq.com/desktop/en",
+          "targetMatches": false,
+          "reverse": false,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "b2793e31-e37e-4073-b1de-fffbc4528fd6",
+          "url": "https://icq.com/desktop/en",
+          "targetMatches": false,
+          "revisited": false,
+          "top": true
+        },
+        {
+          "type": "tab",
+          "documentId": "b2793e31-e37e-4073-b1de-fffbc4528fd6",
+          "url": "https://icq.com/desktop/en",
+          "targetMatches": false,
+          "reverse": true,
+          "top": true
+        },
+        {
+          "type": "tab-focus",
+          "documentId": "b2793e31-e37e-4073-b1de-fffbc4528fd6",
+          "url": "https://icq.com/desktop/en",
+          "targetMatches": false,
+          "revisited": true,
+          "top": true
+        }
+      ]
+    }
+  ],
+  "inspection": {
+    "harness": {
+      "persona": "keyboard-only",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1280,
+      "maxWidth": 1280,
+      "keys": {
+        "tab": 4,
+        "activate": 0,
+        "other": 1,
+        "text": 0
+      },
+      "documentId": "b2793e31-e37e-4073-b1de-fffbc4528fd6"
+    },
+    "readerVisible": false,
+    "width": 1280,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "https://icq.com/desktop/en",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "a",
+    "nodes": [
+      {
+        "selector": "#header > div > div > div:nth-of-type(1)",
+        "role": "text",
+        "name": "Eng",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 1157,
+        "width": 57
+      },
+      {
+        "selector": "div.header-language",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 1157,
+        "width": 57
+      },
+      {
+        "selector": "div.header-language__inner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "div.header__tools",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1121,
+        "width": 93
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "VK Messenger",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "hasHref": true,
+        "display": "inline",
+        "left": 298,
+        "width": 103
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "You can chat with friends in , and with colleagues in",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 102,
+        "width": 486
+      },
+      {
+        "selector": "br",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "br",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "inline",
+        "left": 404,
+        "width": 0
+      },
+      {
+        "selector": "div.section0__text",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 102,
+        "width": 486
+      },
+      {
+        "selector": "#page",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#header",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#logo",
+        "role": "link",
+        "name": "icq new",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "hasHref": true,
+        "display": "block",
+        "left": 50,
+        "width": 221
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "icq new",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 50,
+        "width": 73
+      },
+      {
+        "selector": "#grid",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 307,
+        "width": 675
+      },
+      {
+        "selector": "#fullpage",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#section0",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Service stopped working",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 102,
+        "width": 486
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "VK WorkSpace",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "hasHref": true,
+        "display": "inline",
+        "left": 262,
+        "width": 108
+      }
+    ]
+  },
+  "video": "proof/heldout-v3/runs/icq-com-tr2/before/recording.mp4"
+}

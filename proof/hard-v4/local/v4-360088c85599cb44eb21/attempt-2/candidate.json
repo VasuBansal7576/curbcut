@@ -1,0 +1,61 @@
+{
+  "id": "v4-360088c85599cb44eb21",
+  "url": "https://www.nirsoft.net/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “NirSoft web site provides a unique collection of small and useful freeware” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “NirSoft web site provides a unique collection of small and useful freeware” at normal width.",
+  "observedSelector": "table > tbody > tr:nth-of-type(2) > td:nth-of-type(3) > table > tbody > tr:nth-of-type(2) > td:nth-of-type(2) > p:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "table > tbody > tr:nth-of-type(2) > td:nth-of-type(3) > table > tbody > tr:nth-of-type(2) > td:nth-of-type(2) > p:nth-of-type(1)",
+      "equals": "NirSoft web site provides a unique collection of small and useful freeware"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "table > tbody > tr:nth-of-type(2) > td:nth-of-type(3) > table > tbody > tr:nth-of-type(2) > td:nth-of-type(2) > p:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.nirsoft.net",
+  "match": "https://www.nirsoft.net/",
+  "barrier": "The table row containing the passage is 628 CSS pixels wide at a 320 CSS pixel viewport, and horizontal clipping cuts off the text beyond the viewport.",
+  "rules": [
+    {
+      "selector": "tr",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "td",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    },
+    {
+      "selector": "table",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

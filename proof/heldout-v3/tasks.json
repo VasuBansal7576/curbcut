@@ -1,0 +1,471 @@
+{
+  "version": 3,
+  "registeredAt": "2026-11-23T05:16:41.313Z",
+  "freezeCommit": "5edbe2edead3019c169e22541068a580e62e5481",
+  "scoutingDigest": "4437c06a563b5ce4b2d57d148168e1804559931c12505c6efbf6b246ff9c4ff1",
+  "model": "gpt-6.2-sol",
+  "rule": "Every confirmed, eligible site from the preregistered Tranco samples is registered. The frozen 15-keyboard minimum could not be met (11 confirmed), so all are run.",
+  "budget": 1600,
+  "reserve": 1000,
+  "attempts": 3,
+  "availableAtRegistration": 2620.436,
+  "tasks": [
+    {
+      "id": "euronext-com-tr",
+      "url": "https://www.euronext.com/en",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the textbox named “Sites search”. Enter the text test and confirm the field contains it. Do not submit.",
+      "controlTask": "Click the public text field with the visible hint “Sites search”, type test and confirm the value. Do not submit.",
+      "observedSelector": "#edit-search-site",
+      "requiredName": "Sites search",
+      "outcomeChecks": [
+        {
+          "kind": "value",
+          "selector": "#edit-search-site",
+          "equals": "test"
+        }
+      ],
+      "probe": {
+        "action": "type",
+        "value": "test",
+        "role": "textbox"
+      }
+    },
+    {
+      "id": "restream-io-tr",
+      "url": "https://restream.io/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “PRODUCTS”. Verify its content becomes visible.",
+      "controlTask": "Click “PRODUCTS” and verify its content becomes visible.",
+      "observedSelector": "nav > div > div:nth-of-type(1) > div:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > span",
+      "outcomeChecks": [
+        {
+          "kind": "visible",
+          "selector": "nav > div > div:nth-of-type(1) > div:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div"
+        }
+      ],
+      "minimumTabPresses": 2,
+      "probe": {
+        "action": "click"
+      }
+    },
+    {
+      "id": "flashscore-de-tr",
+      "url": "https://www.flashscore.de/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “U17 Weltmeisterschaft 2026 Fussball Live Ergebnisse, Aktuelle Fussball Ergebnisse, Bundesliga, Champions”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "controlTask": "At normal width, read the passage beginning “U17 Weltmeisterschaft 2026 Fussball Live Ergebnisse, Aktuelle Fussball Ergebnisse, Bundesliga, Champions” and verify all its text is visible without horizontal scrolling.",
+      "observedSelector": "div:nth-of-type(3) > div:nth-of-type(1) > div > h1",
+      "outcomeChecks": [
+        {
+          "kind": "contains",
+          "selector": "div:nth-of-type(3) > div:nth-of-type(1) > div > h1",
+          "equals": "U17 Weltmeisterschaft 2026 Fussball Live Ergebnisse, Aktuelle Fussball Ergebnisse, Bundesliga, Champions"
+        },
+        {
+          "kind": "fits-width",
+          "selector": "div:nth-of-type(3) > div:nth-of-type(1) > div > h1"
+        }
+      ],
+      "probe": {
+        "action": "read"
+      }
+    },
+    {
+      "id": "gbnews-com-tr",
+      "url": "https://www.gbnews.com/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “Previous Slide”. Verify its content becomes visible.",
+      "controlTask": "Click “Previous Slide” and verify its content becomes visible.",
+      "observedSelector": "#backBtn",
+      "outcomeChecks": [
+        {
+          "kind": "visible",
+          "selector": "#sHome_0_0_7_0_0_1_0_7_0 > div:nth-of-type(2) > div > div > div:nth-of-type(3) > div > div > div > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div > div > div > button"
+        }
+      ],
+      "minimumTabPresses": 2,
+      "probe": {
+        "action": "click"
+      }
+    },
+    {
+      "id": "buffbuff-com-tr",
+      "url": "https://buffbuff.com/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “****”. Verify its content becomes visible.",
+      "controlTask": "Click “****” and verify its content becomes visible.",
+      "observedSelector": "#badge-slow-compensation-point > span > span",
+      "outcomeChecks": [
+        {
+          "kind": "visible",
+          "selector": "#header > div > div:nth-of-type(2) > div:nth-of-type(4) > div"
+        }
+      ],
+      "minimumTabPresses": 2,
+      "probe": {
+        "action": "click"
+      }
+    },
+    {
+      "id": "primis-tech-tr",
+      "url": "https://www.primis.tech/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Inside the Primis Hackathon: Creativity, Collaboration, and a Few Tough Decisions”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "controlTask": "At normal width, read the passage beginning “Inside the Primis Hackathon: Creativity, Collaboration, and a Few Tough Decisions” and verify all its text is visible without horizontal scrolling.",
+      "observedSelector": "#blog > div > div:nth-of-type(4) > a > div:nth-of-type(2) > h2",
+      "outcomeChecks": [
+        {
+          "kind": "contains",
+          "selector": "#blog > div > div:nth-of-type(4) > a > div:nth-of-type(2) > h2",
+          "equals": "Inside the Primis Hackathon: Creativity, Collaboration, and a Few Tough Decisions"
+        },
+        {
+          "kind": "fits-width",
+          "selector": "#blog > div > div:nth-of-type(4) > a > div:nth-of-type(2) > h2"
+        }
+      ],
+      "probe": {
+        "action": "read"
+      }
+    },
+    {
+      "id": "sonarsource-com-tr",
+      "url": "https://www.sonarsource.com/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “As we move toward using AI tooling for code generation, it”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "controlTask": "At normal width, read the passage beginning “As we move toward using AI tooling for code generation, it” and verify all its text is visible without horizontal scrolling.",
+      "observedSelector": "#\\37 39837d8-bbb7-4eff-8ce9-01f37a61f330 > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div > div:nth-of-type(3) > div > figure > blockquote",
+      "outcomeChecks": [
+        {
+          "kind": "contains",
+          "selector": "#\\37 39837d8-bbb7-4eff-8ce9-01f37a61f330 > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div > div:nth-of-type(3) > div > figure > blockquote",
+          "equals": "As we move toward using AI tooling for code generation, it"
+        },
+        {
+          "kind": "fits-width",
+          "selector": "#\\37 39837d8-bbb7-4eff-8ce9-01f37a61f330 > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div > div:nth-of-type(3) > div > figure > blockquote"
+        }
+      ],
+      "probe": {
+        "action": "read"
+      }
+    },
+    {
+      "id": "tjk-org-tr",
+      "url": "https://www.tjk.org/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Antalya’da Sonbahar - Kış Sezonu başladı”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "controlTask": "At normal width, read the passage beginning “Antalya’da Sonbahar - Kış Sezonu başladı” and verify all its text is visible without horizontal scrolling.",
+      "observedSelector": "#yarissever > div:nth-of-type(10) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(3) > span > h3",
+      "outcomeChecks": [
+        {
+          "kind": "contains",
+          "selector": "#yarissever > div:nth-of-type(10) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(3) > span > h3",
+          "equals": "Antalya’da Sonbahar - Kış Sezonu başladı"
+        },
+        {
+          "kind": "fits-width",
+          "selector": "#yarissever > div:nth-of-type(10) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(3) > span > h3"
+        }
+      ],
+      "probe": {
+        "action": "read"
+      }
+    },
+    {
+      "id": "poets-org-tr2",
+      "url": "https://poets.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the searchbox named “search”. Enter the text test and confirm the field contains it. Do not submit.",
+      "controlTask": "Click the public text field with the visible hint “search”, type test and confirm the value. Do not submit.",
+      "observedSelector": "input[placeholder=\"search\"]",
+      "requiredName": "search",
+      "outcomeChecks": [
+        {
+          "kind": "value",
+          "selector": "input[placeholder=\"search\"]",
+          "equals": "test"
+        }
+      ],
+      "probe": {
+        "action": "type",
+        "value": "test",
+        "role": "searchbox"
+      }
+    },
+    {
+      "id": "arthritis-org-tr2",
+      "url": "https://www.arthritis.org/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “About Arthritis”. Verify the public destination at /about-arthritis.",
+      "controlTask": "Click “About Arthritis” and verify the public destination at /about-arthritis.",
+      "observedSelector": "a[href=\"https\\:\\/\\/www\\.arthritis\\.org\\/about-arthritis\"][tabindex=\"-1\"]",
+      "outcomeChecks": [
+        {
+          "kind": "url-path",
+          "equals": "/about-arthritis"
+        }
+      ],
+      "minimumTabPresses": 2,
+      "probe": {
+        "action": "click"
+      }
+    },
+    {
+      "id": "cloudconvert-com-tr2",
+      "url": "https://cloudconvert.com/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Vendor engines and open-source converters selected per file type”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "controlTask": "At normal width, read the passage beginning “Vendor engines and open-source converters selected per file type” and verify all its text is visible without horizontal scrolling.",
+      "observedSelector": "#app > main > div > div > section > section > div:nth-of-type(3) > aside > ul > li:nth-of-type(1)",
+      "outcomeChecks": [
+        {
+          "kind": "contains",
+          "selector": "#app > main > div > div > section > section > div:nth-of-type(3) > aside > ul > li:nth-of-type(1)",
+          "equals": "Vendor engines and open-source converters selected per file type"
+        },
+        {
+          "kind": "fits-width",
+          "selector": "#app > main > div > div > section > section > div:nth-of-type(3) > aside > ul > li:nth-of-type(1)"
+        }
+      ],
+      "probe": {
+        "action": "read"
+      }
+    },
+    {
+      "id": "spaggiari-eu-tr2",
+      "url": "https://www.spaggiari.eu/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “SCOPRI DI PIÙ”. Verify the public destination at /dreamshaper.",
+      "controlTask": "Click “SCOPRI DI PIÙ” and verify the public destination at /dreamshaper.",
+      "observedSelector": "a[href=\"https\\:\\/\\/www\\.spaggiari\\.eu\\/dreamshaper\\?hsLang\\=it\"][tabindex=\"-1\"]",
+      "outcomeChecks": [
+        {
+          "kind": "url-path",
+          "equals": "/dreamshaper"
+        }
+      ],
+      "minimumTabPresses": 2,
+      "probe": {
+        "action": "click"
+      }
+    },
+    {
+      "id": "open-video-tr2",
+      "url": "https://open.video/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Combat sports — Angela Hill”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "controlTask": "At normal width, read the passage beginning “Combat sports — Angela Hill” and verify all its text is visible without horizontal scrolling.",
+      "observedSelector": "#carousel > a:nth-of-type(3) > div:nth-of-type(2) > div > p",
+      "outcomeChecks": [
+        {
+          "kind": "contains",
+          "selector": "#carousel > a:nth-of-type(3) > div:nth-of-type(2) > div > p",
+          "equals": "Combat sports — Angela Hill"
+        },
+        {
+          "kind": "fits-width",
+          "selector": "#carousel > a:nth-of-type(3) > div:nth-of-type(2) > div > p"
+        }
+      ],
+      "probe": {
+        "action": "read"
+      }
+    },
+    {
+      "id": "unglobalcompact-org-tr2",
+      "url": "https://unglobalcompact.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the textbox named “Search”. Enter the text test and confirm the field contains it. Do not submit.",
+      "controlTask": "Click the public text field with the visible hint “Search”, type test and confirm the value. Do not submit.",
+      "observedSelector": "#search_keywords",
+      "requiredName": "Search",
+      "outcomeChecks": [
+        {
+          "kind": "value",
+          "selector": "#search_keywords",
+          "equals": "test"
+        }
+      ],
+      "probe": {
+        "action": "type",
+        "value": "test",
+        "role": "textbox"
+      }
+    },
+    {
+      "id": "discuz-vip-tr2",
+      "url": "https://www.discuz.vip/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “更多解决方案请联系官方客服进行交流。”. Verify its content becomes visible.",
+      "controlTask": "Click “更多解决方案请联系官方客服进行交流。” and verify its content becomes visible.",
+      "observedSelector": "#gaoyanzhi_3__plans > div > div > p > a > span",
+      "outcomeChecks": [
+        {
+          "kind": "visible",
+          "selector": "section:nth-of-type(4) > div > div:nth-of-type(2) > div:nth-of-type(1)"
+        }
+      ],
+      "minimumTabPresses": 2,
+      "probe": {
+        "action": "click"
+      }
+    },
+    {
+      "id": "mtv-com-tr2",
+      "url": "https://www.mtv.com/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “The Challenge: Home Turf S1 E5 Tori Deal 26m 39s 02/28/2024”. Verify the public destination at /episodes/1rq6s7.",
+      "controlTask": "Click “The Challenge: Home Turf S1 E5 Tori Deal 26m 39s 02/28/2024” and verify the public destination at /episodes/1rq6s7.",
+      "observedSelector": "#homepage_module-1_standard-16x9-carousel_episode-card-4",
+      "outcomeChecks": [
+        {
+          "kind": "url-path",
+          "equals": "/episodes/1rq6s7"
+        }
+      ],
+      "minimumTabPresses": 2,
+      "probe": {
+        "action": "click"
+      }
+    },
+    {
+      "id": "uline-com-tr2",
+      "url": "https://www.uline.com/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "controlTask": "At normal width, read the passage beginning “Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca” and verify all its text is visible without horizontal scrolling.",
+      "observedSelector": "#tdfooter",
+      "outcomeChecks": [
+        {
+          "kind": "contains",
+          "selector": "#tdfooter",
+          "equals": "Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca"
+        },
+        {
+          "kind": "fits-width",
+          "selector": "#tdfooter"
+        }
+      ],
+      "probe": {
+        "action": "read"
+      }
+    },
+    {
+      "id": "doodles-google-tr2",
+      "url": "https://www.doodles.google/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “Nov 03, 2026 US Midterm Elections 2026”. Verify the public destination at /doodle/us-midterm-elections-2026/.",
+      "controlTask": "Click “Nov 03, 2026 US Midterm Elections 2026” and verify the public destination at /doodle/us-midterm-elections-2026/.",
+      "observedSelector": "a[href=\"\\/doodle\\/us-midterm-elections-2026\\/\"][tabindex=\"-1\"]",
+      "outcomeChecks": [
+        {
+          "kind": "url-path",
+          "equals": "/doodle/us-midterm-elections-2026/"
+        }
+      ],
+      "minimumTabPresses": 2,
+      "probe": {
+        "action": "click"
+      }
+    },
+    {
+      "id": "asme-org-tr2",
+      "url": "https://www.asme.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the searchbox named “Search products, events, courses, resource categories...”. Enter the text test and confirm the field contains it. Do not submit.",
+      "controlTask": "Click the public text field with the visible hint “Search products, events, courses, resource categories...”, type test and confirm the value. Do not submit.",
+      "observedSelector": "#home-search",
+      "requiredName": "Search products, events, courses, resource categories...",
+      "outcomeChecks": [
+        {
+          "kind": "value",
+          "selector": "#home-search",
+          "equals": "test"
+        }
+      ],
+      "probe": {
+        "action": "type",
+        "value": "test",
+        "role": "searchbox"
+      }
+    },
+    {
+      "id": "icq-com-tr2",
+      "url": "https://icq.com/desktop/en?#mac",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “Eng”. Verify its content becomes visible.",
+      "controlTask": "Click “Eng” and verify its content becomes visible.",
+      "observedSelector": "#header > div > div > div:nth-of-type(1)",
+      "outcomeChecks": [
+        {
+          "kind": "visible",
+          "selector": "#header > div > div > div:nth-of-type(2)"
+        }
+      ],
+      "minimumTabPresses": 2,
+      "probe": {
+        "action": "click"
+      }
+    },
+    {
+      "id": "idrive-com-tr2",
+      "url": "https://www.idrive.com/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “Cloud Applications Backup”. Verify its content becomes visible.",
+      "controlTask": "Click “Cloud Applications Backup” and verify its content becomes visible.",
+      "observedSelector": "header > nav > div > ul > li:nth-of-type(6) > span",
+      "outcomeChecks": [
+        {
+          "kind": "visible",
+          "selector": "header > nav > div > ul > li:nth-of-type(6) > ul"
+        }
+      ],
+      "minimumTabPresses": 2,
+      "probe": {
+        "action": "click"
+      }
+    },
+    {
+      "id": "cato-org-tr2",
+      "url": "https://www.cato.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the searchbox named “Search”. Enter the text test and confirm the field contains it. Do not submit.",
+      "controlTask": "Click the public text field with the visible hint “Search”, type test and confirm the value. Do not submit.",
+      "observedSelector": "#query",
+      "requiredName": "Search",
+      "outcomeChecks": [
+        {
+          "kind": "value",
+          "selector": "#query",
+          "equals": "test"
+        }
+      ],
+      "probe": {
+        "action": "type",
+        "value": "test",
+        "role": "searchbox"
+      }
+    },
+    {
+      "id": "dol-gov-tr2",
+      "url": "https://www.dol.gov/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “FEDERAL GOVERNMENT”. Verify its content becomes visible.",
+      "controlTask": "Click “FEDERAL GOVERNMENT” and verify its content becomes visible.",
+      "observedSelector": "#block-dolfootermenu-3 > section > span",
+      "outcomeChecks": [
+        {
+          "kind": "visible",
+          "selector": "div:nth-of-type(1) > div > footer > div:nth-of-type(1) > a"
+        }
+      ],
+      "minimumTabPresses": 2,
+      "probe": {
+        "action": "click"
+      }
+    }
+  ]
+}

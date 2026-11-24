@@ -1,0 +1,12 @@
+{
+  "barrier": "The Assistenza panel is hidden by default and shown by CSS when its wrapper is hovered or has the open class. The previous display toggle hid the panel during pointer replay.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#hdr-menu button[aria-controls=\"hdr-assistenza\"]",
+      "target": "#hdr-menu .aux > div.assistenza_clienti:has(> #hdr-assistenza)",
+      "mode": "class",
+      "className": "open"
+    }
+  ]
+}

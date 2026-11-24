@@ -1,0 +1,107 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-fb0b1cbb5d2e-afbfd163",
+    "url": "https://www.readingplus.com/",
+    "persona": "keyboard-only",
+    "task": "Open “Search” by keyboard. Confirm the dialog appeared, then press Escape and confirm it closed.",
+    "controlTask": "Click “Search” and confirm that the dialog opens. Click “Close” to close it.",
+    "observedSelector": "#wrapper-navbar > nav > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(1)",
+    "outcomeChecks": [
+      {
+        "kind": "hidden",
+        "selector": "#searchModal"
+      }
+    ],
+    "barrierClass": 4,
+    "relatedSelectors": [
+      "#searchModal",
+      "#search-close"
+    ],
+    "journey": [
+      {
+        "selector": "#wrapper-navbar > nav > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(1)",
+        "action": "activate",
+        "checks": [
+          {
+            "kind": "visible",
+            "selector": "#searchModal"
+          }
+        ]
+      },
+      {
+        "selector": "#searchModal",
+        "action": "key",
+        "key": "Escape",
+        "pointer": {
+          "action": "click",
+          "selector": "#search-close"
+        }
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "unresolved",
+  "reason": "Journey step 2 did not receive the expected keyboard focus.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-fb0b1cbb5d2e-afbfd163/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 2 did not receive the expected keyboard focus.",
+      "file": "proof/heldout-v5/local/v5-fb0b1cbb5d2e-afbfd163/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-fb0b1cbb5d2e-afbfd163/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-2/after",
+      "persona": "keyboard-only",
+      "iteration": 2,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-fb0b1cbb5d2e-afbfd163/attempt-2/after.json"
+    },
+    {
+      "name": "attempt-3/after",
+      "persona": "keyboard-only",
+      "iteration": 3,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-fb0b1cbb5d2e-afbfd163/attempt-3/after.json"
+    },
+    {
+      "name": "attempt-4/after",
+      "persona": "keyboard-only",
+      "iteration": 4,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-fb0b1cbb5d2e-afbfd163/attempt-4/after.json"
+    },
+    {
+      "name": "attempt-5/after",
+      "persona": "keyboard-only",
+      "iteration": 5,
+      "status": "fail",
+      "reason": "Journey step 2 did not receive the expected keyboard focus.",
+      "file": "proof/heldout-v5/local/v5-fb0b1cbb5d2e-afbfd163/attempt-5/after.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

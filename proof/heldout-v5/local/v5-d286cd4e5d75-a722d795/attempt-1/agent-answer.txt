@@ -1,0 +1,11 @@
+{
+  "barrier": "Keyboard activation opens the search dialog, but focus remains on the page body, so the dialog does not receive Escape.",
+  "rules": [
+    {
+      "action": "dialogBehavior",
+      "dialog": "#searchModal",
+      "opener": "#portal-globalnav > li:nth-of-type(8) > button",
+      "close": "#searchModal .modal-header > button[data-bs-dismiss=\"modal\"]"
+    }
+  ]
+}

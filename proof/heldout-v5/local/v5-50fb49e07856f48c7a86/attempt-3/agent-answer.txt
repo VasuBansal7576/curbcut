@@ -1,0 +1,75 @@
+{
+  "barrier": "The desktop snapshot places the topics column 402 CSS pixels from the left edge and shows the target as a 460-pixel flex row. That layout puts the passage beyond a 320-pixel viewport.",
+  "rules": [
+    {
+      "selector": "div.layout:has(div.main-column)",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div:has(> div.main-column)",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.main-column",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.main-column > div.area:has(> div.topics__article), div.main-column > div.area > div.topics__article",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.topics__article > ul > li.category5:first-of-type",
+      "action": "injectCSS",
+      "value": {
+        "flex-wrap": "wrap",
+        "width": "auto",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "div.topics__article > ul > li.category5:first-of-type > div.topics__article--contents",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "div.topics__article > ul > li.category5:first-of-type > div.topics__article--contents p, div.topics__article > ul > li.category5:first-of-type > div.topics__article--contents p a",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "normal",
+        "overflow-wrap": "anywhere",
+        "height": "auto",
+        "max-height": "none"
+      }
+    }
+  ]
+}

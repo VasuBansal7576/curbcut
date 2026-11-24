@@ -1,0 +1,65 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#alerta, #alerta > ul:first-of-type, #alerta > ul:first-of-type > li.alerta-item",
+      "count": 4,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "alerta",
+          "classes": [
+            "alerta"
+          ],
+          "label": "PÓDCAST EN ACCIÓNCómo ganar en la Bolsa española más allá de los bancos. PÓDCAST GENIOS DE LAS FINAN"
+        },
+        {
+          "tag": "ul",
+          "classes": [],
+          "label": "PÓDCAST EN ACCIÓNCómo ganar en la Bolsa española más allá de los bancos. PÓDCAST GENIOS DE LAS FINAN"
+        },
+        {
+          "tag": "li",
+          "classes": [
+            "alerta-item",
+            "ultima",
+            "hora",
+            "mostrar"
+          ],
+          "label": "PÓDCAST EN ACCIÓNCómo ganar en la Bolsa española más allá de los bancos."
+        },
+        {
+          "tag": "li",
+          "classes": [
+            "alerta-item",
+            "ultima",
+            "hora"
+          ],
+          "label": "PÓDCAST GENIOS DE LAS FINANZASDietrich Mateschitz, el visionario del márketing que dio alas a Red Bu"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "#alerta > ul:first-of-type > li.alerta-item > p",
+      "count": 2,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "p",
+          "classes": [],
+          "label": "PÓDCAST EN ACCIÓNCómo ganar en la Bolsa española más allá de los bancos."
+        },
+        {
+          "tag": "p",
+          "classes": [],
+          "label": "PÓDCAST GENIOS DE LAS FINANZASDietrich Mateschitz, el visionario del márketing que dio alas a Red Bu"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "metacritic-most-popular-games",
+  "url": "https://www.metacritic.com/",
+  "persona": "keyboard-only",
+  "observedSelector": "[data-testid=\"games-carousel\"] [data-testid=\"header-menu-item\"]:nth-child(3)",
+  "successSelector": "[data-testid=\"games-carousel\"] [data-testid=\"header-menu-item\"]:nth-child(3)[class*=\"global-header-menu__item--active\"]",
+  "task": "First assert the Most Popular control in the homepage Games carousel is in the sequential keyboard focus order. Use Tab and Enter to select Most Popular and verify it becomes the selected Games carousel category.",
+  "controlTask": "Click Most Popular in the homepage Games carousel. Verify it becomes the selected Games carousel category."
+}

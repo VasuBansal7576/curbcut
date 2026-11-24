@@ -1,0 +1,10 @@
+{
+  "barrier": "Reading view names the directory search textbox “Search for a forum in the directory,” so it cannot be found by the expected name “Search forums.”",
+  "rules": [
+    {
+      "selector": "#search > div > div:nth-of-type(1) > div > form > div > input",
+      "action": "addLabel",
+      "value": "Search forums"
+    }
+  ]
+}

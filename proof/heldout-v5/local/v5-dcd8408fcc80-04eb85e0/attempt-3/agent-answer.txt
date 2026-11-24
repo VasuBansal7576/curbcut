@@ -1,0 +1,10 @@
+{
+  "barrier": "Focusing “Разделы” and pressing Arrow Down leaves the submenu hidden and inert, so the “Статьи” link cannot be activated from the keyboard.",
+  "rules": [
+    {
+      "selector": "#header > .site-header-inner > ul > li.menu-item:has(> #desktop-section-links-0)",
+      "action": "mirrorHoverEventToFocus",
+      "value": "pointerenter"
+    }
+  ]
+}

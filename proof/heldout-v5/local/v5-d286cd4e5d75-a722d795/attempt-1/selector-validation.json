@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "dialog",
+      "selector": "#searchModal",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "searchModal",
+          "classes": [
+            "modal",
+            "fade"
+          ],
+          "role": "dialog",
+          "label": "× Search Our Site Search Close"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "opener",
+      "selector": "#portal-globalnav > li:nth-of-type(8) > button",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "siteSearchButton",
+            "nav-link"
+          ],
+          "label": "Open Search"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "close",
+      "selector": "#searchModal .modal-header > button[data-bs-dismiss=\"modal\"]",
+      "scope": "#searchModal",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "close",
+            "cancel"
+          ],
+          "label": "Close"
+        }
+      ]
+    }
+  ]
+}

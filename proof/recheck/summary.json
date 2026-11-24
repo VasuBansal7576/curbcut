@@ -1,0 +1,675 @@
+{
+  "at": "2026-11-22T11:10:15.722Z",
+  "startedAt": "2026-11-22T10:42:43.504Z",
+  "tested": 18,
+  "initial": 16,
+  "newPublications": 2,
+  "counts": {
+    "still-verified": 10,
+    "inconclusive": 7,
+    "re-patched": 1
+  },
+  "results": [
+    {
+      "id": "calculator-net-add-days",
+      "outcome": "still-verified",
+      "record": {
+        "at": "2026-11-22T10:43:30.631Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "455d4314-a8c8-47ec-941f-275b3a2fce96",
+        "video": "proof/kane/calculator-net-add-days/2026-11-22T10-42-44.839Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "cfd7b66e-6a38-4371-9bc5-599580e9be62",
+        "afterVideo": "proof/kane/calculator-net-add-days/2026-11-22T10-42-44.839Z/recheck-with/recording.mp4"
+      },
+      "sessions": [
+        {
+          "taskId": "calculator-net-add-days",
+          "phase": "recheck-with",
+          "sessionId": "cfd7b66e-6a38-4371-9bc5-599580e9be62",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 30.0743955,
+          "result": "proof/kane/calculator-net-add-days/2026-11-22T10-42-44.839Z/recheck-with/result.json",
+          "recording": "proof/kane/calculator-net-add-days/2026-11-22T10-42-44.839Z/recheck-with/recording.mp4",
+          "evidencePack": "proof/kane/calculator-net-add-days/2026-11-22T10-42-44.839Z/recheck-with/4fb1f35a-b06c-4cbc-8b94-fe91e5f0878b.evidence"
+        },
+        {
+          "taskId": "calculator-net-add-days",
+          "phase": "recheck-without",
+          "sessionId": "455d4314-a8c8-47ec-941f-275b3a2fce96",
+          "status": "fail",
+          "reason": "Checkpoint assertion failed: \"the exact row ‘textbox · Days to add’ is present\"",
+          "credits": 13.304559999999999,
+          "result": "proof/kane/calculator-net-add-days/2026-11-22T10-42-44.839Z/recheck-without/result.json",
+          "recording": "proof/kane/calculator-net-add-days/2026-11-22T10-42-44.839Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/calculator-net-add-days/2026-11-22T10-42-44.839Z/recheck-without/1174af0c-8f17-4fa0-b68b-fec805fae516.evidence"
+        }
+      ]
+    },
+    {
+      "id": "colorhexa-open-picker",
+      "outcome": "inconclusive",
+      "record": {
+        "at": "2026-11-22T10:44:01.846Z",
+        "event": "rechecked",
+        "without": "inconclusive",
+        "runId": "731d3753-a217-4cdf-bc49-eadf42f33d1f",
+        "video": "proof/kane/colorhexa-open-picker/2026-11-22T10-42-44.846Z/recheck-without/recording.mp4"
+      },
+      "sessions": [
+        {
+          "taskId": "colorhexa-open-picker",
+          "phase": "recheck-without",
+          "sessionId": "731d3753-a217-4cdf-bc49-eadf42f33d1f",
+          "status": "inconclusive",
+          "reason": "The recorded baseline did not include the required trusted Tab traversal.",
+          "credits": 22.303647499999997,
+          "result": "proof/kane/colorhexa-open-picker/2026-11-22T10-42-44.846Z/recheck-without/result.json",
+          "recording": "proof/kane/colorhexa-open-picker/2026-11-22T10-42-44.846Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/colorhexa-open-picker/2026-11-22T10-42-44.846Z/recheck-without/ac59ed63-9368-4f5d-b091-b2a8c5a7bada.evidence"
+        }
+      ]
+    },
+    {
+      "id": "fourmilab-prepare-latitude",
+      "outcome": "still-verified",
+      "record": {
+        "at": "2026-11-22T10:43:27.936Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "8fbeae78-8e1d-4ccf-ab5c-71a9850d2425",
+        "video": "proof/kane/fourmilab-prepare-latitude/2026-11-22T10-42-44.885Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "27d83a96-0d2a-4fbd-81ed-e8e688527b60",
+        "afterVideo": "proof/kane/fourmilab-prepare-latitude/2026-11-22T10-42-44.885Z/recheck-with/recording.mp4"
+      },
+      "sessions": [
+        {
+          "taskId": "fourmilab-prepare-latitude",
+          "phase": "recheck-with",
+          "sessionId": "27d83a96-0d2a-4fbd-81ed-e8e688527b60",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 6.08036,
+          "result": "proof/kane/fourmilab-prepare-latitude/2026-11-22T10-42-44.885Z/recheck-with/result.json",
+          "recording": "proof/kane/fourmilab-prepare-latitude/2026-11-22T10-42-44.885Z/recheck-with/recording.mp4",
+          "evidencePack": "proof/kane/fourmilab-prepare-latitude/2026-11-22T10-42-44.885Z/recheck-with/557f9ddf-70dc-458e-a060-5a218778e347.evidence"
+        },
+        {
+          "taskId": "fourmilab-prepare-latitude",
+          "phase": "recheck-without",
+          "sessionId": "8fbeae78-8e1d-4ccf-ab5c-71a9850d2425",
+          "status": "fail",
+          "reason": "Checkpoint assertion failed: \"the exact row ‘textbox · Latitude’ is present\"",
+          "credits": 18.721799999999998,
+          "result": "proof/kane/fourmilab-prepare-latitude/2026-11-22T10-42-44.885Z/recheck-without/result.json",
+          "recording": "proof/kane/fourmilab-prepare-latitude/2026-11-22T10-42-44.885Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/fourmilab-prepare-latitude/2026-11-22T10-42-44.885Z/recheck-without/fe52d127-2701-40c1-adbe-811e8b3460b9.evidence"
+        }
+      ]
+    },
+    {
+      "id": "geeksforgeeks-open-search",
+      "outcome": "inconclusive",
+      "record": {
+        "at": "2026-11-22T10:46:02.864Z",
+        "event": "rechecked",
+        "without": "inconclusive",
+        "runId": "549aee89-f6c9-4fc8-b65c-c1b55f20cc6e",
+        "video": "proof/kane/geeksforgeeks-open-search/2026-11-22T10-44-15.437Z/recheck-without/recording.mp4"
+      },
+      "sessions": [
+        {
+          "taskId": "geeksforgeeks-open-search",
+          "phase": "recheck-without",
+          "sessionId": "549aee89-f6c9-4fc8-b65c-c1b55f20cc6e",
+          "status": "inconclusive",
+          "reason": "The browser did not observe a trusted Enter or Space keypress.",
+          "credits": 36.262532500000006,
+          "result": "proof/kane/geeksforgeeks-open-search/2026-11-22T10-44-15.437Z/recheck-without/result.json",
+          "recording": "proof/kane/geeksforgeeks-open-search/2026-11-22T10-44-15.437Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/geeksforgeeks-open-search/2026-11-22T10-44-15.437Z/recheck-without/ef71b13f-a40b-4f52-96fc-16e39da6fd27.evidence"
+        }
+      ]
+    },
+    {
+      "id": "kidderminster-application-faq",
+      "outcome": "still-verified",
+      "record": {
+        "at": "2026-11-22T10:47:05.025Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "f2b2fda5-445b-42c9-999e-0bcbd292de0a",
+        "video": "proof/kane/kidderminster-application-faq/2026-11-22T10-44-57.576Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "e52f1dec-04f0-4ad0-af4d-4c62455a194d",
+        "afterVideo": "proof/kane/kidderminster-application-faq/2026-11-22T10-44-57.576Z/recheck-with/recording.mp4",
+        "replacedBaseline": "746a0a2b-5612-42be-b9e5-83b59eb02de9"
+      },
+      "sessions": [
+        {
+          "taskId": "kidderminster-application-faq",
+          "phase": "recheck-with",
+          "sessionId": "e52f1dec-04f0-4ad0-af4d-4c62455a194d",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 39.08270149999999,
+          "result": "proof/kane/kidderminster-application-faq/2026-11-22T10-44-57.576Z/recheck-with/result.json",
+          "recording": "proof/kane/kidderminster-application-faq/2026-11-22T10-44-57.576Z/recheck-with/recording.mp4",
+          "evidencePack": "proof/kane/kidderminster-application-faq/2026-11-22T10-44-57.576Z/recheck-with/7cbc945e-778a-4ffb-ae28-321eca2fd128.evidence"
+        },
+        {
+          "taskId": "kidderminster-application-faq",
+          "phase": "recheck-without",
+          "sessionId": "f2b2fda5-445b-42c9-999e-0bcbd292de0a",
+          "status": "fail",
+          "reason": "Tab skips the disclosure; it has no focusable descendants or tabindex, so Enter cannot open it under the keyboard-only constraint.",
+          "credits": 33.1202975,
+          "result": "proof/kane/kidderminster-application-faq/2026-11-22T10-44-57.576Z/recheck-without/result.json",
+          "recording": "proof/kane/kidderminster-application-faq/2026-11-22T10-44-57.576Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/kidderminster-application-faq/2026-11-22T10-44-57.576Z/recheck-without/dc7f8be3-c8b2-4f29-b64f-962cb0f7b83b.evidence"
+        }
+      ]
+    },
+    {
+      "id": "meteoblue-weather-radar",
+      "outcome": "inconclusive",
+      "record": {
+        "at": "2026-11-22T10:49:59.378Z",
+        "event": "rechecked",
+        "without": "inconclusive",
+        "runId": "8a04d392-5a22-456f-98d6-3178a2f3cc17",
+        "video": "proof/kane/meteoblue-weather-radar/2026-11-22T10-46-03.183Z/recheck-without/recording.mp4"
+      },
+      "sessions": [
+        {
+          "taskId": "meteoblue-weather-radar",
+          "phase": "recheck-without",
+          "sessionId": "8a04d392-5a22-456f-98d6-3178a2f3cc17",
+          "status": "inconclusive",
+          "reason": "Child agent failed: Maximum steps exceeded (37/34)",
+          "credits": 64.33601999999999,
+          "result": "proof/kane/meteoblue-weather-radar/2026-11-22T10-46-03.183Z/recheck-without/result.json",
+          "recording": "proof/kane/meteoblue-weather-radar/2026-11-22T10-46-03.183Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/meteoblue-weather-radar/2026-11-22T10-46-03.183Z/recheck-without/7e76228a-bfc8-4694-baff-210065680e2c.evidence"
+        }
+      ]
+    },
+    {
+      "id": "mynoise-open-menu",
+      "outcome": "inconclusive",
+      "record": {
+        "at": "2026-11-22T10:50:14.637Z",
+        "event": "rechecked",
+        "without": "inconclusive",
+        "runId": "94c3a8bc-c3b6-4dce-bd4c-fcfbe2b086c8",
+        "video": "proof/kane/mynoise-open-menu/2026-11-22T10-48-43.265Z/recheck-without/recording.mp4"
+      },
+      "sessions": [
+        {
+          "taskId": "mynoise-open-menu",
+          "phase": "recheck-without",
+          "sessionId": "94c3a8bc-c3b6-4dce-bd4c-fcfbe2b086c8",
+          "status": "inconclusive",
+          "reason": "Could not confirm a single recorded page with the required persona and repair state.",
+          "credits": 23.972055000000005,
+          "result": "proof/kane/mynoise-open-menu/2026-11-22T10-48-43.265Z/recheck-without/result.json",
+          "recording": "proof/kane/mynoise-open-menu/2026-11-22T10-48-43.265Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/mynoise-open-menu/2026-11-22T10-48-43.265Z/recheck-without/428c6b1d-e425-4147-9bba-1e86375892be.evidence"
+        }
+      ]
+    },
+    {
+      "id": "online-conversion-length",
+      "outcome": "still-verified",
+      "record": {
+        "at": "2026-11-22T10:50:35.528Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "d710ee59-d836-448c-9cbe-3bded18c66d1",
+        "video": "proof/kane/online-conversion-length/2026-11-22T10-49-48.745Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "b6e8ab78-4354-4b5d-8112-907abc21aec5",
+        "afterVideo": "proof/kane/online-conversion-length/2026-11-22T10-49-48.745Z/recheck-with/recording.mp4"
+      },
+      "sessions": [
+        {
+          "taskId": "online-conversion-length",
+          "phase": "recheck-with",
+          "sessionId": "b6e8ab78-4354-4b5d-8112-907abc21aec5",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 15.2575525,
+          "result": "proof/kane/online-conversion-length/2026-11-22T10-49-48.745Z/recheck-with/result.json",
+          "recording": "proof/kane/online-conversion-length/2026-11-22T10-49-48.745Z/recheck-with/recording.mp4",
+          "evidencePack": "proof/kane/online-conversion-length/2026-11-22T10-49-48.745Z/recheck-with/8038b4a8-cc32-4520-8a7b-2673731fc530.evidence"
+        },
+        {
+          "taskId": "online-conversion-length",
+          "phase": "recheck-without",
+          "sessionId": "d710ee59-d836-448c-9cbe-3bded18c66d1",
+          "status": "fail",
+          "reason": "Checkpoint assertion failed: \"In Common Length and Distance Conversions, the To unit list fits entirely within the 320-pixel viewport.\"",
+          "credits": 13.362490000000001,
+          "result": "proof/kane/online-conversion-length/2026-11-22T10-49-48.745Z/recheck-without/result.json",
+          "recording": "proof/kane/online-conversion-length/2026-11-22T10-49-48.745Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/online-conversion-length/2026-11-22T10-49-48.745Z/recheck-without/a96b00ec-2d7b-42f9-80ad-de9fc75b6f30.evidence"
+        }
+      ]
+    },
+    {
+      "id": "procurement-journey-considerations",
+      "outcome": "inconclusive",
+      "record": {
+        "at": "2026-11-22T10:52:45.444Z",
+        "event": "rechecked",
+        "without": "inconclusive",
+        "runId": "74ec2f78-71cd-49f8-a98b-2207b2123e4f",
+        "video": "proof/kane/procurement-journey-considerations/2026-11-22T10-49-59.964Z/recheck-without/recording.mp4"
+      },
+      "sessions": [
+        {
+          "taskId": "procurement-journey-considerations",
+          "phase": "recheck-without",
+          "sessionId": "74ec2f78-71cd-49f8-a98b-2207b2123e4f",
+          "status": "inconclusive",
+          "reason": "Maximum steps exceeded (35/34)",
+          "credits": 45.20075750000001,
+          "result": "proof/kane/procurement-journey-considerations/2026-11-22T10-49-59.964Z/recheck-without/result.json",
+          "recording": "proof/kane/procurement-journey-considerations/2026-11-22T10-49-59.964Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/procurement-journey-considerations/2026-11-22T10-49-59.964Z/recheck-without/8a62f2f3-d31d-4b0f-b5ad-e8cf7437c21b.evidence"
+        }
+      ]
+    },
+    {
+      "id": "report-605ca95e172608f662",
+      "outcome": "still-verified",
+      "record": {
+        "at": "2026-11-22T10:45:41.806Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "41ac2ac8-ccba-45cd-9465-a84f698c9ce3",
+        "video": "proof/kane/report-605ca95e172608f662/2026-11-22T10-44-02.093Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "9fb1a907-b63c-4521-b901-1c3de1ad3c65",
+        "afterVideo": "proof/kane/report-605ca95e172608f662/2026-11-22T10-44-02.093Z/recheck-with/recording.mp4"
+      },
+      "sessions": [
+        {
+          "taskId": "report-605ca95e172608f662",
+          "phase": "recheck-with",
+          "sessionId": "9fb1a907-b63c-4521-b901-1c3de1ad3c65",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 25.9219225,
+          "result": "proof/kane/report-605ca95e172608f662/2026-11-22T10-44-02.093Z/recheck-with/result.json",
+          "recording": "proof/kane/report-605ca95e172608f662/2026-11-22T10-44-02.093Z/recheck-with/recording.mp4",
+          "evidencePack": "proof/kane/report-605ca95e172608f662/2026-11-22T10-44-02.093Z/recheck-with/446212d3-532c-48e7-801b-4d2b6ce1a2d7.evidence"
+        },
+        {
+          "taskId": "report-605ca95e172608f662",
+          "phase": "recheck-without",
+          "sessionId": "41ac2ac8-ccba-45cd-9465-a84f698c9ce3",
+          "status": "fail",
+          "reason": "Final verification failed: \"Verify the color spectrum and hue slider appear.\"",
+          "credits": 34.714487500000004,
+          "result": "proof/kane/report-605ca95e172608f662/2026-11-22T10-44-02.093Z/recheck-without/result.json",
+          "recording": "proof/kane/report-605ca95e172608f662/2026-11-22T10-44-02.093Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/report-605ca95e172608f662/2026-11-22T10-44-02.093Z/recheck-without/846dc14c-dc4f-49a4-968f-05386609100a.evidence"
+        }
+      ]
+    },
+    {
+      "id": "report-cb10e18073d48f295a",
+      "outcome": "still-verified",
+      "record": {
+        "at": "2026-11-22T10:47:55.419Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "2825dd5b-91ad-4968-aee2-763e69448559",
+        "video": "proof/kane/report-cb10e18073d48f295a/2026-11-22T10-46-59.451Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "4a0d9dcd-8154-4164-b900-ecc517486693",
+        "afterVideo": "proof/kane/report-cb10e18073d48f295a/2026-11-22T10-46-59.451Z/recheck-with/recording.mp4"
+      },
+      "sessions": [
+        {
+          "taskId": "report-cb10e18073d48f295a",
+          "phase": "recheck-with",
+          "sessionId": "4a0d9dcd-8154-4164-b900-ecc517486693",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 6.430981,
+          "result": "proof/kane/report-cb10e18073d48f295a/2026-11-22T10-46-59.451Z/recheck-with/result.json",
+          "recording": "proof/kane/report-cb10e18073d48f295a/2026-11-22T10-46-59.451Z/recheck-with/recording.mp4",
+          "evidencePack": "proof/kane/report-cb10e18073d48f295a/2026-11-22T10-46-59.451Z/recheck-with/86ebb930-e118-4952-986c-88e274d94128.evidence"
+        },
+        {
+          "taskId": "report-cb10e18073d48f295a",
+          "phase": "recheck-without",
+          "sessionId": "2825dd5b-91ad-4968-aee2-763e69448559",
+          "status": "fail",
+          "reason": "The visible swatch is a non-focusable div (tabIndex -1), so keyboard-only controls cannot open it.",
+          "credits": 9.4487175,
+          "result": "proof/kane/report-cb10e18073d48f295a/2026-11-22T10-46-59.451Z/recheck-without/result.json",
+          "recording": "proof/kane/report-cb10e18073d48f295a/2026-11-22T10-46-59.451Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/report-cb10e18073d48f295a/2026-11-22T10-46-59.451Z/recheck-without/eb2b9a28-c813-4eda-bbc2-e270e38d3179.evidence"
+        }
+      ]
+    },
+    {
+      "id": "sfmta-pause-carousel",
+      "outcome": "inconclusive",
+      "record": {
+        "at": "2026-11-22T10:53:42.693Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "ea41b548-420a-4e9e-a463-c2e71d05f51f",
+        "video": "proof/kane/sfmta-pause-carousel/2026-11-22T10-50-14.915Z/recheck-without/recording.mp4",
+        "with": "inconclusive",
+        "after": "b46f289c-47aa-4c7f-b845-d7f72e644763",
+        "afterVideo": "proof/kane/sfmta-pause-carousel/2026-11-22T10-50-14.915Z/recheck-with/recording.mp4"
+      },
+      "sessions": [
+        {
+          "taskId": "sfmta-pause-carousel",
+          "phase": "recheck-with",
+          "sessionId": "b46f289c-47aa-4c7f-b845-d7f72e644763",
+          "status": "inconclusive",
+          "reason": "Could not confirm a single recorded page with the required persona and repair state.",
+          "credits": 46.548795500000004,
+          "result": "proof/kane/sfmta-pause-carousel/2026-11-22T10-50-14.915Z/recheck-with/result.json",
+          "recording": "proof/kane/sfmta-pause-carousel/2026-11-22T10-50-14.915Z/recheck-with/recording.mp4",
+          "evidencePack": "proof/kane/sfmta-pause-carousel/2026-11-22T10-50-14.915Z/recheck-with/fd84981b-75d0-485e-bd45-82a37d273a28.evidence"
+        },
+        {
+          "taskId": "sfmta-pause-carousel",
+          "phase": "recheck-without",
+          "sessionId": "ea41b548-420a-4e9e-a463-c2e71d05f51f",
+          "status": "fail",
+          "reason": "The visible Play/Pause span has tabindex -1 and is skipped by Tab navigation.",
+          "credits": 51.92262499999998,
+          "result": "proof/kane/sfmta-pause-carousel/2026-11-22T10-50-14.915Z/recheck-without/result.json",
+          "recording": "proof/kane/sfmta-pause-carousel/2026-11-22T10-50-14.915Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/sfmta-pause-carousel/2026-11-22T10-50-14.915Z/recheck-without/db0ad007-73be-4c92-9068-31886960c3f5.evidence"
+        }
+      ]
+    },
+    {
+      "id": "statcounter-edit-chart",
+      "outcome": "still-verified",
+      "record": {
+        "at": "2026-11-22T10:53:44.630Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "f55589b9-3c10-473c-ad12-810a1318a2a0",
+        "video": "proof/kane/statcounter-edit-chart/2026-11-22T10-51-35.095Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "603fcec9-a1a4-4497-956d-2678697066d7",
+        "afterVideo": "proof/kane/statcounter-edit-chart/2026-11-22T10-51-35.095Z/recheck-with/recording.mp4",
+        "replacedBaseline": "795097ec-b1b1-4511-9a13-2f68c5fa359b"
+      },
+      "sessions": [
+        {
+          "taskId": "statcounter-edit-chart",
+          "phase": "recheck-with",
+          "sessionId": "603fcec9-a1a4-4497-956d-2678697066d7",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 23.893642,
+          "result": "proof/kane/statcounter-edit-chart/2026-11-22T10-51-35.095Z/recheck-with/result.json",
+          "recording": "proof/kane/statcounter-edit-chart/2026-11-22T10-51-35.095Z/recheck-with/recording.mp4",
+          "evidencePack": "proof/kane/statcounter-edit-chart/2026-11-22T10-51-35.095Z/recheck-with/460d893a-1d50-4a33-8bc6-d4df7aec70aa.evidence"
+        },
+        {
+          "taskId": "statcounter-edit-chart",
+          "phase": "recheck-without",
+          "sessionId": "f55589b9-3c10-473c-ad12-810a1318a2a0",
+          "status": "fail",
+          "reason": "Edit Chart Data has tabindex -1 and was skipped by the visible keyboard tab sequence.",
+          "credits": 42.27637499999999,
+          "result": "proof/kane/statcounter-edit-chart/2026-11-22T10-51-35.095Z/recheck-without/result.json",
+          "recording": "proof/kane/statcounter-edit-chart/2026-11-22T10-51-35.095Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/statcounter-edit-chart/2026-11-22T10-51-35.095Z/recheck-without/ee086f3e-d852-4836-9650-57273af0c8fb.evidence"
+        }
+      ]
+    },
+    {
+      "id": "unitconverters-length",
+      "outcome": "re-patched",
+      "record": {
+        "at": "2026-11-22T10:53:28.158Z",
+        "event": "broken",
+        "without": "fail",
+        "runId": "a496782e-9c55-4b05-86a4-5523941bb947",
+        "video": "proof/kane/unitconverters-length/2026-11-22T10-52-45.985Z/recheck-without/recording.mp4",
+        "with": "fail",
+        "after": "46e6832d-8f7e-4238-807b-5aa3c7740af3",
+        "afterVideo": "proof/kane/unitconverters-length/2026-11-22T10-52-45.985Z/recheck-with/recording.mp4"
+      },
+      "sessions": [
+        {
+          "taskId": "unitconverters-length",
+          "phase": "recheck-with",
+          "sessionId": "46e6832d-8f7e-4238-807b-5aa3c7740af3",
+          "status": "fail",
+          "reason": "Checkpoint assertion failed: \"the complete To value field fits within the 320-pixel viewport\"",
+          "credits": 7.93779,
+          "result": "proof/kane/unitconverters-length/2026-11-22T10-52-45.985Z/recheck-with/result.json",
+          "recording": "proof/kane/unitconverters-length/2026-11-22T10-52-45.985Z/recheck-with/recording.mp4",
+          "evidencePack": "proof/kane/unitconverters-length/2026-11-22T10-52-45.985Z/recheck-with/c87fe958-8f08-437b-99be-14151a9acbc7.evidence"
+        },
+        {
+          "taskId": "unitconverters-length",
+          "phase": "recheck-without",
+          "sessionId": "a496782e-9c55-4b05-86a4-5523941bb947",
+          "status": "fail",
+          "reason": "Checkpoint assertion failed: \"the complete To value field fits within the 320-pixel viewport\"",
+          "credits": 11.47533,
+          "result": "proof/kane/unitconverters-length/2026-11-22T10-52-45.985Z/recheck-without/result.json",
+          "recording": "proof/kane/unitconverters-length/2026-11-22T10-52-45.985Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/unitconverters-length/2026-11-22T10-52-45.985Z/recheck-without/c68f7885-1255-4811-8219-1a95054d669f.evidence"
+        },
+        {
+          "taskId": "unitconverters-length",
+          "phase": "before",
+          "sessionId": "26e0f7bd-04e7-440e-8c4c-ead055ddb5d0",
+          "status": "fail",
+          "reason": "Checkpoint assertion failed: \"the complete To value field fits within the 320-pixel viewport\"",
+          "credits": 8.39108,
+          "result": "proof/kane/unitconverters-length/2026-11-22T10-54-05.258Z/before/result.json",
+          "recording": "proof/kane/unitconverters-length/2026-11-22T10-54-05.258Z/before/recording.mp4",
+          "evidencePack": "proof/kane/unitconverters-length/2026-11-22T10-54-05.258Z/before/7abf63b9-f303-461b-ab97-c40be9786fe5.evidence"
+        },
+        {
+          "taskId": "unitconverters-length",
+          "phase": "control",
+          "sessionId": "88d63a56-18a4-4d54-8df9-39af1e450dd2",
+          "status": "fail",
+          "reason": "Checkpoint assertion failed: \"the complete To value field fits within the 320-pixel viewport\"",
+          "credits": 14.172829999999998,
+          "result": "proof/kane/unitconverters-length/2026-11-22T10-54-05.258Z/control/result.json",
+          "recording": "proof/kane/unitconverters-length/2026-11-22T10-54-05.258Z/control/recording.mp4",
+          "evidencePack": "proof/kane/unitconverters-length/2026-11-22T10-54-05.258Z/control/101f9a8a-4c81-42fa-bb11-42e46dfb9caf.evidence"
+        },
+        {
+          "taskId": "unitconverters-length",
+          "phase": "after",
+          "sessionId": "595c3531-393f-4c70-abd0-e5cd5093e8f7",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 13.697265000000002,
+          "result": "proof/kane/unitconverters-length/2026-11-22T11-06-33.087Z/attempt-1/after/result.json",
+          "recording": "proof/kane/unitconverters-length/2026-11-22T11-06-33.087Z/attempt-1/after/recording.mp4",
+          "evidencePack": "proof/kane/unitconverters-length/2026-11-22T11-06-33.087Z/attempt-1/after/0baaf533-1e81-42a6-92d6-d60701c93ddd.evidence"
+        },
+        {
+          "taskId": "unitconverters-length",
+          "phase": "control",
+          "sessionId": "e12b4dae-6a65-4197-b490-eb2c796b3bb7",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 16.2721825,
+          "result": "proof/kane/unitconverters-length/2026-11-22T11-06-33.087Z/control/result.json",
+          "recording": "proof/kane/unitconverters-length/2026-11-22T11-06-33.087Z/control/recording.mp4",
+          "evidencePack": "proof/kane/unitconverters-length/2026-11-22T11-06-33.087Z/control/00262a75-d8d4-460e-bc44-be45387342bf.evidence"
+        }
+      ]
+    },
+    {
+      "id": "ventusky-precipitation",
+      "outcome": "still-verified",
+      "record": {
+        "at": "2026-11-22T10:59:23.102Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "c78d6006-c215-48b2-9e3b-6d4519c89c45",
+        "video": "proof/kane/ventusky-precipitation/2026-11-22T10-55-11.916Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "2f0d2a79-5516-4a7a-b642-0474f8b3edad",
+        "afterVideo": "proof/kane/ventusky-precipitation/2026-11-22T10-55-11.916Z/recheck-with/recording.mp4",
+        "replacedBaseline": "aefafb4e-c1c2-49d7-9ee8-18a7c615aa28"
+      },
+      "sessions": [
+        {
+          "taskId": "ventusky-precipitation",
+          "phase": "recheck-with",
+          "sessionId": "2f0d2a79-5516-4a7a-b642-0474f8b3edad",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 25.20715,
+          "result": "proof/kane/ventusky-precipitation/2026-11-22T10-55-11.916Z/recheck-with/result.json",
+          "recording": "proof/kane/ventusky-precipitation/2026-11-22T10-55-11.916Z/recheck-with/recording.mp4",
+          "evidencePack": "proof/kane/ventusky-precipitation/2026-11-22T10-55-11.916Z/recheck-with/b0c35d77-768f-4204-869c-6c0d75bd2d71.evidence"
+        },
+        {
+          "taskId": "ventusky-precipitation",
+          "phase": "recheck-without",
+          "sessionId": "c78d6006-c215-48b2-9e3b-6d4519c89c45",
+          "status": "fail",
+          "reason": "Final verification failed: \"the 3 hours accumulation option appears\"",
+          "credits": 45.09034750000001,
+          "result": "proof/kane/ventusky-precipitation/2026-11-22T10-55-11.916Z/recheck-without/result.json",
+          "recording": "proof/kane/ventusky-precipitation/2026-11-22T10-55-11.916Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/ventusky-precipitation/2026-11-22T10-55-11.916Z/recheck-without/ce7ecc3c-473b-471e-a8ef-fc8897d8c07b.evidence"
+        }
+      ]
+    },
+    {
+      "id": "w3schools-select-swatch",
+      "outcome": "inconclusive",
+      "record": {
+        "at": "2026-11-22T10:59:00.995Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "e401c7ac-6b5c-47fe-ae31-8da3cdbf19f0",
+        "video": "proof/kane/w3schools-select-swatch/2026-11-22T10-55-38.882Z/recheck-without/recording.mp4",
+        "with": "inconclusive",
+        "after": "2484ecef-7287-44df-b3bc-abb8b396e170",
+        "afterVideo": "proof/kane/w3schools-select-swatch/2026-11-22T10-55-38.882Z/recheck-with/recording.mp4"
+      },
+      "sessions": [
+        {
+          "taskId": "w3schools-select-swatch",
+          "phase": "recheck-with",
+          "sessionId": "2484ecef-7287-44df-b3bc-abb8b396e170",
+          "status": "inconclusive",
+          "reason": "Maximum steps exceeded (42/34)",
+          "credits": 25.218069999999994,
+          "result": "proof/kane/w3schools-select-swatch/2026-11-22T10-55-38.882Z/recheck-with/result.json",
+          "recording": "proof/kane/w3schools-select-swatch/2026-11-22T10-55-38.882Z/recheck-with/recording.mp4",
+          "evidencePack": "proof/kane/w3schools-select-swatch/2026-11-22T10-55-38.882Z/recheck-with/af51af8a-db51-4fef-979a-982c9c9572f9.evidence"
+        },
+        {
+          "taskId": "w3schools-select-swatch",
+          "phase": "recheck-without",
+          "sessionId": "e401c7ac-6b5c-47fe-ae31-8da3cdbf19f0",
+          "status": "fail",
+          "reason": "Tab focus remains in the long header navigation and cannot reach the map within the run limit.",
+          "credits": 41.2494825,
+          "result": "proof/kane/w3schools-select-swatch/2026-11-22T10-55-38.882Z/recheck-without/result.json",
+          "recording": "proof/kane/w3schools-select-swatch/2026-11-22T10-55-38.882Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/w3schools-select-swatch/2026-11-22T10-55-38.882Z/recheck-without/2e1d78f0-e602-4d4a-ba2d-053561df7f7d.evidence"
+        }
+      ]
+    },
+    {
+      "id": "nws-radar-play-pause",
+      "outcome": "still-verified",
+      "record": {
+        "at": "2026-11-22T11:07:42.293Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "1c2c3e7f-8163-43e9-b77b-852f06bd7192",
+        "video": "proof/kane/nws-radar-play-pause/2026-11-22T11-06-33.141Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "a057efd1-e234-4b03-a9c1-baddd930e760",
+        "afterVideo": "proof/kane/nws-radar-play-pause/2026-11-22T11-06-33.141Z/recheck-with/recording.mp4"
+      },
+      "sessions": [
+        {
+          "taskId": "nws-radar-play-pause",
+          "phase": "recheck-with",
+          "sessionId": "a057efd1-e234-4b03-a9c1-baddd930e760",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 16.320149999999998,
+          "result": "proof/kane/nws-radar-play-pause/2026-11-22T11-06-33.141Z/recheck-with/result.json",
+          "recording": "proof/kane/nws-radar-play-pause/2026-11-22T11-06-33.141Z/recheck-with/recording.mp4",
+          "evidencePack": "proof/kane/nws-radar-play-pause/2026-11-22T11-06-33.141Z/recheck-with/5e61a870-7e63-4733-9525-859237e3564d.evidence"
+        },
+        {
+          "taskId": "nws-radar-play-pause",
+          "phase": "recheck-without",
+          "sessionId": "1c2c3e7f-8163-43e9-b77b-852f06bd7192",
+          "status": "fail",
+          "reason": "After two Tabs, focus cycles only between header links; Play is a non-focusable div with tabIndex -1.",
+          "credits": 14.680729999999999,
+          "result": "proof/kane/nws-radar-play-pause/2026-11-22T11-06-33.141Z/recheck-without/result.json",
+          "recording": "proof/kane/nws-radar-play-pause/2026-11-22T11-06-33.141Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/nws-radar-play-pause/2026-11-22T11-06-33.141Z/recheck-without/40d0c1fc-720c-4628-9a97-f84542811bc0.evidence"
+        }
+      ]
+    },
+    {
+      "id": "report-d6870c43f8831c2d3b",
+      "outcome": "still-verified",
+      "record": {
+        "at": "2026-11-22T11:08:59.592Z",
+        "event": "rechecked",
+        "without": "fail",
+        "runId": "12547fe8-7147-4b45-a813-3669d1af1177",
+        "video": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-08-05.103Z/recheck-without/recording.mp4",
+        "with": "pass",
+        "after": "402f819e-f5de-4821-98e0-13b6cc803fa0",
+        "afterVideo": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-08-05.103Z/recheck-with/recording.mp4"
+      },
+      "sessions": [
+        {
+          "taskId": "report-d6870c43f8831c2d3b",
+          "phase": "recheck-with",
+          "sessionId": "402f819e-f5de-4821-98e0-13b6cc803fa0",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 4.471425,
+          "result": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-08-05.103Z/recheck-with/result.json",
+          "recording": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-08-05.103Z/recheck-with/recording.mp4",
+          "evidencePack": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-08-05.103Z/recheck-with/4a1e559d-eb4d-449f-8998-87f452567687.evidence"
+        },
+        {
+          "taskId": "report-d6870c43f8831c2d3b",
+          "phase": "recheck-without",
+          "sessionId": "12547fe8-7147-4b45-a813-3669d1af1177",
+          "status": "fail",
+          "reason": "Tab moves from the logo directly to search, and Shift+Tab returns to logo; the swatch is not keyboard reachable.",
+          "credits": 15.02562,
+          "result": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-08-05.103Z/recheck-without/result.json",
+          "recording": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-08-05.103Z/recheck-without/recording.mp4",
+          "evidencePack": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-08-05.103Z/recheck-without/1bc0d42f-6bef-4716-83aa-c0419d584c4b.evidence"
+        }
+      ]
+    }
+  ]
+}

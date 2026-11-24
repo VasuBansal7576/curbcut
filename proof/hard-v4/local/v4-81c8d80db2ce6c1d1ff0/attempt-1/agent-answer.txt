@@ -1,0 +1,10 @@
+{
+  "barrier": "The search input has no accessible name and is exposed as a combobox. The allowed rules can supply the name Search, but they cannot set the requested searchbox role.",
+  "rules": [
+    {
+      "selector": "#layout > header > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2) > form > div > div > input",
+      "action": "addLabel",
+      "value": "Search"
+    }
+  ]
+}

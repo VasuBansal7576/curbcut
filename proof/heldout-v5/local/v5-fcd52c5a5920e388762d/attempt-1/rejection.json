@@ -1,0 +1,44 @@
+{
+  "reason": "Live selector validation failed. selector \"dialog[open]:modal\": no matches",
+  "rules": [
+    {
+      "selector": "dialog[open]:modal",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "#txt-search1",
+      "action": "addLabel",
+      "value": "Search Game..."
+    }
+  ],
+  "selectorValidation": {
+    "ok": false,
+    "matches": [
+      {
+        "index": 0,
+        "field": "selector",
+        "selector": "dialog[open]:modal",
+        "count": 0,
+        "issue": "no matches",
+        "matches": []
+      },
+      {
+        "index": 1,
+        "field": "selector",
+        "selector": "#txt-search1",
+        "count": 1,
+        "issue": null,
+        "matches": [
+          {
+            "tag": "input",
+            "id": "txt-search1",
+            "classes": [
+              "txt-search"
+            ],
+            "label": ""
+          }
+        ]
+      }
+    ]
+  }
+}

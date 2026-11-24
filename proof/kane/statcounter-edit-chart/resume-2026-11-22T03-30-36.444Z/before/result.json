@@ -1,0 +1,1609 @@
+{
+  "status": "fail",
+  "runId": "795097ec-b1b1-4511-9a13-2f68c5fa359b",
+  "reason": "Checkpoint assertion failed: \"the Edit Chart Data control below the main chart is keyboard focusable\"",
+  "summary": "The page loaded and showed the Edit Chart Data button, but the agent performed an analysis and immediately made the focusability assertion. It did not use the required keyboard navigation to place focus on the visible control, so the failed check does not demonstrate that the site control is broken.\nRestart from the loaded chart, use Tab or Shift+Tab until the Edit Chart Data button visibly receives focus, then press Enter and confirm that the settings form includes the Region selector.",
+  "resultCode": 720,
+  "reasonCode": "assertion_error.checkpoint_failed",
+  "credits": 13.14141,
+  "exitCode": 1,
+  "steps": [
+    "navigate: Navigate to https://gs.statcounter.com/",
+    "analyze: ANALYZE(textual_visual, 'the Edit Chart Data control below the main chart is key",
+    "assert: the Edit Chart Data control below the main chart is keyboard focusable"
+  ],
+  "evidencePack": "proof/kane/statcounter-edit-chart/resume-2026-11-22T03-30-36.444Z/before/d570f0fc-d2bf-4a1c-b8d0-2b366402c366.evidence",
+  "evidenceValid": true,
+  "observedOutcome": {
+    "selector": "form#statistics select#region",
+    "visible": false
+  },
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "keyboard-only",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920,
+      "keys": {
+        "tab": 0,
+        "activate": 0,
+        "other": 0
+      }
+    },
+    "readerVisible": false,
+    "width": 1280,
+    "fixtureFixed": false,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "https://gs.statcounter.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "#section-home",
+    "nodes": [
+      {
+        "selector": "#btn-edit-chart",
+        "role": "text",
+        "name": "Edit Chart Data",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1039,
+        "width": 142
+      },
+      {
+        "selector": "#chartContent",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 99,
+        "width": 1081
+      },
+      {
+        "selector": "header",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.row.clearfix",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.col.col-span-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 654,
+        "width": 547
+      },
+      {
+        "selector": "#nav-main",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 654,
+        "width": 547
+      },
+      {
+        "selector": "#nav-press",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 900,
+        "width": 106
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Press Releases",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 900,
+        "width": 106
+      },
+      {
+        "selector": "#nav-faq",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1024,
+        "width": 29
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "FAQ",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1024,
+        "width": 29
+      },
+      {
+        "selector": "#nav-about",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1071,
+        "width": 44
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "About",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1071,
+        "width": 44
+      },
+      {
+        "selector": "#nav-feedback",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1133,
+        "width": 69
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Feedback",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1133,
+        "width": 69
+      },
+      {
+        "selector": "div.col.col-span-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 78,
+        "width": 547
+      },
+      {
+        "selector": "#logo-statcounter-2017",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 78,
+        "width": 547
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Statcounter Global Stats",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 78,
+        "width": 281
+      },
+      {
+        "selector": "#main-el",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.row.clearfix",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.col.col-span-12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 78,
+        "width": 1123
+      },
+      {
+        "selector": "table.stats-snapshot",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 58,
+        "width": 1163
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "68.79%",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 73,
+        "width": 165
+      },
+      {
+        "selector": "div.bar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 73,
+        "width": 165
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "16.59%",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 267,
+        "width": 165
+      },
+      {
+        "selector": "div.bar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 267,
+        "width": 165
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "5.36%",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 461,
+        "width": 165
+      },
+      {
+        "selector": "div.bar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 461,
+        "width": 165
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "2.57%",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 654,
+        "width": 165
+      },
+      {
+        "selector": "div.bar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 654,
+        "width": 165
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "2.16%",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 848,
+        "width": 165
+      },
+      {
+        "selector": "div.bar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 848,
+        "width": 165
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "2.05%",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1042,
+        "width": 165
+      },
+      {
+        "selector": "div.bar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1042,
+        "width": 165
+      },
+      {
+        "selector": "div.row.clearfix",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.col.col-span-12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 78,
+        "width": 1123
+      },
+      {
+        "selector": "div.panel.chart-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 78,
+        "width": 1123
+      },
+      {
+        "selector": "#chartHeaderTitle",
+        "role": "heading",
+        "name": "Browser Market Share Worldwide",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 99,
+        "width": 921
+      },
+      {
+        "selector": "#chartHeaderRange",
+        "role": "heading",
+        "name": "Oct 2025 - Oct 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 99,
+        "width": 1081
+      },
+      {
+        "selector": "#backgroundContainer",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 79,
+        "width": 1121
+      },
+      {
+        "selector": "#chartdiv_MSLine",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 99,
+        "width": 1081
+      },
+      {
+        "selector": "#save-png",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 99,
+        "width": 220
+      },
+      {
+        "selector": "#download-image",
+        "role": "link",
+        "name": "Save Chart Image (.png)",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 99,
+        "width": 188
+      },
+      {
+        "selector": "#download-csv",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 319,
+        "width": 198
+      },
+      {
+        "selector": "#csv-version",
+        "role": "link",
+        "name": "Download Data (.csv)",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 319,
+        "width": 167
+      },
+      {
+        "selector": "#embed-label",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 517,
+        "width": 135
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 652,
+        "width": 528
+      },
+      {
+        "selector": "#embed-code",
+        "role": "textbox",
+        "name": "Embed HTML",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 652,
+        "width": 515
+      },
+      {
+        "selector": "div.row.clearfix",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "div.col.col-span-12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 135,
+        "width": 1011
+      },
+      {
+        "selector": "div.addthis_inline_share_toolbox",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 375,
+        "width": 530
+      },
+      {
+        "selector": "#main-categories",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 64,
+        "width": 1152
+      },
+      {
+        "selector": "div.col.col-span-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "a.shortcutLink",
+        "role": "link",
+        "name": "Browser Market Share Browser Market Share",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Browser Market Share",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 209,
+        "width": 170
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Browser Market Share",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 146,
+        "width": 298
+      },
+      {
+        "selector": "div.col.col-span-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 480,
+        "width": 320
+      },
+      {
+        "selector": "a.shortcutLink",
+        "role": "link",
+        "name": "Search Market Share Search Market Share",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 480,
+        "width": 320
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 480,
+        "width": 320
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Search Market Share",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 555,
+        "width": 170
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Search Market Share",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 491,
+        "width": 298
+      },
+      {
+        "selector": "div.col.col-span-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 320
+      },
+      {
+        "selector": "a.shortcutLink",
+        "role": "link",
+        "name": "OS Market Share OS Market Share",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 826,
+        "width": 320
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 320
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "OS Market Share",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 901,
+        "width": 170
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "OS Market Share",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 837,
+        "width": 298
+      },
+      {
+        "selector": "div.col.col-span-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "a.shortcutLink",
+        "role": "link",
+        "name": "Screen Resolution Stats Screen Resolution Stats",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Screen Resolution Stats",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 209,
+        "width": 170
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Screen Resolution Stats",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 146,
+        "width": 298
+      },
+      {
+        "selector": "div.col.col-span-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 480,
+        "width": 320
+      },
+      {
+        "selector": "a.shortcutLink",
+        "role": "link",
+        "name": "Social Media Stats Social Media Stats",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 480,
+        "width": 320
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 480,
+        "width": 320
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Social Media Stats",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 555,
+        "width": 170
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Social Media Stats",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 491,
+        "width": 298
+      },
+      {
+        "selector": "div.col.col-span-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 320
+      },
+      {
+        "selector": "a.shortcutLink",
+        "role": "link",
+        "name": "Device Vendor Market Share Device Vendor Market Share",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 826,
+        "width": 320
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 320
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Device Vendor Market Share",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 901,
+        "width": 170
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Device Vendor Market Share",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 837,
+        "width": 298
+      },
+      {
+        "selector": "div.col.col-span-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "a.shortcutLink",
+        "role": "link",
+        "name": "Mobile vs Tablet vs Desktop Mobile vs Tablet vs Desktop",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Mobile vs Tablet vs Desktop",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 209,
+        "width": 170
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Mobile vs Tablet vs Desktop",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 146,
+        "width": 298
+      },
+      {
+        "selector": "div.col.col-span-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 480,
+        "width": 320
+      },
+      {
+        "selector": "a.shortcutLink",
+        "role": "link",
+        "name": "Browser Version Market Share Browser Version Market Share",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 480,
+        "width": 320
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 480,
+        "width": 320
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Browser Version Market Share",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 555,
+        "width": 170
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Browser Version Market Share",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 491,
+        "width": 298
+      },
+      {
+        "selector": "div.col.col-span-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 320
+      },
+      {
+        "selector": "a.shortcutLink",
+        "role": "link",
+        "name": "Search Engine Host Search Engine Host",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 826,
+        "width": 320
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 320
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Search Engine Host",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 901,
+        "width": 170
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Search Engine Host",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 837,
+        "width": 298
+      },
+      {
+        "selector": "div.col.col-span-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "a.shortcutLink",
+        "role": "link",
+        "name": "AI Chatbot AI Chatbot Market Share",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "AI Chatbot",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 209,
+        "width": 170
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "AI Chatbot Market Share",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 146,
+        "width": 298
+      },
+      {
+        "selector": "div.col.col-span-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 480,
+        "width": 320
+      },
+      {
+        "selector": "a.shortcutLink",
+        "role": "link",
+        "name": "AI Chatbot Google vs ChatGPT",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 480,
+        "width": 320
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 480,
+        "width": 320
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "AI Chatbot",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 555,
+        "width": 170
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Google vs ChatGPT",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 491,
+        "width": 298
+      },
+      {
+        "selector": "div.col.col-span-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 320
+      },
+      {
+        "selector": "a.shortcutLink",
+        "role": "link",
+        "name": "AI Chatbot Search vs Social vs AI Chatbot",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 826,
+        "width": 320
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 320
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "AI Chatbot",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 901,
+        "width": 170
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Search vs Social vs AI Chatbot",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 837,
+        "width": 298
+      },
+      {
+        "selector": "div.col.col-span-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "a.shortcutLink",
+        "role": "link",
+        "name": "Bots vs Humans Bots vs Humans",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Bots vs Humans",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 209,
+        "width": 170
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Bots vs Humans",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 146,
+        "width": 298
+      },
+      {
+        "selector": "div.col.col-span-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 480,
+        "width": 320
+      },
+      {
+        "selector": "a.shortcutLink",
+        "role": "link",
+        "name": "Bots by country Bots by Country",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 480,
+        "width": 320
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 480,
+        "width": 320
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Bots by country",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 555,
+        "width": 170
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Bots by Country",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 491,
+        "width": 298
+      },
+      {
+        "selector": "div.col.col-span-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 320
+      },
+      {
+        "selector": "a.shortcutLink",
+        "role": "link",
+        "name": "Bots by ISP Bots by ISP",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 826,
+        "width": 320
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 320
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Bots by ISP",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 901,
+        "width": 170
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Bots by ISP",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 837,
+        "width": 298
+      },
+      {
+        "selector": "div.col.col-span-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "a.shortcutLink",
+        "role": "link",
+        "name": "Good-Bots Good Bots",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 135,
+        "width": 320
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Good-Bots",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 209,
+        "width": 170
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Good Bots",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 146,
+        "width": 298
+      },
+      {
+        "selector": "#email-subscribe",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.row.clearfix",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#newsletter-subscribe-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 78,
+        "width": 1123
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Subscribe to Global Stats by email",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 78,
+        "width": 1123
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "We respect your privacy and will never share your email address with any third party.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 78,
+        "width": 1123
+      },
+      {
+        "selector": "#newsletter-subscribe-form",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 398,
+        "width": 484
+      },
+      {
+        "selector": "#email",
+        "role": "textbox",
+        "name": "Please enter a valid email address.",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 398,
+        "width": 361
+      },
+      {
+        "selector": "input",
+        "role": "button",
+        "name": "Subscribe",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 759,
+        "width": 123
+      },
+      {
+        "selector": "#newsletterSubscribeResult",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 78,
+        "width": 1123
+      },
+      {
+        "selector": "div.create-account",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Understand your visitors with Statcounter",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "See why over bloggers, web designers, marketing and SEO professionals and small business owners use Statcounter to grow their business.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 200,
+        "width": 880
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "1,000,000",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 368,
+        "width": 101
+      },
+      {
+        "selector": "a.btn.btn-white",
+        "role": "link",
+        "name": "Learn More",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 539,
+        "width": 202
+      },
+      {
+        "selector": "#sub-footer",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.row.clearfix",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.col.col-span-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 78,
+        "width": 547
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 78,
+        "width": 547
+      },
+      {
+        "selector": "div.col.col-span-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 654,
+        "width": 547
+      },
+      {
+        "selector": "#link-rss",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1082,
+        "width": 30
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Global Stats RSS",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1082,
+        "width": 30
+      },
+      {
+        "selector": "#link-facebook",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1127,
+        "width": 30
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "StatCounter on Facebook",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1127,
+        "width": 30
+      },
+      {
+        "selector": "#link-twitter",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1172,
+        "width": 30
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "StatCounter Global Stats on Twitter",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1172,
+        "width": 30
+      }
+    ]
+  },
+  "video": "proof/kane/statcounter-edit-chart/resume-2026-11-22T03-30-36.444Z/before/recording.mp4"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "graham-essay",
+  "url": "https://www.paulgraham.com/avg.html",
+  "persona": "low-vision",
+  "task": "Read the opening of Beating the Averages at 320 CSS pixels using vertical scrolling only.",
+  "site": "www.paulgraham.com",
+  "match": "https://www.paulgraham.com/avg.html",
+  "barrier": "The selected passage extends past the right edge of a 320px-wide reading viewport.",
+  "rules": [
+    {
+      "selector": "body > table, body > table > tbody, body > table > tbody > tr, body > table > tbody > tr > td, table[width=\"435\"], td[width=\"435\"]",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "img",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "height": "auto"
+      }
+    }
+  ],
+  "status": "candidate",
+  "history": [],
+  "evidence": {}
+}

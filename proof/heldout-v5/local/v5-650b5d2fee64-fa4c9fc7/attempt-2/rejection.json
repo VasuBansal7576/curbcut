@@ -1,0 +1,159 @@
+{
+  "reason": "Live selector validation failed. selector \"body.adthrive-device-phone #menu-item-150538:is(:hover, :focus-within) > div.dropdown_item\": no matches",
+  "rules": [
+    {
+      "selector": "body.adthrive-device-phone #main_nav > #nav-content",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "selector": "#menu-item-150538",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "selector": "body.adthrive-device-phone #menu-item-150538:is(:hover, :focus-within) > div.dropdown_item",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "body.adthrive-device-phone #menu-item-150538 > div.dropdown_item > ul.dropdown_menu",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#menu-item-150538",
+      "items": "#menu-item-150538 > a, #menu-item-150538 > div.dropdown_item > ul.dropdown_menu > li > a",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ],
+  "selectorValidation": {
+    "ok": false,
+    "matches": [
+      {
+        "index": 0,
+        "field": "selector",
+        "selector": "body.adthrive-device-phone #main_nav > #nav-content",
+        "count": 1,
+        "issue": null,
+        "matches": [
+          {
+            "tag": "div",
+            "id": "nav-content",
+            "classes": [
+              "cnw_waist_band",
+              "flex-between"
+            ],
+            "label": "AthletesBaseball PlayersBoxersCoachesGolfersHockeyMMANBA PlayersNFL PlayersOlympiansRace Car Drivers"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "field": "selector",
+        "selector": "#menu-item-150538",
+        "count": 1,
+        "issue": null,
+        "matches": [
+          {
+            "tag": "li",
+            "id": "menu-item-150538",
+            "classes": [
+              "menu-item",
+              "menu-item-type-taxonomy",
+              "menu-item-object-category",
+              "menu-item-150538"
+            ],
+            "label": "AthletesBaseball PlayersBoxersCoachesGolfersHockeyMMANBA PlayersNFL PlayersOlympiansRace Car Drivers"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "field": "selector",
+        "selector": "body.adthrive-device-phone #menu-item-150538:is(:hover, :focus-within) > div.dropdown_item",
+        "count": 0,
+        "issue": "no matches",
+        "matches": []
+      },
+      {
+        "index": 3,
+        "field": "selector",
+        "selector": "body.adthrive-device-phone #menu-item-150538 > div.dropdown_item > ul.dropdown_menu",
+        "count": 1,
+        "issue": null,
+        "matches": [
+          {
+            "tag": "ul",
+            "classes": [
+              "dropdown_menu"
+            ],
+            "label": "Baseball PlayersBoxersCoachesGolfersHockeyMMANBA PlayersNFL PlayersOlympiansRace Car DriversSkateboa"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "field": "container",
+        "selector": "#menu-item-150538",
+        "count": 1,
+        "issue": null,
+        "matches": [
+          {
+            "tag": "li",
+            "id": "menu-item-150538",
+            "classes": [
+              "menu-item",
+              "menu-item-type-taxonomy",
+              "menu-item-object-category",
+              "menu-item-150538"
+            ],
+            "label": "AthletesBaseball PlayersBoxersCoachesGolfersHockeyMMANBA PlayersNFL PlayersOlympiansRace Car Drivers"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "field": "items",
+        "selector": "#menu-item-150538 > a, #menu-item-150538 > div.dropdown_item > ul.dropdown_menu > li > a",
+        "scope": "#menu-item-150538",
+        "count": 15,
+        "issue": null,
+        "matches": [
+          {
+            "tag": "a",
+            "classes": [],
+            "label": "Athletes"
+          },
+          {
+            "tag": "a",
+            "classes": [],
+            "label": "Baseball Players"
+          },
+          {
+            "tag": "a",
+            "classes": [],
+            "label": "Boxers"
+          },
+          {
+            "tag": "a",
+            "classes": [],
+            "label": "Coaches"
+          },
+          {
+            "tag": "a",
+            "classes": [],
+            "label": "Golfers"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "barrier": "At 320 CSS pixels, the 78-pixel-wide “3 класс” dropdown clips its 197-pixel-wide contents, cutting off the “Английский” link.",
+  "rules": [
+    {
+      "selector": "div.topline.wrapper",
+      "action": "injectCSS",
+      "value": {"flex-direction": "column"}
+    },
+    {
+      "selector": "nav.topmenu.flex-1",
+      "action": "injectCSS",
+      "value": {"width": "100%"}
+    },
+    {
+      "selector": "div > header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1) > div",
+      "action": "injectCSS",
+      "value": {"width": "fit-content"}
+    },
+    {
+      "selector": "div > header > div:nth-of-type(1) > nav > ul > li:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

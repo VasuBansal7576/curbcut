@@ -1,0 +1,106 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-e80edc4a0ef1-1dfc85d7",
+    "url": "https://www.metroopinion.com/",
+    "persona": "keyboard-only",
+    "task": "Open “Choose Country” by keyboard. Confirm the dialog appeared, then press Escape and confirm it closed.",
+    "controlTask": "Click “Choose Country” and confirm that the dialog opens. Click “Close” to close it.",
+    "observedSelector": "#navbar > div > div:nth-of-type(1) > ul > li:nth-of-type(3) > a",
+    "outcomeChecks": [
+      {
+        "kind": "hidden",
+        "selector": "#countryPicker"
+      }
+    ],
+    "barrierClass": 4,
+    "relatedSelectors": [
+      "#countryPicker",
+      "#countryPicker > div > div > div:nth-of-type(1) > button"
+    ],
+    "journey": [
+      {
+        "selector": "#navbar > div > div:nth-of-type(1) > ul > li:nth-of-type(3) > a",
+        "action": "activate",
+        "checks": [
+          {
+            "kind": "visible",
+            "selector": "#countryPicker"
+          }
+        ]
+      },
+      {
+        "selector": "#countryPicker",
+        "action": "key",
+        "key": "Escape",
+        "pointer": {
+          "action": "click",
+          "selector": "#countryPicker > div > div > div:nth-of-type(1) > button"
+        }
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "unresolved",
+  "reason": "The final journey outcome did not hold.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-e80edc4a0ef1-1dfc85d7/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 2 did not receive the expected keyboard focus.",
+      "file": "proof/heldout-v5/local/v5-e80edc4a0ef1-1dfc85d7/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-e80edc4a0ef1-1dfc85d7/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-2/after",
+      "persona": "keyboard-only",
+      "iteration": 2,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-e80edc4a0ef1-1dfc85d7/attempt-2/after.json"
+    },
+    {
+      "name": "attempt-3/after",
+      "persona": "keyboard-only",
+      "iteration": 3,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-e80edc4a0ef1-1dfc85d7/attempt-3/after.json"
+    },
+    {
+      "name": "proposal",
+      "iteration": 4,
+      "status": "rejected",
+      "reason": "Invalid patch proposal: [{\"instancePath\":\"/rules\",\"schemaPath\":\"#/properties/rules/minItems\",\"keyword\":\"minItems\",\"params\":{\"limit\":1},\"message\":\"must NOT have fewer than 1 items\"}]",
+      "file": "proof/heldout-v5/local/v5-e80edc4a0ef1-1dfc85d7/attempt-4/rejection.json"
+    },
+    {
+      "name": "attempt-5/after",
+      "persona": "keyboard-only",
+      "iteration": 5,
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-e80edc4a0ef1-1dfc85d7/attempt-5/after.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

@@ -1,0 +1,34 @@
+{
+  "id": "cato-org-tr2",
+  "url": "https://www.cato.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, locate the searchbox named “Search”. Enter the text test and confirm the field contains it. Do not submit.",
+  "controlTask": "Click the public text field with the visible hint “Search”, type test and confirm the value. Do not submit.",
+  "observedSelector": "#query",
+  "requiredName": "Search",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#query",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "searchbox"
+  },
+  "site": "www.cato.org",
+  "match": "https://www.cato.org/",
+  "barrier": "In Reading view, the searchbox #query has no accessible name, so screen reader users cannot locate it by the name “Search”.",
+  "rules": [
+    {
+      "selector": "#query",
+      "action": "addLabel",
+      "value": "Search"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

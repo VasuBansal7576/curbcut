@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Widget accessibility fixtures</title>
+  <link rel="stylesheet" href="widgets.css">
+  <script defer src="widgets.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Widget accessibility fixtures</h1>
+    <section data-specimen="dropdown">
+      <h2>Product guides</h2>
+      <div class="dropdown">
+        <div id="guide-toggle" class="dropdown-toggle" data-bs-toggle="dropdown" data-bs-target="#guide-menu">Guides</div>
+        <div id="guide-menu" class="dropdown-menu">
+          <a href="porch.html">Porch Speaker</a>
+        </div>
+      </div>
+    </section>
+    <section id="slick" class="slick-slider" data-specimen="slick">
+      <h2>Speaker specifications</h2>
+      <div class="slick-prev slick-arrow" aria-label="Previous specification">Previous</div>
+      <div class="slick-next slick-arrow" aria-label="Next specification">Next</div>
+      <p id="slick-range" class="slick-slide slick-current" aria-hidden="false">Wireless range is 25 metres.</p>
+      <p id="slick-battery" class="slick-slide" aria-hidden="true" hidden>Battery lasts 16 hours.</p>
+    </section>
+    <section id="swiper" class="swiper" data-specimen="swiper">
+      <h2>Speaker placement</h2>
+      <div class="swiper-button-prev" aria-label="Previous placement">Previous</div>
+      <div class="swiper-button-next" aria-label="Next placement">Next</div>
+      <p id="swiper-shelf" class="swiper-slide swiper-slide-active">Place it on a stable shelf.</p>
+      <p id="swiper-porch" class="swiper-slide" hidden>Use a covered porch.</p>
+    </section>
+    <section data-specimen="select">
+      <h2>Product ordering</h2>
+      <div class="custom-select">
+        <div id="order-toggle" class="select-trigger" data-select-trigger>Sort by featured</div>
+        <div id="order-options" class="select-options" hidden>
+          <div class="select-option" id="order-featured" data-value="featured">Featured</div>
+          <div class="select-option" id="order-price" data-value="price">Price low to high</div>
+        </div>
+      </div>
+    </section>
+    <section data-specimen="cookie">
+      <h2>Optional cookies notice</h2>
+      <button type="button" id="cookie-outside">Read product details</button>
+      <div id="cookie-notice" class="cookie-modal" hidden>
+        <h3>Optional cookies</h3>
+        <p>You can close this notice and continue browsing the fixture.</p>
+        <button type="button" id="cookie-dismiss" class="modal-close">Close</button>
+      </div>
+    </section>
+    <section data-specimen="newsletter">
+      <h2>Newsletter information</h2>
+      <button type="button" id="newsletter-open" data-bs-target="#newsletter-modal">See what the newsletter covers</button>
+      <div id="newsletter-modal" class="modal" hidden>
+        <h3>In the newsletter</h3>
+        <p>Product maintenance, seasonal tips and stories from the shop.</p>
+        <button type="button" id="newsletter-dismiss" data-bs-dismiss="modal">Close</button>
+      </div>
+    </section>
+    <section data-specimen="mega-menu">
+      <h2>Product navigation</h2>
+      <nav aria-label="Products">
+        <div id="mega-owner" class="nav-item">
+          <button type="button" id="mega-trigger">Products</button>
+          <div id="mega-links" class="mega-menu" hidden>
+            <a id="mega-porch" href="porch.html">Porch Speaker</a>
+          </div>
+        </div>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>

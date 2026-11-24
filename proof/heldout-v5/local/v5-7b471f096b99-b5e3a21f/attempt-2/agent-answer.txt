@@ -1,0 +1,19 @@
+{
+  "barrier": "Products receives keyboard focus, but Arrow Down leaves its dropdown at display:none, so the ScreenMeet AI link is unavailable. Pointer hover adds w--open to the dropdown panel.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#w-dropdown-toggle-0",
+      "target": "#w-dropdown-list-0",
+      "mode": "class",
+      "className": "w--open"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.menu-3 > div.dropdown.w-dropdown:has(> #w-dropdown-toggle-0)",
+      "items": "#w-dropdown-toggle-0",
+      "orientation": "vertical",
+      "activate": "click"
+    }
+  ]
+}

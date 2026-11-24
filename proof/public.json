@@ -1,0 +1,143 @@
+{
+  "runner": "local-playwright",
+  "runs": [
+    {
+      "id": "graham-essay",
+      "url": "https://www.paulgraham.com/avg.html",
+      "persona": "low-vision",
+      "task": "Read the opening of Beating the Averages at 320 CSS pixels using vertical scrolling only.",
+      "status": "locally-reproduced",
+      "runner": "local-playwright",
+      "phases": {
+        "before": {
+          "title": "Beating the Averages",
+          "width": 320,
+          "left": 103,
+          "right": 528,
+          "passageLength": 540,
+          "scrollX": 0,
+          "digest": "b6c9bb0551c59d3e58b5562c3490ece2a8d0dec363e929bc752e366a88406dea",
+          "pass": false,
+          "video": "proof/public/graham-essay/before.mp4",
+          "observedAt": "2026-11-21T19:07:43.115Z"
+        },
+        "control": {
+          "title": "Beating the Averages",
+          "width": 1280,
+          "left": 103,
+          "right": 528,
+          "passageLength": 540,
+          "scrollX": 0,
+          "digest": "b6c9bb0551c59d3e58b5562c3490ece2a8d0dec363e929bc752e366a88406dea",
+          "pass": true,
+          "video": "proof/public/graham-essay/control.mp4",
+          "observedAt": "2026-11-21T19:07:50.751Z"
+        },
+        "after": {
+          "title": "Beating the Averages",
+          "width": 320,
+          "left": 8,
+          "right": 309,
+          "passageLength": 540,
+          "scrollX": 0,
+          "digest": "b6c9bb0551c59d3e58b5562c3490ece2a8d0dec363e929bc752e366a88406dea",
+          "pass": true,
+          "video": "proof/public/graham-essay/after.mp4",
+          "observedAt": "2026-11-21T19:07:57.907Z"
+        }
+      }
+    },
+    {
+      "id": "berkshire-letter",
+      "url": "https://www.berkshirehathaway.com/letters/1999htm.html",
+      "persona": "low-vision",
+      "task": "Read the first financial-results paragraph in the 1999 shareholder letter at 320 CSS pixels without panning horizontally.",
+      "status": "locally-reproduced",
+      "runner": "local-playwright",
+      "phases": {
+        "before": {
+          "title": "Chairman's Letter - 1999",
+          "width": 320,
+          "left": 11,
+          "right": 513,
+          "passageLength": 365,
+          "scrollX": 0,
+          "digest": "6698729f6af89603649adcf65b33677ee67396c7d185704f49a81b76acb277a8",
+          "pass": false,
+          "video": "proof/public/berkshire-letter/before.mp4",
+          "observedAt": "2026-11-21T19:08:08.053Z"
+        },
+        "control": {
+          "title": "Chairman's Letter - 1999",
+          "width": 1280,
+          "left": 11,
+          "right": 639,
+          "passageLength": 365,
+          "scrollX": 0,
+          "digest": "6698729f6af89603649adcf65b33677ee67396c7d185704f49a81b76acb277a8",
+          "pass": true,
+          "video": "proof/public/berkshire-letter/control.mp4",
+          "observedAt": "2026-11-21T19:08:15.244Z"
+        },
+        "after": {
+          "title": "Chairman's Letter - 1999",
+          "width": 320,
+          "left": 9,
+          "right": 300,
+          "passageLength": 365,
+          "scrollX": 0,
+          "digest": "6698729f6af89603649adcf65b33677ee67396c7d185704f49a81b76acb277a8",
+          "pass": true,
+          "video": "proof/public/berkshire-letter/after.mp4",
+          "observedAt": "2026-11-21T19:08:21.868Z"
+        }
+      }
+    },
+    {
+      "id": "norvig-sudoku",
+      "url": "https://www.norvig.com/sudoku.html",
+      "persona": "low-vision",
+      "task": "Read the cross-product function and definitions in Solving Every Sudoku Puzzle at 320 CSS pixels without panning horizontally.",
+      "status": "locally-reproduced",
+      "runner": "local-playwright",
+      "phases": {
+        "before": {
+          "title": "Solving Every Sudoku Puzzle",
+          "width": 320,
+          "left": 11,
+          "right": 698,
+          "passageLength": 540,
+          "scrollX": 0,
+          "digest": "9673cadc80eecf4b2ea9647fb095077976a35ae4a558e152a7b580f83d381b69",
+          "pass": false,
+          "video": "proof/public/norvig-sudoku/before.mp4",
+          "observedAt": "2026-11-21T19:08:45.668Z"
+        },
+        "control": {
+          "title": "Solving Every Sudoku Puzzle",
+          "width": 1280,
+          "left": 11,
+          "right": 698,
+          "passageLength": 540,
+          "scrollX": 0,
+          "digest": "9673cadc80eecf4b2ea9647fb095077976a35ae4a558e152a7b580f83d381b69",
+          "pass": true,
+          "video": "proof/public/norvig-sudoku/control.mp4",
+          "observedAt": "2026-11-21T19:08:53.587Z"
+        },
+        "after": {
+          "title": "Solving Every Sudoku Puzzle",
+          "width": 320,
+          "left": 11,
+          "right": 308,
+          "passageLength": 540,
+          "scrollX": 0,
+          "digest": "9673cadc80eecf4b2ea9647fb095077976a35ae4a558e152a7b580f83d381b69",
+          "pass": true,
+          "video": "proof/public/norvig-sudoku/after.mp4",
+          "observedAt": "2026-11-21T19:09:01.523Z"
+        }
+      }
+    }
+  ]
+}

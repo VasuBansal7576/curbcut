@@ -1,0 +1,1854 @@
+{
+  "status": "inconclusive",
+  "runId": "bf0c5058-547f-41ed-abcc-c6248b49e2ef",
+  "reason": "Maximum steps exceeded (22/18)",
+  "summary": "You asked to switch the Forecast panel from the default Temperature map to Precipitation using only keyboard navigation.\nThe run stayed on the Ventusky weather map page, but it did not confirm that the map changed to Precipitation.\nThe Precipitation control in the Forecast panel was not successfully activated within the available steps, so the required “3 hours” accumulation option was also not shown.\nThe attempt stopped after reaching the step limit, likely because keyboard focus did not reach or activate the intended Forecast-panel control.",
+  "resultCode": 310,
+  "reasonCode": "stuck.max_steps",
+  "credits": 22.022659999999995,
+  "exitCode": 1,
+  "steps": [
+    "press_key: Press Tab",
+    "press_key: Press Tab",
+    "press_key: Press Tab",
+    "press_key: PRIMARY: press the Tab key",
+    "wait: queued plan (3 steps): press_key \"Model: Automatic (ICON) Global Models ICON GFS",
+    "press_key: Press Shift+Tab",
+    "press_key: Press Shift+Tab",
+    "press_key: Press Shift+Tab",
+    "wait: queued plan (3 steps): press_key \"Altitude: Sea surface 5 cm above ground 2 m ab",
+    "press_key: Press Tab",
+    "press_key: Press Tab",
+    "press_key: Press Enter"
+  ],
+  "evidencePack": "proof/kane/ventusky-precipitation/2026-11-21T19-52-34.173Z/before/33047d57-5d1f-43c0-8b6f-98e5615aa6f0.evidence",
+  "evidenceValid": true,
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "keyboard-only",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920,
+      "keys": {
+        "tab": 16,
+        "activate": 1,
+        "other": 3
+      }
+    },
+    "readerVisible": false,
+    "width": 1280,
+    "fixtureFixed": false,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "https://www.ventusky.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "#z",
+    "nodes": [
+      {
+        "selector": "#i > a:has(> span.rain)",
+        "role": "text",
+        "name": "Precipitation",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 27,
+        "width": 122
+      },
+      {
+        "selector": "#i",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 13,
+        "width": 0
+      },
+      {
+        "selector": "#header",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 16,
+        "width": 480
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Ventusky",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 200,
+        "width": 0
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Ventusky",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 32,
+        "width": 152
+      },
+      {
+        "selector": "#search-q",
+        "role": "textbox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 218,
+        "width": 180
+      },
+      {
+        "selector": "li.progress",
+        "role": "listitem",
+        "name": "Type at least 2 characters.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 212,
+        "width": 228
+      },
+      {
+        "selector": "#menu-share",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 765,
+        "width": 43
+      },
+      {
+        "selector": "#menu-settings",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 816,
+        "width": 43
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 867,
+        "width": 94
+      },
+      {
+        "selector": "#menu-login",
+        "role": "link",
+        "name": "Login",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 867,
+        "width": 94
+      },
+      {
+        "selector": "#s",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 969,
+        "width": 295
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 985,
+        "width": 88
+      },
+      {
+        "selector": "#menu-premium",
+        "role": "link",
+        "name": "Premium",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 985,
+        "width": 88
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1081,
+        "width": 92
+      },
+      {
+        "selector": "#menu-my",
+        "role": "link",
+        "name": "myVentusky",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1081,
+        "width": 92
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1181,
+        "width": 67
+      },
+      {
+        "selector": "#menu-forecast",
+        "role": "link",
+        "name": "Forecast",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1181,
+        "width": 67
+      },
+      {
+        "selector": "#news",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 928,
+        "width": 280
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Two New High-Resolution Weather Models on Ventusky Model",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 928,
+        "width": 280
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Model",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 928,
+        "width": 350
+      },
+      {
+        "selector": "div.a",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1166,
+        "width": 32
+      },
+      {
+        "selector": "div.k",
+        "role": "text",
+        "name": "Altitude:",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 17,
+        "width": 53
+      },
+      {
+        "selector": "div.d",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 70,
+        "width": 164
+      },
+      {
+        "selector": "select",
+        "role": "combobox",
+        "name": "Altitude: Sea surface 5 cm above ground 2 m above ground Anomaly, 2 m 950 hPa, 500 m 925 hPa, 750 m 900 hPa, 1000 m 850 hPa, 1500 m 800 hPa, 2000 m 750 hPa, 2500 m 700 hPa, 3000 m 650 hPa, 3600 m 600 ",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 78,
+        "width": 147
+      },
+      {
+        "selector": "#r",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#l",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 145,
+        "width": 210
+      },
+      {
+        "selector": "#h",
+        "role": "combobox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 156,
+        "width": 67
+      },
+      {
+        "selector": "#z",
+        "role": "combobox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 227,
+        "width": 117
+      },
+      {
+        "selector": "table",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table",
+        "left": 158,
+        "width": 185
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "16",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 164,
+        "width": 28
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "17",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 189,
+        "width": 27
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "18",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 213,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "19",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 238,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "20",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 262,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "21",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 285,
+        "width": 27
+      },
+      {
+        "selector": "td.yy",
+        "role": "cell",
+        "name": "22",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 308,
+        "width": 28
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "23",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 170,
+        "width": 26
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "24",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 193,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "25",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 216,
+        "width": 24
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "26",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 239,
+        "width": 23
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "27",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 261,
+        "width": 24
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "28",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 283,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "29",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 304,
+        "width": 27
+      },
+      {
+        "selector": "td.ew",
+        "role": "cell",
+        "name": "30",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 174,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "01",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 196,
+        "width": 23
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "02",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 218,
+        "width": 22
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "03",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 239,
+        "width": 22
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "04",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 260,
+        "width": 22
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "05",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 281,
+        "width": 23
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "06",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 301,
+        "width": 25
+      },
+      {
+        "selector": "div.k",
+        "role": "text",
+        "name": "Model:",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 14,
+        "width": 48
+      },
+      {
+        "selector": "div.d",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 62,
+        "width": 173
+      },
+      {
+        "selector": "select",
+        "role": "combobox",
+        "name": "Model: Automatic (ICON) Global Models ICON GFS ECMWF ECMWF GEM Regional Models ICON (EU) HARMONIE (EU) WORAD WORAD EURAD (EU) USRAD (USA) EARAD (EA) UKMO HRRR (USA) RRFS (USA) NBM (USA) UKMO (UK) ICON",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 71,
+        "width": 155
+      },
+      {
+        "selector": "div.k",
+        "role": "text",
+        "name": "Wind Animation:",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1080,
+        "width": 128
+      },
+      {
+        "selector": "div.d",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 1080,
+        "width": 128
+      },
+      {
+        "selector": "select",
+        "role": "combobox",
+        "name": "Wind Animation: Off Normal Strong Soft Dark Fast-motion",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1086,
+        "width": 115
+      },
+      {
+        "selector": "#logo",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#w",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#e",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#t",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#j",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "London",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -27,
+        "width": 49
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Birmingham",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -120,
+        "width": 72
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Newcastle upon Tyne",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -104,
+        "width": 66
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Dublin",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -301,
+        "width": 38
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Leeds",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -86,
+        "width": 37
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Cork",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -397,
+        "width": 29
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Plymouth",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -214,
+        "width": 57
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Wexford",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -316,
+        "width": 50
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Belfast",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -287,
+        "width": 42
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Bristol",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -135,
+        "width": 38
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "UNITED KINGDOM",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -184,
+        "width": 64
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "IRELAND",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -377,
+        "width": 56
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Zaragoza",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -66,
+        "width": 56
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "A Coruña",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -408,
+        "width": 57
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Vigo",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -408,
+        "width": 26
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Valladolid",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -241,
+        "width": 58
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Porto",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -405,
+        "width": 33
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Bordeaux",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -53,
+        "width": 58
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Gijón / Xixón",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -293,
+        "width": 77
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Brest",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -217,
+        "width": 32
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Nantes",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -89,
+        "width": 43
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Bilbao",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": -150,
+        "width": 38
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Hamburg",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 431,
+        "width": 56
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Köln",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 306,
+        "width": 27
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Bruxelles - Brussel",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 172,
+        "width": 59
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Amsterdam",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 191,
+        "width": 69
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Frankfurt am Main",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 344,
+        "width": 110
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Bremen",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 380,
+        "width": 47
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Hannover",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 417,
+        "width": 58
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Nürnberg",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 479,
+        "width": 56
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Kassel",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 416,
+        "width": 40
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Groningen",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 270,
+        "width": 62
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Norwich",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 37,
+        "width": 50
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Reims",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 168,
+        "width": 38
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Rouen",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 33,
+        "width": 39
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "GERMANY",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 438,
+        "width": 66
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "NETHERLANDS",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 202,
+        "width": 97
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "BELGIUM",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 180,
+        "width": 60
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Paris",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 94,
+        "width": 30
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Barcelona",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 72,
+        "width": 60
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Milano",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 401,
+        "width": 40
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Lyon",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 208,
+        "width": 29
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Marseille",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 221,
+        "width": 54
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Torino",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 334,
+        "width": 37
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Stuttgart",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 394,
+        "width": 53
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Genova",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 386,
+        "width": 47
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Genève",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 259,
+        "width": 46
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Montpellier",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 146,
+        "width": 67
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Verona",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 483,
+        "width": 41
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Orléans",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 66,
+        "width": 46
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Perpignan",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 104,
+        "width": 61
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Dijon",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 217,
+        "width": 31
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Lleida",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 14,
+        "width": 36
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Clermont-Ferrand",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 90,
+        "width": 107
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Limoges",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 35,
+        "width": 51
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Zürich",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 373,
+        "width": 38
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Toulouse",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 42,
+        "width": 54
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Nice",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 320,
+        "width": 27
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "FRANCE",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 102,
+        "width": 53
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "SWITZERLAND",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 329,
+        "width": 93
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Berlin",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 594,
+        "width": 37
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Warszawa",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 929,
+        "width": 61
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Praha",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 642,
+        "width": 35
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Kraków",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 888,
+        "width": 46
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "København",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 541,
+        "width": 68
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Łódź",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 874,
+        "width": 30
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Wrocław",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 753,
+        "width": 52
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Leipzig",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 545,
+        "width": 43
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Dresden",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 603,
+        "width": 50
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Poznań",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 751,
+        "width": 45
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Rostock",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 530,
+        "width": 50
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Olsztyn",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 912,
+        "width": 45
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Rzeszów",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 978,
+        "width": 54
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Koszalin",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 714,
+        "width": 51
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Klaipėda",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 938,
+        "width": 53
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Zielona Góra",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 670,
+        "width": 77
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Szczecin",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 639,
+        "width": 54
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Gdańsk",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 828,
+        "width": 47
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Brno",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 745,
+        "width": 29
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Калининград (Kaliningrad)",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 895,
+        "width": 83
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Bydgoszcz",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 789,
+        "width": 66
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "POLAND",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 852,
+        "width": 54
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "CZECHIA",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 675,
+        "width": 58
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Roma",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 554,
+        "width": 36
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Wien",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 733,
+        "width": 30
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Budapest",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 840,
+        "width": 58
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "München",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 501,
+        "width": 56
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Београд (Beograd)",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 905,
+        "width": 58
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Zagreb",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 709,
+        "width": 43
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Скопје (Skopje)",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 954,
+        "width": 49
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Tiranë",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 886,
+        "width": 37
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Linz",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 641,
+        "width": 24
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Debrecen",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 958,
+        "width": 58
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Ниш (Niš)",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 986,
+        "width": 28
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Venezia",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 541,
+        "width": 46
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Sarajevo",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 813,
+        "width": 52
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Ljubljana",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 637,
+        "width": 54
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Košice",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 950,
+        "width": 41
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Pescara",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 625,
+        "width": 49
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Perugia",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 544,
+        "width": 46
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Podgorica",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 849,
+        "width": 62
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Foggia",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 690,
+        "width": 41
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Salzburg",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 570,
+        "width": 53
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Split",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 738,
+        "width": 27
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Szeged",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 897,
+        "width": 45
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Banja Luka",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 752,
+        "width": 67
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Pécs",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 818,
+        "width": 30
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Graz",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 691,
+        "width": 28
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "Bologna",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 494,
+        "width": 50
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "ITALY",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 546,
+        "width": 33
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "HUNGARY",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 843,
+        "width": 65
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "AUSTRIA",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 612,
+        "width": 56
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "SERBIA",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 926,
+        "width": 48
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "CROATIA",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 650,
+        "width": 57
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "BOSNIA & HERZEGOVINA",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 779,
+        "width": 94
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "SLOVAKIA",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 838,
+        "width": 64
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "ALBANIA",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 885,
+        "width": 56
+      },
+      {
+        "selector": "a.zi.mg",
+        "role": "link",
+        "name": "NORTH MACEDONIA",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 950,
+        "width": 80
+      }
+    ]
+  },
+  "video": "proof/kane/ventusky-precipitation/2026-11-21T19-52-34.173Z/before/recording.mp4"
+}

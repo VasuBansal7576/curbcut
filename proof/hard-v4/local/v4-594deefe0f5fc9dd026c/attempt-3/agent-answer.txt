@@ -1,0 +1,20 @@
+{
+  "barrier": "The body's 1260px minimum width keeps the promo's text column 862px wide, and horizontal clipping cuts off the passage at the 320px viewport edge.",
+  "rules": [
+    {
+      "selector": "body",
+      "action": "injectCSS",
+      "value": {"min-width": "0"}
+    },
+    {
+      "selector": "#content_above",
+      "action": "injectCSS",
+      "value": {"width": "auto", "min-width": "0"}
+    },
+    {
+      "selector": "div.page_content",
+      "action": "injectCSS",
+      "value": {"max-width": "100%", "box-sizing": "border-box"}
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "v4-fa615a94b3fc-f9c8564c",
+  "url": "https://domains.lt/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, hover “PASLAUGOS”, click “.com, .net domenų WHOIS informacija” and confirm /paslaugos/com-net-whois/.",
+  "controlTask": "Hover “PASLAUGOS”, click “.com, .net domenų WHOIS informacija” and confirm /paslaugos/com-net-whois/.",
+  "observedSelector": "#navMenu > div > div:nth-of-type(1) > a:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/paslaugos/com-net-whois/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#navMenu > div > div:nth-of-type(1)",
+    "#navMenu > div > div:nth-of-type(1) > div"
+  ],
+  "journey": [
+    {
+      "selector": "#navMenu > div > div:nth-of-type(1) > a:nth-of-type(1)",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#navMenu > div > div:nth-of-type(1) > a:nth-of-type(1)",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#navMenu > div > div:nth-of-type(1) > div > a:nth-of-type(7)",
+      "action": "activate"
+    }
+  ],
+  "site": "domains.lt",
+  "match": "https://domains.lt/",
+  "barrier": "At 320 CSS pixels, the collapsed navigation gives the PASLAUGOS menu no layout box, and the journey’s trigger has display: none. Focus stays on the body, so ArrowDown cannot open the submenu.",
+  "rules": [
+    {
+      "action": "injectCSS",
+      "selector": "#navMenu",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "action": "injectCSS",
+      "selector": "#navMenu > div > div:nth-of-type(1) > a:nth-of-type(1)",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#navMenu > div > div:nth-of-type(1) > a:nth-of-type(1)",
+      "target": "#navMenu > div > div:nth-of-type(1) > div",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

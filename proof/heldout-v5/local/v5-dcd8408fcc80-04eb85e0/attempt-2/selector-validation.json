@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "trigger",
+      "selector": "#header button.header-disclosure-toggle[aria-controls=\"desktop-section-links-0\"]",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "flex",
+            "items-center",
+            "header-disclosure-toggle"
+          ],
+          "label": "Разделы"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "target",
+      "selector": "#desktop-section-links-0",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "ul",
+          "id": "desktop-section-links-0",
+          "classes": [
+            "menu-list",
+            "absolute",
+            "top-full",
+            "z-10"
+          ],
+          "label": "Статьи Истории брендов Вопросы и ответы Система рейтингов Стать экспертом Сотрудничество Заказать ма"
+        }
+      ]
+    }
+  ]
+}

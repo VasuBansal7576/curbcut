@@ -1,0 +1,87 @@
+{
+  "task": {
+    "id": "v4-52c7859b6fdc-1dbfa8c6",
+    "url": "https://www.audience.io/",
+    "persona": "keyboard-only",
+    "task": "Open “Platform” from keyboard focus or with Arrow Down and follow “Promotions”. Confirm the public destination /promotions.",
+    "controlTask": "Hover “Platform”, click “Promotions” and confirm /promotions.",
+    "observedSelector": "#w-dropdown-toggle-0",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/promotions"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#w-node-_0fc76abe-e44c-d547-de15-6c3e7f8f7cd3-7f8f7ccf > div:nth-of-type(1)",
+      "#w-dropdown-list-0"
+    ],
+    "journey": [
+      {
+        "selector": "#w-dropdown-toggle-0",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#w-dropdown-toggle-0",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#w-dropdown-list-0 > a:nth-of-type(1)",
+        "action": "activate"
+      }
+    ]
+  },
+  "status": "already-accessible",
+  "phases": [
+    {
+      "name": "before",
+      "balance": 1051.2912,
+      "after": 1028.0965,
+      "status": "pass",
+      "runner": "kane",
+      "runId": "bf033f36-c4de-4ad1-8a3b-b9a584315f14",
+      "credits": 20.1296875,
+      "reason": "Objective completed",
+      "video": "proof/hard-v4/kane/v4-52c7859b6fdc-1dbfa8c6/before/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-52c7859b6fdc-1dbfa8c6/before/88a1af74-2b8a-4b9d-aa6d-5978a4691902.evidence",
+      "basis": "recorded-journey-and-outcome"
+    },
+    {
+      "name": "control",
+      "balance": 1028.0965,
+      "after": 1008.9721,
+      "status": "pass",
+      "runner": "kane",
+      "runId": "efb31ce2-7780-4687-bb91-8170155373e2",
+      "credits": 15.058902499999997,
+      "reason": "Objective completed",
+      "video": "proof/hard-v4/kane/v4-52c7859b6fdc-1dbfa8c6/control/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-52c7859b6fdc-1dbfa8c6/control/693e4c88-36aa-44c8-bbcf-22379e8523a4.evidence",
+      "basis": "recorded-journey-and-outcome"
+    },
+    {
+      "name": "attempt-1/after",
+      "balance": 1008.9721,
+      "after": 990.014,
+      "status": "pass",
+      "runner": "kane",
+      "runId": "ae4b93d0-8625-4542-8ab6-ceff442884d9",
+      "credits": 17.455679000000003,
+      "reason": "Objective completed",
+      "video": "proof/hard-v4/kane/v4-52c7859b6fdc-1dbfa8c6/attempt-1/after/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-52c7859b6fdc-1dbfa8c6/attempt-1/after/5cbd6ad6-6cb1-457b-b636-6df81e7cbb4e.evidence",
+      "basis": "recorded-journey-and-outcome"
+    }
+  ],
+  "localProposal": "proof/hard-v4/local/v4-52c7859b6fdc-1dbfa8c6/attempt-1",
+  "reason": "Objective completed",
+  "finishedAt": "2026-11-23T16:12:15.324Z"
+}

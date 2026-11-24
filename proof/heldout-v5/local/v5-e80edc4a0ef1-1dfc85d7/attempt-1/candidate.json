@@ -1,0 +1,54 @@
+{
+  "id": "v5-e80edc4a0ef1-1dfc85d7",
+  "url": "https://www.metroopinion.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Choose Country” by keyboard. Confirm the dialog appeared, then press Escape and confirm it closed.",
+  "controlTask": "Click “Choose Country” and confirm that the dialog opens. Click “Close” to close it.",
+  "observedSelector": "#navbar > div > div:nth-of-type(1) > ul > li:nth-of-type(3) > a",
+  "outcomeChecks": [
+    {
+      "kind": "hidden",
+      "selector": "#countryPicker"
+    }
+  ],
+  "barrierClass": 4,
+  "relatedSelectors": [
+    "#countryPicker",
+    "#countryPicker > div > div > div:nth-of-type(1) > button"
+  ],
+  "journey": [
+    {
+      "selector": "#navbar > div > div:nth-of-type(1) > ul > li:nth-of-type(3) > a",
+      "action": "activate",
+      "checks": [
+        {
+          "kind": "visible",
+          "selector": "#countryPicker"
+        }
+      ]
+    },
+    {
+      "selector": "#countryPicker",
+      "action": "key",
+      "key": "Escape",
+      "pointer": {
+        "action": "click",
+        "selector": "#countryPicker > div > div > div:nth-of-type(1) > button"
+      }
+    }
+  ],
+  "site": "www.metroopinion.com",
+  "match": "https://www.metroopinion.com/",
+  "barrier": "Keyboard activation opens the Choose Country dialog, but focus has not moved to the dialog when the Escape step begins.",
+  "rules": [
+    {
+      "action": "dialogBehavior",
+      "dialog": "#countryPicker",
+      "opener": "#navbar .nav > ul.navbar-nav > li > a.mobile-nav-link[data-bs-toggle=\"modal\"][data-bs-target=\"#countryPicker\"]",
+      "close": "#countryPicker .modal-header > button.btn-close[data-bs-dismiss=\"modal\"]"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

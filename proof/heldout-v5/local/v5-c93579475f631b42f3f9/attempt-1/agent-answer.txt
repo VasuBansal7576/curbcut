@@ -1,0 +1,8 @@
+{
+  "barrier": "At 320 CSS pixels, the 720-pixel wrapper keeps the passage beside the illustration. The paragraph extends from x=184 to x=700, so horizontal clipping hides part of the text.",
+  "rules": [
+    {"selector":"#rap","action":"injectCSS","value":{"max-width":"100%","min-width":"0","box-sizing":"border-box"}},
+    {"selector":"#content","action":"injectCSS","value":{"display":"flex","flex-wrap":"wrap","max-width":"100%","min-width":"0","box-sizing":"border-box"}},
+    {"selector":"#content > div.column-main","action":"injectCSS","value":{"max-width":"100%","box-sizing":"border-box"}}
+  ]
+}

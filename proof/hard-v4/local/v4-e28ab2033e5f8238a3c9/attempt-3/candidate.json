@@ -1,0 +1,38 @@
+{
+  "id": "v4-e28ab2033e5f8238a3c9",
+  "url": "https://quay.io/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “search” textbox and type test without submitting.",
+  "controlTask": "Click the visible “search” field and type test without submitting.",
+  "observedSelector": "#co-l-footer-wrapper > nav > span > div > div:nth-of-type(1) > div:nth-of-type(2) > ul:nth-of-type(3) > li:nth-of-type(1) > span > search-box > span > span:nth-of-type(1) > input",
+  "requiredName": "search",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#co-l-footer-wrapper > nav > span > div > div:nth-of-type(1) > div:nth-of-type(2) > ul:nth-of-type(3) > li:nth-of-type(1) > span > search-box > span > span:nth-of-type(1) > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "quay.io",
+  "match": "https://quay.io/",
+  "barrier": "Focus is on the Reading view dialog, and the search input is exposed as a combobox rather than the textbox the task looks for. The available rules cannot set a textbox role.",
+  "rules": [
+    {
+      "selector": "dialog",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "#co-l-footer-wrapper > nav > span > div > div:nth-of-type(1) > div:nth-of-type(2) > ul:nth-of-type(3) > li:nth-of-type(1) > span > search-box > span > span:nth-of-type(1) > input",
+      "action": "addLabel",
+      "value": "search"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

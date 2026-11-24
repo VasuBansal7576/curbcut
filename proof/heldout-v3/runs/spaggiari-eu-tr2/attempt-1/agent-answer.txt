@@ -1,0 +1,9 @@
+{
+  "barrier": "In the supplied snapshot, the “Scopri di più” link to /dreamshaper has tabindex=\"-1\", which excludes it from the sequential Tab order.",
+  "rules": [
+    {
+      "selector": "a[href=\"https\\:\\/\\/www\\.spaggiari\\.eu\\/dreamshaper\\?hsLang\\=it\"][tabindex=\"-1\"]",
+      "action": "makeFocusable"
+    }
+  ]
+}

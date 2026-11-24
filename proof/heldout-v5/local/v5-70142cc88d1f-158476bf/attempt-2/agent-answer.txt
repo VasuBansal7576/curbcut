@@ -1,0 +1,10 @@
+{
+  "barrier": "Focusing Resources and pressing Arrow Down leaves its submenu at display:none, so the Stack Ads link is unavailable. Pointer hover opens the submenu.",
+  "rules": [
+    {
+      "selector": "#main-navigation > ul > li.nav__item:has(> #submenu-resources)",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseenter"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "barrier": "The carousel’s active slide measures only 20 pixels high, the target list has no readable text in the snapshot, and the carousel wrapper clips overflow on both axes. The previous width and wrapping changes left the target invisible.",
+  "rules": [
+    {
+      "selector": "#myCarousel1 > .carousel-inner",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "selector": "#myCarousel1 #cont > ul.list-inline",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "height": "auto",
+        "max-height": "none"
+      }
+    },
+    {
+      "selector": "#myCarousel1 #cont > ul.list-inline > li",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "max-width": "100%",
+        "height": "auto",
+        "max-height": "none",
+        "box-sizing": "border-box",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    },
+    {
+      "selector": "#myCarousel1 #cont",
+      "action": "extendTimeout",
+      "value": 15000
+    }
+  ]
+}

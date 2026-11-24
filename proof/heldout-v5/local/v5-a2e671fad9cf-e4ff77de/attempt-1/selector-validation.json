@@ -1,0 +1,138 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "header.header.header-marketing > div.header-container.container",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "header-container",
+            "container"
+          ],
+          "label": "Solutions For Advisors For Large RIAs For Bank & Trust Companies For Asset Managers For Individuals "
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "#menu-main-navigation",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "nav",
+          "id": "menu-main-navigation",
+          "classes": [
+            "header-mainmenu"
+          ],
+          "label": "Main Navigation"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "field": "selector",
+      "selector": "#menu-main-navigation > div:nth-of-type(1)",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "header-mainmenu-item",
+            "dropdown"
+          ],
+          "label": "Solutions For Advisors For Large RIAs For Bank & Trust Companies For Asset Managers For Individuals "
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "field": "selector",
+      "selector": "#menu-main-navigation > div:nth-of-type(1) > a",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "a",
+          "classes": [
+            "header-mainmenu-link",
+            "dropdown-toggle"
+          ],
+          "role": "button",
+          "label": "Solutions"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "field": "container",
+      "selector": "#menu-main-navigation > div:nth-of-type(1)",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "header-mainmenu-item",
+            "dropdown"
+          ],
+          "label": "Solutions For Advisors For Large RIAs For Bank & Trust Companies For Asset Managers For Individuals "
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "field": "items",
+      "selector": "#menu-main-navigation > div:nth-of-type(1) > a.dropdown-toggle, #menu-main-navigation > div:nth-of-type(1) > div.dropdown-menu > a.dropdown-item",
+      "scope": "#menu-main-navigation > div:nth-of-type(1)",
+      "count": 7,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "a",
+          "classes": [
+            "header-mainmenu-link",
+            "dropdown-toggle"
+          ],
+          "role": "button",
+          "label": "Solutions"
+        },
+        {
+          "tag": "a",
+          "classes": [
+            "dropdown-item"
+          ],
+          "label": "For Advisors"
+        },
+        {
+          "tag": "a",
+          "classes": [
+            "dropdown-item"
+          ],
+          "label": "For Large RIAs"
+        },
+        {
+          "tag": "a",
+          "classes": [
+            "dropdown-item"
+          ],
+          "label": "For Bank & Trust Companies"
+        },
+        {
+          "tag": "a",
+          "classes": [
+            "dropdown-item"
+          ],
+          "label": "For Asset Managers"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "barrier": "Keyboard traversal reaches Feed, but the tab is reported clipped or off-screen in the horizontally scrolling feature tab strip. The tablist is 2020 pixels wide inside a 1216-pixel scroll container.",
+  "rules": [
+    {
+      "selector": "#features .overflow-x-auto > [role='tablist']",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "box-sizing": "border-box",
+        "flex-wrap": "wrap"
+      }
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#features .overflow-x-auto > [role='tablist']",
+      "items": "#features [role='tablist'] > button[role='tab']",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

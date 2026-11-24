@@ -1,0 +1,25 @@
+{
+  "barrier": "The Academic Programs hover rule only opens the submenu at widths of 992 CSS pixels or more. At 320 CSS pixels, the submenu remains display:none after focus and ArrowDown, leaving Associate Degrees unavailable.",
+  "rules": [
+    {
+      "selector": "#menu",
+      "action": "injectCSS",
+      "value": {"display": "block", "min-width": "0"}
+    },
+    {
+      "selector": "#menu > ul > li:nth-of-type(1) > a.nav-link.d-lg-block",
+      "action": "injectCSS",
+      "value": {"display": "block"}
+    },
+    {
+      "selector": "#menu > ul > li:nth-of-type(1):is(:hover, :focus-within) > ul.dropdown-menu",
+      "action": "injectCSS",
+      "value": {"display": "block"}
+    },
+    {
+      "selector": "#menu > ul > li:nth-of-type(1) > ul.dropdown-menu > li.row > ul:nth-of-type(2) > li:nth-of-type(2) > a.dropdown-item",
+      "action": "injectCSS",
+      "value": {"white-space": "normal", "overflow-wrap": "anywhere"}
+    }
+  ]
+}

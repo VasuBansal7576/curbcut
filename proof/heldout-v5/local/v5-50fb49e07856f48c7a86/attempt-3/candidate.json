@@ -1,0 +1,100 @@
+{
+  "id": "v5-50fb49e07856f48c7a86",
+  "url": "https://gamerch.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “事前登録・リリース情報 『Tower of Babel: Survivors of Chaos』全世界累計販売本数20万本突破！ 6日まえ” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “事前登録・リリース情報 『Tower of Babel: Survivors of Chaos』全世界累計販売本数20万本突破！ 6日まえ” at normal width.",
+  "observedSelector": "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div > ul > li:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div > ul > li:nth-of-type(1)",
+      "equals": "事前登録・リリース情報 『Tower of Babel: Survivors of Chaos』全世界累計販売本数20万本突破！ 6日まえ"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div > ul > li:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "gamerch.com",
+  "match": "https://gamerch.com/",
+  "barrier": "The desktop snapshot places the topics column 402 CSS pixels from the left edge and shows the target as a 460-pixel flex row. That layout puts the passage beyond a 320-pixel viewport.",
+  "rules": [
+    {
+      "selector": "div.layout:has(div.main-column)",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div:has(> div.main-column)",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.main-column",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.main-column > div.area:has(> div.topics__article), div.main-column > div.area > div.topics__article",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.topics__article > ul > li.category5:first-of-type",
+      "action": "injectCSS",
+      "value": {
+        "flex-wrap": "wrap",
+        "width": "auto",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "div.topics__article > ul > li.category5:first-of-type > div.topics__article--contents",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "div.topics__article > ul > li.category5:first-of-type > div.topics__article--contents p, div.topics__article > ul > li.category5:first-of-type > div.topics__article--contents p a",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "normal",
+        "overflow-wrap": "anywhere",
+        "height": "auto",
+        "max-height": "none"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

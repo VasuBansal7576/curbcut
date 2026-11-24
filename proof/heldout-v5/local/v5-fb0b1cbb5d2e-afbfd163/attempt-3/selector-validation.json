@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "dialog",
+      "selector": "#searchModal",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "searchModal",
+          "classes": [
+            "modal",
+            "fade"
+          ],
+          "role": "dialog",
+          "label": "Search Search Close search modal"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "close",
+      "selector": "#searchModal button#search-close[data-dismiss='modal']",
+      "scope": "#searchModal",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "id": "search-close",
+          "classes": [
+            "close"
+          ],
+          "label": "Close"
+        }
+      ]
+    }
+  ]
+}

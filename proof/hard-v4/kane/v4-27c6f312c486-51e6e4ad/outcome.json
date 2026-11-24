@@ -1,0 +1,87 @@
+{
+  "task": {
+    "id": "v4-27c6f312c486-51e6e4ad",
+    "url": "https://csc.gov.in/",
+    "persona": "keyboard-only",
+    "task": "Open “ABOUT” from keyboard focus or with Arrow Down and follow “About MeitY”. Confirm the public destination /meity.",
+    "controlTask": "Hover “ABOUT”, click “About MeitY” and confirm /meity.",
+    "observedSelector": "#menuzord > ul > li:nth-of-type(2) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/meity"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#menuzord > ul > li:nth-of-type(2)",
+      "#menuzord > ul > li:nth-of-type(2) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menuzord > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "status": "verified",
+  "phases": [
+    {
+      "name": "before",
+      "balance": 1176.3997,
+      "after": 1144.1435,
+      "status": "fail",
+      "runner": "kane",
+      "runId": "ad931ab3-4cf2-4a29-92b0-6e6c9a988dbc",
+      "credits": 29.884400000000003,
+      "reason": "Step 1 failed: ABOUT retained focus but Arrow Down, Enter, and Space never exposed About MeitY.",
+      "video": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/before/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/before/b7c5b95b-5119-4e73-9c1b-0ba053db146a.evidence",
+      "basis": "recorded-journey-failed"
+    },
+    {
+      "name": "control",
+      "balance": 1144.1435,
+      "after": 1124.6826,
+      "status": "pass",
+      "runner": "kane",
+      "runId": "1dff095d-b268-4388-97a2-90d491b4c91f",
+      "credits": 15.5968975,
+      "reason": "Objective completed",
+      "video": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/control/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/control/3f8967e1-a82b-4a50-b1fa-800cc292b572.evidence",
+      "basis": "recorded-journey-and-outcome"
+    },
+    {
+      "name": "attempt-1/after",
+      "balance": 1124.6826,
+      "after": 1084.7612,
+      "status": "pass",
+      "runner": "kane",
+      "runId": "ebcd0a03-29f8-4c4f-9f6d-c068c2920ad6",
+      "credits": 31.34266750000001,
+      "reason": "Objective completed",
+      "video": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/attempt-1/after/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-27c6f312c486-51e6e4ad/attempt-1/after/3471470a-c1d5-4bb6-ac9b-1d528853c2aa.evidence",
+      "basis": "recorded-journey-and-outcome"
+    }
+  ],
+  "localProposal": "proof/hard-v4/local/v4-27c6f312c486-51e6e4ad/attempt-1",
+  "reason": "Objective completed",
+  "finishedAt": "2026-11-23T16:06:39.567Z"
+}

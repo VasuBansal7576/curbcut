@@ -1,0 +1,9 @@
+{
+  "barrier": "The Federal Government footer trigger is a span exposed as text with a tabIndex of -1, so Tab skips it and keyboard users cannot reach it to activate it with Enter.",
+  "rules": [
+    {"selector":"#block-dolfootermenu-3 > section > span","action":"makeFocusable"},
+    {"selector":"#block-dolfootermenu-3 > section > span","action":"setRole","value":"button"},
+    {"selector":"#block-dolfootermenu-3 > section > span","action":"bindEnterToClick"},
+    {"selector":"#block-dolfootermenu-3 > section > span","action":"restoreFocusOutline"}
+  ]
+}

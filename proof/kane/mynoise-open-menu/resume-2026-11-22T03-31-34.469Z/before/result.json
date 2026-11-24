@@ -1,0 +1,1849 @@
+{
+  "status": "fail",
+  "runId": "9188ab4a-437f-4536-aa41-c4b3244e2d21",
+  "reason": "Checkpoint assertion failed: \"the Menu icon at the top of the White Noise Generator is in the sequential keyboard focus order\"",
+  "summary": "The Menu icon was visible, but the agent made the keyboard-accessibility check before navigating focus to it. A visible icon alone does not show whether keyboard users can reach it.\nRestart the check, press Tab from the page, and confirm that focus visibly lands on the Menu icon before asserting the result. Then press Enter and verify the navigation and Full Index link.",
+  "resultCode": 720,
+  "reasonCode": "assertion_error.checkpoint_failed",
+  "credits": 14.156009999999998,
+  "exitCode": 1,
+  "steps": [
+    "navigate: Navigate to https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+    "analyze: ANALYZE(textual_visual, 'the Menu icon at the top of the White Noise Generator i",
+    "assert: the Menu icon at the top of the White Noise Generator is in the sequential keybo"
+  ],
+  "evidencePack": "proof/kane/mynoise-open-menu/resume-2026-11-22T03-31-34.469Z/before/a1aa26a4-41e7-4b30-a37e-6dcb6ceaf94b.evidence",
+  "evidenceValid": true,
+  "observedOutcome": {
+    "selector": "#menuOverlay",
+    "visible": false
+  },
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "keyboard-only",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920,
+      "keys": {
+        "tab": 0,
+        "activate": 0,
+        "other": 0
+      }
+    },
+    "readerVisible": false,
+    "width": 1280,
+    "fixtureFixed": false,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body",
+    "nodes": [
+      {
+        "selector": "#hamburger",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 10,
+        "width": 24
+      },
+      {
+        "selector": "body",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#bgcontainer",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#bgimage",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#bgmask",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "new",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 10,
+        "width": 30
+      },
+      {
+        "selector": "#backburger",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 22,
+        "width": 1
+      },
+      {
+        "selector": "div.skeleton",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "grid",
+        "left": 40,
+        "width": 1200
+      },
+      {
+        "selector": "#player",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 40,
+        "width": 1200
+      },
+      {
+        "selector": "div.wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 40,
+        "width": 1200
+      },
+      {
+        "selector": "#backwrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 640,
+        "width": 0
+      },
+      {
+        "selector": "div.mainTitle",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 60,
+        "width": 1160
+      },
+      {
+        "selector": "div.mixer.noselect",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 440,
+        "width": 400
+      },
+      {
+        "selector": "#s0",
+        "role": "slider",
+        "name": "Sub-bass",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 472,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 472,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 462,
+        "width": 30
+      },
+      {
+        "selector": "#s1",
+        "role": "slider",
+        "name": "Low Bass",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 508,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 508,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 498,
+        "width": 30
+      },
+      {
+        "selector": "#s2",
+        "role": "slider",
+        "name": "Bass",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 544,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 544,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 534,
+        "width": 30
+      },
+      {
+        "selector": "#s3",
+        "role": "slider",
+        "name": "High Bass",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 580,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 580,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 570,
+        "width": 30
+      },
+      {
+        "selector": "#s4",
+        "role": "slider",
+        "name": "Low Mids",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 616,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 616,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 606,
+        "width": 30
+      },
+      {
+        "selector": "#s5",
+        "role": "slider",
+        "name": "Mids",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 652,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 652,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 642,
+        "width": 30
+      },
+      {
+        "selector": "#s6",
+        "role": "slider",
+        "name": "High Mids",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 688,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 688,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 678,
+        "width": 30
+      },
+      {
+        "selector": "#s7",
+        "role": "slider",
+        "name": "Low Treble",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 724,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 724,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 714,
+        "width": 30
+      },
+      {
+        "selector": "#s8",
+        "role": "slider",
+        "name": "Treble",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 760,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 760,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 750,
+        "width": 30
+      },
+      {
+        "selector": "#s9",
+        "role": "slider",
+        "name": "High Treble",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 796,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 796,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 786,
+        "width": 30
+      },
+      {
+        "selector": "div.controlers.noselect",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 60,
+        "width": 1160
+      },
+      {
+        "selector": "div.btn",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 480,
+        "width": 42
+      },
+      {
+        "selector": "#reset",
+        "role": "button",
+        "name": "Reset sliders [R]",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 480,
+        "width": 32
+      },
+      {
+        "selector": "div.btn",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 525,
+        "width": 42
+      },
+      {
+        "selector": "#volDown",
+        "role": "button",
+        "name": "Decrease levels [J]",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 525,
+        "width": 32
+      },
+      {
+        "selector": "div.btn",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 570,
+        "width": 42
+      },
+      {
+        "selector": "#volUp",
+        "role": "button",
+        "name": "Increase levels [K]",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 570,
+        "width": 32
+      },
+      {
+        "selector": "div.btnLogo",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 615,
+        "width": 44
+      },
+      {
+        "selector": "#mute",
+        "role": "button",
+        "name": "Play/Pause [P]",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 615,
+        "width": 42
+      },
+      {
+        "selector": "div.btn",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 668,
+        "width": 42
+      },
+      {
+        "selector": "#anim",
+        "role": "button",
+        "name": "Slider Animation [A]",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 668,
+        "width": 32
+      },
+      {
+        "selector": "div.btn",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 713,
+        "width": 42
+      },
+      {
+        "selector": "#bell",
+        "role": "button",
+        "name": "Meditation Bell [L]",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 713,
+        "width": 32
+      },
+      {
+        "selector": "#bellText",
+        "role": "textbox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 713,
+        "width": 32
+      },
+      {
+        "selector": "div.btn",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 758,
+        "width": 42
+      },
+      {
+        "selector": "#timer",
+        "role": "button",
+        "name": "Timer [T]",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 758,
+        "width": 32
+      },
+      {
+        "selector": "#timerText",
+        "role": "textbox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 758,
+        "width": 32
+      },
+      {
+        "selector": "#msg",
+        "role": "text",
+        "name": "Hit Play or allow Auto-Play for myNoise.net in your browser settings.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 60,
+        "width": 1160
+      },
+      {
+        "selector": "div.skeletonContents",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 86,
+        "width": 1108
+      },
+      {
+        "selector": "div.nested",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 86,
+        "width": 1108
+      },
+      {
+        "selector": "#controls",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 86,
+        "width": 429
+      },
+      {
+        "selector": "div.nobreak",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Presets",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "• • • • • • • • • • • • • • • •",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Ear Massage",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 408,
+        "width": 86
+      },
+      {
+        "selector": "a.powertip",
+        "role": "link",
+        "name": "℗",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 118,
+        "width": 15
+      },
+      {
+        "selector": "div.nobreak",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Stereo Width",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "• • •",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "div.nobreak",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Tape Speed Control",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "• • •",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "a.powertip",
+        "role": "link",
+        "name": "℗",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 107,
+        "width": 15
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Slower",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 126,
+        "width": 47
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Faster",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 188,
+        "width": 43
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Alternate",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 246,
+        "width": 63
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Reset",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 324,
+        "width": 40
+      },
+      {
+        "selector": "div.nobreak",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Animation Parameters",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "table",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table",
+        "left": 104,
+        "width": 267
+      },
+      {
+        "selector": "td.lowlight",
+        "role": "cell",
+        "name": "mode",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 106,
+        "width": 41
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Soft Hard • Solo Duo Trio Quad",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 149,
+        "width": 221
+      },
+      {
+        "selector": "#amSoft",
+        "role": "button",
+        "name": "Soft",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 149,
+        "width": 31
+      },
+      {
+        "selector": "#amHard",
+        "role": "button",
+        "name": "Hard",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 183,
+        "width": 34
+      },
+      {
+        "selector": "#amIsolated",
+        "role": "button",
+        "name": "Solo",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 233,
+        "width": 32
+      },
+      {
+        "selector": "#amDuo",
+        "role": "button",
+        "name": "Duo",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 268,
+        "width": 29
+      },
+      {
+        "selector": "#amTrio",
+        "role": "button",
+        "name": "Trio",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 301,
+        "width": 26
+      },
+      {
+        "selector": "#amQuad",
+        "role": "button",
+        "name": "Quad",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 331,
+        "width": 38
+      },
+      {
+        "selector": "td.lowlight",
+        "role": "cell",
+        "name": "speed",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 106,
+        "width": 41
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "÷8 ÷4 ÷2 • Normal • x2 x4 x8",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 149,
+        "width": 221
+      },
+      {
+        "selector": "#asdiv8",
+        "role": "button",
+        "name": "÷8",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 149,
+        "width": 21
+      },
+      {
+        "selector": "#asdiv4",
+        "role": "button",
+        "name": "÷4",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 173,
+        "width": 21
+      },
+      {
+        "selector": "#asdiv2",
+        "role": "button",
+        "name": "÷2",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 197,
+        "width": 20
+      },
+      {
+        "selector": "#asnormal",
+        "role": "button",
+        "name": "Normal",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 232,
+        "width": 50
+      },
+      {
+        "selector": "#asmult2",
+        "role": "button",
+        "name": "x2",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 297,
+        "width": 17
+      },
+      {
+        "selector": "#asmult4",
+        "role": "button",
+        "name": "x4",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 318,
+        "width": 18
+      },
+      {
+        "selector": "#asmult8",
+        "role": "button",
+        "name": "x8",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 340,
+        "width": 18
+      },
+      {
+        "selector": "td.lowlight",
+        "role": "cell",
+        "name": "range",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 106,
+        "width": 41
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "set→Low • High←set",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 149,
+        "width": 221
+      },
+      {
+        "selector": "#setLow",
+        "role": "button",
+        "name": "set→",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 149,
+        "width": 38
+      },
+      {
+        "selector": "#setLow",
+        "role": "button",
+        "name": "Low",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 187,
+        "width": 30
+      },
+      {
+        "selector": "#setLow",
+        "role": "button",
+        "name": "High",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 231,
+        "width": 34
+      },
+      {
+        "selector": "#setLow",
+        "role": "button",
+        "name": "←set",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 265,
+        "width": 38
+      },
+      {
+        "selector": "div.nobreak",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Save & Share",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "•",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "#customURL0",
+        "role": "button",
+        "name": "Save to URL",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 107,
+        "width": 86
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Save in this Browser",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 107,
+        "width": 135
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Load",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 257,
+        "width": 35
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Open Mini-Player",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 107,
+        "width": 116
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "beta",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 107,
+        "width": 31
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Open in the myNoise app (QR)",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 138,
+        "width": 210
+      },
+      {
+        "selector": "a.powertip",
+        "role": "link",
+        "name": "℗",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 107,
+        "width": 15
+      },
+      {
+        "selector": "#customURL2",
+        "role": "button",
+        "name": "Order Audio File",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 126,
+        "width": 111
+      },
+      {
+        "selector": "div.nobreak",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "iEQ • Calibration",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "a.powertip.titlesmall",
+        "role": "link",
+        "name": "Calibration",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 154,
+        "width": 77
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "• •",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "div.nobreak",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Keyboard Shortcuts",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "isualizer • hite •\nPi k • rown • ↓↑ • elp",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "V",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 107,
+        "width": 12
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "W",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 187,
+        "width": 16
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "N",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 256,
+        "width": 14
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "B",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 291,
+        "width": 11
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "J",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 350,
+        "width": 10
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "K",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 380,
+        "width": 11
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "H",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 406,
+        "width": 13
+      },
+      {
+        "selector": "div.nobreak",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Guided Meditation",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "a.powertip",
+        "role": "link",
+        "name": "℗",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 107,
+        "width": 15
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Enter the Meditation Room",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 126,
+        "width": 182
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 311,
+        "width": 31
+      },
+      {
+        "selector": "#description",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 525,
+        "width": 669
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "What is White Noise?",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 546,
+        "width": 627
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "is generated by a continuous range of frequencies evenly distributed across the entire hearing spectrum. In healthcare settings, white noise is employed to treat hyperacusis, a heightened sensitivity ",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 546,
+        "width": 627
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Browse our full selection",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 640,
+        "width": 167
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Pink Noise and Brown Noise variations",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 546,
+        "width": 627
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Even though all frequencies are produced with equal intensity, sounds much brighter than one might expect from a spectrally flat noise. This is due to the nature of our hearing, which perceives differ",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 546,
+        "width": 627
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Grey",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 925,
+        "width": 36
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "The White Noise Playlist",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 577,
+        "width": 557
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Did you know?",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 546,
+        "width": 627
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Nowadays, there is a noticeable misuse of the term \"white noise\" when referring to audio tracks found on the internet. Instead of playing actual white noise, many platforms and websites often play bro",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 546,
+        "width": 627
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Despite being named \"white\", this generator plays noise in the pink range. This is a compromise between the authentic white noise and the more popular brown setting. Pink noise, as it happens, sits co",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 546,
+        "width": 627
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Wider stereophonic field",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 546,
+        "width": 627
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "If you use headphones and pay attention to how sound is positioned in space, consider using . It is a modified form of white noise that enables you to adjust the stereo width at various frequencies. B",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 546,
+        "width": 627
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Wide noise",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 546,
+        "width": 78
+      },
+      {
+        "selector": "div.date",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 546,
+        "width": 627
+      },
+      {
+        "selector": "div.date",
+        "role": "text",
+        "name": "– Released by Stéphane on April 12th, 2013 and still playing thanks to those who .  Thank you , , , , , , , , , , , , , and",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 546,
+        "width": 627
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "support myNoise",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 546,
+        "width": 583
+      },
+      {
+        "selector": "#testimonials",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 86,
+        "width": 729
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "User Stories 1335",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 687
+      },
+      {
+        "selector": "#scroll-pane",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 687
+      },
+      {
+        "selector": "#commentsSection",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "#commentsList",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentItem",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentMeta",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentBodyRow",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentItem",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentMeta",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentBodyRow",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentItem",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentMeta",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentBodyRow",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentItem",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentMeta",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentBodyRow",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentItem",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentMeta",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentBodyRow",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentItem",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentMeta",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentBodyRow",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentItem",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentMeta",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 117,
+        "width": 667
+      },
+      {
+        "selector": "div.commentBodyRow",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 117,
+        "width": 667
+      }
+    ]
+  },
+  "video": "proof/kane/mynoise-open-menu/resume-2026-11-22T03-31-34.469Z/before/recording.mp4"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "v5-4cb45708801b-3b36ea65",
+  "url": "https://www.fiber.net/",
+  "persona": "keyboard-only",
+  "task": "Open “Cybersecurity” from keyboard focus or with Arrow Down and follow “Backup and Recovery”. Confirm the public destination /cybersecurity-services/backup-and-recovery/.",
+  "controlTask": "Hover “Cybersecurity”, click “Backup and Recovery” and confirm /cybersecurity-services/backup-and-recovery/.",
+  "observedSelector": "#mega-menu-item-1213 > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/cybersecurity-services/backup-and-recovery/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#mega-menu-item-1213",
+    "#mega-sub-menu-1213"
+  ],
+  "journey": [
+    {
+      "selector": "#mega-menu-item-1213 > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#mega-menu-item-1213 > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#mega-menu-item-1222 > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.fiber.net",
+  "match": "https://www.fiber.net/",
+  "barrier": "Pointer hover opens the Cybersecurity submenu, but keyboard focus and Arrow Down leave it hidden, so the Backup and Recovery link is unavailable.",
+  "rules": [
+    {
+      "selector": "#mega-menu-item-1213",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseover"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

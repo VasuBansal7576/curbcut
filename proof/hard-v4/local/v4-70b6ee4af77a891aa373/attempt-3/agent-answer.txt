@@ -1,0 +1,22 @@
+{
+  "barrier": "The 1240px-wide footer flex row places the 812px-wide copyright paragraph 100px from the left edge, so the right side is clipped at 320 CSS pixels.",
+  "rules": [
+    {
+      "selector": "div.footer-main-top",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "selector": "div.footer-div-first",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

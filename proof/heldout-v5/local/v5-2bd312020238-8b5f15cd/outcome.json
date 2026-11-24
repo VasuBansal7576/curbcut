@@ -1,0 +1,60 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-2bd312020238-8b5f15cd",
+    "url": "https://www.elle.de/",
+    "persona": "keyboard-only",
+    "task": "Open “BEAUTY” from keyboard focus or with Arrow Down and follow “TRENDS”. Confirm the public destination /beauty/trends.",
+    "controlTask": "Hover “BEAUTY”, click “TRENDS” and confirm /beauty/trends.",
+    "observedSelector": "#__next > div:nth-of-type(2) > nav > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/beauty/trends"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#__next > div:nth-of-type(2) > nav > div:nth-of-type(2) > div > ul > li:nth-of-type(2)",
+      "#__next > div:nth-of-type(2) > nav > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#__next > div:nth-of-type(2) > nav > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#__next > div:nth-of-type(2) > nav > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#__next > div:nth-of-type(2) > nav > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "control-fail",
+  "reason": "The final journey outcome did not hold.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "fail",
+      "reason": "The final journey outcome did not hold.",
+      "file": "proof/heldout-v5/local/v5-2bd312020238-8b5f15cd/control.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

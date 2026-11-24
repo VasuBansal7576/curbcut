@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "dialog",
+      "selector": "#authentificationModal",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "authentificationModal",
+          "classes": [
+            "modal",
+            "fade",
+            "modal-full"
+          ],
+          "label": "Votre message d'erreur ici. Vous avez déjà un compte Votre message d'erreur ici. Email Votre mot de "
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "close",
+      "selector": "#authentificationModal .modal-header > button[data-bs-dismiss=\"modal\"]",
+      "scope": "#authentificationModal",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "btn-close"
+          ],
+          "label": "Close"
+        }
+      ]
+    }
+  ]
+}

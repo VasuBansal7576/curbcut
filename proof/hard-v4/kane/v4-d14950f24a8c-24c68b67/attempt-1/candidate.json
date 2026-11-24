@@ -1,0 +1,55 @@
+{
+  "id": "v4-d14950f24a8c-24c68b67",
+  "url": "https://www.outsystems.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Platform” from keyboard focus or with Arrow Down and follow “Agentic Systems EngineeringBuild with Mentor or any agentic coding tool”. Confirm the public destination /platform/agentic-systems-engineering.",
+  "controlTask": "Hover “Platform”, click “Agentic Systems EngineeringBuild with Mentor or any agentic coding tool” and confirm /platform/agentic-systems-engineering.",
+  "observedSelector": "#w-dropdown-toggle-1",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/platform/agentic-systems-engineering"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "div > div:nth-of-type(2) > div:nth-of-type(3) > div > nav > div:nth-of-type(1) > div:nth-of-type(1)",
+    "#w-dropdown-list-1"
+  ],
+  "journey": [
+    {
+      "selector": "#w-dropdown-toggle-1",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-toggle-1",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-node-_7fd0a54d-c089-af38-c8b9-5e546296b9c9-6296b9b3 > a:nth-of-type(2)",
+      "action": "activate"
+    }
+  ],
+  "site": "www.outsystems.com",
+  "match": "https://www.outsystems.com/",
+  "barrier": "Focusing the Platform button and pressing Arrow Down leaves its dropdown at display: none, so the Agentic Systems Engineering link is unavailable to keyboard users.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#w-dropdown-toggle-1",
+      "target": "#w-dropdown-list-1",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

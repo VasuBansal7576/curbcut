@@ -1,0 +1,13 @@
+{
+  "barrier": "With the cookie consent banner open, Tab traversal never reached the Product link. The Product submenu is hidden with display: none until opened, leaving Livechat unavailable to keyboard users.",
+  "rules": [
+    {
+      "selector": "#CybotCookiebotDialog",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "#menu-item-8151",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

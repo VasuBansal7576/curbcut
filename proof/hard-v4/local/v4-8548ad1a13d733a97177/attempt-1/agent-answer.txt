@@ -1,0 +1,10 @@
+{
+  "barrier": "The page wrapper is 950 pixels wide with a 750-pixel minimum. The nested column layout places the welcome paragraph between x=202 and x=680, so horizontal clipping cuts off the passage in the 320-pixel viewport.",
+  "rules": [
+    {"selector":"#doc2","action":"injectCSS","value":{"width":"100%","min-width":"0"}},
+    {"selector":"#bd","action":"injectCSS","value":{"display":"flex","flex-direction":"column"}},
+    {"selector":"div.yui-b","action":"injectCSS","value":{"display":"contents"}},
+    {"selector":"div.yui-gc","action":"injectCSS","value":{"display":"block","width":"auto"}},
+    {"selector":"div.yui-u.first","action":"injectCSS","value":{"width":"100%","box-sizing":"border-box"}}
+  ]
+}

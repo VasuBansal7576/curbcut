@@ -1,0 +1,77 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#siteaction-accessibility.d-none",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "li",
+          "id": "siteaction-accessibility",
+          "classes": [
+            "d-none",
+            "d-md-inline-flex"
+          ],
+          "label": "Acessibilidade"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "dialog",
+      "selector": "#modal-acessibilidade",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "modal-acessibilidade",
+          "classes": [
+            "modal",
+            "fade",
+            "bd-example-modal-lg"
+          ],
+          "label": "ACESSIBILIDADE O termo acessibilidade significa incluir a pessoa com deficiência na participação de "
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "opener",
+      "selector": "#siteaction-accessibility > a",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "a",
+          "classes": [
+            "bl-ufsm",
+            "px-2"
+          ],
+          "label": "Acessibilidade"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "close",
+      "selector": "#modal-acessibilidade > div > div > div:nth-of-type(3) > button",
+      "scope": "#modal-acessibilidade",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "btn",
+            "btn-primary"
+          ],
+          "label": "Fechar"
+        }
+      ]
+    }
+  ]
+}

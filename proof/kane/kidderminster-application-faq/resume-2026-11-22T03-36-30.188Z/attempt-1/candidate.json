@@ -1,0 +1,34 @@
+{
+  "id": "kidderminster-application-faq",
+  "url": "https://www.kidderminster.ac.uk/good-to-know-articles/how-to-apply-for-a-course/",
+  "persona": "keyboard-only",
+  "task": "First assert the FAQ disclosure What is a next of kin? is in the sequential keyboard focus order. Open it with Tab and Enter. Verify the answer beginning A next of kin is a relative is visible. Stay on the public information page.",
+  "controlTask": "On the public How To Apply For a Course page, click the Frequently Asked Questions item What is a next of kin? Verify the answer beginning A next of kin is a relative is visible.",
+  "observedSelector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+  "successSelector": "#expand-f28d3621-47c4-495b-8993-bd8210e37d66.show",
+  "site": "www.kidderminster.ac.uk",
+  "match": "https://www.kidderminster.ac.uk/good-to-know-articles/how-to-apply-for-a-course/",
+  "barrier": "The clickable div for “What is a next of kin?” has tabIndex -1, so Tab skips the disclosure.",
+  "rules": [
+    {
+      "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

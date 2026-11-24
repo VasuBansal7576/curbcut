@@ -1,0 +1,15 @@
+{
+  "barrier": "The body has a 1260px minimum width, keeping the promo in an 896px content column. At a 320px viewport, the paragraph extends to x=903 and horizontal clipping cuts off the text.",
+  "rules": [
+    {
+      "selector": "body",
+      "action": "injectCSS",
+      "value": {"min-width": "0"}
+    },
+    {
+      "selector": "div.page_content",
+      "action": "injectCSS",
+      "value": {"max-width": "100%"}
+    }
+  ]
+}

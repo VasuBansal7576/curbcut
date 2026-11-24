@@ -1,0 +1,9 @@
+{
+  "barrier": "The Products link is reachable by Tab, but the submenu opens on pointer hover and stays hidden during the keyboard journey, leaving the Emergency Alerting & Management link unavailable.",
+  "rules": [
+    {
+      "selector": "#primary-nav > li:nth-of-type(2)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

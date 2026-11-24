@@ -1,0 +1,145 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-e2a9611c7721-9325e614",
+    "url": "https://feeder.co/",
+    "persona": "keyboard-only",
+    "task": "Open “Use cases” from keyboard focus or with Arrow Down and follow “Blog readers”. Confirm the public destination /follow/lifestyle-blogs.",
+    "controlTask": "Hover “Use cases”, click “Blog readers” and confirm /follow/lifestyle-blogs.",
+    "observedSelector": "#siteNavUseCases",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/follow/lifestyle-blogs"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#navbarSupportedContent > div:nth-of-type(1) > div:nth-of-type(2)",
+      "#navbarSupportedContent > div:nth-of-type(1) > div:nth-of-type(2) > div"
+    ],
+    "journey": [
+      {
+        "selector": "#siteNavUseCases",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#siteNavUseCases",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#navbarSupportedContent > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-e2a9611c7721-9325e614/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 3 was unavailable after the prior step.",
+      "file": "proof/heldout-v5/local/v5-e2a9611c7721-9325e614/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "fail",
+      "reason": "Journey step 3 was unavailable after the prior step.",
+      "file": "proof/heldout-v5/local/v5-e2a9611c7721-9325e614/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-2/after",
+      "persona": "keyboard-only",
+      "iteration": 2,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-e2a9611c7721-9325e614/attempt-2/after.json"
+    },
+    {
+      "name": "attempt-2/control-with-patch",
+      "persona": "control",
+      "iteration": 2,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-e2a9611c7721-9325e614/attempt-2/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v5-e2a9611c7721-9325e614",
+    "url": "https://feeder.co/",
+    "persona": "keyboard-only",
+    "task": "Open “Use cases” from keyboard focus or with Arrow Down and follow “Blog readers”. Confirm the public destination /follow/lifestyle-blogs.",
+    "controlTask": "Hover “Use cases”, click “Blog readers” and confirm /follow/lifestyle-blogs.",
+    "observedSelector": "#siteNavUseCases",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/follow/lifestyle-blogs"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#navbarSupportedContent > div:nth-of-type(1) > div:nth-of-type(2)",
+      "#navbarSupportedContent > div:nth-of-type(1) > div:nth-of-type(2) > div"
+    ],
+    "journey": [
+      {
+        "selector": "#siteNavUseCases",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#siteNavUseCases",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#navbarSupportedContent > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > a",
+        "action": "activate"
+      }
+    ],
+    "site": "feeder.co",
+    "match": "https://feeder.co/",
+    "barrier": "Keyboard focus reaches “Use cases”, but Arrow Down leaves its panel hidden and clipped. Pointer hover applies the panel’s show class and makes “Blog readers” available.",
+    "rules": [
+      {
+        "action": "toggleOnActivate",
+        "trigger": "#siteNavUseCases",
+        "target": "#siteNavUseCases + .dropdown-menu.nav-panel-use-cases[aria-labelledby='siteNavUseCases']",
+        "mode": "class",
+        "className": "show"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/heldout-v5/local/v5-e2a9611c7721-9325e614/attempt-2"
+}

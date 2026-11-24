@@ -1,0 +1,56 @@
+{
+  "id": "v4-28d14a0437eb6bf5756c",
+  "url": "https://www.doc88.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “道客巴巴网站 版权所有 - ©2008-2026 - 京ICP备18056798号-1 - 京公网安备11010802036365号 - 新出发京零字第海230856号” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “道客巴巴网站 版权所有 - ©2008-2026 - 京ICP备18056798号-1 - 京公网安备11010802036365号 - 新出发京零字第海230856号” at normal width.",
+  "observedSelector": "div:nth-of-type(5) > div:nth-of-type(2) > div > div:nth-of-type(1) > p:nth-of-type(2)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "div:nth-of-type(5) > div:nth-of-type(2) > div > div:nth-of-type(1) > p:nth-of-type(2)",
+      "equals": "道客巴巴网站 版权所有 - ©2008-2026 - 京ICP备18056798号-1 - 京公网安备11010802036365号 - 新出发京零字第海230856号"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "div:nth-of-type(5) > div:nth-of-type(2) > div > div:nth-of-type(1) > p:nth-of-type(2)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.doc88.com",
+  "match": "https://www.doc88.com/",
+  "barrier": "The copyright paragraph is 960 CSS pixels wide, and horizontal clipping on the page cuts it off at the 320 CSS pixel viewport.",
+  "rules": [
+    {
+      "selector": "div.footer",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.ft-logo",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div:nth-of-type(5) > div:nth-of-type(2) > div > div:nth-of-type(1) > p:nth-of-type(2)",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "overflow-wrap": "anywhere",
+        "box-sizing": "border-box"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

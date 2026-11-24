@@ -1,0 +1,134 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-45ea66669cdc-c2486832",
+    "url": "https://www.mailinator.com/",
+    "persona": "keyboard-only",
+    "task": "Open “WHY MAILINATOR” from keyboard focus or with Arrow Down and follow “Applications/Solutions”. Confirm the public destination /applications-solutions/.",
+    "controlTask": "Hover “WHY MAILINATOR”, click “Applications/Solutions” and confirm /applications-solutions/.",
+    "observedSelector": "#menu-item-8021 > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/applications-solutions/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#menu-item-8021",
+      "#menu-item-8021 > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#menu-item-8021 > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menu-item-8021 > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menu-item-8037 > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-45ea66669cdc-c2486832/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 3 was unavailable after the prior step.",
+      "file": "proof/heldout-v5/local/v5-45ea66669cdc-c2486832/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-45ea66669cdc-c2486832/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-45ea66669cdc-c2486832/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v5-45ea66669cdc-c2486832",
+    "url": "https://www.mailinator.com/",
+    "persona": "keyboard-only",
+    "task": "Open “WHY MAILINATOR” from keyboard focus or with Arrow Down and follow “Applications/Solutions”. Confirm the public destination /applications-solutions/.",
+    "controlTask": "Hover “WHY MAILINATOR”, click “Applications/Solutions” and confirm /applications-solutions/.",
+    "observedSelector": "#menu-item-8021 > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/applications-solutions/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#menu-item-8021",
+      "#menu-item-8021 > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#menu-item-8021 > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menu-item-8021 > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menu-item-8037 > a",
+        "action": "activate"
+      }
+    ],
+    "site": "www.mailinator.com",
+    "match": "https://www.mailinator.com/",
+    "barrier": "Keyboard focus and Arrow Down leave the Why Mailinator submenu at display: none, so the Applications/Solutions link is unreachable. Hovering the parent list item reveals the submenu.",
+    "rules": [
+      {
+        "selector": "#menu-item-8021",
+        "action": "mirrorHoverToFocus"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/heldout-v5/local/v5-45ea66669cdc-c2486832/attempt-1"
+}

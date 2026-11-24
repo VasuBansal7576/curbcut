@@ -1,0 +1,181 @@
+{
+  "status": "inconclusive",
+  "runId": "ecc96f28-98c0-4b37-be8c-906b65c8f3a4",
+  "reason": "Hard blocker: captcha",
+  "summary": "The site’s security service treated the automated browser as needing human verification and blocked access to the normal page.\nRun from an approved environment or arrange an automation-safe allowlist/test path; do not attempt to complete the CAPTCHA.\nevidence: error_ui_text: <title>Human Verification</title>\nevidence: network_failure: POST https://8eb60cfff851.d9a656b7.us-east-2.token.awswaf.com/8eb60cfff851/3d5d6f3ad3d5/90b6a275d9e0/mp_verify?region=us",
+  "resultCode": 610,
+  "reasonCode": "blocker.captcha",
+  "credits": 10.5349,
+  "exitCode": 1,
+  "steps": [
+    "navigate: Navigate to https://arstechnica.com/"
+  ],
+  "objective": "Use the locked 320 CSS pixel viewport and scroll vertically only. Remain on this public site. Stop before sign-in, registration or payment. If a CAPTCHA or access challenge appears, stop and report it. Never change fixture settings. Use only visible controls. Verify the final result on the page. At 320px width, assert the Search control fits within the visible width. Open Search without horizontal scrolling and verify a search text field is visible.",
+  "evidencePack": "proof/kane/arstechnica-search/heldout/before/e011960e-d201-4314-8f0b-84b054029acc.evidence",
+  "evidenceValid": true,
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "low-vision",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 320,
+      "maxWidth": 320
+    },
+    "readerVisible": false,
+    "width": 320,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "https://arstechnica.com/",
+    "width": 320,
+    "scrollWidth": 320,
+    "focused": "body",
+    "nodes": [
+      {
+        "selector": "#captcha-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 304
+      },
+      {
+        "selector": "#root",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 304
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Let's confirm you are human",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": "-1",
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 304
+      },
+      {
+        "selector": "#root-instructions",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 304
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Complete the security check before continuing. This step verifies that you are not a bot, which helps to protect your account and prevent spam.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 304
+      },
+      {
+        "selector": "#verification-status",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "flex",
+        "left": 110,
+        "width": 100
+      },
+      {
+        "selector": "div.amzn-captcha-state-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 110,
+        "width": 100
+      },
+      {
+        "selector": "#amzn-captcha-verify-button",
+        "role": "button",
+        "name": "Begin",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "flex",
+        "left": 110,
+        "width": 116
+      },
+      {
+        "selector": "img",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 186,
+        "width": 9
+      },
+      {
+        "selector": "#amzn-captcha-lang-select",
+        "role": "combobox",
+        "name": "Select language",
+        "state": "",
+        "tag": "select",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 139
+      },
+      {
+        "selector": "button.amzn-captcha-lang-apply",
+        "role": "button",
+        "name": "Apply",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 152,
+        "width": 62
+      }
+    ]
+  },
+  "video": "proof/kane/arstechnica-search/heldout/before/recording.mp4"
+}

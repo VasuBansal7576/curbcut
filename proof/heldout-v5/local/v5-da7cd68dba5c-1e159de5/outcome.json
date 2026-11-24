@@ -1,0 +1,135 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-da7cd68dba5c-1e159de5",
+    "url": "https://www.infoblox.com/",
+    "persona": "keyboard-only",
+    "task": "Open “Products” from keyboard focus or with Arrow Down and follow “Infoblox Universal DDI™ Management”. Confirm the public destination /products/universal-ddi-management/.",
+    "controlTask": "Hover “Products”, click “Infoblox Universal DDI™ Management” and confirm /products/universal-ddi-management/.",
+    "observedSelector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/products/universal-ddi-management/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2)",
+      "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > div"
+    ],
+    "journey": [
+      {
+        "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(2) > div > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-da7cd68dba5c-1e159de5/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 3 was unavailable after the prior step.",
+      "file": "proof/heldout-v5/local/v5-da7cd68dba5c-1e159de5/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-da7cd68dba5c-1e159de5/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-da7cd68dba5c-1e159de5/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v5-da7cd68dba5c-1e159de5",
+    "url": "https://www.infoblox.com/",
+    "persona": "keyboard-only",
+    "task": "Open “Products” from keyboard focus or with Arrow Down and follow “Infoblox Universal DDI™ Management”. Confirm the public destination /products/universal-ddi-management/.",
+    "controlTask": "Hover “Products”, click “Infoblox Universal DDI™ Management” and confirm /products/universal-ddi-management/.",
+    "observedSelector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/products/universal-ddi-management/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2)",
+      "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > div"
+    ],
+    "journey": [
+      {
+        "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(2) > div > a",
+        "action": "activate"
+      }
+    ],
+    "site": "www.infoblox.com",
+    "match": "https://www.infoblox.com/",
+    "barrier": "Products receives keyboard focus, but focus and Arrow Down leave its mega menu at display:none. Pointer hover expands the Products item and reveals the Infoblox Universal DDI™ Management link.",
+    "rules": [
+      {
+        "selector": "#nav > .nav-main > .nav-sections > ul > li.nav-drop:nth-of-type(2)",
+        "action": "mirrorHoverEventToFocus",
+        "value": "mouseenter"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/heldout-v5/local/v5-da7cd68dba5c-1e159de5/attempt-1"
+}

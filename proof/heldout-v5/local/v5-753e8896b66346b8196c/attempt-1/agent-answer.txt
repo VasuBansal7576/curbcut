@@ -1,0 +1,12 @@
+{
+  "barrier": "The body has a 380px minimum width at a 320px viewport, pushing the passage’s right edge to 365px.",
+  "rules": [
+    {
+      "selector": "body",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0"
+      }
+    }
+  ]
+}

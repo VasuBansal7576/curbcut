@@ -1,0 +1,96 @@
+{
+  "id": "v4-acb953224d92945f289a",
+  "url": "https://www.questionai.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Our Question AI has unique features and all free, also known as” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Our Question AI has unique features and all free, also known as” at normal width.",
+  "observedSelector": "#main > div:nth-of-type(2) > main > section:nth-of-type(2) > p",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#main > div:nth-of-type(2) > main > section:nth-of-type(2) > p",
+      "equals": "Our Question AI has unique features and all free, also known as"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#main > div:nth-of-type(2) > main > section:nth-of-type(2) > p"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.questionai.com",
+  "match": "https://www.questionai.com/",
+  "barrier": "At 320 CSS pixels, the body's 1200px minimum width and the side-by-side navigation keep the 1000px-wide passage at x=257, where horizontal clipping cuts off most of the text.",
+  "rules": [
+    {
+      "selector": "body",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "div.sidebar",
+      "action": "injectCSS",
+      "value": {
+        "flex-direction": "column",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#main",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.home-page",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "main.home-blocks",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "section.block-tool",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#main > div:nth-of-type(2) > main > section:nth-of-type(2) > p",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    },
+    {
+      "selector": "ul",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,10 @@
+{
+  "barrier": "Keyboard activation opens the Search dialog, but it is still fading in when it first registers as visible, and the ensuing Escape press does not dismiss it.",
+  "rules": [
+    {
+      "action": "extendTimeout",
+      "selector": "#searchModal",
+      "value": 1000
+    }
+  ]
+}

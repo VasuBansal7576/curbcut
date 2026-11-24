@@ -1,0 +1,115 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#features .overflow-x-auto > [role='tablist']",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "flex",
+            "w-max",
+            "items-center",
+            "gap-2.5"
+          ],
+          "role": "tablist",
+          "label": "daily.dev features"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "container",
+      "selector": "#features .overflow-x-auto > [role='tablist']",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "flex",
+            "w-max",
+            "items-center",
+            "gap-2.5"
+          ],
+          "role": "tablist",
+          "label": "daily.dev features"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "items",
+      "selector": "#features [role='tablist'] > button[role='tab']",
+      "scope": "#features .overflow-x-auto > [role='tablist']",
+      "count": 11,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "id": "tour-tab-readmode",
+          "classes": [
+            "tour-tab",
+            "flex-none",
+            "cursor-pointer",
+            "whitespace-nowrap"
+          ],
+          "role": "tab",
+          "label": "Reader"
+        },
+        {
+          "tag": "button",
+          "id": "tour-tab-streak",
+          "classes": [
+            "tour-tab",
+            "flex-none",
+            "cursor-pointer",
+            "whitespace-nowrap"
+          ],
+          "role": "tab",
+          "label": "Streaks"
+        },
+        {
+          "tag": "button",
+          "id": "tour-tab-jobs",
+          "classes": [
+            "tour-tab",
+            "flex-none",
+            "cursor-pointer",
+            "whitespace-nowrap"
+          ],
+          "role": "tab",
+          "label": "Jobs"
+        },
+        {
+          "tag": "button",
+          "id": "tour-tab-reader",
+          "classes": [
+            "tour-tab",
+            "flex-none",
+            "cursor-pointer",
+            "whitespace-nowrap"
+          ],
+          "role": "tab",
+          "label": "Discussions"
+        },
+        {
+          "tag": "button",
+          "id": "tour-tab-squads",
+          "classes": [
+            "tour-tab",
+            "flex-none",
+            "cursor-pointer",
+            "whitespace-nowrap"
+          ],
+          "role": "tab",
+          "label": "Squads"
+        }
+      ]
+    }
+  ]
+}

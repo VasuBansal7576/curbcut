@@ -1,0 +1,44 @@
+{
+  "barrier": "The target list item extends past the carousel’s clipping edge. Its inline list has a 20-pixel-high parent, and the snapshot shows no passage text, so the visibility failure remains unverified after reflow.",
+  "rules": [
+    {
+      "selector": "#myCarousel1 > .carousel-inner, #myCarousel1 > .carousel-inner > .item:first-child",
+      "action": "injectCSS",
+      "value": {
+        "height": "auto",
+        "max-height": "none"
+      }
+    },
+    {
+      "selector": "#myCarousel1 > .carousel-inner > .item:first-child > ul, #myCarousel1 > .carousel-inner > .item:first-child > ul > #cont",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "#myCarousel1 > .carousel-inner > .item:first-child > ul > #cont > ul.list-inline",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "flex-direction": "column",
+        "width": "auto",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "#myCarousel1 > .carousel-inner > .item:first-child > ul > #cont > ul.list-inline > li",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "min-width": "0",
+        "height": "auto",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

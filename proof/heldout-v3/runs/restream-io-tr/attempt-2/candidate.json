@@ -1,0 +1,30 @@
+{
+  "id": "restream-io-tr",
+  "url": "https://restream.io/",
+  "persona": "keyboard-only",
+  "task": "Use Tab and Enter to reach and activate “PRODUCTS”. Verify its content becomes visible.",
+  "controlTask": "Click “PRODUCTS” and verify its content becomes visible.",
+  "observedSelector": "nav > div > div:nth-of-type(1) > div:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > span",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "nav > div > div:nth-of-type(1) > div:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > div"
+    }
+  ],
+  "minimumTabPresses": 2,
+  "probe": {
+    "action": "click"
+  },
+  "site": "restream.io",
+  "match": "https://restream.io/",
+  "barrier": "Forward and backward tabbing did not consistently reach PRODUCTS, although the run reported focus once and the snapshot shows tabindex=\"0\". The click replay also failed to reveal the dropdown, so forwarding Enter to click has no verified opening behavior to reuse.",
+  "rules": [
+    {
+      "selector": "nav > div > div:nth-of-type(1) > div:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(1) > span",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,10 @@
+{
+  "barrier": "The Next slide arrow is a clickable div with no tabindex, button role, or accessible name, so Tab skips it. The carousel CSS also removes its focus outline.",
+  "rules": [
+    {"selector":"#slideArea > .slideBox > div.slick-next.slick-arrow","action":"makeFocusable"},
+    {"selector":"#slideArea > .slideBox > div.slick-next.slick-arrow","action":"setRole","value":"button"},
+    {"selector":"#slideArea > .slideBox > div.slick-next.slick-arrow","action":"addLabel","value":"Next slide"},
+    {"selector":"#slideArea > .slideBox > div.slick-next.slick-arrow","action":"bindEnterToClick"},
+    {"selector":"#slideArea > .slideBox > div.slick-next.slick-arrow","action":"restoreFocusOutline"}
+  ]
+}

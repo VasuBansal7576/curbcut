@@ -1,0 +1,35 @@
+{
+  "barrier": "At 320 CSS pixels, the story list and its text column are 750 pixels wide, extending from x=15 to x=765. Horizontal clipping cuts off the passage.",
+  "rules": [
+    {
+      "selector": "div.grid__module.grid__module_loaded_true",
+      "action": "injectCSS",
+      "value": {"width": "auto", "max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "div.story-list",
+      "action": "injectCSS",
+      "value": {"width": "auto", "max-width": "100%"}
+    },
+    {
+      "selector": "ul.story-list__list",
+      "action": "injectCSS",
+      "value": {"width": "auto", "max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "li.story-list__item.story-list__item_ad_true",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "auto", "max-width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "div.story-list__photo",
+      "action": "injectCSS",
+      "value": {"max-width": "100%"}
+    },
+    {
+      "selector": "div.story-list__text",
+      "action": "injectCSS",
+      "value": {"width": "auto", "max-width": "100%", "box-sizing": "border-box", "overflow-wrap": "anywhere"}
+    }
+  ]
+}

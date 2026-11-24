@@ -1,0 +1,34 @@
+{
+  "id": "ventusky-precipitation",
+  "url": "https://www.ventusky.com/",
+  "persona": "keyboard-only",
+  "task": "First assert the Precipitation anchor in the Forecast panel has either a link destination or an explicit tabindex of 0. Use Tab and Enter to switch from Temperature to Precipitation and verify the 3 hours accumulation option.",
+  "controlTask": "Click Precipitation in the Forecast panel. Verify that the page shows the Precipitation map and the 3 hours accumulation option.",
+  "observedSelector": "#i > a:has(> span.rain)",
+  "successSelector": "#i > a.p:has(> span.rain)",
+  "site": "www.ventusky.com",
+  "match": "https://www.ventusky.com/",
+  "barrier": "The Forecast panel’s Precipitation control is an anchor exposed as text with no href or explicit tabindex, so it lacks native Tab focus and Enter activation.",
+  "rules": [
+    {
+      "selector": "#i > a:has(> span.rain)",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#i > a:has(> span.rain)",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#i > a:has(> span.rain)",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#i > a:has(> span.rain)",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,34 @@
+{
+  "id": "v5-6d4dfc1c610d4c45a657",
+  "url": "https://www.esmo.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search for Abstracts, Guidelines, Meetings” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search for Abstracts, Guidelines, Meetings” field and type test without submitting.",
+  "observedSelector": "#searchAutocomplete > input",
+  "requiredName": "Search for Abstracts, Guidelines, Meetings",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#searchAutocomplete > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.esmo.org",
+  "match": "https://www.esmo.org/",
+  "barrier": "The search input has no accessible name and exposes the combobox role, so Reading view cannot find it as the requested named textbox. The available rules can supply the name but do not support setting the textbox role.",
+  "rules": [
+    {
+      "selector": "#searchAutocomplete > input",
+      "action": "addLabel",
+      "value": "Search for Abstracts, Guidelines, Meetings"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

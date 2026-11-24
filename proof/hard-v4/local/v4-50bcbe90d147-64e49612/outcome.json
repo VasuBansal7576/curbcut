@@ -1,0 +1,181 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-50bcbe90d147-64e49612",
+    "url": "https://www.certus.com/",
+    "persona": "keyboard-only",
+    "task": "Open “SOLUTIONS” from keyboard focus or with Arrow Down and follow “Enterprise Solutions Catalog”. Confirm the public destination /enterprise-solutions-catalog/.",
+    "controlTask": "Hover “SOLUTIONS”, click “Enterprise Solutions Catalog” and confirm /enterprise-solutions-catalog/.",
+    "observedSelector": "#nav > ul > li:nth-of-type(3) > span",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/enterprise-solutions-catalog/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#nav > ul > li:nth-of-type(3)",
+      "#nav > ul > li:nth-of-type(3) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#nav > ul > li:nth-of-type(3) > span",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#nav > ul > li:nth-of-type(3) > span",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#nav > ul > li:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "Tab traversal missed journey step 1.",
+    "steps": [
+      {
+        "selector": "#nav > ul > li:nth-of-type(3) > span",
+        "action": "focus",
+        "traversal": {
+          "reached": false,
+          "tabs": 36,
+          "exhausted": true
+        }
+      }
+    ],
+    "url": "https://www.certus.com/"
+  },
+  "registeredControl": {
+    "status": "pass",
+    "reason": "The complete journey reached the declared outcome.",
+    "steps": [
+      {
+        "selector": "#nav > ul > li:nth-of-type(3) > span",
+        "action": "focus"
+      },
+      {
+        "selector": "#nav > ul > li:nth-of-type(3) > span",
+        "action": "key",
+        "key": "ArrowDown"
+      },
+      {
+        "selector": "#nav > ul > li:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+        "action": "activate"
+      }
+    ],
+    "url": "https://www.certus.com/enterprise-solutions-catalog/",
+    "checks": [
+      true
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-50bcbe90d147-64e49612/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Tab traversal missed journey step 1.",
+      "file": "proof/hard-v4/local/v4-50bcbe90d147-64e49612/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-50bcbe90d147-64e49612/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-50bcbe90d147-64e49612/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v4-50bcbe90d147-64e49612",
+    "url": "https://www.certus.com/",
+    "persona": "keyboard-only",
+    "task": "Open “SOLUTIONS” from keyboard focus or with Arrow Down and follow “Enterprise Solutions Catalog”. Confirm the public destination /enterprise-solutions-catalog/.",
+    "controlTask": "Hover “SOLUTIONS”, click “Enterprise Solutions Catalog” and confirm /enterprise-solutions-catalog/.",
+    "observedSelector": "#nav > ul > li:nth-of-type(3) > span",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/enterprise-solutions-catalog/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#nav > ul > li:nth-of-type(3)",
+      "#nav > ul > li:nth-of-type(3) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#nav > ul > li:nth-of-type(3) > span",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#nav > ul > li:nth-of-type(3) > span",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#nav > ul > li:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+        "action": "activate"
+      }
+    ],
+    "site": "www.certus.com",
+    "match": "https://www.certus.com/",
+    "barrier": "The SOLUTIONS trigger is a span outside the Tab order, so keyboard users cannot focus it to open the hover submenu and reach Enterprise Solutions Catalog.",
+    "rules": [
+      {
+        "selector": "#nav > ul > li:nth-of-type(3) > span",
+        "action": "makeFocusable"
+      },
+      {
+        "selector": "#nav > ul > li:nth-of-type(3) > span",
+        "action": "restoreFocusOutline"
+      },
+      {
+        "selector": "#nav > ul > li:nth-of-type(3)",
+        "action": "mirrorHoverToFocus"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/hard-v4/local/v4-50bcbe90d147-64e49612/attempt-1"
+}

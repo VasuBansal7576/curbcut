@@ -1,0 +1,16 @@
+{
+  "barrier": "At 320 CSS pixels, the d-none class hides the list item containing the Acessibilidade link, so the link has no clickable area.",
+  "rules": [
+    {
+      "selector": "#siteaction-accessibility.d-none",
+      "action": "injectCSS",
+      "value": {"display": "inline-block"}
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#modal-acessibilidade",
+      "opener": "#siteaction-accessibility > a",
+      "close": "#modal-acessibilidade > div > div > div:nth-of-type(3) > button"
+    }
+  ]
+}

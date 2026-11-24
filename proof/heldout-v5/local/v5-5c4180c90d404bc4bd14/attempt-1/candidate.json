@@ -1,0 +1,34 @@
+{
+  "id": "v5-5c4180c90d404bc4bd14",
+  "url": "https://www.indriya.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search by Pin code / City / State” searchbox and type test without submitting.",
+  "controlTask": "Click the visible “Search by Pin code / City / State” field and type test without submitting.",
+  "observedSelector": "#typeahead",
+  "requiredName": "Search by Pin code / City / State",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#typeahead",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "searchbox"
+  },
+  "site": "www.indriya.com",
+  "match": "https://www.indriya.com/",
+  "barrier": "The store locator input already has the searchbox role but lacks an accessible name in Reading view.",
+  "rules": [
+    {
+      "selector": "#typeahead",
+      "action": "addLabel",
+      "value": "Search by Pin code / City / State"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,2121 @@
+{
+  "runner": "playwright",
+  "status": "fail",
+  "reason": "Tab traversal missed journey step 3.",
+  "steps": [
+    {
+      "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > a",
+      "action": "focus",
+      "traversal": {
+        "reached": true,
+        "tabs": 7
+      },
+      "visibility": null
+    },
+    {
+      "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > a",
+      "action": "key",
+      "key": "ArrowDown"
+    },
+    {
+      "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > ul > li:nth-of-type(2) > a",
+      "action": "activate",
+      "traversal": {
+        "reached": false,
+        "tabs": 7,
+        "exhausted": true
+      }
+    }
+  ],
+  "url": "https://www.superguidatv.it/",
+  "snapshot": {
+    "url": "https://www.superguidatv.it/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body.home.wp-singular",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > a",
+          "parent": "#menu-td-demo-header-menu-1 > li:nth-of-type(5)",
+          "tag": "a",
+          "attributes": {
+            "class": "sf-with-ul",
+            "aria-controls": "curbcut-widget-1",
+            "aria-expanded": "false"
+          },
+          "hoverHandlers": [],
+          "text": "Soap opera",
+          "children": [
+            "i.td-icon-menu-down"
+          ],
+          "box": [
+            654,
+            45,
+            112,
+            60
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5)",
+          "parent": "#menu-td-demo-header-menu-1",
+          "tag": "li",
+          "attributes": {
+            "class": "menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children td-menu-item td-normal-menu menu-item-27719"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.sf-with-ul",
+            "#curbcut-widget-1"
+          ],
+          "box": [
+            654,
+            45,
+            112,
+            60
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-td-demo-header-menu-1",
+          "parent": "#td-header-menu > div:nth-of-type(3)",
+          "tag": "ul",
+          "attributes": {
+            "id": "menu-td-demo-header-menu-1",
+            "class": "sf-menu sf-js-enabled"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.menu-item.menu-item-type-post_type",
+            "li.menu-item.menu-item-type-custom",
+            "li.menu-item.menu-item-type-taxonomy",
+            "li.menu-item.menu-item-type-taxonomy",
+            "li.menu-item.menu-item-type-taxonomy",
+            "li.menu-item.menu-item-type-taxonomy"
+          ],
+          "box": [
+            106,
+            45,
+            1020,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#td-header-menu > div:nth-of-type(3)",
+          "parent": "#td-header-menu",
+          "tag": "div",
+          "attributes": {
+            "class": "menu-td-demo-header-menu-container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-td-demo-header-menu-1"
+          ],
+          "box": [
+            106,
+            45,
+            1020,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#td-header-menu",
+          "parent": "div.td-header-menu-wrap > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "id": "td-header-menu",
+            "role": "navigation"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#td-top-mobile-toggle",
+            "div.td-main-menu-logo.td-logo-in-menu",
+            "div.menu-td-demo-header-menu-container"
+          ],
+          "box": [
+            106,
+            45,
+            1020,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.td-header-menu-wrap > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "td-container td-header-row td-header-main-menu black-menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#td-header-menu",
+            "div.header-search-wrap"
+          ],
+          "box": [
+            106,
+            45,
+            1068,
+            60
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "999",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > ul",
+          "parent": "#menu-td-demo-header-menu-1 > li:nth-of-type(5)",
+          "tag": "ul",
+          "attributes": {
+            "class": "sub-menu",
+            "id": "curbcut-widget-1"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.menu-item.menu-item-type-taxonomy",
+            "li.menu-item.menu-item-type-taxonomy",
+            "li.menu-item.menu-item-type-taxonomy",
+            "li.menu-item.menu-item-type-taxonomy",
+            "li.menu-item.menu-item-type-taxonomy",
+            "li.menu-item.menu-item-type-taxonomy"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > ul > li:nth-of-type(2) > a",
+          "parent": "#curbcut-widget-1 > li:nth-of-type(2)",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "La forza di una donna",
+          "children": [],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#curbcut-widget-1 > li:nth-of-type(2)",
+          "parent": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > ul",
+          "tag": "li",
+          "attributes": {
+            "class": "menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-345749"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:active, a:hover",
+          "declarations": "outline: 0px;",
+          "conditions": []
+        },
+        {
+          "selector": ".td-header-style-5 .black-menu .sf-menu > .current-menu-item > a, .td-header-style-5 .black-menu .sf-menu > .current-menu-ancestor > a, .td-header-style-5 .black-menu .sf-menu > .current-category-ancestor > a, .td-header-style-5 .black-menu .sf-menu > li > a:hover, .td-header-style-5 .black-menu .sf-menu > .sfHover > a",
+          "declarations": "background-color: rgb(77, 178, 236);",
+          "conditions": []
+        },
+        {
+          "selector": ".sf-menu li:hover",
+          "declarations": "visibility: inherit;",
+          "conditions": []
+        },
+        {
+          "selector": ".sf-menu li:hover ul, .sf-menu li.sfHover ul",
+          "declarations": "left: 0px; top: auto; z-index: 99;",
+          "conditions": []
+        },
+        {
+          "selector": "ul.sf-menu li:hover li ul, ul.sf-menu li.sfHover li ul",
+          "declarations": "top: -999em;",
+          "conditions": []
+        },
+        {
+          "selector": "ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul",
+          "declarations": "left: 10em; top: 0px !important;",
+          "conditions": []
+        },
+        {
+          "selector": "ul.sf-menu li li:hover li ul, ul.sf-menu li li.sfHover li ul",
+          "declarations": "top: -999em;",
+          "conditions": []
+        },
+        {
+          "selector": ".sf-menu > .current-menu-item > a, .sf-menu > .current-menu-ancestor > a, .sf-menu > .current-category-ancestor > a, .sf-menu > li > a:hover, .sf-menu > .sfHover, .sf-menu > .sfHover > a",
+          "declarations": "z-index: 999;",
+          "conditions": []
+        },
+        {
+          "selector": ".sf-menu > .current-menu-item > a, .sf-menu > .current-menu-ancestor > a, .sf-menu > .current-category-ancestor > a, .sf-menu > li > a:hover, .sf-menu > .sfHover > a",
+          "declarations": "background-color: transparent;",
+          "conditions": []
+        },
+        {
+          "selector": ".sf-menu > .current-menu-item > a::after, .sf-menu > .current-menu-ancestor > a::after, .sf-menu > .current-category-ancestor > a::after, .sf-menu > li:hover > a::after, .sf-menu > .sfHover > a::after",
+          "declarations": "background-color: rgb(77, 178, 236); width: 100%;",
+          "conditions": []
+        },
+        {
+          "selector": ".sf-menu ul .td-menu-item > a:hover, .sf-menu ul .sfHover > a, .sf-menu ul .current-menu-ancestor > a, .sf-menu ul .current-category-ancestor > a, .sf-menu ul .current-menu-item > a",
+          "declarations": "color: rgb(77, 178, 236);",
+          "conditions": []
+        },
+        {
+          "selector": ".sf-menu li:hover, .sf-menu li.sfHover, .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active",
+          "declarations": "outline: 0px;",
+          "conditions": []
+        },
+        {
+          "selector": ".td-header-wrap .black-menu .sf-menu > .current-menu-item > a, .td-header-wrap .black-menu .sf-menu > .current-menu-ancestor > a, .td-header-wrap .black-menu .sf-menu > .current-category-ancestor > a, .td-header-wrap .black-menu .sf-menu > li > a:hover, .td-header-wrap .black-menu .sf-menu > .sfHover > a, .td-header-style-12 .td-header-menu-wrap-full, .sf-menu > .current-menu-item > a::after, .sf-",
+          "declarations": "background-color: rgb(251, 179, 58);",
+          "conditions": []
+        },
+        {
+          "selector": "a, cite a:hover, .td_mega_menu_sub_cats .cur-sub-cat, .td-mega-span h3 a:hover, .td_mod_mega_menu:hover .entry-title a, .header-search-wrap .result-msg a:hover, .td-header-top-menu .td-drop-down-search .td_module_wrap:hover .entry-title a, .td-header-top-menu .td-icon-search:hover, .td-header-wrap .result-msg a:hover, .top-header-menu li a:hover, .top-header-menu .current-menu-item > a, .top-heade",
+          "declarations": "color: rgb(251, 179, 58);",
+          "conditions": []
+        },
+        {
+          "selector": ".sf-menu > .current-menu-item > a::after, .sf-menu > .current-menu-ancestor > a::after, .sf-menu > .current-category-ancestor > a::after, .sf-menu > li:hover > a::after, .sf-menu > .sfHover > a::after, .td_block_mega_menu .td-next-prev-wrap a:hover, .td-mega-span .td-post-category:hover, .td-header-wrap .black-menu .sf-menu > li > a:hover, .td-header-wrap .black-menu .sf-menu > .current-menu-ances",
+          "declarations": "background-color: rgb(2, 0, 0);",
+          "conditions": []
+        },
+        {
+          "selector": ".td_mega_menu_sub_cats .cur-sub-cat, .td_mod_mega_menu:hover .entry-title a, .td-theme-wrap .sf-menu ul .td-menu-item > a:hover, .td-theme-wrap .sf-menu ul .sfHover > a, .td-theme-wrap .sf-menu ul .current-menu-ancestor > a, .td-theme-wrap .sf-menu ul .current-category-ancestor > a, .td-theme-wrap .sf-menu ul .current-menu-item > a",
+          "declarations": "color: rgb(2, 0, 0);",
+          "conditions": []
+        },
+        {
+          "selector": ".td-theme-wrap .sf-menu .td-normal-menu .td-menu-item > a:hover, .td-theme-wrap .sf-menu .td-normal-menu .sfHover > a, .td-theme-wrap .sf-menu .td-normal-menu .current-menu-ancestor > a, .td-theme-wrap .sf-menu .td-normal-menu .current-category-ancestor > a, .td-theme-wrap .sf-menu .td-normal-menu .current-menu-item > a",
+          "declarations": "color: rgb(251, 179, 58);",
+          "conditions": []
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5)",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 654,
+        "width": 112
+      },
+      {
+        "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > ul",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > a",
+        "role": "link",
+        "name": "Soap opera",
+        "state": "expanded false",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": "curbcut-widget-1",
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 654,
+        "width": 112
+      },
+      {
+        "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > ul > li:nth-of-type(2) > a",
+        "role": "link",
+        "name": "La forza di una donna",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "i.td-icon-menu-down",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "i",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 736,
+        "width": 16
+      },
+      {
+        "selector": "#menu-td-demo-header-menu-1",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 1020
+      },
+      {
+        "selector": "body.home.wp-singular",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html.td-md-is-os-x.td-md-is-chrome",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "div.td-scroll-up",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1235,
+        "width": 40
+      },
+      {
+        "selector": "div.td-menu-background",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": -1280,
+        "width": 1280
+      },
+      {
+        "selector": "#td-mobile-nav",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": -1280,
+        "width": 1280
+      },
+      {
+        "selector": "div.td-search-background",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1280,
+        "width": 1280
+      },
+      {
+        "selector": "div.td-search-wrap-mob",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#td-outer-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#TGCom24HeaderBanner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 830,
+        "width": 0
+      },
+      {
+        "selector": "div.td-header-wrap.td-header-style-5",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.td-header-top-menu-full.td-container-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 58,
+        "width": 1164
+      },
+      {
+        "selector": "div.td-container.td-header-row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 1068
+      },
+      {
+        "selector": "div.td-header-menu-wrap-full.td-container-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 58,
+        "width": 1164
+      },
+      {
+        "selector": "div.td-header-menu-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 58,
+        "width": 1164
+      },
+      {
+        "selector": "#td-header-menu",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 1020
+      },
+      {
+        "selector": "div.td-main-menu-logo.td-logo-in-menu",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 183
+      },
+      {
+        "selector": "a.td-header-logo.td-sticky-mobile",
+        "role": "link",
+        "name": "SuperGuidaTV - Programmi, Anticipazioni e Gossip sulla TV Super Guida TV",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 106,
+        "width": 183
+      },
+      {
+        "selector": "img.td-retina-data",
+        "role": "img",
+        "name": "SuperGuidaTV - Programmi, Anticipazioni e Gossip sulla TV",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 106,
+        "width": 163
+      },
+      {
+        "selector": "div.menu-td-demo-header-menu-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 1020
+      },
+      {
+        "selector": "li.menu-item.menu-item-type-post_type",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 289,
+        "width": 63
+      },
+      {
+        "selector": "li.menu-item.menu-item-type-custom",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 966,
+        "width": 67
+      },
+      {
+        "selector": "a.sf-with-ul",
+        "role": "link",
+        "name": "Altri",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 966,
+        "width": 67
+      },
+      {
+        "selector": "li.menu-item.menu-item-type-taxonomy",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 888,
+        "width": 78
+      },
+      {
+        "selector": "div.header-search-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1126,
+        "width": 48
+      },
+      {
+        "selector": "div.td-search-btns-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1126,
+        "width": 48
+      },
+      {
+        "selector": "#td-header-search-button",
+        "role": "button",
+        "name": "",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 1126,
+        "width": 48
+      },
+      {
+        "selector": "div.td-header-header-full.td-banner-wrap-full",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 58,
+        "width": 1164
+      },
+      {
+        "selector": "div.td-container-header.td-header-row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 58,
+        "width": 1164
+      },
+      {
+        "selector": "div.td-header-sp-recs",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 58,
+        "width": 1164
+      },
+      {
+        "selector": "div.td-header-rec-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 58,
+        "width": 1164
+      },
+      {
+        "selector": "div.td-a-rec.td-a-rec-id-header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 58,
+        "width": 1164
+      },
+      {
+        "selector": "#adv-gpt-masthead-skin-container1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 58,
+        "width": 1164
+      },
+      {
+        "selector": "div.td-main-content-wrap.td-main-page-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 58,
+        "width": 1164
+      },
+      {
+        "selector": "div.tdc-content-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 58,
+        "width": 1164
+      },
+      {
+        "selector": "#td_uid_1_6b049e3d839d2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 1068
+      },
+      {
+        "selector": "div.vc_row.td_uid_2_6b049e3d839d4_rand",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 82,
+        "width": 1116
+      },
+      {
+        "selector": "div.vc_column.td_uid_3_6b049e3d83a68_rand",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 82,
+        "width": 1116
+      },
+      {
+        "selector": "div.wpb_wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 1068
+      },
+      {
+        "selector": "div.td_block_wrap.td_block_big_grid_3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 1068
+      },
+      {
+        "selector": "#td_uid_5_6b049e3d850fc",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 1068
+      },
+      {
+        "selector": "div.td-big-grid-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 1068
+      },
+      {
+        "selector": "div.td_module_mx5.td-animation-stack",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 532
+      },
+      {
+        "selector": "div.td-module-thumb",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 909,
+        "width": 265
+      },
+      {
+        "selector": "a.td-image-wrap",
+        "role": "link",
+        "name": "Piedone 2",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 909,
+        "width": 265
+      },
+      {
+        "selector": "img.entry-thumb.td-animation-stack-type0-1",
+        "role": "img",
+        "name": "Piedone 2",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 909,
+        "width": 265
+      },
+      {
+        "selector": "div.td-meta-info-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 909,
+        "width": 265
+      },
+      {
+        "selector": "div.td-meta-align",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 909,
+        "width": 265
+      },
+      {
+        "selector": "div.td-big-grid-meta",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 924,
+        "width": 235
+      },
+      {
+        "selector": "a.td-post-category",
+        "role": "link",
+        "name": "In Evidenza",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 924,
+        "width": 77
+      },
+      {
+        "selector": "div.entry-title.td-module-title",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 924,
+        "width": 235
+      },
+      {
+        "selector": "div.td-module-meta-info",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 126,
+        "width": 512
+      },
+      {
+        "selector": "div.td-big-grid-scroll",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 1068
+      },
+      {
+        "selector": "div.td_module_mx11.td-animation-stack",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 641,
+        "width": 533
+      },
+      {
+        "selector": "div.td_module_mx6.td-animation-stack",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 909,
+        "width": 265
+      },
+      {
+        "selector": "div.clearfix",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 1068
+      },
+      {
+        "selector": "div.wpb_wrapper.td_block_wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 1068
+      },
+      {
+        "selector": "#topMenu",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "table",
+        "left": 106,
+        "width": 1068
+      },
+      {
+        "selector": "div.sgtvhome_menuButton",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 811,
+        "width": 352
+      },
+      {
+        "selector": "#tvguide_selector",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 342
+      },
+      {
+        "selector": "#night",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 1068
+      },
+      {
+        "selector": "div.sgtvhome_divCell",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 106,
+        "width": 356
+      },
+      {
+        "selector": "div.sgtvhome_divContent",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 106,
+        "width": 345
+      },
+      {
+        "selector": "div.sgtvhome_divProgram.sgtvhome_displayTable",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "table",
+        "left": 107,
+        "width": 343
+      },
+      {
+        "selector": "a.sgtvhome_spanFullPlanA",
+        "role": "link",
+        "name": "Ch. 4 Vedi Tutto",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "table",
+        "left": 107,
+        "width": 343
+      },
+      {
+        "selector": "div.sgtvhome_divContainerChannelLogo",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "table-cell",
+        "left": 830,
+        "width": 172
+      },
+      {
+        "selector": "div.sgtvhome_spanFullPlan",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "table-cell",
+        "left": 1001,
+        "width": 172
+      },
+      {
+        "selector": "a.sgtvhome_eventLink",
+        "role": "link",
+        "name": "00:00 Tg3 Linea Notte Notizie",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "table",
+        "left": 830,
+        "width": 343
+      },
+      {
+        "selector": "div.sgtvhome_divHours",
+        "role": "text",
+        "name": "00:00",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "table-cell",
+        "left": 830,
+        "width": 70
+      },
+      {
+        "selector": "div.sgtvhome_divEventInfo",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "table-cell",
+        "left": 900,
+        "width": 273
+      },
+      {
+        "selector": "div.sgtvhome_tablerow",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "table-row",
+        "left": 830,
+        "width": 343
+      },
+      {
+        "selector": "div.sgtvhome_divBackdrop",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 830,
+        "width": 343
+      },
+      {
+        "selector": "div.sgtvhome_firstAired",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 335,
+        "width": 115
+      },
+      {
+        "selector": "div.sgtvhome_serieInfo",
+        "role": "text",
+        "name": "Stagione 1 - Ep. 5",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 107,
+        "width": 343
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > a",
+          "parent": "#menu-td-demo-header-menu-1 > li:nth-of-type(5)",
+          "tag": "a",
+          "attributes": {
+            "class": "sf-with-ul",
+            "aria-controls": "curbcut-widget-1",
+            "aria-expanded": "true"
+          },
+          "hoverHandlers": [],
+          "text": "Soap opera",
+          "children": [
+            "i.td-icon-menu-down"
+          ],
+          "box": [
+            660,
+            45,
+            114,
+            60
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5)",
+          "parent": "#menu-td-demo-header-menu-1",
+          "tag": "li",
+          "attributes": {
+            "class": "menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children td-menu-item td-normal-menu menu-item-27719"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.sf-with-ul",
+            "#curbcut-widget-1"
+          ],
+          "box": [
+            660,
+            45,
+            114,
+            60
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-td-demo-header-menu-1",
+          "parent": "#td-header-menu > div:nth-of-type(3)",
+          "tag": "ul",
+          "attributes": {
+            "id": "menu-td-demo-header-menu-1",
+            "class": "sf-menu sf-js-enabled"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.menu-item.menu-item-type-post_type",
+            "li.menu-item.menu-item-type-custom",
+            "li.menu-item.menu-item-type-taxonomy",
+            "li.menu-item.menu-item-type-taxonomy",
+            "li.menu-item.menu-item-type-taxonomy",
+            "li.menu-item.menu-item-type-taxonomy"
+          ],
+          "box": [
+            106,
+            45,
+            1020,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#td-header-menu > div:nth-of-type(3)",
+          "parent": "#td-header-menu",
+          "tag": "div",
+          "attributes": {
+            "class": "menu-td-demo-header-menu-container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-td-demo-header-menu-1"
+          ],
+          "box": [
+            106,
+            45,
+            1020,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#td-header-menu",
+          "parent": "div.td-header-menu-wrap > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "id": "td-header-menu",
+            "role": "navigation"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#td-top-mobile-toggle",
+            "div.td-main-menu-logo.td-logo-in-menu",
+            "div.menu-td-demo-header-menu-container"
+          ],
+          "box": [
+            106,
+            45,
+            1020,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.td-header-menu-wrap > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "td-container td-header-row td-header-main-menu black-menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#td-header-menu",
+            "div.header-search-wrap"
+          ],
+          "box": [
+            106,
+            45,
+            1068,
+            60
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "999",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > ul",
+          "parent": "#menu-td-demo-header-menu-1 > li:nth-of-type(5)",
+          "tag": "ul",
+          "attributes": {
+            "class": "sub-menu",
+            "id": "curbcut-widget-1"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.menu-item.menu-item-type-taxonomy",
+            "li.menu-item.menu-item-type-taxonomy",
+            "li.menu-item.menu-item-type-taxonomy",
+            "li.menu-item.menu-item-type-taxonomy",
+            "li.menu-item.menu-item-type-taxonomy",
+            "li.menu-item.menu-item-type-taxonomy"
+          ],
+          "box": [
+            645,
+            -13941,
+            202,
+            336
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > ul > li:nth-of-type(2) > a",
+          "parent": "#curbcut-widget-1 > li:nth-of-type(2)",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "La forza di una donna",
+          "children": [],
+          "box": [
+            645,
+            -13892,
+            202,
+            34
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#curbcut-widget-1 > li:nth-of-type(2)",
+          "parent": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > ul",
+          "tag": "li",
+          "attributes": {
+            "class": "menu-item menu-item-type-taxonomy menu-item-object-category td-menu-item td-normal-menu menu-item-345749"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a"
+          ],
+          "box": [
+            645,
+            -13892,
+            202,
+            34
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:active, a:hover",
+          "declarations": "outline: 0px;",
+          "conditions": []
+        },
+        {
+          "selector": ".td-header-style-5 .black-menu .sf-menu > .current-menu-item > a, .td-header-style-5 .black-menu .sf-menu > .current-menu-ancestor > a, .td-header-style-5 .black-menu .sf-menu > .current-category-ancestor > a, .td-header-style-5 .black-menu .sf-menu > li > a:hover, .td-header-style-5 .black-menu .sf-menu > .sfHover > a",
+          "declarations": "background-color: rgb(77, 178, 236);",
+          "conditions": []
+        },
+        {
+          "selector": ".sf-menu li:hover",
+          "declarations": "visibility: inherit;",
+          "conditions": []
+        },
+        {
+          "selector": ".sf-menu li:hover ul, .sf-menu li.sfHover ul",
+          "declarations": "left: 0px; top: auto; z-index: 99;",
+          "conditions": []
+        },
+        {
+          "selector": "ul.sf-menu li:hover li ul, ul.sf-menu li.sfHover li ul",
+          "declarations": "top: -999em;",
+          "conditions": []
+        },
+        {
+          "selector": "ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul",
+          "declarations": "left: 10em; top: 0px !important;",
+          "conditions": []
+        },
+        {
+          "selector": "ul.sf-menu li li:hover li ul, ul.sf-menu li li.sfHover li ul",
+          "declarations": "top: -999em;",
+          "conditions": []
+        },
+        {
+          "selector": ".sf-menu > .current-menu-item > a, .sf-menu > .current-menu-ancestor > a, .sf-menu > .current-category-ancestor > a, .sf-menu > li > a:hover, .sf-menu > .sfHover, .sf-menu > .sfHover > a",
+          "declarations": "z-index: 999;",
+          "conditions": []
+        },
+        {
+          "selector": ".sf-menu > .current-menu-item > a, .sf-menu > .current-menu-ancestor > a, .sf-menu > .current-category-ancestor > a, .sf-menu > li > a:hover, .sf-menu > .sfHover > a",
+          "declarations": "background-color: transparent;",
+          "conditions": []
+        },
+        {
+          "selector": ".sf-menu > .current-menu-item > a::after, .sf-menu > .current-menu-ancestor > a::after, .sf-menu > .current-category-ancestor > a::after, .sf-menu > li:hover > a::after, .sf-menu > .sfHover > a::after",
+          "declarations": "background-color: rgb(77, 178, 236); width: 100%;",
+          "conditions": []
+        },
+        {
+          "selector": ".sf-menu ul .td-menu-item > a:hover, .sf-menu ul .sfHover > a, .sf-menu ul .current-menu-ancestor > a, .sf-menu ul .current-category-ancestor > a, .sf-menu ul .current-menu-item > a",
+          "declarations": "color: rgb(77, 178, 236);",
+          "conditions": []
+        },
+        {
+          "selector": ".sf-menu li:hover, .sf-menu li.sfHover, .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active",
+          "declarations": "outline: 0px;",
+          "conditions": []
+        },
+        {
+          "selector": ".td-header-wrap .black-menu .sf-menu > .current-menu-item > a, .td-header-wrap .black-menu .sf-menu > .current-menu-ancestor > a, .td-header-wrap .black-menu .sf-menu > .current-category-ancestor > a, .td-header-wrap .black-menu .sf-menu > li > a:hover, .td-header-wrap .black-menu .sf-menu > .sfHover > a, .td-header-style-12 .td-header-menu-wrap-full, .sf-menu > .current-menu-item > a::after, .sf-",
+          "declarations": "background-color: rgb(251, 179, 58);",
+          "conditions": []
+        },
+        {
+          "selector": "a, cite a:hover, .td_mega_menu_sub_cats .cur-sub-cat, .td-mega-span h3 a:hover, .td_mod_mega_menu:hover .entry-title a, .header-search-wrap .result-msg a:hover, .td-header-top-menu .td-drop-down-search .td_module_wrap:hover .entry-title a, .td-header-top-menu .td-icon-search:hover, .td-header-wrap .result-msg a:hover, .top-header-menu li a:hover, .top-header-menu .current-menu-item > a, .top-heade",
+          "declarations": "color: rgb(251, 179, 58);",
+          "conditions": []
+        },
+        {
+          "selector": ".sf-menu > .current-menu-item > a::after, .sf-menu > .current-menu-ancestor > a::after, .sf-menu > .current-category-ancestor > a::after, .sf-menu > li:hover > a::after, .sf-menu > .sfHover > a::after, .td_block_mega_menu .td-next-prev-wrap a:hover, .td-mega-span .td-post-category:hover, .td-header-wrap .black-menu .sf-menu > li > a:hover, .td-header-wrap .black-menu .sf-menu > .current-menu-ances",
+          "declarations": "background-color: rgb(2, 0, 0);",
+          "conditions": []
+        },
+        {
+          "selector": ".td_mega_menu_sub_cats .cur-sub-cat, .td_mod_mega_menu:hover .entry-title a, .td-theme-wrap .sf-menu ul .td-menu-item > a:hover, .td-theme-wrap .sf-menu ul .sfHover > a, .td-theme-wrap .sf-menu ul .current-menu-ancestor > a, .td-theme-wrap .sf-menu ul .current-category-ancestor > a, .td-theme-wrap .sf-menu ul .current-menu-item > a",
+          "declarations": "color: rgb(2, 0, 0);",
+          "conditions": []
+        },
+        {
+          "selector": ".td-theme-wrap .sf-menu .td-normal-menu .td-menu-item > a:hover, .td-theme-wrap .sf-menu .td-normal-menu .sfHover > a, .td-theme-wrap .sf-menu .td-normal-menu .current-menu-ancestor > a, .td-theme-wrap .sf-menu .td-normal-menu .current-category-ancestor > a, .td-theme-wrap .sf-menu .td-normal-menu .current-menu-item > a",
+          "declarations": "color: rgb(251, 179, 58);",
+          "conditions": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "runner": "kane",
+  "registration": {
+    "commit": "d924216d27fc0273449deca484794a76572b7a45",
+    "blob": "bdf11f9e79b6fb680ef2955aeb36d2ea23a9f82f"
+  },
+  "startedAt": "2026-11-24T03:43:11.138Z",
+  "initialBalance": 227.475,
+  "finalBalance": 98.3455,
+  "creditsSpent": 129.1295,
+  "limits": {
+    "maxSteps": 50,
+    "timeout": 360,
+    "assertionMode": "dom"
+  },
+  "minimumBalance": 45,
+  "original": {
+    "kaneVerified": 0,
+    "selected": 4
+  },
+  "cases": [
+    {
+      "id": "v5-c22b9bdca86b-71a63d77",
+      "name": "WoRMS",
+      "candidateFile": "proof/heldout-v5/local/v5-c22b9bdca86b-71a63d77/attempt-1/candidate.json",
+      "patchSha256": "1481c32fc2ffddd1065fe49e70376d4199fdddeb1d632e98a60b0f8a45e1274b",
+      "control": {
+        "status": "pass",
+        "runId": "1ee0357f-4309-495b-b4c5-431c7a8aee5c",
+        "result": "proof/heldout-v5/kane/v5-c22b9bdca86b-71a63d77/control/result.json"
+      },
+      "originalBefore": {
+        "status": "fail",
+        "reason": "Step 1 failed: Tools is visible but skipped in keyboard tab order between Statistics and Manual.",
+        "maxSteps": 24,
+        "result": "proof/heldout-v5/kane/v5-c22b9bdca86b-71a63d77/before/result.json"
+      },
+      "kaneVerified": true
+    },
+    {
+      "id": "v5-39c81de4ef43-33ae7f34",
+      "name": "TikFinity",
+      "candidateFile": "proof/heldout-v5/local/v5-39c81de4ef43-33ae7f34/attempt-1/candidate.json",
+      "patchSha256": "2fbd38cf327e068b9972e9db32e51caf902aa4c25f022b416cab7de1b99d2b78",
+      "control": {
+        "status": "pass",
+        "runId": "8e63d7c8-e6c4-4db4-a74c-811217024714",
+        "result": "proof/heldout-v5/kane/v5-39c81de4ef43-33ae7f34/control/result.json"
+      },
+      "originalBefore": {
+        "status": "inconclusive",
+        "reason": "Maximum steps exceeded (25/24)",
+        "maxSteps": 24,
+        "result": "proof/heldout-v5/kane/v5-39c81de4ef43-33ae7f34/before/result.json"
+      },
+      "kaneVerified": false
+    }
+  ],
+  "runs": [
+    {
+      "id": "v5-c22b9bdca86b-71a63d77",
+      "name": "WoRMS",
+      "phase": "after",
+      "verdict": "pass",
+      "stepsUsed": 26,
+      "creditsSpent": 26.0496,
+      "balanceBefore": 227.475,
+      "startedAt": "2026-11-24T03:43:20.806Z",
+      "result": "proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/after/result.json",
+      "runner": "kane",
+      "reason": "Objective completed",
+      "runId": "bc62f31e-4ff9-4ba8-880c-4dccdafe284d",
+      "rawKaneStatus": "pass",
+      "rawKaneReason": "Objective completed",
+      "kaneReportedCredits": 23.71588,
+      "evidencePack": "proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/after/eb14dcd6-443a-4fc5-9edc-e47e9028c267.evidence",
+      "recording": "proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/after/recording.mp4",
+      "evidenceValid": true,
+      "proven": true,
+      "balanceAfter": 201.4254,
+      "finishedAt": "2026-11-24T03:44:49.283Z"
+    },
+    {
+      "id": "v5-39c81de4ef43-33ae7f34",
+      "name": "TikFinity",
+      "phase": "before",
+      "verdict": "inconclusive",
+      "stepsUsed": 38,
+      "creditsSpent": 30.0401,
+      "balanceBefore": 201.4254,
+      "startedAt": "2026-11-24T03:44:52.605Z",
+      "result": "proof/heldout-v5/kane-rerun-50/v5-39c81de4ef43-33ae7f34/before/result.json",
+      "runner": "kane",
+      "reason": "complete-journey-not-witnessed",
+      "runId": "e8a912e6-698c-474c-9583-4e66dec41448",
+      "rawKaneStatus": "pass",
+      "rawKaneReason": "Objective completed",
+      "kaneReportedCredits": 27.721092499999997,
+      "evidencePack": "proof/heldout-v5/kane-rerun-50/v5-39c81de4ef43-33ae7f34/before/41c8260d-28de-444a-9306-7bfc900851a0.evidence",
+      "recording": "proof/heldout-v5/kane-rerun-50/v5-39c81de4ef43-33ae7f34/before/recording.mp4",
+      "evidenceValid": true,
+      "proven": true,
+      "balanceAfter": 171.3853,
+      "finishedAt": "2026-11-24T03:46:55.542Z"
+    },
+    {
+      "id": "v5-39c81de4ef43-33ae7f34",
+      "name": "TikFinity",
+      "phase": "after",
+      "verdict": "inconclusive",
+      "stepsUsed": 36,
+      "creditsSpent": 50.1686,
+      "balanceBefore": 171.3853,
+      "startedAt": "2026-11-24T03:46:58.830Z",
+      "result": "proof/heldout-v5/kane-rerun-50/v5-39c81de4ef43-33ae7f34/after/result.json",
+      "runner": "kane",
+      "reason": "complete-journey-not-witnessed",
+      "runId": "f8ed0a5e-6996-47e7-a8a6-dadb619a1110",
+      "rawKaneStatus": "inconclusive",
+      "rawKaneReason": "Child agent failed: The child objective explicitly requires reporting this task as failed.",
+      "kaneReportedCredits": 43.449079999999995,
+      "evidencePack": "proof/heldout-v5/kane-rerun-50/v5-39c81de4ef43-33ae7f34/after/87edf39f-015c-48b6-bbcf-584d3f3dc322.evidence",
+      "recording": "proof/heldout-v5/kane-rerun-50/v5-39c81de4ef43-33ae7f34/after/recording.mp4",
+      "evidenceValid": true,
+      "proven": true,
+      "balanceAfter": 121.2167,
+      "finishedAt": "2026-11-24T03:49:49.147Z"
+    },
+    {
+      "id": "v5-c22b9bdca86b-71a63d77",
+      "name": "WoRMS",
+      "phase": "before",
+      "verdict": "fail",
+      "stepsUsed": 24,
+      "creditsSpent": 22.8712,
+      "balanceBefore": 121.2167,
+      "startedAt": "2026-11-24T03:49:56.024Z",
+      "result": "proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/before/result.json",
+      "runner": "kane",
+      "reason": "Step 1 failed: Tab skips Tools between Statistics and Manual in both directions.",
+      "runId": "997b7c62-125d-4613-8769-90ffafd35782",
+      "rawKaneStatus": "fail",
+      "rawKaneReason": "Step 1 failed: Tab skips Tools between Statistics and Manual in both directions.",
+      "kaneReportedCredits": 20.470515,
+      "evidencePack": "proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/before/5fc7e627-5f68-42e0-a2f5-81b7fc99499f.evidence",
+      "recording": "proof/heldout-v5/kane-rerun-50/v5-c22b9bdca86b-71a63d77/before/recording.mp4",
+      "evidenceValid": true,
+      "proven": true,
+      "balanceAfter": 98.3455,
+      "finishedAt": "2026-11-24T03:51:32.782Z"
+    }
+  ],
+  "unrun": [],
+  "kaneVerified": 1,
+  "finishedAt": "2026-11-24T03:51:32.783Z"
+}

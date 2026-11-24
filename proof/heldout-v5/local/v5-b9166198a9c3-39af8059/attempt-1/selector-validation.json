@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#desktop-header #dropdownMenuQuick",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "a",
+          "id": "dropdownMenuQuick",
+          "classes": [
+            "header-btn-quick-links"
+          ],
+          "role": "button",
+          "label": "QUICK LINKS"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "trigger",
+      "selector": "#desktop-header #dropdownMenuQuick",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "a",
+          "id": "dropdownMenuQuick",
+          "classes": [
+            "header-btn-quick-links"
+          ],
+          "role": "button",
+          "label": "QUICK LINKS"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "target",
+      "selector": "#desktop-header #dropdownMenuQuick + ul.dropdown-menu-quick[aria-labelledby='dropdownMenuQuick']",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "ul",
+          "classes": [
+            "dropdown-menu",
+            "dropdown-menu-quick"
+          ],
+          "label": "Canvas SharkLink Abraham S. Fischler College of Education and School of Criminal Justice Barry and J"
+        }
+      ]
+    }
+  ]
+}

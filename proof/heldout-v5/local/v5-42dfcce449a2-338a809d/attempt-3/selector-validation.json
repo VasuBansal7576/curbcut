@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "dialog",
+      "selector": "#login",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "login",
+          "classes": [
+            "modal",
+            "fade"
+          ],
+          "role": "dialog",
+          "label": "Login Anggota × Lupa Kata Sandi ? Daftar"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "close",
+      "selector": "#login .modal-header > button.close[data-dismiss=\"modal\"]",
+      "scope": "#login",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "close"
+          ],
+          "label": "Close"
+        }
+      ]
+    }
+  ]
+}

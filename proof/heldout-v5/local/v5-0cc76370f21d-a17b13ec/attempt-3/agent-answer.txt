@@ -1,0 +1,9 @@
+{
+  "barrier": "The FAQ button has tabindex=\"-1\" in the initial state, so Tab skips it before the user can activate the existing disclosure.",
+  "rules": [
+    {
+      "selector": "#fluconazoleFaq > .accordion-item > h3 > button[data-bs-target=\"#faq2\"]",
+      "action": "makeFocusable"
+    }
+  ]
+}

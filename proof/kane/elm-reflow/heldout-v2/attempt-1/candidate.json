@@ -1,0 +1,38 @@
+{
+  "id": "elm-reflow",
+  "url": "https://guide.elm-lang.org/core_language.html",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “> madlib animal adjective = | \"The ostentatious \" ++ animal”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "controlTask": "At normal width, read the passage beginning “> madlib animal adjective = | \"The ostentatious \" ++ animal” and verify all its text is visible without horizontal scrolling.",
+  "observedSelector": "#book-search-results > div:nth-of-type(1) > section > div:nth-of-type(4) > p:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#book-search-results > div:nth-of-type(1) > section > div:nth-of-type(4) > p:nth-of-type(1)",
+      "equals": "> madlib animal adjective = | \"The ostentatious \" ++ animal"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#book-search-results > div:nth-of-type(1) > section > div:nth-of-type(4) > p:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "guide.elm-lang.org",
+  "match": "https://guide.elm-lang.org/core_language.html",
+  "barrier": "At 320 CSS pixels, white-space: pre prevents the madlib passage from wrapping. Its content spans 718 pixels inside a 251-pixel paragraph, and the enclosing section clips the overflow.",
+  "rules": [
+    {
+      "selector": "#book-search-results > div:nth-of-type(1) > section > div:nth-of-type(4) > p:nth-of-type(1)",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "pre-wrap",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

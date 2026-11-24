@@ -1,0 +1,9 @@
+{
+  "barrier": "The visible Add to cart control for Field Headphones is a clickable div with tabIndex -1, so Tab skips it and keyboard users cannot activate it.",
+  "rules": [
+    {"selector": "div.add-to-cart", "action": "makeFocusable"},
+    {"selector": "div.add-to-cart", "action": "setRole", "value": "button"},
+    {"selector": "div.add-to-cart", "action": "bindEnterToClick"},
+    {"selector": "div.add-to-cart", "action": "restoreFocusOutline"}
+  ]
+}

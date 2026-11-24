@@ -1,0 +1,30 @@
+{
+  "id": "unitconverters-length",
+  "url": "https://www.unitconverters.net/",
+  "persona": "low-vision",
+  "task": "In the Length converter, assert that the complete To value field fits within the 320-pixel viewport. Enter 1 in From with Meter and Kilometer selected. Verify 0.001 appears in To without horizontal scrolling.",
+  "controlTask": "In the Length converter, select Meter and Kilometer if needed, type 1 in From, and verify 0.001 appears in To.",
+  "observedSelector": "table:has(#fromVal)",
+  "site": "www.unitconverters.net",
+  "match": "https://www.unitconverters.net/",
+  "barrier": "The Length converter lays out From and To in side-by-side table cells, placing the To field’s right edge at 351 pixels in a 320-pixel viewport.",
+  "rules": [
+    {
+      "selector": "table",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "td",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

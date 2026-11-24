@@ -1,0 +1,99 @@
+{
+  "id": "v4-d24b0515c551f4dafef4",
+  "url": "https://org.ru/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “ICANN опубликовала обновленный список заявок на новые домены” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “ICANN опубликовала обновленный список заявок на новые домены” at normal width.",
+  "observedSelector": "#wrapper > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > div > div:nth-of-type(2) > p:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#wrapper > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > div > div:nth-of-type(2) > p:nth-of-type(1)",
+      "equals": "ICANN опубликовала обновленный список заявок на новые домены"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#wrapper > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > div > div:nth-of-type(2) > p:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "org.ru",
+  "match": "https://org.ru/",
+  "barrier": "The wrapper has a 1000px minimum width, and the news text sits beside an inline date column. At 320 CSS pixels the paragraph starts at x=217 and extends to x=656, where horizontal clipping cuts it off.",
+  "rules": [
+    {
+      "selector": "#wrapper",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "div.main",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto"
+      }
+    },
+    {
+      "selector": "div.inside",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto"
+      }
+    },
+    {
+      "selector": "div.main-t.table",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto"
+      }
+    },
+    {
+      "selector": "div.td",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto"
+      }
+    },
+    {
+      "selector": "div.mainsearch.inline-block",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto"
+      }
+    },
+    {
+      "selector": "div.news.ulnews",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto"
+      }
+    },
+    {
+      "selector": "div.indexdate",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "div.indextitle",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,13 @@
+{
+  "barrier": "The soundbite container is 418 CSS pixels wide inside a 300 CSS pixel section. At a 320 CSS pixel viewport, the paragraph extends to x=407 and is clipped by the main content container.",
+  "rules": [
+    {
+      "selector": "div.soundbite",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ]
+}

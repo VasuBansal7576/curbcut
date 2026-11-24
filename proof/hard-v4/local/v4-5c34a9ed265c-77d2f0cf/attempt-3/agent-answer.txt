@@ -1,0 +1,17 @@
+{
+  "barrier": "Tab traversal exhausted six attempts with focus still in the cookie consent dialog. The Classifieds, Etc. link is already focusable, and its submenu is hidden until hover.",
+  "rules": [
+    {
+      "selector": "#cmplz-cookiebanner-1-optout",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "div.cmplz-close",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#menu-primary-menu-1 > li:nth-of-type(6)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

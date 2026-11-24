@@ -1,0 +1,10 @@
+{
+  "barrier": "Keyboard activation makes the sign-in dialog visible while its opening transition is still running. The Escape step can occur during that transition, before Bootstrap accepts dismissal.",
+  "rules": [
+    {
+      "action": "extendTimeout",
+      "selector": "#authentificationModal",
+      "value": 1000
+    }
+  ]
+}

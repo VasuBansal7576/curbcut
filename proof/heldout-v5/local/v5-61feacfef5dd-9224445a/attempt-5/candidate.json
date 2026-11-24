@@ -1,0 +1,66 @@
+{
+  "id": "v5-61feacfef5dd-9224445a",
+  "url": "https://www.superguidatv.it/",
+  "persona": "keyboard-only",
+  "task": "Open “Soap opera” from keyboard focus or with Arrow Down and follow “La forza di una donna”. Confirm the public destination /soap/la-forza-di-una-donna/.",
+  "controlTask": "Hover “Soap opera”, click “La forza di una donna” and confirm /soap/la-forza-di-una-donna/.",
+  "observedSelector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/soap/la-forza-di-una-donna/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menu-td-demo-header-menu-1 > li:nth-of-type(5)",
+    "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-td-demo-header-menu-1 > li:nth-of-type(5) > ul > li:nth-of-type(2) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.superguidatv.it",
+  "match": "https://www.superguidatv.it/",
+  "barrier": "Keyboard focus reaches “Soap opera”, but after Arrow Down, Tab misses “La forza di una donna”. The closed submenu has display:none, and pointer hover applies the sfHover open class to its parent list item.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#menu-td-demo-header-menu-1 > li.menu-item-27719 > a.sf-with-ul",
+      "target": "#menu-td-demo-header-menu-1 > li.menu-item-27719",
+      "mode": "class",
+      "className": "sfHover"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#menu-td-demo-header-menu-1 > li.menu-item-27719",
+      "items": "#menu-td-demo-header-menu-1 > li.menu-item-27719 > a.sf-with-ul, #menu-td-demo-header-menu-1 > li.menu-item-27719 > ul.sub-menu > li > a",
+      "orientation": "vertical",
+      "activate": "focus"
+    },
+    {
+      "action": "restoreFocusOutline",
+      "selector": "#menu-td-demo-header-menu-1 > li.menu-item-27719 > a.sf-with-ul, #menu-td-demo-header-menu-1 > li.menu-item-27719 > ul.sub-menu > li > a"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

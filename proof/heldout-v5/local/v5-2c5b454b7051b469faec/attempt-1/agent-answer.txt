@@ -1,0 +1,12 @@
+{
+  "barrier": "At 320 CSS pixels, the body, #content, and #pagefooter each enforce a 360px minimum width. The news item extends to x=333, beyond the viewport's right edge.",
+  "rules": [
+    {
+      "selector": "body, #content, #pagefooter",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0"
+      }
+    }
+  ]
+}

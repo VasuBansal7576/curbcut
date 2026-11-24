@@ -1,0 +1,8 @@
+{
+  "barrier": "The visible carousel Play/Pause control is a span with a button role and tabIndex -1, so Tab skips it.",
+  "rules": [
+    {"selector": "span.play_pause", "action": "makeFocusable"},
+    {"selector": "span.play_pause", "action": "bindEnterToClick"},
+    {"selector": "span.play_pause", "action": "restoreFocusOutline"}
+  ]
+}

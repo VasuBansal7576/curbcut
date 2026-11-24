@@ -1,0 +1,34 @@
+{
+  "id": "v4-e2c1f89a9a3b8b9c0878",
+  "url": "https://www.ucsfhealth.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search for symptom, condition, or keyword” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search for symptom, condition, or keyword” field and type test without submitting.",
+  "observedSelector": "#gray_hero_bg > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > div > form > div > input",
+  "requiredName": "Search for symptom, condition, or keyword",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#gray_hero_bg > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > div > form > div > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.ucsfhealth.org",
+  "match": "https://www.ucsfhealth.org/",
+  "barrier": "The search input has no accessible name and is exposed as a combobox, so the Reading view probe cannot find it by the requested textbox role and name. The available rules can supply the name, but cannot assign the textbox role.",
+  "rules": [
+    {
+      "selector": "#gray_hero_bg > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > div > form > div > input",
+      "action": "addLabel",
+      "value": "Search for symptom, condition, or keyword"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

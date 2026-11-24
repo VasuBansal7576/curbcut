@@ -1,0 +1,52 @@
+{
+  "id": "v5-97763e796ed8-d549191b",
+  "url": "https://www.manhwaden.com/",
+  "persona": "keyboard-only",
+  "task": "Open “★MANHWA GENRES” from keyboard focus or with Arrow Down and follow “Drama”. Confirm the public destination /manga-genre/drama/.",
+  "controlTask": "Hover “★MANHWA GENRES”, click “Drama” and confirm /manga-genre/drama/.",
+  "observedSelector": "#menu-item-354 > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/manga-genre/drama/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menu-item-354",
+    "#menu-item-354 > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#menu-item-354 > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-item-354 > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu-item-356 > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.manhwaden.com",
+  "match": "https://www.manhwaden.com/",
+  "barrier": "The desktop genres submenu becomes visible only when its parent list item is hovered. Focusing the genres link or pressing Arrow Down leaves the Drama link hidden.",
+  "rules": [
+    {
+      "selector": "#menu-item-354",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

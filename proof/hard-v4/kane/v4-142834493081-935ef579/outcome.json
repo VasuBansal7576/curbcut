@@ -1,0 +1,47 @@
+{
+  "task": {
+    "id": "v4-142834493081-935ef579",
+    "url": "https://sana.sy/",
+    "persona": "keyboard-only",
+    "task": "Open “سوريا” from keyboard focus or with Arrow Down and follow “رئاسة الجمهورية”. Confirm the public destination /presidency/.",
+    "controlTask": "Hover “سوريا”, click “رئاسة الجمهورية” and confirm /presidency/.",
+    "observedSelector": "#menu-item-2257213 > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/presidency/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#menu-item-2257213",
+      "#menu-item-2257213 > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#menu-item-2257213 > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menu-item-2257213 > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menu-item-2557912 > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "status": "budget stop",
+  "phases": [],
+  "localProposal": "proof/hard-v4/local/v4-142834493081-935ef579/attempt-1",
+  "reason": "Balance 533.8893 cannot fund before above the protected 251.4976999999999 credits.",
+  "finishedAt": "2026-11-23T16:40:02.443Z"
+}

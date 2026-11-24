@@ -1,0 +1,42 @@
+{
+  "id": "v5-87835c3cd500-aabf1679",
+  "url": "https://bupropion150mg.shop/",
+  "persona": "keyboard-only",
+  "task": "Expand “1. What is Bupropion?” with the keyboard and read “Bupropion is an antidepressant classified as an NDRI, used for mood disorders and smoking cessation.”.",
+  "controlTask": "Click “1. What is Bupropion?” and read “Bupropion is an antidepressant classified as an NDRI, used for mood disorders and smoking cessation.”.",
+  "observedSelector": "#q1 > button",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#a1",
+      "equals": "Bupropion is an antidepressant classified as an NDRI, used for mood disorders and smoking cessation."
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#a1"
+  ],
+  "journey": [
+    {
+      "selector": "#q1 > button",
+      "action": "activate"
+    },
+    {
+      "selector": "#a1",
+      "action": "observe"
+    }
+  ],
+  "site": "bupropion150mg.shop",
+  "match": "https://bupropion150mg.shop/",
+  "barrier": "Tab reaches the first FAQ button, but the button is still outside the viewport when the runner checks focus visibility.",
+  "rules": [
+    {
+      "selector": "#q1 > button",
+      "action": "extendTimeout",
+      "value": 2000
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

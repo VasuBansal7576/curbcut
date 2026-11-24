@@ -1,0 +1,55 @@
+{
+  "id": "v4-8931e12f7957-698be0b8",
+  "url": "https://www.localstack.cloud/",
+  "persona": "keyboard-only",
+  "task": "Open “Resources” from keyboard focus or with Arrow Down and follow “Blog postLet Your AI Agent Write Least-Privilege IAM Policies”. Confirm the public destination /let-your-ai-agent-write-least-privilege-iam-policies/.",
+  "controlTask": "Hover “Resources”, click “Blog postLet Your AI Agent Write Least-Privilege IAM Policies” and confirm /let-your-ai-agent-write-least-privilege-iam-policies/.",
+  "observedSelector": "#w-dropdown-toggle-2",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/let-your-ai-agent-write-least-privilege-iam-policies/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#ls-nav-menu > div:nth-of-type(1) > div:nth-of-type(3)",
+    "#w-dropdown-list-2"
+  ],
+  "journey": [
+    {
+      "selector": "#w-dropdown-toggle-2",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-toggle-2",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-list-2 > div > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.localstack.cloud",
+  "match": "https://www.localstack.cloud/",
+  "barrier": "Hovering Resources reveals the dropdown, but focusing the trigger and pressing Arrow Down leaves the blog link unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#w-dropdown-toggle-2",
+      "target": "#w-dropdown-list-2",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

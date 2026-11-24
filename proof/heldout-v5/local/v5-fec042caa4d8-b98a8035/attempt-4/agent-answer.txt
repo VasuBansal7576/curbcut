@@ -1,0 +1,16 @@
+{
+  "barrier": "Tab traversal reaches AI Workspace, but focus leaves the tab before the first step completes. The observations do not identify which handler moves focus.",
+  "rules": [
+    {
+      "selector": "div.slick-slider.MastheadCustom_slider-wrapper__xX5QY",
+      "action": "removeFocusTrap"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.ProductTabberTabs_tab-list__4f2_0[role=\"tablist\"]",
+      "items": "button[role=\"tab\"][aria-controls^=\"product-tabpanel-\"]",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ]
+}

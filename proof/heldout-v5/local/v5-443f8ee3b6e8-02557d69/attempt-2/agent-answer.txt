@@ -1,0 +1,34 @@
+{
+  "barrier": "Tab reaches the testimonials carousel’s Next slide arrow while it is outside the viewport. Slick also suppresses its focus outline. The previous repair added keyboard activation and an outline, but the arrow still failed the visibility check.",
+  "rules": [
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider > div.slick-next",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider > div.slick-next",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider > div.slick-next",
+      "action": "addLabel",
+      "value": "Next slide"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider > div.slick-next",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider > div.slick-next",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "section.Testimonials_testimonials__bxBC9 .slick-slider",
+      "items": "section.Testimonials_testimonials__bxBC9 .slick-slider > div.slick-arrow:not(.slick-disabled)",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

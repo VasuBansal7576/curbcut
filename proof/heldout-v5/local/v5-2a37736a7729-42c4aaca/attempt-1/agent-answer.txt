@@ -1,0 +1,11 @@
+{
+  "barrier": "Keyboard activation of Configurar opens the cookie settings dialog, but focus remains on the page body, so the dialog does not receive Escape.",
+  "rules": [
+    {
+      "action": "dialogBehavior",
+      "dialog": "#js-cookies-panel",
+      "opener": "div.cookies-banner > button.js-cookies-configure[data-target=\"#js-cookies-panel\"]",
+      "close": "#js-cookies-panel .modal-header > button.btn-close[data-dismiss=\"modal\"]"
+    }
+  ]
+}

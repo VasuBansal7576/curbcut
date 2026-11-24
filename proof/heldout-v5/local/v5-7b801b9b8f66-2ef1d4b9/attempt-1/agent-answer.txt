@@ -1,0 +1,9 @@
+{
+  "barrier": "The Domains link receives keyboard focus, but the submenu is revealed only by CSS hover on its parent list item. Focusing Domains and pressing Arrow Down leaves the .org link hidden.",
+  "rules": [
+    {
+      "selector": "#menu-main-menu > li:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

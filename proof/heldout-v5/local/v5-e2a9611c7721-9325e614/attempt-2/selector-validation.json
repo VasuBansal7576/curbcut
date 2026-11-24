@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "trigger",
+      "selector": "#siteNavUseCases",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "a",
+          "id": "siteNavUseCases",
+          "classes": [
+            "nav-link",
+            "dropdown-toggle"
+          ],
+          "label": "Use cases"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "target",
+      "selector": "#siteNavUseCases + .dropdown-menu.nav-panel-use-cases[aria-labelledby='siteNavUseCases']",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "dropdown-menu",
+            "nav-panel",
+            "nav-panel-use-cases"
+          ],
+          "label": "At work Security teams Compliance Pharma Financial services Newsrooms For you Blog readers Customer "
+        }
+      ]
+    }
+  ]
+}

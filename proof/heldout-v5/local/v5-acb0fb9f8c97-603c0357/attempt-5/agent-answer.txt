@@ -1,0 +1,17 @@
+{
+  "barrier": "The Products panel is hidden and transparent in the resting state. Pointer hover reveals it, but the keyboard journey reached the product link without reaching the requested destination.",
+  "rules": [
+    {
+      "selector": "nav.mega-menu-nav > ul.mega-menu > li.mega-menu-item:first-of-type > a.is-clickable",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "nav.mega-menu-nav > ul.mega-menu > li.mega-menu-item:first-of-type > a.is-clickable",
+      "target": "nav.mega-menu-nav > ul.mega-menu > li.mega-menu-item:first-of-type > ul.mega-menu-dropdown.columns-3",
+      "mode": "display",
+      "display": "grid"
+    }
+  ]
+}

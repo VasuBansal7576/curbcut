@@ -1,0 +1,23 @@
+{
+  "id": "calculator-net-add-days",
+  "url": "https://www.calculator.net/date-calculator.html",
+  "site": "www.calculator.net",
+  "match": "https://www.calculator.net/date-calculator.html",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, first assert that the exact row ‘textbox · Days to add’ is present. Set that textbox to 2 in Add to or Subtract from a Date. Activate the Calculate control for that section, then verify the displayed date is two days after the start date.",
+  "barrier": "The #c2day textbox has no accessible name, so Reading view cannot identify it as “Days to add.”",
+  "rules": [
+    {
+      "selector": "#c2day",
+      "action": "addLabel",
+      "value": "Days to add"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": [],
+  "observedSelector": "#c2day",
+  "requiredName": "Days to add",
+  "successSelector": "h2.h2result",
+  "controlTask": "Under Add to or Subtract from a Date, set the visibly labeled days field to 2. Click that section’s Calculate button and verify the resulting date is two days after the start date."
+}

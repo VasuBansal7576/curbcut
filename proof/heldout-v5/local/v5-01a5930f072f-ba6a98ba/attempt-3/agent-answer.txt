@@ -1,0 +1,17 @@
+{
+  "barrier": "Tab traversal skips the Locations button inside the focusable search combobox. The prior focus repair reached the button, but keyboard activation still left the menu description unavailable. Pointer activation opened the menu.",
+  "rules": [
+    {
+      "selector": "div[role=\"combobox\"][aria-haspopup=\"menu\"]:has(button[aria-controls=\"mega-menu\"][aria-describedby=\"header_search-input-mega-menu-cta-desc\"])",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "button[aria-controls=\"mega-menu\"][aria-describedby=\"header_search-input-mega-menu-cta-desc\"]",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "button[aria-controls=\"mega-menu\"][aria-describedby=\"header_search-input-mega-menu-cta-desc\"]",
+      "action": "bindEnterToClick"
+    }
+  ]
+}

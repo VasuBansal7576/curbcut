@@ -1,0 +1,47 @@
+{
+  "barrier": "At 320 CSS pixels, the fixed-width article layout leaves the passage 630 pixels wide, with its right edge at 649 pixels. Horizontal clipping cuts off the text.",
+  "rules": [
+    {
+      "selector": "div.intro",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "width": "auto",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#page",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#col1_2",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#col1",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.une19w",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "box-sizing": "border-box"
+      }
+    }
+  ]
+}

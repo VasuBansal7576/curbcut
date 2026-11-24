@@ -1,0 +1,80 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "container",
+      "selector": "ul[role=\"tablist\"]:has(> li > #tab1)",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "ul",
+          "classes": [
+            "max:6",
+            "max:center",
+            "cluster",
+            "cluster--center"
+          ],
+          "role": "tablist",
+          "label": "SinterklaasHerfstRealityDuurzaam levenTrue crime"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "items",
+      "selector": "ul[role=\"tablist\"]:has(> li > #tab1) > li > button[role=\"tab\"]",
+      "scope": "ul[role=\"tablist\"]:has(> li > #tab1)",
+      "count": 5,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "id": "tab1",
+          "classes": [
+            "label"
+          ],
+          "role": "tab",
+          "label": "Sinterklaas"
+        },
+        {
+          "tag": "button",
+          "id": "tab2",
+          "classes": [
+            "label"
+          ],
+          "role": "tab",
+          "label": "Herfst"
+        },
+        {
+          "tag": "button",
+          "id": "tab3",
+          "classes": [
+            "label"
+          ],
+          "role": "tab",
+          "label": "Reality"
+        },
+        {
+          "tag": "button",
+          "id": "tab4",
+          "classes": [
+            "label"
+          ],
+          "role": "tab",
+          "label": "Duurzaam leven"
+        },
+        {
+          "tag": "button",
+          "id": "tab5",
+          "classes": [
+            "label"
+          ],
+          "role": "tab",
+          "label": "True crime"
+        }
+      ]
+    }
+  ]
+}

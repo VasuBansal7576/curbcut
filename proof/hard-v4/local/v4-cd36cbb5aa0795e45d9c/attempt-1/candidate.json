@@ -1,0 +1,34 @@
+{
+  "id": "v4-cd36cbb5aa0795e45d9c",
+  "url": "https://www.riu.com/en",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Filter by destination” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Filter by destination” field and type test without submitting.",
+  "observedSelector": "#riu-hotels > div:nth-of-type(1) > div > div:nth-of-type(2) > riu-ui-select > div > div > div > div > form > input",
+  "requiredName": "Filter by destination",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#riu-hotels > div:nth-of-type(1) > div > div:nth-of-type(2) > riu-ui-select > div > div > div > div > form > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.riu.com",
+  "match": "https://www.riu.com/en",
+  "barrier": "The editable destination input has no accessible name and is exposed as a combobox. The adjacent icon button carries the name “Filter by destination”.",
+  "rules": [
+    {
+      "selector": "#riu-hotels > div:nth-of-type(1) > div > div:nth-of-type(2) > riu-ui-select > div > div > div > div > form > input",
+      "action": "addLabel",
+      "value": "Filter by destination"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

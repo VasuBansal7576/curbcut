@@ -1,0 +1,46 @@
+{
+  "id": "norvig-sudoku",
+  "url": "https://www.norvig.com/sudoku.html",
+  "persona": "low-vision",
+  "task": "Read the cross-product function and definitions in Solving Every Sudoku Puzzle at 320 CSS pixels without panning horizontally.",
+  "status": "locally-reproduced",
+  "runner": "local-playwright",
+  "phases": {
+    "before": {
+      "title": "Solving Every Sudoku Puzzle",
+      "width": 320,
+      "left": 11,
+      "right": 698,
+      "passageLength": 540,
+      "scrollX": 0,
+      "digest": "9673cadc80eecf4b2ea9647fb095077976a35ae4a558e152a7b580f83d381b69",
+      "pass": false,
+      "video": "proof/public/norvig-sudoku/before.mp4",
+      "observedAt": "2026-11-21T19:08:45.668Z"
+    },
+    "control": {
+      "title": "Solving Every Sudoku Puzzle",
+      "width": 1280,
+      "left": 11,
+      "right": 698,
+      "passageLength": 540,
+      "scrollX": 0,
+      "digest": "9673cadc80eecf4b2ea9647fb095077976a35ae4a558e152a7b580f83d381b69",
+      "pass": true,
+      "video": "proof/public/norvig-sudoku/control.mp4",
+      "observedAt": "2026-11-21T19:08:53.587Z"
+    },
+    "after": {
+      "title": "Solving Every Sudoku Puzzle",
+      "width": 320,
+      "left": 11,
+      "right": 308,
+      "passageLength": 540,
+      "scrollX": 0,
+      "digest": "9673cadc80eecf4b2ea9647fb095077976a35ae4a558e152a7b580f83d381b69",
+      "pass": true,
+      "video": "proof/public/norvig-sudoku/after.mp4",
+      "observedAt": "2026-11-21T19:09:01.523Z"
+    }
+  }
+}

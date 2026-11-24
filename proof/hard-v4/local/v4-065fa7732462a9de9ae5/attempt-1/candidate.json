@@ -1,0 +1,34 @@
+{
+  "id": "v4-065fa7732462a9de9ae5",
+  "url": "https://www.localharvest.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search for...” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search for...” field and type test without submitting.",
+  "observedSelector": "#search-text",
+  "requiredName": "Search for...",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#search-text",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.localharvest.org",
+  "match": "https://www.localharvest.org/",
+  "barrier": "The search input has no accessible name, so it cannot be identified as the “Search for...” textbox in Reading view.",
+  "rules": [
+    {
+      "selector": "#search-text",
+      "action": "addLabel",
+      "value": "Search for..."
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

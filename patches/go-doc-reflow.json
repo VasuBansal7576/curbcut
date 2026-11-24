@@ -1,0 +1,56 @@
+{
+  "id": "go-doc-reflow",
+  "url": "https://go.dev/doc/effective_go",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “// Allocate the top-level slice, the same as before. picture :=”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "controlTask": "At normal width, read the passage beginning “// Allocate the top-level slice, the same as before. picture :=” and verify all its text is visible without horizontal scrolling.",
+  "observedSelector": "#main-content > article > pre:nth-of-type(55)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#main-content > article > pre:nth-of-type(55)",
+      "equals": "// Allocate the top-level slice, the same as before. picture :="
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#main-content > article > pre:nth-of-type(55)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "go.dev",
+  "match": "https://go.dev/doc/effective_go",
+  "barrier": "At a 320 CSS pixel viewport, the preformatted code block prevents lines from wrapping, so its 776-pixel scroll width exceeds its 272-pixel visible width and requires horizontal scrolling.",
+  "rules": [
+    {
+      "selector": "#main-content > article > pre:nth-of-type(55)",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "pre-wrap",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane/go-doc-reflow/heldout-v2/before/recording.mp4",
+    "after": "proof/kane/go-doc-reflow/heldout-v2/attempt-1/after/recording.mp4",
+    "control": "proof/kane/go-doc-reflow/heldout-v2/control/recording.mp4",
+    "verifiedAt": "2026-11-22T15:27:10.628Z",
+    "kaneRunIds": [
+      "4019a447-a62c-4231-9e75-dc0de126a000",
+      "8f57b6d1-c998-4265-a932-fb1707ef5cd7",
+      "3d9e0e3a-5caf-4ca2-9268-f58699eb8e7c"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-22T15:27:10.628Z",
+      "event": "verified",
+      "before": "4019a447-a62c-4231-9e75-dc0de126a000",
+      "control": "8f57b6d1-c998-4265-a932-fb1707ef5cd7",
+      "after": "3d9e0e3a-5caf-4ca2-9268-f58699eb8e7c"
+    }
+  ]
+}

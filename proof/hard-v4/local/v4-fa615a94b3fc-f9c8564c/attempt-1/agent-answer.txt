@@ -1,0 +1,24 @@
+{
+  "barrier": "At 320 CSS pixels, the navigation is collapsed, the PASLAUGOS journey trigger has display:none, and the WHOIS link has no rendered box inside the hidden submenu.",
+  "rules": [
+    {
+      "selector": "#navMenu",
+      "action": "injectCSS",
+      "value": {"display": "block", "max-width": "100%"}
+    },
+    {
+      "selector": "#navMenu > div > div:nth-of-type(1) > a:nth-of-type(1)",
+      "action": "injectCSS",
+      "value": {"display": "block"}
+    },
+    {
+      "selector": "#navMenu > div > div:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "selector": "#navMenu > div > div:nth-of-type(1) > div > a:nth-of-type(7)",
+      "action": "injectCSS",
+      "value": {"white-space": "normal", "overflow-wrap": "anywhere"}
+    }
+  ]
+}

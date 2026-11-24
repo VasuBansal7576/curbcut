@@ -1,0 +1,44 @@
+{
+  "id": "uline-com-tr2",
+  "url": "https://www.uline.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "startedAt": "2026-11-23T05:35:28.822Z",
+  "outcome": "fixed",
+  "phases": [
+    {
+      "stage": "before",
+      "status": "fail",
+      "runner": "kane",
+      "sessionId": "7c9b662c-baad-446a-b711-427de114e305",
+      "credits": 22.269810000000003,
+      "kaneStatus": "fail",
+      "browserStatus": "fail",
+      "basis": "recorded-passage-width",
+      "result": "proof/heldout-v3/runs/uline-com-tr2/before/result.json"
+    },
+    {
+      "stage": "control",
+      "status": "pass",
+      "runner": "kane",
+      "sessionId": "8df9e40c-d299-46a4-949c-6abb22c5f400",
+      "credits": 18.5326575,
+      "kaneStatus": "pass",
+      "browserStatus": "pass",
+      "basis": "recorded-passage-width",
+      "result": "proof/heldout-v3/runs/uline-com-tr2/control/result.json"
+    },
+    {
+      "stage": "attempt-1/after",
+      "status": "pass",
+      "runner": "kane",
+      "sessionId": "1bcdba5e-99a6-45db-b735-5338ff6aee95",
+      "credits": 13.95933,
+      "kaneStatus": "pass",
+      "browserStatus": "pass",
+      "basis": "recorded-passage-width",
+      "result": "proof/heldout-v3/runs/uline-com-tr2/attempt-1/after/result.json"
+    }
+  ],
+  "finishedAt": "2026-11-23T05:38:40.240Z"
+}

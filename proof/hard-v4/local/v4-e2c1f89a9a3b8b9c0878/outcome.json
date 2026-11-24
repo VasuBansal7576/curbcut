@@ -1,0 +1,110 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-e2c1f89a9a3b8b9c0878",
+    "url": "https://www.ucsfhealth.org/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search for symptom, condition, or keyword” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search for symptom, condition, or keyword” field and type test without submitting.",
+    "observedSelector": "#gray_hero_bg > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > div > form > div > input",
+    "requiredName": "Search for symptom, condition, or keyword",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#gray_hero_bg > div > div > div > div:nth-of-type(1) > div:nth-of-type(1) > div > form > div > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    }
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "The expected usable role and name were absent from Reading view.",
+    "geometry": {
+      "left": 84,
+      "right": 538.640625,
+      "width": 1280,
+      "scrollX": 0,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "inView": true,
+      "fits": true
+    },
+    "reader": {
+      "role": "combobox",
+      "name": "",
+      "state": "expanded false",
+      "editable": false,
+      "activatable": false
+    }
+  },
+  "registeredControl": {
+    "geometry": {
+      "left": 84,
+      "right": 539.296875,
+      "width": 1280,
+      "scrollX": 0,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "inView": true,
+      "fits": true
+    },
+    "url": "https://www.ucsfhealth.org/",
+    "checks": [
+      true
+    ],
+    "status": "pass",
+    "reason": "Checked the declared outcome after the type action."
+  },
+  "runner": "playwright",
+  "status": "unresolved",
+  "reason": "The expected usable role and name were absent from Reading view.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "Checked the declared outcome after the type action.",
+      "file": "proof/hard-v4/local/v4-e2c1f89a9a3b8b9c0878/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "screen-reader-view",
+      "status": "fail",
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "file": "proof/hard-v4/local/v4-e2c1f89a9a3b8b9c0878/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "screen-reader-view",
+      "iteration": 1,
+      "status": "fail",
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "file": "proof/hard-v4/local/v4-e2c1f89a9a3b8b9c0878/attempt-1/after.json"
+    },
+    {
+      "name": "proposal",
+      "iteration": 2,
+      "status": "rejected",
+      "reason": "Invalid patch proposal: [{\"instancePath\":\"/rules\",\"schemaPath\":\"#/properties/rules/minItems\",\"keyword\":\"minItems\",\"params\":{\"limit\":1},\"message\":\"must NOT have fewer than 1 items\"}]",
+      "file": "proof/hard-v4/local/v4-e2c1f89a9a3b8b9c0878/attempt-2/rejection.json"
+    },
+    {
+      "name": "attempt-3/after",
+      "persona": "screen-reader-view",
+      "iteration": 3,
+      "status": "fail",
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "file": "proof/hard-v4/local/v4-e2c1f89a9a3b8b9c0878/attempt-3/after.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

@@ -1,0 +1,61 @@
+{
+  "id": "v5-dac78760abc4-21826452",
+  "url": "https://www.spreaker.com/",
+  "persona": "keyboard-only",
+  "task": "Use the keyboard to reach the open dialog, press Escape, and confirm it closed.",
+  "controlTask": "Confirm the dialog is open. Click “Close” to close it.",
+  "observedSelector": "#onetrust-close-btn-container > button",
+  "outcomeChecks": [
+    {
+      "kind": "hidden",
+      "selector": "#onetrust-banner-sdk > div"
+    }
+  ],
+  "barrierClass": 4,
+  "relatedSelectors": [
+    "#onetrust-banner-sdk > div",
+    "#onetrust-close-btn-container > button"
+  ],
+  "journey": [
+    {
+      "selector": "#onetrust-banner-sdk > div",
+      "action": "observe",
+      "checks": [
+        {
+          "kind": "visible",
+          "selector": "#onetrust-banner-sdk > div"
+        }
+      ]
+    },
+    {
+      "selector": "#onetrust-banner-sdk > div",
+      "action": "key",
+      "key": "Escape",
+      "pointer": {
+        "action": "click",
+        "selector": "#onetrust-close-btn-container > button"
+      }
+    }
+  ],
+  "site": "www.spreaker.com",
+  "match": "https://www.spreaker.com/",
+  "barrier": "The banner wrapper and its nested Privacy dialog are both tab stops. The keyboard run failed to focus the nested dialog before sending Escape.",
+  "rules": [
+    {
+      "selector": "#onetrust-banner-sdk",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "#onetrust-banner-sdk > div[aria-label=\"Privacy\"]",
+      "action": "makeFocusable"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#onetrust-banner-sdk",
+      "close": "#onetrust-banner-sdk > div[aria-label=\"Privacy\"] > #onetrust-close-btn-container > button"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

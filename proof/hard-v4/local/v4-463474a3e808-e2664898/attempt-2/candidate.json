@@ -1,0 +1,78 @@
+{
+  "id": "v4-463474a3e808-e2664898",
+  "url": "https://www.skilljar.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, hover “Product”, click “Academy inspiration →Get best-in-class examples” and confirm /academy-inspiration.",
+  "controlTask": "Hover “Product”, click “Academy inspiration →Get best-in-class examples” and confirm /academy-inspiration.",
+  "observedSelector": "#w-dropdown-toggle-0",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/academy-inspiration"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "div:nth-of-type(1) > main > div > div > div:nth-of-type(2) > div:nth-of-type(1) > nav > div:nth-of-type(1) > div:nth-of-type(1)",
+    "#w-dropdown-list-0"
+  ],
+  "journey": [
+    {
+      "selector": "#w-dropdown-toggle-0",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-toggle-0",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-list-0 > div > div:nth-of-type(2) > div:nth-of-type(2) > a:nth-of-type(2)",
+      "action": "activate"
+    }
+  ],
+  "site": "www.skilljar.com",
+  "match": "https://www.skilljar.com/",
+  "barrier": "At 320 CSS pixels, the collapsed mobile navigation leaves the Product trigger out of view, so hovering times out and the Academy inspiration link stays hidden.",
+  "rules": [
+    {
+      "selector": "div.navbar_container",
+      "action": "injectCSS",
+      "value": {
+        "flex-wrap": "wrap"
+      }
+    },
+    {
+      "selector": "nav.navbar_menu.w-nav-menu",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "selector": "div.navbar_menu-left",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "flex-direction": "column"
+      }
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#w-dropdown-toggle-0",
+      "target": "#w-dropdown-list-0",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

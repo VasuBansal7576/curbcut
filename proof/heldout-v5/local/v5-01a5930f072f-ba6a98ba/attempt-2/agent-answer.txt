@@ -1,0 +1,12 @@
+{
+  "barrier": "The Locations button receives keyboard focus, but keyboard activation leaves #mega-menu at display:none. Pointer activation opens the panel and exposes the existing description.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "button[aria-controls=\"mega-menu\"][aria-describedby=\"header_search-input-mega-menu-cta-desc\"]",
+      "target": "#mega-menu",
+      "mode": "display",
+      "display": "block"
+    }
+  ]
+}

@@ -1,0 +1,3089 @@
+{
+  "tested": 234,
+  "blocked": 61,
+  "blockedByPersona": {
+    "keyboard-only": 29,
+    "low-vision": 24,
+    "screen-reader-view": 8
+  },
+  "fixed": 44,
+  "open": 17,
+  "publicTasks": [
+    {
+      "url": "https://www.target.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a primary department or product control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "probe_inaccessible"
+        }
+      ]
+    },
+    {
+      "url": "https://www.bestbuy.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach search and a featured product action control",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nike.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, Tab into Shop navigation or a product CTA",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ikea.com/us/en/",
+      "persona": "low-vision",
+      "task": "Reflow the homepage at 320px width without requiring horizontal scrolling",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.homedepot.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach search and a department tile",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.walmart.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach search and a featured product control",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.apple.com/",
+      "persona": "low-vision",
+      "task": "Reflow the homepage at 320px width without requiring horizontal scrolling",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.nytimes.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach the first article headline link in main content",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "probe_inaccessible"
+        }
+      ]
+    },
+    {
+      "url": "https://www.bbc.com/",
+      "persona": "low-vision",
+      "task": "Reflow the homepage at 320px width without requiring horizontal scrolling",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach Sign in or a primary marketing CTA",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.wikipedia.org/",
+      "persona": "low-vision",
+      "task": "Reflow the homepage at 320px width without requiring horizontal scrolling",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.craigslist.org/about/sites",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, Tab through city links and activate one",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.booking.com/",
+      "persona": "low-vision",
+      "task": "Reflow the homepage at 320px width without requiring horizontal scrolling",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.airbnb.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach destination search and the Search control",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.spotify.com/",
+      "persona": "low-vision",
+      "task": "Reflow the marketing homepage at 320px width without requiring horizontal scrolling",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.newegg.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach search and a product Add to cart control",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.sephora.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach search and a Shop Now or product control",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.cnn.com/",
+      "persona": "low-vision",
+      "task": "Reflow the homepage at 320px width without requiring horizontal scrolling",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.ebay.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach search and a featured listing control",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.zillow.com/",
+      "persona": "low-vision",
+      "task": "Reflow the homepage at 320px width without requiring horizontal scrolling",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.tripadvisor.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach search and a destination or hotel card control",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.mozilla.org/",
+      "persona": "low-vision",
+      "task": "Reflow the homepage at 320px width without requiring horizontal scrolling",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "url": "https://www.yelp.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach Find and a business result control",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "probe_inaccessible"
+        }
+      ]
+    },
+    {
+      "url": "https://www.expedia.com/",
+      "persona": "low-vision",
+      "task": "Reflow the homepage at 320px width without requiring horizontal scrolling",
+      "observations": [
+        {
+          "source": "proof/scouting.json",
+          "status": "scout_observed_not_kane_verified"
+        }
+      ]
+    },
+    {
+      "id": "walmart-home-add-cta",
+      "url": "https://www.walmart.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a primary Add to cart or Shop Now product control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "homedepot-home-department",
+      "url": "https://www.homedepot.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a Shop by Department tile or primary product CTA and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "newegg-home-add-cart",
+      "url": "https://www.newegg.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a product Add to cart control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "sephora-home-shop",
+      "url": "https://www.sephora.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a Shop Now or Add to Basket control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "ebay-home-listing-cta",
+      "url": "https://www.ebay.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a featured listing action control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "airbnb-home-search",
+      "url": "https://www.airbnb.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach destination search and activate the Search control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "tripadvisor-home-card",
+      "url": "https://www.tripadvisor.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a destination or hotel card control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "github-home-cta",
+      "url": "https://github.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a primary marketing CTA that is not a native link/button and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "craigslist-sites-menu",
+      "url": "https://www.craigslist.org/about/sites",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a custom menu or role=button control and activate a city link path",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "ikea-us-product-cta",
+      "url": "https://www.ikea.com/us/en/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a primary product CTA or Add to bag control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "etsy-home-favorite",
+      "url": "https://www.etsy.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a favorite/heart or Add to cart style product control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "wayfair-home-add",
+      "url": "https://www.wayfair.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach an Add to Cart product control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "macys-home-add",
+      "url": "https://www.macys.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach an Add To Bag or Shop Now control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "gap-home-add",
+      "url": "https://www.gap.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach an Add to Bag or Shop Now control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "uniqlo-us-add",
+      "url": "https://www.uniqlo.com/us/en/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach an Add to Cart or Shop Now control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "imdb-home-watchlist",
+      "url": "https://www.imdb.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a Watchlist or trailer play control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "weather-gov-menu",
+      "url": "https://www.weather.gov/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a primary forecast location control or menu item and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "w3c-bad-sites-menu",
+      "url": "https://www.w3.org/WAI/demos/bad/before/home.html",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open the Sites menu widget and activate a city destination",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "uw-au-before-nav",
+      "url": "https://www.washington.edu/accesscomputing/AU/before.html",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open the main menu and activate Courses",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "deque-mars-controls",
+      "url": "https://dequeuniversity.com/demo/mars/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a primary schedule/form control that is pointer-driven",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "usgs-quake-map-filter",
+      "url": "https://earthquake.usgs.gov/earthquakes/map/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a map filter or settings control and change it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "airnow-map-controls",
+      "url": "https://www.airnow.gov/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach an AQI map or location control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "openstreetmap-layers",
+      "url": "https://www.openstreetmap.org/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open Layers or the map zoom/control widget and change it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "mbta-trip-planner",
+      "url": "https://www.mbta.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a trip planner or schedule filter control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "bart-schedules",
+      "url": "https://www.bart.gov/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a Schedules/Trip Planner control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "wmata-planner",
+      "url": "https://www.wmata.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach Trip Planner or a service status filter and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "amtrak-datepicker",
+      "url": "https://www.amtrak.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open the departure date picker and select a date cell",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "npr-carousel",
+      "url": "https://www.npr.org/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a homepage carousel next/previous control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "bbc-media-carousel",
+      "url": "https://www.bbc.com/news",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a media/news carousel control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "archive-org-player",
+      "url": "https://archive.org/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a collection carousel or mediatext control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "timeanddate-calendar",
+      "url": "https://www.timeanddate.com/calendar/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, change month with the calendar widget control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "census-data-filter",
+      "url": "https://data.census.gov/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a data filter/topic control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "data-gov-filter",
+      "url": "https://catalog.data.gov/dataset",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a dataset facet/filter control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "nps-find-park",
+      "url": "https://www.nps.gov/findapark/index.htm",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a park finder filter control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "va-benefits-filter",
+      "url": "https://www.va.gov/find-locations/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a facility filter or service type control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "weather-gov-local-go",
+      "url": "https://www.weather.gov/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate Local forecast Go or a map location control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "usgs-water-dashboard",
+      "url": "https://waterdata.usgs.gov/nwis/rt",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a state/site filter control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "sfmta-alerts-filter",
+      "url": "https://www.sfmta.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a transit alerts or service filter control and activate it",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "loc-collections-filter",
+      "url": "https://www.loc.gov/collections/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a collections filter or facet control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "nasa-image-carousel",
+      "url": "https://www.nasa.gov/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a featured media carousel next/prev control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "cdc-topics-widget",
+      "url": "https://www.cdc.gov/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open the Topics widget and activate a topic",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "deque-mars-vid-next",
+      "url": "https://dequeuniversity.com/demo/mars/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate the video carousel next control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        },
+        {
+          "source": "proof/scouting-keyboard-followup.json",
+          "status": "finding"
+        }
+      ]
+    },
+    {
+      "id": "uw-au-menu-toggle",
+      "url": "https://projects.accesscomputing.uw.edu/au/before.html",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open the Menu control and reach Courses",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "usgs-map-settings",
+      "url": "https://earthquake.usgs.gov/earthquakes/map/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open Settings on the earthquake map",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "osm-layers-button",
+      "url": "https://www.openstreetmap.org/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open the Layers map control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "mbta-mode-filter",
+      "url": "https://www.mbta.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate Trip Planner mode icon/filter",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "airnow-maps-dropdown",
+      "url": "https://www.airnow.gov/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open the Maps & Data dropdown",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "nps-filter-toggle",
+      "url": "https://www.nps.gov/findapark/index.htm",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open a Find a Park filter control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "data-gov-facet",
+      "url": "https://catalog.data.gov/dataset",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a dataset facet filter",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "weather-gov-radar",
+      "url": "https://www.weather.gov/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a Radar or local map control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "nasa-carousel-next",
+      "url": "https://www.nasa.gov/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a featured carousel next control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "npr-focus-trap-control",
+      "url": "https://www.npr.org/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a primary Listen or news control past the initial focus trap",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "sfmta-play-pause-recheck",
+      "url": "https://www.sfmta.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate the homepage slider Play/Pause control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "uw-au-hover-submenu",
+      "url": "https://projects.accesscomputing.uw.edu/au/before.html",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open the Academics menu and activate Degree Programs",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "mbta-tablist-trip-planner",
+      "url": "https://www.mbta.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate the Trip Planner tab in the homepage mode tablist",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "suspected"
+        }
+      ]
+    },
+    {
+      "id": "highcharts-context-button",
+      "url": "https://www.highcharts.com/demo/stock/candlestick-and-volume",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate the chart context/export button",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "leaflet-custom-divicon",
+      "url": "https://leafletjs.com/examples/custom-icons/example.html",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a custom map marker control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "openlayers-zoom",
+      "url": "https://openlayers.org/en/latest/examples/accessible.html",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, use map controls beyond the accessible demo baseline if a non-tabbable control exists",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "chartjs-sample",
+      "url": "https://www.chartjs.org/docs/latest/samples/information.html",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a docs/sample interactive control if pointer-only",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "datatables-paging",
+      "url": "https://datatables.net/examples/basic_init/zero_configuration.html",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a pagination control that is not natively focusable if present",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "select2-demo",
+      "url": "https://select2.org/getting-started/basic-usage",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open a Select2 combobox widget",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "chosen-demo",
+      "url": "https://harvesthq.github.io/chosen/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open a Chosen select widget",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "slick-carousel-next",
+      "url": "https://kenwheeler.github.io/slick/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate the Slick carousel next arrow",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "swiper-next",
+      "url": "https://swiperjs.com/demos",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a Swiper next control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "fancybox-trigger",
+      "url": "https://fancyapps.com/fancybox/examples/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a Fancybox gallery trigger that is pointer-only if present",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "uw-au-hover-submenu-v2",
+      "url": "https://projects.accesscomputing.uw.edu/au/before.html",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open Academics and activate Degree Programs",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "mbta-trip-planner-tab-v2",
+      "url": "https://www.mbta.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate the Trip Planner mode tab",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "owl-carousel-next",
+      "url": "https://owlcarousel2.github.io/OwlCarousel2/demos/basic.html",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate Owl Carousel next",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "flexslider-next",
+      "url": "https://woocommerce.com/flexslider/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate FlexSlider next control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "bxslider-next",
+      "url": "https://bxslider.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate bxSlider next control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "glidejs-next",
+      "url": "https://glidejs.com/docs/options/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a Glide next control if present",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "splide-next",
+      "url": "https://splidejs.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate Splide next arrow",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "nice-select-demo",
+      "url": "https://jqueryniceselect.hernansartorio.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open a Nice Select widget",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "sumoselect-demo",
+      "url": "https://hemantnegi.github.io/jquery.sumoselect/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open a SumoSelect widget",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "selectize-demo",
+      "url": "https://selectize.dev/docs/demos/single",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open a Selectize control if pointer-only",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "metro-net-alerts",
+      "url": "https://www.metro.net/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate an alerts/service filter or carousel control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "soundtransit-home",
+      "url": "https://www.soundtransit.org/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a schedule/alerts widget control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "cta-home",
+      "url": "https://www.transitchicago.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a train tracker or alerts control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "sf-gov-home",
+      "url": "https://www.sf.gov/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a services filter or carousel control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "nyc-gov-home",
+      "url": "https://www.nyc.gov/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a services/filter widget control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "si-edu-home",
+      "url": "https://www.si.edu/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a featured carousel or explore control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "archives-gov-home",
+      "url": "https://www.archives.gov/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a research/filter or carousel control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "nga-gov-home",
+      "url": "https://www.nga.gov/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a collection carousel or filter control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "metmuseum-home",
+      "url": "https://www.metmuseum.org/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a collection carousel control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "artic-home",
+      "url": "https://www.artic.edu/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a homepage carousel/filter control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "harvard-edu-home",
+      "url": "https://www.harvard.edu/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a news carousel or menu widget",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "stanford-edu-home",
+      "url": "https://www.stanford.edu/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a featured media carousel control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "mit-edu-home",
+      "url": "https://www.mit.edu/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a featured control that is pointer-only",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "berkeley-edu-home",
+      "url": "https://www.berkeley.edu/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a featured carousel control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "allrecipes-filter",
+      "url": "https://www.allrecipes.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a recipe filter or carousel control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "rottentomatoes-home",
+      "url": "https://www.rottentomatoes.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a scores/trailer carousel control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "goodreads-home",
+      "url": "https://www.goodreads.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a shelf/filter or carousel control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "webmd-home",
+      "url": "https://www.webmd.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a tools/filter widget control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "mayoclinic-home",
+      "url": "https://www.mayoclinic.org/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a care/request widget control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "accuweather-home",
+      "url": "https://www.accuweather.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a forecast unit/map control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "timeanddate-calendar-v2",
+      "url": "https://www.timeanddate.com/calendar/?year=2026&country=1",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, change month with calendar controls",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "w3schools-slideshow",
+      "url": "https://www.w3schools.com/howto/howto_js_slideshow.asp",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate the howto slideshow next control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "uikit-slideshow",
+      "url": "https://getuikit.com/docs/slideshow",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a UIKit slideshow next control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "foundation-orbit",
+      "url": "https://get.foundation/sites/docs/responsive-embed.html",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a docs widget control if pointer-only",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "uw-au-before-menu",
+      "url": "https://www.washington.edu/accesscomputing/AU/before.html",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open the AU demo About menu and reach a submenu destination",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard-followup.json",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "usgs-quake-layers",
+      "url": "https://earthquake.usgs.gov/earthquakes/map/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open a map layers or settings control on the USGS earthquake map",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard-followup.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "leaflet-example-layers",
+      "url": "https://leafletjs.com/examples/layers-control/example.html",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open the Leaflet layers control on the official example",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard-followup.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "nws-radar-play",
+      "url": "https://radar.weather.gov/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, play or pause the NWS radar animation",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard-followup.json",
+          "status": "finding"
+        }
+      ]
+    },
+    {
+      "id": "openseamap-layers",
+      "url": "https://map.openseamap.org/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open the OpenSeaMap layers control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard-followup.json",
+          "status": "finding"
+        }
+      ]
+    },
+    {
+      "id": "cyclosm-layers",
+      "url": "https://www.cyclosm.org/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open the CyclOSM layers control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard-followup.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "waterdata-state-map",
+      "url": "https://waterdata.usgs.gov/nwis/rt",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a USGS real-time water state selection control",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard-followup.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "nature-towns-events-datepicker",
+      "url": "https://naturetownsandcities.org.uk/events-calendar/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open and operate the events calendar date picker named in the accessibility statement",
+      "observations": [
+        {
+          "source": "proof/scouting-keyboard-followup.json",
+          "status": "finding"
+        }
+      ]
+    },
+    {
+      "id": "booking-home-reflow-320",
+      "url": "https://www.booking.com/",
+      "persona": "low-vision",
+      "task": "Reflow the Booking homepage at 320px width without requiring horizontal page scrolling",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "spotify-marketing-reflow-320",
+      "url": "https://www.spotify.com/",
+      "persona": "low-vision",
+      "task": "Reflow the Spotify marketing homepage at 320px width without requiring horizontal page scrolling",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "blocked"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "id": "cnn-home-reflow-320",
+      "url": "https://www.cnn.com/",
+      "persona": "low-vision",
+      "task": "Reflow the CNN homepage at 320px width without requiring horizontal page scrolling",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "blocked"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "id": "nike-home-reflow-320",
+      "url": "https://www.nike.com/",
+      "persona": "low-vision",
+      "task": "Reflow the Nike homepage at 320px width without requiring horizontal page scrolling",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "nytimes-home-reflow-320",
+      "url": "https://www.nytimes.com/",
+      "persona": "low-vision",
+      "task": "Reflow the New York Times homepage at 320px width without requiring horizontal page scrolling",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "microsoft-home-reflow-320",
+      "url": "https://www.microsoft.com/",
+      "persona": "low-vision",
+      "task": "Reflow the Microsoft homepage at 320px width without requiring horizontal page scrolling",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "adobe-home-reflow-320",
+      "url": "https://www.adobe.com/",
+      "persona": "low-vision",
+      "task": "Reflow the Adobe homepage at 320px width without requiring horizontal page scrolling",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "starbucks-home-reflow-320",
+      "url": "https://www.starbucks.com/",
+      "persona": "low-vision",
+      "task": "Reflow the Starbucks homepage at 320px width without requiring horizontal page scrolling",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "nws-radar-play-pause",
+      "url": "https://radar.weather.gov/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, play or pause the National Weather Service radar animation",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "blocked"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/nws-radar-play-pause.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "osm-leaflet-layers",
+      "url": "https://www.openstreetmap.org/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open the OpenStreetMap layers control and reveal layer options",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "finding"
+        }
+      ]
+    },
+    {
+      "id": "jqueryui-datepicker-open",
+      "url": "https://jqueryui.com/datepicker/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open the jQuery UI Datepicker demo calendar grid",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "imdb-home-watchlist-cta",
+      "url": "https://www.imdb.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach a primary Watchlist or Trailer control on the IMDb homepage and activate it",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "finding"
+        }
+      ]
+    },
+    {
+      "id": "npr-home-nav-menu",
+      "url": "https://www.npr.org/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open the NPR primary navigation/menu and reveal a destination link",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "usgs-quake-map-list-toggle",
+      "url": "https://earthquake.usgs.gov/earthquakes/map/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, switch the USGS earthquake map between list and map presentations",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "ted-talks-play-search",
+      "url": "https://www.ted.com/talks",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate a TED Talks topics/filter control or a talk card action",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "finding"
+        }
+      ]
+    },
+    {
+      "id": "guardian-home-reflow-320",
+      "url": "https://www.theguardian.com/us",
+      "persona": "low-vision",
+      "task": "Reflow the Guardian US homepage at 320px width without requiring horizontal page scrolling",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "weather-com-reflow-320",
+      "url": "https://weather.com/",
+      "persona": "low-vision",
+      "task": "Reflow the Weather.com homepage at 320px width without requiring horizontal page scrolling",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "disney-home-reflow-320",
+      "url": "https://www.disney.com/",
+      "persona": "low-vision",
+      "task": "Reflow the Disney homepage at 320px width without requiring horizontal page scrolling",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "netflix-home-reflow-320",
+      "url": "https://www.netflix.com/",
+      "persona": "low-vision",
+      "task": "Reflow the Netflix marketing homepage at 320px width without requiring horizontal page scrolling",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "mcdonalds-home-reflow-320",
+      "url": "https://www.mcdonalds.com/us/en-us.html",
+      "persona": "low-vision",
+      "task": "Reflow the McDonald's US homepage at 320px width without requiring horizontal page scrolling",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "archive-org-search-submit",
+      "url": "https://archive.org/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, reach the Internet Archive search field and activate search/submit",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "finding"
+        }
+      ]
+    },
+    {
+      "id": "mdn-play-iframe-run",
+      "url": "https://developer.mozilla.org/en-US/play",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, activate the MDN Playground Run control",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "finding"
+        }
+      ]
+    },
+    {
+      "id": "caniuse-settings-toggle",
+      "url": "https://caniuse.com/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open CanIUse settings/options and reveal preference controls",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "finding"
+        }
+      ]
+    },
+    {
+      "id": "osm-leaflet-layers-v2",
+      "url": "https://www.openstreetmap.org/",
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, open the OpenStreetMap layers control and reveal layer checkboxes",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "finding"
+        }
+      ]
+    },
+    {
+      "id": "reuters-home-reflow-320",
+      "url": "https://www.reuters.com/",
+      "persona": "low-vision",
+      "task": "Reflow the Reuters homepage at 320px width without requiring horizontal page scrolling",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "inaccessible"
+        }
+      ]
+    },
+    {
+      "id": "apnews-home-reflow-320",
+      "url": "https://apnews.com/",
+      "persona": "low-vision",
+      "task": "Reflow the Associated Press homepage at 320px width without requiring horizontal page scrolling",
+      "observations": [
+        {
+          "source": "proof/famous/scouting.json",
+          "status": "no_barrier_observed"
+        }
+      ]
+    },
+    {
+      "id": "graham-essay",
+      "url": "https://www.paulgraham.com/avg.html",
+      "persona": "low-vision",
+      "task": "Read the opening of Beating the Averages at 320 CSS pixels using vertical scrolling only.",
+      "observations": [
+        {
+          "source": "proof/public.json",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "berkshire-letter",
+      "url": "https://www.berkshirehathaway.com/letters/1999htm.html",
+      "persona": "low-vision",
+      "task": "Read the first financial-results paragraph in the 1999 shareholder letter at 320 CSS pixels without panning horizontally.",
+      "observations": [
+        {
+          "source": "proof/public.json",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "norvig-sudoku",
+      "url": "https://www.norvig.com/sudoku.html",
+      "persona": "low-vision",
+      "task": "Read the cross-product function and definitions in Solving Every Sudoku Puzzle at 320 CSS pixels without panning horizontally.",
+      "observations": [
+        {
+          "source": "proof/public.json",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "axios-open-search",
+      "url": "https://www.axios.com/",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check the open search control in the Axios header is in the sequential keyboard focus order. Open search with Tab and Enter. Verify a search text field is visible. Stay on the public homepage.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "Kane error"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "id": "csmonitor-main-menu",
+      "url": "https://www.csmonitor.com/",
+      "persona": "low-vision",
+      "task": "At 320px width, assert the Main Menu control in the Christian Science Monitor header fits within the visible width without horizontal scrolling. Activate Main Menu and verify a navigation section such as World or USA is visible.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "no barrier"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "baseline-pass"
+        }
+      ]
+    },
+    {
+      "id": "aljazeera-menu",
+      "url": "https://www.aljazeera.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert the exact row ‘button · Show more news sections’ is present. Activate it and verify additional news section links become available.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "no barrier"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "baseline-pass"
+        }
+      ]
+    },
+    {
+      "id": "rei-open-search",
+      "url": "https://www.rei.com/",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check the Search control in the REI header is keyboard focusable. Open it with Tab and Enter and verify the product search text field is visible. Stay on the public homepage.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "Kane error"
+        }
+      ]
+    },
+    {
+      "id": "jcrew-shop-nav",
+      "url": "https://www.jcrew.com/",
+      "persona": "low-vision",
+      "task": "At 320px width, assert the toggle hamburger menu control fits within the visible width. Activate it without horizontal scrolling and verify Shop Women or another category control becomes available.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "no barrier"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "baseline-pass"
+        }
+      ]
+    },
+    {
+      "id": "crateandbarrel-search",
+      "url": "https://www.crateandbarrel.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert the exact row for the Search textbox or Search button is present. Activate Search and verify a search input accepts text without signing in.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "Kane error"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "id": "patagonia-product-cta",
+      "url": "https://www.patagonia.com/home/",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check a primary Shop Now or category CTA on the Patagonia homepage is in sequential keyboard focus order. Activate it with Tab and Enter and verify a product collection page loads. Stop before cart or checkout.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "Kane error"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "id": "tfl-plan-journey",
+      "url": "https://tfl.gov.uk/",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. If a cookie dialog covers the page, check Accept only essential cookies is keyboard focusable and activate it. then check the Plan a journey link is in sequential keyboard focus order, activate it, and verify the journey planner page or form is visible.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "Kane error"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "id": "nationalrail-timetable",
+      "url": "https://www.nationalrail.co.uk/",
+      "persona": "low-vision",
+      "task": "At 320px width, assert the Open search control fits within the visible width without horizontal scrolling. Activate Open search and verify a search field becomes available, or assert the From station field of the journey planner fits and accepts text.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "no barrier"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "baseline-pass"
+        }
+      ]
+    },
+    {
+      "id": "rome2rio-search",
+      "url": "https://www.rome2rio.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert the exact row for the Place search textbox is present. Focus that textbox and verify it is editable without creating an account.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "Kane error"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "id": "usa-gov-search",
+      "url": "https://www.usa.gov/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert a Search textbox row is present. Type taxes into Search and submit. Verify search results for taxes appear. Stay on the public site.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "Kane error"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "id": "govuk-services",
+      "url": "https://www.gov.uk/",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check the Show search menu control is in sequential keyboard focus order. Activate it with Tab and Enter, then verify a Search GOV.UK text field is visible. Optionally type passport and submit to verify results.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "Kane error"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "id": "canada-ca-menu",
+      "url": "https://www.canada.ca/en.html",
+      "persona": "low-vision",
+      "task": "At 320px width, assert the main Travel theme link or the site search field fits within the visible width. Activate Travel without horizontal scrolling and verify the Travel theme page opens, or focus search and verify it accepts text.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "no barrier"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "baseline-pass"
+        }
+      ]
+    },
+    {
+      "id": "consumerfinance-tools",
+      "url": "https://www.consumerfinance.gov/",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check the Search the consumerfinance.gov website control is keyboard focusable. Activate search or open Consumer Tools with Tab and Enter and verify a tools list or search UI opens. Stop before any form submission that requires personal data.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "Kane error"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "id": "khanacademy-topics",
+      "url": "https://www.khanacademy.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert the exact row ‘button · Search for courses, skills, and videos’ is present. Activate it and verify a search field becomes available without signing in.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "Kane error"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "id": "edx-explore",
+      "url": "https://www.edx.org/",
+      "persona": "low-vision",
+      "task": "At 320px width, assert the Search courses control fits within the visible width. Activate Search courses without horizontal scrolling and verify a search field or course catalog UI appears.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "no barrier"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "baseline-pass"
+        }
+      ]
+    },
+    {
+      "id": "open-ac-uk-courses",
+      "url": "https://www.open.ac.uk/",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check the Undergraduate control is keyboard focusable. Activate it with Tab and Enter and verify an undergraduate courses or study page opens. Stay on public pages.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "Kane error"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "id": "federalreserve-press",
+      "url": "https://www.federalreserve.gov/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert a News and Events or Press Releases link row is present, or assert the site search textbox is present. Activate News and Events or Press Releases and verify a list of public releases is visible.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "no barrier"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "baseline-pass"
+        }
+      ]
+    },
+    {
+      "id": "bankofengland-rates",
+      "url": "https://www.bankofengland.co.uk/",
+      "persona": "low-vision",
+      "task": "At 320px width, assert the Current Bank Rate control fits within the visible width without horizontal scrolling. Activate it and verify the Bank Rate information page or panel opens.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "Kane error"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "id": "fdic-bankfind",
+      "url": "https://www.fdic.gov/",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check the Search FDIC.gov textbox is in sequential keyboard focus order. Focus it with Tab and verify it accepts text. Prefer public BankFind or Resources links if present; stop before authenticated services.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "Kane error"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "notion-marketing-cta",
+      "url": "https://www.notion.com/",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check the Product link or Get Notion free control is in sequential keyboard focus order. Activate Product with Tab and Enter and verify a product overview section appears. Stop before account creation.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "Kane error"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "id": "linear-app-features",
+      "url": "https://linear.app/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, use vertical scrolling to read the public feature overview headings. Verify the feature overview is readable without horizontal scrolling. Do not open signup.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "unpatchable"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "asana-product-nav",
+      "url": "https://asana.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert a Product or Features link row is present. Activate Product and verify a product overview page or menu is available. Stop before signup.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "no barrier"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "baseline-pass"
+        }
+      ]
+    },
+    {
+      "id": "theverge-menu",
+      "url": "https://www.theverge.com/",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check the Menu or hamburger control in The Verge header is keyboard focusable. Open it with Tab and Enter and verify a Tech or Science section link is visible.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "Kane error"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "id": "arstechnica-search",
+      "url": "https://arstechnica.com/",
+      "persona": "low-vision",
+      "task": "At 320px width, assert the Search control fits within the visible width. Open Search without horizontal scrolling and verify a search text field is visible.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "Kane error"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        }
+      ]
+    },
+    {
+      "id": "wired-top-story",
+      "url": "https://www.wired.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert a top navigation link row such as ‘link · SECURITY’ or the top story headline is present. Activate SECURITY or the first major story link and verify a section or article page loads.",
+      "observations": [
+        {
+          "source": "proof/heldout/summary.json",
+          "status": "no barrier"
+        },
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "baseline-pass"
+        }
+      ]
+    },
+    {
+      "id": "calculator-net-add-days",
+      "url": "https://www.calculator.net/date-calculator.html",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert that the exact row ‘textbox · Days to add’ is present. Set that textbox to 2 in Add to or Subtract from a Date. Activate the Calculate control for that section, then verify the displayed date is two days after the start date.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/calculator-net-add-days.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "colorhexa-open-picker",
+      "url": "https://www.colorhexa.com/",
+      "persona": "keyboard-only",
+      "task": "First assert the red color swatch next to the color search box is in the sequential keyboard focus order. Open that swatch with Tab and Enter. Verify the color picker panel with the color spectrum and hue slider is visible.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/colorhexa-open-picker.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "earth-nullschool-settings",
+      "url": "https://earth.nullschool.net/",
+      "persona": "keyboard-only",
+      "task": "Use Tab to reach the control labeled earth at the lower left of the globe. Press Enter, then verify that the settings menu is expanded and displays its Mode and Projection controls.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "baseline-pass"
+        }
+      ]
+    },
+    {
+      "id": "fourmilab-prepare-latitude",
+      "url": "https://www.fourmilab.ch/cgi-bin/Earth",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert that the exact row ‘textbox · Latitude’ is present. Set that textbox to 10 and press Tab to commit the change. Verify its value is 10 and the ‘radio · Lat: · checked’ row confirms custom latitude mode. Stop at that selection without using Update.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/fourmilab-prepare-latitude.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "geeksforgeeks-open-search",
+      "url": "https://www.geeksforgeeks.org/",
+      "persona": "keyboard-only",
+      "task": "First assert the search icon in the homepage header is in sequential keyboard focus order. Use Tab and Enter to open the site search. Verify the Search text box is visible.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/geeksforgeeks-open-search.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "kidderminster-application-faq",
+      "url": "https://www.kidderminster.ac.uk/good-to-know-articles/how-to-apply-for-a-course/",
+      "persona": "keyboard-only",
+      "task": "First assert the FAQ disclosure What is a next of kin? is in the sequential keyboard focus order. Open it with Tab and Enter. Verify the answer beginning A next of kin is a relative is visible. Stay on the public information page.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/kidderminster-application-faq.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "metacritic-most-popular-games",
+      "url": "https://www.metacritic.com/",
+      "persona": "keyboard-only",
+      "task": "First assert the Most Popular control in the homepage Games carousel is in the sequential keyboard focus order. Use Tab and Enter to select Most Popular and verify it becomes the selected Games carousel category.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "meteoblue-weather-radar",
+      "url": "https://www.meteoblue.com/en/weather/maps/",
+      "persona": "keyboard-only",
+      "task": "First assert the Weather Radar option in Popular Maps is in sequential keyboard focus order. If a consent dialog appears, use Manage options and Confirm choices. Select Weather Radar with Tab and Enter. Verify the map switches to Weather Radar.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/meteoblue-weather-radar.json",
+          "status": "historical-fix"
+        }
+      ]
+    },
+    {
+      "id": "mynoise-open-menu",
+      "url": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+      "persona": "keyboard-only",
+      "task": "First assert that the Menu icon at the top of the White Noise Generator is in the sequential keyboard focus order. Use Tab and Enter to open it. Verify the site navigation opens and the Full Index link is visible.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/mynoise-open-menu.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "online-conversion-length",
+      "url": "https://www.onlineconversion.com/length_common.htm",
+      "persona": "low-vision",
+      "task": "In Common Length and Distance Conversions, assert that the To unit list fits entirely within the 320-pixel viewport. Without horizontal scrolling, enter 1, choose feet in From and inch in To, and activate Convert. Verify the result reads 1 feet = 12 inch.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/online-conversion-length.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "openseamap-view-menu",
+      "url": "https://map.openseamap.org/",
+      "persona": "keyboard-only",
+      "task": "First assert the View menu control in the main map toolbar is keyboard focusable. Open View with Tab and Enter. Verify the Sea Marks checkbox appears as an available layer control.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "oxford-extra-examples",
+      "url": "https://www.oxfordlearnersdictionaries.com/definition/english/example_1",
+      "persona": "keyboard-only",
+      "task": "In the entry for example, assert the first Extra Examples disclosure is keyboard focusable. Open it with the keyboard and verify the sentence Consider the following example becomes visible.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "procurement-journey-considerations",
+      "url": "https://www.procurementjourney.scot/index.php/route-1/route-1-introduction",
+      "persona": "keyboard-only",
+      "task": "First assert the Considerations Before Proceeding accordion title is in the sequential keyboard focus order. Dismiss the cookie banner with Reject using the keyboard if it covers the page. Open Considerations Before Proceeding with Tab and Enter. Verify the first question, Are the good/services you are buying business critical?, is visible.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/procurement-journey-considerations.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "sfmta-pause-carousel",
+      "url": "https://www.sfmta.com/",
+      "persona": "keyboard-only",
+      "task": "Assert that the visible Play/Pause control for the homepage carousel is keyboard focusable. Activate it with Tab and Enter to pause the carousel. Verify the control reports aria-pressed false.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/sfmta-pause-carousel.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "statcounter-edit-chart",
+      "url": "https://gs.statcounter.com/",
+      "persona": "keyboard-only",
+      "task": "Assert that the Edit Chart Data control below the main chart is keyboard focusable. Open it using the keyboard and verify the chart settings form shows the Region selector.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/statcounter-edit-chart.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "unitconverters-length",
+      "url": "https://www.unitconverters.net/",
+      "persona": "low-vision",
+      "task": "In the Length converter, assert that the complete To value field fits within the 320-pixel viewport. Enter 1 in From with Meter and Kilometer selected. Verify 0.001 appears in To without horizontal scrolling.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/unitconverters-length.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "ventusky-precipitation",
+      "url": "https://www.ventusky.com/",
+      "persona": "keyboard-only",
+      "task": "First assert the Precipitation anchor in the Forecast panel has either a link destination or an explicit tabindex of 0. Use Tab and Enter to switch from Temperature to Precipitation and verify the 3 hours accumulation option.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/ventusky-precipitation.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "w3schools-select-swatch",
+      "url": "https://www.w3schools.com/colors/colors_picker.asp#main",
+      "persona": "keyboard-only",
+      "task": "First assert that the leftmost swatch in the top row of the color map, labeled #003366, has a link destination or an explicit tabindex of 0. Select that swatch with Tab and Enter, and verify the selected color reads #003366.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/w3schools-select-swatch.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "worldtimebuddy-select-tomorrow",
+      "url": "https://www.worldtimebuddy.com/",
+      "persona": "keyboard-only",
+      "task": "Check whether tomorrow's quick-date control immediately to the right of today's selected date is in sequential keyboard focus order. Use Tab and Enter to select tomorrow. Verify tomorrow becomes the current date in the time comparison strip.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        }
+      ]
+    },
+    {
+      "id": "asme-org-tr2",
+      "url": "https://www.asme.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the searchbox named “Search products, events, courses, resource categories...”. Enter the text test and confirm the field contains it. Do not submit.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        },
+        {
+          "source": "patches/asme-org-tr2.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "cato-org-tr2",
+      "url": "https://www.cato.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the searchbox named “Search”. Enter the text test and confirm the field contains it. Do not submit.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/cato-org-tr2.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "cloudconvert-com-tr2",
+      "url": "https://cloudconvert.com/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Vendor engines and open-source converters selected per file type”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/cloudconvert-com-tr2.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "discuz-vip-tr2",
+      "url": "https://www.discuz.vip/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “更多解决方案请联系官方客服进行交流。”. Verify its content becomes visible.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        },
+        {
+          "source": "patches/discuz-vip-tr2.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "dol-gov-tr2",
+      "url": "https://www.dol.gov/",
+      "persona": "keyboard-only",
+      "task": "Use Tab and Enter to reach and activate “FEDERAL GOVERNMENT”. Verify its content becomes visible.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "inconclusive"
+        },
+        {
+          "source": "patches/dol-gov-tr2.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "elm-reflow",
+      "url": "https://guide.elm-lang.org/core_language.html",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “> madlib animal adjective = | \"The ostentatious \" ++ animal”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/elm-reflow.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "euronext-com-tr",
+      "url": "https://www.euronext.com/en",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the textbox named “Sites search”. Enter the text test and confirm the field contains it. Do not submit.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/euronext-com-tr.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "flashscore-de-tr",
+      "url": "https://www.flashscore.de/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “U17 Weltmeisterschaft 2026 Fussball Live Ergebnisse, Aktuelle Fussball Ergebnisse, Bundesliga, Champions”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/flashscore-de-tr.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "gao-about-reflow",
+      "url": "https://www.gao.gov/about",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Learn about our role in the government, plus our history, performance,”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/gao-about-reflow.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "go-doc-reflow",
+      "url": "https://go.dev/doc/effective_go",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “// Allocate the top-level slice, the same as before. picture :=”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/go-doc-reflow.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "htdp-reflow",
+      "url": "https://htdp.org/2023-8-14/Book/part_prologue.html",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “function call:expected a function after the open parenthesis, found a number”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/htdp-reflow.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "json-org-reflow",
+      "url": "https://www.json.org/json-en.html",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “character '0020' . '10FFFF' - '\"' - '\\' '\\' escape”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/json-org-reflow.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "lua-manual-reflow",
+      "url": "https://www.lua.org/manual/5.4/manual.html",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “chunk ::= block block ::= {stat} [retstat] stat ::= ‘;’ |”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/lua-manual-reflow.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "martinfowler-reflow",
+      "url": "https://martinfowler.com/articles/continuousIntegration.html",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Usually the best way to fix the build is to revert”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/martinfowler-reflow.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "nullprogram-reflow",
+      "url": "https://nullprogram.com/blog/2016/11/17/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “echo -ne '\\x31\\xFF\\xB8\\x3C\\x00\\x00\\x00\\x0F\\x05' >> true”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/nullprogram-reflow.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "openbsd-faq-reflow",
+      "url": "https://www.openbsd.org/faq/faq1.html",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “From: user@example.com To: bugs@openbsd.org Subject: 3.3-beta panics on a SPARCStation2 OpenBSD”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/openbsd-faq-reflow.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "poets-org-tr2",
+      "url": "https://poets.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the searchbox named “search”. Enter the text test and confirm the field contains it. Do not submit.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/poets-org-tr2.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "report-605ca95e172608f662",
+      "url": "https://www.colorhexa.com/ff0000",
+      "persona": "keyboard-only",
+      "task": "Open the color picker from the red swatch next to the search field. Press Tab through at least three controls unless the swatch gets focus sooner. If it gets focus, press Enter. Verify the color spectrum and hue slider appear.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/report-605ca95e172608f662.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "report-cb10e18073d48f295a",
+      "url": "https://www.colorhexa.com/ff6600",
+      "persona": "keyboard-only",
+      "task": "Open the color picker using the swatch next to the color search field. Stop when the color spectrum panel and hue slider are visible.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/report-cb10e18073d48f295a.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "report-d6870c43f8831c2d3b",
+      "url": "https://www.colorhexa.com/0066ff",
+      "persona": "keyboard-only",
+      "task": "Open the color picker using the swatch next to the color search field. Stop when the color spectrum panel and hue slider are visible.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/report-d6870c43f8831c2d3b.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "rust-book-reflow",
+      "url": "https://doc.rust-lang.org/book/ch01-02-hello-world.html",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “> dir /B %= the /B option says to only show”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/rust-book-reflow.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "sanantonio-library-reader",
+      "url": "https://www.mysapl.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the textbox named “Search Catalog”. Enter the text test and confirm the field contains it. Do not submit.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/sanantonio-library-reader.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "sedgewick-reflow",
+      "url": "https://algs4.cs.princeton.edu/11model/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “% java Scale mandrill.jpg 200 400”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/sedgewick-reflow.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "uline-com-tr2",
+      "url": "https://www.uline.com/",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/uline-com-tr2.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "unglobalcompact-org-tr2",
+      "url": "https://unglobalcompact.org/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, locate the textbox named “Search”. Enter the text test and confirm the field contains it. Do not submit.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/unglobalcompact-org-tr2.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "unicode-standard-reflow",
+      "url": "https://www.unicode.org/standard/standard.html",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, read the passage beginning “Tech Site | Site Map | Search”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/unicode-standard-reflow.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v4-27c6f312c486-51e6e4ad",
+      "url": "https://csc.gov.in/",
+      "persona": "keyboard-only",
+      "task": "Open “ABOUT” from keyboard focus or with Arrow Down and follow “About MeitY”. Confirm the public destination /meity.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v4-27c6f312c486-51e6e4ad.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v4-86f207deeb57-7bc09a21",
+      "url": "https://www.mass.edu/",
+      "persona": "keyboard-only",
+      "task": "Open “About” from keyboard focus or with Arrow Down and follow “The DHE”. Confirm the public destination /about/aboutdhe.asp.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v4-86f207deeb57-7bc09a21.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-c22b9bdca86b-71a63d77",
+      "url": "https://marinespecies.org/",
+      "persona": "keyboard-only",
+      "task": "Open “Tools” using the keyboard and read “Match taxa”.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-c22b9bdca86b-71a63d77.json",
+          "status": "fixed"
+        }
+      ]
+    }
+  ]
+}

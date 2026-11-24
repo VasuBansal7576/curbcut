@@ -1,0 +1,23 @@
+{
+  "barrier": "At 320 CSS pixels, the primary navigation wrapper does not render a box for the Companies link, so the link cannot receive focus and the Financial Services submenu stays hidden.",
+  "rules": [
+    {
+      "selector": "div._35850eeef85c22c1-wrapper",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "ul._35850eeef85c22c1-primaryNavigationList",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "#nav > header > div:nth-of-type(3) > nav > ul > li:nth-of-type(2)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

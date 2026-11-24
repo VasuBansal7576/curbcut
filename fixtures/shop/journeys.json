@@ -1,0 +1,113 @@
+[
+  {
+    "id": "fixture-hover-products",
+    "barrierClass": 1,
+    "persona": "keyboard-only",
+    "task": "Open Products using focus and go to Porch Speaker.",
+    "controlTask": "Hover Products, then click Porch Speaker.",
+    "observedSelector": "#products-trigger",
+    "journey": [
+      {"selector":"#products-trigger","action":"focus","pointer":{"action":"hover"}},
+      {"selector":"#porch-link","action":"activate"}
+    ],
+    "outcomeChecks": [
+      {"kind":"url-path","equals":"/fixtures/shop/porch.html"},
+      {"selector":"#product-title","kind":"text","equals":"Porch Speaker"}
+    ],
+    "rules": [{"action":"mirrorHoverToFocus","selector":"#products-menu"}]
+  },
+  {
+    "id": "fixture-hover-brands",
+    "barrierClass": 1,
+    "persona": "keyboard-only",
+    "task": "Open Brands with Enter and follow the Stillroom audio link.",
+    "controlTask": "Hover Brands, then click Stillroom audio.",
+    "observedSelector": "#brands-trigger",
+    "journey": [
+      {"selector":"#brands-trigger","action":"activate","pointer":{"action":"hover"}},
+      {"selector":"#field-link","action":"activate"}
+    ],
+    "outcomeChecks": [{"kind":"url-path","equals":"/fixtures/shop/porch.html"}],
+    "rules": [{"action":"toggleOnActivate","trigger":"#brands-trigger","target":"#brands-links","mode":"attribute"}]
+  },
+  {
+    "id": "fixture-returns-disclosure",
+    "barrierClass": 2,
+    "persona": "screen-reader-view",
+    "task": "In Reading view open Return policy and show the return window.",
+    "controlTask": "Click Return policy, then Show return window.",
+    "observedSelector": "#returns-trigger",
+    "journey": [
+      {"selector":"#returns-trigger","action":"activate","reader":{"role":"button","name":"Return policy"}},
+      {"selector":"#return-window","action":"activate","reader":{"role":"button","name":"Show return window"}}
+    ],
+    "outcomeChecks": [{"selector":"#return-answer","kind":"text","equals":"Returns are open for 30 days."}],
+    "rules": [{"action":"toggleOnActivate","trigger":"#returns-trigger","target":"#returns-panel","mode":"attribute"}]
+  },
+  {
+    "id": "fixture-featured-carousel",
+    "barrierClass": 3,
+    "persona": "keyboard-only",
+    "task": "Focus Headphones, move to Speakers with Arrow Right, then open the featured product.",
+    "controlTask": "Click Headphones, click Speakers and click View Porch Speaker.",
+    "observedSelector": "#headphones-slide",
+    "journey": [
+      {"selector":"#headphones-slide","action":"focus","pointer":{"action":"click"}},
+      {"selector":"#headphones-slide","action":"key","key":"ArrowRight","pointer":{"selector":"#speaker-slide","action":"click"}},
+      {"selector":"#featured-link","action":"activate"}
+    ],
+    "outcomeChecks": [{"kind":"url-path","equals":"/fixtures/shop/porch.html"}],
+    "rules": [{"action":"arrowKeyNavigation","container":"#slides","items":".slide-choice","orientation":"horizontal","activate":"click"}]
+  },
+  {
+    "id": "fixture-delivery-modal",
+    "barrierClass": 4,
+    "persona": "keyboard-only",
+    "task": "Open Delivery information. Close it with Escape and confirm focus returns.",
+    "controlTask": "Open Delivery information, then click Close delivery information.",
+    "observedSelector": "#delivery-trigger",
+    "journey": [
+      {"selector":"#delivery-trigger","action":"activate"},
+      {"selector":"#delivery-close","action":"key","key":"Escape","pointer":{"action":"click"}}
+    ],
+    "outcomeChecks": [
+      {"selector":"#delivery-modal","kind":"hidden"},
+      {"selector":"#delivery-status","kind":"text","equals":"Information closed"},
+      {"selector":"#delivery-trigger","kind":"focused"}
+    ],
+    "rules": [{"action":"dialogBehavior","dialog":"#delivery-modal","opener":"#delivery-trigger","close":"#delivery-close"}]
+  },
+  {
+    "id": "fixture-sort-listbox",
+    "barrierClass": 5,
+    "persona": "keyboard-only",
+    "task": "Focus Sort catalog, open with Arrow Down, move to Price, low to high and select it.",
+    "controlTask": "Click Sort catalog, then select Price, low to high.",
+    "observedSelector": "#sort-trigger",
+    "journey": [
+      {"selector":"#sort-trigger","action":"focus","pointer":{"action":"hover"}},
+      {"selector":"#sort-trigger","action":"key","key":"ArrowDown","pointer":{"action":"click"}},
+      {"selector":"#featured-option","action":"key","key":"ArrowDown","pointer":{"selector":"#price-option","action":"hover"}},
+      {"selector":"#price-option","action":"key","key":"Enter","pointer":{"action":"click"}}
+    ],
+    "outcomeChecks": [
+      {"selector":"#sort-options","kind":"hidden"},
+      {"selector":"#sort-result","kind":"text","equals":"Porch Speaker first, $64"}
+    ],
+    "rules": [{"action":"listboxBehavior","trigger":"#sort-trigger","list":"#sort-options","options":".sort-option"}]
+  },
+  {
+    "id": "fixture-filter-journey",
+    "barrierClass": 6,
+    "persona": "low-vision",
+    "task": "At 320 CSS pixels, open filters and show only speakers without horizontal scrolling.",
+    "controlTask": "Click Show filters, then Speakers only.",
+    "observedSelector": "#filter-trigger",
+    "journey": [
+      {"selector":"#filter-trigger","action":"activate"},
+      {"selector":"#filter-speakers","action":"activate"}
+    ],
+    "outcomeChecks": [{"selector":"#filter-result","kind":"text","equals":"One result: Porch Speaker"}],
+    "rules": [{"action":"injectCSS","selector":"#filter-layout","value":{"display":"block"}}]
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "trigger",
+      "selector": "#fluconazoleFaq button[data-bs-target=\"#faq2\"]",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "accordion-button",
+            "collapsed"
+          ],
+          "label": "What infections does Fluconazole treat?"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "target",
+      "selector": "#faq2",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "faq2",
+          "classes": [
+            "accordion-collapse",
+            "collapse"
+          ],
+          "label": "Fluconazole treats a broad range of fungal and yeast infections, including vaginal candidiasis, oral"
+        }
+      ]
+    }
+  ]
+}

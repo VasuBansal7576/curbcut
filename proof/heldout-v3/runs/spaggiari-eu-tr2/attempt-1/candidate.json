@@ -1,0 +1,30 @@
+{
+  "id": "spaggiari-eu-tr2",
+  "url": "https://www.spaggiari.eu/",
+  "persona": "keyboard-only",
+  "task": "Use Tab and Enter to reach and activate “SCOPRI DI PIÙ”. Verify the public destination at /dreamshaper.",
+  "controlTask": "Click “SCOPRI DI PIÙ” and verify the public destination at /dreamshaper.",
+  "observedSelector": "a[href=\"https\\:\\/\\/www\\.spaggiari\\.eu\\/dreamshaper\\?hsLang\\=it\"][tabindex=\"-1\"]",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/dreamshaper"
+    }
+  ],
+  "minimumTabPresses": 2,
+  "probe": {
+    "action": "click"
+  },
+  "site": "www.spaggiari.eu",
+  "match": "https://www.spaggiari.eu/",
+  "barrier": "In the supplied snapshot, the “Scopri di più” link to /dreamshaper has tabindex=\"-1\", which excludes it from the sequential Tab order.",
+  "rules": [
+    {
+      "selector": "a[href=\"https\\:\\/\\/www\\.spaggiari\\.eu\\/dreamshaper\\?hsLang\\=it\"][tabindex=\"-1\"]",
+      "action": "makeFocusable"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

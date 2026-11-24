@@ -1,0 +1,53 @@
+{
+  "id": "v5-fffa38e6afe5-df31d689",
+  "url": "https://grants.gov/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, click “Here's how you know” and read “Official websites use .govA .gov website belongs to an official government organization in the Unite”.",
+  "controlTask": "Click “Here's how you know” and read “Official websites use .govA .gov website belongs to an official government organization in the Unite”.",
+  "observedSelector": "#topOfPage > div > header > div > button",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#gov-banner-default-default > div > div:nth-of-type(1) > div > p",
+      "equals": "Official websites use .govA .gov website belongs to an official government organization in the Unite"
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#gov-banner-default-default"
+  ],
+  "journey": [
+    {
+      "selector": "#topOfPage > div > header > div > button",
+      "action": "activate"
+    },
+    {
+      "selector": "#gov-banner-default-default > div > div:nth-of-type(1) > div > p",
+      "action": "observe"
+    }
+  ],
+  "site": "grants.gov",
+  "match": "https://grants.gov/",
+  "barrier": "After the disclosure opens at 320 CSS pixels, the banner’s guttered guidance row is 344 pixels wide and extends 12 pixels past each viewport edge. The first guidance paragraph fails the horizontal fit check.",
+  "rules": [
+    {
+      "selector": "#gov-banner-default-default:not([hidden])",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "selector": "#gov-banner-default-default > div.grid-row.grid-gap-lg",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

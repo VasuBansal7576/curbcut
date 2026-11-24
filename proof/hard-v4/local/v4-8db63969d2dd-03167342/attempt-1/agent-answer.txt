@@ -1,0 +1,27 @@
+{
+  "barrier": "Reading view exposes the Market visibility disclosure as an unnamed, unfocusable list item, so readers cannot find and activate it as a button to reveal the answer.",
+  "rules": [
+    {
+      "selector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+      "action": "addLabel",
+      "value": "Market visibility"
+    },
+    {
+      "selector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "selector": "#content > div:nth-of-type(8) > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > ul > div:nth-of-type(2) > li:nth-of-type(1)",
+      "action": "bindEnterToClick"
+    }
+  ]
+}

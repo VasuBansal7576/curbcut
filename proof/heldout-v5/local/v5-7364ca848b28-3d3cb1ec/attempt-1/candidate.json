@@ -1,0 +1,53 @@
+{
+  "id": "v5-7364ca848b28-3d3cb1ec",
+  "url": "https://www.perusall.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Features” from keyboard focus or with Arrow Down and follow “Assessment”. Confirm the public destination /assessment-tools-analytics-integrity.",
+  "controlTask": "Hover “Features”, click “Assessment” and confirm /assessment-tools-analytics-integrity.",
+  "observedSelector": "#w-dropdown-toggle-0",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/assessment-tools-analytics-integrity"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "div:nth-of-type(2) > div > div > div:nth-of-type(1) > nav > div:nth-of-type(1)",
+    "#w-dropdown-list-0"
+  ],
+  "journey": [
+    {
+      "selector": "#w-dropdown-toggle-0",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-toggle-0",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-list-0 > div > a:nth-of-type(3)",
+      "action": "activate"
+    }
+  ],
+  "site": "www.perusall.com",
+  "match": "https://www.perusall.com/",
+  "barrier": "Features receives keyboard focus, but Arrow Down leaves its dropdown at display:none and opacity:0, so the Assessment link is unavailable. Pointer hover opens the dropdown by changing its DOM state.",
+  "rules": [
+    {
+      "selector": "nav.nav-menu.w-nav-menu > div.dropdown.w-dropdown:has(> #w-dropdown-toggle-0)",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseenter"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

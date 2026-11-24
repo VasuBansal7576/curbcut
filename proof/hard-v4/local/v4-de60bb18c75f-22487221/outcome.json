@@ -1,0 +1,105 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-de60bb18c75f-22487221",
+    "url": "https://kingcounty.gov/",
+    "persona": "keyboard-only",
+    "task": "Open “Language selector English” by keyboard. Confirm the dialog appeared, then press Escape and confirm it closed.",
+    "controlTask": "Click “Language selector English” and confirm that the dialog opens. Click “Close” to close it.",
+    "observedSelector": "#languageMenuButton",
+    "outcomeChecks": [
+      {
+        "kind": "hidden",
+        "selector": "#langList"
+      }
+    ],
+    "barrierClass": 4,
+    "relatedSelectors": [
+      "#langList",
+      "#langList > div > div > div:nth-of-type(1) > button"
+    ],
+    "journey": [
+      {
+        "selector": "#languageMenuButton",
+        "action": "activate",
+        "checks": [
+          {
+            "kind": "visible",
+            "selector": "#langList"
+          }
+        ]
+      },
+      {
+        "selector": "#langList",
+        "action": "key",
+        "key": "Escape",
+        "pointer": {
+          "action": "click",
+          "selector": "#langList > div > div > div:nth-of-type(1) > button"
+        }
+      }
+    ]
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "Journey step 2 did not receive the expected keyboard focus.",
+    "steps": [
+      {
+        "selector": "#languageMenuButton",
+        "action": "activate",
+        "traversal": {
+          "reached": true,
+          "tabs": 6
+        },
+        "checks": [
+          true
+        ]
+      },
+      {
+        "selector": "#langList",
+        "action": "key",
+        "key": "Escape"
+      }
+    ],
+    "url": "https://kingcounty.gov/"
+  },
+  "registeredControl": {
+    "status": "pass",
+    "reason": "The complete journey reached the declared outcome.",
+    "steps": [
+      {
+        "selector": "#languageMenuButton",
+        "action": "activate",
+        "checks": [
+          true
+        ]
+      },
+      {
+        "selector": "#langList > div > div > div:nth-of-type(1) > button",
+        "action": "key",
+        "key": "Escape"
+      }
+    ],
+    "url": "https://kingcounty.gov/",
+    "checks": [
+      true
+    ]
+  },
+  "runner": "playwright",
+  "status": "control-fail",
+  "reason": "locator.click: Timeout 1500ms exceeded.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "fail",
+      "reason": "locator.click: Timeout 1500ms exceeded.",
+      "file": "proof/hard-v4/local/v4-de60bb18c75f-22487221/control.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

@@ -1,0 +1,173 @@
+{
+  "status": "inconclusive",
+  "runId": "94c3a8bc-c3b6-4dce-bd4c-fcfbe2b086c8",
+  "reason": "Enter activated an unintended link and navigated to a browser error page.",
+  "summary": "After the required Tab presses, the agent did not verify where keyboard focus was before pressing Enter. The screenshots show focus on the “myNoise BV” footer link, and Enter then attempted to open that link instead of the menu.\nUpdate the run to inspect the focused element after every Tab or Shift+Tab movement and only press Enter once focus is visibly on the top-left navigation icon. Do not infer focus from the icon merely being visible.",
+  "resultCode": 750,
+  "reasonCode": "assertion_error.step_not_achievable",
+  "credits": 23.972055000000005,
+  "exitCode": 1,
+  "steps": [
+    "navigate: Navigate to https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+    "press_key: PRIMARY: press the Tab key",
+    "press_key: PRIMARY: press the Tab key",
+    "press_key: PRIMARY: press Shift+Tab to reach the navigation icon at the top of the White No",
+    "press_key: PRIMARY: press Enter on the navigation icon at the top of the White Noise Genera",
+    "press_key: PRIMARY: press Shift+Tab to reach the navigation icon at the top of the White No",
+    "press_key: PRIMARY: press Enter on the navigation icon at the top of the White Noise Genera",
+    "wait: Waiting after the navigation attempt"
+  ],
+  "objective": "Use Tab, Shift+Tab, arrow keys, Page Up, Page Down, Home, End, text entry, Space and Enter only. Stay on this public site. Do not sign in, register, pay, or interact with a CAPTCHA or access challenge. Leave fixture settings unchanged. Use visible controls only. Press the Tab key twice as the first two keyboard actions, before judging whether the target can be reached. Continue with Tab or Shift+Tab as needed. Reach the navigation icon at the top of the White Noise Generator. Press Enter and verify that Full Index is visible.",
+  "evidencePack": "proof/kane/mynoise-open-menu/2026-11-22T10-48-43.265Z/recheck-without/428c6b1d-e425-4147-9bba-1e86375892be.evidence",
+  "evidenceValid": true,
+  "integrity": "Could not confirm a single recorded page with the required persona and repair state.",
+  "observedOutcome": {
+    "selector": "#menuOverlay",
+    "visible": false
+  },
+  "runner": "kane",
+  "inspection": {
+    "readerVisible": false,
+    "width": 1280,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "null/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body.neterror",
+    "nodes": [
+      {
+        "selector": "#content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 8,
+        "width": 1264
+      },
+      {
+        "selector": "#main-frame-error",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 340,
+        "width": 600
+      },
+      {
+        "selector": "#main-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 340,
+        "width": 600
+      },
+      {
+        "selector": "div.icon.icon-generic",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 340,
+        "width": 72
+      },
+      {
+        "selector": "#main-message",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 340,
+        "width": 600
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "This site can’t be reached",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 340,
+        "width": 600
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "The web page at might be temporarily down or it may have moved permanently to a new web address.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "inline",
+        "left": 340,
+        "width": 598
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "https://mynoise.be/",
+        "state": "",
+        "tag": "strong",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "inline",
+        "left": 458,
+        "width": 143
+      },
+      {
+        "selector": "div.error-code",
+        "role": "text",
+        "name": "ERR_FAILED",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 340,
+        "width": 600
+      },
+      {
+        "selector": "#buttons",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "hasHref": false,
+        "display": "block",
+        "left": 340,
+        "width": 600
+      }
+    ]
+  },
+  "video": "proof/kane/mynoise-open-menu/2026-11-22T10-48-43.265Z/recheck-without/recording.mp4"
+}

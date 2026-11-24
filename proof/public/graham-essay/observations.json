@@ -1,0 +1,46 @@
+{
+  "id": "graham-essay",
+  "url": "https://www.paulgraham.com/avg.html",
+  "persona": "low-vision",
+  "task": "Read the opening of Beating the Averages at 320 CSS pixels using vertical scrolling only.",
+  "status": "locally-reproduced",
+  "runner": "local-playwright",
+  "phases": {
+    "before": {
+      "title": "Beating the Averages",
+      "width": 320,
+      "left": 103,
+      "right": 528,
+      "passageLength": 540,
+      "scrollX": 0,
+      "digest": "b6c9bb0551c59d3e58b5562c3490ece2a8d0dec363e929bc752e366a88406dea",
+      "pass": false,
+      "video": "proof/public/graham-essay/before.mp4",
+      "observedAt": "2026-11-21T19:07:43.115Z"
+    },
+    "control": {
+      "title": "Beating the Averages",
+      "width": 1280,
+      "left": 103,
+      "right": 528,
+      "passageLength": 540,
+      "scrollX": 0,
+      "digest": "b6c9bb0551c59d3e58b5562c3490ece2a8d0dec363e929bc752e366a88406dea",
+      "pass": true,
+      "video": "proof/public/graham-essay/control.mp4",
+      "observedAt": "2026-11-21T19:07:50.751Z"
+    },
+    "after": {
+      "title": "Beating the Averages",
+      "width": 320,
+      "left": 8,
+      "right": 309,
+      "passageLength": 540,
+      "scrollX": 0,
+      "digest": "b6c9bb0551c59d3e58b5562c3490ece2a8d0dec363e929bc752e366a88406dea",
+      "pass": true,
+      "video": "proof/public/graham-essay/after.mp4",
+      "observedAt": "2026-11-21T19:07:57.907Z"
+    }
+  }
+}

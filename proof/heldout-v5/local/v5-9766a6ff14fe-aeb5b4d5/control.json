@@ -1,0 +1,2240 @@
+{
+  "runner": "playwright",
+  "status": "pass",
+  "reason": "The complete journey reached the declared outcome.",
+  "steps": [
+    {
+      "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > a",
+      "action": "focus"
+    },
+    {
+      "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > a",
+      "action": "key",
+      "key": "ArrowDown"
+    },
+    {
+      "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > ul > li:nth-of-type(2) > a",
+      "action": "activate"
+    }
+  ],
+  "url": "https://mihanwebhost.com/my/germany-cpanel-linux-web-host",
+  "checks": [
+    true
+  ],
+  "snapshot": {
+    "url": "https://mihanwebhost.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > a",
+          "parent": "div.scrollnavmenu > li:nth-of-type(2)",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "میزبانی",
+          "children": [
+            "img.img-menu-icon",
+            "i.fa.fa-angle-down"
+          ],
+          "box": [
+            979,
+            77,
+            136,
+            52
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.scrollnavmenu > li:nth-of-type(2)",
+          "parent": "div.scrollnavmenu",
+          "tag": "li",
+          "attributes": {
+            "class": "haschild"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a",
+            "ul.submenu"
+          ],
+          "box": [
+            979,
+            77,
+            136,
+            57
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.scrollnavmenu",
+          "parent": "ul.ItemmenuNoruz03",
+          "tag": "div",
+          "attributes": {
+            "class": "scrollnavmenu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.showinmob",
+            "li.haschild",
+            "li.haschild",
+            "li.haschild.onecol",
+            "li.haschild",
+            "li.haschild"
+          ],
+          "box": [
+            165,
+            77,
+            950,
+            57
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.ItemmenuNoruz03",
+          "parent": "#nav",
+          "tag": "ul",
+          "attributes": {
+            "class": "ItemmenuNoruz03"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.mobileheadmenu",
+            "div.scrollnavmenu",
+            "div.scroll-track",
+            "div.scroll-hint"
+          ],
+          "box": [
+            165,
+            77,
+            950,
+            57
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#nav",
+          "parent": "div.container",
+          "tag": "nav",
+          "attributes": {
+            "role": "navigation",
+            "id": "nav"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#mainNavButton",
+            "#menutriger1",
+            "div.responsive-menu-button",
+            "ul.ItemmenuNoruz03"
+          ],
+          "box": [
+            165,
+            75,
+            950,
+            59
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.container",
+          "tag": "div",
+          "attributes": {
+            "class": "container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#nav"
+          ],
+          "box": [
+            165,
+            75,
+            950,
+            59
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > ul",
+          "parent": "div.scrollnavmenu > li:nth-of-type(2)",
+          "tag": "ul",
+          "attributes": {
+            "class": "submenu "
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "span.metaname",
+            "li.col-2",
+            "li.col-2",
+            "li.col-2",
+            "li.col-2",
+            "li.col-2"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "99999",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > ul > li:nth-of-type(2) > a",
+          "parent": "div.scrollnavmenu > li:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2)",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "لینوکس سی پنل آلمان",
+          "children": [
+            "span.iconmnu",
+            "span.infocat-xs"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.scrollnavmenu > li:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2)",
+          "parent": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > ul",
+          "tag": "li",
+          "attributes": {
+            "class": "col-2"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "inline-block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a, a:visited, a:hover, a:active",
+          "declarations": "text-decoration: none;",
+          "conditions": []
+        },
+        {
+          "selector": "#nav ul li a:hover",
+          "declarations": "background: rgb(20, 76, 102);",
+          "conditions": []
+        },
+        {
+          "selector": "#nav ul li ul li a:hover",
+          "declarations": "color: rgb(31, 148, 206); background: rgb(255, 255, 255);",
+          "conditions": []
+        },
+        {
+          "selector": "#nav ul li:hover > ul",
+          "declarations": "display: block !important;",
+          "conditions": [
+            "(min-width: 991px)"
+          ]
+        },
+        {
+          "selector": ".haschild:link, .haschild:hover, .haschild:focus, .haschild:active, .haschild:visited",
+          "declarations": "-webkit-tap-highlight-color: transparent; user-select: none; background: rgb(255, 255, 255);",
+          "conditions": [
+            "screen and (max-width: 991px)"
+          ]
+        },
+        {
+          "selector": ".haschild a:link, .haschild a:hover, .haschild a:focus, .haschild a:active, .haschild a:visited",
+          "declarations": "background: rgb(255, 255, 255); user-select: none; -webkit-tap-highlight-color: transparent;",
+          "conditions": [
+            "screen and (max-width: 991px)"
+          ]
+        },
+        {
+          "selector": "#nav ul li a:hover",
+          "declarations": "background: rgb(255, 255, 255);",
+          "conditions": [
+            "screen and (max-width: 991px)"
+          ]
+        },
+        {
+          "selector": "li.haschild:hover a i",
+          "declarations": "transform: rotate(180deg);",
+          "conditions": []
+        },
+        {
+          "selector": "#nav ul li:hover > ul.submenu, ul.submenu",
+          "declarations": "display: none !important;",
+          "conditions": [
+            "(width: 991px)"
+          ]
+        },
+        {
+          "selector": "li.haschild:hover a i",
+          "declarations": "transform: rotate(180deg);",
+          "conditions": []
+        },
+        {
+          "selector": "#nav ul li:hover > ul.submenu, ul.submenu",
+          "declarations": "display: none !important;",
+          "conditions": [
+            "(width: 991px)"
+          ]
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2)",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 979,
+        "width": 136
+      },
+      {
+        "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > ul",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > a",
+        "role": "link",
+        "name": "میزبانی",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 979,
+        "width": 136
+      },
+      {
+        "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > ul > li:nth-of-type(2) > a",
+        "role": "link",
+        "name": "لینوکس سی پنل آلمان",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "img.img-menu-icon",
+        "role": "img",
+        "name": "",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "i.fa.fa-angle-down",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "i",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 1020,
+        "width": 9
+      },
+      {
+        "selector": "div.scrollnavmenu",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 165,
+        "width": 950
+      },
+      {
+        "selector": "body",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "div.responsive-menu-overlay",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#mp-pusher",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.header.MWH-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 32,
+        "width": 1216
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "خرید هاست سی پنل ایران",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 93,
+        "width": 138
+      },
+      {
+        "selector": "div.logo",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1048,
+        "width": 200
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "نام دامنه",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 185,
+        "width": 50
+      },
+      {
+        "selector": "div.mwhClientLoggedOut",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 32,
+        "width": 1216
+      },
+      {
+        "selector": "div.signin_signup",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 37,
+        "width": 139
+      },
+      {
+        "selector": "a.signin_link__a",
+        "role": "link",
+        "name": "ورود",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 42,
+        "width": 74
+      },
+      {
+        "selector": "div.headermenu2.menuNoruz03",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 165,
+        "width": 950
+      },
+      {
+        "selector": "#nav",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 165,
+        "width": 950
+      },
+      {
+        "selector": "#mainNavButton",
+        "role": "checkbox",
+        "name": "",
+        "state": "unchecked",
+        "tag": "input",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": -9830,
+        "width": 13
+      },
+      {
+        "selector": "li.haschild",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 301,
+        "width": 136
+      },
+      {
+        "selector": "li.haschild.onecol",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 708,
+        "width": 136
+      },
+      {
+        "selector": "li.active",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 165,
+        "width": 136
+      },
+      {
+        "selector": "a.discountNowruz",
+        "role": "link",
+        "name": "خدمات دواپس",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 173,
+        "width": 120
+      },
+      {
+        "selector": "#mainHeader",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.MWH-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 32,
+        "width": 1216
+      },
+      {
+        "selector": "div.MWH-row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 20,
+        "width": 1240
+      },
+      {
+        "selector": "div.MWH-col-6.MWH-col-xxl-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 668,
+        "width": 300
+      },
+      {
+        "selector": "div.main-header_right-slide",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 312,
+        "width": 300
+      },
+      {
+        "selector": "div.main-header_left-slide",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 668,
+        "width": 300
+      },
+      {
+        "selector": "div.MWH-col-12.MWH-slider-label",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 20,
+        "width": 1240
+      },
+      {
+        "selector": "div.MWH-col-12.MWH-col-lg-12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 20,
+        "width": 1240
+      },
+      {
+        "selector": "div.main-header_center-slide",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 32,
+        "width": 1216
+      },
+      {
+        "selector": "#mwh_main_page",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 32,
+        "width": 1216
+      },
+      {
+        "selector": "#domainBoxWrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 32,
+        "width": 1216
+      },
+      {
+        "selector": "div.domain__box",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 32,
+        "width": 1216
+      },
+      {
+        "selector": "p.domain__box--title",
+        "role": "text",
+        "name": "با ثبت دامنه شروع کنید...",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 72,
+        "width": 1136
+      },
+      {
+        "selector": "#submitForm",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tag": "form",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 72,
+        "width": 1136
+      },
+      {
+        "selector": "#searchInput",
+        "role": "textbox",
+        "name": "نام دامنه مورد نظر را وارد نمایید",
+        "state": "",
+        "tag": "input",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 420,
+        "width": 788
+      },
+      {
+        "selector": "div.mwh-domain-actions",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "grid",
+        "left": 72,
+        "width": 332
+      },
+      {
+        "selector": "button.name--domian",
+        "role": "button",
+        "name": "جستجوی دامنه",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 244,
+        "width": 160
+      },
+      {
+        "selector": "button.name--domian.mwh-ai-launch",
+        "role": "button",
+        "name": "پیشنهاد AI",
+        "state": "expanded false, pressed false",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": "mwh-home-ai",
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 72,
+        "width": 160
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 47,
+        "width": 168
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": ".net",
+        "state": "",
+        "tag": "strong",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 435,
+        "width": 30
+      },
+      {
+        "selector": "#why-mwh",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 20,
+        "width": 1240
+      },
+      {
+        "selector": "div.MWH-col-12.MWH-col-lg-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 20,
+        "width": 413
+      },
+      {
+        "selector": "div.img--MWH",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 859,
+        "width": 389
+      },
+      {
+        "selector": "img.MWH__intro-img--main.lazyload",
+        "role": "img",
+        "name": "چرا میهن وب هاست؟",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 998,
+        "width": 111
+      },
+      {
+        "selector": "div.domains__box--title_p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 445,
+        "width": 389
+      },
+      {
+        "selector": "h1.domains__box--title",
+        "role": "heading",
+        "name": "میهن وب هاست ، مرجع خرید هاست پرسرعت و انواع خدمات حرفه‌ای میزبانی وب",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 445,
+        "width": 389
+      },
+      {
+        "selector": "p.p_domains__box",
+        "role": "text",
+        "name": "میهن وب هاست ارائه دهنده خدمات هاست ایران ،هاست آلمان، سرور مجازی، سرور اختصاصی، طراحی، برنامه نویسی\n                    و\n                    سرویس‌های متنوع تحت وب است.\n                    تخصص و ار",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 445,
+        "width": 389
+      },
+      {
+        "selector": "div.box--field--domains",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 32,
+        "width": 389
+      },
+      {
+        "selector": "div.MWH-col-12.MWH-col-lg-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 35,
+        "width": 192
+      },
+      {
+        "selector": "div.box--img",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 160,
+        "width": 55
+      },
+      {
+        "selector": "img.MWH__intro-box--field.lazyload",
+        "role": "img",
+        "name": "میزبانی وب",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 170,
+        "width": 35
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "سرور اختصاصی",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 258,
+        "width": 93
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "میزبانی وب",
+        "state": "",
+        "tag": "h3",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 87,
+        "width": 73
+      },
+      {
+        "selector": "#sliderMwh",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.swiper-container.slider-market-mobile",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#swiper-wrapper-9c395d4e7bd40fc7",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 10,
+        "width": 1260
+      },
+      {
+        "selector": "div.swiper-slide.swiper-slide-active",
+        "role": "group",
+        "name": "1 / 3",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 870,
+        "width": 400
+      },
+      {
+        "selector": "div.ds-1col.node",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 10,
+        "width": 400
+      },
+      {
+        "selector": "div.field.field-name-title",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 10,
+        "width": 400
+      },
+      {
+        "selector": "div.field-items",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 40,
+        "width": 340
+      },
+      {
+        "selector": "div.field-item.even",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 40,
+        "width": 340
+      },
+      {
+        "selector": "div.field.field-name-field-market-description",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 10,
+        "width": 400
+      },
+      {
+        "selector": "h4",
+        "role": "heading",
+        "name": "چگونه می توانم یک وب سایت ایجاد کنم؟",
+        "state": "",
+        "tag": "h4",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 900,
+        "width": 340
+      },
+      {
+        "selector": "div.text-container.gradient",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 40,
+        "width": 340
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "بیانگر نام و هویت سایت می باشد. بعد از ثبت دامنه مخاطب با وارد نمودن نام دامنه در مرورگر، به سایت شما هدایت می شود. برای اینکه دامنه خود را ثبت/تمدید نمایید یا دامنه از پیش ثبت شده را به میهن وب هاست ",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 40,
+        "width": 340
+      },
+      {
+        "selector": "button.show-btn.fa",
+        "role": "button",
+        "name": "Name",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 190,
+        "width": 30
+      },
+      {
+        "selector": "div.swiper-slide.swiper-slide-next",
+        "role": "group",
+        "name": "2 / 3",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 440,
+        "width": 400
+      },
+      {
+        "selector": "h5",
+        "role": "heading",
+        "name": "میزبانی وب چیست؟",
+        "state": "",
+        "tag": "h5",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 470,
+        "width": 340
+      },
+      {
+        "selector": "div.swiper-slide",
+        "role": "group",
+        "name": "3 / 3",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 10,
+        "width": 400
+      },
+      {
+        "selector": "h6",
+        "role": "heading",
+        "name": "نام دامنه چیست؟",
+        "state": "",
+        "tag": "h6",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 40,
+        "width": 340
+      },
+      {
+        "selector": "div.bg-section-tab",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#TabsWrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 20,
+        "width": 1240
+      },
+      {
+        "selector": "#example_1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 32,
+        "width": 1216
+      },
+      {
+        "selector": "div.ui-widget-header.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 34,
+        "width": 1212
+      },
+      {
+        "selector": "div.stNavMain.stNavMainLeft",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1496,
+        "width": 0
+      },
+      {
+        "selector": "div.ui-scroll-tabs-view",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 34,
+        "width": 1212
+      },
+      {
+        "selector": "ul.service__tabs.ui-tabs-nav",
+        "role": "tablist",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 34,
+        "width": 1212
+      },
+      {
+        "selector": "li.service__tabs--item.ui-tabs-tab",
+        "role": "tab",
+        "name": "سرور مجازی سرور مجازی",
+        "state": "expanded false, selected false",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": "-1",
+        "expanded": "false",
+        "controls": "tabs-3",
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 337,
+        "width": 303
+      },
+      {
+        "selector": "#ui-id-1",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tag": "a",
+        "tabIndex": -1,
+        "tabIndexAttribute": "-1",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 943,
+        "width": 319
+      },
+      {
+        "selector": "img.service__tabs--box-ico2",
+        "role": "img",
+        "name": "دامنه",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1103,
+        "width": 45
+      },
+      {
+        "selector": "div.service__tabs--box--title",
+        "role": "text",
+        "name": "سرور مجازی",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 436,
+        "width": 81
+      },
+      {
+        "selector": "#ui-id-2",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tag": "a",
+        "tabIndex": -1,
+        "tabIndexAttribute": "-1",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 640,
+        "width": 319
+      },
+      {
+        "selector": "img.service__tabs--box-ico1",
+        "role": "img",
+        "name": "سرور مجازی",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 518,
+        "width": 45
+      },
+      {
+        "selector": "#ui-id-3",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tag": "a",
+        "tabIndex": -1,
+        "tabIndexAttribute": "-1",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 337,
+        "width": 319
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > a",
+          "parent": "div.scrollnavmenu > li:nth-of-type(2)",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "میزبانی",
+          "children": [
+            "img.img-menu-icon",
+            "i.fa.fa-angle-down"
+          ],
+          "box": [
+            979,
+            77,
+            136,
+            52
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.scrollnavmenu > li:nth-of-type(2)",
+          "parent": "div.scrollnavmenu",
+          "tag": "li",
+          "attributes": {
+            "class": "haschild"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a",
+            "ul.submenu"
+          ],
+          "box": [
+            979,
+            77,
+            136,
+            57
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.scrollnavmenu",
+          "parent": "ul.ItemmenuNoruz03",
+          "tag": "div",
+          "attributes": {
+            "class": "scrollnavmenu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.showinmob",
+            "li.haschild",
+            "li.haschild",
+            "li.haschild.onecol",
+            "li.haschild",
+            "li.haschild"
+          ],
+          "box": [
+            165,
+            77,
+            950,
+            57
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.ItemmenuNoruz03",
+          "parent": "#nav",
+          "tag": "ul",
+          "attributes": {
+            "class": "ItemmenuNoruz03"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.mobileheadmenu",
+            "div.scrollnavmenu",
+            "div.scroll-track.visible",
+            "div.scroll-hint.visible"
+          ],
+          "box": [
+            165,
+            77,
+            950,
+            57
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#nav",
+          "parent": "div.container",
+          "tag": "nav",
+          "attributes": {
+            "role": "navigation",
+            "id": "nav"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#mainNavButton",
+            "#menutriger1",
+            "div.responsive-menu-button",
+            "ul.ItemmenuNoruz03"
+          ],
+          "box": [
+            165,
+            75,
+            950,
+            59
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.container",
+          "tag": "div",
+          "attributes": {
+            "class": "container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#nav"
+          ],
+          "box": [
+            165,
+            75,
+            950,
+            59
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > ul",
+          "parent": "div.scrollnavmenu > li:nth-of-type(2)",
+          "tag": "ul",
+          "attributes": {
+            "class": "submenu "
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "span.metaname",
+            "li.col-2",
+            "li.col-2",
+            "li.col-2",
+            "li.col-2",
+            "li.col-2"
+          ],
+          "box": [
+            840,
+            136,
+            399,
+            639
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0.632478",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "99999",
+            "transform": "matrix(1, 0, 0, 1, 0, 7.35043)"
+          }
+        },
+        {
+          "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > ul > li:nth-of-type(2) > a",
+          "parent": "div.scrollnavmenu > li:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2)",
+          "tag": "a",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "لینوکس سی پنل آلمان",
+          "children": [
+            "span.iconmnu",
+            "span.infocat-xs"
+          ],
+          "box": [
+            842,
+            168,
+            196,
+            44
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.scrollnavmenu > li:nth-of-type(2) > ul:nth-of-type(1) > li:nth-of-type(2)",
+          "parent": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > ul",
+          "tag": "li",
+          "attributes": {
+            "class": "col-2"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a"
+          ],
+          "box": [
+            842,
+            168,
+            196,
+            53
+          ],
+          "style": {
+            "display": "inline-block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a, a:visited, a:hover, a:active",
+          "declarations": "text-decoration: none;",
+          "conditions": []
+        },
+        {
+          "selector": "#nav ul li a:hover",
+          "declarations": "background: rgb(20, 76, 102);",
+          "conditions": []
+        },
+        {
+          "selector": "#nav ul li ul li a:hover",
+          "declarations": "color: rgb(31, 148, 206); background: rgb(255, 255, 255);",
+          "conditions": []
+        },
+        {
+          "selector": "#nav ul li:hover > ul",
+          "declarations": "display: block !important;",
+          "conditions": [
+            "(min-width: 991px)"
+          ]
+        },
+        {
+          "selector": ".haschild:link, .haschild:hover, .haschild:focus, .haschild:active, .haschild:visited",
+          "declarations": "-webkit-tap-highlight-color: transparent; user-select: none; background: rgb(255, 255, 255);",
+          "conditions": [
+            "screen and (max-width: 991px)"
+          ]
+        },
+        {
+          "selector": ".haschild a:link, .haschild a:hover, .haschild a:focus, .haschild a:active, .haschild a:visited",
+          "declarations": "background: rgb(255, 255, 255); user-select: none; -webkit-tap-highlight-color: transparent;",
+          "conditions": [
+            "screen and (max-width: 991px)"
+          ]
+        },
+        {
+          "selector": "#nav ul li a:hover",
+          "declarations": "background: rgb(255, 255, 255);",
+          "conditions": [
+            "screen and (max-width: 991px)"
+          ]
+        },
+        {
+          "selector": "li.haschild:hover a i",
+          "declarations": "transform: rotate(180deg);",
+          "conditions": []
+        },
+        {
+          "selector": "#nav ul li:hover > ul.submenu, ul.submenu",
+          "declarations": "display: none !important;",
+          "conditions": [
+            "(width: 991px)"
+          ]
+        },
+        {
+          "selector": "li.haschild:hover a i",
+          "declarations": "transform: rotate(180deg);",
+          "conditions": []
+        },
+        {
+          "selector": "#nav ul li:hover > ul.submenu, ul.submenu",
+          "declarations": "display: none !important;",
+          "conditions": [
+            "(width: 991px)"
+          ]
+        }
+      ]
+    }
+  }
+}

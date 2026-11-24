@@ -1,0 +1,93 @@
+{
+  "id": "v4-6d69e52234b5-eb01526e",
+  "url": "https://www.ly.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, hover “酒店”, click “海外酒店” and confirm /international.",
+  "controlTask": "Hover “酒店”, click “海外酒店” and confirm /international.",
+  "observedSelector": "#menuNav > li:nth-of-type(2) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/international"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menuNav > li:nth-of-type(2)",
+    "#menuNav > li:nth-of-type(2) > div"
+  ],
+  "journey": [
+    {
+      "selector": "#menuNav > li:nth-of-type(2) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menuNav > li:nth-of-type(2) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menuNav > li:nth-of-type(2) > div > a:nth-of-type(2)",
+      "action": "activate"
+    }
+  ],
+  "site": "www.ly.com",
+  "match": "https://www.ly.com/",
+  "barrier": "The header has a 990px minimum width, and its horizontal navigation places the 酒店 link at x=426–506, entirely beyond the clipped 320px viewport.",
+  "rules": [
+    {
+      "selector": "#header",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#menuNavOuter",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#menuNavWrapper",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#menuNavPanel",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "max-width": "100%",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "#menuNav",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto"
+      }
+    },
+    {
+      "selector": "#menuNav > li:nth-of-type(2)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

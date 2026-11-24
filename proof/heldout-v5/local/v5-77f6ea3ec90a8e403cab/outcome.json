@@ -1,0 +1,97 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-77f6ea3ec90a8e403cab",
+    "url": "https://nj.gov/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search NJ.gov” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search NJ.gov” field and type test without submitting.",
+    "observedSelector": "#main_content > div:nth-of-type(2) > div > section > div:nth-of-type(2) > div > form > div > input",
+    "requiredName": "Search NJ.gov",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#main_content > div:nth-of-type(2) > div > section > div:nth-of-type(2) > div > form > div > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    }
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "Checked the declared outcome after the type action.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "Checked the declared outcome after the type action.",
+      "file": "proof/heldout-v5/local/v5-77f6ea3ec90a8e403cab/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "screen-reader-view",
+      "status": "fail",
+      "reason": "The expected usable role and name were absent from Reading view.",
+      "file": "proof/heldout-v5/local/v5-77f6ea3ec90a8e403cab/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "screen-reader-view",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the type action.",
+      "file": "proof/heldout-v5/local/v5-77f6ea3ec90a8e403cab/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "Checked the declared outcome after the type action.",
+      "file": "proof/heldout-v5/local/v5-77f6ea3ec90a8e403cab/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v5-77f6ea3ec90a8e403cab",
+    "url": "https://nj.gov/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search NJ.gov” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search NJ.gov” field and type test without submitting.",
+    "observedSelector": "#main_content > div:nth-of-type(2) > div > section > div:nth-of-type(2) > div > form > div > input",
+    "requiredName": "Search NJ.gov",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#main_content > div:nth-of-type(2) > div > section > div:nth-of-type(2) > div > form > div > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "nj.gov",
+    "match": "https://nj.gov/",
+    "barrier": "The hero search textbox has no accessible name in Reading view. Its duplicate site_search ID causes the Search NJ.gov labels to name the header textbox instead.",
+    "rules": [
+      {
+        "selector": "#main_content section.hero_sign form#search > div.input_wrap > input#site_search",
+        "action": "addLabel",
+        "value": "Search NJ.gov"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/heldout-v5/local/v5-77f6ea3ec90a8e403cab/attempt-1"
+}

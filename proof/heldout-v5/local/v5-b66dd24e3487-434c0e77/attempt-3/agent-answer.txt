@@ -1,0 +1,20 @@
+{
+  "barrier": "Keyboard traversal reaches Progressive rollout, but its tablist uses display: contents and has a zero-sized box in the failing run, where the focused tab is reported as clipped or off-screen.",
+  "rules": [
+    {
+      "selector": "div.screen-tour > div.screen-tour-tabs[role=\"tablist\"][aria-label=\"Inside the console\"]",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "flex-wrap": "wrap"
+      }
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.screen-tour > div.screen-tour-tabs[role=\"tablist\"][aria-label=\"Inside the console\"]",
+      "items": "div.screen-tour-tabs[aria-label=\"Inside the console\"] > button.screen-tour-tab[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

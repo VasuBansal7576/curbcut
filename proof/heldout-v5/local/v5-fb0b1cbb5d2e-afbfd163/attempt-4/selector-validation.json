@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "dialog",
+      "selector": "#searchModal.show[aria-modal='true']",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "searchModal",
+          "classes": [
+            "modal",
+            "fade",
+            "show"
+          ],
+          "role": "dialog",
+          "label": "Search Search Close search modal"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "opener",
+      "selector": "#wrapper-navbar .header-menu-right-desktop > button.header-search-button[data-target='#searchModal']",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "header-search-button"
+          ],
+          "label": "Search"
+        }
+      ]
+    },
+    {
+      "index": 0,
+      "field": "close",
+      "selector": "#searchModal button#search-close[data-dismiss='modal']",
+      "scope": "#searchModal.show[aria-modal='true']",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "id": "search-close",
+          "classes": [
+            "close"
+          ],
+          "label": "Close"
+        }
+      ]
+    }
+  ]
+}

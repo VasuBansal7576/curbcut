@@ -1,0 +1,41 @@
+{
+  "id": "v4-07809f6fe8ae-6150d51e",
+  "url": "https://lionic.com/",
+  "persona": "keyboard-only",
+  "task": "Expand “Company Licensing Products Support” with the keyboard and read “Endpoint Solution (SDK)”.",
+  "controlTask": "Click “Company Licensing Products Support” and read “Endpoint Solution (SDK)”.",
+  "observedSelector": "#desktop-nav",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#desktop-nav-license > div:nth-of-type(2) > div:nth-of-type(2) > p",
+      "equals": "Endpoint Solution (SDK)"
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#desktop-nav-content"
+  ],
+  "journey": [
+    {
+      "selector": "#desktop-nav",
+      "action": "activate"
+    },
+    {
+      "selector": "#desktop-nav-license > div:nth-of-type(2) > div:nth-of-type(2) > p",
+      "action": "observe"
+    }
+  ],
+  "site": "lionic.com",
+  "match": "https://lionic.com/",
+  "barrier": "Keyboard activation reaches the desktop navigation and leaves it marked expanded, but the “Endpoint Solution (SDK)” entry still has zero rendered width. Opening the shared menu container alone does not reveal the Licensing content.",
+  "rules": [
+    {
+      "selector": "#desktop-nav",
+      "action": "bindEnterToClick"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

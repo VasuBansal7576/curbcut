@@ -1,0 +1,9 @@
+{
+  "barrier": "The language dropdown stays at display: none when EN receives keyboard focus or Arrow Down. The CSS hover rule on the parent dropdown reveals the panel for pointer users, leaving the Deutsch link unavailable in the keyboard journey.",
+  "rules": [
+    {
+      "selector": "#header div.dropdown.border-left:has(> a.main-language-selector + div.main-language-dropdown.dropdown-menu-hover)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

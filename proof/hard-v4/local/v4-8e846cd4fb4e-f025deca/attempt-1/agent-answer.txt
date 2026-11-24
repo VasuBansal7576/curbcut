@@ -1,0 +1,12 @@
+{
+  "barrier": "After Expand Button opens the panel at 320 CSS pixels, the horizontal row extends 16 CSS pixels beyond the panel’s available width.",
+  "rules": [
+    {
+      "selector": "div.row.px-sm",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "v5-003fd3b4076d-6079696a",
+  "url": "https://www.freedommortgage.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Buy and Sell” using the keyboard and read “Buy a Home”.",
+  "controlTask": "Click “Buy and Sell” and read “Buy a Home”.",
+  "observedSelector": "#mega-buy-sell-d",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#mainNAVBuyAHome"
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#mega-panel-buy-sell-d"
+  ],
+  "journey": [
+    {
+      "selector": "#mega-buy-sell-d",
+      "action": "activate"
+    },
+    {
+      "selector": "#mainNAVBuyAHome",
+      "action": "observe"
+    }
+  ],
+  "site": "www.freedommortgage.com",
+  "match": "https://www.freedommortgage.com/",
+  "barrier": "Tab traversal exhausted eight steps without reaching the visible Buy and Sell button. Its dropdown stays closed until the button is activated, leaving Buy a Home hidden.",
+  "rules": [
+    {
+      "selector": "#mega-buy-sell-d",
+      "action": "makeFocusable"
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#mega-buy-sell-d",
+      "target": "#mega-panel-buy-sell-d",
+      "mode": "class",
+      "className": "show"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

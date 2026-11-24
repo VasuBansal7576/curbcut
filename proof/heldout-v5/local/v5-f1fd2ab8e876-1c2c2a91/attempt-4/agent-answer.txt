@@ -1,0 +1,17 @@
+{
+  "barrier": "The Assistenza panel is hidden unless its parent is hovered or has the open class. The keyboard run reached the button but did not reveal the panel with focus mirroring. The class-based repair was unverified because navigation timed out.",
+  "rules": [
+    {
+      "selector": "html",
+      "action": "extendTimeout",
+      "value": 45000
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#hdr-menu button[aria-controls=\"hdr-assistenza\"]",
+      "target": "#hdr-menu .aux > .section.hassubm.assistenza_clienti",
+      "mode": "class",
+      "className": "open"
+    }
+  ]
+}

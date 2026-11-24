@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#header div.dropdown.border-left:has(> a.main-language-selector + div.main-language-dropdown.dropdown-menu-hover)",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "dropdown",
+            "border-left",
+            "d-none",
+            "d-md-block"
+          ],
+          "label": "EN Deutsch English Español Français Indonesia Italiano Português Tiếng Việt Русский العربية"
+        }
+      ]
+    }
+  ]
+}

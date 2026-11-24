@@ -1,0 +1,62 @@
+{
+  "id": "unglobalcompact-org-tr2",
+  "url": "https://unglobalcompact.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, locate the textbox named “Search”. Enter the text test and confirm the field contains it. Do not submit.",
+  "controlTask": "Click the public text field with the visible hint “Search”, type test and confirm the value. Do not submit.",
+  "observedSelector": "#search_keywords",
+  "requiredName": "Search",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#search_keywords",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "unglobalcompact.org",
+  "match": "https://unglobalcompact.org/",
+  "barrier": "The search input has no accessible name, so Reading view exposes it as an unnamed textbox.",
+  "rules": [
+    {
+      "selector": "#search_keywords",
+      "action": "addLabel",
+      "value": "Search"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v3/runs/unglobalcompact-org-tr2/before/recording.mp4",
+    "after": "proof/heldout-v3/runs/unglobalcompact-org-tr2/attempt-1/after/recording.mp4",
+    "control": "proof/heldout-v3/runs/unglobalcompact-org-tr2/control/recording.mp4",
+    "verifiedAt": "2026-11-23T05:33:21.516Z",
+    "kaneRunIds": [
+      "4f5b267c-d24a-42b3-ace1-4f820f11c118",
+      "41f120b2-7c1d-4413-a135-3b97bc64c070",
+      "6170405c-3ccc-47f0-b294-bb9c625ef702"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-23T05:33:21.516Z",
+      "event": "verified",
+      "before": "4f5b267c-d24a-42b3-ace1-4f820f11c118",
+      "control": "41f120b2-7c1d-4413-a135-3b97bc64c070",
+      "after": "6170405c-3ccc-47f0-b294-bb9c625ef702"
+    }
+  ]
+}

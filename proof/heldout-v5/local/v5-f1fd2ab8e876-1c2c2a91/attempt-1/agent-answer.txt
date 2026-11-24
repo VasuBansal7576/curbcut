@@ -1,0 +1,9 @@
+{
+  "barrier": "Keyboard activation reaches the Assistenza button but leaves its submenu hidden. The desktop CSS reveals #hdr-assistenza on hover of the enclosing Assistenza section.",
+  "rules": [
+    {
+      "selector": "#hdr-menu .aux > .section.hassubm.assistenza_clienti",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "v5-c4d452c17cd0-b3a03f5d",
+  "url": "https://daily.dev/",
+  "persona": "keyboard-only",
+  "task": "Focus “Feed”, move once with ArrowRight, activate “Customize” and read its panel.",
+  "controlTask": "Click “Customize” and read its panel.",
+  "observedSelector": "#tour-tab-newtab",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#tour-panel-control"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "#features > div:nth-of-type(2) > div > div",
+    "[role=tab]",
+    "#tour-panel-control"
+  ],
+  "journey": [
+    {
+      "selector": "#tour-tab-newtab",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#tour-tab-newtab",
+      "action": "key",
+      "key": "ArrowRight",
+      "pointer": {
+        "action": "click",
+        "selector": "#tour-tab-control"
+      }
+    },
+    {
+      "selector": "#tour-tab-control",
+      "action": "activate",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#tour-panel-control",
+      "action": "observe"
+    }
+  ],
+  "site": "daily.dev",
+  "match": "https://daily.dev/",
+  "barrier": "Keyboard traversal reaches Feed, but the tab is reported clipped or off-screen in the horizontally scrolling feature tab strip. The tablist is 2020 pixels wide inside a 1216-pixel scroll container.",
+  "rules": [
+    {
+      "selector": "#features .overflow-x-auto > [role='tablist']",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "box-sizing": "border-box",
+        "flex-wrap": "wrap"
+      }
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#features .overflow-x-auto > [role='tablist']",
+      "items": "#features [role='tablist'] > button[role='tab']",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,114 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-07809f6fe8ae-6150d51e",
+    "url": "https://lionic.com/",
+    "persona": "keyboard-only",
+    "task": "Expand “Company Licensing Products Support” with the keyboard and read “Endpoint Solution (SDK)”.",
+    "controlTask": "Click “Company Licensing Products Support” and read “Endpoint Solution (SDK)”.",
+    "observedSelector": "#desktop-nav",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#desktop-nav-license > div:nth-of-type(2) > div:nth-of-type(2) > p",
+        "equals": "Endpoint Solution (SDK)"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#desktop-nav-content"
+    ],
+    "journey": [
+      {
+        "selector": "#desktop-nav",
+        "action": "activate"
+      },
+      {
+        "selector": "#desktop-nav-license > div:nth-of-type(2) > div:nth-of-type(2) > p",
+        "action": "observe"
+      }
+    ]
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "Tab traversal missed journey step 1.",
+    "steps": [
+      {
+        "selector": "#desktop-nav",
+        "action": "activate",
+        "traversal": {
+          "reached": false,
+          "tabs": 129,
+          "exhausted": true
+        }
+      }
+    ],
+    "url": "https://lionic.com/"
+  },
+  "registeredControl": {
+    "status": "pass",
+    "reason": "The complete journey reached the declared outcome.",
+    "steps": [
+      {
+        "selector": "#desktop-nav",
+        "action": "activate"
+      },
+      {
+        "selector": "#desktop-nav-license > div:nth-of-type(2) > div:nth-of-type(2) > p",
+        "action": "observe"
+      }
+    ],
+    "url": "https://lionic.com/",
+    "checks": [
+      true
+    ]
+  },
+  "runner": "playwright",
+  "status": "unresolved",
+  "reason": "Journey step 2 was unavailable after the prior step.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-07809f6fe8ae-6150d51e/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Tab traversal missed journey step 1.",
+      "file": "proof/hard-v4/local/v4-07809f6fe8ae-6150d51e/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "fail",
+      "reason": "Journey step 2 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-07809f6fe8ae-6150d51e/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-2/after",
+      "persona": "keyboard-only",
+      "iteration": 2,
+      "status": "fail",
+      "reason": "Tab traversal missed journey step 1.",
+      "file": "proof/hard-v4/local/v4-07809f6fe8ae-6150d51e/attempt-2/after.json"
+    },
+    {
+      "name": "attempt-3/after",
+      "persona": "keyboard-only",
+      "iteration": 3,
+      "status": "fail",
+      "reason": "Journey step 2 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-07809f6fe8ae-6150d51e/attempt-3/after.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

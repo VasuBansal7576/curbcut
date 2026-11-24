@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "reporting": "Post-amendment rerun reported separately. The original held-out v5 Kane result remains 0 of 4 selected.",
+  "originalSummary": {
+    "file": "kane-summary.json",
+    "blob": "2acc8bcf023c7ad34d7e5765c3f507a48fe2de06"
+  },
+  "amendment": {
+    "persona": "keyboard-only",
+    "previousLimits": {"maxSteps": 24, "timeout": 180, "assertionMode": "dom"},
+    "limits": {"maxSteps": 50, "timeout": 360, "assertionMode": "dom"},
+    "reason": "Four of seven original inconclusives hit the 24-step cap. Multi-step keyboard journeys can need more than 24 Kane steps. The amended limits match the keyboard-only defaults in core/kane.mjs.",
+    "unchanged": "Use the same frozen registered task, candidate patch, objective wording, DOM assertion mode, isolated headless Chromium and free two-persona CDP preflight. The existing keyboard-only harness blocks activation of invisible elements."
+  },
+  "cases": [
+    {"id": "v5-c22b9bdca86b-71a63d77", "name": "WoRMS"},
+    {"id": "v5-39c81de4ef43-33ae7f34", "name": "TikFinity"}
+  ],
+  "runOrder": [
+    {"id": "v5-c22b9bdca86b-71a63d77", "phase": "after"},
+    {"id": "v5-39c81de4ef43-33ae7f34", "phase": "before"},
+    {"id": "v5-39c81de4ef43-33ae7f34", "phase": "after"},
+    {"id": "v5-c22b9bdca86b-71a63d77", "phase": "before", "optional": true}
+  ],
+  "budget": {
+    "minimumBalance": 45,
+    "rule": "Run free preflight before each invocation, check Kane CLI balance before starting, and stop the sequence if the balance is below 45. Attempt the fourth run only if the balance permits. No retries are planned."
+  },
+  "passRule": "A case is Kane-verified only when the baseline fails, its original pointer control passed, and the patched replay passes. Both keyboard runs must use the amended limits. Every phase must have a Kane session ID, validated sealed evidence and a viewport recording. If the WoRMS baseline cannot be rerun, report its original 24-step failure beside the amended 50-step patched result with the differing limits explicit."
+}

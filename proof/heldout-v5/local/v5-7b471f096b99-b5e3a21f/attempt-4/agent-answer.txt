@@ -1,0 +1,10 @@
+{
+  "barrier": "Keyboard focus reaches Products, but Arrow Down leaves its panel hidden. The prior class toggle gave the ScreenMeet AI link a layout box while the panel remained transparent.",
+  "rules": [
+    {
+      "selector": "#w-dropdown-toggle-0",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseover"
+    }
+  ]
+}

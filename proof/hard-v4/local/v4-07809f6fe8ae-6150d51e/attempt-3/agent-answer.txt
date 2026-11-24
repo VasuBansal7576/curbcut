@@ -1,0 +1,8 @@
+{
+  "barrier": "The desktop navigation trigger has a tabIndex of -1, so Tab skips it and keyboard users cannot activate it to reveal Endpoint Solution (SDK).",
+  "rules": [
+    {"selector": "#desktop-nav", "action": "makeFocusable"},
+    {"selector": "#desktop-nav", "action": "bindEnterToClick"},
+    {"selector": "#desktop-nav", "action": "restoreFocusOutline"}
+  ]
+}

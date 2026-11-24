@@ -1,0 +1,34 @@
+{
+  "id": "geeksforgeeks-open-search",
+  "url": "https://www.geeksforgeeks.org/",
+  "persona": "keyboard-only",
+  "task": "First assert the search icon in the homepage header is in sequential keyboard focus order. Use Tab and Enter to open the site search. Verify the Search text box is visible.",
+  "controlTask": "Click the search icon in the homepage header. Verify the Search text box opens and is visible.",
+  "observedSelector": ".gs-toggle-icon",
+  "successSelector": ".gs-input_wrapper.gs-show-search-bar form.gs-form input.gs-input",
+  "site": "www.geeksforgeeks.org",
+  "match": "https://www.geeksforgeeks.org/",
+  "barrier": "The header search toggle is a span with tabIndex -1, so Tab skips it.",
+  "rules": [
+    {
+      "selector": ".gs-toggle-icon",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": ".gs-toggle-icon",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": ".gs-toggle-icon",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": ".gs-toggle-icon",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

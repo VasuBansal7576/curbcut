@@ -1,0 +1,134 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-7b801b9b8f66-2ef1d4b9",
+    "url": "https://www.aeserver.com/",
+    "persona": "keyboard-only",
+    "task": "Open “Domains” from keyboard focus or with Arrow Down and follow “.org”. Confirm the public destination /domain-registration/org-domains/.",
+    "controlTask": "Hover “Domains”, click “.org” and confirm /domain-registration/org-domains/.",
+    "observedSelector": "#menu-main-menu > li:nth-of-type(1) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/domain-registration/org-domains/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#menu-main-menu > li:nth-of-type(1)",
+      "#menu-main-menu > li:nth-of-type(1) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#menu-main-menu > li:nth-of-type(1) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menu-main-menu > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menu-main-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > ul > li:nth-of-type(4) > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-7b801b9b8f66-2ef1d4b9/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 3 was unavailable after the prior step.",
+      "file": "proof/heldout-v5/local/v5-7b801b9b8f66-2ef1d4b9/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-7b801b9b8f66-2ef1d4b9/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-7b801b9b8f66-2ef1d4b9/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v5-7b801b9b8f66-2ef1d4b9",
+    "url": "https://www.aeserver.com/",
+    "persona": "keyboard-only",
+    "task": "Open “Domains” from keyboard focus or with Arrow Down and follow “.org”. Confirm the public destination /domain-registration/org-domains/.",
+    "controlTask": "Hover “Domains”, click “.org” and confirm /domain-registration/org-domains/.",
+    "observedSelector": "#menu-main-menu > li:nth-of-type(1) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/domain-registration/org-domains/"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#menu-main-menu > li:nth-of-type(1)",
+      "#menu-main-menu > li:nth-of-type(1) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#menu-main-menu > li:nth-of-type(1) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menu-main-menu > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#menu-main-menu > li:nth-of-type(1) > ul > li:nth-of-type(1) > ul > li:nth-of-type(4) > a",
+        "action": "activate"
+      }
+    ],
+    "site": "www.aeserver.com",
+    "match": "https://www.aeserver.com/",
+    "barrier": "The Domains link receives keyboard focus, but the submenu is revealed only by CSS hover on its parent list item. Focusing Domains and pressing Arrow Down leaves the .org link hidden.",
+    "rules": [
+      {
+        "selector": "#menu-main-menu > li:nth-of-type(1)",
+        "action": "mirrorHoverToFocus"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/heldout-v5/local/v5-7b801b9b8f66-2ef1d4b9/attempt-1"
+}

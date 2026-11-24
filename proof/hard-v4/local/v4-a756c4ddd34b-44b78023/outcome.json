@@ -1,0 +1,184 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-a756c4ddd34b-44b78023",
+    "url": "https://www.stoqapp.com/",
+    "persona": "keyboard-only",
+    "task": "Open “Features” from keyboard focus or with Arrow Down and follow “Back in stock”. Confirm the public destination /back-in-stock.",
+    "controlTask": "Hover “Features”, click “Back in stock” and confirm /back-in-stock.",
+    "observedSelector": "#w-dropdown-toggle-0",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/back-in-stock"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "div > div:nth-of-type(2) > div > div:nth-of-type(1) > nav > div:nth-of-type(1) > div",
+      "#w-dropdown-list-0"
+    ],
+    "journey": [
+      {
+        "selector": "#w-dropdown-toggle-0",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#w-dropdown-toggle-0",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#w-dropdown-list-0 > a:nth-of-type(2)",
+        "action": "activate"
+      }
+    ]
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "Journey step 3 was unavailable after the prior step.",
+    "steps": [
+      {
+        "selector": "#w-dropdown-toggle-0",
+        "action": "focus",
+        "traversal": {
+          "reached": true,
+          "tabs": 3
+        }
+      },
+      {
+        "selector": "#w-dropdown-toggle-0",
+        "action": "key",
+        "key": "ArrowDown"
+      },
+      {
+        "selector": "#w-dropdown-list-0 > a:nth-of-type(2)",
+        "action": "activate"
+      }
+    ],
+    "url": "https://www.stoqapp.com/"
+  },
+  "registeredControl": {
+    "status": "pass",
+    "reason": "The complete journey reached the declared outcome.",
+    "steps": [
+      {
+        "selector": "#w-dropdown-toggle-0",
+        "action": "focus"
+      },
+      {
+        "selector": "#w-dropdown-toggle-0",
+        "action": "key",
+        "key": "ArrowDown"
+      },
+      {
+        "selector": "#w-dropdown-list-0 > a:nth-of-type(2)",
+        "action": "activate"
+      }
+    ],
+    "url": "https://www.stoqapp.com/back-in-stock",
+    "checks": [
+      true
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-a756c4ddd34b-44b78023/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 3 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-a756c4ddd34b-44b78023/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-a756c4ddd34b-44b78023/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-a756c4ddd34b-44b78023/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v4-a756c4ddd34b-44b78023",
+    "url": "https://www.stoqapp.com/",
+    "persona": "keyboard-only",
+    "task": "Open “Features” from keyboard focus or with Arrow Down and follow “Back in stock”. Confirm the public destination /back-in-stock.",
+    "controlTask": "Hover “Features”, click “Back in stock” and confirm /back-in-stock.",
+    "observedSelector": "#w-dropdown-toggle-0",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/back-in-stock"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "div > div:nth-of-type(2) > div > div:nth-of-type(1) > nav > div:nth-of-type(1) > div",
+      "#w-dropdown-list-0"
+    ],
+    "journey": [
+      {
+        "selector": "#w-dropdown-toggle-0",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#w-dropdown-toggle-0",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#w-dropdown-list-0 > a:nth-of-type(2)",
+        "action": "activate"
+      }
+    ],
+    "site": "www.stoqapp.com",
+    "match": "https://www.stoqapp.com/",
+    "barrier": "The Features trigger receives keyboard focus, but Arrow Down leaves its dropdown at display:none, so the Back in stock link is unavailable.",
+    "rules": [
+      {
+        "action": "toggleOnActivate",
+        "trigger": "#w-dropdown-toggle-0",
+        "target": "#w-dropdown-list-0",
+        "mode": "display",
+        "display": "block"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/hard-v4/local/v4-a756c4ddd34b-44b78023/attempt-1"
+}

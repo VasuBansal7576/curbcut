@@ -1,0 +1,55 @@
+{
+  "id": "v4-c8b6f7999e25-95d28215",
+  "url": "https://medex.com.bd/",
+  "persona": "keyboard-only",
+  "task": "Open “BROWSE” from keyboard focus or with Arrow Down and follow “Brand Names (Allopathic)”. Confirm the public destination /brands.",
+  "controlTask": "Hover “BROWSE”, click “Brand Names (Allopathic)” and confirm /brands.",
+  "observedSelector": "#nav-menu-catalogue > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/brands"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#nav-menu-catalogue",
+    "#nav-menu-catalogue > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#nav-menu-catalogue > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#nav-menu-catalogue > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#nav-menu-brands > a",
+      "action": "activate"
+    }
+  ],
+  "site": "medex.com.bd",
+  "match": "https://medex.com.bd/",
+  "barrier": "The Browse submenu stays at display:none after the Browse link receives focus and Arrow Down is pressed, leaving Brand Names (Allopathic) unavailable to keyboard users.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#nav-menu-catalogue > a",
+      "target": "#nav-menu-catalogue > ul",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

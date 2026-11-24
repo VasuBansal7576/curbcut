@@ -1,0 +1,9 @@
+{
+  "barrier": "The exact target is a text span with no tabindex, so Tab skips it. The prior repair made its parent anchor focusable.",
+  "rules": [
+    {"selector":"#gaoyanzhi_3__plans > div > div > p > a > span","action":"makeFocusable"},
+    {"selector":"#gaoyanzhi_3__plans > div > div > p > a > span","action":"setRole","value":"button"},
+    {"selector":"#gaoyanzhi_3__plans > div > div > p > a > span","action":"bindEnterToClick"},
+    {"selector":"#gaoyanzhi_3__plans > div > div > p > a > span","action":"restoreFocusOutline"}
+  ]
+}

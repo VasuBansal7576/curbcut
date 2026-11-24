@@ -1,0 +1,96 @@
+{"type":"stream_start","cli_version":"0.10.7","surface":"run","pid":18991,"v":1,"ts":"2026-11-22T03:37:15.490Z"}
+{"type":"recording_state","enabled":true,"session_id":"19b9337d-a774-4d11-81ed-a96824e48fd0","persist":false,"v":1,"ts":"2026-11-22T03:37:15.503Z"}
+{"type":"skill_update_available","current":null,"latest":"0.1.4","install_cmd":"kane-cli install skill","v":1,"ts":"2026-11-22T03:37:15.993Z"}
+{"type":"bifurcation","flows":["Navigate to https://www.sfmta.com/ then Use Tab, Shift+Tab, arrow keys, Page Up, Page Down, Home, End, text entry, Space and Enter only.\nRemain on this public site.\nStop before sign-in, registration or payment.\nNever change fixture settings.\nUse only visible controls.\nVerify the final result on the page.\nif it appears @v16:\"Press Tab once and Enter to use Skip to main content\".\nTab through the slideshow controls.\nPlay/Pause is after the Previous, Next, and slide-number controls, before the Trip Planner.\nIf focus has reached Trip Planner, @v16:\"press Shift+Tab back to Play/Pause\".\nActivate it with Tab and Enter to pause the carousel.\nVerify the control reports aria-pressed false."],"count":1,"v":1,"ts":"2026-11-22T03:37:24.546Z"}
+{"step":2,"status":"running","remark":"Step 1","v":1,"ts":"2026-11-22T03:37:26.364Z"}
+{"step":2,"status":"done","remark":"navigate: Navigate to https://www.sfmta.com/","v":1,"ts":"2026-11-22T03:37:26.370Z"}
+{"step":3,"status":"running","remark":"Step 2","v":1,"ts":"2026-11-22T03:37:33.963Z"}
+{"step":3,"status":"done","remark":"analyze: Skip to main content appears","v":1,"ts":"2026-11-22T03:37:41.137Z"}
+{"step":4,"status":"running","remark":"Step 3","v":1,"ts":"2026-11-22T03:37:41.884Z"}
+{"step":2,"status":"running","remark":"Step 1","child_id":"376c68bc","v":1,"ts":"2026-11-22T03:37:42.591Z"}
+{"step":2,"status":"done","remark":"press_key: PRIMARY: press the Tab key","child_id":"376c68bc","v":1,"ts":"2026-11-22T03:37:46.725Z"}
+{"step":3,"status":"running","remark":"Step 2","child_id":"376c68bc","v":1,"ts":"2026-11-22T03:37:47.596Z"}
+{"step":3,"status":"done","remark":"press_key: PRIMARY: press the Enter key","child_id":"376c68bc","v":1,"ts":"2026-11-22T03:37:52.870Z"}
+{"step":4,"status":"running","remark":"Step 3","child_id":"376c68bc","v":1,"ts":"2026-11-22T03:37:53.732Z"}
+{"step":4,"status":"done","remark":"wait: Waiting after Skip to main content activation","child_id":"376c68bc","v":1,"ts":"2026-11-22T03:37:58.259Z"}
+{"step":5,"status":"running","remark":"Step 4","v":1,"ts":"2026-11-22T03:38:01.443Z"}
+{"step":5,"status":"done","remark":"press_key: PRIMARY: press the Tab key to begin tabbing through the slideshow controls","v":1,"ts":"2026-11-22T03:38:05.747Z"}
+{"step":6,"status":"running","remark":"Step 5","v":1,"ts":"2026-11-22T03:38:06.362Z"}
+{"step":6,"status":"done","remark":"press_key: PRIMARY: press Shift+Tab to move backward toward the slideshow controls","v":1,"ts":"2026-11-22T03:38:16.078Z"}
+{"step":7,"status":"running","remark":"Step 6","v":1,"ts":"2026-11-22T03:38:16.706Z"}
+{"step":7,"status":"done","remark":"wait: queued plan (8 steps): press_key \"Accessibility\"; press_key \"Accessibility\"; pre","v":1,"ts":"2026-11-22T03:38:25.331Z"}
+{"step":8,"status":"running","remark":"Step 7","v":1,"ts":"2026-11-22T03:38:26.048Z"}
+{"step":8,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:26.064Z"}
+{"step":9,"status":"running","remark":"Step 8","v":1,"ts":"2026-11-22T03:38:26.776Z"}
+{"step":9,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:26.800Z"}
+{"step":10,"status":"running","remark":"Step 9","v":1,"ts":"2026-11-22T03:38:27.622Z"}
+{"step":10,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:27.638Z"}
+{"step":11,"status":"running","remark":"Step 10","v":1,"ts":"2026-11-22T03:38:28.310Z"}
+{"step":11,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:28.324Z"}
+{"step":12,"status":"running","remark":"Step 11","v":1,"ts":"2026-11-22T03:38:28.996Z"}
+{"step":12,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:29.014Z"}
+{"step":13,"status":"running","remark":"Step 12","v":1,"ts":"2026-11-22T03:38:29.778Z"}
+{"step":13,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:29.791Z"}
+{"step":14,"status":"running","remark":"Step 13","v":1,"ts":"2026-11-22T03:38:30.458Z"}
+{"step":14,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:30.470Z"}
+{"step":15,"status":"running","remark":"Step 14","v":1,"ts":"2026-11-22T03:38:31.107Z"}
+{"step":15,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:31.118Z"}
+{"step":16,"status":"running","remark":"Step 15","v":1,"ts":"2026-11-22T03:38:31.814Z"}
+{"step":16,"status":"done","remark":"wait: queued plan (3 steps): press_key \"How I want to travel\"; press_key \"How I want t","v":1,"ts":"2026-11-22T03:38:39.996Z"}
+{"step":17,"status":"running","remark":"Step 16","v":1,"ts":"2026-11-22T03:38:40.710Z"}
+{"step":17,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:40.748Z"}
+{"step":18,"status":"running","remark":"Step 17","v":1,"ts":"2026-11-22T03:38:41.481Z"}
+{"step":18,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:41.494Z"}
+{"step":19,"status":"running","remark":"Step 18","v":1,"ts":"2026-11-22T03:38:42.169Z"}
+{"step":19,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:42.192Z"}
+{"step":20,"status":"running","remark":"Step 19","v":1,"ts":"2026-11-22T03:38:42.834Z"}
+{"step":20,"status":"done","remark":"wait: queued plan (8 steps): press_key \"Play/Pause\"; press_key \"Play/Pause\"; press_key","v":1,"ts":"2026-11-22T03:38:50.441Z"}
+{"step":21,"status":"running","remark":"Step 20","v":1,"ts":"2026-11-22T03:38:51.352Z"}
+{"step":21,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:51.370Z"}
+{"step":22,"status":"running","remark":"Step 21","v":1,"ts":"2026-11-22T03:38:52.140Z"}
+{"step":22,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:52.166Z"}
+{"step":23,"status":"running","remark":"Step 22","v":1,"ts":"2026-11-22T03:38:53.013Z"}
+{"step":23,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:53.052Z"}
+{"step":24,"status":"running","remark":"Step 23","v":1,"ts":"2026-11-22T03:38:53.889Z"}
+{"step":24,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:53.909Z"}
+{"step":25,"status":"running","remark":"Step 24","v":1,"ts":"2026-11-22T03:38:54.657Z"}
+{"step":25,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:54.700Z"}
+{"step":26,"status":"running","remark":"Step 25","v":1,"ts":"2026-11-22T03:38:55.541Z"}
+{"step":26,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:55.557Z"}
+{"step":27,"status":"running","remark":"Step 26","v":1,"ts":"2026-11-22T03:38:56.473Z"}
+{"step":27,"status":"done","remark":"press_key: Press Shift+Tab","v":1,"ts":"2026-11-22T03:38:56.495Z"}
+{"step":28,"status":"running","remark":"Step 27","v":1,"ts":"2026-11-22T03:38:57.546Z"}
+{"step":28,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:38:57.564Z"}
+{"step":29,"status":"running","remark":"Step 28","v":1,"ts":"2026-11-22T03:38:58.673Z"}
+{"step":29,"status":"done","remark":"wait: queued plan (2 steps): press_key \"(More: 20 in last 48 hours)\"; press_key \"(More","v":1,"ts":"2026-11-22T03:39:05.232Z"}
+{"step":30,"status":"running","remark":"Step 29","v":1,"ts":"2026-11-22T03:39:05.977Z"}
+{"step":30,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:39:05.994Z"}
+{"step":31,"status":"running","remark":"Step 30","v":1,"ts":"2026-11-22T03:39:06.993Z"}
+{"step":31,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:39:07.134Z"}
+{"step":32,"status":"running","remark":"Step 31","v":1,"ts":"2026-11-22T03:39:07.863Z"}
+{"step":32,"status":"done","remark":"wait: queued plan (6 steps): press_key \"Previous\"; press_key \"Previous\"; press_key \"Pr","v":1,"ts":"2026-11-22T03:39:15.674Z"}
+{"step":33,"status":"running","remark":"Step 32","v":1,"ts":"2026-11-22T03:39:16.374Z"}
+{"step":33,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:39:16.392Z"}
+{"step":34,"status":"running","remark":"Step 33","v":1,"ts":"2026-11-22T03:39:17.201Z"}
+{"step":34,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:39:17.226Z"}
+{"step":35,"status":"running","remark":"Step 34","v":1,"ts":"2026-11-22T03:39:17.959Z"}
+{"step":35,"status":"done","remark":"press_key: Press ArrowRight","v":1,"ts":"2026-11-22T03:39:17.985Z"}
+{"step":36,"status":"running","remark":"Step 35","v":1,"ts":"2026-11-22T03:39:18.785Z"}
+{"step":36,"status":"done","remark":"press_key: Press ArrowRight","v":1,"ts":"2026-11-22T03:39:18.800Z"}
+{"step":37,"status":"running","remark":"Step 36","v":1,"ts":"2026-11-22T03:39:19.497Z"}
+{"step":37,"status":"done","remark":"press_key: Press ArrowRight","v":1,"ts":"2026-11-22T03:39:19.518Z"}
+{"step":38,"status":"running","remark":"Step 37","v":1,"ts":"2026-11-22T03:39:20.392Z"}
+{"step":38,"status":"done","remark":"press_key: Press Tab","v":1,"ts":"2026-11-22T03:39:20.415Z"}
+{"step":39,"status":"running","remark":"Step 38","v":1,"ts":"2026-11-22T03:39:21.511Z"}
+{"step":39,"status":"done","remark":"press_key: PRIMARY: Tab through the slideshow controls, including Previous, Next, and slide","v":1,"ts":"2026-11-22T03:39:27.768Z"}
+{"step":40,"status":"running","remark":"Step 39","v":1,"ts":"2026-11-22T03:39:28.439Z"}
+{"step":40,"status":"done","remark":"analyze: focus has reached Trip Planner","v":1,"ts":"2026-11-22T03:39:43.337Z"}
+{"step":41,"status":"running","remark":"Step 40","v":1,"ts":"2026-11-22T03:39:44.093Z"}
+{"step":42,"status":"running","remark":"Step 41","v":1,"ts":"2026-11-22T03:39:44.824Z"}
+{"step":42,"status":"done","remark":"press_key: PRIMARY: Activate Play/Pause with Tab and Enter to pause the carousel","v":1,"ts":"2026-11-22T03:39:51.446Z"}
+{"step":43,"status":"running","remark":"Step 42","v":1,"ts":"2026-11-22T03:39:52.210Z"}
+{"step":43,"status":"done","remark":"analyze: The Play/Pause control reports aria-pressed false.","v":1,"ts":"2026-11-22T03:39:58.659Z"}
+{"step":44,"status":"running","remark":"Step 43","v":1,"ts":"2026-11-22T03:39:59.294Z"}
+{"step":44,"status":"done","remark":"assert: The control reports aria-pressed false.","v":1,"ts":"2026-11-22T03:39:59.300Z"}
+{"type":"coverage","status":"skipped","reason":"not_assurance_project","pack":"/Users/vasu/.testmuai/kaneai/sessions/19b9337d-a774-4d11-81ed-a96824e48fd0/evidence/81bb2177-b414-42de-b8be-0cc6127af58a.evidence","v":1,"ts":"2026-11-22T03:40:02.856Z"}
+{"type":"run_end","status":"passed","summary":"The requested keyboard-only navigation through the slideshow controls was completed, including Previous, Next, and the slide-number controls.\nThe Skip to main content link was used to move into the page’s main content.\nFocus reached the Play/Pause control before the Trip Planner form.\nPlay/Pause was activated with the keyboard, and the carousel finished paused.","one_liner":"paused the homepage carousel on sfmta.com","final_state":{"url":"https://www.sfmta.com/#main","play_pause_aria_pressed":"false","trip_planner_focus_reached":"false"},"reason":"Objective completed","duration":160.4,"bifurcated":false,"total_runs":1,"context":{"memory":{"skip_to_main_content_appears":{"extracted_value":"true","operator":"equals","transforms":[],"json_path":null,"reasoning":"value: 'true' -> 'true'; equals 'true' -> PASS","analyzer_type":"textual_visual","step":2,"query":"whether the Skip to main content link is present in the site header","condition":"Skip to main content appears","human_description":"Checking whether the Skip to main content link is present","expected_value":"true","subject":"Skip to main content","must_be":"present","code_js":"el(1).innerText.trim() === 'Skip to main content'","wrapped_js":"(els) => {\n  const __m = {1: 0};\n  const el = (i) => els[__m[i]];\n  const __v = (el(1).innerText.trim() === 'Skip to main content');\n  return (typeof __v === 'boolean' ? String(__v) : __v);\n}","locators":["internal:role=link[name=\"Skip to main content\"i]"],"needs_unit_conversion":false},"trip_planner_focus_reached":{"extracted_value":"false","operator":"equals","transforms":[],"json_path":null,"reasoning":"value: 'false' -> 'false'; equals 'true' -> FAIL","analyzer_type":"textual_visual","step":39,"query":"whether focus is within the Trip Planner form","condition":"focus has reached Trip Planner","human_description":"Checking whether focus has reached Trip Planner","expected_value":"true","subject":"focus on Trip Planner","must_be":"present","code_js":"el(46).contains(document.activeElement)","wrapped_js":"(els) => {\n  const __m = {46: 0};\n  const el = (i) => els[__m[i]];\n  const __v = (el(46).contains(document.activeElement));\n  return (typeof __v === 'boolean' ? String(__v) : __v);\n}","locators":["internal:text=\"Starting Location Ending\"i"],"needs_unit_conversion":false},"play_pause_aria_pressed":{"extracted_value":"false","operator":"equals","transforms":["strip","lowercase"],"json_path":null,"reasoning":"value: 'false' -> 'false' after ['strip', 'lowercase']; equals 'false' -> PASS","analyzer_type":"textual_visual","step":42,"query":"the aria-pressed state of the Play/Pause control","condition":"The Play/Pause control reports aria-pressed false.","human_description":"Reading the Play/Pause control pressed state","expected_value":"false","code_js":"el(45).getAttribute('aria-pressed')","wrapped_js":"(els) => {\n  const __m = {45: 0};\n  const el = (i) => els[__m[i]];\n  const __v = (el(45).getAttribute('aria-pressed'));\n  return (typeof __v === 'boolean' ? String(__v) : __v);\n}","locators":["internal:role=button[name=\"Play/Pause\"i]"],"needs_unit_conversion":false}},"variables":{"skip_to_main_content_appears":{"syntax":"{{skip_to_main_content_appears}}","value":"true","type":"memory","secret":false},"trip_planner_focus_reached":{"syntax":"{{trip_planner_focus_reached}}","value":"false","type":"memory","secret":false},"play_pause_aria_pressed":{"syntax":"{{play_pause_aria_pressed}}","value":"false","type":"memory","secret":false}},"pointer":"(passed) paused the homepage carousel on sfmta.com"},"credits_consumed":51.895675,"session_dir":"/Users/vasu/.testmuai/kaneai/sessions/19b9337d-a774-4d11-81ed-a96824e48fd0","run_dir":"/Users/vasu/.testmuai/kaneai/sessions/19b9337d-a774-4d11-81ed-a96824e48fd0/runs/0","result_code":100,"reason_code":"success.complete","per_flow_metadata":[{"result_code":"100","reason_code":"success.complete","error_message":null,"summary":"The requested keyboard-only navigation through the slideshow controls was completed, including Previous, Next, and the slide-number controls.\nThe Skip to main content link was used to move into the page’s main content.\nFocus reached the Play/Pause control before the Trip Planner form.\nPlay/Pause was activated with the keyboard, and the carousel finished paused.","one_liner":"paused the homepage carousel on sfmta.com","credits_consumed":51.895675}],"run_id":"run-0","coverage":{"status":"skipped"},"v":1,"ts":"2026-11-22T03:40:02.856Z"}

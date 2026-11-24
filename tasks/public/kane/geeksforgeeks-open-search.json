@@ -1,0 +1,9 @@
+{
+  "id": "geeksforgeeks-open-search",
+  "url": "https://www.geeksforgeeks.org/",
+  "persona": "keyboard-only",
+  "observedSelector": ".gs-toggle-icon",
+  "successSelector": ".gs-input_wrapper.gs-show-search-bar form.gs-form input.gs-input",
+  "task": "First assert the search icon in the homepage header is in sequential keyboard focus order. Use Tab and Enter to open the site search. Verify the Search text box is visible.",
+  "controlTask": "Click the search icon in the homepage header. Verify the Search text box opens and is visible."
+}

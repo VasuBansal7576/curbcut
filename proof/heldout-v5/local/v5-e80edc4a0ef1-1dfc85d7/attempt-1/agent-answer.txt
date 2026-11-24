@@ -1,0 +1,11 @@
+{
+  "barrier": "Keyboard activation opens the Choose Country dialog, but focus has not moved to the dialog when the Escape step begins.",
+  "rules": [
+    {
+      "action": "dialogBehavior",
+      "dialog": "#countryPicker",
+      "opener": "#navbar .nav > ul.navbar-nav > li > a.mobile-nav-link[data-bs-toggle=\"modal\"][data-bs-target=\"#countryPicker\"]",
+      "close": "#countryPicker .modal-header > button.btn-close[data-bs-dismiss=\"modal\"]"
+    }
+  ]
+}

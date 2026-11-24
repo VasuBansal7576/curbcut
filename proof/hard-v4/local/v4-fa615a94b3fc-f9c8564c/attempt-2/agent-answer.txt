@@ -1,0 +1,12 @@
+{
+  "barrier": "At 320 CSS pixels, focusing Paslaugos and pressing ArrowDown leaves its submenu at display:none, so the WHOIS link is unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#navMenu > div > div:nth-of-type(1) > a:nth-of-type(1)",
+      "target": "#navMenu > div > div:nth-of-type(1) > div",
+      "mode": "display",
+      "display": "block"
+    }
+  ]
+}

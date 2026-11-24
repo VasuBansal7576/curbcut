@@ -1,0 +1,68 @@
+{
+  "id": "v5-0fde566de5ea-3112da06",
+  "url": "https://taggrs.io/",
+  "persona": "keyboard-only",
+  "task": "Focus “Captured events”, move once with ArrowRight, activate “Data quality” and read its panel.",
+  "controlTask": "Click “Data quality” and read its panel.",
+  "observedSelector": "#home-platform-tab-recovered",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#home-platform-panel-quality"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "#home-platform > div > div > div:nth-of-type(1) > div",
+    "[role=tab]",
+    "#home-platform-panel-quality"
+  ],
+  "journey": [
+    {
+      "selector": "#home-platform-tab-recovered",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#home-platform-tab-recovered",
+      "action": "key",
+      "key": "ArrowRight",
+      "pointer": {
+        "action": "click",
+        "selector": "#home-platform-tab-quality"
+      }
+    },
+    {
+      "selector": "#home-platform-tab-quality",
+      "action": "activate",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#home-platform-panel-quality",
+      "action": "observe"
+    }
+  ],
+  "site": "taggrs.io",
+  "match": "https://taggrs.io/",
+  "barrier": "Keyboard traversal reaches Captured events, but the focused tab is reported clipped or off-screen, so the journey stops before ArrowRight.",
+  "rules": [
+    {
+      "selector": "#home-platform [role=\"tablist\"][aria-labelledby=\"home-platform-title\"] > button[role=\"tab\"]",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#home-platform [role=\"tablist\"][aria-labelledby=\"home-platform-title\"]",
+      "items": "#home-platform [role=\"tablist\"][aria-labelledby=\"home-platform-title\"] > button[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,31 @@
+{
+  "barrier": "Tab reaches the absolutely positioned Next slide arrow, but it remains below the viewport during keyboard traversal. Slick also suppresses the arrow’s focus outline.",
+  "rules": [
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-next",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-next",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-next",
+      "action": "addLabel",
+      "value": "Next slide"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-next",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-next",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "selector": "section.Testimonials_testimonials__bxBC9 .slick-slider.slick-initialized > div.slick-next",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

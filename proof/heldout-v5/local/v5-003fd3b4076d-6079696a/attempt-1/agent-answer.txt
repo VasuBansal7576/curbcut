@@ -1,0 +1,17 @@
+{
+  "barrier": "Tab reaches the Buy and Sell button while the page is still in its async-hide state. The focused button is effectively invisible because the rendered opacity is below 0.1.",
+  "rules": [
+    {
+      "selector": "html.async-hide",
+      "action": "extendTimeout",
+      "value": 4000
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#mega-buy-sell-d",
+      "target": "#mega-panel-buy-sell-d",
+      "mode": "class",
+      "className": "show"
+    }
+  ]
+}

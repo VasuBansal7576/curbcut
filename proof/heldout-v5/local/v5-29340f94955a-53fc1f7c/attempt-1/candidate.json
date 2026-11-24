@@ -1,0 +1,52 @@
+{
+  "id": "v5-29340f94955a-53fc1f7c",
+  "url": "https://www.evrensel.net/",
+  "persona": "keyboard-only",
+  "task": "Open “Menüyü aç” from keyboard focus or with Arrow Down and follow “KADIN”. Confirm the public destination /kategori/9/kadin.",
+  "controlTask": "Hover “Menüyü aç”, click “KADIN” and confirm /kategori/9/kadin.",
+  "observedSelector": "#main-nav > div > nav > ul > li:nth-of-type(15) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/kategori/9/kadin"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#main-nav > div > nav > ul > li:nth-of-type(15)",
+    "#dropdown-menu"
+  ],
+  "journey": [
+    {
+      "selector": "#main-nav > div > nav > ul > li:nth-of-type(15) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#main-nav > div > nav > ul > li:nth-of-type(15) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#d-10 > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.evrensel.net",
+  "match": "https://www.evrensel.net/",
+  "barrier": "The navigation list item reveals #dropdown-menu on CSS hover. Focusing “Menüyü aç” and pressing Arrow Down leave the dropdown hidden, so the “KADIN” link is unavailable.",
+  "rules": [
+    {
+      "selector": "#main-nav > div > nav > ul > li:has(> #dropdown-menu)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,1714 @@
+{
+  "runner": "playwright",
+  "status": "pass",
+  "reason": "The complete journey reached the declared outcome.",
+  "steps": [
+    {
+      "selector": "#header-quick-navigation > ul > li:nth-of-type(1) > a",
+      "action": "focus"
+    },
+    {
+      "selector": "#header-quick-navigation > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown"
+    },
+    {
+      "selector": "#boerse-quick-sub > li:nth-of-type(2) > a",
+      "action": "activate"
+    }
+  ],
+  "url": "https://www.boerse-online.de/experten",
+  "checks": [
+    true
+  ],
+  "snapshot": {
+    "url": "https://www.boerse-online.de/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#header-quick-navigation > ul > li:nth-of-type(1) > a",
+          "parent": "#header-quick-navigation > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "aria-controls": "boerse-quick-sub",
+            "role": "menuitem"
+          },
+          "hoverHandlers": [],
+          "text": "Börse",
+          "children": [],
+          "box": [
+            20,
+            138,
+            95,
+            36
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header-quick-navigation > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "parent": "#header-quick-navigation > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a",
+            "#boerse-quick-sub"
+          ],
+          "box": [
+            20,
+            138,
+            95,
+            36
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "hidden",
+            "overflow-y": "hidden",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header-quick-navigation > ul:nth-of-type(1)",
+          "parent": "#header-quick-navigation",
+          "tag": "ul",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li",
+            "li",
+            "li",
+            "li",
+            "li",
+            "li"
+          ],
+          "box": [
+            20,
+            138,
+            1240,
+            36
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header-quick-navigation",
+          "parent": "#page-header",
+          "tag": "nav",
+          "attributes": {
+            "class": "hide-mobile",
+            "id": "header-quick-navigation",
+            "role": "menubar",
+            "aria-label": ""
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul"
+          ],
+          "box": [
+            20,
+            138,
+            1240,
+            36
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#page-header",
+          "parent": "#page-background",
+          "tag": "header",
+          "attributes": {
+            "id": "page-header"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#page-header-main",
+            "#header-quick-navigation",
+            "#header-navigation"
+          ],
+          "box": [
+            0,
+            50,
+            1280,
+            144
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "sticky",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "2",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#page-background",
+          "tag": "div",
+          "attributes": {
+            "id": "page-background"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#page-header",
+            "#breaking-news",
+            "#banner-billboard-container",
+            "main",
+            "#flyin-banner",
+            "#overlayad"
+          ],
+          "box": [
+            0,
+            50,
+            1280,
+            7906
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#boerse-quick-sub",
+          "parent": "#header-quick-navigation > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "id": "boerse-quick-sub",
+            "role": "menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li",
+            "li"
+          ],
+          "box": [
+            20,
+            168,
+            200,
+            26
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "0",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#boerse-quick-sub > li:nth-of-type(2) > a",
+          "parent": "#boerse-quick-sub > li:nth-of-type(2)",
+          "tag": "a",
+          "attributes": {
+            "role": "menuitem"
+          },
+          "hoverHandlers": [],
+          "text": "Experten",
+          "children": [],
+          "box": [
+            20,
+            184,
+            104,
+            42
+          ],
+          "style": {
+            "display": "inline-block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#boerse-quick-sub > li:nth-of-type(2)",
+          "parent": "#boerse-quick-sub",
+          "tag": "li",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a"
+          ],
+          "box": [
+            20,
+            184,
+            200,
+            0
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "hidden",
+            "overflow-y": "hidden",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "#header-quick-navigation ul li a[aria-controls]:hover, #header-quick-navigation ul li button[aria-controls]:hover",
+          "declarations": "font-weight: 600;",
+          "conditions": [
+            "screen and (min-width: 1024px)"
+          ]
+        },
+        {
+          "selector": "#header-quick-navigation ul li:hover",
+          "declarations": "overflow: visible;",
+          "conditions": [
+            "screen and (min-width: 1024px)"
+          ]
+        },
+        {
+          "selector": "#header-quick-navigation ul li:hover a[aria-controls], #header-quick-navigation ul li:hover button",
+          "declarations": "font-weight: 600;",
+          "conditions": [
+            "screen and (min-width: 1024px)"
+          ]
+        },
+        {
+          "selector": "#header-quick-navigation ul li:hover a[aria-controls] + ul, #header-quick-navigation ul li:hover button + ul",
+          "declarations": "height: auto; opacity: 1; transition: opacity 0.2s;",
+          "conditions": [
+            "screen and (min-width: 1024px)"
+          ]
+        },
+        {
+          "selector": "#header-quick-navigation ul li a:hover",
+          "declarations": "font-weight: 600;",
+          "conditions": [
+            "screen and (min-width: 1024px)"
+          ]
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#header-quick-navigation > ul > li:nth-of-type(1)",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 20,
+        "width": 95
+      },
+      {
+        "selector": "#boerse-quick-sub",
+        "role": "menu",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 20,
+        "width": 200
+      },
+      {
+        "selector": "#header-quick-navigation > ul > li:nth-of-type(1) > a",
+        "role": "menuitem",
+        "name": "Börse",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": "boerse-quick-sub",
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 20,
+        "width": 95
+      },
+      {
+        "selector": "#boerse-quick-sub > li:nth-of-type(2) > a",
+        "role": "menuitem",
+        "name": "Experten",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 20,
+        "width": 104
+      },
+      {
+        "selector": "ul",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 20,
+        "width": 1240
+      },
+      {
+        "selector": "body",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "noscript",
+        "role": "text",
+        "name": "<iframe title=\"noskript-tagmanager\" src=\"https://agtm.boerse-online.de/ns.html?id=GTM-WX5DS2X\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe>",
+        "state": "",
+        "tag": "noscript",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "script",
+        "role": "text",
+        "name": "if (window.IOMm) {\n            window.IOMm('configure', {\n                st: 'boerseon',\n                dn: 'data-964f7f3f43.boerse-online.de',\n                mh: 5\n            });\n            wind",
+        "state": "",
+        "tag": "script",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#banner-top-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#page-background",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#banner-big-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#Ads_BA_BS",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#banner-sky-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1280,
+        "width": 0
+      },
+      {
+        "selector": "#Ads_BA_SKY",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1280,
+        "width": 0
+      },
+      {
+        "selector": "#page-header",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#page-header-main",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 20,
+        "width": 1240
+      },
+      {
+        "selector": "#hamburger",
+        "role": "button",
+        "name": "Hauptmenü öffnen/schließen",
+        "state": "expanded false",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": "header-navigation",
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 20,
+        "width": 77
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "BÖRSE ONLINE BÖRSE ONLINE – Seit 1987, Deutschlands erstes Börsenmagazin",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 97,
+        "width": 97
+      },
+      {
+        "selector": "#header-logo",
+        "role": "link",
+        "name": "BÖRSE ONLINE BÖRSE ONLINE – Seit 1987, Deutschlands erstes Börsenmagazin",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 97,
+        "width": 97
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Bis zu 6 % Dividendenrendite: Die 5 Dividendenaristokraten mit der höchsten Ausschüttung (Foto: Sakorn Sukkasemsakorn/iStockphoto)",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 613,
+        "width": 257
+      },
+      {
+        "selector": "#header-actions",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 640,
+        "width": 472
+      },
+      {
+        "selector": "div.eyeAble_customToolOpenerClass.fr-bullet-nav__link",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1053,
+        "width": 59
+      },
+      {
+        "selector": "div.fr-bullet-nav__icon.fr-bullet-nav__icon--eyeable",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 1053,
+        "width": 59
+      },
+      {
+        "selector": "#header-search-open",
+        "role": "button",
+        "name": "Suche öffnen",
+        "state": "expanded false",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": "false",
+        "controls": "header-search",
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 640,
+        "width": 340
+      },
+      {
+        "selector": "#header-navigation-account",
+        "role": "link",
+        "name": "Zum Konto",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 1135,
+        "width": 95
+      },
+      {
+        "selector": "#header-quick-navigation",
+        "role": "menubar",
+        "name": "",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 20,
+        "width": 1240
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1017,
+        "width": 223
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Bis zu 6 % Dividendenrendite: Die 5 Dividendenaristokraten mit der höchsten Ausschüttung (Foto: Sakorn Sukkasemsakorn/iStockphoto)",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 613,
+        "width": 257
+      },
+      {
+        "selector": "button",
+        "role": "menuitem",
+        "name": "Untermenü öffnen",
+        "state": "expanded false",
+        "tag": "button",
+        "tabIndex": -1,
+        "tabIndexAttribute": "-1",
+        "expanded": "false",
+        "controls": "altersvorsorge-quick-sub",
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 874,
+        "width": 186
+      },
+      {
+        "selector": "#breaking-news",
+        "role": "link",
+        "name": "+++ BLACK WEEK +++ 20 % Rabatt auf alle Magazine und Börsenbriefe +++",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 20,
+        "width": 1240
+      },
+      {
+        "selector": "#banner-billboard-container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#Ads_BA_FLB",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "main",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tag": "main",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#index-info-bar",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#market-ticker",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 30,
+        "width": 869
+      },
+      {
+        "selector": "a.stock-info-name",
+        "role": "link",
+        "name": "Infront Euro Stoxx 50",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 715,
+        "width": 142
+      },
+      {
+        "selector": "#index-top-article",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "grid",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "article.grid-col-full.article-list-item",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tag": "article",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "grid",
+        "left": 20,
+        "width": 850
+      },
+      {
+        "selector": "div.stock-info-badge-position",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 327,
+        "width": 237
+      },
+      {
+        "selector": "a.stock-info.stock-info-badge",
+        "role": "link",
+        "name": "NVIDIA Corp -%",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-flex",
+        "left": 327,
+        "width": 135
+      },
+      {
+        "selector": "strong.stock-info-name",
+        "role": "text",
+        "name": "NVIDIA Corp",
+        "state": "",
+        "tag": "strong",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 337,
+        "width": 95
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Paukenschlag bei Nvidia: Kommt Jensen Huang jetzt doch zurück?",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flow-root",
+        "left": 317,
+        "width": 257
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "Johann Werther",
+        "state": "",
+        "tag": "strong",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 753,
+        "width": 106
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Das Börsenjahr 2026 ist fast vorbei und bevor das neue startet, sollten Anleger laut Morgan Stanley unbedingt eines tun. Außerdem prognostizieren die Analysten, wie es mit den Kursen weitergeht.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flow-root",
+        "left": 613,
+        "width": 257
+      },
+      {
+        "selector": "article.article-list-item.article-list-item-medium",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tag": "article",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 613,
+        "width": 257
+      },
+      {
+        "selector": "div.section-more",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 20,
+        "width": 920
+      },
+      {
+        "selector": "a.button.button-secondary",
+        "role": "link",
+        "name": "Pfeil rechts Aktuelle Ausgabe jetzt lesen",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 1015,
+        "width": 210
+      },
+      {
+        "selector": "div.article-list-item.article-list-item-medium",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 995,
+        "width": 250
+      },
+      {
+        "selector": "div.content-container.text-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "grid",
+        "left": 995,
+        "width": 250
+      },
+      {
+        "selector": "img.issue-cover",
+        "role": "img",
+        "name": "Die aktuelle Ausgabe von Börse Online: BÖRSE ONLINE 48/26",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 1015,
+        "width": 210
+      },
+      {
+        "selector": "div.magazine-footer",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1015,
+        "width": 210
+      },
+      {
+        "selector": "a.button.button-paypal",
+        "role": "link",
+        "name": "Paypal Sofortkauf",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 1015,
+        "width": 210
+      },
+      {
+        "selector": "#index-mostviewed-articles",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "h2.section-headline",
+        "role": "heading",
+        "name": "Aktien",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 20,
+        "width": 850
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "EZB sendet Warnung an Bankensektor: Diese böse Überraschung könnte bald folgen",
+        "state": "",
+        "tag": "h3",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flow-root",
+        "left": 1062,
+        "width": 178
+      },
+      {
+        "selector": "#index-category-article",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "grid",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.grid-main",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 20,
+        "width": 850
+      },
+      {
+        "selector": "section",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 20,
+        "width": 850
+      },
+      {
+        "selector": "div.grid-container.grid-md-2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "grid",
+        "left": 20,
+        "width": 850
+      },
+      {
+        "selector": "div.grid-xl-twothird",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 20,
+        "width": 553
+      },
+      {
+        "selector": "div.grid-xl-onethird",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 613,
+        "width": 257
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#header-quick-navigation > ul > li:nth-of-type(1) > a",
+          "parent": "#header-quick-navigation > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "aria-controls": "boerse-quick-sub",
+            "role": "menuitem"
+          },
+          "hoverHandlers": [],
+          "text": "Börse",
+          "children": [],
+          "box": [
+            20,
+            138,
+            95,
+            38
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header-quick-navigation > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "parent": "#header-quick-navigation > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a",
+            "#boerse-quick-sub"
+          ],
+          "box": [
+            20,
+            138,
+            95,
+            38
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header-quick-navigation > ul:nth-of-type(1)",
+          "parent": "#header-quick-navigation",
+          "tag": "ul",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li",
+            "li",
+            "li",
+            "li",
+            "li",
+            "li"
+          ],
+          "box": [
+            20,
+            138,
+            1240,
+            38
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header-quick-navigation",
+          "parent": "#page-header",
+          "tag": "nav",
+          "attributes": {
+            "class": "hide-mobile",
+            "id": "header-quick-navigation",
+            "role": "menubar",
+            "aria-label": ""
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul"
+          ],
+          "box": [
+            20,
+            138,
+            1240,
+            38
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#page-header",
+          "parent": "#page-background",
+          "tag": "header",
+          "attributes": {
+            "id": "page-header"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#page-header-main",
+            "#header-quick-navigation",
+            "#header-navigation"
+          ],
+          "box": [
+            0,
+            50,
+            1280,
+            146
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "sticky",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "2",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#page-background",
+          "tag": "div",
+          "attributes": {
+            "id": "page-background"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#page-header",
+            "#breaking-news",
+            "#banner-billboard-container",
+            "main",
+            "#flyin-banner",
+            "#overlayad"
+          ],
+          "box": [
+            0,
+            50,
+            1280,
+            8091
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#boerse-quick-sub",
+          "parent": "#header-quick-navigation > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "id": "boerse-quick-sub",
+            "role": "menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li",
+            "li"
+          ],
+          "box": [
+            20,
+            170,
+            200,
+            114
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "0.99609",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#boerse-quick-sub > li:nth-of-type(2) > a",
+          "parent": "#boerse-quick-sub > li:nth-of-type(2)",
+          "tag": "a",
+          "attributes": {
+            "role": "menuitem"
+          },
+          "hoverHandlers": [],
+          "text": "Experten",
+          "children": [],
+          "box": [
+            20,
+            230,
+            107,
+            44
+          ],
+          "style": {
+            "display": "inline-block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#boerse-quick-sub > li:nth-of-type(2)",
+          "parent": "#boerse-quick-sub",
+          "tag": "li",
+          "attributes": {},
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a"
+          ],
+          "box": [
+            20,
+            230,
+            200,
+            44
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "hidden",
+            "overflow-y": "hidden",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "#header-quick-navigation ul li a[aria-controls]:hover, #header-quick-navigation ul li button[aria-controls]:hover",
+          "declarations": "font-weight: 600;",
+          "conditions": [
+            "screen and (min-width: 1024px)"
+          ]
+        },
+        {
+          "selector": "#header-quick-navigation ul li:hover",
+          "declarations": "overflow: visible;",
+          "conditions": [
+            "screen and (min-width: 1024px)"
+          ]
+        },
+        {
+          "selector": "#header-quick-navigation ul li:hover a[aria-controls], #header-quick-navigation ul li:hover button",
+          "declarations": "font-weight: 600;",
+          "conditions": [
+            "screen and (min-width: 1024px)"
+          ]
+        },
+        {
+          "selector": "#header-quick-navigation ul li:hover a[aria-controls] + ul, #header-quick-navigation ul li:hover button + ul",
+          "declarations": "height: auto; opacity: 1; transition: opacity 0.2s;",
+          "conditions": [
+            "screen and (min-width: 1024px)"
+          ]
+        },
+        {
+          "selector": "#header-quick-navigation ul li a:hover",
+          "declarations": "font-weight: 600;",
+          "conditions": [
+            "screen and (min-width: 1024px)"
+          ]
+        }
+      ]
+    }
+  }
+}

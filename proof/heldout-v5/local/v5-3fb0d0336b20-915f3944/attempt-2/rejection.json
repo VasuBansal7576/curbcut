@@ -1,0 +1,26 @@
+{
+  "reason": "Live selector validation failed. selector \".icons-text-slider .slider-row > .col-12 > .slider > button.slick-next.slick-arrow:focus-visible\": no matches",
+  "rules": [
+    {
+      "selector": ".icons-text-slider .slider-row > .col-12 > .slider > button.slick-next.slick-arrow:focus-visible",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ],
+  "selectorValidation": {
+    "ok": false,
+    "matches": [
+      {
+        "index": 0,
+        "field": "selector",
+        "selector": ".icons-text-slider .slider-row > .col-12 > .slider > button.slick-next.slick-arrow:focus-visible",
+        "count": 0,
+        "issue": "no matches",
+        "matches": []
+      }
+    ]
+  }
+}

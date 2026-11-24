@@ -1,0 +1,58 @@
+{
+  "id": "v5-42dfcce449a2-338a809d",
+  "url": "https://idc88amp.com/",
+  "persona": "keyboard-only",
+  "task": "Open “MAINKAN” by keyboard. Confirm the dialog appeared, then press Escape and confirm it closed.",
+  "controlTask": "Click “MAINKAN” and confirm that the dialog opens. Click “Close” to close it.",
+  "observedSelector": "#main-slide > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "hidden",
+      "selector": "#login"
+    }
+  ],
+  "barrierClass": 4,
+  "relatedSelectors": [
+    "#login",
+    "#login > div > div > div:nth-of-type(1) > button"
+  ],
+  "journey": [
+    {
+      "selector": "#main-slide > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)",
+      "action": "activate",
+      "checks": [
+        {
+          "kind": "visible",
+          "selector": "#login"
+        }
+      ]
+    },
+    {
+      "selector": "#login",
+      "action": "key",
+      "key": "Escape",
+      "pointer": {
+        "action": "click",
+        "selector": "#login > div > div > div:nth-of-type(1) > button"
+      }
+    }
+  ],
+  "site": "idc88amp.com",
+  "match": "https://idc88amp.com/",
+  "barrier": "Keyboard activation opens the MAINKAN dialog, but Escape leaves it visible. The dialog has an existing Close button that dismisses it by pointer.",
+  "rules": [
+    {
+      "action": "removeFocusTrap",
+      "selector": "#login"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#login",
+      "opener": "#main-slide .btn-slider-wrap > a[data-target=\"#login\"]",
+      "close": "#login .modal-header > button[data-dismiss=\"modal\"]"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

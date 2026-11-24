@@ -1,0 +1,15 @@
+{
+  "barrier": "At 320 CSS pixels, the body's 1260-pixel minimum width and the 896-pixel content column push the passage past the viewport's clipped right edge.",
+  "rules": [
+    {
+      "selector": "body",
+      "action": "injectCSS",
+      "value": {"min-width": "0", "width": "100%", "box-sizing": "border-box"}
+    },
+    {
+      "selector": "div.page_content",
+      "action": "injectCSS",
+      "value": {"width": "100%", "min-width": "0", "max-width": "100%", "box-sizing": "border-box"}
+    }
+  ]
+}

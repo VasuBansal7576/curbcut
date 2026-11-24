@@ -1,0 +1,21 @@
+{
+  "barrier": "At 320 CSS pixels, the Solutions trigger fits within the viewport, but focusing it and pressing ArrowDown leaves its dropdown at display:none, so For Advisors is unavailable.",
+  "rules": [
+    {
+      "selector": "#menu-main-navigation > div.header-mainmenu-item.dropdown:first-of-type",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseover"
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#menu-main-navigation > div.header-mainmenu-item.dropdown:first-of-type > a.dropdown-toggle",
+      "target": "#menu-main-navigation > div.header-mainmenu-item.dropdown:first-of-type > div.dropdown-menu",
+      "mode": "display",
+      "display": "block"
+    },
+    {
+      "selector": "#menu-main-navigation > div.header-mainmenu-item.dropdown:first-of-type > a.dropdown-toggle",
+      "action": "restoreFocusOutline"
+    }
+  ]
+}

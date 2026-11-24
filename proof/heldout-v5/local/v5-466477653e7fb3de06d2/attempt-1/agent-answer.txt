@@ -1,0 +1,34 @@
+{
+  "barrier": "At 320 CSS pixels, the fixed footer retains a 1200-pixel minimum width and the cookie notice lays out its text and controls in one row. The passage extends to x=894, beyond the visible viewport.",
+  "rules": [
+    {
+      "selector": "div.app-footer",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.app-footer > div.app-notice.active",
+      "action": "injectCSS",
+      "value": {
+        "flex-wrap": "wrap",
+        "max-width": "100%",
+        "height": "auto",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.app-notice.active > p.app-notice__tips",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

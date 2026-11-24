@@ -1,0 +1,39 @@
+{
+  "id": "v5-6d4dfc1c610d4c45a657",
+  "url": "https://www.esmo.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search for Abstracts, Guidelines, Meetings” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search for Abstracts, Guidelines, Meetings” field and type test without submitting.",
+  "observedSelector": "#searchAutocomplete > input",
+  "requiredName": "Search for Abstracts, Guidelines, Meetings",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#searchAutocomplete > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.esmo.org",
+  "match": "https://www.esmo.org/",
+  "barrier": "The search input exposes the combobox role, while Reading view's probe requires a textbox. The allowed rules cannot assign the textbox role, so naming the field and marking its search region still leaves the role mismatch unresolved.",
+  "rules": [
+    {
+      "selector": "div.search:has(#searchAutocomplete > input)",
+      "action": "setRole",
+      "value": "search"
+    },
+    {
+      "selector": "#searchAutocomplete > input",
+      "action": "addLabel",
+      "value": "Search for Abstracts, Guidelines, Meetings"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,74 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#authentificationModal",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "authentificationModal",
+          "classes": [
+            "modal",
+            "fade",
+            "modal-full"
+          ],
+          "label": "Votre message d'erreur ici. Vous avez déjà un compte Votre message d'erreur ici. Email Votre mot de "
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "dialog",
+      "selector": "#authentificationModal",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "authentificationModal",
+          "classes": [
+            "modal",
+            "fade",
+            "modal-full"
+          ],
+          "label": "Votre message d'erreur ici. Vous avez déjà un compte Votre message d'erreur ici. Email Votre mot de "
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "opener",
+      "selector": "header .toggle-account > a[data-bs-target=\"#authentificationModal\"]",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "a",
+          "classes": [],
+          "label": "Se connecter"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "close",
+      "selector": "#authentificationModal .modal-header > button[data-bs-dismiss=\"modal\"]",
+      "scope": "#authentificationModal",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "btn-close"
+          ],
+          "label": "Close"
+        }
+      ]
+    }
+  ]
+}

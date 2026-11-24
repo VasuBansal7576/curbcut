@@ -1,0 +1,34 @@
+{
+  "id": "v5-ef812af22b0a73baac84",
+  "url": "https://www.ghanaweb.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search GhanaWeb” searchbox and type test without submitting.",
+  "controlTask": "Click the visible “Search GhanaWeb” field and type test without submitting.",
+  "observedSelector": "#pagecontainer > div:nth-of-type(5) > div > div:nth-of-type(1) > div:nth-of-type(2) > form > input:nth-of-type(3)",
+  "requiredName": "Search GhanaWeb",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#pagecontainer > div:nth-of-type(5) > div > div:nth-of-type(1) > div:nth-of-type(2) > form > input:nth-of-type(3)",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "searchbox"
+  },
+  "site": "www.ghanaweb.com",
+  "match": "https://www.ghanaweb.com/",
+  "barrier": "The visible, focusable GhanaWeb search input has a searchbox role but no accessible name, so it cannot be found by name in Reading view.",
+  "rules": [
+    {
+      "selector": "#pagecontainer .top-bar form.flexsearch--form > input.search--input",
+      "action": "addLabel",
+      "value": "Search GhanaWeb"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

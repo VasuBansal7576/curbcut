@@ -1,0 +1,37 @@
+{
+  "barrier": "At 320 CSS pixels, the desktop-width wrapper keeps the news column wide enough that the target list item ends at x=561. Horizontal clipping cuts off the part beyond the viewport.",
+  "rules": [
+    {
+      "selector": "#md_app_wrapper",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#md_app_main, #md_app_main .d-flex.flex-column:has(#md_app_content), #md_app_content",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#content > div.row.gx-2",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "#main-news",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

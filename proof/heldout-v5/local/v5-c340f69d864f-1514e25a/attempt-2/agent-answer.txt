@@ -1,0 +1,15 @@
+{
+  "barrier": "Keyboard activation opens the sign-in dialog, but focus remains on a link while the dialog is fading in, and Escape leaves the dialog open.",
+  "rules": [
+    {
+      "action": "makeFocusable",
+      "selector": "#authentificationModal"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#authentificationModal",
+      "opener": "header .toggle-account > a[data-bs-target=\"#authentificationModal\"]",
+      "close": "#authentificationModal .modal-header > button[data-bs-dismiss=\"modal\"]"
+    }
+  ]
+}

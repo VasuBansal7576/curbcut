@@ -1,0 +1,1845 @@
+{
+  "status": "pass",
+  "runId": "3c79c7d9-b09d-4072-ad36-a96e5b7790ce",
+  "reason": "Objective completed",
+  "summary": "You asked to open the menu at the top of the White Noise Generator.\nThe menu was opened successfully.\nThe open navigation showed the Main section and a visible Full Index link.",
+  "resultCode": 100,
+  "reasonCode": "success.complete",
+  "credits": 12.351529999999999,
+  "exitCode": 0,
+  "steps": [
+    "navigate: Navigate to https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+    "click: Clicking the Menu icon in the White Noise Generator header",
+    "analyze: the navigation opens",
+    "assert: the navigation opens and the Full Index link is visible"
+  ],
+  "evidencePack": "proof/kane/mynoise-open-menu/resume-2026-11-22T03-31-34.469Z/control/c6f655be-9c58-42bd-ad5d-59e4cfef0c85.evidence",
+  "evidenceValid": true,
+  "observedOutcome": {
+    "selector": "#menuOverlay",
+    "visible": true
+  },
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "control",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920
+    },
+    "readerVisible": false,
+    "width": 1280,
+    "fixtureFixed": false,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "https://mynoise.net/NoiseMachines/whiteNoiseGenerator.php",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body",
+    "nodes": [
+      {
+        "selector": "#hamburger",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 10,
+        "width": 24
+      },
+      {
+        "selector": "body",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#bgcontainer",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#bgimage",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#bgmask",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#menuOverlay",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "new",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 10,
+        "width": 30
+      },
+      {
+        "selector": "#backburger",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 22,
+        "width": 1
+      },
+      {
+        "selector": "#topMenu",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 5,
+        "width": 640
+      },
+      {
+        "selector": "table",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table",
+        "left": 12,
+        "width": 618
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 14,
+        "width": 612
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 628,
+        "width": 0
+      },
+      {
+        "selector": "div.menuGroup",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flow-root",
+        "left": 16,
+        "width": 618
+      },
+      {
+        "selector": "div.menuDivider",
+        "role": "text",
+        "name": "Main",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 20,
+        "width": 120
+      },
+      {
+        "selector": "a.button.menuItem",
+        "role": "link",
+        "name": "Front Page",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 148,
+        "width": 239
+      },
+      {
+        "selector": "a.button.menuItem",
+        "role": "link",
+        "name": "Full Index",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 392,
+        "width": 239
+      },
+      {
+        "selector": "a.button.menuItemSmall",
+        "role": "link",
+        "name": "Blog●",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 148,
+        "width": 117
+      },
+      {
+        "selector": "a.button.menuItemSmall",
+        "role": "link",
+        "name": "Vlog",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 270,
+        "width": 117
+      },
+      {
+        "selector": "a.button.menuItemSmall",
+        "role": "link",
+        "name": "Stills●",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 392,
+        "width": 117
+      },
+      {
+        "selector": "a.button.menuItemSmall",
+        "role": "link",
+        "name": "Sessions",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 514,
+        "width": 117
+      },
+      {
+        "selector": "a.button.menuItemSmall",
+        "role": "link",
+        "name": "Sitemap",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 148,
+        "width": 117
+      },
+      {
+        "selector": "a.button.menuItemSmall",
+        "role": "link",
+        "name": "FAQ",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 270,
+        "width": 117
+      },
+      {
+        "selector": "a.button.menuItemSmall",
+        "role": "link",
+        "name": "iOS",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 392,
+        "width": 117
+      },
+      {
+        "selector": "a.button.menuItemSmall",
+        "role": "link",
+        "name": "Android",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 514,
+        "width": 117
+      },
+      {
+        "selector": "div.menuGroup",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flow-root",
+        "left": 16,
+        "width": 618
+      },
+      {
+        "selector": "div.menuDivider",
+        "role": "text",
+        "name": "Members",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 20,
+        "width": 120
+      },
+      {
+        "selector": "div.menutext",
+        "role": "text",
+        "name": "Donate as much as you like, and receive a to this website.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 148,
+        "width": 483
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "lifetime privileged access",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 426,
+        "width": 172
+      },
+      {
+        "selector": "a.button.menuItem",
+        "role": "link",
+        "name": "iconDonate",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 148,
+        "width": 239
+      },
+      {
+        "selector": "img.menuIcon",
+        "role": "img",
+        "name": "icon",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 236,
+        "width": 15
+      },
+      {
+        "selector": "a.button.menuItem",
+        "role": "link",
+        "name": "iconLog In",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 392,
+        "width": 239
+      },
+      {
+        "selector": "img.menuIcon",
+        "role": "img",
+        "name": "icon",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 484,
+        "width": 15
+      },
+      {
+        "selector": "div.menuGroup",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flow-root",
+        "left": 16,
+        "width": 618
+      },
+      {
+        "selector": "div.menuDivider",
+        "role": "text",
+        "name": "Favorites",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 20,
+        "width": 120
+      },
+      {
+        "selector": "div.menutext",
+        "role": "text",
+        "name": "and access your favorite soundscapes from this section.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 148,
+        "width": 483
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Become a patron",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 148,
+        "width": 118
+      },
+      {
+        "selector": "div.menuGroup",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flow-root",
+        "left": 16,
+        "width": 618
+      },
+      {
+        "selector": "div.menuDivider",
+        "role": "text",
+        "name": "Similar",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 20,
+        "width": 120
+      },
+      {
+        "selector": "a.button.menuItemFloat",
+        "role": "link",
+        "name": "Brownish White",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 148,
+        "width": 126
+      },
+      {
+        "selector": "a.button.menuItemFloat",
+        "role": "link",
+        "name": "White Rain",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 283,
+        "width": 94
+      },
+      {
+        "selector": "a.button.menuItemFloat",
+        "role": "link",
+        "name": "Binaural Beats",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 385,
+        "width": 115
+      },
+      {
+        "selector": "div.menuGroup",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flow-root",
+        "left": 16,
+        "width": 618
+      },
+      {
+        "selector": "div.menuDivider",
+        "role": "text",
+        "name": "Latest",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 20,
+        "width": 120
+      },
+      {
+        "selector": "#whatsNew",
+        "role": "text",
+        "name": "Never miss a thing →",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 148,
+        "width": 483
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "World Beyond",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 213,
+        "width": 97
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "The Gym",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 394,
+        "width": 64
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Still Social, Just Differently",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 148,
+        "width": 458
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Cát Tiên",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 327,
+        "width": 59
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Pigeons of NYC",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 468,
+        "width": 110
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Recharging the Sound Library",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 213,
+        "width": 200
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Bronze Sanctuary",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 494,
+        "width": 121
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Dry Storm",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 209,
+        "width": 71
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "I Made Tinnitus My Friend (Then It Disappeared)",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 148,
+        "width": 434
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "The Architect's Playlist",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 312,
+        "width": 153
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Sound Horizon",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 148,
+        "width": 445
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "There Is Life After Adobe",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 285,
+        "width": 170
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "get notified by email",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 148,
+        "width": 140
+      },
+      {
+        "selector": "div.skeleton",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "grid",
+        "left": 40,
+        "width": 1200
+      },
+      {
+        "selector": "#player",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 40,
+        "width": 1200
+      },
+      {
+        "selector": "div.wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 40,
+        "width": 1200
+      },
+      {
+        "selector": "#backwrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 640,
+        "width": 0
+      },
+      {
+        "selector": "div.mainTitle",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 60,
+        "width": 1160
+      },
+      {
+        "selector": "div.mixer.noselect",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 440,
+        "width": 400
+      },
+      {
+        "selector": "#s0",
+        "role": "slider",
+        "name": "Sub-bass",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 472,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 472,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 462,
+        "width": 30
+      },
+      {
+        "selector": "#s1",
+        "role": "slider",
+        "name": "Low Bass",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 508,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 508,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 498,
+        "width": 30
+      },
+      {
+        "selector": "#s2",
+        "role": "slider",
+        "name": "Bass",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 544,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 544,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 534,
+        "width": 30
+      },
+      {
+        "selector": "#s3",
+        "role": "slider",
+        "name": "High Bass",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 580,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 580,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 570,
+        "width": 30
+      },
+      {
+        "selector": "#s4",
+        "role": "slider",
+        "name": "Low Mids",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 616,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 616,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 606,
+        "width": 30
+      },
+      {
+        "selector": "#s5",
+        "role": "slider",
+        "name": "Mids",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 652,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 652,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 642,
+        "width": 30
+      },
+      {
+        "selector": "#s6",
+        "role": "slider",
+        "name": "High Mids",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 688,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 688,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 678,
+        "width": 30
+      },
+      {
+        "selector": "#s7",
+        "role": "slider",
+        "name": "Low Treble",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 724,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 724,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 714,
+        "width": 30
+      },
+      {
+        "selector": "#s8",
+        "role": "slider",
+        "name": "Treble",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 760,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 760,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 750,
+        "width": 30
+      },
+      {
+        "selector": "#s9",
+        "role": "slider",
+        "name": "High Treble",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 796,
+        "width": 12
+      },
+      {
+        "selector": "div.ui-slider-range.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 796,
+        "width": 12
+      },
+      {
+        "selector": "span.ui-slider-handle.ui-corner-all",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 786,
+        "width": 30
+      },
+      {
+        "selector": "div.controlers.noselect",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 60,
+        "width": 1160
+      },
+      {
+        "selector": "div.btn",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 480,
+        "width": 42
+      },
+      {
+        "selector": "#reset",
+        "role": "button",
+        "name": "Reset sliders [R]",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 480,
+        "width": 32
+      },
+      {
+        "selector": "div.btn",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 525,
+        "width": 42
+      },
+      {
+        "selector": "#volDown",
+        "role": "button",
+        "name": "Decrease levels [J]",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 525,
+        "width": 32
+      },
+      {
+        "selector": "div.btn",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 570,
+        "width": 42
+      },
+      {
+        "selector": "#volUp",
+        "role": "button",
+        "name": "Increase levels [K]",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 570,
+        "width": 32
+      },
+      {
+        "selector": "div.btnLogo",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 615,
+        "width": 44
+      },
+      {
+        "selector": "#fftCanvas",
+        "role": "button",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 615,
+        "width": 42
+      },
+      {
+        "selector": "div.btn",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 668,
+        "width": 42
+      },
+      {
+        "selector": "#anim",
+        "role": "button",
+        "name": "Slider Animation [A]",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 668,
+        "width": 32
+      },
+      {
+        "selector": "div.btn",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 713,
+        "width": 42
+      },
+      {
+        "selector": "#bell",
+        "role": "button",
+        "name": "Meditation Bell [L]",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 713,
+        "width": 32
+      },
+      {
+        "selector": "#bellText",
+        "role": "textbox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 713,
+        "width": 32
+      },
+      {
+        "selector": "div.btn",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 758,
+        "width": 42
+      },
+      {
+        "selector": "#timer",
+        "role": "button",
+        "name": "Timer [T]",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 758,
+        "width": 32
+      },
+      {
+        "selector": "#timerText",
+        "role": "textbox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 758,
+        "width": 32
+      },
+      {
+        "selector": "#msg",
+        "role": "text",
+        "name": "Now Playing...",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 60,
+        "width": 1160
+      },
+      {
+        "selector": "div.skeletonContents",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 86,
+        "width": 1108
+      },
+      {
+        "selector": "div.nested",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 86,
+        "width": 1108
+      },
+      {
+        "selector": "#controls",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 86,
+        "width": 429
+      },
+      {
+        "selector": "div.nobreak",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Presets",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "• • • • • • • • • • • • • • • •",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Ear Massage",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 408,
+        "width": 86
+      },
+      {
+        "selector": "a.powertip",
+        "role": "link",
+        "name": "℗",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 118,
+        "width": 15
+      },
+      {
+        "selector": "div.nobreak",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Stereo Width",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "• • •",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "div.nobreak",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Tape Speed Control",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "• • •",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "a.powertip",
+        "role": "link",
+        "name": "℗",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 107,
+        "width": 15
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Slower",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 126,
+        "width": 47
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Faster",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 188,
+        "width": 43
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Alternate",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 246,
+        "width": 63
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Reset",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 324,
+        "width": 40
+      },
+      {
+        "selector": "div.nobreak",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Animation Parameters",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "table",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table",
+        "left": 104,
+        "width": 267
+      },
+      {
+        "selector": "td.lowlight",
+        "role": "cell",
+        "name": "mode",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 106,
+        "width": 41
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Soft Hard • Solo Duo Trio Quad",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 149,
+        "width": 221
+      },
+      {
+        "selector": "#amSoft",
+        "role": "button",
+        "name": "Soft",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 149,
+        "width": 31
+      },
+      {
+        "selector": "#amHard",
+        "role": "button",
+        "name": "Hard",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 183,
+        "width": 34
+      },
+      {
+        "selector": "#amIsolated",
+        "role": "button",
+        "name": "Solo",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 233,
+        "width": 32
+      },
+      {
+        "selector": "#amDuo",
+        "role": "button",
+        "name": "Duo",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 268,
+        "width": 29
+      },
+      {
+        "selector": "#amTrio",
+        "role": "button",
+        "name": "Trio",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 301,
+        "width": 26
+      },
+      {
+        "selector": "#amQuad",
+        "role": "button",
+        "name": "Quad",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 331,
+        "width": 38
+      },
+      {
+        "selector": "td.lowlight",
+        "role": "cell",
+        "name": "speed",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 106,
+        "width": 41
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "÷8 ÷4 ÷2 • Normal • x2 x4 x8",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 149,
+        "width": 221
+      },
+      {
+        "selector": "#asdiv8",
+        "role": "button",
+        "name": "÷8",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 149,
+        "width": 21
+      },
+      {
+        "selector": "#asdiv4",
+        "role": "button",
+        "name": "÷4",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 173,
+        "width": 21
+      },
+      {
+        "selector": "#asdiv2",
+        "role": "button",
+        "name": "÷2",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 197,
+        "width": 20
+      },
+      {
+        "selector": "#asnormal",
+        "role": "button",
+        "name": "Normal",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 232,
+        "width": 50
+      },
+      {
+        "selector": "#asmult2",
+        "role": "button",
+        "name": "x2",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 297,
+        "width": 17
+      },
+      {
+        "selector": "#asmult4",
+        "role": "button",
+        "name": "x4",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 318,
+        "width": 18
+      },
+      {
+        "selector": "#asmult8",
+        "role": "button",
+        "name": "x8",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 340,
+        "width": 18
+      },
+      {
+        "selector": "td.lowlight",
+        "role": "cell",
+        "name": "range",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 106,
+        "width": 41
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "set→Low • High←set",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 149,
+        "width": 221
+      },
+      {
+        "selector": "#setLow",
+        "role": "button",
+        "name": "set→",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 149,
+        "width": 38
+      },
+      {
+        "selector": "#setLow",
+        "role": "button",
+        "name": "Low",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 187,
+        "width": 30
+      },
+      {
+        "selector": "#setLow",
+        "role": "button",
+        "name": "High",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 231,
+        "width": 34
+      },
+      {
+        "selector": "#setLow",
+        "role": "button",
+        "name": "←set",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 265,
+        "width": 38
+      },
+      {
+        "selector": "div.nobreak",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Save & Share",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "•",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "#customURL0",
+        "role": "button",
+        "name": "Save to URL",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 107,
+        "width": 86
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Save in this Browser",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 107,
+        "width": 135
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Load",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 257,
+        "width": 35
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Open Mini-Player",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 107,
+        "width": 116
+      },
+      {
+        "selector": "em",
+        "role": "text",
+        "name": "beta",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 107,
+        "width": 31
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "Open in the myNoise app (QR)",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 138,
+        "width": 210
+      },
+      {
+        "selector": "a.powertip",
+        "role": "link",
+        "name": "℗",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 107,
+        "width": 15
+      },
+      {
+        "selector": "#customURL2",
+        "role": "button",
+        "name": "Order Audio File",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 126,
+        "width": 111
+      },
+      {
+        "selector": "div.nobreak",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "iEQ • Calibration",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "a.powertip.titlesmall",
+        "role": "link",
+        "name": "Calibration",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 154,
+        "width": 77
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "• •",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "div.nobreak",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Keyboard Shortcuts",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "isualizer • hite •\nPi k • rown • ↓↑ • elp",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 107,
+        "width": 387
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "V",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 107,
+        "width": 12
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "W",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 187,
+        "width": 16
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "N",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 256,
+        "width": 14
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "B",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 291,
+        "width": 11
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "J",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 350,
+        "width": 10
+      },
+      {
+        "selector": "span.actionlink",
+        "role": "button",
+        "name": "K",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 380,
+        "width": 11
+      }
+    ]
+  },
+  "video": "proof/kane/mynoise-open-menu/resume-2026-11-22T03-31-34.469Z/control/recording.mp4"
+}

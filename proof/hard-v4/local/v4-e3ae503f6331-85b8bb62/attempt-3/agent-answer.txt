@@ -1,0 +1,13 @@
+{
+  "barrier": "With the Cookiebot consent banner open, Tab traversal stops before reaching the Product link. The Livechat link is also hidden in the Product submenu until the menu opens on hover.",
+  "rules": [
+    {
+      "selector": "#CybotCookiebotDialog",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "#menu-item-8151",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

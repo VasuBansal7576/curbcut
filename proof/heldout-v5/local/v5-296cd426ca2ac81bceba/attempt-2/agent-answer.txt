@@ -1,0 +1,81 @@
+{
+  "barrier": "The news section places a 526-pixel-wide list beside a 362-pixel-wide floated image inside an overflow-hidden panel, leaving the passage outside the visible area at 320 CSS pixels.",
+  "rules": [
+    {
+      "selector": "div.news, div.news > div.inner, div.news > div.inner > div.content",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "max-width": "100%",
+        "height": "auto",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.news > div.inner > div.content",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "max-height": "none"
+      }
+    },
+    {
+      "selector": "div.news > div.inner > div.content > div.col.gz_news",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "flex-direction": "column",
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%",
+        "height": "auto",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.col.gz_news > div.avator.fl, div.col.gz_news > ul.news_list",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%",
+        "height": "auto",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.col.gz_news > div.avator.fl img",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "div.col.gz_news > ul.news_list > li.news_item:not(.lastest)",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "flex-wrap": "wrap",
+        "width": "auto",
+        "min-width": "0",
+        "height": "auto",
+        "max-height": "none",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.col.gz_news > ul.news_list > li.news_item > a",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "height": "auto",
+        "box-sizing": "border-box",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

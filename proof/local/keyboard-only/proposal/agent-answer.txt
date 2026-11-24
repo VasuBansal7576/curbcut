@@ -1,0 +1,10 @@
+{
+  "barrier": "The visible Add to cart control is a div with tabIndex -1, so Tab skips it. The search input also has no accessible name.",
+  "rules": [
+    {"selector":"div.add-to-cart","action":"makeFocusable"},
+    {"selector":"div.add-to-cart","action":"setRole","value":"button"},
+    {"selector":"div.add-to-cart","action":"bindEnterToClick"},
+    {"selector":"div.add-to-cart","action":"restoreFocusOutline"},
+    {"selector":"#search","action":"addLabel","value":"Search products"}
+  ]
+}

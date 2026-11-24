@@ -1,0 +1,36 @@
+{
+  "barrier": "At 320 CSS pixels, the desktop menu container is set to display:none, so Webhosting has no rendered box and cannot receive hover or focus. Its Providerwechsel submenu also depends on hover for visibility.",
+  "rules": [
+    {
+      "selector": "div.et_pb_menu__menu:has(> nav.et-menu-nav > #menu-menu-1)",
+      "action": "injectCSS",
+      "value": {"display": "block", "min-width": "0", "max-width": "100%"}
+    },
+    {
+      "selector": "#menu-menu-1",
+      "action": "injectCSS",
+      "value": {"display": "block", "width": "100%", "min-width": "0"}
+    },
+    {
+      "selector": "#menu-menu-1 > li.menu-item-1484 > ul.sub-menu",
+      "action": "injectCSS",
+      "value": {"box-sizing": "border-box", "width": "100%", "max-width": "100%", "overflow-wrap": "anywhere"}
+    },
+    {
+      "selector": "#menu-menu-1 > li.menu-item-1484 > ul.sub-menu > li > a",
+      "action": "injectCSS",
+      "value": {"box-sizing": "border-box", "width": "auto", "white-space": "normal"}
+    },
+    {
+      "selector": "#menu-menu-1 > li.menu-item-1484",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#menu-menu-1 > li.menu-item-1484",
+      "items": "#menu-menu-1 > li.menu-item-1484 > a, #menu-menu-1 > li.menu-item-1484 > ul.sub-menu > li > a",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ]
+}

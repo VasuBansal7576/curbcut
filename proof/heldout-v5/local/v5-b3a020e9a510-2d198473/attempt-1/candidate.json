@@ -1,0 +1,64 @@
+{
+  "id": "v5-b3a020e9a510-2d198473",
+  "url": "https://esim.holafly.com/",
+  "persona": "keyboard-only",
+  "task": "Focus “Countries”, move once with ArrowRight, activate “Regions” and read its panel.",
+  "controlTask": "Click “Regions” and read its panel.",
+  "observedSelector": "#countries-ba4i7pb",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#panel-regions-ba4i7pb"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "#Destinations > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div",
+    "[role=tab]",
+    "#panel-regions-ba4i7pb"
+  ],
+  "journey": [
+    {
+      "selector": "#countries-ba4i7pb",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#countries-ba4i7pb",
+      "action": "key",
+      "key": "ArrowRight",
+      "pointer": {
+        "action": "click",
+        "selector": "#regions-ba4i7pb"
+      }
+    },
+    {
+      "selector": "#regions-ba4i7pb",
+      "action": "activate",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#panel-regions-ba4i7pb",
+      "action": "observe"
+    }
+  ],
+  "site": "esim.holafly.com",
+  "match": "https://esim.holafly.com/",
+  "barrier": "ArrowRight from Countries does not move focus to Regions, and Regions has tabindex=\"-1\", so Tab skips it.",
+  "rules": [
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#Destinations .destinations__segmented [role=\"tablist\"]",
+      "items": "button[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

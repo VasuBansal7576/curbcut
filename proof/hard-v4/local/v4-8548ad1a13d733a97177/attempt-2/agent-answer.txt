@@ -1,0 +1,10 @@
+{
+  "barrier": "At 320 CSS pixels, the horizontal layout in #bd places the main content off the left edge. The passage spans x = −276 to −4 and is clipped.",
+  "rules": [
+    {"selector":"#doc2","action":"injectCSS","value":{"width":"100%","min-width":"0"}},
+    {"selector":"#bd","action":"injectCSS","value":{"display":"block"}},
+    {"selector":"div.yui-b","action":"injectCSS","value":{"display":"contents"}},
+    {"selector":"div.yui-gc","action":"injectCSS","value":{"display":"block","width":"auto"}},
+    {"selector":"div.yui-u.first","action":"injectCSS","value":{"width":"100%","box-sizing":"border-box"}}
+  ]
+}

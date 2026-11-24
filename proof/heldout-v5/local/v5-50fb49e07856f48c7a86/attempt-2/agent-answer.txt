@@ -1,0 +1,30 @@
+{
+  "barrier": "The topics passage sits in a 460px-wide flex row inside a 476px main column. The thumbnail and text sit side by side, so the desktop layout cannot fit at 320 CSS pixels. The prior run could not confirm target visibility.",
+  "rules": [
+    {
+      "selector": "div.layout:has(> div.main-column)",
+      "action": "injectCSS",
+      "value": {"display":"block","min-width":"0","max-width":"100%","box-sizing":"border-box"}
+    },
+    {
+      "selector": "div.layout > div.main-column",
+      "action": "injectCSS",
+      "value": {"min-width":"0","max-width":"100%","box-sizing":"border-box"}
+    },
+    {
+      "selector": "div.main-column > div.area > div.topics__article > ul > li.category5:first-child",
+      "action": "injectCSS",
+      "value": {"flex-direction":"column","width":"auto","height":"auto"}
+    },
+    {
+      "selector": "div.topics__article > ul > li.category5:first-child > div.topics__article--contents",
+      "action": "injectCSS",
+      "value": {"min-width":"0","max-width":"100%","box-sizing":"border-box","height":"auto"}
+    },
+    {
+      "selector": "div.topics__article > ul > li.category5:first-child > div.topics__article--contents p",
+      "action": "injectCSS",
+      "value": {"white-space":"normal","overflow-wrap":"anywhere","height":"auto","max-height":"none"}
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "v4-aa94da8c9ed4c8eef1db",
+  "url": "https://www.factors.ai/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Your ABM team's AI brain and execution layer” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Your ABM team's AI brain and execution layer” at normal width.",
+  "observedSelector": "div:nth-of-type(3) > div:nth-of-type(2) > div > div > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "div:nth-of-type(3) > div:nth-of-type(2) > div > div > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1)",
+      "equals": "Your ABM team's AI brain and execution layer"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "div:nth-of-type(3) > div:nth-of-type(2) > div > div > div:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.factors.ai",
+  "match": "https://www.factors.ai/",
+  "barrier": "At 320 CSS pixels, the paragraph fits within the viewport, but its inline-block “AI brain” span sits 9 pixels left of the paragraph’s edge and appears separately in the snapshot’s text.",
+  "rules": [
+    {
+      "selector": "span.lines-border-yellow-new",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

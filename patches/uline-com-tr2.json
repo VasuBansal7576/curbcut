@@ -1,0 +1,135 @@
+{
+  "id": "uline-com-tr2",
+  "url": "https://www.uline.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "controlTask": "At normal width, read the passage beginning “Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca” and verify all its text is visible without horizontal scrolling.",
+  "observedSelector": "#tdfooter",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#tdfooter",
+      "equals": "Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#tdfooter"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.uline.com",
+  "match": "https://www.uline.com/",
+  "barrier": "At 320 CSS pixels, #tdfooter is 980 pixels wide and lays out the passage in a single 877-pixel row. Horizontal clipping cuts off the links beyond the viewport.",
+  "rules": [
+    {
+      "selector": "#container",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#divContent",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#divContentFooterWrap",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#divFooterwrap",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#newfooter",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "table",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#tdfooter",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "table.default",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "td.footerCell",
+      "action": "injectCSS",
+      "value": {
+        "display": "inline-block",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/heldout-v3/runs/uline-com-tr2/before/recording.mp4",
+    "after": "proof/heldout-v3/runs/uline-com-tr2/attempt-1/after/recording.mp4",
+    "control": "proof/heldout-v3/runs/uline-com-tr2/control/recording.mp4",
+    "verifiedAt": "2026-11-23T05:38:40.240Z",
+    "kaneRunIds": [
+      "7c9b662c-baad-446a-b711-427de114e305",
+      "8df9e40c-d299-46a4-949c-6abb22c5f400",
+      "1bcdba5e-99a6-45db-b735-5338ff6aee95"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-23T05:38:40.240Z",
+      "event": "verified",
+      "before": "7c9b662c-baad-446a-b711-427de114e305",
+      "control": "8df9e40c-d299-46a4-949c-6abb22c5f400",
+      "after": "1bcdba5e-99a6-45db-b735-5338ff6aee95"
+    }
+  ]
+}

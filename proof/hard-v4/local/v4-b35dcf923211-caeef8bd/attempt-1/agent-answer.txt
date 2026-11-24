@@ -1,0 +1,9 @@
+{
+  "barrier": "The Downloads submenu remains at display: none after the Downloads link receives focus and Arrow Down is pressed, leaving the Snort link unavailable to the keyboard.",
+  "rules": [
+    {
+      "selector": "div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > ul > li:nth-of-type(2)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

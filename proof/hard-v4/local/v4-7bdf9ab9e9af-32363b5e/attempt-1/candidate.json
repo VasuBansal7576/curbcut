@@ -1,0 +1,52 @@
+{
+  "id": "v4-7bdf9ab9e9af-32363b5e",
+  "url": "https://www.atlanticcouncil.org/",
+  "persona": "keyboard-only",
+  "task": "Open “INSIGHT” from keyboard focus or with Arrow Down and follow “Issue briefs and reports”. Confirm the public destination /in-depth-research-reports/.",
+  "controlTask": "Hover “INSIGHT”, click “Issue briefs and reports” and confirm /in-depth-research-reports/.",
+  "observedSelector": "#primary-nav > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/in-depth-research-reports/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#primary-nav > li:nth-of-type(1)",
+    "#primary-nav > li:nth-of-type(1) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#primary-nav > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#primary-nav > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#primary-nav > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.atlanticcouncil.org",
+  "match": "https://www.atlanticcouncil.org/",
+  "barrier": "Pointer hover reveals the INSIGHT submenu, but focusing INSIGHT and pressing Arrow Down leaves the “Issue briefs and reports” link unavailable.",
+  "rules": [
+    {
+      "selector": "#primary-nav > li:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

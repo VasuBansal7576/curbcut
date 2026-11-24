@@ -1,0 +1,55 @@
+{
+  "id": "v4-a756c4ddd34b-44b78023",
+  "url": "https://www.stoqapp.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Features” from keyboard focus or with Arrow Down and follow “Back in stock”. Confirm the public destination /back-in-stock.",
+  "controlTask": "Hover “Features”, click “Back in stock” and confirm /back-in-stock.",
+  "observedSelector": "#w-dropdown-toggle-0",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/back-in-stock"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "div > div:nth-of-type(2) > div > div:nth-of-type(1) > nav > div:nth-of-type(1) > div",
+    "#w-dropdown-list-0"
+  ],
+  "journey": [
+    {
+      "selector": "#w-dropdown-toggle-0",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-toggle-0",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-list-0 > a:nth-of-type(2)",
+      "action": "activate"
+    }
+  ],
+  "site": "www.stoqapp.com",
+  "match": "https://www.stoqapp.com/",
+  "barrier": "The Features trigger receives keyboard focus, but Arrow Down leaves its dropdown at display:none, so the Back in stock link is unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#w-dropdown-toggle-0",
+      "target": "#w-dropdown-list-0",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,12 @@
+{
+  "barrier": "Tab traversal reaches Careers, but the tab is reported clipped or off-screen when focused. Pointer interaction brings the same tab row into view. The available rules cannot scroll the focused tab into view.",
+  "rules": [
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.resources-for__tabs[role=\"tablist\"]:has(> #rcs-tab-rcs-744076)",
+      "items": "div.resources-for__tabs[role=\"tablist\"]:has(> #rcs-tab-rcs-744076) > button[role=\"tab\"]",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

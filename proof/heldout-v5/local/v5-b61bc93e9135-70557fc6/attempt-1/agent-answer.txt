@@ -1,0 +1,9 @@
+{
+  "barrier": "The desktop Solutions dropdown opens on hover of its parent list item. Keyboard focus and Arrow Down leave the panel at display: none, so the Event Fundraising link is unavailable.",
+  "rules": [
+    {
+      "selector": "#header--main__nav > ul > li.menu-solutions",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

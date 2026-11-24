@@ -1,0 +1,9 @@
+{
+  "id": "worldtimebuddy-select-tomorrow",
+  "url": "https://www.worldtimebuddy.com/",
+  "persona": "keyboard-only",
+  "observedSelector": ".date-jump[idx=\"2\"]",
+  "successSelector": ".date-jump[idx=\"2\"].current-cell",
+  "task": "Check whether tomorrow's quick-date control immediately to the right of today's selected date is in sequential keyboard focus order. Use Tab and Enter to select tomorrow. Verify tomorrow becomes the current date in the time comparison strip.",
+  "controlTask": "Click tomorrow's quick-date control immediately to the right of today's selected date. Verify tomorrow becomes the current date in the time comparison strip."
+}

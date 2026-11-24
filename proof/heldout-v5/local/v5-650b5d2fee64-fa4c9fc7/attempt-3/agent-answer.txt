@@ -1,0 +1,31 @@
+{
+  "barrier": "At 320 CSS pixels, the Athletes submenu stays at display:none after focus and ArrowDown because its hover reveal applies only from 771 CSS pixels. The hidden panel leaves Baseball Players unavailable.",
+  "rules": [
+    {
+      "selector": "body.adthrive-device-phone #main_nav > #nav-content",
+      "action": "injectCSS",
+      "value": {"display": "contents"}
+    },
+    {
+      "selector": "body.adthrive-device-phone #menu-item-150538 > div.dropdown_item",
+      "action": "injectCSS",
+      "value": {"display": "block"}
+    },
+    {
+      "selector": "body.adthrive-device-phone #menu-item-150538 > div.dropdown_item > ul.dropdown_menu",
+      "action": "injectCSS",
+      "value": {"display": "block"}
+    },
+    {
+      "selector": "#menu-item-150538",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#menu-item-150538",
+      "items": "#menu-item-150538 > a, #menu-item-150538 > div.dropdown_item > ul.dropdown_menu > li > a",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ]
+}

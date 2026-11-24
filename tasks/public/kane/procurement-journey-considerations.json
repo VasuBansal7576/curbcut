@@ -1,0 +1,9 @@
+{
+  "id": "procurement-journey-considerations",
+  "url": "https://www.procurementjourney.scot/index.php/route-1/route-1-introduction",
+  "persona": "keyboard-only",
+  "observedSelector": ".accordion__container > .accordion__item:first-child .accordion__title",
+  "successSelector": ".accordion__container > .accordion__item:first-child .accordion__content ol li:first-child",
+  "task": "First assert the Considerations Before Proceeding accordion title is in the sequential keyboard focus order. Dismiss the cookie banner with Reject using the keyboard if it covers the page. Open Considerations Before Proceeding with Tab and Enter. Verify the first question, Are the good/services you are buying business critical?, is visible.",
+  "controlTask": "Dismiss the cookie banner with Reject if it covers the page, then click Considerations Before Proceeding. Verify the first question, Are the good/services you are buying business critical?, is visible."
+}

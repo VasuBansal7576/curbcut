@@ -1,0 +1,58 @@
+{
+  "id": "v5-c93579475f631b42f3f9",
+  "url": "https://pingomatic.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Ping-O-Matic is a service to update different search engines that your blog” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Ping-O-Matic is a service to update different search engines that your blog” at normal width.",
+  "observedSelector": "#content > div:nth-of-type(2) > p:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#content > div:nth-of-type(2) > p:nth-of-type(1)",
+      "equals": "Ping-O-Matic is a service to update different search engines that your blog"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#content > div:nth-of-type(2) > p:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "pingomatic.com",
+  "match": "https://pingomatic.com/",
+  "barrier": "At 320 CSS pixels, the 720-pixel wrapper keeps the passage beside the illustration. The paragraph extends from x=184 to x=700, so horizontal clipping hides part of the text.",
+  "rules": [
+    {
+      "selector": "#rap",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#content",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "flex-wrap": "wrap",
+        "max-width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#content > div.column-main",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

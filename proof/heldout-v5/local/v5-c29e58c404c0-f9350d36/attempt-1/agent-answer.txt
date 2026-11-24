@@ -1,0 +1,40 @@
+{
+  "barrier": "At 320 CSS pixels, the collapsed #menu and the desktop Academic Programs link both compute to display:none, so focus stays on the body. The submenu’s hover rule starts at 992 CSS pixels.",
+  "rules": [
+    {
+      "selector": "#menu",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "100%",
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child > a.nav-link.d-none.d-lg-block",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child > ul.dropdown-menu > li.row",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child > ul.dropdown-menu > li.row > ul:nth-of-type(2) > li:nth-of-type(2) > a.dropdown-item",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

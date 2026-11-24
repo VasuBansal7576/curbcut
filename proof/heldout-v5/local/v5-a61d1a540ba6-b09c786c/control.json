@@ -1,0 +1,2122 @@
+{
+  "runner": "playwright",
+  "status": "pass",
+  "reason": "The complete journey reached the declared outcome.",
+  "steps": [
+    {
+      "selector": "nav > div > ul > li:nth-of-type(1) > button",
+      "action": "focus"
+    },
+    {
+      "selector": "nav > div > ul > li:nth-of-type(1) > button",
+      "action": "key",
+      "key": "ArrowDown"
+    },
+    {
+      "selector": "nav > div > ul > li:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "url": "https://www.contentstack.com/platforms/content-cloud",
+  "checks": [
+    true
+  ],
+  "snapshot": {
+    "url": "https://www.contentstack.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body.bg-black-white.JZndWG_variable",
+    "context": {
+      "nodes": [
+        {
+          "selector": "nav > div > ul > li:nth-of-type(1) > button",
+          "parent": "ul.hidden.items-center > li:nth-of-type(1)",
+          "tag": "button",
+          "attributes": {
+            "class": "relative z-10 flex cursor-pointer items-center gap-2 py-2 text-gray-black group-focus-within/dropdown:text-light-black group-hover/dropdown:text-light-black group-active/dropdown:t",
+            "tabindex": "0",
+            "aria-haspopup": "true",
+            "aria-expanded": "false"
+          },
+          "hoverHandlers": [],
+          "text": "Product",
+          "children": [],
+          "box": [
+            371,
+            67,
+            51,
+            36
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "10",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.hidden.items-center > li:nth-of-type(1)",
+          "parent": "ul.hidden.items-center",
+          "tag": "li",
+          "attributes": {
+            "class": "group/dropdown relative"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.absolute.-inset-x-3",
+            "button.relative.z-10",
+            "div.invisible.absolute",
+            "div.absolute.top-full"
+          ],
+          "box": [
+            371,
+            67,
+            51,
+            36
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.hidden.items-center",
+          "parent": "nav.docs-theme-main.sticky > div:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "hidden items-center gap-8 text-sm md:flex"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.group\\/dropdown.relative",
+            "li.group\\/dropdown.relative",
+            "li.group\\/dropdown.relative",
+            "li.relative.text-gray-black",
+            "li.relative.text-gray-black",
+            "li.group\\/dropdown.relative"
+          ],
+          "box": [
+            371,
+            67,
+            505,
+            36
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav.docs-theme-main.sticky > div:nth-of-type(1)",
+          "parent": "nav.docs-theme-main.sticky",
+          "tag": "div",
+          "attributes": {
+            "class": "flex w-full max-w-480 items-center justify-between px-18"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.hidden.items-center",
+            "ul.hidden.items-center",
+            "div.hidden.gap-3"
+          ],
+          "box": [
+            0,
+            65,
+            1280,
+            40
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav.docs-theme-main.sticky",
+          "parent": "body.bg-black-white.JZndWG_variable",
+          "tag": "nav",
+          "attributes": {
+            "class": "docs-theme-main sticky top-[env(safe-area-inset-top,0px)] z-50 mx-auto hidden w-full items-start justify-center bg-black-white py-4 text-light-black desktop:flex"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.flex.w-full"
+          ],
+          "box": [
+            0,
+            49,
+            1280,
+            72
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "sticky",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "50",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "body.bg-black-white.JZndWG_variable",
+          "tag": "body",
+          "attributes": {
+            "class": "bg-black-white JZndWG_variable ZjFlna_variable XA4aeq_variable"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div",
+            "noscript",
+            "noscript",
+            "div.bg-custom-nav-gradient.docs-theme-top",
+            "nav.docs-theme-main.sticky",
+            "div.docs-theme-top.bg-custom-nav-gradient"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            7404
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav > div > ul > li:nth-of-type(1) > div:nth-of-type(2)",
+          "parent": "ul.hidden.items-center > li:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "invisible absolute top-full left-1/2 z-50 mt-4.5 flex w-[640px] max-w-[90vw] -translate-x-1/20 flex-col border-transparent bg-shadow-light text-light-black opacity-0 shadow-lg tran"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.absolute.-top-\\[25px\\]",
+            "div.p-6",
+            "a"
+          ],
+          "box": [
+            364,
+            121,
+            640,
+            516
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "hidden",
+            "opacity": "0",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "50",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav > div > ul > li:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+          "parent": "div.grid.grid-cols-2 > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "tabindex": "0",
+            "class": "flex flex-1 items-center gap-2"
+          },
+          "hoverHandlers": [],
+          "text": "Content Cloud",
+          "children": [],
+          "box": [
+            420,
+            239,
+            248,
+            24
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.grid.grid-cols-2 > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "parent": "div.grid.grid-cols-2 > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "flex items-center gap-3 py-1.5 transition-colors duration-200 text-light-black/50 hover:text-violet-300"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "img.shrink-0.transition-\\[filter\\,opacity\\]",
+            "a.flex.flex-1"
+          ],
+          "box": [
+            388,
+            233,
+            280,
+            36
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.grid.grid-cols-2 > ul:nth-of-type(1)",
+          "parent": "div.grid.grid-cols-2",
+          "tag": "ul",
+          "attributes": {
+            "class": "flex flex-col text-base"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.flex.items-center",
+            "li.flex.items-center",
+            "li.flex.items-center",
+            "li.flex.items-center"
+          ],
+          "box": [
+            388,
+            233,
+            280,
+            144
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.grid.grid-cols-2",
+          "parent": "ul.hidden.items-center > li:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+          "tag": "div",
+          "attributes": {
+            "class": "grid grid-cols-2 items-start gap-x-8"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.mb-7",
+            "div.mb-7.min-h-5",
+            "div.mb-2.min-h-5",
+            "div.mb-2.min-h-5",
+            "ul.flex.flex-col",
+            "ul.flex.flex-col"
+          ],
+          "box": [
+            388,
+            145,
+            592,
+            412
+          ],
+          "style": {
+            "display": "grid",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.hidden.items-center > li:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+          "parent": "nav > div > ul > li:nth-of-type(1) > div:nth-of-type(2)",
+          "tag": "div",
+          "attributes": {
+            "class": "p-6"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.grid.grid-cols-2"
+          ],
+          "box": [
+            364,
+            121,
+            640,
+            460
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "hidden",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": ".hover\\:text-light-black:hover",
+          "declarations": "color: var(--color-light-black);",
+          "conditions": [
+            "(hover: hover)"
+          ]
+        },
+        {
+          "selector": ".hover\\:text-violet-300:hover",
+          "declarations": "color: var(--color-violet-300);",
+          "conditions": [
+            "(hover: hover)"
+          ]
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "nav > div > ul > li:nth-of-type(1)",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 371,
+        "width": 51
+      },
+      {
+        "selector": "nav > div > ul > li:nth-of-type(1) > div:nth-of-type(2)",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 364,
+        "width": 640
+      },
+      {
+        "selector": "nav > div > ul > li:nth-of-type(1) > button",
+        "role": "button",
+        "name": "Product",
+        "state": "expanded false",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": "0",
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 371,
+        "width": 51
+      },
+      {
+        "selector": "nav > div > ul > li:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": "0",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 420,
+        "width": 248
+      },
+      {
+        "selector": "div.absolute.-inset-x-3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 359,
+        "width": 75
+      },
+      {
+        "selector": "ul.hidden.items-center",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 371,
+        "width": 505
+      },
+      {
+        "selector": "body.bg-black-white.JZndWG_variable",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "html.dark",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "div",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": true,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "noscript",
+        "role": "text",
+        "name": "<iframe src=\"https://obs.herbgreencolumn.com/ns/d3788684cea145c612b5702ac56bb4bd.html?ch=cheq4ppc\" width=\"0\" height=\"0\" style=\"display:none\"></iframe>",
+        "state": "",
+        "tag": "noscript",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "div.bg-custom-nav-gradient.docs-theme-top",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "nav.docs-theme-main.sticky",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.section.flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Try for free",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 239,
+        "width": 97
+      },
+      {
+        "selector": "div.group.flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": -996,
+        "width": 3272
+      },
+      {
+        "selector": "div.flex.items-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1008,
+        "width": 16
+      },
+      {
+        "selector": "div.ml-auto.hidden",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1008,
+        "width": 200
+      },
+      {
+        "selector": "button.cursor-pointer.undefined",
+        "role": "button",
+        "name": "Search",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1008,
+        "width": 16
+      },
+      {
+        "selector": "a.hover\\:text-light-black",
+        "role": "link",
+        "name": "Login",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 1177,
+        "width": 31
+      },
+      {
+        "selector": "div.flex.w-full",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 233,
+        "width": 814
+      },
+      {
+        "selector": "div.hidden.items-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 72,
+        "width": 152
+      },
+      {
+        "selector": "a.flex.items-center",
+        "role": "link",
+        "name": "Contentstack",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 72,
+        "width": 152
+      },
+      {
+        "selector": "div.flex.w-fit",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 233,
+        "width": 814
+      },
+      {
+        "selector": "img.docs-logo-header",
+        "role": "img",
+        "name": "Contentstack",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 104,
+        "width": 120
+      },
+      {
+        "selector": "li.group\\/dropdown.relative",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 814,
+        "width": 61
+      },
+      {
+        "selector": "button.relative.z-10",
+        "role": "button",
+        "name": "Company",
+        "state": "expanded false",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": "0",
+        "expanded": "false",
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 814,
+        "width": 61
+      },
+      {
+        "selector": "li.relative.text-gray-black",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 728,
+        "width": 54
+      },
+      {
+        "selector": "a.relative.z-10",
+        "role": "link",
+        "name": "Partners",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-flex",
+        "left": 728,
+        "width": 54
+      },
+      {
+        "selector": "div.hidden.gap-3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1023,
+        "width": 185
+      },
+      {
+        "selector": "button.inline-flex.items-center",
+        "role": "button",
+        "name": "Try for free",
+        "state": "",
+        "tag": "button",
+        "tabIndex": -1,
+        "tabIndexAttribute": "-1",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-flex",
+        "left": 239,
+        "width": 97
+      },
+      {
+        "selector": "main",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tag": "main",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "section.home-hero-slider-gradient.desktop\\:home-hero-slider-gradient-hidden",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "h1.sr-only",
+        "role": "heading",
+        "name": "Contentstack",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": -1,
+        "width": 1
+      },
+      {
+        "selector": "div.relative",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.overflow-hidden",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.flex.relative",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.min-w-0.shrink-0",
+        "role": "group",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 2560,
+        "width": 1280
+      },
+      {
+        "selector": "div.z-10.flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 2957,
+        "width": 487
+      },
+      {
+        "selector": "div.mx-auto.w-max",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 2957,
+        "width": 487
+      },
+      {
+        "selector": "h2.inline-block.w-fit",
+        "role": "heading",
+        "name": "Inspire humans.Inform agents.",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 2957,
+        "width": 487
+      },
+      {
+        "selector": "div.flex.max-w-107",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 3103,
+        "width": 193
+      },
+      {
+        "selector": "p.text-text-light",
+        "role": "text",
+        "name": "Real-time, adaptive personalization powered by Al and first-party data",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1706,
+        "width": 428
+      },
+      {
+        "selector": "div.flex.flex-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 3103,
+        "width": 193
+      },
+      {
+        "selector": "div.absolute.right-1\\/2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 640,
+        "width": 0
+      },
+      {
+        "selector": "div.absolute.right-0",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 982,
+        "width": 298
+      },
+      {
+        "selector": "button.mr-3.flex",
+        "role": "button",
+        "name": "Pause slideshow",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1054,
+        "width": 40
+      },
+      {
+        "selector": "button.items-center.cs-custom-cta",
+        "role": "button",
+        "name": "Next Slide",
+        "state": "disabled",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": "0",
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1160,
+        "width": 48
+      },
+      {
+        "selector": "div.tab\\:mt-6.lg\\:mt-10",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.relative.mt-11",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.flex.shrink-0",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": -988,
+        "width": 3120
+      },
+      {
+        "selector": "img.mx-6.flex",
+        "role": "img",
+        "name": "mitsubishi electrics",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1978,
+        "width": 100
+      },
+      {
+        "selector": "div.section",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "section.mr-auto.flex",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 72,
+        "width": 1136
+      },
+      {
+        "selector": "div.flex.flex-col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 72,
+        "width": 1136
+      },
+      {
+        "selector": "div.rte-section-with-btns",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 72,
+        "width": 1136
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "is consumer-grade magic with enterprise-grade safety.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 72,
+        "width": 1136
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "Contentstack AXP",
+        "state": "",
+        "tag": "strong",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 72,
+        "width": 367
+      },
+      {
+        "selector": "table",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tag": "table",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "table",
+        "left": 150,
+        "width": 980
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Decide whether you make the shortlist",
+        "state": "",
+        "tag": "td",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "table-cell",
+        "left": 601,
+        "width": 529
+      },
+      {
+        "selector": "div.mt-12.w-full",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "section.flex.min-h-\\[398px\\]",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.flex.flex-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 640
+      },
+      {
+        "selector": "h2.cs-h2.tercia-content",
+        "role": "heading",
+        "name": "Find our what AI says about your brand",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 60,
+        "width": 520
+      },
+      {
+        "selector": "div.json-rte",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 60,
+        "width": 520
+      },
+      {
+        "selector": "div.flex.flex-row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 72,
+        "width": 1136
+      },
+      {
+        "selector": "div.pulsar-gradient-card.flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 640,
+        "width": 640
+      },
+      {
+        "selector": "img.h-auto.max-w-full",
+        "role": "img",
+        "name": "chart.png",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 720,
+        "width": 480
+      },
+      {
+        "selector": "section.relative.isolate",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.relative.flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 144,
+        "width": 992
+      },
+      {
+        "selector": "section.relative.w-full",
+        "role": "region",
+        "name": "Why Contentstack",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.relative.mx-auto",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "h2.why-contentstack-banner__title.m-0",
+        "role": "heading",
+        "name": "Why Contentstack?",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 233,
+        "width": 814
+      },
+      {
+        "selector": "p.m-0.font-inter",
+        "role": "text",
+        "name": "Four reasons enterprises choose us",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 233,
+        "width": 311
+      },
+      {
+        "selector": "a.no-underline",
+        "role": "link",
+        "name": "Learn why",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 956,
+        "width": 92
+      },
+      {
+        "selector": "p.text-text-light.rteEyebrowTextClass",
+        "role": "text",
+        "name": "Our platform",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 72,
+        "width": 1136
+      },
+      {
+        "selector": "div.section.pt-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "nav > div > ul > li:nth-of-type(1) > button",
+          "parent": "ul.hidden.items-center > li:nth-of-type(1)",
+          "tag": "button",
+          "attributes": {
+            "class": "relative z-10 flex cursor-pointer items-center gap-2 py-2 text-gray-black group-focus-within/dropdown:text-light-black group-hover/dropdown:text-light-black group-active/dropdown:t",
+            "tabindex": "0",
+            "aria-haspopup": "true",
+            "aria-expanded": "false"
+          },
+          "hoverHandlers": [],
+          "text": "Product",
+          "children": [],
+          "box": [
+            367,
+            67,
+            52,
+            36
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "10",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.hidden.items-center > li:nth-of-type(1)",
+          "parent": "ul.hidden.items-center",
+          "tag": "li",
+          "attributes": {
+            "class": "group/dropdown relative"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.absolute.-inset-x-3",
+            "button.relative.z-10",
+            "div.invisible.absolute",
+            "div.absolute.top-full"
+          ],
+          "box": [
+            367,
+            67,
+            52,
+            36
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.hidden.items-center",
+          "parent": "nav.docs-theme-main.sticky > div:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "hidden items-center gap-8 text-sm md:flex"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.group\\/dropdown.relative",
+            "li.group\\/dropdown.relative",
+            "li.group\\/dropdown.relative",
+            "li.relative.text-gray-black",
+            "li.relative.text-gray-black",
+            "li.group\\/dropdown.relative"
+          ],
+          "box": [
+            367,
+            67,
+            514,
+            36
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav.docs-theme-main.sticky > div:nth-of-type(1)",
+          "parent": "nav.docs-theme-main.sticky",
+          "tag": "div",
+          "attributes": {
+            "class": "flex w-full max-w-480 items-center justify-between px-18"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.hidden.items-center",
+            "ul.hidden.items-center",
+            "div.hidden.gap-3"
+          ],
+          "box": [
+            0,
+            65,
+            1280,
+            40
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav.docs-theme-main.sticky",
+          "parent": "body.bg-black-white.JZndWG_variable",
+          "tag": "nav",
+          "attributes": {
+            "class": "docs-theme-main sticky top-[env(safe-area-inset-top,0px)] z-50 mx-auto hidden w-full items-start justify-center bg-black-white py-4 text-light-black desktop:flex"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.flex.w-full"
+          ],
+          "box": [
+            0,
+            49,
+            1280,
+            72
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "sticky",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "50",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "body.bg-black-white.JZndWG_variable",
+          "tag": "body",
+          "attributes": {
+            "class": "bg-black-white JZndWG_variable ZjFlna_variable XA4aeq_variable"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div",
+            "noscript",
+            "noscript",
+            "div.bg-custom-nav-gradient.docs-theme-top",
+            "nav.docs-theme-main.sticky",
+            "div.docs-theme-top.bg-custom-nav-gradient"
+          ],
+          "box": [
+            0,
+            0,
+            1280,
+            7298
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav > div > ul > li:nth-of-type(1) > div:nth-of-type(2)",
+          "parent": "ul.hidden.items-center > li:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "invisible absolute top-full left-1/2 z-50 mt-4.5 flex w-[640px] max-w-[90vw] -translate-x-1/20 flex-col border-transparent bg-shadow-light text-light-black opacity-0 shadow-lg tran"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.absolute.-top-\\[25px\\]",
+            "div.p-6",
+            "a"
+          ],
+          "box": [
+            361,
+            121,
+            640,
+            516
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "0.907947",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "50",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav > div > ul > li:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+          "parent": "div.grid.grid-cols-2 > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "tabindex": "0",
+            "class": "flex flex-1 items-center gap-2"
+          },
+          "hoverHandlers": [],
+          "text": "Content Cloud",
+          "children": [],
+          "box": [
+            417,
+            239,
+            248,
+            24
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.grid.grid-cols-2 > ul:nth-of-type(1) > li:nth-of-type(1)",
+          "parent": "div.grid.grid-cols-2 > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "flex items-center gap-3 py-1.5 transition-colors duration-200 text-light-black/50 hover:text-violet-300"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "img.shrink-0.transition-\\[filter\\,opacity\\]",
+            "a.flex.flex-1"
+          ],
+          "box": [
+            385,
+            233,
+            280,
+            36
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.grid.grid-cols-2 > ul:nth-of-type(1)",
+          "parent": "div.grid.grid-cols-2",
+          "tag": "ul",
+          "attributes": {
+            "class": "flex flex-col text-base"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.flex.items-center",
+            "li.flex.items-center",
+            "li.flex.items-center",
+            "li.flex.items-center"
+          ],
+          "box": [
+            385,
+            233,
+            280,
+            144
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.grid.grid-cols-2",
+          "parent": "ul.hidden.items-center > li:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+          "tag": "div",
+          "attributes": {
+            "class": "grid grid-cols-2 items-start gap-x-8"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.mb-7",
+            "div.mb-7.min-h-5",
+            "div.mb-2.min-h-5",
+            "div.mb-2.min-h-5",
+            "ul.flex.flex-col",
+            "ul.flex.flex-col"
+          ],
+          "box": [
+            385,
+            145,
+            592,
+            412
+          ],
+          "style": {
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.hidden.items-center > li:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+          "parent": "nav > div > ul > li:nth-of-type(1) > div:nth-of-type(2)",
+          "tag": "div",
+          "attributes": {
+            "class": "p-6"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.grid.grid-cols-2"
+          ],
+          "box": [
+            361,
+            121,
+            640,
+            460
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": ".hover\\:text-light-black:hover",
+          "declarations": "color: var(--color-light-black);",
+          "conditions": [
+            "(hover: hover)"
+          ]
+        },
+        {
+          "selector": ".hover\\:text-violet-300:hover",
+          "declarations": "color: var(--color-violet-300);",
+          "conditions": [
+            "(hover: hover)"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "v5-da7cd68dba5c-1e159de5",
+  "url": "https://www.infoblox.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Products” from keyboard focus or with Arrow Down and follow “Infoblox Universal DDI™ Management”. Confirm the public destination /products/universal-ddi-management/.",
+  "controlTask": "Hover “Products”, click “Infoblox Universal DDI™ Management” and confirm /products/universal-ddi-management/.",
+  "observedSelector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/products/universal-ddi-management/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2)",
+    "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > div"
+  ],
+  "journey": [
+    {
+      "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#nav > div:nth-of-type(2) > div:nth-of-type(3) > ul > li:nth-of-type(2) > div > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(2) > div > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.infoblox.com",
+  "match": "https://www.infoblox.com/",
+  "barrier": "Products receives keyboard focus, but focus and Arrow Down leave its mega menu at display:none. Pointer hover expands the Products item and reveals the Infoblox Universal DDI™ Management link.",
+  "rules": [
+    {
+      "selector": "#nav > .nav-main > .nav-sections > ul > li.nav-drop:nth-of-type(2)",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseenter"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

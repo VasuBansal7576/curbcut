@@ -1,0 +1,14 @@
+{
+  "id": "spotify-marketing-reflow-320",
+  "url": "https://open.spotify.com/",
+  "persona": "low-vision",
+  "observedSelector": "#main",
+  "outcomeChecks": [
+    {
+      "selector": "html",
+      "kind": "fits-width"
+    }
+  ],
+  "task": "Read the first catalog shelf and its heading on the public Spotify web homepage at 320 CSS pixels, using vertical scrolling only. Verify the catalog content fits within the right edge of the viewport. Stay on the initial public page and leave sign-up and playback controls untouched.",
+  "controlTask": "In the normal desktop viewport, read the first catalog shelf and its heading on the public Spotify web homepage. Stay on the initial public page."
+}

@@ -1,0 +1,10 @@
+{
+  "barrier": "Hovering Services expands the mega menu, but focusing the Services button and pressing Arrow Down leave the panel hidden and the DDoS Protection link unavailable.",
+  "rules": [
+    {
+      "selector": "#jet-mega-menu-item-29645 > div.jet-mega-menu-item__inner",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseover"
+    }
+  ]
+}

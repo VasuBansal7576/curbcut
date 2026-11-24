@@ -1,0 +1,53 @@
+{
+  "id": "v5-e2a9611c7721-9325e614",
+  "url": "https://feeder.co/",
+  "persona": "keyboard-only",
+  "task": "Open “Use cases” from keyboard focus or with Arrow Down and follow “Blog readers”. Confirm the public destination /follow/lifestyle-blogs.",
+  "controlTask": "Hover “Use cases”, click “Blog readers” and confirm /follow/lifestyle-blogs.",
+  "observedSelector": "#siteNavUseCases",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/follow/lifestyle-blogs"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#navbarSupportedContent > div:nth-of-type(1) > div:nth-of-type(2)",
+    "#navbarSupportedContent > div:nth-of-type(1) > div:nth-of-type(2) > div"
+  ],
+  "journey": [
+    {
+      "selector": "#siteNavUseCases",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#siteNavUseCases",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#navbarSupportedContent > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "feeder.co",
+  "match": "https://feeder.co/",
+  "barrier": "Hovering “Use cases” opens its navigation panel, but focusing the trigger and pressing Arrow Down leaves the panel hidden and the “Blog readers” link unavailable.",
+  "rules": [
+    {
+      "selector": "#navbarSupportedContent .dropdown-with-hover:has(> #siteNavUseCases)",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseenter"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

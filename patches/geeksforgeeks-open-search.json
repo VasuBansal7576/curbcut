@@ -1,0 +1,68 @@
+{
+  "id": "geeksforgeeks-open-search",
+  "url": "https://www.geeksforgeeks.org/",
+  "persona": "keyboard-only",
+  "task": "First assert the search icon in the homepage header is in sequential keyboard focus order. Use Tab and Enter to open the site search. Verify the Search text box is visible.",
+  "controlTask": "Click the search icon in the homepage header. Verify the Search text box opens and is visible.",
+  "observedSelector": ".gs-toggle-icon",
+  "successSelector": ".gs-input_wrapper.gs-show-search-bar form.gs-form input.gs-input",
+  "site": "www.geeksforgeeks.org",
+  "match": "https://www.geeksforgeeks.org/",
+  "barrier": "The header search toggle is a span with tabIndex -1, so Tab skips it.",
+  "rules": [
+    {
+      "selector": ".gs-toggle-icon",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": ".gs-toggle-icon",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": ".gs-toggle-icon",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": ".gs-toggle-icon",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane/geeksforgeeks-open-search/2026-11-22T11-06-33.087Z/before/recording.mp4",
+    "after": "proof/kane/geeksforgeeks-open-search/resume-2026-11-22T03-40-55.719Z/attempt-1/after/recording.mp4",
+    "control": "proof/kane/geeksforgeeks-open-search/resume-2026-11-22T03-40-55.719Z/control/recording.mp4",
+    "verifiedAt": "2026-11-22T03:43:23.669Z",
+    "kaneRunIds": [
+      "be57692b-7d07-4262-b4b8-faa6f3ecbf02",
+      "4cb865bf-3f65-433d-b457-e48e75862893",
+      "9ce17c2d-6422-4fc6-83ed-e23b8b0a8a89"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-22T03:43:23.669Z",
+      "event": "verified",
+      "before": "53fedd9d-0cf3-4b93-a04b-71c5da1b81e4",
+      "control": "4cb865bf-3f65-433d-b457-e48e75862893",
+      "after": "9ce17c2d-6422-4fc6-83ed-e23b8b0a8a89"
+    },
+    {
+      "at": "2026-11-22T10:46:02.864Z",
+      "event": "rechecked",
+      "without": "inconclusive",
+      "runId": "549aee89-f6c9-4fc8-b65c-c1b55f20cc6e",
+      "video": "proof/kane/geeksforgeeks-open-search/2026-11-22T10-44-15.437Z/recheck-without/recording.mp4"
+    },
+    {
+      "at": "2026-11-22T11:08:32.902Z",
+      "event": "baseline-strengthened",
+      "replacedBaseline": "53fedd9d-0cf3-4b93-a04b-71c5da1b81e4",
+      "runId": "be57692b-7d07-4262-b4b8-faa6f3ecbf02",
+      "video": "proof/kane/geeksforgeeks-open-search/2026-11-22T11-06-33.087Z/before/recording.mp4",
+      "after": "0b298663-2773-4a4d-a71f-cf15c831e278",
+      "afterVideo": "proof/kane/geeksforgeeks-open-search/2026-11-22T11-06-33.087Z/after/recording.mp4"
+    }
+  ]
+}

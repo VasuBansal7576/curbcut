@@ -1,0 +1,865 @@
+{
+  "status": "pass",
+  "runId": "771d8a02-576c-4f1e-849b-bb710f3f76de",
+  "reason": "Objective completed",
+  "summary": "Converted 1 foot to inches on OnlineConversion.com.\nEntered 1, selected feet as the starting unit and inch as the target unit, then ran the conversion.\nThe result displayed: 1 feet = 12 inch.",
+  "resultCode": 100,
+  "reasonCode": "success.complete",
+  "credits": 16.373994999999997,
+  "exitCode": 0,
+  "steps": [
+    "navigate: Navigate to https://www.onlineconversion.com/length_common.htm",
+    "wait: queued plan (4 steps): type \"textbox\"; select \"listbox\"; select \"listbox\"; click",
+    "type: Type \"1\" into \"textbox\"",
+    "select: Select \"feet\" in \"listbox\"",
+    "select: Select \"inch\" in \"listbox\"",
+    "click: Click \"⇒  Convert  ⇐\"",
+    "analyze: the result reads 1 feet = 12 inch",
+    "assert: the result reads 1 feet = 12 inch"
+  ],
+  "evidencePack": "proof/kane/online-conversion-length/2026-11-21T19-47-43.889Z/control/1e2ac7e9-8903-44b5-855f-3a709b4fe1cb.evidence",
+  "evidenceValid": true,
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "control",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920
+    },
+    "readerVisible": false,
+    "width": 1280,
+    "fixtureFixed": false,
+    "ruleMatches": []
+  },
+  "snapshot": {
+    "url": "https://www.onlineconversion.com/length_common.htm",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "input",
+    "nodes": [
+      {
+        "selector": "form[name=\"MainForm\"] table",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table",
+        "left": 294,
+        "width": 503
+      },
+      {
+        "selector": "center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 294,
+        "width": 498
+      },
+      {
+        "selector": "div.container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 292,
+        "width": 696
+      },
+      {
+        "selector": "div.header_area",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 294,
+        "width": 692
+      },
+      {
+        "selector": "div.header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 294,
+        "width": 692
+      },
+      {
+        "selector": "div.logo",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 294,
+        "width": 692
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Online Conversion",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 294,
+        "width": 142
+      },
+      {
+        "selector": "div.mainmenu_area",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 294,
+        "width": 692
+      },
+      {
+        "selector": "div.mainmenu",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 294,
+        "width": 692
+      },
+      {
+        "selector": "div.nav",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 791,
+        "width": 195
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 791,
+        "width": 35
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Home",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 796,
+        "width": 24
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 826,
+        "width": 29
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "FAQ",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 831,
+        "width": 18
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 855,
+        "width": 76
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Message Forum",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 860,
+        "width": 65
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 931,
+        "width": 55
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Contact Us",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 936,
+        "width": 45
+      },
+      {
+        "selector": "div.main_content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 294,
+        "width": 692
+      },
+      {
+        "selector": "div.content_left",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 294,
+        "width": 498
+      },
+      {
+        "selector": "div.content_heading",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 294,
+        "width": 498
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Welcome to OnlineConversion.com",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 294,
+        "width": 498
+      },
+      {
+        "selector": "p.red",
+        "role": "text",
+        "name": "Common Length and Distance Conversions",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 294,
+        "width": 498
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 294,
+        "width": 498
+      },
+      {
+        "selector": "form",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 294,
+        "width": 498
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Convert what quantity? 1 Help with this item",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 296,
+        "width": 499
+      },
+      {
+        "selector": "input",
+        "role": "textbox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 422,
+        "width": 114
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Help with this item",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 539,
+        "width": 16
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Help with this item",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 539,
+        "width": 16
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "From: feet",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 296,
+        "width": 248
+      },
+      {
+        "selector": "select",
+        "role": "listbox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 371,
+        "width": 99
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "To: inch",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 546,
+        "width": 249
+      },
+      {
+        "selector": "select",
+        "role": "listbox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 621,
+        "width": 99
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 296,
+        "width": 499
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 296,
+        "width": 499
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 526,
+        "width": 40
+      },
+      {
+        "selector": "input",
+        "role": "button",
+        "name": "⇒ Convert ⇐",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 496,
+        "width": 98
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Result: Help with this item See Also: All Length Conversions | Metric Length Conversions 1 feet = 12 inch",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 296,
+        "width": 499
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Help with this item",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 337,
+        "width": 16
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Help with this item",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 337,
+        "width": 16
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "All Length Conversions",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 411,
+        "width": 103
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Metric Length Conversions",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 522,
+        "width": 119
+      },
+      {
+        "selector": "input",
+        "role": "textbox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 296,
+        "width": 499
+      },
+      {
+        "selector": "div.content_right",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 825,
+        "width": 161
+      },
+      {
+        "selector": "div.bookmark",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 160
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "BookMark Us",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 160
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "It may come in handy.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 160
+      },
+      {
+        "selector": "div.quick_link",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 160
+      },
+      {
+        "selector": "form",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 836,
+        "width": 150
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 836,
+        "width": 150
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Quick Links:",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 836,
+        "width": 150
+      },
+      {
+        "selector": "select",
+        "role": "combobox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 836,
+        "width": 121
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 836,
+        "width": 150
+      },
+      {
+        "selector": "div.ad_top",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 160
+      },
+      {
+        "selector": "#aswift_1_host",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 826,
+        "width": 160
+      },
+      {
+        "selector": "#aswift_1",
+        "role": "text",
+        "name": "Advertisement",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 826,
+        "width": 160
+      },
+      {
+        "selector": "div.ad_middle",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 160
+      },
+      {
+        "selector": "div.ad_middle_bottom",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 160
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Are you bored?",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 160
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Try the",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 160
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Fun Stuff",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 903,
+        "width": 40
+      },
+      {
+        "selector": "div.ad_top",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 160
+      },
+      {
+        "selector": "div.content_right_bottom",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 160
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Was this site helpful?",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 160
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "|",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 826,
+        "width": 160
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Link to Us",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 864,
+        "width": 44
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Donate",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 916,
+        "width": 32
+      },
+      {
+        "selector": "div.footer",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 294,
+        "width": 692
+      },
+      {
+        "selector": "div.footer_left",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 299,
+        "width": 253
+      },
+      {
+        "selector": "div.single_footer_left",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 299,
+        "width": 142
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Part of the .",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 299,
+        "width": 142
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "BlueSparks Network",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 348,
+        "width": 91
+      },
+      {
+        "selector": "div.single_footer_left",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 441,
+        "width": 110
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "| |",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 441,
+        "width": 110
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Privacy Policy",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 447,
+        "width": 62
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "License",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 517,
+        "width": 34
+      },
+      {
+        "selector": "div.footer_right",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 807,
+        "width": 174
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "© Copyright 1997-Present .",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 807,
+        "width": 174
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Robert Fogt",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 925,
+        "width": 53
+      },
+      {
+        "selector": "div.footer_bottom_area",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 294,
+        "width": 692
+      },
+      {
+        "selector": "div.footer_bottom",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 294,
+        "width": 692
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "This web site is copy protected against content infringement by Copyscape",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 523,
+        "width": 234
+      }
+    ]
+  },
+  "video": "proof/kane/online-conversion-length/2026-11-21T19-47-43.889Z/control/recording.mp4"
+}

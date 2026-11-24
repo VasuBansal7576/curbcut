@@ -1,0 +1,10 @@
+{
+  "barrier": "Keyboard activation opens the sign-in dialog, but focus is still on the opener during the opening transition, and Escape leaves the dialog visible.",
+  "rules": [
+    {
+      "action": "dialogBehavior",
+      "dialog": "#authentificationModal",
+      "close": "#authentificationModal .modal-header > button[data-bs-dismiss=\"modal\"]"
+    }
+  ]
+}

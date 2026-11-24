@@ -1,0 +1,107 @@
+{
+  "id": "uline-com-tr2",
+  "url": "https://www.uline.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "controlTask": "At normal width, read the passage beginning “Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca” and verify all its text is visible without horizontal scrolling.",
+  "observedSelector": "#tdfooter",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#tdfooter",
+      "equals": "Help Contact Us Careers Shipping Boxes Plastic Bags Catalog Request Uline.ca"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#tdfooter"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.uline.com",
+  "match": "https://www.uline.com/",
+  "barrier": "At 320 CSS pixels, #tdfooter is 980 pixels wide and lays out the passage in a single 877-pixel row. Horizontal clipping cuts off the links beyond the viewport.",
+  "rules": [
+    {
+      "selector": "#container",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#divContent",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#divContentFooterWrap",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#divFooterwrap",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#newfooter",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "table",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#tdfooter",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "table.default",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "td.footerCell",
+      "action": "injectCSS",
+      "value": {
+        "display": "inline-block",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,69 @@
+{
+  "id": "v5-95f8a51f17b0a17effa9",
+  "url": "https://nbqfbj.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “食品饮料 实现商品保质期、近效期、批次等方面管理，更有仓库物流运输、库龄分析、智能补货等深度行业应用。 查看详情 五金建材 实现上万种类零部件商品管理，以及往来客户分布广泛的信用额度管控、操作简单、应用易上手。 查看详情 汽配汽修 汽配维修、送修、上门维修、整机更换。从维修接件、到维修业务处理、维修费用核算、维修取件及服务回访等环节进行严格把关。 查看详情 ” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “食品饮料 实现商品保质期、近效期、批次等方面管理，更有仓库物流运输、库龄分析、智能补货等深度行业应用。 查看详情 五金建材 实现上万种类零部件商品管理，以及往来客户分布广泛的信用额度管控、操作简单、应用易上手。 查看详情 汽配汽修 汽配维修、送修、上门维修、整机更换。从维修接件、到维修业务处理、维修费用核算、维修取件及服务回访等环节进行严格把关。 查看详情 ” at normal width.",
+  "observedSelector": "#myCarousel1 > div:nth-of-type(1) > div:nth-of-type(1) > ul > li",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#myCarousel1 > div:nth-of-type(1) > div:nth-of-type(1) > ul > li",
+      "equals": "食品饮料 实现商品保质期、近效期、批次等方面管理，更有仓库物流运输、库龄分析、智能补货等深度行业应用。 查看详情 五金建材 实现上万种类零部件商品管理，以及往来客户分布广泛的信用额度管控、操作简单、应用易上手。 查看详情 汽配汽修 汽配维修、送修、上门维修、整机更换。从维修接件、到维修业务处理、维修费用核算、维修取件及服务回访等环节进行严格把关。 查看详情 "
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#myCarousel1 > div:nth-of-type(1) > div:nth-of-type(1) > ul > li"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "nbqfbj.com",
+  "match": "https://nbqfbj.com/",
+  "barrier": "The target list item extends past the carousel’s clipping edge. Its inline list has a 20-pixel-high parent, and the snapshot shows no passage text, so the visibility failure remains unverified after reflow.",
+  "rules": [
+    {
+      "selector": "#myCarousel1 > .carousel-inner, #myCarousel1 > .carousel-inner > .item:first-child",
+      "action": "injectCSS",
+      "value": {
+        "height": "auto",
+        "max-height": "none"
+      }
+    },
+    {
+      "selector": "#myCarousel1 > .carousel-inner > .item:first-child > ul, #myCarousel1 > .carousel-inner > .item:first-child > ul > #cont",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "#myCarousel1 > .carousel-inner > .item:first-child > ul > #cont > ul.list-inline",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "flex-direction": "column",
+        "width": "auto",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "#myCarousel1 > .carousel-inner > .item:first-child > ul > #cont > ul.list-inline > li",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "min-width": "0",
+        "height": "auto",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

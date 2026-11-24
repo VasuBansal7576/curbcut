@@ -1,0 +1,14 @@
+{
+  "barrier": "The contact paragraph is 1000 CSS pixels wide inside a 320 CSS pixel footer that clips horizontal overflow.",
+  "rules": [
+    {
+      "selector": "div:nth-of-type(4) > div:nth-of-type(2) > p",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "barrier": "The desktop genres submenu becomes visible only when its parent list item is hovered. Focusing the genres link or pressing Arrow Down leaves the Drama link hidden.",
+  "rules": [
+    {
+      "selector": "#menu-item-354",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "barrier": "At 320 CSS pixels, the paragraph’s content extends 83 pixels beyond its 280-pixel box and is clipped at the viewport edge.",
+  "rules": [
+    {
+      "selector": "div:nth-of-type(1) > div > main > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > p",
+      "action": "injectCSS",
+      "value": {
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

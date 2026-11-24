@@ -1,0 +1,43 @@
+{
+  "id": "v5-a4b9c9c41e01-05222b52",
+  "url": "https://sacred-texts.com/",
+  "persona": "keyboard-only",
+  "task": "Expand “Categories” with the keyboard and read “Legendary Creatures”.",
+  "controlTask": "Click “Categories” and read “Legendary Creatures”.",
+  "observedSelector": "#bits-s4",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#bits-s5 > ul > li:nth-of-type(39)",
+      "equals": "Legendary Creatures"
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#bits-s5"
+  ],
+  "journey": [
+    {
+      "selector": "#bits-s4",
+      "action": "activate"
+    },
+    {
+      "selector": "#bits-s5 > ul > li:nth-of-type(39)",
+      "action": "observe"
+    }
+  ],
+  "site": "sacred-texts.com",
+  "match": "https://sacred-texts.com/",
+  "barrier": "The Categories button receives keyboard focus, but keyboard activation leaves its panel hidden, so Legendary Creatures is unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#bits-s4",
+      "target": "#bits-s5",
+      "mode": "attribute"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

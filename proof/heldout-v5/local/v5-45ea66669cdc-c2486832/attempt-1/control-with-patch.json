@@ -1,0 +1,2162 @@
+{
+  "runner": "playwright",
+  "status": "pass",
+  "reason": "The complete journey reached the declared outcome.",
+  "steps": [
+    {
+      "selector": "#menu-item-8021 > a",
+      "action": "focus"
+    },
+    {
+      "selector": "#menu-item-8021 > a",
+      "action": "key",
+      "key": "ArrowDown"
+    },
+    {
+      "selector": "#menu-item-8037 > a",
+      "action": "activate"
+    }
+  ],
+  "url": "https://www.mailinator.com/applications-solutions/",
+  "checks": [
+    true
+  ],
+  "snapshot": {
+    "url": "https://www.mailinator.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "#search",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#menu-item-8021 > a",
+          "parent": "#menu-item-8021",
+          "tag": "a",
+          "attributes": {
+            "class": "x-menu-link"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "span.x-menu-link-text",
+            "span.x-caret"
+          ],
+          "box": [
+            431,
+            53,
+            129,
+            82
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-8021",
+          "parent": "#main-menu",
+          "tag": "li",
+          "attributes": {
+            "id": "menu-item-8021",
+            "class": "menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8021"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.x-menu-link",
+            "ul.sub-menu.x-animated"
+          ],
+          "box": [
+            431,
+            53,
+            129,
+            82
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#main-menu",
+          "parent": "nav.g5core-primary-menu.site-menu",
+          "tag": "ul",
+          "attributes": {
+            "id": "main-menu",
+            "class": "main-menu menu-horizontal x-nav-menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-item-8021",
+            "#menu-item-9901",
+            "#menu-item-8154",
+            "#menu-item-8023",
+            "#menu-item-8024",
+            "#menu-item-7935"
+          ],
+          "box": [
+            431,
+            48,
+            769,
+            92
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav.g5core-primary-menu.site-menu",
+          "parent": "div.g5core-header-inner",
+          "tag": "nav",
+          "attributes": {
+            "class": "g5core-primary-menu site-menu content-fill content-right"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#main-menu"
+          ],
+          "box": [
+            262,
+            48,
+            938,
+            92
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.g5core-header-inner",
+          "parent": "div.g5core-header-desktop-wrapper.sticky-area > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "g5core-header-inner"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.g5core-site-branding",
+            "nav.g5core-primary-menu.site-menu",
+            "div.g5core-header-customize.g5core-header-customize-after_menu"
+          ],
+          "box": [
+            80,
+            48,
+            1120,
+            92
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.g5core-header-desktop-wrapper.sticky-area > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.g5core-header-inner"
+          ],
+          "box": [
+            70,
+            48,
+            1140,
+            92
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-8021 > ul",
+          "parent": "#menu-item-8021",
+          "tag": "ul",
+          "attributes": {
+            "class": "sub-menu x-animated x-fadeInUp"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-item-9924",
+            "#menu-item-10005",
+            "#menu-item-8037",
+            "#menu-item-8035",
+            "#menu-item-8034",
+            "#menu-item-8033"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "1099",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-8037 > a",
+          "parent": "#menu-item-8037",
+          "tag": "a",
+          "attributes": {
+            "class": "x-menu-link"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "span.x-menu-link-text"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-8037",
+          "parent": "#menu-item-8021 > ul",
+          "tag": "li",
+          "attributes": {
+            "id": "menu-item-8037",
+            "class": "menu-item menu-item-type-post_type menu-item-object-page menu-item-8037"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.x-menu-link"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(0, 86, 179); text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(0, 81, 119); text-decoration: none;",
+          "conditions": []
+        },
+        {
+          "selector": ".menu-horizontal .menu-item.x-active > .sub-menu, .menu-horizontal .menu-item:hover > .sub-menu",
+          "declarations": "display: block;",
+          "conditions": []
+        },
+        {
+          "selector": ".menu-horizontal .sub-menu .menu-item > a:hover",
+          "declarations": "background-color: rgb(36, 36, 36); color: rgb(153, 153, 153);",
+          "conditions": []
+        },
+        {
+          "selector": ".site-menu .menu-horizontal .menu-item:hover .sub-menu",
+          "declarations": "display: none;",
+          "conditions": [
+            "only screen and (max-width: 991px)"
+          ]
+        },
+        {
+          "selector": ".site-menu .menu-horizontal .sub-menu .menu-item > a:hover",
+          "declarations": "background-color: transparent;",
+          "conditions": [
+            "only screen and (max-width: 991px)"
+          ]
+        },
+        {
+          "selector": ".text-color, body, .testimonial-job-color-99 .gel-testimonial-job, .gel-testimonial-name-14 .gel-testimonial-bio, .gel-our-team .gel-our-team-social, .menu-horizontal .menu-item > a:hover, .menu-horizontal .menu-item > a:focus, .menu-horizontal .menu-current > a, .menu-horizontal .current-menu-parent > a, .menu-horizontal .current-menu-ancestor > a, .menu-horizontal .current-menu-item > a, .gel-fo",
+          "declarations": "color: rgb(153, 153, 153);",
+          "conditions": []
+        },
+        {
+          "selector": ".text-color, body, .testimonial-job-color-99 .gel-testimonial-job, .gel-testimonial-name-14 .gel-testimonial-bio, .gel-our-team .gel-our-team-social, .menu-horizontal .menu-item > a:hover, .menu-horizontal .menu-item > a:focus, .menu-horizontal .menu-current > a, .menu-horizontal .current-menu-parent > a, .menu-horizontal .current-menu-ancestor > a, .menu-horizontal .current-menu-item > a, .gel-fo",
+          "declarations": "color: rgb(95, 95, 95);",
+          "conditions": []
+        },
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(79, 207, 222);",
+          "conditions": []
+        },
+        {
+          "selector": ".g5core-header-customize ul.g5core-social-networks.g5core-social-networks a:hover, .g5core-header-desktop-wrapper .site-branding-text .site-title a:hover, .g5core-header-desktop-wrapper .menu-horizontal > .menu-current > a, .g5core-header-desktop-wrapper .menu-horizontal > .current-menu-parent > a, .g5core-header-desktop-wrapper .menu-horizontal > .current-menu-ancestor > a, .g5core-header-desktop",
+          "declarations": "color: rgb(153, 153, 153);",
+          "conditions": []
+        },
+        {
+          "selector": ".menu-horizontal .sub-menu .menu-item.menu-current > a, .menu-horizontal .sub-menu .menu-item.current-menu-parent > a, .menu-horizontal .sub-menu .menu-item.current-menu-ancestor > a, .menu-horizontal .sub-menu .menu-item.current-menu-item > a, .g5core-header-desktop-wrapper .menu-horizontal .sub-menu .menu-item > a:hover, .g5core-header-desktop-wrapper .menu-horizontal .sub-menu .menu-item .x-meg",
+          "declarations": "color: rgb(153, 153, 153); background-color: rgb(36, 36, 36);",
+          "conditions": []
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#menu-item-8021",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 431,
+        "width": 129
+      },
+      {
+        "selector": "#menu-item-8021 > ul",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#menu-item-8021 > a",
+        "role": "link",
+        "name": "Why Mailinator",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 431,
+        "width": 129
+      },
+      {
+        "selector": "#menu-item-8037 > a",
+        "role": "link",
+        "name": "Applications/Solutions",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "span.x-menu-link-text",
+        "role": "text",
+        "name": "Why Mailinator",
+        "state": "",
+        "tag": "span",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 431,
+        "width": 129
+      },
+      {
+        "selector": "span.x-caret",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "span",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 560,
+        "width": 0
+      },
+      {
+        "selector": "#main-menu",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 431,
+        "width": 769
+      },
+      {
+        "selector": "#search",
+        "role": "textbox",
+        "name": "Enter public inbox",
+        "state": "",
+        "tag": "input",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 80,
+        "width": 230
+      },
+      {
+        "selector": "div.g5core-top-bar-item.g5core-tbi-custom-html-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 80,
+        "width": 268
+      },
+      {
+        "selector": "button",
+        "role": "button",
+        "name": "GO",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 310,
+        "width": 38
+      },
+      {
+        "selector": "div.g5core-top-bar-left",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 80,
+        "width": 268
+      },
+      {
+        "selector": "#site-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#site-header",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.g5core-top-bar.g5core-top-bar-desktop",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.g5core-top-bar-inner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 80,
+        "width": 1120
+      },
+      {
+        "selector": "div.g5core-top-bar-right",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1014,
+        "width": 186
+      },
+      {
+        "selector": "div.g5core-top-bar-item.g5core-tbi-custom-html-2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1014,
+        "width": 186
+      },
+      {
+        "selector": "img.inbox-icon",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 1014,
+        "width": 20
+      },
+      {
+        "selector": "a.inbox-link",
+        "role": "link",
+        "name": "Public Inbox",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 1039,
+        "width": 81
+      },
+      {
+        "selector": "div.sticky-area-wrap",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.g5core-header-desktop-wrapper.sticky-area",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.g5core-header-inner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 80,
+        "width": 1120
+      },
+      {
+        "selector": "div.g5core-site-branding",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 80,
+        "width": 182
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Mailinator-Millions of Inboxes for Email Testing.",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 80,
+        "width": 150
+      },
+      {
+        "selector": "img.site-logo",
+        "role": "img",
+        "name": "Mailinator-Millions of Inboxes for Email Testing.",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 80,
+        "width": 150
+      },
+      {
+        "selector": "nav.g5core-primary-menu.site-menu",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 262,
+        "width": 938
+      },
+      {
+        "selector": "#menu-item-9901",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 584,
+        "width": 53
+      },
+      {
+        "selector": "a.x-menu-link",
+        "role": "link",
+        "name": "LOGIN",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 1127,
+        "width": 73
+      },
+      {
+        "selector": "#menu-item-8154",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 661,
+        "width": 75
+      },
+      {
+        "selector": "#menu-item-8023",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 760,
+        "width": 117
+      },
+      {
+        "selector": "#menu-item-8024",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 901,
+        "width": 61
+      },
+      {
+        "selector": "#menu-item-7935",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 988,
+        "width": 128
+      },
+      {
+        "selector": "#menu-item-7937",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1127,
+        "width": 73
+      },
+      {
+        "selector": "div.g5core-header-customize.g5core-header-customize-after_menu",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1180,
+        "width": 0
+      },
+      {
+        "selector": "div.g5core-header-customize-inner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1180,
+        "width": 0
+      },
+      {
+        "selector": "#wrapper_content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#primary-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "#main-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "#post-191",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tag": "article",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 80,
+        "width": 1120
+      },
+      {
+        "selector": "div.entry-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 80,
+        "width": 1120
+      },
+      {
+        "selector": "div.wpb-content-wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 80,
+        "width": 1120
+      },
+      {
+        "selector": "div.vc_row.wpb_row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.heading-col.wpb_column",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 70,
+        "width": 380
+      },
+      {
+        "selector": "div.vc_column-inner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 982,
+        "width": 228
+      },
+      {
+        "selector": "div.wpb_wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 355,
+        "width": 855
+      },
+      {
+        "selector": "div.gel-heading.gel-heading-style-01",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 80,
+        "width": 360
+      },
+      {
+        "selector": "h1.gel-heading-title",
+        "role": "heading",
+        "name": "Email Testing and SMS Workflow Testing",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 80,
+        "width": 360
+      },
+      {
+        "selector": "p.gel-heading-description.gel-2932e12b9a43efd520a23437ee719b72",
+        "role": "text",
+        "name": "Mailinator is more than a temporary email address. Developers and QA teams use it to test sign-ups, password resets, and 2FA codes, with trillions of inboxes ready to go. Test by hand, through the API",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 80,
+        "width": 360
+      },
+      {
+        "selector": "div.gel-btn.gel-btn-inline",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 80,
+        "width": 192
+      },
+      {
+        "selector": "a.btn.btn-md",
+        "role": "link",
+        "name": "Give your A.I. Assistant the Power of Email",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 446,
+        "width": 388
+      },
+      {
+        "selector": "div.wpb_column.vc_column_container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 355,
+        "width": 855
+      },
+      {
+        "selector": "div.vc_column-inner.vc_custom_1620066444879",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 450,
+        "width": 760
+      },
+      {
+        "selector": "div.wpb_single_image.wpb_content_element",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 355,
+        "width": 855
+      },
+      {
+        "selector": "div.vc_single_image-wrapper.vc_box_border_grey",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 450,
+        "width": 760
+      },
+      {
+        "selector": "img.vc_single_image-img.attachment-full",
+        "role": "img",
+        "name": "Mailinator Email Workflow Testing",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 450,
+        "width": 760
+      },
+      {
+        "selector": "div.vc_row-full-width.vc_clearfix",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 80,
+        "width": 1120
+      },
+      {
+        "selector": "div.vc_column-inner.vc_custom_1562041493010",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.wpb_text_column.wpb_content_element",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 98,
+        "width": 230
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Mailinator is Your Private Message Routing System",
+        "state": "",
+        "tag": "h3",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 98,
+        "width": 230
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "MAILINATOR + AI",
+        "state": "",
+        "tag": "strong",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 543,
+        "width": 193
+      },
+      {
+        "selector": "div.gel-btn.gel-btn-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 80,
+        "width": 1120
+      },
+      {
+        "selector": "div.vc_empty_space",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 80,
+        "width": 1120
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 98,
+        "width": 230
+      },
+      {
+        "selector": "div.clients.wpb_column",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 754,
+        "width": 228
+      },
+      {
+        "selector": "div.vc_column-inner.vc_custom_1619798719800",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 70,
+        "width": 228
+      },
+      {
+        "selector": "div.gel-client-logo.quicken",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 109,
+        "width": 150
+      },
+      {
+        "selector": "div.gel-client-logo-inner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 992,
+        "width": 208
+      },
+      {
+        "selector": "div.image",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 992,
+        "width": 208
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "accenture-logo-black-and-white",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 992,
+        "width": 208
+      },
+      {
+        "selector": "div.vc_column-inner.vc_custom_1619798728080",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 298,
+        "width": 228
+      },
+      {
+        "selector": "div.gel-client-logo.asana",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 337,
+        "width": 150
+      },
+      {
+        "selector": "div.vc_column-inner.vc_custom_1619798734074",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 526,
+        "width": 228
+      },
+      {
+        "selector": "div.gel-client-logo.contacts",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 565,
+        "width": 150
+      },
+      {
+        "selector": "div.vc_column-inner.vc_custom_1619798741246",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 754,
+        "width": 228
+      },
+      {
+        "selector": "div.gel-client-logo.Oracle",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 764,
+        "width": 208
+      },
+      {
+        "selector": "div.gel-client-logo.Walmart",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 992,
+        "width": 208
+      },
+      {
+        "selector": "div.gel-client-logo.KPMG",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 80,
+        "width": 208
+      },
+      {
+        "selector": "div.gel-client-logo.J\\&J",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 308,
+        "width": 208
+      },
+      {
+        "selector": "div.gel-client-logo.Costco",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 536,
+        "width": 208
+      },
+      {
+        "selector": "div.gel-client-logo.Intuit",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 764,
+        "width": 208
+      },
+      {
+        "selector": "div.gel-client-logo.Lego",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 992,
+        "width": 208
+      },
+      {
+        "selector": "div.vc_column-inner.vc_custom_1700174988565",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.wpb_raw_code.wpb_raw_html",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 80,
+        "width": 1120
+      },
+      {
+        "selector": "div.vc_column-inner.vc_custom_1619199945124",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 285
+      },
+      {
+        "selector": "div.vc_column-inner.vc_custom_1620067462797",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 355,
+        "width": 855
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#menu-item-8021 > a",
+          "parent": "#menu-item-8021",
+          "tag": "a",
+          "attributes": {
+            "class": "x-menu-link"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "span.x-menu-link-text",
+            "span.x-caret"
+          ],
+          "box": [
+            431,
+            53,
+            129,
+            82
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-8021",
+          "parent": "#main-menu",
+          "tag": "li",
+          "attributes": {
+            "id": "menu-item-8021",
+            "class": "menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8021 x-active"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.x-menu-link",
+            "ul.sub-menu.x-animated"
+          ],
+          "box": [
+            431,
+            53,
+            129,
+            82
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#main-menu",
+          "parent": "nav.g5core-primary-menu.site-menu",
+          "tag": "ul",
+          "attributes": {
+            "id": "main-menu",
+            "class": "main-menu menu-horizontal x-nav-menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-item-8021",
+            "#menu-item-9901",
+            "#menu-item-8154",
+            "#menu-item-8023",
+            "#menu-item-8024",
+            "#menu-item-7935"
+          ],
+          "box": [
+            431,
+            48,
+            769,
+            92
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "nav.g5core-primary-menu.site-menu",
+          "parent": "div.g5core-header-inner",
+          "tag": "nav",
+          "attributes": {
+            "class": "g5core-primary-menu site-menu content-fill content-right"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#main-menu"
+          ],
+          "box": [
+            262,
+            48,
+            938,
+            92
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.g5core-header-inner",
+          "parent": "div.g5core-header-desktop-wrapper.sticky-area > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "g5core-header-inner"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.g5core-site-branding",
+            "nav.g5core-primary-menu.site-menu",
+            "div.g5core-header-customize.g5core-header-customize-after_menu"
+          ],
+          "box": [
+            80,
+            48,
+            1120,
+            92
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.g5core-header-desktop-wrapper.sticky-area > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.g5core-header-inner"
+          ],
+          "box": [
+            70,
+            48,
+            1140,
+            92
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-8021 > ul",
+          "parent": "#menu-item-8021",
+          "tag": "ul",
+          "attributes": {
+            "class": "sub-menu x-animated x-fadeInUp"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "#menu-item-9924",
+            "#menu-item-10005",
+            "#menu-item-8037",
+            "#menu-item-8035",
+            "#menu-item-8034",
+            "#menu-item-8033"
+          ],
+          "box": [
+            431,
+            154,
+            201,
+            469
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "0.632069",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "1099",
+            "transform": "matrix(1, 0, 0, 1, 0, 18.3965)"
+          }
+        },
+        {
+          "selector": "#menu-item-8037 > a",
+          "parent": "#menu-item-8037",
+          "tag": "a",
+          "attributes": {
+            "class": "x-menu-link"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "span.x-menu-link-text"
+          ],
+          "box": [
+            446,
+            231,
+            171,
+            30
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#menu-item-8037",
+          "parent": "#menu-item-8021 > ul",
+          "tag": "li",
+          "attributes": {
+            "id": "menu-item-8037",
+            "class": "menu-item menu-item-type-post_type menu-item-object-page menu-item-8037"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.x-menu-link"
+          ],
+          "box": [
+            446,
+            231,
+            171,
+            31
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(0, 86, 179); text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(0, 81, 119); text-decoration: none;",
+          "conditions": []
+        },
+        {
+          "selector": ".menu-horizontal .menu-item.x-active > .sub-menu, .menu-horizontal .menu-item:hover > .sub-menu",
+          "declarations": "display: block;",
+          "conditions": []
+        },
+        {
+          "selector": ".menu-horizontal .sub-menu .menu-item > a:hover",
+          "declarations": "background-color: rgb(36, 36, 36); color: rgb(153, 153, 153);",
+          "conditions": []
+        },
+        {
+          "selector": ".site-menu .menu-horizontal .menu-item:hover .sub-menu",
+          "declarations": "display: none;",
+          "conditions": [
+            "only screen and (max-width: 991px)"
+          ]
+        },
+        {
+          "selector": ".site-menu .menu-horizontal .sub-menu .menu-item > a:hover",
+          "declarations": "background-color: transparent;",
+          "conditions": [
+            "only screen and (max-width: 991px)"
+          ]
+        },
+        {
+          "selector": ".text-color, body, .testimonial-job-color-99 .gel-testimonial-job, .gel-testimonial-name-14 .gel-testimonial-bio, .gel-our-team .gel-our-team-social, .menu-horizontal .menu-item > a:hover, .menu-horizontal .menu-item > a:focus, .menu-horizontal .menu-current > a, .menu-horizontal .current-menu-parent > a, .menu-horizontal .current-menu-ancestor > a, .menu-horizontal .current-menu-item > a, .gel-fo",
+          "declarations": "color: rgb(153, 153, 153);",
+          "conditions": []
+        },
+        {
+          "selector": ".text-color, body, .testimonial-job-color-99 .gel-testimonial-job, .gel-testimonial-name-14 .gel-testimonial-bio, .gel-our-team .gel-our-team-social, .menu-horizontal .menu-item > a:hover, .menu-horizontal .menu-item > a:focus, .menu-horizontal .menu-current > a, .menu-horizontal .current-menu-parent > a, .menu-horizontal .current-menu-ancestor > a, .menu-horizontal .current-menu-item > a, .gel-fo",
+          "declarations": "color: rgb(95, 95, 95);",
+          "conditions": []
+        },
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(79, 207, 222);",
+          "conditions": []
+        },
+        {
+          "selector": ".g5core-header-customize ul.g5core-social-networks.g5core-social-networks a:hover, .g5core-header-desktop-wrapper .site-branding-text .site-title a:hover, .g5core-header-desktop-wrapper .menu-horizontal > .menu-current > a, .g5core-header-desktop-wrapper .menu-horizontal > .current-menu-parent > a, .g5core-header-desktop-wrapper .menu-horizontal > .current-menu-ancestor > a, .g5core-header-desktop",
+          "declarations": "color: rgb(153, 153, 153);",
+          "conditions": []
+        },
+        {
+          "selector": ".menu-horizontal .sub-menu .menu-item.menu-current > a, .menu-horizontal .sub-menu .menu-item.current-menu-parent > a, .menu-horizontal .sub-menu .menu-item.current-menu-ancestor > a, .menu-horizontal .sub-menu .menu-item.current-menu-item > a, .g5core-header-desktop-wrapper .menu-horizontal .sub-menu .menu-item > a:hover, .g5core-header-desktop-wrapper .menu-horizontal .sub-menu .menu-item .x-meg",
+          "declarations": "color: rgb(153, 153, 153); background-color: rgb(36, 36, 36);",
+          "conditions": []
+        }
+      ]
+    }
+  }
+}

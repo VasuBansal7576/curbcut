@@ -1,0 +1,44 @@
+{
+  "id": "unglobalcompact-org-tr2",
+  "url": "https://unglobalcompact.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, locate the textbox named “Search”. Enter the text test and confirm the field contains it. Do not submit.",
+  "startedAt": "2026-11-23T05:31:07.722Z",
+  "outcome": "fixed",
+  "phases": [
+    {
+      "stage": "before",
+      "status": "fail",
+      "runner": "kane",
+      "sessionId": "4f5b267c-d24a-42b3-ace1-4f820f11c118",
+      "credits": 12.3045875,
+      "kaneStatus": "fail",
+      "browserStatus": "fail",
+      "basis": "required-reader-control-unavailable",
+      "result": "proof/heldout-v3/runs/unglobalcompact-org-tr2/before/result.json"
+    },
+    {
+      "stage": "control",
+      "status": "pass",
+      "runner": "kane",
+      "sessionId": "41f120b2-7c1d-4413-a135-3b97bc64c070",
+      "credits": 16.534395,
+      "kaneStatus": "pass",
+      "browserStatus": "pass",
+      "basis": "trusted-control-text",
+      "result": "proof/heldout-v3/runs/unglobalcompact-org-tr2/control/result.json"
+    },
+    {
+      "stage": "attempt-1/after",
+      "status": "pass",
+      "runner": "kane",
+      "sessionId": "6170405c-3ccc-47f0-b294-bb9c625ef702",
+      "credits": 5.59609,
+      "kaneStatus": "pass",
+      "browserStatus": "pass",
+      "basis": "named-reader-interaction",
+      "result": "proof/heldout-v3/runs/unglobalcompact-org-tr2/attempt-1/after/result.json"
+    }
+  ],
+  "finishedAt": "2026-11-23T05:33:21.517Z"
+}

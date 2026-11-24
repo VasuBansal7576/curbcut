@@ -1,0 +1,31 @@
+{
+  "id": "report-d6870c43f8831c2d3b",
+  "url": "https://www.colorhexa.com/0066ff",
+  "persona": "keyboard-only",
+  "task": "Open the color picker using the swatch next to the color search field. Stop when the color spectrum panel and hue slider are visible.",
+  "site": "www.colorhexa.com",
+  "match": "https://www.colorhexa.com/0066ff",
+  "barrier": "The color swatch next to the search field is a clickable div that Tab skips, so keyboard users cannot reach it to open the color picker.",
+  "rules": [
+    {
+      "selector": "div.sp-replacer.sp-light",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "div.sp-replacer.sp-light",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "div.sp-replacer.sp-light",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "div.sp-replacer.sp-light",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

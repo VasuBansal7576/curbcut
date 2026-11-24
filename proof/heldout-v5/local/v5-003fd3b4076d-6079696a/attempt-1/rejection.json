@@ -1,0 +1,68 @@
+{
+  "reason": "Live selector validation failed. selector \"html.async-hide\": no matches",
+  "rules": [
+    {
+      "selector": "html.async-hide",
+      "action": "extendTimeout",
+      "value": 4000
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#mega-buy-sell-d",
+      "target": "#mega-panel-buy-sell-d",
+      "mode": "class",
+      "className": "show"
+    }
+  ],
+  "selectorValidation": {
+    "ok": false,
+    "matches": [
+      {
+        "index": 0,
+        "field": "selector",
+        "selector": "html.async-hide",
+        "count": 0,
+        "issue": "no matches",
+        "matches": []
+      },
+      {
+        "index": 1,
+        "field": "trigger",
+        "selector": "#mega-buy-sell-d",
+        "count": 1,
+        "issue": null,
+        "matches": [
+          {
+            "tag": "button",
+            "id": "mega-buy-sell-d",
+            "classes": [
+              "fmc-mega-nav-toggler",
+              "dropdown-toggle"
+            ],
+            "label": "Buy and Sell"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "field": "target",
+        "selector": "#mega-panel-buy-sell-d",
+        "count": 1,
+        "issue": null,
+        "matches": [
+          {
+            "tag": "div",
+            "id": "mega-panel-buy-sell-d",
+            "classes": [
+              "dropdown-menu",
+              "fmc-mega-panel",
+              "fmc-mega-panel--buy-sell"
+            ],
+            "role": "region",
+            "label": "Buy a Home Sell a Home Find a Loan Get Prequalified VA Loans FHA Loans USDA Loans Conventional Loans"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "barrier": "Tab traversal reaches the AI Workspace button, but focus leaves it before ArrowDown can be pressed.",
+  "rules": [
+    {
+      "selector": "div.ProductTabberTabs_panel--desktop__HhjAs",
+      "action": "injectCSS",
+      "value": {"display": "block"}
+    },
+    {
+      "selector": "#product-tab-0",
+      "action": "makeFocusable"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.ProductTabberTabs_tab-list__4f2_0[role=\"tablist\"][aria-orientation=\"vertical\"]",
+      "items": "button[role=\"tab\"][aria-controls^=\"product-tabpanel-\"]",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ]
+}

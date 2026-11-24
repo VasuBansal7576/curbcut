@@ -1,0 +1,52 @@
+{
+  "id": "v5-79bdf2d05394-bcd1c577",
+  "url": "https://kimiafarma.co.id/",
+  "persona": "keyboard-only",
+  "task": "Open “PROFIL” from keyboard focus or with Arrow Down and follow “Profil Perusahaan”. Confirm the public destination /id/sejarah-kimia-farma.",
+  "controlTask": "Hover “PROFIL”, click “Profil Perusahaan” and confirm /id/sejarah-kimia-farma.",
+  "observedSelector": "#navbarCollapse > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/id/sejarah-kimia-farma"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#navbarCollapse > div:nth-of-type(2) > div > ul > li:nth-of-type(2)",
+    "#navbarCollapse > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#navbarCollapse > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#navbarCollapse > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#navbarCollapse > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "kimiafarma.co.id",
+  "match": "https://kimiafarma.co.id/",
+  "barrier": "Pointer hover opens the PROFIL submenu, but keyboard focus and Arrow Down leave it at display: none, so the Profil Perusahaan link cannot be activated.",
+  "rules": [
+    {
+      "selector": "#navbarCollapse ul.main-nav > li:nth-of-type(2)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

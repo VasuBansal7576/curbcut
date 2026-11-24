@@ -1,0 +1,9 @@
+{
+  "barrier": "Tab skips the clickable Previous Slide control because #backBtn is a div with no tabindex attribute.",
+  "rules": [
+    {"selector": "#backBtn", "action": "makeFocusable"},
+    {"selector": "#backBtn", "action": "setRole", "value": "button"},
+    {"selector": "#backBtn", "action": "bindEnterToClick"},
+    {"selector": "#backBtn", "action": "restoreFocusOutline"}
+  ]
+}

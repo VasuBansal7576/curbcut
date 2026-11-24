@@ -1,0 +1,48 @@
+{
+  "id": "v5-36e674f09325-10a97cfe",
+  "url": "https://www.jostens.com/",
+  "persona": "keyboard-only",
+  "task": "Expand “Yearbook” with the keyboard and read “Students & Families”.",
+  "controlTask": "Click “Yearbook” and read “Students & Families”.",
+  "observedSelector": "#yearbook-dropdown > span",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#yearbook-level-2-nav-desktop > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1)",
+      "equals": "Students & Families"
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#yearbook-level-2-nav-desktop"
+  ],
+  "journey": [
+    {
+      "selector": "#yearbook-dropdown > span",
+      "action": "activate"
+    },
+    {
+      "selector": "#yearbook-level-2-nav-desktop > div:nth-of-type(1) > div:nth-of-type(1) > ul > li:nth-of-type(1)",
+      "action": "observe"
+    }
+  ],
+  "site": "www.jostens.com",
+  "match": "https://www.jostens.com/",
+  "barrier": "Tab traversal skipped the visible Yearbook span even though it had tabindex=\"0\", so the keyboard run never reached the control that reveals Students & Families.",
+  "rules": [
+    {
+      "selector": "body.default.unaffiliated:has(#onetrust-policy)",
+      "action": "removeFocusTrap"
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#yearbook-dropdown > span",
+      "target": "#yearbook-level-2-nav-desktop",
+      "mode": "display",
+      "display": "grid"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

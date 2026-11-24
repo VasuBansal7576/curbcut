@@ -1,0 +1,12 @@
+{
+  "barrier": "The Products trigger receives keyboard focus, but the dropdown stays hidden after Arrow Down, leaving the Wearables link unavailable for keyboard activation.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#w-dropdown-toggle-0",
+      "target": "#w-dropdown-list-0",
+      "mode": "class",
+      "className": "w--open"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "v5-9766a6ff14fe-aeb5b4d5",
+  "url": "https://mihanwebhost.com/",
+  "persona": "keyboard-only",
+  "task": "Open “میزبانی” from keyboard focus or with Arrow Down and follow “هاست لینوکس سی پنل آلمان”. Confirm the public destination /my/germany-cpanel-linux-web-host.",
+  "controlTask": "Hover “میزبانی”, click “هاست لینوکس سی پنل آلمان” and confirm /my/germany-cpanel-linux-web-host.",
+  "observedSelector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/my/germany-cpanel-linux-web-host"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2)",
+    "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#nav > ul > div:nth-of-type(1) > li:nth-of-type(2) > ul > li:nth-of-type(2) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "mihanwebhost.com",
+  "match": "https://mihanwebhost.com/",
+  "barrier": "The desktop CSS reveals the «میزبانی» submenu only when its parent list item is hovered. The trigger receives keyboard focus, but the submenu stays at display: none after focus and Arrow Down, leaving the Germany cPanel hosting link unavailable.",
+  "rules": [
+    {
+      "selector": "#nav > ul.ItemmenuNoruz03 > div.scrollnavmenu > li.haschild:nth-of-type(2)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

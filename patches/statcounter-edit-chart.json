@@ -1,0 +1,63 @@
+{
+  "id": "statcounter-edit-chart",
+  "url": "https://gs.statcounter.com/",
+  "persona": "keyboard-only",
+  "task": "Assert that the Edit Chart Data control below the main chart is keyboard focusable. Open it using the keyboard and verify the chart settings form shows the Region selector.",
+  "controlTask": "Click Edit Chart Data below the main chart. Verify the chart settings form shows the Region selector.",
+  "observedSelector": "#btn-edit-chart",
+  "successSelector": "form#statistics select#region",
+  "site": "gs.statcounter.com",
+  "match": "https://gs.statcounter.com/",
+  "barrier": "The snapshot exposes Edit Chart Data as text with tabIndex -1, leaving it out of the keyboard tab order.",
+  "rules": [
+    {
+      "selector": "#btn-edit-chart",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#btn-edit-chart",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#btn-edit-chart",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#btn-edit-chart",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane/statcounter-edit-chart/2026-11-22T10-51-35.095Z/recheck-without/recording.mp4",
+    "after": "proof/kane/statcounter-edit-chart/resume-2026-11-22T03-34-12.618Z/attempt-1/after/recording.mp4",
+    "control": "proof/kane/statcounter-edit-chart/resume-2026-11-22T03-30-36.444Z/control/recording.mp4",
+    "verifiedAt": "2026-11-22T03:35:35.039Z",
+    "kaneRunIds": [
+      "f55589b9-3c10-473c-ad12-810a1318a2a0",
+      "3440409a-ddc0-4aab-8970-c15388c4ef01",
+      "f48152cc-02a0-4c6b-bb2c-baac48869a75"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-22T03:35:35.039Z",
+      "event": "verified",
+      "before": "795097ec-b1b1-4511-9a13-2f68c5fa359b",
+      "control": "3440409a-ddc0-4aab-8970-c15388c4ef01",
+      "after": "f48152cc-02a0-4c6b-bb2c-baac48869a75"
+    },
+    {
+      "at": "2026-11-22T10:53:44.630Z",
+      "event": "rechecked",
+      "without": "fail",
+      "runId": "f55589b9-3c10-473c-ad12-810a1318a2a0",
+      "video": "proof/kane/statcounter-edit-chart/2026-11-22T10-51-35.095Z/recheck-without/recording.mp4",
+      "with": "pass",
+      "after": "603fcec9-a1a4-4497-956d-2678697066d7",
+      "afterVideo": "proof/kane/statcounter-edit-chart/2026-11-22T10-51-35.095Z/recheck-with/recording.mp4",
+      "replacedBaseline": "795097ec-b1b1-4511-9a13-2f68c5fa359b"
+    }
+  ]
+}

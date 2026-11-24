@@ -1,0 +1,53 @@
+{
+  "id": "v5-b95d3b36402f-8ebc4b9a",
+  "url": "https://helloclue.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Products” from keyboard focus or with Arrow Down and follow “Wearables”. Confirm the public destination /landing/wearables.",
+  "controlTask": "Hover “Products”, click “Wearables” and confirm /landing/wearables.",
+  "observedSelector": "#w-dropdown-toggle-0",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/landing/wearables"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#w-node-_45c1e753-39be-8327-7f2b-1038af146c70-af146c63 > div > div > div:nth-of-type(1) > nav > div:nth-of-type(1)",
+    "#w-dropdown-list-0"
+  ],
+  "journey": [
+    {
+      "selector": "#w-dropdown-toggle-0",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-toggle-0",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#w-dropdown-list-0 > a:nth-of-type(7)",
+      "action": "activate"
+    }
+  ],
+  "site": "helloclue.com",
+  "match": "https://helloclue.com/",
+  "barrier": "Products receives keyboard focus, but pressing Arrow Down leaves its dropdown at display: none, so the Wearables link is unavailable.",
+  "rules": [
+    {
+      "selector": "nav.nav-menu.w-nav-menu > .w-dropdown:has(> #w-dropdown-toggle-0)",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseover"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

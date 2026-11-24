@@ -1,0 +1,34 @@
+{
+  "id": "poets-org-tr2",
+  "url": "https://poets.org/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, locate the searchbox named “search”. Enter the text test and confirm the field contains it. Do not submit.",
+  "controlTask": "Click the public text field with the visible hint “search”, type test and confirm the value. Do not submit.",
+  "observedSelector": "input[placeholder=\"search\"]",
+  "requiredName": "search",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "input[placeholder=\"search\"]",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "searchbox"
+  },
+  "site": "poets.org",
+  "match": "https://poets.org/",
+  "barrier": "The Reading view searchbox has an empty accessible name despite displaying the placeholder “search”.",
+  "rules": [
+    {
+      "selector": "input[placeholder=\"search\"]",
+      "action": "addLabel",
+      "value": "search"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

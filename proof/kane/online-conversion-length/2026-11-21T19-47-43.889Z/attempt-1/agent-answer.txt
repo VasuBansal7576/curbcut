@@ -1,0 +1,11 @@
+{
+  "barrier": "At 320 pixels, the 503-pixel conversion table places the To listbox at x=329, entirely beyond the viewport.",
+  "rules": [
+    {"selector":"div.content_left","action":"injectCSS","value":{"width":"100%","min-width":"0","max-width":"100%","box-sizing":"border-box"}},
+    {"selector":"div.container","action":"injectCSS","value":{"width":"100%","min-width":"0","box-sizing":"border-box"}},
+    {"selector":"div.main_content","action":"injectCSS","value":{"width":"auto","min-width":"0","max-width":"100%"}},
+    {"selector":"form[name=\"MainForm\"] table","action":"injectCSS","value":{"display":"block","width":"100%","max-width":"100%","box-sizing":"border-box"}},
+    {"selector":"td","action":"injectCSS","value":{"display":"block","width":"auto","min-width":"0","white-space":"normal"}},
+    {"selector":"input","action":"injectCSS","value":{"max-width":"100%","box-sizing":"border-box"}}
+  ]
+}

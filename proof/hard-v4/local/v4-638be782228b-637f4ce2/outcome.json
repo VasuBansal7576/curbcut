@@ -1,0 +1,184 @@
+{
+  "registered": {
+    "commit": "7644b029615cf2254513eb6ee5f35920fb553ff7",
+    "blob": "40c1f35a40f11c7945cfd56c579822c6b4113a38"
+  },
+  "task": {
+    "id": "v4-638be782228b-637f4ce2",
+    "url": "https://www.napster.com/",
+    "persona": "keyboard-only",
+    "task": "Open “For Developers” from keyboard focus or with Arrow Down and follow “Documentation”. Confirm the public destination /docs.",
+    "controlTask": "Hover “For Developers”, click “Documentation” and confirm /docs.",
+    "observedSelector": "#w-dropdown-toggle-2",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/docs"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "div:nth-of-type(2) > div > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > nav > div:nth-of-type(3)",
+      "#w-dropdown-list-2"
+    ],
+    "journey": [
+      {
+        "selector": "#w-dropdown-toggle-2",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#w-dropdown-toggle-2",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#w-dropdown-list-2 > a:nth-of-type(2)",
+        "action": "activate"
+      }
+    ]
+  },
+  "registeredBefore": {
+    "status": "fail",
+    "reason": "Journey step 3 was unavailable after the prior step.",
+    "steps": [
+      {
+        "selector": "#w-dropdown-toggle-2",
+        "action": "focus",
+        "traversal": {
+          "reached": true,
+          "tabs": 4
+        }
+      },
+      {
+        "selector": "#w-dropdown-toggle-2",
+        "action": "key",
+        "key": "ArrowDown"
+      },
+      {
+        "selector": "#w-dropdown-list-2 > a:nth-of-type(2)",
+        "action": "activate"
+      }
+    ],
+    "url": "https://www.napster.com/"
+  },
+  "registeredControl": {
+    "status": "pass",
+    "reason": "The complete journey reached the declared outcome.",
+    "steps": [
+      {
+        "selector": "#w-dropdown-toggle-2",
+        "action": "focus"
+      },
+      {
+        "selector": "#w-dropdown-toggle-2",
+        "action": "key",
+        "key": "ArrowDown"
+      },
+      {
+        "selector": "#w-dropdown-list-2 > a:nth-of-type(2)",
+        "action": "activate"
+      }
+    ],
+    "url": "https://developers.napster.com/docs",
+    "checks": [
+      true
+    ]
+  },
+  "runner": "playwright",
+  "status": "locally-fixed",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-638be782228b-637f4ce2/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "fail",
+      "reason": "Journey step 3 was unavailable after the prior step.",
+      "file": "proof/hard-v4/local/v4-638be782228b-637f4ce2/before.json"
+    },
+    {
+      "name": "attempt-1/after",
+      "persona": "keyboard-only",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-638be782228b-637f4ce2/attempt-1/after.json"
+    },
+    {
+      "name": "attempt-1/control-with-patch",
+      "persona": "control",
+      "iteration": 1,
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/hard-v4/local/v4-638be782228b-637f4ce2/attempt-1/control-with-patch.json"
+    }
+  ],
+  "patch": {
+    "id": "v4-638be782228b-637f4ce2",
+    "url": "https://www.napster.com/",
+    "persona": "keyboard-only",
+    "task": "Open “For Developers” from keyboard focus or with Arrow Down and follow “Documentation”. Confirm the public destination /docs.",
+    "controlTask": "Hover “For Developers”, click “Documentation” and confirm /docs.",
+    "observedSelector": "#w-dropdown-toggle-2",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/docs"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "div:nth-of-type(2) > div > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > nav > div:nth-of-type(3)",
+      "#w-dropdown-list-2"
+    ],
+    "journey": [
+      {
+        "selector": "#w-dropdown-toggle-2",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#w-dropdown-toggle-2",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#w-dropdown-list-2 > a:nth-of-type(2)",
+        "action": "activate"
+      }
+    ],
+    "site": "www.napster.com",
+    "match": "https://www.napster.com/",
+    "barrier": "The For Developers button receives keyboard focus, but the dropdown remains at display:none after Arrow Down, so the Documentation link is unavailable.",
+    "rules": [
+      {
+        "action": "toggleOnActivate",
+        "trigger": "#w-dropdown-toggle-2",
+        "target": "#w-dropdown-list-2",
+        "mode": "display",
+        "display": "block"
+      }
+    ],
+    "status": "candidate",
+    "evidence": {},
+    "history": []
+  },
+  "proposal": "proof/hard-v4/local/v4-638be782228b-637f4ce2/attempt-1"
+}

@@ -1,0 +1,12 @@
+{
+  "barrier": "The «Продукты» link receives keyboard focus, but activating it leaves the products panel unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#menu-item-20688 > a",
+      "target": "#mega-products",
+      "mode": "display",
+      "display": "block"
+    }
+  ]
+}

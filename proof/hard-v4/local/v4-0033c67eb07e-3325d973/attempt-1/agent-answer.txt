@@ -1,0 +1,11 @@
+{
+  "barrier": "The Centers & Labs dialog opens on keyboard activation, but focus does not move to the dialog for the Escape step.",
+  "rules": [
+    {
+      "action": "dialogBehavior",
+      "dialog": "#block-design2-rebrandingtopcenters-modal",
+      "opener": "#block-design2-rebrandingtopcenters-menu",
+      "close": "#block-design2-rebrandingtopcenters-modal > div > div > div:nth-of-type(1) > div > a:nth-of-type(2)"
+    }
+  ]
+}

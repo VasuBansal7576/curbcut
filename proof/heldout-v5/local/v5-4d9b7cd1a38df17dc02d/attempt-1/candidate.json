@@ -1,0 +1,34 @@
+{
+  "id": "v5-4d9b7cd1a38df17dc02d",
+  "url": "https://www.kenyans.co.ke/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search Kenyans.co.ke” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search Kenyans.co.ke” field and type test without submitting.",
+  "observedSelector": "#edit-search",
+  "requiredName": "Search Kenyans.co.ke",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#edit-search",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.kenyans.co.ke",
+  "match": "https://www.kenyans.co.ke/",
+  "barrier": "The search input is a focusable textbox with no accessible name, so Reading view cannot identify it as “Search Kenyans.co.ke”.",
+  "rules": [
+    {
+      "selector": "#edit-search",
+      "action": "addLabel",
+      "value": "Search Kenyans.co.ke"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

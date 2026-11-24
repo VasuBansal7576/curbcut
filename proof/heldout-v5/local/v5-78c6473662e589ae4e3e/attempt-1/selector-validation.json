@@ -1,0 +1,62 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td:nth-of-type(1) > p",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "p",
+          "classes": [],
+          "label": "About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "center > table:nth-of-type(2)",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "table",
+          "classes": [],
+          "label": "Latest on Republic Acts Other Projects of the Foundation Executive Issuances Case Updates Related We"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "field": "selector",
+      "selector": "center > table:nth-of-type(2) > tbody, center > table:nth-of-type(2) > tbody > tr:nth-of-type(7), center > table:nth-of-type(2) > tbody > tr:nth-of-type(7) > td",
+      "count": 4,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "tbody",
+          "classes": [],
+          "label": "Latest on Republic Acts Other Projects of the Foundation Executive Issuances Case Updates Related We"
+        },
+        {
+          "tag": "tr",
+          "classes": [],
+          "label": "About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice"
+        },
+        {
+          "tag": "td",
+          "classes": [],
+          "label": "About Us Contact Us Acceptable Use Policy Disclaimer Privacy Notice Copyright Notice"
+        },
+        {
+          "tag": "td",
+          "classes": [],
+          "label": ""
+        }
+      ]
+    }
+  ]
+}

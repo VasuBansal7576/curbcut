@@ -1,0 +1,86 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#main-navigation > ul > li.nav__item > button[aria-controls=\"submenu-resources\"]",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "nav__link"
+          ],
+          "label": "Resources"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "container",
+      "selector": "#main-navigation > ul > li.nav__item:has(> #submenu-resources)",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "li",
+          "classes": [
+            "nav__item"
+          ],
+          "label": "ResourcesLearnSolution resources Stack Internal Stack AdsBlogResearch insightsSupportStack Internal "
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "items",
+      "selector": "button[aria-controls=\"submenu-resources\"], #submenu-resources a[href]",
+      "scope": "#main-navigation > ul > li.nav__item:has(> #submenu-resources)",
+      "count": 7,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "classes": [
+            "nav__link"
+          ],
+          "label": "Resources"
+        },
+        {
+          "tag": "a",
+          "classes": [
+            "d-block",
+            "py2"
+          ],
+          "label": "Stack Internal"
+        },
+        {
+          "tag": "a",
+          "classes": [
+            "d-block",
+            "py2"
+          ],
+          "label": "Stack Ads"
+        },
+        {
+          "tag": "a",
+          "classes": [
+            "d-block",
+            "py2"
+          ],
+          "label": "Blog"
+        },
+        {
+          "tag": "a",
+          "classes": [
+            "d-block",
+            "py2"
+          ],
+          "label": "Research insights"
+        }
+      ]
+    }
+  ]
+}

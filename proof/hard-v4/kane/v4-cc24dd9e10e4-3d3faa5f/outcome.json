@@ -1,0 +1,60 @@
+{
+  "task": {
+    "id": "v4-cc24dd9e10e4-3d3faa5f",
+    "url": "https://www.um-surabaya.ac.id/",
+    "persona": "keyboard-only",
+    "task": "Open “TENTANG UMSURA” from keyboard focus or with Arrow Down and follow “Penghargaan dan Prestasi”. Confirm the public destination /about/penghargaan.",
+    "controlTask": "Hover “TENTANG UMSURA”, click “Penghargaan dan Prestasi” and confirm /about/penghargaan.",
+    "observedSelector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/about/penghargaan"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#desktop-nav > ul > li:nth-of-type(1)",
+      "#desktop-nav > ul > li:nth-of-type(1) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#desktop-nav > ul > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#desktop-nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a:nth-of-type(5)",
+        "action": "activate"
+      }
+    ]
+  },
+  "status": "blocked",
+  "phases": [
+    {
+      "name": "before",
+      "balance": 1084.7612,
+      "after": 1051.2912,
+      "status": "blocked",
+      "runner": "kane",
+      "runId": "f5e4ffa4-fb35-4f29-8143-10b7687cd219",
+      "credits": 31.096775,
+      "reason": "Recorded browser access failed: Browser navigation error",
+      "video": "proof/hard-v4/kane/v4-cc24dd9e10e4-3d3faa5f/before/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-cc24dd9e10e4-3d3faa5f/before/c2c8188d-3436-4a76-a98a-c6d17bd4d582.evidence"
+    }
+  ],
+  "localProposal": "proof/hard-v4/local/v4-cc24dd9e10e4-3d3faa5f/attempt-1",
+  "reason": "Recorded browser access failed: Browser navigation error",
+  "finishedAt": "2026-11-23T16:08:45.097Z"
+}

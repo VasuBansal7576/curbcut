@@ -1,0 +1,10 @@
+{
+  "barrier": "The Cybersecurity trigger reports aria-expanded=true after Arrow Down, but its parent never gains the mega-toggle-on class that pointer hover adds. The submenu retains visibility:hidden, so Backup and Recovery is unavailable to the keyboard.",
+  "rules": [
+    {
+      "selector": "#mega-menu-item-1213",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseenter"
+    }
+  ]
+}

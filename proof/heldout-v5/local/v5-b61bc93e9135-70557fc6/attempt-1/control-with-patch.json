@@ -1,0 +1,2340 @@
+{
+  "runner": "playwright",
+  "status": "pass",
+  "reason": "The complete journey reached the declared outcome.",
+  "steps": [
+    {
+      "selector": "#header--main__nav > ul > li:nth-of-type(1) > a",
+      "action": "focus"
+    },
+    {
+      "selector": "#header--main__nav > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown"
+    },
+    {
+      "selector": "#header--menu__nav--dropdown__inner-67255 > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "url": "https://www.onecause.com/solutions/auction-events/event-fundraising/",
+  "checks": [
+    true
+  ],
+  "snapshot": {
+    "url": "https://www.onecause.com/",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body.home.wp-singular",
+    "context": {
+      "nodes": [
+        {
+          "selector": "#header--main__nav > ul > li:nth-of-type(1) > a",
+          "parent": "ul.header--main__nav--inner.d-flex > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "class": "dropdown-toggle nav-link"
+          },
+          "hoverHandlers": [],
+          "text": "Solutions",
+          "children": [],
+          "box": [
+            562,
+            119,
+            76,
+            100
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.header--main__nav--inner.d-flex > li:nth-of-type(1)",
+          "parent": "ul.header--main__nav--inner.d-flex",
+          "tag": "li",
+          "attributes": {
+            "class": "has-children has-dropdown menu-solutions"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.dropdown-toggle.nav-link",
+            "#header--menu__nav--dropdown-69614"
+          ],
+          "box": [
+            537,
+            119,
+            126,
+            100
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.header--main__nav--inner.d-flex",
+          "parent": "#header--main__nav",
+          "tag": "ul",
+          "attributes": {
+            "class": "header--main__nav--inner d-flex flex-column flex-lg-row align-items-lg-center justify-content-lg-end px-4 p-lg-0 m-0"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.has-children.has-dropdown",
+            "li.has-children.has-dropdown",
+            "li.has-children.has-dropdown",
+            "li.has-children.has-dropdown",
+            "li.nav-btn.menu-request-a-demo"
+          ],
+          "box": [
+            365,
+            119,
+            830,
+            100
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header--main__nav",
+          "parent": "div.header--main > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "nav",
+          "attributes": {
+            "class": "header--main__nav col",
+            "id": "header--main__nav",
+            "aria-label": "Main Menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.header--main__nav--inner.d-flex"
+          ],
+          "box": [
+            350,
+            119,
+            860,
+            100
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.header--main > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "div.header--main > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "row align-items-center justify-content-between"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.header--main__logo.col-auto",
+            "div.header--main__toggle.d-lg-none",
+            "#header--main__nav"
+          ],
+          "box": [
+            70,
+            118,
+            1140,
+            103
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.header--main > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.row.align-items-center"
+          ],
+          "box": [
+            70,
+            118,
+            1140,
+            103
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header--menu__nav--dropdown-69614",
+          "parent": "ul.header--main__nav--inner.d-flex > li:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "header--menu__nav--dropdown bg-white",
+            "id": "header--menu__nav--dropdown-69614"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.header--menu__nav--dropdown__outer.bg-white"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "none",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "9999",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header--menu__nav--dropdown__inner-67255 > li:nth-of-type(1) > a",
+          "parent": "li.menu-event-fundraising",
+          "tag": "a",
+          "attributes": {
+            "class": "nav-link"
+          },
+          "hoverHandlers": [],
+          "text": "Event Fundraising",
+          "children": [],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "li.menu-event-fundraising",
+          "parent": "#header--menu__nav--dropdown__inner-67255",
+          "tag": "li",
+          "attributes": {
+            "class": "menu-event-fundraising"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.nav-link"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header--menu__nav--dropdown__inner-67255",
+          "parent": "#header--menu__nav--dropdown-69614 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3)",
+          "tag": "ul",
+          "attributes": {
+            "class": "header--menu__nav--dropdown__inner",
+            "id": "header--menu__nav--dropdown__inner-67255"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.menu-event-fundraising",
+            "li.menu-mobile-bidding",
+            "li.menu-ticketing",
+            "li.menu-virtual-fundraising",
+            "li.menu-event-admin",
+            "li.menu-golf-events"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header--menu__nav--dropdown-69614 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3)",
+          "parent": "#header--menu__nav--dropdown-69614 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "has-children has-dropdown sub-sub-menu menu-auctions-events"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.dropdown-toggle.nav-link",
+            "button.header--main__nav--dropdown__toggle.d-flex",
+            "#header--menu__nav--dropdown__inner-67255"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header--menu__nav--dropdown-69614 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "header--menu__nav--dropdown__inner header--menu__nav--dropdown__inner--first col d-flex flex-column flex-lg-row justify-content-center"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.header--menu__nav--dropdown__inner--first__label.d-lg-none",
+            "li.has-children.has-dropdown",
+            "li.has-children.has-dropdown",
+            "li.has-children.has-dropdown",
+            "li.has-children.has-dropdown"
+          ],
+          "box": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(0, 86, 179); text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": ".nav-link:focus, .nav-link:hover",
+          "declarations": "text-decoration: none;",
+          "conditions": []
+        },
+        {
+          "selector": "a:hover, a:focus",
+          "declarations": "color: rgb(51, 125, 175); text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": ".header--main__nav--inner li:not(.nav-btn) > a:hover",
+          "declarations": "color: var(--green); font-weight: 600;",
+          "conditions": []
+        },
+        {
+          "selector": ".header--main__nav--inner > li:not(.nav-btn):hover > a.dropdown-toggle::after",
+          "declarations": "transform: translateX(10px);",
+          "conditions": []
+        },
+        {
+          "selector": ".header--main__nav--inner > li:hover::after",
+          "declarations": "content: \"\"; position: absolute; bottom: 0px; left: 0px; right: 0px; height: 35px; z-index: 1;",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".header--main__nav--inner > li:not(.nav-btn):hover > a",
+          "declarations": "font-weight: 600; color: var(--green);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": "body.home:not(.scrolling) .header--main__nav--inner > li:not(.nav-btn) > a, body.home:not(.scrolling) .header--main__nav--inner > li:not(.nav-btn) > a:visited, body.home:not(.scrolling) .header--main__nav--inner > li:not(.nav-btn):hover > a",
+          "declarations": "color: var(--white);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".header--main__nav--inner > li:hover > a::before",
+          "declarations": "visibility: visible; transform: scaleX(1);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".header--main__nav--inner > li:hover > a ~ .header--menu__nav--dropdown",
+          "declarations": "display: block;",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "selector": "#header--main__nav > ul > li:nth-of-type(1)",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 537,
+        "width": 126
+      },
+      {
+        "selector": "#header--menu__nav--dropdown-69614",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#header--main__nav > ul > li:nth-of-type(1) > a",
+        "role": "link",
+        "name": "Solutions",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 562,
+        "width": 76
+      },
+      {
+        "selector": "#header--menu__nav--dropdown__inner-67255 > li:nth-of-type(1) > a",
+        "role": "link",
+        "name": "Event Fundraising",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "ul.header--main__nav--inner.d-flex",
+        "role": "list",
+        "name": "",
+        "state": "",
+        "tag": "ul",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 365,
+        "width": 830
+      },
+      {
+        "selector": "body.home.wp-singular",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "body",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#top",
+        "role": "document",
+        "name": "",
+        "state": "",
+        "tag": "html",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "head",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "head",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "div.frame",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "script",
+        "role": "text",
+        "name": "(function(){function b(){!1===c&&(c=!0,Munchkin.init(\"527-FNH-344\",{asyncOnly:!0}))}var c=!1,a=document.createElement(\"script\");a.type=\"text/javascript\";a.async=!0;a.src=\"//munchkin.marketo.net/munchk",
+        "state": "",
+        "tag": "script",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "none",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "div.skip-link.screen-reader-text",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Text2Give®",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 1014,
+        "width": 126
+      },
+      {
+        "selector": "header.header",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tag": "header",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.header--alert-bar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container-fluid",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.col-12.text-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "p.p1",
+        "role": "text",
+        "name": "Exciting news! OneCause has joined forces with Bonterra. >",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 48,
+        "width": 1184
+      },
+      {
+        "selector": "div.header--top",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.col-12.d-flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "nav.header--top__nav.ml-lg-auto",
+        "role": "navigation",
+        "name": "Utility Menu",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 913,
+        "width": 197
+      },
+      {
+        "selector": "li.menu-login",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 913,
+        "width": 50
+      },
+      {
+        "selector": "a.nav-link",
+        "role": "link",
+        "name": "Request a Demo",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 1021,
+        "width": 174
+      },
+      {
+        "selector": "li.menu-contact-onecause",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 962,
+        "width": 148
+      },
+      {
+        "selector": "div.header--top__accessibility.d-flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1110,
+        "width": 49
+      },
+      {
+        "selector": "form.header--top__search.d-flex",
+        "role": "search",
+        "name": "",
+        "state": "",
+        "tag": "form",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1159,
+        "width": 36
+      },
+      {
+        "selector": "input.header--top__search--field",
+        "role": "searchbox",
+        "name": "Search",
+        "state": "",
+        "tag": "input",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1171,
+        "width": 24
+      },
+      {
+        "selector": "button.header--top__search--button.d-flex",
+        "role": "button",
+        "name": "Toggle Search",
+        "state": "",
+        "tag": "button",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 1171,
+        "width": 24
+      },
+      {
+        "selector": "img",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 1171,
+        "width": 24
+      },
+      {
+        "selector": "div.header--main",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.row.align-items-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.header--main__logo.col-auto",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 280
+      },
+      {
+        "selector": "img.header--main__logo--white",
+        "role": "img",
+        "name": "OneCause",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 85,
+        "width": 250
+      },
+      {
+        "selector": "#header--main__nav",
+        "role": "navigation",
+        "name": "Main Menu",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 350,
+        "width": 860
+      },
+      {
+        "selector": "li.has-children.has-dropdown",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 900,
+        "width": 96
+      },
+      {
+        "selector": "a.dropdown-toggle.nav-link",
+        "role": "link",
+        "name": "Plans",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "flex",
+        "left": 925,
+        "width": 46
+      },
+      {
+        "selector": "li.nav-btn.menu-request-a-demo",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 996,
+        "width": 199
+      },
+      {
+        "selector": "#main-content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "main.sections",
+        "role": "main",
+        "name": "",
+        "state": "",
+        "tag": "main",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "section.hero",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.hero--content.col-lg-5",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 570
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Powerful Fundraising Software to Raise and Reach More",
+        "state": "",
+        "tag": "h1",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 540
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Unlock the power of social networks to grow giving. Empower supporters to fundraise for your cause with easy-to-use software that helps reach, engage, and activate new donors.",
+        "state": "",
+        "tag": "p",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 350
+      },
+      {
+        "selector": "a.btn-white",
+        "role": "link",
+        "name": "REQUEST A DEMO",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 85,
+        "width": 174
+      },
+      {
+        "selector": "div.hero--image.col-lg-7",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 640,
+        "width": 570
+      },
+      {
+        "selector": "img.attachment-large.size-large",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 655,
+        "width": 540
+      },
+      {
+        "selector": "section.partner-logos.bg-off-white",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.col-12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.partner-logos--inner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 1110
+      },
+      {
+        "selector": "div.partner-logos--inner__slide",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 1956,
+        "width": 1895
+      },
+      {
+        "selector": "div.partner-logos--single",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline-block",
+        "left": 3666,
+        "width": 185
+      },
+      {
+        "selector": "img.attachment-medium.size-medium",
+        "role": "img",
+        "name": "Human Rights Campaign",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 3681,
+        "width": 155
+      },
+      {
+        "selector": "section.grid-rows.bg-white",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.grid-rows--inner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.grid-rows--row.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "flex",
+        "left": 70,
+        "width": 1140
+      },
+      {
+        "selector": "div.col-lg-6.align-self-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 640,
+        "width": 570
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Explore Our Event &\nOnline Fundraising Solutions",
+        "state": "",
+        "tag": "h2",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 1110
+      },
+      {
+        "selector": "a.btn",
+        "role": "link",
+        "name": "REQUEST A DEMO",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline-block",
+        "left": 85,
+        "width": 170
+      },
+      {
+        "selector": "img.aligncenter.size-full",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 655,
+        "width": 540
+      },
+      {
+        "selector": "section.solutions-overview",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tag": "section",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.solutions-overview--intro",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.solutions-overview--header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.sticky-marker",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.solutions-overview--header__inner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.solutions-overview--header__progressbar",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.solutions-overview--header__progressbar--inner",
+        "role": "progressbar",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "div.solutions-overview--header__navigation.bg-white",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "nav.solutions-overview--header__navigation--nav",
+        "role": "navigation",
+        "name": "Section Navigation",
+        "state": "",
+        "tag": "nav",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 1110
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tag": "li",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "list-item",
+        "left": 1014,
+        "width": 126
+      },
+      {
+        "selector": "div.solutions-overview--inner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.solutions-overview--single",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#solutions-overview--single-3-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.solutions-overview--single__top",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "img.w-100.rounded-0",
+        "role": "presentation",
+        "name": "",
+        "state": "",
+        "tag": "img",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "inline",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.solutions-overview--single__inner",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.solutions-overview--single__image.col-lg-8",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 450,
+        "width": 760
+      },
+      {
+        "selector": "div.wistia_responsive_padding",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 465,
+        "width": 730
+      },
+      {
+        "selector": "div.wistia_responsive_wrapper",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 465,
+        "width": 730
+      },
+      {
+        "selector": "div.wistia_embed.wistia_async_ywastrw3xz",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 730
+      },
+      {
+        "selector": "div.solutions-overview--single__text.col-lg-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 70,
+        "width": 380
+      },
+      {
+        "selector": "h3.solutions-overview--single__title",
+        "role": "heading",
+        "name": "Peer-to-Peer",
+        "state": "",
+        "tag": "h3",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 85,
+        "width": 350
+      },
+      {
+        "selector": "a.solutions-overview--single__link.arrow-link",
+        "role": "link",
+        "name": "Learn More",
+        "state": "",
+        "tag": "a",
+        "tabIndex": 0,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": true,
+        "display": "inline",
+        "left": 85,
+        "width": 141
+      },
+      {
+        "selector": "#solutions-overview--single-3-2",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.wistia_embed.wistia_async_l3kdpia7kh",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 465,
+        "width": 730
+      },
+      {
+        "selector": "#solutions-overview--single-3-3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tag": "div",
+        "tabIndex": -1,
+        "tabIndexAttribute": null,
+        "expanded": null,
+        "controls": null,
+        "hidden": false,
+        "hasHref": false,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      }
+    ],
+    "interactionContext": {
+      "nodes": [
+        {
+          "selector": "#header--main__nav > ul > li:nth-of-type(1) > a",
+          "parent": "ul.header--main__nav--inner.d-flex > li:nth-of-type(1)",
+          "tag": "a",
+          "attributes": {
+            "class": "dropdown-toggle nav-link"
+          },
+          "hoverHandlers": [],
+          "text": "Solutions",
+          "children": [],
+          "box": [
+            560,
+            119,
+            78,
+            100
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.header--main__nav--inner.d-flex > li:nth-of-type(1)",
+          "parent": "ul.header--main__nav--inner.d-flex",
+          "tag": "li",
+          "attributes": {
+            "class": "has-children has-dropdown menu-solutions"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.dropdown-toggle.nav-link",
+            "#header--menu__nav--dropdown-69614"
+          ],
+          "box": [
+            535,
+            119,
+            128,
+            100
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "ul.header--main__nav--inner.d-flex",
+          "parent": "#header--main__nav",
+          "tag": "ul",
+          "attributes": {
+            "class": "header--main__nav--inner d-flex flex-column flex-lg-row align-items-lg-center justify-content-lg-end px-4 p-lg-0 m-0"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.has-children.has-dropdown",
+            "li.has-children.has-dropdown",
+            "li.has-children.has-dropdown",
+            "li.has-children.has-dropdown",
+            "li.nav-btn.menu-request-a-demo"
+          ],
+          "box": [
+            365,
+            119,
+            830,
+            100
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header--main__nav",
+          "parent": "div.header--main > div:nth-of-type(1) > div:nth-of-type(1)",
+          "tag": "nav",
+          "attributes": {
+            "class": "header--main__nav col",
+            "id": "header--main__nav",
+            "aria-label": "Main Menu"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "ul.header--main__nav--inner.d-flex"
+          ],
+          "box": [
+            350,
+            119,
+            860,
+            100
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.header--main > div:nth-of-type(1) > div:nth-of-type(1)",
+          "parent": "div.header--main > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "row align-items-center justify-content-between"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.header--main__logo.col-auto",
+            "div.header--main__toggle.d-lg-none",
+            "#header--main__nav"
+          ],
+          "box": [
+            70,
+            118,
+            1140,
+            103
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "div.header--main > div:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "container"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.row.align-items-center"
+          ],
+          "box": [
+            70,
+            118,
+            1140,
+            103
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header--menu__nav--dropdown-69614",
+          "parent": "ul.header--main__nav--inner.d-flex > li:nth-of-type(1)",
+          "tag": "div",
+          "attributes": {
+            "class": "header--menu__nav--dropdown bg-white",
+            "id": "header--menu__nav--dropdown-69614"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "div.header--menu__nav--dropdown__outer.bg-white"
+          ],
+          "box": [
+            0,
+            220,
+            1280,
+            560
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "absolute",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "9999",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          }
+        },
+        {
+          "selector": "#header--menu__nav--dropdown__inner-67255 > li:nth-of-type(1) > a",
+          "parent": "li.menu-event-fundraising",
+          "tag": "a",
+          "attributes": {
+            "class": "nav-link"
+          },
+          "hoverHandlers": [],
+          "text": "Event Fundraising",
+          "children": [],
+          "box": [
+            363,
+            367,
+            165,
+            45
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "li.menu-event-fundraising",
+          "parent": "#header--menu__nav--dropdown__inner-67255",
+          "tag": "li",
+          "attributes": {
+            "class": "menu-event-fundraising"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.nav-link"
+          ],
+          "box": [
+            363,
+            367,
+            165,
+            45
+          ],
+          "style": {
+            "display": "list-item",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header--menu__nav--dropdown__inner-67255",
+          "parent": "#header--menu__nav--dropdown-69614 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3)",
+          "tag": "ul",
+          "attributes": {
+            "class": "header--menu__nav--dropdown__inner",
+            "id": "header--menu__nav--dropdown__inner-67255"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.menu-event-fundraising",
+            "li.menu-mobile-bidding",
+            "li.menu-ticketing",
+            "li.menu-virtual-fundraising",
+            "li.menu-event-admin",
+            "li.menu-golf-events"
+          ],
+          "box": [
+            363,
+            367,
+            165,
+            270
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header--menu__nav--dropdown-69614 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1) > li:nth-of-type(3)",
+          "parent": "#header--menu__nav--dropdown-69614 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "tag": "li",
+          "attributes": {
+            "class": "has-children has-dropdown sub-sub-menu menu-auctions-events"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "a.dropdown-toggle.nav-link",
+            "button.header--main__nav--dropdown__toggle.d-flex",
+            "#header--menu__nav--dropdown__inner-67255"
+          ],
+          "box": [
+            363,
+            280,
+            235,
+            357
+          ],
+          "style": {
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "static",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        },
+        {
+          "selector": "#header--menu__nav--dropdown-69614 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > ul:nth-of-type(1)",
+          "tag": "ul",
+          "attributes": {
+            "class": "header--menu__nav--dropdown__inner header--menu__nav--dropdown__inner--first col d-flex flex-column flex-lg-row justify-content-center"
+          },
+          "hoverHandlers": [],
+          "text": "",
+          "children": [
+            "li.header--menu__nav--dropdown__inner--first__label.d-lg-none",
+            "li.has-children.has-dropdown",
+            "li.has-children.has-dropdown",
+            "li.has-children.has-dropdown",
+            "li.has-children.has-dropdown"
+          ],
+          "box": [
+            70,
+            280,
+            1140,
+            357
+          ],
+          "style": {
+            "display": "flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "position": "relative",
+            "overflow-x": "visible",
+            "overflow-y": "visible",
+            "clip": "auto",
+            "clip-path": "none",
+            "pointer-events": "auto",
+            "z-index": "auto",
+            "transform": "none"
+          }
+        }
+      ],
+      "hoverRules": [
+        {
+          "selector": "a:hover",
+          "declarations": "color: rgb(0, 86, 179); text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": ".nav-link:focus, .nav-link:hover",
+          "declarations": "text-decoration: none;",
+          "conditions": []
+        },
+        {
+          "selector": "a:hover, a:focus",
+          "declarations": "color: rgb(51, 125, 175); text-decoration: underline;",
+          "conditions": []
+        },
+        {
+          "selector": ".header--main__nav--inner li:not(.nav-btn) > a:hover",
+          "declarations": "color: var(--green); font-weight: 600;",
+          "conditions": []
+        },
+        {
+          "selector": ".header--main__nav--inner > li:not(.nav-btn):hover > a.dropdown-toggle::after",
+          "declarations": "transform: translateX(10px);",
+          "conditions": []
+        },
+        {
+          "selector": ".header--main__nav--inner > li:hover::after",
+          "declarations": "content: \"\"; position: absolute; bottom: 0px; left: 0px; right: 0px; height: 35px; z-index: 1;",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".header--main__nav--inner > li:not(.nav-btn):hover > a",
+          "declarations": "font-weight: 600; color: var(--green);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": "body.home:not(.scrolling) .header--main__nav--inner > li:not(.nav-btn) > a, body.home:not(.scrolling) .header--main__nav--inner > li:not(.nav-btn) > a:visited, body.home:not(.scrolling) .header--main__nav--inner > li:not(.nav-btn):hover > a",
+          "declarations": "color: var(--white);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".header--main__nav--inner > li:hover > a::before",
+          "declarations": "visibility: visible; transform: scaleX(1);",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        },
+        {
+          "selector": ".header--main__nav--inner > li:hover > a ~ .header--menu__nav--dropdown",
+          "declarations": "display: block;",
+          "conditions": [
+            "(min-width: 992px)"
+          ]
+        }
+      ]
+    }
+  }
+}

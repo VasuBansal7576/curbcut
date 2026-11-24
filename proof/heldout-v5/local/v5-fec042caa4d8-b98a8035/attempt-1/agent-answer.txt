@@ -1,0 +1,16 @@
+{
+  "barrier": "Tab reached AI Workspace, but focus moved away before the first step could be verified, interrupting keyboard navigation in the vertical product tab list.",
+  "rules": [
+    {
+      "selector": "div.ProductTabberTabs_tab-list__4f2_0 > button[role=\"tab\"]",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.ProductTabberTabs_tab-list__4f2_0[role=\"tablist\"]",
+      "items": "button[role=\"tab\"][id^=\"product-tab-\"]",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ]
+}

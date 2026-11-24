@@ -1,0 +1,15 @@
+{
+  "barrier": "Keyboard activation opens Search, but focus remains on the page during the opening transition and Escape leaves the dialog open.",
+  "rules": [
+    {
+      "action": "makeFocusable",
+      "selector": "#searchModal"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#searchModal",
+      "opener": "#wrapper-navbar .header-menu-right-desktop > button.header-search-button[data-target='#searchModal']",
+      "close": "#searchModal > .modal-dialog > .modal-content > .modal-body > button#search-close[data-dismiss='modal']"
+    }
+  ]
+}

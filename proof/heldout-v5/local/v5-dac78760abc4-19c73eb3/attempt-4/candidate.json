@@ -1,0 +1,61 @@
+{
+  "id": "v5-dac78760abc4-19c73eb3",
+  "url": "https://www.pdq.com/",
+  "persona": "keyboard-only",
+  "task": "Use the keyboard to reach the open dialog, press Escape, and confirm it closed.",
+  "controlTask": "Confirm the dialog is open. Click “Close” to close it.",
+  "observedSelector": "#onetrust-close-btn-container > button",
+  "outcomeChecks": [
+    {
+      "kind": "hidden",
+      "selector": "#onetrust-banner-sdk > div"
+    }
+  ],
+  "barrierClass": 4,
+  "relatedSelectors": [
+    "#onetrust-banner-sdk > div",
+    "#onetrust-close-btn-container > button"
+  ],
+  "journey": [
+    {
+      "selector": "#onetrust-banner-sdk > div",
+      "action": "observe",
+      "checks": [
+        {
+          "kind": "visible",
+          "selector": "#onetrust-banner-sdk > div"
+        }
+      ]
+    },
+    {
+      "selector": "#onetrust-banner-sdk > div",
+      "action": "key",
+      "key": "Escape",
+      "pointer": {
+        "action": "click",
+        "selector": "#onetrust-close-btn-container > button"
+      }
+    }
+  ],
+  "site": "www.pdq.com",
+  "match": "https://www.pdq.com/",
+  "barrier": "With the Privacy dialog open, keyboard focus lands on Cookie settings and the dialog container never receives focus for the Escape step.",
+  "rules": [
+    {
+      "selector": "#onetrust-consent-sdk",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "#onetrust-banner-sdk > div[role=\"dialog\"]",
+      "action": "makeFocusable"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#onetrust-banner-sdk > div[role=\"dialog\"]",
+      "close": "#onetrust-close-btn-container > button"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

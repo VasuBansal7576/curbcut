@@ -1,0 +1,22 @@
+{
+  "barrier": "The clickable div for “What is a next of kin?” has tabIndex -1, so Tab skips the disclosure.",
+  "rules": [
+    {
+      "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "div.m-expand__trigger[aria-controls=\"expand-f28d3621-47c4-495b-8993-bd8210e37d66\"] > .m-expand-header",
+      "action": "restoreFocusOutline"
+    }
+  ]
+}

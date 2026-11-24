@@ -1,0 +1,16 @@
+{
+  "barrier": "The Tools trigger is an anchor without an href or explicit tabindex, so Tab skips it and keyboard users cannot open the dropdown containing Match taxa.",
+  "rules": [
+    {
+      "selector": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+      "action": "makeFocusable"
+    },
+    {
+      "trigger": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > a",
+      "target": "#navigation-shared > div > div:nth-of-type(2) > ul > li:nth-of-type(7)",
+      "action": "toggleOnActivate",
+      "mode": "class",
+      "className": "open"
+    }
+  ]
+}

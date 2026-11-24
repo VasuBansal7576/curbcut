@@ -1,0 +1,83 @@
+{
+  "id": "v5-c29e58c404c0-f9350d36",
+  "url": "https://www.snhu.edu/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, hover “Academic Programs”, click “Associate Degrees” and confirm /online-degrees/associate.",
+  "controlTask": "Hover “Academic Programs”, click “Associate Degrees” and confirm /online-degrees/associate.",
+  "observedSelector": "#menu > ul > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/online-degrees/associate"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#menu > ul > li:nth-of-type(1)",
+    "#menu > ul > li:nth-of-type(1) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#menu > ul > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#menu > ul > li:nth-of-type(1) > ul > li:nth-of-type(3) > ul:nth-of-type(2) > li:nth-of-type(2) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "www.snhu.edu",
+  "match": "https://www.snhu.edu/",
+  "barrier": "At 320 CSS pixels, the collapsed #menu and the desktop Academic Programs link both compute to display:none, so focus stays on the body. The submenu’s hover rule starts at 992 CSS pixels.",
+  "rules": [
+    {
+      "selector": "#menu",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "100%",
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child > a.nav-link.d-none.d-lg-block",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child > ul.dropdown-menu > li.row",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child > ul.dropdown-menu > li.row > ul:nth-of-type(2) > li:nth-of-type(2) > a.dropdown-item",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

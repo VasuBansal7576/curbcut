@@ -1,0 +1,80 @@
+{
+  "id": "v4-3b3f029309779f5896cf",
+  "url": "https://www.vpngate.net/en/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “Free Access to World Knowledge Beyond Government's Firewall.” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “Free Access to World Knowledge Beyond Government's Firewall.” at normal width.",
+  "observedSelector": "#vpngate_inner_contents_td > p:nth-of-type(3)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#vpngate_inner_contents_td > p:nth-of-type(3)",
+      "equals": "Free Access to World Knowledge Beyond Government's Firewall."
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#vpngate_inner_contents_td > p:nth-of-type(3)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.vpngate.net",
+  "match": "https://www.vpngate.net/en/",
+  "barrier": "The nested layout tables expand the passage to 1283 CSS pixels. It extends beyond the 320 CSS pixel viewport, where horizontal overflow is clipped.",
+  "rules": [
+    {
+      "selector": "#vpngate_main_table",
+      "action": "injectCSS",
+      "value": {
+        "display": "grid",
+        "grid-template-columns": "minmax(0, 1fr)",
+        "width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#vpngate_main_table_td",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto"
+      }
+    },
+    {
+      "selector": "#vpngate_inner_table",
+      "action": "injectCSS",
+      "value": {
+        "display": "grid",
+        "grid-template-columns": "minmax(0, 1fr)",
+        "width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "tr",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "selector": "#vpngate_inner_contents_td",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto"
+      }
+    },
+    {
+      "selector": "#vpngate_inner_contents_td > p:nth-of-type(3)",
+      "action": "injectCSS",
+      "value": {
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

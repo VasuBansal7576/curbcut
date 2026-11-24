@@ -1,0 +1,49 @@
+{
+  "id": "v5-3fb0d0336b20-915f3944",
+  "url": "https://www.productmadness.com/",
+  "persona": "keyboard-only",
+  "task": "Activate “Next” from the keyboard and confirm the next slide is shown.",
+  "controlTask": "Click “Next” and confirm the next slide is shown.",
+  "observedSelector": "section:nth-of-type(6) > div > div > div:nth-of-type(2) > div > div > button:nth-of-type(2)",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#slick-slide11.slick-current"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "section:nth-of-type(6) > div > div > div:nth-of-type(2) > div > div",
+    "section:nth-of-type(6) > div > div > div:nth-of-type(2) > div > div > button:nth-of-type(1)",
+    "#slick-slide11"
+  ],
+  "journey": [
+    {
+      "selector": "section:nth-of-type(6) > div > div > div:nth-of-type(2) > div > div > button:nth-of-type(2)",
+      "action": "activate"
+    },
+    {
+      "selector": "#slick-slide11.slick-current",
+      "action": "observe"
+    }
+  ],
+  "site": "www.productmadness.com",
+  "match": "https://www.productmadness.com/",
+  "barrier": "Tab reaches the native Next button, but the button is reported clipped or off-screen while focused. Pointer activation brings the button into view and advances the carousel.",
+  "rules": [
+    {
+      "selector": ".icons-text-slider .slider-row > .col-12 > .slider > button.slick-next.slick-arrow",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": ".icons-text-slider .slider-row > .col-12 > .slider",
+      "items": ".icons-text-slider .slider-row > .col-12 > .slider > button.slick-arrow",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

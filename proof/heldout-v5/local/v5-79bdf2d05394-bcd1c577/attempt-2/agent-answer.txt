@@ -1,0 +1,12 @@
+{
+  "barrier": "Hovering over PROFIL reveals its submenu, but keyboard focus and Arrow Down leave it at display: none, so Profil Perusahaan cannot be activated.",
+  "rules": [
+    {
+      "selector": "#navbarCollapse ul.main-nav > li:nth-of-type(2):focus-within > ul.level1-nav",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "task": {
+    "id": "v4-785089b6fcc2-26f574b6",
+    "url": "https://www.earthcam.com/",
+    "persona": "keyboard-only",
+    "task": "Expand “Menu” with the keyboard and read “Construction Monitoring”.",
+    "controlTask": "Click “Menu” and read “Construction Monitoring”.",
+    "observedSelector": "#ec-header > div > button:nth-of-type(2)",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#ec-header-nav > ul > li:nth-of-type(3)",
+        "equals": "Construction Monitoring"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#ec-header-nav"
+    ],
+    "journey": [
+      {
+        "selector": "#ec-header > div > button:nth-of-type(2)",
+        "action": "activate"
+      },
+      {
+        "selector": "#ec-header-nav > ul > li:nth-of-type(3)",
+        "action": "observe"
+      }
+    ]
+  },
+  "status": "unresolved",
+  "phases": [
+    {
+      "name": "before",
+      "balance": 1248.579,
+      "after": 1222.0756,
+      "status": "fail",
+      "runner": "kane",
+      "runId": "280e0e65-dc2f-4ee5-8100-7ee001de1f4b",
+      "credits": 24.350762500000002,
+      "reason": "Task step 1 failed: the visible desktop header has links but no Menu control to expand.",
+      "video": "proof/hard-v4/kane/v4-785089b6fcc2-26f574b6/before/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-785089b6fcc2-26f574b6/before/d2a1f777-920d-49fc-bec1-7e6f04e54d34.evidence",
+      "basis": "recorded-journey-failed"
+    },
+    {
+      "name": "control",
+      "balance": 1222.0756,
+      "after": 1203.8984,
+      "status": "inconclusive",
+      "runner": "kane",
+      "runId": "f6eec9df-037b-4356-a056-9ea2ef830d2a",
+      "credits": 15.903995,
+      "reason": "complete-journey-not-witnessed",
+      "video": "proof/hard-v4/kane/v4-785089b6fcc2-26f574b6/control/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-785089b6fcc2-26f574b6/control/e759503e-3a9a-4431-bfb7-116b36e80ecf.evidence",
+      "basis": "complete-journey-not-witnessed"
+    },
+    {
+      "name": "attempt-1/after",
+      "balance": 1203.8984,
+      "after": 1176.3997,
+      "status": "fail",
+      "runner": "kane",
+      "runId": "df73a457-0b3a-4567-a5de-2c9b9903d199",
+      "credits": 25.2849525,
+      "reason": "Step 1 failed: privacy dialog traps focus and no visible Menu control is present.",
+      "video": "proof/hard-v4/kane/v4-785089b6fcc2-26f574b6/attempt-1/after/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-785089b6fcc2-26f574b6/attempt-1/after/f0febae5-ae4c-45af-9bb0-e4f496698fe2.evidence",
+      "basis": "recorded-journey-failed"
+    }
+  ],
+  "localProposal": "proof/hard-v4/local/v4-785089b6fcc2-26f574b6/attempt-1",
+  "reason": "Step 1 failed: privacy dialog traps focus and no visible Menu control is present.",
+  "finishedAt": "2026-11-23T16:00:57.554Z"
+}

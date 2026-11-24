@@ -1,0 +1,73 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#menu.collapse.navbar-collapse",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "menu",
+          "classes": [
+            "collapse",
+            "navbar-collapse"
+          ],
+          "label": "Search Academic Programs Academic Programs Back Academic Programs By Location Campus Online Degrees "
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child > a.nav-link.d-none.d-lg-block",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "a",
+          "classes": [
+            "nav-link",
+            "d-none",
+            "d-lg-block"
+          ],
+          "label": "Academic Programs"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "field": "selector",
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child > ul.dropdown-menu > li.row, #menu > ul.navbar-nav > li.nav-menuItem:first-child:is(:hover, :focus-within) > ul.dropdown-menu",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "li",
+          "classes": [
+            "row"
+          ],
+          "label": "By Location Campus Online Degrees By Degree Level Associate Degrees Bachelor's Degrees Master's Degr"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "field": "selector",
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child > ul.dropdown-menu > li.row > ul:nth-of-type(2) > li:nth-of-type(2) > a.dropdown-item",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "a",
+          "classes": [
+            "dropdown-item"
+          ],
+          "label": "Associate Degrees"
+        }
+      ]
+    }
+  ]
+}

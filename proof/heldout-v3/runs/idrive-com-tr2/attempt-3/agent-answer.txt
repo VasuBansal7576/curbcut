@@ -1,0 +1,9 @@
+{
+  "barrier": "The Cloud Applications Backup menu trigger is a span with no tabindex, so Tab skips it and Enter cannot activate it.",
+  "rules": [
+    {"selector":"header > nav > div > ul > li:nth-of-type(6) > span","action":"makeFocusable"},
+    {"selector":"header > nav > div > ul > li:nth-of-type(6) > span","action":"setRole","value":"button"},
+    {"selector":"header > nav > div > ul > li:nth-of-type(6) > span","action":"bindEnterToClick"},
+    {"selector":"header > nav > div > ul > li:nth-of-type(6) > span","action":"restoreFocusOutline"}
+  ]
+}

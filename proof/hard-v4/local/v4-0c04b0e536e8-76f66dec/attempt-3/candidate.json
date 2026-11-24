@@ -1,0 +1,44 @@
+{
+  "id": "v4-0c04b0e536e8-76f66dec",
+  "url": "https://www.hillspet.com/",
+  "persona": "keyboard-only",
+  "task": "Expand “Shop” with the keyboard and read “Food & Environmental Sensitivities”.",
+  "controlTask": "Click “Shop” and read “Food & Environmental Sensitivities”.",
+  "observedSelector": "#container-4cb7125efe > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > nav > div > div > div > div > ul > li:nth-of-type(1) > button",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#shop-sublist-desktop > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > ul > li:nth-of-type(3)",
+      "equals": "Food & Environmental Sensitivities"
+    }
+  ],
+  "barrierClass": 2,
+  "relatedSelectors": [
+    "#shop-sublist-desktop"
+  ],
+  "journey": [
+    {
+      "selector": "#container-4cb7125efe > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > nav > div > div > div > div > ul > li:nth-of-type(1) > button",
+      "action": "activate"
+    },
+    {
+      "selector": "#shop-sublist-desktop > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > ul > li:nth-of-type(3)",
+      "action": "observe"
+    }
+  ],
+  "site": "www.hillspet.com",
+  "match": "https://www.hillspet.com/",
+  "barrier": "The Shop button is keyboard-focusable, but keyboard activation leaves its submenu at display:none, keeping Food & Environmental Sensitivities unavailable.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#container-4cb7125efe > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > nav > div > div > div > div > ul > li:nth-of-type(1) > button",
+      "target": "#shop-sublist-desktop",
+      "mode": "display",
+      "display": "block"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

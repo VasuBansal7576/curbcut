@@ -1,0 +1,13 @@
+{
+  "barrier": "Tab reaches the native Next button, but its 25-pixel-wide focus target at the carousel’s outer right edge is reported clipped or off-screen.",
+  "rules": [
+    {
+      "selector": ".icons-text-slider .slider-row > .col-12 > .slider > button.slick-next.slick-arrow[aria-label=\"Next\"]",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ]
+}

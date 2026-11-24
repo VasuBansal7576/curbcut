@@ -1,0 +1,12 @@
+{
+  "barrier": "At 320 CSS pixels, the 600-pixel-wide #container extends beyond the viewport and the page clips the passage on the right.",
+  "rules": [
+    {
+      "selector": "#container",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%"
+      }
+    }
+  ]
+}

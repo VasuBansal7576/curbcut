@@ -1,0 +1,10 @@
+{
+  "barrier": "The visible, focusable GhanaWeb search input has a searchbox role but no accessible name, so it cannot be found by name in Reading view.",
+  "rules": [
+    {
+      "selector": "#pagecontainer .top-bar form.flexsearch--form > input.search--input",
+      "action": "addLabel",
+      "value": "Search GhanaWeb"
+    }
+  ]
+}

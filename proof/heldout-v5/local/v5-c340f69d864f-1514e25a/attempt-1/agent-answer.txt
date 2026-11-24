@@ -1,0 +1,1 @@
+{"barrier":"Keyboard activation opens the sign-in dialog, but focus does not move into it in time for the Escape step.","rules":[{"action":"dialogBehavior","dialog":"#authentificationModal","opener":"header .toggle-account > a[data-bs-target=\"#authentificationModal\"]","close":"#authentificationModal .modal-header > button[data-bs-dismiss=\"modal\"]"}]}

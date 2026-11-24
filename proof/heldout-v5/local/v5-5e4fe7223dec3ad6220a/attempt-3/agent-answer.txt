@@ -1,0 +1,28 @@
+{
+  "barrier": "The passage is visible in the 566-pixel desktop layout, but the 320-pixel run could not see it. The narrow layout may hide the paragraph or constrain its height.",
+  "rules": [
+    {
+      "selector": "#app > div:nth-of-type(2)",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#app > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > p",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "max-width": "100%",
+        "box-sizing": "border-box",
+        "height": "auto",
+        "max-height": "none",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "barrier": "At 320 CSS pixels, the heading is 304 pixels wide inside a 240-pixel flex container. The passage starts at x=40 and extends to x=344, where the page clips it.",
+  "rules": [
+    {
+      "selector": "h1.cb1aj5rZH",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ]
+}

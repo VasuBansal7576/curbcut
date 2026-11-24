@@ -1,0 +1,38 @@
+{
+  "id": "nullprogram-reflow",
+  "url": "https://nullprogram.com/blog/2016/11/17/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “echo -ne '\\x31\\xFF\\xB8\\x3C\\x00\\x00\\x00\\x0F\\x05' >> true”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "controlTask": "At normal width, read the passage beginning “echo -ne '\\x31\\xFF\\xB8\\x3C\\x00\\x00\\x00\\x0F\\x05' >> true” and verify all its text is visible without horizontal scrolling.",
+  "observedSelector": "main > article > pre:nth-of-type(35)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "main > article > pre:nth-of-type(35)",
+      "equals": "echo -ne '\\x31\\xFF\\xB8\\x3C\\x00\\x00\\x00\\x0F\\x05' >> true"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "main > article > pre:nth-of-type(35)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "nullprogram.com",
+  "match": "https://nullprogram.com/blog/2016/11/17/",
+  "barrier": "At 320 CSS pixels, white-space: pre prevents the code line from wrapping, giving the block a scroll width of 513 pixels and a client width of 270 pixels.",
+  "rules": [
+    {
+      "selector": "main > article > pre:nth-of-type(35)",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "pre-wrap",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

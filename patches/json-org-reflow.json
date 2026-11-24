@@ -1,0 +1,55 @@
+{
+  "id": "json-org-reflow",
+  "url": "https://www.json.org/json-en.html",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “character '0020' . '10FFFF' - '\"' - '\\' '\\' escape”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "controlTask": "At normal width, read the passage beginning “character '0020' . '10FFFF' - '\"' - '\\' '\\' escape” and verify all its text is visible without horizontal scrolling.",
+  "observedSelector": "#box > p:nth-of-type(11)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#box > p:nth-of-type(11)",
+      "equals": "character '0020' . '10FFFF' - '\"' - '\\' '\\' escape"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#box > p:nth-of-type(11)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.json.org",
+  "match": "https://www.json.org/json-en.html",
+  "barrier": "At 320 CSS pixels, the side-by-side grid in #spec places the grammar passage from x=220 to x=433, so its right side is clipped.",
+  "rules": [
+    {
+      "selector": "#spec",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane/json-org-reflow/heldout-v2/before/recording.mp4",
+    "after": "proof/kane/json-org-reflow/heldout-v2/attempt-1/after/recording.mp4",
+    "control": "proof/kane/json-org-reflow/heldout-v2/control/recording.mp4",
+    "verifiedAt": "2026-11-22T15:14:25.305Z",
+    "kaneRunIds": [
+      "958472fb-1e46-4b72-9362-607e7279835e",
+      "09eb1f7d-1193-42dc-836a-37d12b02df0b",
+      "78b04afa-fc98-4b0d-a235-492f5e6024d4"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-22T15:14:25.305Z",
+      "event": "verified",
+      "before": "958472fb-1e46-4b72-9362-607e7279835e",
+      "control": "09eb1f7d-1193-42dc-836a-37d12b02df0b",
+      "after": "78b04afa-fc98-4b0d-a235-492f5e6024d4"
+    }
+  ]
+}

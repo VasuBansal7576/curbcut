@@ -1,0 +1,68 @@
+{
+  "id": "v5-fec042caa4d8-b98a8035",
+  "url": "https://www.tricentis.com/",
+  "persona": "keyboard-only",
+  "task": "Focus “AI Workspace”, move once with ArrowDown, activate “Agentic test automation” and read its panel.",
+  "controlTask": "Click “Agentic test automation” and read its panel.",
+  "observedSelector": "#product-tab-0",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#product-tabpanel-1"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "#__next > div:nth-of-type(1) > section:nth-of-type(2) > div > div > div > div:nth-of-type(1) > div:nth-of-type(2)",
+    "[role=tab]",
+    "#product-tabpanel-1"
+  ],
+  "journey": [
+    {
+      "selector": "#product-tab-0",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#product-tab-0",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "click",
+        "selector": "#product-tab-1"
+      }
+    },
+    {
+      "selector": "#product-tab-1",
+      "action": "activate",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#product-tabpanel-1",
+      "action": "observe"
+    }
+  ],
+  "site": "www.tricentis.com",
+  "match": "https://www.tricentis.com/",
+  "barrier": "Tab reached AI Workspace, but focus moved away before the first step could be verified, interrupting keyboard navigation in the vertical product tab list.",
+  "rules": [
+    {
+      "selector": "div.ProductTabberTabs_tab-list__4f2_0 > button[role=\"tab\"]",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.ProductTabberTabs_tab-list__4f2_0[role=\"tablist\"]",
+      "items": "button[role=\"tab\"][id^=\"product-tab-\"]",
+      "orientation": "vertical",
+      "activate": "focus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

@@ -1,0 +1,13 @@
+{
+  "barrier": "At 320 CSS pixels, the paragraph inherits the 735-pixel width of its container, and horizontal clipping on the page hides the text beyond the viewport.",
+  "rules": [
+    {
+      "selector": "#container",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ]
+}

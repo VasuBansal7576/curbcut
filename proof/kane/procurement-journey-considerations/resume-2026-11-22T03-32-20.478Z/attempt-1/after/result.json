@@ -1,0 +1,1880 @@
+{
+  "status": "pass",
+  "runId": "97f4a622-59cc-4d3f-a327-2421fc656e19",
+  "reason": "Objective completed",
+  "summary": "The requested “Considerations Before Proceeding” section was opened using keyboard navigation.\nA cookie notice that covered the page was dismissed by choosing Reject with the keyboard.\nThe first question, “Are the good/services you are buying business critical?”, became visible.\nKeyboard navigation was continued to the “Considerations Before Proceeding” heading after “Thresholds,” and the section was activated with Enter.\nThe page displayed the completion message: “You are now ready to begin Route 1 of the Procurement Journey.”",
+  "resultCode": 100,
+  "reasonCode": "success.complete",
+  "credits": 59.389042499999995,
+  "exitCode": 0,
+  "steps": [
+    "press_key: Press Tab",
+    "press_key: Press Tab",
+    "press_key: Press Tab",
+    "press_key: Press Tab",
+    "press_key: Press Tab",
+    "press_key: PRIMARY: press the Tab key to move from Thresholds to Considerations Before Proc",
+    "press_key: PRIMARY: Open Considerations Before Proceeding with Tab and Enter; role=button; ",
+    "analyze: ANALYZE(visual, 'the first question, Are the good/services you are buying busine",
+    "assert: the first question, Are the good/services you are buying business critical?, is ",
+    "wait: PRIMARY: confirm Considerations Before Proceeding remains focused and expanded a",
+    "analyze: the final result is verified on the page",
+    "assert: the final result is verified on the page"
+  ],
+  "evidencePack": "proof/kane/procurement-journey-considerations/resume-2026-11-22T03-32-20.478Z/attempt-1/after/f1c02e1d-8cac-43e4-8e3f-679933b81394.evidence",
+  "evidenceValid": true,
+  "observedOutcome": {
+    "selector": ".accordion__container > .accordion__item:first-child .accordion__content ol li:first-child",
+    "visible": true
+  },
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "keyboard-only",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920,
+      "keys": {
+        "tab": 36,
+        "activate": 3,
+        "other": 0
+      },
+      "patchId": "procurement-journey-considerations"
+    },
+    "readerVisible": false,
+    "width": 1280,
+    "fixtureFixed": false,
+    "ruleMatches": [
+      {
+        "action": "makeFocusable",
+        "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+        "count": 1
+      },
+      {
+        "action": "setRole",
+        "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+        "count": 1
+      },
+      {
+        "action": "bindEnterToClick",
+        "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+        "count": 1
+      },
+      {
+        "action": "restoreFocusOutline",
+        "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+        "count": 1
+      }
+    ]
+  },
+  "snapshot": {
+    "url": "https://www.procurementjourney.scot/index.php/route-1/route-1-introduction",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "div.accordion__title.accordion__title--theme",
+    "nodes": [
+      {
+        "selector": ".accordion__container > .accordion__item:first-child .accordion__title",
+        "role": "button",
+        "name": "Considerations Before Proceeding",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "div.accordion__item.accordion--active",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "#ccc",
+        "role": "region",
+        "name": "Cookie preferences",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 0
+      },
+      {
+        "selector": "#ccc-icon",
+        "role": "button",
+        "name": "Set cookie preferences",
+        "state": "expanded false",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 0,
+        "width": 80
+      },
+      {
+        "selector": "a.visually-hidden.focusable",
+        "role": "link",
+        "name": "Skip to main content",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 0,
+        "width": 1
+      },
+      {
+        "selector": "div.dialog-off-canvas-main-canvas",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "header.header.header__container",
+        "role": "banner",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 30,
+        "width": 1220
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 30,
+        "width": 1220
+      },
+      {
+        "selector": "div.col.d-flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 30,
+        "width": 1220
+      },
+      {
+        "selector": "nav.nav.nav__header",
+        "role": "navigation",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 413,
+        "width": 822
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 428,
+        "width": 237
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Privacy Policy and Content Disclaimer",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 428,
+        "width": 237
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 684,
+        "width": 67
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Contact us",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 684,
+        "width": 67
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 771,
+        "width": 141
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Provide Site Feedback",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 771,
+        "width": 141
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 931,
+        "width": 138
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Notify Me Of Changes",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 931,
+        "width": 138
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 1088,
+        "width": 51
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "gov.scot",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 1088,
+        "width": 51
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline-block",
+        "left": 1159,
+        "width": 76
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Accessibility",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 1159,
+        "width": 76
+      },
+      {
+        "selector": "div.row.d-flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 30,
+        "width": 1220
+      },
+      {
+        "selector": "div.col-8.col-lg-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 30,
+        "width": 610
+      },
+      {
+        "selector": "a.branding",
+        "role": "link",
+        "name": "Procurement Journey",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 40,
+        "width": 312
+      },
+      {
+        "selector": "div.col.col-lg-6",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 640,
+        "width": 610
+      },
+      {
+        "selector": "#desktop-search-container",
+        "role": "region",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 650,
+        "width": 590
+      },
+      {
+        "selector": "form.form.form__search",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 650,
+        "width": 590
+      },
+      {
+        "selector": "#search-query-desktop",
+        "role": "textbox",
+        "name": "Search",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 650,
+        "width": 509
+      },
+      {
+        "selector": "button.form__submit.form__submit--search-button",
+        "role": "button",
+        "name": "Search",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1159,
+        "width": 81
+      },
+      {
+        "selector": "div.container-fluid.px-0",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.row.row--border-remove-md",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.col.d-flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#block-mainmenu",
+        "role": "navigation",
+        "name": "Main menu",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#block-mainmenu-menu",
+        "role": "heading",
+        "name": "Main menu",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1
+      },
+      {
+        "selector": "li.leaf.text-route-1",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 0,
+        "width": 100
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Route 1",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 0,
+        "width": 100
+      },
+      {
+        "selector": "li.leaf.text-route-2",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 100,
+        "width": 100
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Route 2",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 100,
+        "width": 100
+      },
+      {
+        "selector": "li.leaf.text-route-3",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 199,
+        "width": 100
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Route 3",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 199,
+        "width": 100
+      },
+      {
+        "selector": "li.leaf.expanded",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 299,
+        "width": 131
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "ESPD/SPD",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 299,
+        "width": 131
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 430,
+        "width": 92
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "EU Exit",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 430,
+        "width": 92
+      },
+      {
+        "selector": "li.leaf.expanded",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 522,
+        "width": 172
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Additional Resources",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 522,
+        "width": 172
+      },
+      {
+        "selector": "li.leaf.expanded",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 693,
+        "width": 151
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Document Library",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 693,
+        "width": 151
+      },
+      {
+        "selector": "li.leaf.expanded",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 845,
+        "width": 154
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Tools & Templates",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 845,
+        "width": 154
+      },
+      {
+        "selector": "li.leaf.expanded",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 999,
+        "width": 189
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Care & Support Services",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 999,
+        "width": 189
+      },
+      {
+        "selector": "li.leaf.expanded",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 1187,
+        "width": 93
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "PCIP",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 1187,
+        "width": 93
+      },
+      {
+        "selector": "div.container-fluid.breadcrumbs",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.row.row--border-bottom",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 30,
+        "width": 1220
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 30,
+        "width": 1220
+      },
+      {
+        "selector": "div.col.breadcrumbs__container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 30,
+        "width": 1220
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Route 1",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 40,
+        "width": 51
+      },
+      {
+        "selector": "div.theme--route-1",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "div.container.content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 30,
+        "width": 1220
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 30,
+        "width": 1220
+      },
+      {
+        "selector": "div.col-lg-3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 30,
+        "width": 305
+      },
+      {
+        "selector": "div.mb-4",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 40,
+        "width": 285
+      },
+      {
+        "selector": "div.secondary-nav__header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 40,
+        "width": 285
+      },
+      {
+        "selector": "h5.secondary-nav__title",
+        "role": "heading",
+        "name": "Route 1",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 65,
+        "width": 245
+      },
+      {
+        "selector": "#journey-nav",
+        "role": "navigation",
+        "name": "Development Route 1 Introduction Prepare a Brief Identify Suppliers Tender Prepare Documents Receive and Evaluate Responses Contract Contract Award Contract and Supplier Management Lessons Learned",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 40,
+        "width": 285
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 75,
+        "width": 240
+      },
+      {
+        "selector": "li.leaf.active-trail",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 95,
+        "width": 212
+      },
+      {
+        "selector": "a.active-trail.active",
+        "role": "link",
+        "name": "Route 1 Introduction",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 95,
+        "width": 204
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 95,
+        "width": 212
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Prepare a Brief",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 95,
+        "width": 204
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 95,
+        "width": 212
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Identify Suppliers",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 95,
+        "width": 204
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 75,
+        "width": 240
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 95,
+        "width": 212
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Prepare Documents",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 95,
+        "width": 204
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 95,
+        "width": 212
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Receive and Evaluate Responses",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 95,
+        "width": 204
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 75,
+        "width": 240
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 95,
+        "width": 212
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Contract Award",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 95,
+        "width": 204
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 95,
+        "width": 212
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Contract and Supplier Management",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 95,
+        "width": 204
+      },
+      {
+        "selector": "li.leaf",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 95,
+        "width": 212
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Lessons Learned",
+        "state": "",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 95,
+        "width": 204
+      },
+      {
+        "selector": "div.col-lg-9.px-xl-8",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 335,
+        "width": 915
+      },
+      {
+        "selector": "div.row.no-gutter",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 381,
+        "width": 823
+      },
+      {
+        "selector": "div.col-md-12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 381,
+        "width": 823
+      },
+      {
+        "selector": "h2.content__title.mt-3",
+        "role": "heading",
+        "name": "Route 1 Introduction",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "#block-procurement-journey-default-system-main",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "article.node.node--type-content-pages",
+        "role": "article",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "div.node__content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "div.col-md-12",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "div.print-version.d-flex",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 401,
+        "width": 783
+      },
+      {
+        "selector": "#block-printablelinksblockcontent",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1095,
+        "width": 89
+      },
+      {
+        "selector": "li.print",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1095,
+        "width": 89
+      },
+      {
+        "selector": "a.print__link.print__link--pdf",
+        "role": "link",
+        "name": "View PDF",
+        "state": "",
+        "tabIndex": 0,
+        "display": "flex",
+        "left": 1122,
+        "width": 62
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 381,
+        "width": 823
+      },
+      {
+        "selector": "div.col.rte",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 381,
+        "width": 823
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 431,
+        "width": 763
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 431,
+        "width": 763
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 431,
+        "width": 763
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 431,
+        "width": 763
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 431,
+        "width": 763
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "If you are unable to estimate the value of a contract that contract will be explicitly made subject to the procurement rules.  More information can be found at",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 391,
+        "width": 773
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "What Procurement Route Should I Choose?",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 391,
+        "width": 671
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 391,
+        "width": 671
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "and",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 464,
+        "width": 28
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Thresholds",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 497,
+        "width": 86
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 497,
+        "width": 86
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": ".",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 583,
+        "width": 4
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 381,
+        "width": 823
+      },
+      {
+        "selector": "div.col.cnbl",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 381,
+        "width": 823
+      },
+      {
+        "selector": "div.block__basic.block__documents",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "div.d-lg-flex.align-items-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 421,
+        "width": 743
+      },
+      {
+        "selector": "div",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 252
+      },
+      {
+        "selector": "h3.block__h3.block__h3--large",
+        "role": "heading",
+        "name": "Route 1 Objectives",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 252
+      },
+      {
+        "selector": "div.block__link.block__link--small",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 252
+      },
+      {
+        "selector": "div.paragraphs-items.paragraphs-items-field-content-block-title-link",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 252
+      },
+      {
+        "selector": "div.block__content.block__content--rte",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 743
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 743
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 461,
+        "width": 703
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 461,
+        "width": 703
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 461,
+        "width": 703
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 461,
+        "width": 703
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 381,
+        "width": 823
+      },
+      {
+        "selector": "div.col",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 381,
+        "width": 823
+      },
+      {
+        "selector": "div.accordion.accordion__container",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "div.row.no-gutter",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 411,
+        "width": 763
+      },
+      {
+        "selector": "div.col-10",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 411,
+        "width": 636
+      },
+      {
+        "selector": "h4.accordion__title--h4.title__h4",
+        "role": "heading",
+        "name": "Considerations Before Proceeding",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 616
+      },
+      {
+        "selector": "div.col-2.text-right",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1047,
+        "width": 127
+      },
+      {
+        "selector": "div.accordion__content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 743
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 461,
+        "width": 703
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 461,
+        "width": 703
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 461,
+        "width": 703
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 743
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 743
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 743
+      },
+      {
+        "selector": "strong",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 421,
+        "width": 724
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "procurement rules",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 469,
+        "width": 140
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 743
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Points for consideration",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 743
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 461,
+        "width": 703
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 461,
+        "width": 703
+      },
+      {
+        "selector": "li",
+        "role": "listitem",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "list-item",
+        "left": 461,
+        "width": 703
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 743
+      },
+      {
+        "selector": "div.accordion__item",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "div.accordion__title.accordion__title--theme",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "div.row.no-gutter",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 411,
+        "width": 763
+      },
+      {
+        "selector": "div.col-10",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 411,
+        "width": 636
+      },
+      {
+        "selector": "h4.accordion__title--h4.title__h4",
+        "role": "heading",
+        "name": "Audit Requirements",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 616
+      },
+      {
+        "selector": "div.col-2.text-right",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1047,
+        "width": 127
+      },
+      {
+        "selector": "div.accordion__item",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "div.accordion__title.accordion__title--theme",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "div.row.no-gutter",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 411,
+        "width": 763
+      },
+      {
+        "selector": "div.col-10",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 411,
+        "width": 636
+      },
+      {
+        "selector": "h4.accordion__title--h4.title__h4",
+        "role": "heading",
+        "name": "Quote Distribution, Procurement Documents and Contract Award",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 616
+      },
+      {
+        "selector": "div.col-2.text-right",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 1047,
+        "width": 127
+      },
+      {
+        "selector": "div.row",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 381,
+        "width": 823
+      },
+      {
+        "selector": "div.col.cnbl",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 381,
+        "width": 823
+      },
+      {
+        "selector": "div.block__basic.block__documents",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 391,
+        "width": 803
+      },
+      {
+        "selector": "div.d-lg-flex.align-items-center",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "flex",
+        "left": 421,
+        "width": 743
+      },
+      {
+        "selector": "div.block__documents--icon.block__content--icon",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 421,
+        "width": 100
+      },
+      {
+        "selector": "div.ml-lg-3",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 537,
+        "width": 386
+      },
+      {
+        "selector": "p.block__subtitle.d-none",
+        "role": "text",
+        "name": "Quickfire Guide",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 538,
+        "width": 385
+      },
+      {
+        "selector": "h3.block__h3.block__h3--large",
+        "role": "heading",
+        "name": "Do you have what you need?",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 537,
+        "width": 386
+      },
+      {
+        "selector": "div.block__link.block__link--small",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 537,
+        "width": 386
+      }
+    ]
+  },
+  "video": "proof/kane/procurement-journey-considerations/resume-2026-11-22T03-32-20.478Z/attempt-1/after/recording.mp4"
+}

@@ -1,0 +1,21 @@
+{
+  "barrier": "Tab reaches Progressive rollout, but the focused button is reported off-screen in the scrollable Inside the console tab strip. The visibility check fails before ArrowRight can run.",
+  "rules": [
+    {
+      "selector": "div.screen-tour > div.screen-tour-tabs[role=\"tablist\"][aria-label=\"Inside the console\"]",
+      "action": "injectCSS",
+      "value": {"display": "block", "height": "auto"}
+    },
+    {
+      "selector": "div.screen-tour-tabs[aria-label=\"Inside the console\"] > button.screen-tour-tab[role=\"tab\"]",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "div.screen-tour > div.screen-tour-tabs[role=\"tablist\"][aria-label=\"Inside the console\"]",
+      "items": "div.screen-tour-tabs[aria-label=\"Inside the console\"] > button.screen-tour-tab[role=\"tab\"]",
+      "orientation": "both",
+      "activate": "focus"
+    }
+  ]
+}

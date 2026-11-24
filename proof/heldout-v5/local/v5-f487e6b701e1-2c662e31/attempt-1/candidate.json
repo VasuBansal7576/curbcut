@@ -1,0 +1,52 @@
+{
+  "id": "v5-f487e6b701e1-2c662e31",
+  "url": "https://caddyserver.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Documentation” from keyboard focus or with Arrow Down and follow “Install How to install Caddy on your computer or server”. Confirm the public destination /docs/install.",
+  "controlTask": "Hover “Documentation”, click “Install How to install Caddy on your computer or server” and confirm /docs/install.",
+  "observedSelector": "div > header > div:nth-of-type(2) > nav > ul > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/docs/install"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "div > header > div:nth-of-type(2) > nav > ul > li:nth-of-type(1)",
+    "div > header > div:nth-of-type(2) > nav > ul > li:nth-of-type(1) > div"
+  ],
+  "journey": [
+    {
+      "selector": "div > header > div:nth-of-type(2) > nav > ul > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "div > header > div:nth-of-type(2) > nav > ul > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "div > header > div:nth-of-type(2) > nav > ul > li:nth-of-type(1) > div > div:nth-of-type(1) > a:nth-of-type(1)",
+      "action": "activate"
+    }
+  ],
+  "site": "caddyserver.com",
+  "match": "https://caddyserver.com/",
+  "barrier": "The Documentation dropdown becomes visible only when its parent list item is hovered. Focusing the Documentation link and pressing Arrow Down leaves the Install link hidden.",
+  "rules": [
+    {
+      "selector": "header.dark-header > div.navbar.wrapper > nav > ul > li.dropdown-trigger",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

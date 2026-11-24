@@ -1,0 +1,52 @@
+{
+  "id": "v5-cc3cea40d183-52a181e1",
+  "url": "https://www.kaizhenglaw.com/",
+  "persona": "keyboard-only",
+  "task": "Activate “Next slide” from the keyboard and confirm the next slide is shown.",
+  "controlTask": "Click “Next slide” and confirm the next slide is shown.",
+  "observedSelector": "#swiper1 > div:nth-of-type(4)",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#swiper1 > div:nth-of-type(1) > div:nth-of-type(3).swiper-slide-active"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "#swiper1",
+    "#swiper1 > div:nth-of-type(3)",
+    "#swiper1 > div:nth-of-type(1) > div:nth-of-type(3)"
+  ],
+  "journey": [
+    {
+      "selector": "#swiper1 > div:nth-of-type(4)",
+      "action": "activate"
+    },
+    {
+      "selector": "#swiper1 > div:nth-of-type(1) > div:nth-of-type(3).swiper-slide-active",
+      "action": "observe"
+    }
+  ],
+  "site": "www.kaizhenglaw.com",
+  "match": "https://www.kaizhenglaw.com/",
+  "barrier": "Keyboard activation made the next slide active, but its rendered height was zero. The same slide had a height of 318 pixels after pointer activation.",
+  "rules": [
+    {
+      "selector": "#swiper1 > .swiper-wrapper > .swiper-slide",
+      "action": "injectCSS",
+      "value": {
+        "height": "auto"
+      }
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": "#swiper1",
+      "items": "#swiper1 > .swiper-button-prev, #swiper1 > .swiper-button-next",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

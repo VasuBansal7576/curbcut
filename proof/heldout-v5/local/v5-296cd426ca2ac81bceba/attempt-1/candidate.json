@@ -1,0 +1,77 @@
+{
+  "id": "v5-296cd426ca2ac81bceba",
+  "url": "https://www.cgbchina.com.cn/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “广发银行发布第140届广交会专属金融服务方案 2026.10.12” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “广发银行发布第140届广交会专属金融服务方案 2026.10.12” at normal width.",
+  "observedSelector": "div:nth-of-type(9) > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(2)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "div:nth-of-type(9) > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(2)",
+      "equals": "广发银行发布第140届广交会专属金融服务方案 2026.10.12"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "div:nth-of-type(9) > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(2)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.cgbchina.com.cn",
+  "match": "https://www.cgbchina.com.cn/",
+  "barrier": "At 320 CSS pixels, the fixed-width news layout places the 526-pixel-wide list beside the floated news image. The target row starts 378 pixels from the left edge, entirely outside the visible viewport.",
+  "rules": [
+    {
+      "selector": "div.news > div.inner, div.news > div.inner > div.content",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "div.news > div.inner > div.content > div.col.gz_news",
+      "action": "injectCSS",
+      "value": {
+        "width": "auto",
+        "min-width": "0"
+      }
+    },
+    {
+      "selector": "div.col.gz_news > div.avator.fl, div.col.gz_news > ul.news_list",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.col.gz_news > div.avator.fl img",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "height": "auto"
+      }
+    },
+    {
+      "selector": "div.col.gz_news > ul.news_list > li.news_item, div.col.gz_news > ul.news_list > li.news_item > a",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box",
+        "height": "auto",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

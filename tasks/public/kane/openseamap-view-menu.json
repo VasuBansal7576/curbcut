@@ -1,0 +1,9 @@
+{
+  "id": "openseamap-view-menu",
+  "url": "https://map.openseamap.org/",
+  "persona": "keyboard-only",
+  "observedSelector": "#topmenu > ul > li:has(> img[alt=\"view\"])",
+  "successSelector": "#checkLayerSeamark",
+  "task": "First assert the View menu control in the main map toolbar is keyboard focusable. Open View with Tab and Enter. Verify the Sea Marks checkbox appears as an available layer control.",
+  "controlTask": "Hover over the View menu in the map toolbar. Verify the menu opens and makes the Sea Marks layer checkbox visible."
+}

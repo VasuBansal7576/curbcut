@@ -1,0 +1,620 @@
+{
+  "planDigest": "db6bd47d1cf65c206c675f6a096acb295c907669d2394a5716d0656737035d2a",
+  "freezeCommit": "5f89f2a40b64f9bc044b847def8b9ea3f5b450fe",
+  "startedAt": "2026-11-22T10:21:35.945Z",
+  "startCredits": 8499.4761,
+  "threshold": 3699.4761,
+  "model": "gpt-6.2-sol",
+  "attempts": 3,
+  "finishedAt": "2026-11-22T10:35:21.494Z",
+  "endCredits": 7641.0388,
+  "spentCredits": 858.4372999999996,
+  "fixed": 0,
+  "total": 26,
+  "results": [
+    {
+      "id": "axios-open-search",
+      "url": "https://www.axios.com/",
+      "category": "news",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check the open search control in the Axios header is in the sequential keyboard focus order. Open search with Tab and Enter. Verify a search text field is visible. Stay on the public homepage.",
+      "outcome": "Kane error",
+      "reason": "Hard blocker: captcha",
+      "sessions": [
+        {
+          "taskId": "axios-open-search",
+          "phase": "before",
+          "sessionId": "a763ddd0-e366-43c0-8a1a-b095c2c8496e",
+          "status": "inconclusive",
+          "reason": "Hard blocker: captcha",
+          "credits": 11.666400000000001,
+          "result": "proof/kane/axios-open-search/heldout/before/result.json",
+          "recording": "proof/kane/axios-open-search/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/axios-open-search/heldout/before/799602bd-c9cc-417c-865f-3cf99567746b.evidence"
+        }
+      ]
+    },
+    {
+      "id": "csmonitor-main-menu",
+      "url": "https://www.csmonitor.com/",
+      "category": "news",
+      "persona": "low-vision",
+      "task": "At 320px width, assert the Main Menu control in the Christian Science Monitor header fits within the visible width without horizontal scrolling. Activate Main Menu and verify a navigation section such as World or USA is visible.",
+      "outcome": "no barrier",
+      "reason": "Objective completed",
+      "sessions": [
+        {
+          "taskId": "csmonitor-main-menu",
+          "phase": "before",
+          "sessionId": "8df8bb5f-cbcc-4bf3-8757-08a7eb8f8bc7",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 22.900889999999997,
+          "result": "proof/kane/csmonitor-main-menu/heldout/before/result.json",
+          "recording": "proof/kane/csmonitor-main-menu/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/csmonitor-main-menu/heldout/before/24738809-f923-411d-bae8-2e3f19eaa3cd.evidence"
+        }
+      ]
+    },
+    {
+      "id": "aljazeera-menu",
+      "url": "https://www.aljazeera.com/",
+      "category": "news",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert the exact row ‘button · Show more news sections’ is present. Activate it and verify additional news section links become available.",
+      "outcome": "no barrier",
+      "reason": "Objective completed",
+      "sessions": [
+        {
+          "taskId": "aljazeera-menu",
+          "phase": "before",
+          "sessionId": "9ffdbaf8-0d00-4f76-a5fe-24570167a4d9",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 30.959139999999998,
+          "result": "proof/kane/aljazeera-menu/heldout/before/result.json",
+          "recording": "proof/kane/aljazeera-menu/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/aljazeera-menu/heldout/before/466ec942-aa05-452a-8308-cd67cce55a52.evidence"
+        }
+      ]
+    },
+    {
+      "id": "rei-open-search",
+      "url": "https://www.rei.com/",
+      "category": "retail",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check the Search control in the REI header is keyboard focusable. Open it with Tab and Enter and verify the product search text field is visible. Stay on the public homepage.",
+      "outcome": "Kane error",
+      "reason": "page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.rei.com/\nCall log:\n\u001b[2m  - navigating to \"https://www.rei.com/\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "sessions": []
+    },
+    {
+      "id": "jcrew-shop-nav",
+      "url": "https://www.jcrew.com/",
+      "category": "retail",
+      "persona": "low-vision",
+      "task": "At 320px width, assert the toggle hamburger menu control fits within the visible width. Activate it without horizontal scrolling and verify Shop Women or another category control becomes available.",
+      "outcome": "no barrier",
+      "reason": "Objective completed",
+      "sessions": [
+        {
+          "taskId": "jcrew-shop-nav",
+          "phase": "before",
+          "sessionId": "f37900fe-d13c-42ff-aa87-d3f20e8a4e04",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 22.800357499999997,
+          "result": "proof/kane/jcrew-shop-nav/heldout/before/result.json",
+          "recording": "proof/kane/jcrew-shop-nav/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/jcrew-shop-nav/heldout/before/ed764a6b-68b2-4816-9a26-ba68f1c95bb9.evidence"
+        }
+      ]
+    },
+    {
+      "id": "crateandbarrel-search",
+      "url": "https://www.crateandbarrel.com/",
+      "category": "retail",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert the exact row for the Search textbox or Search button is present. Activate Search and verify a search input accepts text without signing in.",
+      "outcome": "Kane error",
+      "reason": "AP determined agent is stuck — no viable actions remain",
+      "sessions": [
+        {
+          "taskId": "crateandbarrel-search",
+          "phase": "before",
+          "sessionId": "6bf6cb2a-3bb3-41ad-a7d1-9041a1539418",
+          "status": "inconclusive",
+          "reason": "AP determined agent is stuck — no viable actions remain",
+          "credits": 14.6885875,
+          "result": "proof/kane/crateandbarrel-search/heldout/before/result.json",
+          "recording": "proof/kane/crateandbarrel-search/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/crateandbarrel-search/heldout/before/3137645b-12a5-4656-afe8-2825a4e69c35.evidence"
+        }
+      ]
+    },
+    {
+      "id": "patagonia-product-cta",
+      "url": "https://www.patagonia.com/home/",
+      "category": "retail",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check a primary Shop Now or category CTA on the Patagonia homepage is in sequential keyboard focus order. Activate it with Tab and Enter and verify a product collection page loads. Stop before cart or checkout.",
+      "outcome": "Kane error",
+      "reason": "The recorded baseline did not include the required trusted Tab traversal.",
+      "sessions": [
+        {
+          "taskId": "patagonia-product-cta",
+          "phase": "before",
+          "sessionId": "279df7de-8e5d-4b8d-b693-6b67bb5daa2b",
+          "status": "inconclusive",
+          "reason": "The recorded baseline did not include the required trusted Tab traversal.",
+          "credits": 12.940935,
+          "result": "proof/kane/patagonia-product-cta/heldout/before/result.json",
+          "recording": "proof/kane/patagonia-product-cta/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/patagonia-product-cta/heldout/before/3bb5caa5-545f-47ac-afb1-a884d56c76fe.evidence"
+        }
+      ]
+    },
+    {
+      "id": "tfl-plan-journey",
+      "url": "https://tfl.gov.uk/",
+      "category": "travel",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. If a cookie dialog covers the page, check Accept only essential cookies is keyboard focusable and activate it. then check the Plan a journey link is in sequential keyboard focus order, activate it, and verify the journey planner page or form is visible.",
+      "outcome": "Kane error",
+      "reason": "The browser did not observe a trusted Enter or Space keypress.",
+      "sessions": [
+        {
+          "taskId": "tfl-plan-journey",
+          "phase": "before",
+          "sessionId": "1e472370-41aa-43fe-b690-da34dc0b6b38",
+          "status": "inconclusive",
+          "reason": "The browser did not observe a trusted Enter or Space keypress.",
+          "credits": 68.47077750000001,
+          "result": "proof/kane/tfl-plan-journey/heldout/before/result.json",
+          "recording": "proof/kane/tfl-plan-journey/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/tfl-plan-journey/heldout/before/269a94d2-de48-4345-bb22-d52b85bcb259.evidence"
+        }
+      ]
+    },
+    {
+      "id": "nationalrail-timetable",
+      "url": "https://www.nationalrail.co.uk/",
+      "category": "travel",
+      "persona": "low-vision",
+      "task": "At 320px width, assert the Open search control fits within the visible width without horizontal scrolling. Activate Open search and verify a search field becomes available, or assert the From station field of the journey planner fits and accepts text.",
+      "outcome": "no barrier",
+      "reason": "Objective completed",
+      "sessions": [
+        {
+          "taskId": "nationalrail-timetable",
+          "phase": "before",
+          "sessionId": "ec7c9eb0-bc6a-41a7-a089-eb85e01a83ac",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 25.3915625,
+          "result": "proof/kane/nationalrail-timetable/heldout/before/result.json",
+          "recording": "proof/kane/nationalrail-timetable/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/nationalrail-timetable/heldout/before/c551698a-1dac-4846-9bda-7f69cd883c86.evidence"
+        }
+      ]
+    },
+    {
+      "id": "rome2rio-search",
+      "url": "https://www.rome2rio.com/",
+      "category": "travel",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert the exact row for the Place search textbox is present. Focus that textbox and verify it is editable without creating an account.",
+      "outcome": "Kane error",
+      "reason": "Hard blocker: captcha",
+      "sessions": [
+        {
+          "taskId": "rome2rio-search",
+          "phase": "before",
+          "sessionId": "2e201137-e1f1-4039-8f4a-dfaede7eca9a",
+          "status": "inconclusive",
+          "reason": "Hard blocker: captcha",
+          "credits": 12.2433825,
+          "result": "proof/kane/rome2rio-search/heldout/before/result.json",
+          "recording": "proof/kane/rome2rio-search/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/rome2rio-search/heldout/before/d70198bd-8e54-4ef4-9c0e-fe12d4b4b3aa.evidence"
+        }
+      ]
+    },
+    {
+      "id": "usa-gov-search",
+      "url": "https://www.usa.gov/",
+      "category": "government",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert a Search textbox row is present. Type taxes into Search and submit. Verify search results for taxes appear. Stay on the public site.",
+      "outcome": "Kane error",
+      "reason": "Could not confirm a single recorded page with the required persona and repair state.",
+      "sessions": [
+        {
+          "taskId": "usa-gov-search",
+          "phase": "before",
+          "sessionId": "36c42031-29cc-4898-badc-3efbfa3e5f92",
+          "status": "inconclusive",
+          "reason": "Could not confirm a single recorded page with the required persona and repair state.",
+          "credits": 16.9941,
+          "result": "proof/kane/usa-gov-search/heldout/before/result.json",
+          "recording": "proof/kane/usa-gov-search/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/usa-gov-search/heldout/before/62a889d9-06e6-41a8-a57e-0272b51eab48.evidence"
+        }
+      ]
+    },
+    {
+      "id": "govuk-services",
+      "url": "https://www.gov.uk/",
+      "category": "government",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check the Show search menu control is in sequential keyboard focus order. Activate it with Tab and Enter, then verify a Search GOV.UK text field is visible. Optionally type passport and submit to verify results.",
+      "outcome": "Kane error",
+      "reason": "The browser did not observe a trusted Enter or Space keypress.",
+      "sessions": [
+        {
+          "taskId": "govuk-services",
+          "phase": "before",
+          "sessionId": "c85f07f6-3bf4-4128-9f9e-4af640728ba4",
+          "status": "inconclusive",
+          "reason": "The browser did not observe a trusted Enter or Space keypress.",
+          "credits": 45.24528500000001,
+          "result": "proof/kane/govuk-services/heldout/before/result.json",
+          "recording": "proof/kane/govuk-services/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/govuk-services/heldout/before/7424cd31-9439-4b39-862e-acfb8e555144.evidence"
+        }
+      ]
+    },
+    {
+      "id": "canada-ca-menu",
+      "url": "https://www.canada.ca/en.html",
+      "category": "government",
+      "persona": "low-vision",
+      "task": "At 320px width, assert the main Travel theme link or the site search field fits within the visible width. Activate Travel without horizontal scrolling and verify the Travel theme page opens, or focus search and verify it accepts text.",
+      "outcome": "no barrier",
+      "reason": "Objective completed",
+      "sessions": [
+        {
+          "taskId": "canada-ca-menu",
+          "phase": "before",
+          "sessionId": "e92db1d2-22d8-465f-8207-bfec88ddb56f",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 24.0493775,
+          "result": "proof/kane/canada-ca-menu/heldout/before/result.json",
+          "recording": "proof/kane/canada-ca-menu/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/canada-ca-menu/heldout/before/f3076612-23ec-4caa-bc9e-104f38428887.evidence"
+        }
+      ]
+    },
+    {
+      "id": "consumerfinance-tools",
+      "url": "https://www.consumerfinance.gov/",
+      "category": "government",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check the Search the consumerfinance.gov website control is keyboard focusable. Activate search or open Consumer Tools with Tab and Enter and verify a tools list or search UI opens. Stop before any form submission that requires personal data.",
+      "outcome": "Kane error",
+      "reason": "Could not confirm a single recorded page with the required persona and repair state.",
+      "sessions": [
+        {
+          "taskId": "consumerfinance-tools",
+          "phase": "before",
+          "sessionId": "0edfcd16-408f-4e7e-83c1-a6b5dcaecd68",
+          "status": "inconclusive",
+          "reason": "Could not confirm a single recorded page with the required persona and repair state.",
+          "credits": 17.9546425,
+          "result": "proof/kane/consumerfinance-tools/heldout/before/result.json",
+          "recording": "proof/kane/consumerfinance-tools/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/consumerfinance-tools/heldout/before/70024bee-ff7e-405b-ad81-a3c93ded7546.evidence"
+        }
+      ]
+    },
+    {
+      "id": "khanacademy-topics",
+      "url": "https://www.khanacademy.org/",
+      "category": "education",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert the exact row ‘button · Search for courses, skills, and videos’ is present. Activate it and verify a search field becomes available without signing in.",
+      "outcome": "Kane error",
+      "reason": "Hard blocker: captcha",
+      "sessions": [
+        {
+          "taskId": "khanacademy-topics",
+          "phase": "before",
+          "sessionId": "a3b26897-4191-47d1-a658-35b6377ad9ef",
+          "status": "inconclusive",
+          "reason": "Hard blocker: captcha",
+          "credits": 11.685835,
+          "result": "proof/kane/khanacademy-topics/heldout/before/result.json",
+          "recording": "proof/kane/khanacademy-topics/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/khanacademy-topics/heldout/before/dc28584b-1691-4e1d-a98c-2c892894c257.evidence"
+        }
+      ]
+    },
+    {
+      "id": "edx-explore",
+      "url": "https://www.edx.org/",
+      "category": "education",
+      "persona": "low-vision",
+      "task": "At 320px width, assert the Search courses control fits within the visible width. Activate Search courses without horizontal scrolling and verify a search field or course catalog UI appears.",
+      "outcome": "no barrier",
+      "reason": "Objective completed",
+      "sessions": [
+        {
+          "taskId": "edx-explore",
+          "phase": "before",
+          "sessionId": "26db131f-ecbd-48e1-9e5b-9782b67d606a",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 24.369515,
+          "result": "proof/kane/edx-explore/heldout/before/result.json",
+          "recording": "proof/kane/edx-explore/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/edx-explore/heldout/before/ab5b3683-339c-49f4-94c3-4285bcef2fcc.evidence"
+        }
+      ]
+    },
+    {
+      "id": "open-ac-uk-courses",
+      "url": "https://www.open.ac.uk/",
+      "category": "education",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check the Undergraduate control is keyboard focusable. Activate it with Tab and Enter and verify an undergraduate courses or study page opens. Stay on public pages.",
+      "outcome": "Kane error",
+      "reason": "Hard blocker: captcha",
+      "sessions": [
+        {
+          "taskId": "open-ac-uk-courses",
+          "phase": "before",
+          "sessionId": "bd5bd99b-4be5-4512-a811-3884780b833c",
+          "status": "inconclusive",
+          "reason": "Hard blocker: captcha",
+          "credits": 11.5545,
+          "result": "proof/kane/open-ac-uk-courses/heldout/before/result.json",
+          "recording": "proof/kane/open-ac-uk-courses/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/open-ac-uk-courses/heldout/before/d18c7c52-4480-445f-978e-364c54a9119b.evidence"
+        }
+      ]
+    },
+    {
+      "id": "federalreserve-press",
+      "url": "https://www.federalreserve.gov/",
+      "category": "banking",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert a News and Events or Press Releases link row is present, or assert the site search textbox is present. Activate News and Events or Press Releases and verify a list of public releases is visible.",
+      "outcome": "no barrier",
+      "reason": "Objective completed",
+      "sessions": [
+        {
+          "taskId": "federalreserve-press",
+          "phase": "before",
+          "sessionId": "1a2dbb56-800a-4cab-b631-bf6a5d93c4e0",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 23.627615,
+          "result": "proof/kane/federalreserve-press/heldout/before/result.json",
+          "recording": "proof/kane/federalreserve-press/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/federalreserve-press/heldout/before/6c39511a-af5d-496d-98a9-25ae8a255707.evidence"
+        }
+      ]
+    },
+    {
+      "id": "bankofengland-rates",
+      "url": "https://www.bankofengland.co.uk/",
+      "category": "banking",
+      "persona": "low-vision",
+      "task": "At 320px width, assert the Current Bank Rate control fits within the visible width without horizontal scrolling. Activate it and verify the Bank Rate information page or panel opens.",
+      "outcome": "Kane error",
+      "reason": "AP determined agent is stuck — no viable actions remain",
+      "sessions": [
+        {
+          "taskId": "bankofengland-rates",
+          "phase": "before",
+          "sessionId": "1af6774c-12b6-447b-b369-4adefd890ffa",
+          "status": "inconclusive",
+          "reason": "AP determined agent is stuck — no viable actions remain",
+          "credits": 12.685854999999998,
+          "result": "proof/kane/bankofengland-rates/heldout/before/result.json",
+          "recording": "proof/kane/bankofengland-rates/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/bankofengland-rates/heldout/before/73804667-851f-4c3b-b5f1-1023bb74dbaf.evidence"
+        }
+      ]
+    },
+    {
+      "id": "fdic-bankfind",
+      "url": "https://www.fdic.gov/",
+      "category": "banking",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check the Search FDIC.gov textbox is in sequential keyboard focus order. Focus it with Tab and verify it accepts text. Prefer public BankFind or Resources links if present; stop before authenticated services.",
+      "outcome": "Kane error",
+      "reason": "The browser did not observe a trusted Enter or Space keypress.",
+      "sessions": [
+        {
+          "taskId": "fdic-bankfind",
+          "phase": "after",
+          "sessionId": "abc45154-1f8a-4c58-805a-c9cc44b659cf",
+          "status": "inconclusive",
+          "reason": "The browser did not observe a trusted Enter or Space keypress.",
+          "credits": 24.14042,
+          "result": "proof/kane/fdic-bankfind/heldout/attempt-1/after/result.json",
+          "recording": "proof/kane/fdic-bankfind/heldout/attempt-1/after/recording.mp4",
+          "evidencePack": "proof/kane/fdic-bankfind/heldout/attempt-1/after/18e9d585-f9eb-4d8f-9ac6-20e870bb98da.evidence"
+        },
+        {
+          "taskId": "fdic-bankfind",
+          "phase": "before",
+          "sessionId": "9a1dc305-6fed-4460-b90f-50a47b301913",
+          "status": "fail",
+          "reason": "Final verification failed: \"the final result is verified on the page\"",
+          "credits": 36.01083250000001,
+          "result": "proof/kane/fdic-bankfind/heldout/before/result.json",
+          "recording": "proof/kane/fdic-bankfind/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/fdic-bankfind/heldout/before/b418581c-8f78-486f-a1eb-d8611c863d84.evidence"
+        },
+        {
+          "taskId": "fdic-bankfind",
+          "phase": "control",
+          "sessionId": "3ee745d2-af6c-4f8f-a1bf-896972338cc8",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 12.75972,
+          "result": "proof/kane/fdic-bankfind/heldout/control/result.json",
+          "recording": "proof/kane/fdic-bankfind/heldout/control/recording.mp4",
+          "evidencePack": "proof/kane/fdic-bankfind/heldout/control/2dd3ba4a-6aa3-4a9f-833b-8ecc2ae22cab.evidence"
+        }
+      ]
+    },
+    {
+      "id": "notion-marketing-cta",
+      "url": "https://www.notion.com/",
+      "category": "saas",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check the Product link or Get Notion free control is in sequential keyboard focus order. Activate Product with Tab and Enter and verify a product overview section appears. Stop before account creation.",
+      "outcome": "Kane error",
+      "reason": "Final verification failed: \"A product overview section appears.\"",
+      "sessions": [
+        {
+          "taskId": "notion-marketing-cta",
+          "phase": "before",
+          "sessionId": "d4743acb-2681-4e14-8dad-42630a35f33b",
+          "status": "fail",
+          "reason": "Checkpoint assertion failed: \"the final result is verified on the page\"",
+          "credits": 33.995625,
+          "result": "proof/kane/notion-marketing-cta/heldout/before/result.json",
+          "recording": "proof/kane/notion-marketing-cta/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/notion-marketing-cta/heldout/before/0ebbdacc-adcf-41e9-8e63-2937326856e4.evidence"
+        },
+        {
+          "taskId": "notion-marketing-cta",
+          "phase": "control",
+          "sessionId": "351619ad-cd6b-4974-ae3d-c008eb225164",
+          "status": "fail",
+          "reason": "Final verification failed: \"A product overview section appears.\"",
+          "credits": 23.384005000000002,
+          "result": "proof/kane/notion-marketing-cta/heldout/control/result.json",
+          "recording": "proof/kane/notion-marketing-cta/heldout/control/recording.mp4",
+          "evidencePack": "proof/kane/notion-marketing-cta/heldout/control/422a7211-1c4c-4528-b953-d27be12c6b97.evidence"
+        }
+      ]
+    },
+    {
+      "id": "linear-app-features",
+      "url": "https://linear.app/",
+      "category": "saas",
+      "persona": "low-vision",
+      "task": "At 320 CSS pixels, use vertical scrolling to read the public feature overview headings. Verify the feature overview is readable without horizontal scrolling. Do not open signup.",
+      "outcome": "unpatchable",
+      "reason": "Invalid patch proposal: [{\"instancePath\":\"/rules\",\"schemaPath\":\"#/properties/rules/minItems\",\"keyword\":\"minItems\",\"params\":{\"limit\":1},\"message\":\"must NOT have fewer than 1 items\"}]",
+      "sessions": [
+        {
+          "taskId": "linear-app-features",
+          "phase": "before",
+          "sessionId": "3e983d73-c481-4f44-bfa9-7006a7a1d3b0",
+          "status": "fail",
+          "reason": "Checkpoint assertion failed: \"The final result is on the page.\"",
+          "credits": 11.336120000000001,
+          "result": "proof/kane/linear-app-features/heldout/before/result.json",
+          "recording": "proof/kane/linear-app-features/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/linear-app-features/heldout/before/847e6628-ad82-4e15-843a-845dd750a41d.evidence"
+        },
+        {
+          "taskId": "linear-app-features",
+          "phase": "control",
+          "sessionId": "ab4a9b4d-dd53-4062-ab5e-ee35eeec55ad",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 19.155089999999998,
+          "result": "proof/kane/linear-app-features/heldout/control/result.json",
+          "recording": "proof/kane/linear-app-features/heldout/control/recording.mp4",
+          "evidencePack": "proof/kane/linear-app-features/heldout/control/b2868430-4416-4a79-b5b1-5abe1eb04e1a.evidence"
+        }
+      ]
+    },
+    {
+      "id": "asana-product-nav",
+      "url": "https://asana.com/",
+      "category": "saas",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert a Product or Features link row is present. Activate Product and verify a product overview page or menu is available. Stop before signup.",
+      "outcome": "no barrier",
+      "reason": "Objective completed",
+      "sessions": [
+        {
+          "taskId": "asana-product-nav",
+          "phase": "before",
+          "sessionId": "681747ce-0739-4d32-b6d1-77089e8e0c9b",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 24.9103275,
+          "result": "proof/kane/asana-product-nav/heldout/before/result.json",
+          "recording": "proof/kane/asana-product-nav/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/asana-product-nav/heldout/before/3d2d6fc8-1cbc-4396-a1a6-486237c4fbf8.evidence"
+        }
+      ]
+    },
+    {
+      "id": "theverge-menu",
+      "url": "https://www.theverge.com/",
+      "category": "media",
+      "persona": "keyboard-only",
+      "task": "First, press Tab twice in the page before evaluating focusability. Continue using Tab and Shift+Tab to reach the target. check the Menu or hamburger control in The Verge header is keyboard focusable. Open it with Tab and Enter and verify a Tech or Science section link is visible.",
+      "outcome": "Kane error",
+      "reason": "The browser did not observe a trusted Enter or Space keypress.",
+      "sessions": [
+        {
+          "taskId": "theverge-menu",
+          "phase": "before",
+          "sessionId": "00b014d3-8c43-4d52-8960-53e97ff8f33c",
+          "status": "inconclusive",
+          "reason": "The browser did not observe a trusted Enter or Space keypress.",
+          "credits": 43.29360499999999,
+          "result": "proof/kane/theverge-menu/heldout/before/result.json",
+          "recording": "proof/kane/theverge-menu/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/theverge-menu/heldout/before/5dcae41b-3758-47c3-82d5-f9c0c4758a30.evidence"
+        }
+      ]
+    },
+    {
+      "id": "arstechnica-search",
+      "url": "https://arstechnica.com/",
+      "category": "media",
+      "persona": "low-vision",
+      "task": "At 320px width, assert the Search control fits within the visible width. Open Search without horizontal scrolling and verify a search text field is visible.",
+      "outcome": "Kane error",
+      "reason": "Hard blocker: captcha",
+      "sessions": [
+        {
+          "taskId": "arstechnica-search",
+          "phase": "before",
+          "sessionId": "ecc96f28-98c0-4b37-be8c-906b65c8f3a4",
+          "status": "inconclusive",
+          "reason": "Hard blocker: captcha",
+          "credits": 10.5349,
+          "result": "proof/kane/arstechnica-search/heldout/before/result.json",
+          "recording": "proof/kane/arstechnica-search/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/arstechnica-search/heldout/before/e011960e-d201-4314-8f0b-84b054029acc.evidence"
+        }
+      ]
+    },
+    {
+      "id": "wired-top-story",
+      "url": "https://www.wired.com/",
+      "category": "media",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, first assert a top navigation link row such as ‘link · SECURITY’ or the top story headline is present. Activate SECURITY or the first major story link and verify a section or article page loads.",
+      "outcome": "no barrier",
+      "reason": "Objective completed",
+      "sessions": [
+        {
+          "taskId": "wired-top-story",
+          "phase": "before",
+          "sessionId": "c8adcb8b-3f2e-4cf5-ba06-1e4e8a3f776e",
+          "status": "pass",
+          "reason": "Objective completed",
+          "credits": 25.19782,
+          "result": "proof/kane/wired-top-story/heldout/before/result.json",
+          "recording": "proof/kane/wired-top-story/heldout/before/recording.mp4",
+          "evidencePack": "proof/kane/wired-top-story/heldout/before/93998215-ed3a-438d-995f-a0114cabbc0c.evidence"
+        }
+      ]
+    }
+  ]
+}

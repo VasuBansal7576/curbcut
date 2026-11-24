@@ -1,0 +1,16 @@
+{
+  "barrier": "Tab reaches the first FAQ button while it is clipped or outside the viewport, so the keyboard user cannot see the focused control.",
+  "rules": [
+    {
+      "selector": "#q1 > button",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#q1 > button",
+      "target": "#a1",
+      "mode": "display",
+      "display": "block"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#products > section:first-of-type > .section-content.odd",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "section-content",
+            "odd"
+          ],
+          "label": "PRODUCTS Embark on a Journey of Discovery Riveting Short Dramas Await Your Exploration"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "#product1-right, #product1-right > p.content-subtitle",
+      "count": 2,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "product1-right",
+          "classes": [
+            "hide"
+          ],
+          "label": "Embark on a Journey of Discovery Riveting Short Dramas Await Your Exploration"
+        },
+        {
+          "tag": "p",
+          "classes": [
+            "content-subtitle"
+          ],
+          "label": "Riveting Short Dramas Await Your Exploration"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "v5-9622486897a1-afa09ca3",
+  "url": "https://sciencedaily.com/",
+  "persona": "keyboard-only",
+  "task": "Open “Share” by keyboard. Confirm the dialog appeared, then press Escape and confirm it closed.",
+  "controlTask": "Click “Share” and confirm that the dialog opens. Click “Close” to close it.",
+  "observedSelector": "#contents > div > div > div:nth-of-type(1) > a:nth-of-type(3)",
+  "outcomeChecks": [
+    {
+      "kind": "hidden",
+      "selector": "#shareModal"
+    }
+  ],
+  "barrierClass": 4,
+  "relatedSelectors": [
+    "#shareModal",
+    "#shareModalLabel > div > div:nth-of-type(3) > button"
+  ],
+  "journey": [
+    {
+      "selector": "#contents > div > div > div:nth-of-type(1) > a:nth-of-type(3)",
+      "action": "activate",
+      "checks": [
+        {
+          "kind": "visible",
+          "selector": "#shareModal"
+        }
+      ]
+    },
+    {
+      "selector": "#shareModal",
+      "action": "key",
+      "key": "Escape",
+      "pointer": {
+        "action": "click",
+        "selector": "#shareModalLabel > div > div:nth-of-type(3) > button"
+      }
+    }
+  ],
+  "site": "sciencedaily.com",
+  "match": "https://sciencedaily.com/",
+  "barrier": "Keyboard activation makes the Share dialog visible before focus moves into it, so the dialog does not receive Escape at the next step.",
+  "rules": [
+    {
+      "action": "dialogBehavior",
+      "dialog": "#shareModal",
+      "opener": "#contents .tools-top > a[data-toggle=\"modal\"][data-target=\"#shareModal\"]",
+      "close": "#shareModal .modal-footer > button[data-dismiss=\"modal\"]"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

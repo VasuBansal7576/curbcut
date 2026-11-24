@@ -1,0 +1,21 @@
+{
+  "barrier": "After the disclosure opens at 320 CSS pixels, the banner’s guttered guidance row is 344 pixels wide and extends 12 pixels past each viewport edge. The first guidance paragraph fails the horizontal fit check.",
+  "rules": [
+    {
+      "selector": "#gov-banner-default-default:not([hidden])",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "selector": "#gov-banner-default-default > div.grid-row.grid-gap-lg",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ]
+}

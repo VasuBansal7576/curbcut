@@ -1,0 +1,69 @@
+{
+  "id": "v4-ba264ae39f65-dc282b08",
+  "url": "https://bogos.io/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels with vertical scrolling only, hover “Feature”, click “View all features→” and confirm /all-features/.",
+  "controlTask": "Hover “Feature”, click “View all features→” and confirm /all-features/.",
+  "observedSelector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/all-features/"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1)",
+    "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "bogos.io",
+  "match": "https://bogos.io/",
+  "barrier": "At 320 CSS pixels, the Feature submenu opens as a 1248-pixel-wide grid and places its first link 1057 pixels from the left edge, beyond the horizontally clipped viewport. The keyboard journey also failed to reach the submenu after focusing Feature.",
+  "rules": [
+    {
+      "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1)",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1)",
+      "action": "injectCSS",
+      "value": {
+        "flex-wrap": "wrap"
+      }
+    },
+    {
+      "selector": "#mobile-menu > nav > ul:nth-of-type(1) > li:nth-of-type(1) > ul",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "100%",
+        "box-sizing": "border-box",
+        "white-space": "normal"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

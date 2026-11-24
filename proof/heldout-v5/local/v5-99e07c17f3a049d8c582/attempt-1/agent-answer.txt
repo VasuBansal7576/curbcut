@@ -1,0 +1,32 @@
+{
+  "barrier": "The content column starts 280 CSS pixels from the left of a 900-pixel wrapper. At a 320-pixel viewport, the 590-pixel paragraph extends to pixel 885 and is clipped by the page’s horizontal overflow setting.",
+  "rules": [
+    {
+      "selector": "#wrapper",
+      "action": "injectCSS",
+      "value": {
+        "display": "flex",
+        "flex-direction": "column",
+        "max-width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "#wrapper > #content",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    },
+    {
+      "selector": "#content > .main, #content > .main > .text",
+      "action": "injectCSS",
+      "value": {
+        "max-width": "100%",
+        "min-width": "0",
+        "box-sizing": "border-box"
+      }
+    }
+  ]
+}

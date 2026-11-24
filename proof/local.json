@@ -1,0 +1,48 @@
+{
+  "runner": "local-playwright",
+  "completedAt": "2026-11-21T19:07:31.375Z",
+  "runs": [
+    {
+      "persona": "keyboard-only",
+      "task": "Using only the keyboard, search for headphones and add Field Headphones to the cart. Confirm Cart (1).",
+      "before": "fail",
+      "after": "pass",
+      "control": "pass",
+      "retirement": "pass",
+      "videos": {
+        "before": "proof/local/keyboard-only/before.mp4",
+        "after": "proof/local/keyboard-only/after.mp4",
+        "control": "proof/local/keyboard-only/control.mp4",
+        "retirement": "proof/local/keyboard-only/recheck-without.mp4"
+      }
+    },
+    {
+      "persona": "low-vision",
+      "task": "Without scrolling horizontally, find Porch Speaker in the unfiltered collection and add it to the cart. Confirm Cart (1).",
+      "before": "fail",
+      "after": "pass",
+      "control": "pass",
+      "retirement": "pass",
+      "videos": {
+        "before": "proof/local/low-vision/before.mp4",
+        "after": "proof/local/low-vision/after.mp4",
+        "control": "proof/local/low-vision/control.mp4",
+        "retirement": "proof/local/low-vision/recheck-without.mp4"
+      }
+    },
+    {
+      "persona": "screen-reader-view",
+      "task": "Use the accessibility view to find the searchbox named Search products, search for speaker, and confirm one result named Porch Speaker.",
+      "before": "fail",
+      "after": "pass",
+      "control": "pass",
+      "retirement": "pass",
+      "videos": {
+        "before": "proof/local/screen-reader-view/before.mp4",
+        "after": "proof/local/screen-reader-view/after.mp4",
+        "control": "proof/local/screen-reader-view/control.mp4",
+        "retirement": "proof/local/screen-reader-view/recheck-without.mp4"
+      }
+    }
+  ]
+}

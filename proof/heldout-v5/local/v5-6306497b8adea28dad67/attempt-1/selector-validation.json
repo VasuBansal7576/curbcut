@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#md_app_wrapper",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "md_app_wrapper",
+          "classes": [
+            "app-wrapper",
+            "print-content-only"
+          ],
+          "label": "var menu_button_view = 0; var menu_button_mode = 1; var menu_button_anim = 1; var menu_button_anim_e"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "selector",
+      "selector": "#md_app_main, #md_app_main .d-flex.flex-column:has(#md_app_content), #md_app_content",
+      "count": 3,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "md_app_main",
+          "classes": [
+            "app-main",
+            "flex-column",
+            "flex-row-fluid"
+          ],
+          "label": "var menu_button_view = 0; var menu_button_mode = 1; var menu_button_anim = 1; var menu_button_anim_e"
+        },
+        {
+          "tag": "div",
+          "classes": [
+            "d-flex",
+            "flex-column",
+            "flex-column-fluid"
+          ],
+          "label": "var menu_button_view = 0; var menu_button_mode = 1; var menu_button_anim = 1; var menu_button_anim_e"
+        },
+        {
+          "tag": "div",
+          "id": "md_app_content",
+          "classes": [
+            "app-content"
+          ],
+          "label": "var menu_button_view = 0; var menu_button_mode = 1; var menu_button_anim = 1; var menu_button_anim_e"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "field": "selector",
+      "selector": "#content > div.row.gx-2",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "row",
+            "gx-2",
+            "mb-2"
+          ],
+          "label": "{\"@context\":\"http://schema.org\",\"@type\":\"WebSite\",\"url\":\"http://www.mdoffice.com.ua/\",\"potentialActi"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "field": "selector",
+      "selector": "#main-news",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "id": "main-news",
+          "classes": [],
+          "label": "пн., 23 листопада 2026• | Який механізм дії зміни зг.ПКМУ №1327 53• | ❗️ Тимчасово обмежено доступ д"
+        }
+      ]
+    }
+  ]
+}

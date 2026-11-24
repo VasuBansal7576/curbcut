@@ -1,0 +1,14 @@
+{
+  "barrier": "At 320 CSS pixels, the expanded panel has a 288-pixel client width and a 304-pixel scroll width, so its content does not fit with vertical scrolling alone.",
+  "rules": [
+    {
+      "selector": "div.row.px-sm",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "100%",
+        "box-sizing": "border-box"
+      }
+    }
+  ]
+}

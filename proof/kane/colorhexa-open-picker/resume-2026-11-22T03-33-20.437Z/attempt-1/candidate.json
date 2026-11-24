@@ -1,0 +1,34 @@
+{
+  "id": "colorhexa-open-picker",
+  "url": "https://www.colorhexa.com/",
+  "persona": "keyboard-only",
+  "task": "First assert the red color swatch next to the color search box is in the sequential keyboard focus order. Open that swatch with Tab and Enter. Verify the color picker panel with the color spectrum and hue slider is visible.",
+  "controlTask": "Click the red color swatch next to the color search box. Verify the color picker panel with the color spectrum and hue slider is visible.",
+  "observedSelector": ".sp-replacer",
+  "successSelector": ".sp-picker-container",
+  "site": "www.colorhexa.com",
+  "match": "https://www.colorhexa.com/",
+  "barrier": "The red swatch (.sp-replacer) has tabIndex -1 and is exposed as text, so Tab skips the color picker trigger.",
+  "rules": [
+    {
+      "selector": ".sp-replacer",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": ".sp-replacer",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": ".sp-replacer",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": ".sp-replacer",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

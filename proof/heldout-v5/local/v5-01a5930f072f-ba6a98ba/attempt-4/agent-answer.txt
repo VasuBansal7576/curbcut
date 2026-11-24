@@ -1,0 +1,16 @@
+{
+  "barrier": "Keyboard activation reaches the Locations button but leaves the menu hidden with display:none, so its description is unavailable. Pointer activation opens the same panel.",
+  "rules": [
+    {
+      "selector": "button[aria-controls=\"mega-menu\"][aria-describedby=\"header_search-input-mega-menu-cta-desc\"]",
+      "action": "makeFocusable"
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "button[aria-controls=\"mega-menu\"][aria-describedby=\"header_search-input-mega-menu-cta-desc\"]",
+      "target": "#mega-menu",
+      "mode": "display",
+      "display": "block"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "ok": true,
+  "matches": [
+    {
+      "index": 0,
+      "field": "selector",
+      "selector": "#rcs-tab-rcs-744076",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "id": "rcs-tab-rcs-744076",
+          "classes": [
+            "resources-for__tab",
+            "is-active"
+          ],
+          "role": "tab",
+          "label": "Careers"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "container",
+      "selector": "div.resources-for__tabs[role=\"tablist\"]",
+      "count": 1,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "div",
+          "classes": [
+            "resources-for__tabs"
+          ],
+          "role": "tablist",
+          "label": "Resources for:"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "field": "items",
+      "selector": "div.resources-for__tabs[role=\"tablist\"] > button[role=\"tab\"]",
+      "scope": "div.resources-for__tabs[role=\"tablist\"]",
+      "count": 4,
+      "issue": null,
+      "matches": [
+        {
+          "tag": "button",
+          "id": "rcs-tab-rcs-744076",
+          "classes": [
+            "resources-for__tab",
+            "is-active"
+          ],
+          "role": "tab",
+          "label": "Careers"
+        },
+        {
+          "tag": "button",
+          "id": "rcs-tab-rcs-744161",
+          "classes": [
+            "resources-for__tab"
+          ],
+          "role": "tab",
+          "label": "Contracting"
+        },
+        {
+          "tag": "button",
+          "id": "rcs-tab-rcs-744181",
+          "classes": [
+            "resources-for__tab"
+          ],
+          "role": "tab",
+          "label": "Education"
+        },
+        {
+          "tag": "button",
+          "id": "rcs-tab-rcs-744066",
+          "classes": [
+            "resources-for__tab"
+          ],
+          "role": "tab",
+          "label": "Grants"
+        }
+      ]
+    }
+  ]
+}

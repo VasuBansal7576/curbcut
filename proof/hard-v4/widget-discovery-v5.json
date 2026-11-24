@@ -1,0 +1,1113 @@
+{
+  "runner": "playwright",
+  "checkedAt": "2026-11-23T18:02:37.793Z",
+  "rows": [
+    {
+      "site": "class.com",
+      "url": "https://www.class.com/",
+      "status": "observed",
+      "detected": [
+        {
+          "kind": 2,
+          "trigger": {
+            "selector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(1) > div:nth-of-type(1) > button",
+            "label": "Open Industries",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(1) > div:nth-of-type(2) > div",
+            "label": "Business Empower growth through virtual training that supports onboarding, talent development, and compliance .cls-1 { fill: #4739e7; } Enterprise Learning Academies Drive organiza",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 2,
+          "trigger": {
+            "selector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(2) > div:nth-of-type(1) > button",
+            "label": "Open Why Class",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(2) > div:nth-of-type(2) > div",
+            "label": "The class advantage Drive Learner EngagementIncrease participation and interaction in live virtual learning sessions Scale Access to Quality InstructionDeliver consistent, high-qua",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 2,
+          "trigger": {
+            "selector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(3) > div:nth-of-type(1) > button",
+            "label": "Open Product",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(3) > div:nth-of-type(2) > div",
+            "label": "Features Seamless Course Setup & Delivery Save time spent on administrative tasks, like preparing sessions and rostering Collaborative, Active Learning Deliver a dynamic and intera",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 2,
+          "trigger": {
+            "selector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(4) > div:nth-of-type(1) > button",
+            "label": "Open Learn",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(4) > div:nth-of-type(2) > div",
+            "label": "Resources Guides, discussions, and research about virtual learning, collaboration, and more View all resources Blog Stay up-to-date on what’s trending in online learning and virtua",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 2,
+          "trigger": {
+            "selector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(5) > div:nth-of-type(1) > button",
+            "label": "Open Company",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(5) > div:nth-of-type(2) > div",
+            "label": "About Class Founded in 2020 by education technology leader, Michael Chasen, Class is on a mission to change the way the world learns Learn more AboutLearn how Class is forging a ne",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 3,
+          "trigger": {
+            "selector": "#e-n-tab-title-1409318351",
+            "label": "Collaborative, Active Learning",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "#e-n-tab-content-1409318352",
+            "label": "SEAMLESS COURSE SETUP & DELIVERYScalability made simple​ Stop jumping between apps and bring everything into one unified space. Integrations and course templates connect your mater",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        }
+      ],
+      "candidates": [
+        {
+          "id": "v5-ed10f90826d5-52509f91",
+          "url": "https://www.class.com/",
+          "persona": "keyboard-only",
+          "task": "Focus “Collaborative, Active Learning”, move once with ArrowRight, activate “Seamless Course Setup and Delivery” and read its panel.",
+          "controlTask": "Click “Seamless Course Setup and Delivery” and read its panel.",
+          "observedSelector": "#e-n-tab-title-1409318351",
+          "barrierClass": 3,
+          "journey": [
+            {
+              "selector": "#e-n-tab-title-1409318351",
+              "action": "focus",
+              "pointer": {
+                "action": "hover"
+              }
+            },
+            {
+              "selector": "#e-n-tab-title-1409318351",
+              "action": "key",
+              "key": "ArrowRight",
+              "pointer": {
+                "action": "click",
+                "selector": "#e-n-tab-title-1409318352"
+              }
+            },
+            {
+              "selector": "#e-n-tab-title-1409318352",
+              "action": "activate",
+              "pointer": {
+                "action": "hover"
+              }
+            },
+            {
+              "selector": "#e-n-tab-content-1409318352",
+              "action": "observe"
+            }
+          ],
+          "outcomeChecks": [
+            {
+              "kind": "visible",
+              "selector": "#e-n-tab-content-1409318352"
+            }
+          ],
+          "relatedSelectors": [
+            "#main > div > div:nth-of-type(1) > div:nth-of-type(16) > div > div:nth-of-type(3) > div > div > div:nth-of-type(1)",
+            "[role=tab]",
+            "#e-n-tab-content-1409318352"
+          ]
+        },
+        {
+          "id": "v5-b5a0e6e86f15-52509f91",
+          "url": "https://www.class.com/",
+          "persona": "keyboard-only",
+          "task": "Expand “Open Industries” with the keyboard and read “Business Empower growth through virtual training that supports onboarding, talent development, and c”.",
+          "controlTask": "Click “Open Industries” and read “Business Empower growth through virtual training that supports onboarding, talent development, and c”.",
+          "observedSelector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(1) > div:nth-of-type(1) > button",
+          "barrierClass": 2,
+          "journey": [
+            {
+              "selector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(1) > div:nth-of-type(1) > button",
+              "action": "activate"
+            },
+            {
+              "selector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(1) > div:nth-of-type(2) > div > div > div > div > div > ul > li:nth-of-type(1)",
+              "action": "observe"
+            }
+          ],
+          "outcomeChecks": [
+            {
+              "kind": "contains",
+              "selector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(1) > div:nth-of-type(2) > div > div > div > div > div > ul > li:nth-of-type(1)",
+              "equals": "Business Empower growth through virtual training that supports onboarding, talent development, and c"
+            }
+          ],
+          "relatedSelectors": [
+            "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(1) > div:nth-of-type(2) > div"
+          ]
+        },
+        {
+          "id": "v5-4be68f35356c-52509f91",
+          "url": "https://www.class.com/",
+          "persona": "keyboard-only",
+          "task": "Expand “Open Why Class” with the keyboard and read “The class advantage”.",
+          "controlTask": "Click “Open Why Class” and read “The class advantage”.",
+          "observedSelector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(2) > div:nth-of-type(1) > button",
+          "barrierClass": 2,
+          "journey": [
+            {
+              "selector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(2) > div:nth-of-type(1) > button",
+              "action": "activate"
+            },
+            {
+              "selector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(2) > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > div > p",
+              "action": "observe"
+            }
+          ],
+          "outcomeChecks": [
+            {
+              "kind": "contains",
+              "selector": "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(2) > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(1) > div > p",
+              "equals": "The class advantage"
+            }
+          ],
+          "relatedSelectors": [
+            "header > section:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > nav > div > ul > li:nth-of-type(2) > div:nth-of-type(2) > div"
+          ]
+        }
+      ]
+    },
+    {
+      "site": "cursor.com",
+      "url": "https://cursor.com/",
+      "status": "observed",
+      "detected": [
+        {
+          "kind": 5,
+          "trigger": {
+            "selector": "#site-footer > div:nth-of-type(2) > div:nth-of-type(2) > div > div > button",
+            "label": "🌐 English ↓",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "#language-dropdown",
+            "label": "English✓简体中文日本語繁體中文EspañolFrançaisPortuguês한국어Deutschहिन्दी",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        }
+      ],
+      "candidates": [
+        {
+          "id": "v5-1a99c14aef71-7a4dc0a1",
+          "url": "https://cursor.com/",
+          "persona": "keyboard-only",
+          "task": "Focus “🌐 English ↓”, press Arrow Down to open it, move from “English✓” to “简体中文” and select it with Enter.",
+          "controlTask": "Click “🌐 English ↓” and select “简体中文”. Confirm the selected value.",
+          "observedSelector": "#site-footer > div:nth-of-type(2) > div:nth-of-type(2) > div > div > button",
+          "barrierClass": 5,
+          "journey": [
+            {
+              "selector": "#site-footer > div:nth-of-type(2) > div:nth-of-type(2) > div > div > button",
+              "action": "focus",
+              "pointer": {
+                "action": "hover"
+              }
+            },
+            {
+              "selector": "#site-footer > div:nth-of-type(2) > div:nth-of-type(2) > div > div > button",
+              "action": "key",
+              "key": "ArrowDown",
+              "pointer": {
+                "action": "click"
+              }
+            },
+            {
+              "selector": "#language-dropdown > div > ul > li:nth-of-type(1) > button",
+              "action": "key",
+              "key": "ArrowDown",
+              "pointer": {
+                "action": "hover",
+                "selector": "#language-dropdown > div > ul > li:nth-of-type(2) > button"
+              }
+            },
+            {
+              "selector": "#language-dropdown > div > ul > li:nth-of-type(2) > button",
+              "action": "key",
+              "key": "Enter",
+              "pointer": {
+                "action": "click"
+              }
+            }
+          ],
+          "outcomeChecks": [
+            {
+              "kind": "contains",
+              "selector": "#site-footer > div:nth-of-type(2) > div:nth-of-type(2) > div > div > button",
+              "equals": "简体中文"
+            }
+          ],
+          "relatedSelectors": [
+            "#language-dropdown",
+            "[role=option]"
+          ]
+        }
+      ]
+    },
+    {
+      "site": "psi.ch",
+      "url": "https://www.psi.ch/en",
+      "status": "observed",
+      "detected": [
+        {
+          "kind": 1,
+          "trigger": {
+            "selector": "#languagedropdownmenu--2",
+            "label": "Change website language (current English)",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "#block-design2-languageswitcher > div > ul",
+            "label": "LanguageDeutschEnglishFrançaisItaliano",
+            "visible": false,
+            "tab": -1,
+            "tag": "ul"
+          }
+        },
+        {
+          "kind": 4,
+          "trigger": {
+            "selector": "#block-design2-rebrandingtopcenters-menu",
+            "label": "Centers & Labs",
+            "href": "https://www.psi.ch/en#",
+            "visible": true,
+            "tab": 0,
+            "tag": "a"
+          },
+          "panel": {
+            "selector": "#block-design2-rebrandingtopcenters-modal",
+            "label": "zurück close Center & Labs To overview PSI Center for Neutron and Muon Sciences PSI Center for Neutron and Muon Sciences To overview Laboratory for Particle Physics Laboratory for ",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 4,
+          "trigger": {
+            "selector": "#block-design2-rebrandingtopfacilities-menu",
+            "label": "Facilities & User Services",
+            "href": "https://www.psi.ch/en#",
+            "visible": true,
+            "tab": 0,
+            "tag": "a"
+          },
+          "panel": {
+            "selector": "#block-design2-rebrandingtopfacilities-modal",
+            "label": "close Large Research Facilities Large Research Facilities To overview SwissFEL – Swiss X-ray Free Electron Laser SLS – Swiss Light Source SINQ – Swiss Spallation Neutron Source SμS",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 2,
+          "trigger": {
+            "selector": "#languagedropdownmenu--2",
+            "label": "Change website language (current English)",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "#block-design2-languageswitcher > div > ul",
+            "label": "LanguageDeutschEnglishFrançaisItaliano",
+            "visible": false,
+            "tab": -1,
+            "tag": "ul"
+          },
+          "dropdownItem": {
+            "selector": "#block-design2-languageswitcher > div > ul > li:nth-of-type(1) > a",
+            "label": "Deutsch",
+            "href": "https://www.psi.ch/de",
+            "visible": false,
+            "tab": 0,
+            "tag": "a"
+          }
+        },
+        {
+          "kind": 4,
+          "trigger": {
+            "selector": "#block-design2-content > article > div:nth-of-type(2) > div:nth-of-type(9) > div > div > div > div > article > div > div > div:nth-of-type(3) > div:nth-of-type(1) > div > a",
+            "label": "View",
+            "href": "https://www.psi.ch/en/node/61609",
+            "visible": true,
+            "tab": 0,
+            "tag": "a"
+          },
+          "panel": {
+            "selector": "#flipbook-modal",
+            "label": "",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        }
+      ],
+      "candidates": [
+        {
+          "id": "v5-0033c67eb07e-3325d973",
+          "url": "https://www.psi.ch/en",
+          "persona": "keyboard-only",
+          "task": "Open “Centers & Labs” by keyboard. Confirm the dialog appeared, then press Escape and confirm it closed.",
+          "controlTask": "Click “Centers & Labs” and confirm that the dialog opens. Click “close” to close it.",
+          "observedSelector": "#block-design2-rebrandingtopcenters-menu",
+          "barrierClass": 4,
+          "journey": [
+            {
+              "selector": "#block-design2-rebrandingtopcenters-menu",
+              "action": "activate",
+              "checks": [
+                {
+                  "kind": "visible",
+                  "selector": "#block-design2-rebrandingtopcenters-modal"
+                }
+              ]
+            },
+            {
+              "selector": "#block-design2-rebrandingtopcenters-modal",
+              "action": "key",
+              "key": "Escape",
+              "pointer": {
+                "action": "click",
+                "selector": "#block-design2-rebrandingtopcenters-modal > div > div > div:nth-of-type(1) > div > a:nth-of-type(2)"
+              }
+            }
+          ],
+          "outcomeChecks": [
+            {
+              "kind": "hidden",
+              "selector": "#block-design2-rebrandingtopcenters-modal"
+            }
+          ],
+          "relatedSelectors": [
+            "#block-design2-rebrandingtopcenters-modal",
+            "#block-design2-rebrandingtopcenters-modal > div > div > div:nth-of-type(1) > div > a:nth-of-type(2)"
+          ]
+        },
+        {
+          "id": "v5-e02e83f3f3f4-3325d973",
+          "url": "https://www.psi.ch/en",
+          "persona": "keyboard-only",
+          "task": "Open “Change website language (current English)” using the keyboard and read “Deutsch”.",
+          "controlTask": "Click “Change website language (current English)” and read “Deutsch”.",
+          "observedSelector": "#languagedropdownmenu--2",
+          "barrierClass": 2,
+          "journey": [
+            {
+              "selector": "#languagedropdownmenu--2",
+              "action": "activate"
+            },
+            {
+              "selector": "#block-design2-languageswitcher > div > ul > li:nth-of-type(1) > a",
+              "action": "observe"
+            }
+          ],
+          "outcomeChecks": [
+            {
+              "kind": "visible",
+              "selector": "#block-design2-languageswitcher > div > ul > li:nth-of-type(1) > a"
+            }
+          ],
+          "relatedSelectors": [
+            "#block-design2-languageswitcher > div > ul"
+          ]
+        },
+        {
+          "id": "v5-c97ed8cad8c1-3325d973",
+          "url": "https://www.psi.ch/en",
+          "persona": "keyboard-only",
+          "task": "Open “Change website language (current English)” from keyboard focus or with Arrow Down and follow “Deutsch”. Confirm the public destination /de.",
+          "controlTask": "Hover “Change website language (current English)”, click “Deutsch” and confirm /de.",
+          "observedSelector": "#languagedropdownmenu--2",
+          "barrierClass": 1,
+          "journey": [
+            {
+              "selector": "#languagedropdownmenu--2",
+              "action": "focus",
+              "pointer": {
+                "action": "hover"
+              }
+            },
+            {
+              "selector": "#languagedropdownmenu--2",
+              "action": "key",
+              "key": "ArrowDown",
+              "pointer": {
+                "action": "hover"
+              }
+            },
+            {
+              "selector": "#block-design2-languageswitcher > div > ul > li:nth-of-type(1) > a",
+              "action": "activate"
+            }
+          ],
+          "outcomeChecks": [
+            {
+              "kind": "url-path",
+              "equals": "/de"
+            }
+          ],
+          "relatedSelectors": [
+            "#block-design2-languageswitcher > div",
+            "#block-design2-languageswitcher > div > ul"
+          ]
+        }
+      ]
+    },
+    {
+      "site": "kingcounty.gov",
+      "url": "https://kingcounty.gov/",
+      "status": "observed",
+      "detected": [
+        {
+          "kind": 4,
+          "trigger": {
+            "selector": "#languageMenuButton",
+            "label": "Language selector English",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "#langList",
+            "label": "× powered by Translate We currently offer language translations on our site primarily through Google Translate. This helps visitors find and use information in the languages they s",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 2,
+          "trigger": {
+            "selector": "#kcGlobalNav",
+            "label": "Primary Menu",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "#kcNav",
+            "label": "About King County expand_more Careers Contact us Departments Employee resources King County TV (KCTV) SEE ALL Animals, pests & pets expand_more Pet adoption Regional Animal Service",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        }
+      ],
+      "candidates": [
+        {
+          "id": "v5-de60bb18c75f-22487221",
+          "url": "https://kingcounty.gov/",
+          "persona": "keyboard-only",
+          "task": "Open “Language selector English” by keyboard. Confirm the dialog appeared, then press Escape and confirm it closed.",
+          "controlTask": "Click “Language selector English” and confirm that the dialog opens. Click “Close” to close it.",
+          "observedSelector": "#languageMenuButton",
+          "barrierClass": 4,
+          "journey": [
+            {
+              "selector": "#languageMenuButton",
+              "action": "activate",
+              "checks": [
+                {
+                  "kind": "visible",
+                  "selector": "#langList"
+                }
+              ]
+            },
+            {
+              "selector": "#langList",
+              "action": "key",
+              "key": "Escape",
+              "pointer": {
+                "action": "click",
+                "selector": "#langList > div > div > div:nth-of-type(1) > button"
+              }
+            }
+          ],
+          "outcomeChecks": [
+            {
+              "kind": "hidden",
+              "selector": "#langList"
+            }
+          ],
+          "relatedSelectors": [
+            "#langList",
+            "#langList > div > div > div:nth-of-type(1) > button"
+          ]
+        },
+        {
+          "id": "v5-2527c058b1f7-22487221",
+          "url": "https://kingcounty.gov/",
+          "persona": "screen-reader-view",
+          "task": "In Reading view, activate the button named “Primary Menu” and read the expanded answer.",
+          "controlTask": "Click “Primary Menu” and read “About King County expand_more”.",
+          "observedSelector": "#kcGlobalNav",
+          "barrierClass": 2,
+          "journey": [
+            {
+              "selector": "#kcGlobalNav",
+              "action": "activate",
+              "reader": {
+                "role": "button",
+                "name": "Primary Menu"
+              }
+            },
+            {
+              "selector": "#AboutKingCounty",
+              "action": "observe"
+            }
+          ],
+          "outcomeChecks": [
+            {
+              "kind": "contains",
+              "selector": "#AboutKingCounty",
+              "equals": "About King County expand_more"
+            }
+          ],
+          "relatedSelectors": [
+            "#kcNav"
+          ]
+        }
+      ]
+    },
+    {
+      "site": "first.org",
+      "url": "https://www.first.org/",
+      "status": "observed",
+      "detected": [
+        {
+          "kind": 1,
+          "trigger": {
+            "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+            "label": "About FIRST",
+            "href": "https://www.first.org/about",
+            "visible": true,
+            "tab": 0,
+            "tag": "a"
+          },
+          "panel": {
+            "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > ul",
+            "label": "Mission Statement Strategy Framework History Sustainable Development Goals Organization Board of Directors Operations Team Community & Capacity Building Event Office Executive Dire",
+            "visible": false,
+            "tab": -1,
+            "tag": "ul"
+          }
+        },
+        {
+          "kind": 1,
+          "trigger": {
+            "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+            "label": "Membership",
+            "href": "https://www.first.org/members",
+            "visible": true,
+            "tab": 0,
+            "tag": "a"
+          },
+          "panel": {
+            "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(2) > ul",
+            "label": "Becoming a Member Membership Process for Teams Membership Process for Associates Membership Process for Individual Members Membership Fees FIRST Teams FIRST Associates FIRST Indivi",
+            "visible": false,
+            "tab": -1,
+            "tag": "ul"
+          }
+        },
+        {
+          "kind": 1,
+          "trigger": {
+            "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(3) > a",
+            "label": "Initiatives",
+            "href": "https://www.first.org/global",
+            "visible": true,
+            "tab": 0,
+            "tag": "a"
+          },
+          "panel": {
+            "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(3) > ul",
+            "label": "Special Interest Groups (SIGs) SIGs Framework Academic Security SIG AI Security SIG Automation SIG Cybersecurity Communications SIG Common Vulnerability Scoring System (CVSS-SIG) C",
+            "visible": false,
+            "tab": -1,
+            "tag": "ul"
+          }
+        }
+      ],
+      "candidates": [
+        {
+          "id": "v5-0a57adb0d3db-c95f0ca7",
+          "url": "https://www.first.org/",
+          "persona": "keyboard-only",
+          "task": "Open “About FIRST” from keyboard focus or with Arrow Down and follow “Mission Statement”. Confirm the public destination /about/mission.",
+          "controlTask": "Hover “About FIRST”, click “Mission Statement” and confirm /about/mission.",
+          "observedSelector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+          "barrierClass": 1,
+          "journey": [
+            {
+              "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+              "action": "focus",
+              "pointer": {
+                "action": "hover"
+              }
+            },
+            {
+              "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+              "action": "key",
+              "key": "ArrowDown",
+              "pointer": {
+                "action": "hover"
+              }
+            },
+            {
+              "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+              "action": "activate"
+            }
+          ],
+          "outcomeChecks": [
+            {
+              "kind": "url-path",
+              "equals": "/about/mission"
+            }
+          ],
+          "relatedSelectors": [
+            "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1)",
+            "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(1) > ul"
+          ]
+        },
+        {
+          "id": "v5-29b89fbed19c-c95f0ca7",
+          "url": "https://www.first.org/",
+          "persona": "keyboard-only",
+          "task": "Open “Membership” from keyboard focus or with Arrow Down and follow “Becoming a Member”. Confirm the public destination /membership/.",
+          "controlTask": "Hover “Membership”, click “Becoming a Member” and confirm /membership/.",
+          "observedSelector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+          "barrierClass": 1,
+          "journey": [
+            {
+              "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+              "action": "focus",
+              "pointer": {
+                "action": "hover"
+              }
+            },
+            {
+              "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(2) > a",
+              "action": "key",
+              "key": "ArrowDown",
+              "pointer": {
+                "action": "hover"
+              }
+            },
+            {
+              "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+              "action": "activate"
+            }
+          ],
+          "outcomeChecks": [
+            {
+              "kind": "url-path",
+              "equals": "/membership/"
+            }
+          ],
+          "relatedSelectors": [
+            "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(2)",
+            "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(2) > ul"
+          ]
+        },
+        {
+          "id": "v5-0ca811af2d04-c95f0ca7",
+          "url": "https://www.first.org/",
+          "persona": "keyboard-only",
+          "task": "Open “Initiatives” from keyboard focus or with Arrow Down and follow “Special Interest Groups (SIGs)”. Confirm the public destination /global/sigs.",
+          "controlTask": "Hover “Initiatives”, click “Special Interest Groups (SIGs)” and confirm /global/sigs.",
+          "observedSelector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(3) > a",
+          "barrierClass": 1,
+          "journey": [
+            {
+              "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(3) > a",
+              "action": "focus",
+              "pointer": {
+                "action": "hover"
+              }
+            },
+            {
+              "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(3) > a",
+              "action": "key",
+              "key": "ArrowDown",
+              "pointer": {
+                "action": "hover"
+              }
+            },
+            {
+              "selector": "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(3) > ul > li:nth-of-type(1) > a",
+              "action": "activate"
+            }
+          ],
+          "outcomeChecks": [
+            {
+              "kind": "url-path",
+              "equals": "/global/sigs"
+            }
+          ],
+          "relatedSelectors": [
+            "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(3)",
+            "#topbar > div:nth-of-type(3) > ul > li:nth-of-type(3) > ul"
+          ]
+        }
+      ]
+    },
+    {
+      "site": "moveworks.com",
+      "url": "https://www.moveworks.com/",
+      "status": "observed",
+      "detected": [
+        {
+          "kind": 1,
+          "trigger": {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(1) > button",
+            "label": "Products",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(1) > div",
+            "label": "Products The Moveworks Platform Agentic AI for the Enterprise Reasoning Engine Trust and security AI Assistant Enterprise Search Tool Studio Employee Experience Insights AI Agent M",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 1,
+          "trigger": {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > button",
+            "label": "Solutions",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > div",
+            "label": "Solutions For ServiceNow Customers Employee Experience ITSM Automation Service Management Employee Onboarding Employee Self-Service Change Communications IT Cost Optimization IAM M",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 1,
+          "trigger": {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(4) > button",
+            "label": "Resources",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(4) > div",
+            "label": "Resources Webinars Events Knowledge 2026 Moveworks .global AI Conference Resource Library Blog Customer Stories Featured Videos AI Glossary Support Help Docs Partners Community Aca",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 1,
+          "trigger": {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(5) > button",
+            "label": "Company",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(5) > div",
+            "label": "Company About Leadership Partners Newsroom Trust and security Customers Careers Contact us ServiceNow officially acquires Moveworks Learn more",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 2,
+          "trigger": {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(1) > button",
+            "label": "Products",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(1) > div",
+            "label": "Products The Moveworks Platform Agentic AI for the Enterprise Reasoning Engine Trust and security AI Assistant Enterprise Search Tool Studio Employee Experience Insights AI Agent M",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 2,
+          "trigger": {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > button",
+            "label": "Solutions",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(1) > div",
+            "label": "Products The Moveworks Platform Agentic AI for the Enterprise Reasoning Engine Trust and security AI Assistant Enterprise Search Tool Studio Employee Experience Insights AI Agent M",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 2,
+          "trigger": {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(4) > button",
+            "label": "Resources",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(1) > div",
+            "label": "Products The Moveworks Platform Agentic AI for the Enterprise Reasoning Engine Trust and security AI Assistant Enterprise Search Tool Studio Employee Experience Insights AI Agent M",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 2,
+          "trigger": {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(5) > button",
+            "label": "Company",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(1) > div",
+            "label": "Products The Moveworks Platform Agentic AI for the Enterprise Reasoning Engine Trust and security AI Assistant Enterprise Search Tool Studio Employee Experience Insights AI Agent M",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 3,
+          "trigger": {
+            "selector": "#tabs-c689bba6bf-tab-item_1787034132055",
+            "label": "Easy",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "#tabs-c689bba6bf-item_1787034163457",
+            "label": "",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        },
+        {
+          "kind": 3,
+          "trigger": {
+            "selector": "#tabs-0dffeb344b-tab-item_1765398481422",
+            "label": "How Moveworks powers ServiceNow EmployeeWorks",
+            "visible": true,
+            "tab": 0,
+            "tag": "button"
+          },
+          "panel": {
+            "selector": "#tabs-0dffeb344b-item_1764346556717",
+            "label": "As securely accessible as it is effectively customizable. Works wherever you do. Every employee can leverage governed AI via chat, web, intranet, portals, and mobile. Break down si",
+            "visible": false,
+            "tab": -1,
+            "tag": "div"
+          }
+        }
+      ],
+      "candidates": [
+        {
+          "id": "v5-3b4eda89b814-c75d4162",
+          "url": "https://www.moveworks.com/",
+          "persona": "keyboard-only",
+          "task": "Open “Solutions” from keyboard focus or with Arrow Down and follow “Employee Experience”. Confirm the public destination /us/en/solutions/employee-experience.",
+          "controlTask": "Hover “Solutions”, click “Employee Experience” and confirm /us/en/solutions/employee-experience.",
+          "observedSelector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > button",
+          "barrierClass": 1,
+          "journey": [
+            {
+              "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > button",
+              "action": "focus",
+              "pointer": {
+                "action": "hover"
+              }
+            },
+            {
+              "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > button",
+              "action": "key",
+              "key": "ArrowDown",
+              "pointer": {
+                "action": "hover"
+              }
+            },
+            {
+              "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > div > div > div:nth-of-type(1) > ul > li:nth-of-type(2) > a",
+              "action": "activate"
+            }
+          ],
+          "outcomeChecks": [
+            {
+              "kind": "url-path",
+              "equals": "/us/en/solutions/employee-experience"
+            }
+          ],
+          "relatedSelectors": [
+            "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2)",
+            "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(2) > div"
+          ]
+        },
+        {
+          "id": "v5-28a30a1a1884-c75d4162",
+          "url": "https://www.moveworks.com/",
+          "persona": "keyboard-only",
+          "task": "Focus “Easy”, move once with ArrowRight, activate “Advanced” and read its panel.",
+          "controlTask": "Click “Advanced” and read its panel.",
+          "observedSelector": "#tabs-c689bba6bf-tab-item_1787034132055",
+          "barrierClass": 3,
+          "journey": [
+            {
+              "selector": "#tabs-c689bba6bf-tab-item_1787034132055",
+              "action": "focus",
+              "pointer": {
+                "action": "hover"
+              }
+            },
+            {
+              "selector": "#tabs-c689bba6bf-tab-item_1787034132055",
+              "action": "key",
+              "key": "ArrowRight",
+              "pointer": {
+                "action": "click",
+                "selector": "#tabs-c689bba6bf-tab-item_1787034163457"
+              }
+            },
+            {
+              "selector": "#tabs-c689bba6bf-tab-item_1787034163457",
+              "action": "activate",
+              "pointer": {
+                "action": "hover"
+              }
+            },
+            {
+              "selector": "#tabs-c689bba6bf-item_1787034163457",
+              "action": "observe"
+            }
+          ],
+          "outcomeChecks": [
+            {
+              "kind": "visible",
+              "selector": "#tabs-c689bba6bf-item_1787034163457"
+            }
+          ],
+          "relatedSelectors": [
+            "#tabs-c689bba6bf > ol",
+            "[role=tab]",
+            "#tabs-c689bba6bf-item_1787034163457"
+          ]
+        },
+        {
+          "id": "v5-628cf989c6b2-c75d4162",
+          "url": "https://www.moveworks.com/",
+          "persona": "keyboard-only",
+          "task": "Expand “Products” with the keyboard and read “The Moveworks Platform”.",
+          "controlTask": "Click “Products” and read “The Moveworks Platform”.",
+          "observedSelector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(1) > button",
+          "barrierClass": 2,
+          "journey": [
+            {
+              "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(1) > button",
+              "action": "activate"
+            },
+            {
+              "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > div > div:nth-of-type(1) > ul > li:nth-of-type(1)",
+              "action": "observe"
+            }
+          ],
+          "outcomeChecks": [
+            {
+              "kind": "contains",
+              "selector": "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(1) > div > div > div:nth-of-type(1) > ul > li:nth-of-type(1)",
+              "equals": "The Moveworks Platform"
+            }
+          ],
+          "relatedSelectors": [
+            "#cmp-menu-btns > div:nth-of-type(1) > ul > li:nth-of-type(1) > div"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "barrier": "Tab reaches the native Next button, but the button is reported clipped or off-screen while focused. Pointer activation brings the button into view and advances the carousel.",
+  "rules": [
+    {
+      "selector": ".icons-text-slider .slider-row > .col-12 > .slider > button.slick-next.slick-arrow",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "arrowKeyNavigation",
+      "container": ".icons-text-slider .slider-row > .col-12 > .slider",
+      "items": ".icons-text-slider .slider-row > .col-12 > .slider > button.slick-arrow",
+      "orientation": "horizontal",
+      "activate": "focus"
+    }
+  ]
+}

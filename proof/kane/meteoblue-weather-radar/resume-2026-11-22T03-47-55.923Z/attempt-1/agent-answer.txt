@@ -1,0 +1,9 @@
+{
+  "barrier": "The clickable Weather Radar option in Popular Maps is a div with tabIndex -1, so Tab skips it and keyboard users cannot reach it to activate it with Enter.",
+  "rules": [
+    {"selector": "[data-map-id=\"radar\"]", "action": "makeFocusable"},
+    {"selector": "[data-map-id=\"radar\"]", "action": "setRole", "value": "button"},
+    {"selector": "[data-map-id=\"radar\"]", "action": "bindEnterToClick"},
+    {"selector": "[data-map-id=\"radar\"]", "action": "restoreFocusOutline"}
+  ]
+}

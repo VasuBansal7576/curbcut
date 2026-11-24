@@ -1,0 +1,30 @@
+{
+  "id": "arthritis-org-tr2",
+  "url": "https://www.arthritis.org/",
+  "persona": "keyboard-only",
+  "task": "Use Tab and Enter to reach and activate “About Arthritis”. Verify the public destination at /about-arthritis.",
+  "controlTask": "Click “About Arthritis” and verify the public destination at /about-arthritis.",
+  "observedSelector": "a[href=\"https\\:\\/\\/www\\.arthritis\\.org\\/about-arthritis\"][tabindex=\"-1\"]",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/about-arthritis"
+    }
+  ],
+  "minimumTabPresses": 2,
+  "probe": {
+    "action": "click"
+  },
+  "site": "www.arthritis.org",
+  "match": "https://www.arthritis.org/",
+  "barrier": "The About Arthritis link has tabindex=\"-1\", so Tab can focus the surrounding submenu toggle without focusing the link that opens /about-arthritis.",
+  "rules": [
+    {
+      "selector": "a[href=\"https\\:\\/\\/www\\.arthritis\\.org\\/about-arthritis\"][tabindex=\"-1\"]",
+      "action": "makeFocusable"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

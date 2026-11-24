@@ -1,0 +1,56 @@
+{
+  "barrier": "The passage sits in a 460px article row inside a 476px main column and a 1000px desktop layout. The row places the thumbnail and text side by side, and the narrow-width runs could not resolve the target as uniquely visible.",
+  "rules": [
+    {
+      "selector": "html, body, body div:has(div.main-column > div.area > div.topics__article)",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div:has(> div.main-column > div.area > div.topics__article)",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    },
+    {
+      "selector": "div.main-column > div.area:has(> div.topics__article), div.main-column > div.area > div.topics__article, div.topics__article > ul",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.main-column > div.area > div.topics__article > ul > li",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "max-width": "100%",
+        "height": "auto",
+        "box-sizing": "border-box"
+      }
+    },
+    {
+      "selector": "div.topics__article > ul > li > div.topics__article--contents, div.topics__article--contents p, div.topics__article--contents p a",
+      "action": "injectCSS",
+      "value": {
+        "display": "block",
+        "width": "auto",
+        "min-width": "0",
+        "max-width": "100%",
+        "height": "auto",
+        "max-height": "none",
+        "white-space": "normal",
+        "overflow-wrap": "anywhere",
+        "box-sizing": "border-box"
+      }
+    }
+  ]
+}

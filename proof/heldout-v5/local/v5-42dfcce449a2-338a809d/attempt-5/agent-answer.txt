@@ -1,0 +1,15 @@
+{
+  "barrier": "Keyboard activation opens the login dialog, but Escape leaves it visible. The open-state snapshot shows the dialog is still fading in when its visibility is first confirmed.",
+  "rules": [
+    {
+      "action": "bindEnterToClick",
+      "selector": "#main-slide .btn-slider-wrap > a[data-toggle=\"modal\"][data-target=\"#login\"]"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#login",
+      "opener": "#main-slide .btn-slider-wrap > a[data-toggle=\"modal\"][data-target=\"#login\"]",
+      "close": "#login .modal-header > button.close[data-dismiss=\"modal\"]"
+    }
+  ]
+}

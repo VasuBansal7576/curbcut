@@ -1,0 +1,34 @@
+{
+  "id": "meteoblue-weather-radar",
+  "url": "https://www.meteoblue.com/en/weather/maps/",
+  "persona": "keyboard-only",
+  "task": "First assert the Weather Radar option in Popular Maps is in sequential keyboard focus order. If a consent dialog appears, use Manage options and Confirm choices. Select Weather Radar with Tab and Enter. Verify the map switches to Weather Radar.",
+  "controlTask": "If a consent dialog appears, use Manage options and Confirm choices. Click Weather Radar in Popular Maps and verify it becomes the selected map.",
+  "observedSelector": "[data-map-id=\"radar\"]",
+  "successSelector": "[data-map-id=\"radar\"][class*=\" active-\"]",
+  "site": "www.meteoblue.com",
+  "match": "https://www.meteoblue.com/en/weather/maps/",
+  "barrier": "The clickable Weather Radar option in Popular Maps is a div with tabIndex -1, so Tab skips it and keyboard users cannot reach it to activate it with Enter.",
+  "rules": [
+    {
+      "selector": "[data-map-id=\"radar\"]",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "[data-map-id=\"radar\"]",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "[data-map-id=\"radar\"]",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "[data-map-id=\"radar\"]",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

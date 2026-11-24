@@ -1,0 +1,25 @@
+{
+  "barrier": "At 320 CSS pixels, the Academic Programs submenu stays hidden because its hover-opening rule applies only at widths of 992 pixels or more. The Associate Degrees link has no rendered box after ArrowDown.",
+  "rules": [
+    {
+      "selector": "#menu.collapse.navbar-collapse",
+      "action": "injectCSS",
+      "value": {"display": "block", "min-width": "0"}
+    },
+    {
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child > a.nav-link.d-none.d-lg-block",
+      "action": "injectCSS",
+      "value": {"display": "block"}
+    },
+    {
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child > ul.dropdown-menu > li.row, #menu > ul.navbar-nav > li.nav-menuItem:first-child:is(:hover, :focus-within) > ul.dropdown-menu",
+      "action": "injectCSS",
+      "value": {"display": "block"}
+    },
+    {
+      "selector": "#menu > ul.navbar-nav > li.nav-menuItem:first-child > ul.dropdown-menu > li.row > ul:nth-of-type(2) > li:nth-of-type(2) > a.dropdown-item",
+      "action": "injectCSS",
+      "value": {"white-space": "normal"}
+    }
+  ]
+}

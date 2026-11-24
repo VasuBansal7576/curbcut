@@ -1,0 +1,14 @@
+{
+  "barrier": "The Soap opera link receives keyboard focus, but its Superfish submenu stays at display:none after focus and Arrow Down. Pointer hover opens the submenu and exposes the La forza di una donna link.",
+  "rules": [
+    {
+      "selector": "#menu-td-demo-header-menu-1 > li.menu-item-27719",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseover"
+    },
+    {
+      "selector": "#menu-td-demo-header-menu-1 > li.menu-item-27719 > a, #menu-td-demo-header-menu-1 > li.menu-item-27719 > ul.sub-menu > li > a",
+      "action": "restoreFocusOutline"
+    }
+  ]
+}

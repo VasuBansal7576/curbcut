@@ -1,0 +1,9 @@
+{
+  "barrier": "The Menu button was missed in the five-Tab traversal, leaving the navigation that contains Construction Monitoring collapsed.",
+  "rules": [
+    {
+      "selector": "#ec-header > div > button:nth-of-type(2)",
+      "action": "makeFocusable"
+    }
+  ]
+}

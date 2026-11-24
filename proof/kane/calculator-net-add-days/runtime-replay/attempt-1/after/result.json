@@ -1,0 +1,1861 @@
+{
+  "status": "pass",
+  "runId": "15e8f204-b925-455f-bb0d-62d41867f890",
+  "reason": "Objective completed",
+  "summary": "You asked to add 2 days in the “Add to or Subtract from a Date” section while staying in Reading view.\nEntered 2 in the “Days to add” field and selected Calculate.\nThe calculator displayed Nov 24, 2026, Tuesday, which is two days after the starting date.",
+  "resultCode": 100,
+  "reasonCode": "success.complete",
+  "credits": 36.805325,
+  "exitCode": 0,
+  "steps": [
+    "analyze: ANALYZE(textual_visual, 'the exact row ‘textbox · Days to add’ is present in Rea",
+    "assert: the exact row ‘textbox · Days to add’ is present in Reading view",
+    "wait: queued plan (2 steps): type \"Days to add\"; click \"button · Calculate\"",
+    "scroll: Scroll \"Days to add\" into view",
+    "type: Type \"2\" into \"Days to add\"",
+    "scroll: Scroll \"button · Calculate\" into view",
+    "",
+    "click: Clicking activate the Calculate control for that section",
+    "click: PRIMARY: activate the Calculate control for that section; role=button; text=\"Cal",
+    "analyze: the displayed date is two days after the start date",
+    "analyze: the displayed date is two days after the start date",
+    "assert: the displayed date is two days after the start date"
+  ],
+  "evidencePack": "proof/kane/calculator-net-add-days/runtime-replay/attempt-1/after/3065ea7f-7d8e-4bc6-ad7d-539fa2224dfc.evidence",
+  "evidenceValid": true,
+  "observedOutcome": {
+    "selector": "h2.h2result",
+    "visible": true
+  },
+  "runner": "kane",
+  "inspection": {
+    "harness": {
+      "persona": "screen-reader-view",
+      "blockedPointers": 0,
+      "horizontalScroll": false,
+      "minWidth": 1920,
+      "maxWidth": 1920,
+      "patchId": "calculator-net-add-days",
+      "readerInputs": 0
+    },
+    "readerVisible": true,
+    "width": 1280,
+    "fixtureFixed": false,
+    "ruleMatches": [
+      {
+        "action": "addLabel",
+        "selector": "#c2day",
+        "count": 1
+      }
+    ]
+  },
+  "snapshot": {
+    "url": "https://www.calculator.net/date-calculator.html",
+    "width": 1280,
+    "scrollWidth": 1280,
+    "focused": "body",
+    "nodes": [
+      {
+        "selector": "#c2day",
+        "role": "textbox",
+        "name": "Days to add",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 431,
+        "width": 90
+      },
+      {
+        "selector": "div",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 431,
+        "width": 147
+      },
+      {
+        "selector": "#headerout",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#header",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 1100
+      },
+      {
+        "selector": "#logo",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 270
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Calculator.net",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 90,
+        "width": 208
+      },
+      {
+        "selector": "img",
+        "role": "img",
+        "name": "Calculator.net",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 90,
+        "width": 208
+      },
+      {
+        "selector": "#login",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 1140,
+        "width": 50
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "sign in",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 1142,
+        "width": 46
+      },
+      {
+        "selector": "#clear",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 0,
+        "width": 1280
+      },
+      {
+        "selector": "#contentout",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 1100
+      },
+      {
+        "selector": "#content",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "#breadcrumbs",
+        "role": "text",
+        "name": "/ /",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "home",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 90,
+        "width": 33
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "other",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 133,
+        "width": 30
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "date calculator",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 174,
+        "width": 85
+      },
+      {
+        "selector": "h1",
+        "role": "heading",
+        "name": "Date Calculator",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Days Between Two Dates",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Find the number of years, months, weeks, and days between dates. Click \"Settings\" to define holidays.",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "form",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "table",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table",
+        "left": 296,
+        "width": 315
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Start Date",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 298,
+        "width": 74
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Nov 22 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 374,
+        "width": 235
+      },
+      {
+        "selector": "table",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table",
+        "left": 375,
+        "width": 233
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Nov",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 377,
+        "width": 62
+      },
+      {
+        "selector": "#today_Month_ID",
+        "role": "combobox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 377,
+        "width": 62
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "22",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 441,
+        "width": 49
+      },
+      {
+        "selector": "#today_Day_ID",
+        "role": "combobox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 441,
+        "width": 49
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 492,
+        "width": 76
+      },
+      {
+        "selector": "#today_Year_ID",
+        "role": "textbox",
+        "name": "Year",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 492,
+        "width": 76
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 570,
+        "width": 36
+      },
+      {
+        "selector": "#today_ID_Link",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 570,
+        "width": 32
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "End Date",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 298,
+        "width": 74
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Nov 22 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 374,
+        "width": 235
+      },
+      {
+        "selector": "table",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table",
+        "left": 375,
+        "width": 233
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Nov",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 377,
+        "width": 62
+      },
+      {
+        "selector": "#ageat_Month_ID",
+        "role": "combobox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 377,
+        "width": 62
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "22",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 441,
+        "width": 49
+      },
+      {
+        "selector": "#ageat_Day_ID",
+        "role": "combobox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 441,
+        "width": 49
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 492,
+        "width": 76
+      },
+      {
+        "selector": "#ageat_Year_ID",
+        "role": "textbox",
+        "name": "Year",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 492,
+        "width": 76
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 570,
+        "width": 36
+      },
+      {
+        "selector": "#ageat_ID_Link",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 570,
+        "width": 32
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 298,
+        "width": 74
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "include end day (add 1 day)",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 374,
+        "width": 235
+      },
+      {
+        "selector": "#addendday",
+        "role": "checkbox",
+        "name": "include end day (add 1 day)",
+        "state": "unchecked",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 407,
+        "width": 0
+      },
+      {
+        "selector": "table",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table",
+        "left": 349,
+        "width": 209
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 349,
+        "width": 137
+      },
+      {
+        "selector": "input",
+        "role": "button",
+        "name": "Calculate",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 349,
+        "width": 137
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Settings",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 487,
+        "width": 72
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Settings",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 495,
+        "width": 63
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "Settings",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 495,
+        "width": 63
+      },
+      {
+        "selector": "h2",
+        "role": "heading",
+        "name": "Add to or Subtract from a Date",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "h2.h2result",
+        "role": "heading",
+        "name": "Result",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "is the date 2 days  after Nov 22, 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "Nov 24, 2026, Tuesday",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 90,
+        "width": 244
+      },
+      {
+        "selector": "table",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table",
+        "left": 90,
+        "width": 175
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "November 2026 S M T W T F S 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 90,
+        "width": 175
+      },
+      {
+        "selector": "table.cinfoT",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table",
+        "left": 90,
+        "width": 175
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "November 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 174
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "November 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 118,
+        "width": 118
+      },
+      {
+        "selector": "td.cinfoHd",
+        "role": "cell",
+        "name": "S",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 25
+      },
+      {
+        "selector": "td.cinfoHdL",
+        "role": "cell",
+        "name": "M",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 115,
+        "width": 25
+      },
+      {
+        "selector": "td.cinfoHdL",
+        "role": "cell",
+        "name": "T",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 140,
+        "width": 25
+      },
+      {
+        "selector": "td.cinfoHdL",
+        "role": "cell",
+        "name": "W",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 165,
+        "width": 25
+      },
+      {
+        "selector": "td.cinfoHdL",
+        "role": "cell",
+        "name": "T",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 190,
+        "width": 25
+      },
+      {
+        "selector": "td.cinfoHdL",
+        "role": "cell",
+        "name": "F",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 214,
+        "width": 25
+      },
+      {
+        "selector": "td.cinfoHdL",
+        "role": "cell",
+        "name": "S",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 239,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "1",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "2",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 115,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "3",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 140,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "4",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 165,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "5",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 190,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "6",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 214,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "7",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 239,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "8",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "9",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 115,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "10",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 140,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "11",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 165,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "12",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 190,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "13",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 214,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "14",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 239,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "15",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "16",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 115,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "17",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 140,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "18",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 165,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "19",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 190,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "20",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 214,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "21",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 239,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "22",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "23",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 115,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "24",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 140,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "25",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 165,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "26",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 190,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "27",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 214,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "28",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 239,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "29",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "30",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 115,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 140,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 165,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 190,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 214,
+        "width": 25
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 239,
+        "width": 25
+      },
+      {
+        "selector": "div.panel",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "form",
+        "role": "form",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 96,
+        "width": 716
+      },
+      {
+        "selector": "table",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table",
+        "left": 296,
+        "width": 315
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Start Date",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 298,
+        "width": 74
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Nov 22 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 374,
+        "width": 235
+      },
+      {
+        "selector": "table",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table",
+        "left": 375,
+        "width": 233
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Nov",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 377,
+        "width": 62
+      },
+      {
+        "selector": "#today2_Month_ID",
+        "role": "combobox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 377,
+        "width": 62
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "22",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 441,
+        "width": 49
+      },
+      {
+        "selector": "#today2_Day_ID",
+        "role": "combobox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 441,
+        "width": 49
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 492,
+        "width": 76
+      },
+      {
+        "selector": "#today2_Year_ID",
+        "role": "textbox",
+        "name": "Year",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 492,
+        "width": 76
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 570,
+        "width": 36
+      },
+      {
+        "selector": "#today2_ID_Link",
+        "role": "link",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline",
+        "left": 570,
+        "width": 32
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 298,
+        "width": 74
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "+ 0 years 0 months 0 weeks 2 days calculate in business days",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 374,
+        "width": 235
+      },
+      {
+        "selector": "table",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table",
+        "left": 375,
+        "width": 210
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "+",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 377,
+        "width": 47
+      },
+      {
+        "selector": "#c2op",
+        "role": "combobox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 382,
+        "width": 37
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "0 years 0 months 0 weeks 2 days",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 426,
+        "width": 157
+      },
+      {
+        "selector": "#c2yeardiv",
+        "role": "text",
+        "name": "years",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 431,
+        "width": 147
+      },
+      {
+        "selector": "#c2year",
+        "role": "textbox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 431,
+        "width": 90
+      },
+      {
+        "selector": "#c2monthdiv",
+        "role": "text",
+        "name": "months",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 431,
+        "width": 147
+      },
+      {
+        "selector": "#c2month",
+        "role": "textbox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 431,
+        "width": 90
+      },
+      {
+        "selector": "#c2weekdiv",
+        "role": "text",
+        "name": "weeks",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 431,
+        "width": 147
+      },
+      {
+        "selector": "#c2week",
+        "role": "textbox",
+        "name": "",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 431,
+        "width": 90
+      },
+      {
+        "selector": "#usebusinessday",
+        "role": "checkbox",
+        "name": "calculate in business days",
+        "state": "unchecked",
+        "tabIndex": 0,
+        "display": "block",
+        "left": 407,
+        "width": 0
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 298,
+        "width": 74
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 374,
+        "width": 235
+      },
+      {
+        "selector": "input",
+        "role": "button",
+        "name": "Calculate",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 423,
+        "width": 137
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Time Calculator",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 102,
+        "width": 123
+      },
+      {
+        "selector": "a",
+        "role": "link",
+        "name": "Age Calculator",
+        "state": "",
+        "tabIndex": 0,
+        "display": "inline-block",
+        "left": 238,
+        "width": 117
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "History of the Gregorian Calendar",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "The Gregorian calendar is the most prevalently used calendar today. Within this calendar, a standard year consists of 365 days with a leap day being introduced to the month of February during a leap y",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "The Gregorian calendar is a reformed version of the Julian calendar, which was itself a modification of the ancient Roman calendar. The ancient Roman calendar was believed to be an observational lunar",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "The Republican calendar later used by Rome followed Greek calendars in its assumptions of 29.5 days in a lunar cycle and 12.5 synodic months in a solar year, which align every fourth year upon the add",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Despite all efforts, the Julian calendar still required further reform, since the calendar drifted with respect to the equinoxes and solstices by approximately 11 minutes per year. By 1582, this resul",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "The adoption of the Gregorian calendar occurred slowly over a period of centuries, and despite many proposals to further reform the calendar, the Gregorian Calendar still prevails as the most commonly",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "h3",
+        "role": "heading",
+        "name": "Holidays",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "A holiday is a day that, either by custom or by law, is set aside such that regular activities like going to work or school are suspended, or at least reduced. The term \"holiday\" can be interpreted di",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Generally, holidays are meant to commemorate some event, person, or group of cultural or religious significance. Although certain holidays, such as Christmas and New Year's Day, are widely celebrated ",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "This calculator is mainly geared towards U.S. holidays, but holidays specific to a given country can be entered manually. Certain holidays can also be excluded. For a further level of specificity, fed",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "Certain holidays such as New Year's Day are referred to as \"fixed holidays,\" since they fall on the same date every year. Others, such as the birthday of Martin Luther King, Jr., don't have a fixed da",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "2026 U.S. Federal Holidays",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 90,
+        "width": 204
+      },
+      {
+        "selector": "table.cinfoT",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table",
+        "left": 90,
+        "width": 300
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "New Year's Day",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 192
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Jan. 1, 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 282,
+        "width": 107
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Martin Luther King Jr. Day",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 192
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Jan. 19, 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 282,
+        "width": 107
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "President's Day",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 192
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Feb. 16, 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 282,
+        "width": 107
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Memorial Day",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 192
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "May. 25, 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 282,
+        "width": 107
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Juneteenth Day",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 192
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Jun. 19, 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 282,
+        "width": 107
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Independence Day",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 192
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Jul. 4, 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 282,
+        "width": 107
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Labor Day",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 192
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Sep. 7, 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 282,
+        "width": 107
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Columbus Day",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 192
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Oct. 12, 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 282,
+        "width": 107
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Veteran's Day",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 192
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Nov. 11, 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 282,
+        "width": 107
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Thanksgiving",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 192
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Nov. 26, 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 282,
+        "width": 107
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Christmas",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 192
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Dec. 25, 2026",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 282,
+        "width": 107
+      },
+      {
+        "selector": "p",
+        "role": "text",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "block",
+        "left": 90,
+        "width": 728
+      },
+      {
+        "selector": "b",
+        "role": "text",
+        "name": "2027 U.S. Federal Holidays",
+        "state": "",
+        "tabIndex": -1,
+        "display": "inline",
+        "left": 90,
+        "width": 204
+      },
+      {
+        "selector": "table.cinfoT",
+        "role": "table",
+        "name": "",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table",
+        "left": 90,
+        "width": 300
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "New Year's Day",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 192
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Jan. 1, 2027",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 282,
+        "width": 107
+      },
+      {
+        "selector": "td",
+        "role": "cell",
+        "name": "Martin Luther King Jr. Day",
+        "state": "",
+        "tabIndex": -1,
+        "display": "table-cell",
+        "left": 91,
+        "width": 192
+      }
+    ]
+  },
+  "video": "proof/kane/calculator-net-add-days/runtime-replay/attempt-1/after/recording.mp4"
+}

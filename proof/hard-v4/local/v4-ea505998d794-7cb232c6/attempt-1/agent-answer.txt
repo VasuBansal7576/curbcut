@@ -1,0 +1,9 @@
+{
+  "barrier": "The Resources submenu opens on pointer hover but stays hidden when the Resources link receives focus or Arrow Down, leaving Why Coding Matters unavailable to keyboard users.",
+  "rules": [
+    {
+      "selector": "#header > nav > div:nth-of-type(3) > ul > li:nth-of-type(4)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

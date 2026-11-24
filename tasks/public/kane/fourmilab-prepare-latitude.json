@@ -1,0 +1,9 @@
+{
+  "id": "fourmilab-prepare-latitude",
+  "url": "https://www.fourmilab.ch/cgi-bin/Earth",
+  "persona": "screen-reader-view",
+  "observedSelector": "input[name=\"lat\"]",
+  "requiredName": "Latitude",
+  "task": "In Reading view, first assert that the exact row ‘textbox · Latitude’ is present. Set that textbox to 10 and press Tab to commit the change. Verify its value is 10 and the ‘radio · Lat: · checked’ row confirms custom latitude mode. Stop at that selection without using Update.",
+  "controlTask": "In Earth View, click the latitude textbox next to Lat, set it to 10 and click outside it. Verify its value is 10 and the Lat radio control is selected."
+}

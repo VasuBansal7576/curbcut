@@ -1,0 +1,14 @@
+{
+  "id": "keyboard-add-headphones",
+  "url": "http://127.0.0.1:4317/fixtures/shop/",
+  "task": "Using only the keyboard, search for headphones and add Field Headphones to the cart. Confirm Cart (1).",
+  "controlTask": "Search for headphones, click Add to cart on Field Headphones and confirm Cart (1).",
+  "persona": "keyboard-only",
+  "outcomeChecks": [
+    {
+      "selector": "#cart-status",
+      "kind": "text",
+      "equals": "Field Headphones added to cart."
+    }
+  ]
+}

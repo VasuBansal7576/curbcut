@@ -1,0 +1,52 @@
+{
+  "id": "v4-358d06a5be14-68acbc65",
+  "url": "https://kavirtire.ir/",
+  "persona": "keyboard-only",
+  "task": "Open “محصولات” from keyboard focus or with Arrow Down and follow “کاتالوگ محصولات”. Confirm the public destination /upload/files/2025/05/catalog-fa.pdf.",
+  "controlTask": "Hover “محصولات”, click “کاتالوگ محصولات” and confirm /upload/files/2025/05/catalog-fa.pdf.",
+  "observedSelector": "#primary-navigation > ul > li:nth-of-type(2) > a",
+  "outcomeChecks": [
+    {
+      "kind": "url-path",
+      "equals": "/upload/files/2025/05/catalog-fa.pdf"
+    }
+  ],
+  "barrierClass": 1,
+  "relatedSelectors": [
+    "#primary-navigation > ul > li:nth-of-type(2)",
+    "#primary-navigation > ul > li:nth-of-type(2) > ul"
+  ],
+  "journey": [
+    {
+      "selector": "#primary-navigation > ul > li:nth-of-type(2) > a",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#primary-navigation > ul > li:nth-of-type(2) > a",
+      "action": "key",
+      "key": "ArrowDown",
+      "pointer": {
+        "action": "hover"
+      }
+    },
+    {
+      "selector": "#primary-navigation > ul > li:nth-of-type(2) > ul > li:nth-of-type(1) > a",
+      "action": "activate"
+    }
+  ],
+  "site": "kavirtire.ir",
+  "match": "https://kavirtire.ir/",
+  "barrier": "Pointer hover opens the «محصولات» submenu, but focusing the link and pressing Arrow Down leaves «کاتالوگ محصولات» unavailable to the keyboard.",
+  "rules": [
+    {
+      "selector": "#primary-navigation > ul > li:nth-of-type(2)",
+      "action": "mirrorHoverToFocus"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

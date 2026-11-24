@@ -1,0 +1,12 @@
+{
+  "barrier": "The Resources trigger receives keyboard focus, but focus and Arrow Down leave the dropdown closed, so the blog post link is unavailable. Pointer hover opens the dropdown.",
+  "rules": [
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#w-dropdown-toggle-2",
+      "target": "#w-dropdown-list-2",
+      "mode": "display",
+      "display": "block"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "barrier": "Keyboard activation opens the Search dialog, but pressing Escape while it is open leaves it visible. The dialog already supports programmatic focus and has a native Close button.",
+  "rules": [
+    {
+      "action": "dialogBehavior",
+      "dialog": "#searchModal.show[aria-modal='true']",
+      "opener": "#wrapper-navbar .header-menu-right-desktop > button.header-search-button[data-target='#searchModal']",
+      "close": "#searchModal button#search-close[data-dismiss='modal']"
+    }
+  ]
+}

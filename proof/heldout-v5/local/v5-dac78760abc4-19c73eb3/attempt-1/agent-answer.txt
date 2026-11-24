@@ -1,0 +1,14 @@
+{
+  "barrier": "The open Privacy dialog has no tabindex, and focus stayed on the page body when the keyboard journey tried to reach the dialog.",
+  "rules": [
+    {
+      "selector": "#onetrust-banner-sdk > div[role=\"dialog\"]",
+      "action": "makeFocusable"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#onetrust-banner-sdk > div[role=\"dialog\"]",
+      "close": "#onetrust-close-btn-container > button"
+    }
+  ]
+}

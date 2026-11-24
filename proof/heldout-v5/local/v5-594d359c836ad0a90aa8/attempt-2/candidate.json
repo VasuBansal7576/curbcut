@@ -1,0 +1,37 @@
+{
+  "id": "v5-594d359c836ad0a90aa8",
+  "url": "https://www.swtor.com/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “11.12.2026 Darth Jadus has stolen the key to Darth Nul’s masterworks, and” and confirm it fits without horizontal scrolling.",
+  "controlTask": "Read the passage beginning “11.12.2026 Darth Jadus has stolen the key to Darth Nul’s masterworks, and” at normal width.",
+  "observedSelector": "#newMedia > div:nth-of-type(2) > div > span:nth-of-type(2) > p:nth-of-type(1)",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "#newMedia > div:nth-of-type(2) > div > span:nth-of-type(2) > p:nth-of-type(1)",
+      "equals": "11.12.2026 Darth Jadus has stolen the key to Darth Nul’s masterworks, and"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "#newMedia > div:nth-of-type(2) > div > span:nth-of-type(2) > p:nth-of-type(1)"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.swtor.com",
+  "match": "https://www.swtor.com/",
+  "barrier": "At 320 CSS pixels, #middle shifts the media section 409 pixels left of the viewport. The passage wraps to 310 pixels but remains entirely off-screen.",
+  "rules": [
+    {
+      "selector": "body.front #middle:has(#newMedia)",
+      "action": "injectCSS",
+      "value": {
+        "display": "contents"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

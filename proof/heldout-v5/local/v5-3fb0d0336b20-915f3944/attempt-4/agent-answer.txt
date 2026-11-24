@@ -1,0 +1,13 @@
+{
+  "barrier": "Tab reaches the native Next button, but its focused box spans 1250 pixels and extends past the slider’s right edge. The pointer run shows the same button at 25 pixels wide.",
+  "rules": [
+    {
+      "selector": ".icons-text-slider .slider-row > .col-12 > .slider > button.slick-next.slick-arrow[aria-label=\"Next\"]",
+      "action": "injectCSS",
+      "value": {
+        "width": "fit-content",
+        "min-width": "0"
+      }
+    }
+  ]
+}

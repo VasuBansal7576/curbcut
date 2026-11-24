@@ -1,0 +1,57 @@
+{
+  "id": "sfmta-pause-carousel",
+  "url": "https://www.sfmta.com/",
+  "persona": "keyboard-only",
+  "task": "Assert that the visible Play/Pause control for the homepage carousel is keyboard focusable. Activate it with Tab and Enter to pause the carousel. Verify the control reports aria-pressed false.",
+  "controlTask": "Click Play/Pause on the rotating homepage carousel to pause it. Verify the control reports aria-pressed false.",
+  "observedSelector": "span.play_pause",
+  "successSelector": "span.play_pause[aria-pressed=\"false\"]",
+  "site": "www.sfmta.com",
+  "match": "https://www.sfmta.com/",
+  "barrier": "The visible carousel Play/Pause control is a span with a button role and tabIndex -1, so Tab skips it.",
+  "rules": [
+    {
+      "selector": "span.play_pause",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "span.play_pause",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "span.play_pause",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane/sfmta-pause-carousel/2026-11-21T19-54-37.487Z/before/recording.mp4",
+    "after": "proof/kane/sfmta-pause-carousel/resume-2026-11-22T03-37-05.332Z/attempt-1/after/recording.mp4",
+    "control": "proof/kane/sfmta-pause-carousel/2026-11-21T19-54-37.487Z/control/recording.mp4",
+    "verifiedAt": "2026-11-22T03:40:14.102Z",
+    "kaneRunIds": [
+      "cf5ef348-c917-42a8-88c6-a12b55a51dc1",
+      "e8c80f58-6d81-4087-888d-496ad11882f7",
+      "19b9337d-a774-4d11-81ed-a96824e48fd0"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-22T03:40:14.102Z",
+      "event": "verified",
+      "before": "cf5ef348-c917-42a8-88c6-a12b55a51dc1",
+      "control": "e8c80f58-6d81-4087-888d-496ad11882f7",
+      "after": "19b9337d-a774-4d11-81ed-a96824e48fd0"
+    },
+    {
+      "at": "2026-11-22T10:53:42.693Z",
+      "event": "rechecked",
+      "without": "fail",
+      "runId": "ea41b548-420a-4e9e-a463-c2e71d05f51f",
+      "video": "proof/kane/sfmta-pause-carousel/2026-11-22T10-50-14.915Z/recheck-without/recording.mp4",
+      "with": "inconclusive",
+      "after": "b46f289c-47aa-4c7f-b845-d7f72e644763",
+      "afterVideo": "proof/kane/sfmta-pause-carousel/2026-11-22T10-50-14.915Z/recheck-with/recording.mp4"
+    }
+  ]
+}

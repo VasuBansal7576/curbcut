@@ -1,0 +1,16 @@
+{
+  "barrier": "Keyboard traversal reaches the “Who We Are” button, but focus does not stay on it. The submenu containing “About ASM” is hidden with display: none until pointer hover opens it.",
+  "rules": [
+    {
+      "selector": "#header button.header-nav-item__activator[aria-controls=\"who_we_are\"]",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "selector": "#header ul.header-nav-menu > li.header-nav-item:focus-within > #who_we_are",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ]
+}

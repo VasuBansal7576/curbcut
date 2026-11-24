@@ -1,0 +1,10 @@
+{
+  "barrier": "The search input has no accessible name and exposes the combobox role, so Reading view cannot find it as the requested named textbox. The available rules can supply the name but do not support setting the textbox role.",
+  "rules": [
+    {
+      "selector": "#searchAutocomplete > input",
+      "action": "addLabel",
+      "value": "Search for Abstracts, Guidelines, Meetings"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "barrier": "The EN dropdown trigger is an anchor without an href or an explicit tabindex, so Tab skips it and keyboard users cannot open the list containing Azərbaycanca.",
+  "rules": [
+    {
+      "selector": "#widget_2 .dropdown.languages > a.languages-toggle[data-bs-toggle=\"dropdown\"]",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#widget_2 .dropdown.languages > a.languages-toggle[data-bs-toggle=\"dropdown\"]",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#widget_2 .dropdown.languages > a.languages-toggle[data-bs-toggle=\"dropdown\"]",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "action": "toggleOnActivate",
+      "trigger": "#widget_2 .dropdown.languages > a.languages-toggle[data-bs-toggle=\"dropdown\"]",
+      "target": "#widget_2 .dropdown.languages > div.dropdown-menu",
+      "mode": "class",
+      "className": "show"
+    }
+  ]
+}

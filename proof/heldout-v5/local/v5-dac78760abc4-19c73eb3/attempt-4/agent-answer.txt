@@ -1,0 +1,18 @@
+{
+  "barrier": "With the Privacy dialog open, keyboard focus lands on Cookie settings and the dialog container never receives focus for the Escape step.",
+  "rules": [
+    {
+      "selector": "#onetrust-consent-sdk",
+      "action": "removeFocusTrap"
+    },
+    {
+      "selector": "#onetrust-banner-sdk > div[role=\"dialog\"]",
+      "action": "makeFocusable"
+    },
+    {
+      "action": "dialogBehavior",
+      "dialog": "#onetrust-banner-sdk > div[role=\"dialog\"]",
+      "close": "#onetrust-close-btn-container > button"
+    }
+  ]
+}

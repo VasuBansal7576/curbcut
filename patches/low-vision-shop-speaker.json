@@ -1,0 +1,46 @@
+{
+  "id": "low-vision-shop-speaker",
+  "url": "http://127.0.0.1:4317/fixtures/shop/",
+  "site": "127.0.0.1",
+  "match": "http://127.0.0.1:4317/fixtures/shop/",
+  "persona": "low-vision",
+  "task": "In the unfiltered collection, scroll vertically to Porch Speaker. Assert that its Add to cart control fits fully within the visible width. Add the speaker and confirm Cart (1).",
+  "barrier": "The #products grid places Porch Speaker in a horizontal column, with its Add to cart button starting at x=504 in a 320-pixel viewport.",
+  "rules": [
+    {
+      "selector": "#products",
+      "action": "injectCSS",
+      "value": {
+        "display": "block"
+      }
+    }
+  ],
+  "status": "retired",
+  "evidence": {
+    "before": "proof/kane/low-vision-shop-speaker/2026-11-21T19-44-34.430Z/before/recording.mp4",
+    "after": "proof/kane/low-vision-shop-speaker/2026-11-21T19-44-34.430Z/attempt-1/after/recording.mp4",
+    "control": "proof/kane/low-vision-shop-speaker/2026-11-21T19-44-34.430Z/control/recording.mp4",
+    "verifiedAt": "2026-11-21T19:47:33.338Z",
+    "kaneRunIds": [
+      "4a499b97-2acf-46da-9c21-ae30dd0630f2",
+      "59c627a1-eae2-4886-aa8e-5fff7c7b94ae",
+      "b5fdcc75-9ec1-4dad-884f-1554818b20c5"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-21T19:47:33.338Z",
+      "event": "verified",
+      "before": "4a499b97-2acf-46da-9c21-ae30dd0630f2",
+      "control": "59c627a1-eae2-4886-aa8e-5fff7c7b94ae",
+      "after": "b5fdcc75-9ec1-4dad-884f-1554818b20c5"
+    },
+    {
+      "at": "2026-11-21T19:48:58.630Z",
+      "event": "retired",
+      "without": "pass",
+      "runId": "900e83bc-9d0c-46d2-bae8-f32ac64542fd",
+      "video": "proof/kane/low-vision-shop-speaker/2026-11-21T19-48-03.277Z/recheck-without/recording.mp4"
+    }
+  ]
+}

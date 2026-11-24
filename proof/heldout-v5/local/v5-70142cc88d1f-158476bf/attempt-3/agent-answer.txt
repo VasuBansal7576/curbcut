@@ -1,0 +1,10 @@
+{
+  "barrier": "Pointer hover opens Resources, but keyboard focus and Arrow Down leave the submenu at display: none, so its Stack Ads link cannot be activated.",
+  "rules": [
+    {
+      "selector": "#main-navigation > ul > li.nav__item > button[aria-controls=\"submenu-resources\"]",
+      "action": "mirrorHoverEventToFocus",
+      "value": "mouseover"
+    }
+  ]
+}

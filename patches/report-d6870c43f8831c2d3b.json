@@ -1,0 +1,59 @@
+{
+  "id": "report-d6870c43f8831c2d3b",
+  "url": "https://www.colorhexa.com/0066ff",
+  "persona": "keyboard-only",
+  "task": "Open the color picker using the swatch next to the color search field. Stop when the color spectrum panel and hue slider are visible.",
+  "site": "www.colorhexa.com",
+  "match": "https://www.colorhexa.com/0066ff",
+  "barrier": "The color swatch next to the search field is a clickable div that Tab skips, so keyboard users cannot reach it to open the color picker.",
+  "rules": [
+    {
+      "selector": "div.sp-replacer.sp-light",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "div.sp-replacer.sp-light",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "div.sp-replacer.sp-light",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "div.sp-replacer.sp-light",
+      "action": "restoreFocusOutline"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/before/recording.mp4",
+    "after": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/attempt-1/after/recording.mp4",
+    "control": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/control/recording.mp4",
+    "verifiedAt": "2026-11-22T11:04:09.374Z",
+    "kaneRunIds": [
+      "3c57743a-4f8b-4c78-9f77-d6e4630e9d31",
+      "dedca760-0bbb-4e0d-8c38-384f23fbe12d",
+      "cbcbc771-f785-4a3c-aaa9-e9fdcc8e9f65"
+    ]
+  },
+  "history": [
+    {
+      "at": "2026-11-22T11:04:09.374Z",
+      "event": "verified",
+      "before": "3c57743a-4f8b-4c78-9f77-d6e4630e9d31",
+      "control": "dedca760-0bbb-4e0d-8c38-384f23fbe12d",
+      "after": "cbcbc771-f785-4a3c-aaa9-e9fdcc8e9f65"
+    },
+    {
+      "at": "2026-11-22T11:08:59.592Z",
+      "event": "rechecked",
+      "without": "fail",
+      "runId": "12547fe8-7147-4b45-a813-3669d1af1177",
+      "video": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-08-05.103Z/recheck-without/recording.mp4",
+      "with": "pass",
+      "after": "402f819e-f5de-4821-98e0-13b6cc803fa0",
+      "afterVideo": "proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-08-05.103Z/recheck-with/recording.mp4"
+    }
+  ]
+}

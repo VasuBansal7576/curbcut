@@ -1,0 +1,56 @@
+{
+  "registered": {
+    "commit": "57ea01fbc3ea988b5442becc2eb6a9119aa7c4e7",
+    "blob": "cb569c4321810421401e6273f1a4e509f6c63394"
+  },
+  "task": {
+    "id": "v5-1a3ef33e9c58-3eefe840",
+    "url": "https://www.uni-bayreuth.de/",
+    "persona": "keyboard-only",
+    "task": "Expand “Studierende” with the keyboard and read “Informationen der Studierendenkanzlei”.",
+    "controlTask": "Click “Studierende” and read “Informationen der Studierendenkanzlei”.",
+    "observedSelector": "#b689d429_mobile_button",
+    "outcomeChecks": [
+      {
+        "kind": "contains",
+        "selector": "#b689d429_mobile_content > div > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > ul > li:nth-of-type(1)",
+        "equals": "Informationen der Studierendenkanzlei"
+      }
+    ],
+    "barrierClass": 2,
+    "relatedSelectors": [
+      "#b689d429_mobile_content"
+    ],
+    "journey": [
+      {
+        "selector": "#b689d429_mobile_button",
+        "action": "activate"
+      },
+      {
+        "selector": "#b689d429_mobile_content > div > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > ul > li:nth-of-type(1)",
+        "action": "observe"
+      }
+    ]
+  },
+  "runner": "playwright",
+  "status": "already-accessible",
+  "reason": "The complete journey reached the declared outcome.",
+  "phases": [
+    {
+      "name": "control",
+      "persona": "control",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-1a3ef33e9c58-3eefe840/control.json"
+    },
+    {
+      "name": "before",
+      "persona": "keyboard-only",
+      "status": "pass",
+      "reason": "The complete journey reached the declared outcome.",
+      "file": "proof/heldout-v5/local/v5-1a3ef33e9c58-3eefe840/before.json"
+    }
+  ],
+  "patch": null,
+  "proposal": null
+}

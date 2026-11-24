@@ -1,0 +1,46 @@
+{
+  "id": "v5-3fb0d0336b20-915f3944",
+  "url": "https://www.productmadness.com/",
+  "persona": "keyboard-only",
+  "task": "Activate “Next” from the keyboard and confirm the next slide is shown.",
+  "controlTask": "Click “Next” and confirm the next slide is shown.",
+  "observedSelector": "section:nth-of-type(6) > div > div > div:nth-of-type(2) > div > div > button:nth-of-type(2)",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#slick-slide11.slick-current"
+    }
+  ],
+  "barrierClass": 3,
+  "relatedSelectors": [
+    "section:nth-of-type(6) > div > div > div:nth-of-type(2) > div > div",
+    "section:nth-of-type(6) > div > div > div:nth-of-type(2) > div > div > button:nth-of-type(1)",
+    "#slick-slide11"
+  ],
+  "journey": [
+    {
+      "selector": "section:nth-of-type(6) > div > div > div:nth-of-type(2) > div > div > button:nth-of-type(2)",
+      "action": "activate"
+    },
+    {
+      "selector": "#slick-slide11.slick-current",
+      "action": "observe"
+    }
+  ],
+  "site": "www.productmadness.com",
+  "match": "https://www.productmadness.com/",
+  "barrier": "The native Next button is reachable by Tab, but its rendered width collapses to zero at the right edge of the carousel, leaving no visible target when focused.",
+  "rules": [
+    {
+      "selector": ".icons-text-slider .slider-row > .col-12 > .slider > button.slick-next.slick-arrow",
+      "action": "injectCSS",
+      "value": {
+        "width": "100%",
+        "max-width": "none"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

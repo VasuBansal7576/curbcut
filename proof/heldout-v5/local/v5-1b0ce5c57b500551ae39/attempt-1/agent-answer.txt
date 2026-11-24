@@ -1,0 +1,23 @@
+{
+  "barrier": "At 320 CSS pixels, the alert paragraph clips 402 pixels of nonwrapping text inside a 200-pixel box.",
+  "rules": [
+    {
+      "selector": "#alerta, #alerta > ul:first-of-type, #alerta > ul:first-of-type > li.alerta-item",
+      "action": "injectCSS",
+      "value": {
+        "height": "auto",
+        "max-height": "none"
+      }
+    },
+    {
+      "selector": "#alerta > ul:first-of-type > li.alerta-item > p",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "normal",
+        "overflow-wrap": "anywhere",
+        "height": "auto",
+        "max-height": "none"
+      }
+    }
+  ]
+}

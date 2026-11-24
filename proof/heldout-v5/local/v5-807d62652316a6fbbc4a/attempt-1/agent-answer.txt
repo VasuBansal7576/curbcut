@@ -1,0 +1,20 @@
+{
+  "barrier": "At 320 CSS pixels, the #main flex item retains an automatic minimum width of 853 pixels inside a 288-pixel row. The carousel passage inherits an 837-pixel width and is clipped by the page wrapper.",
+  "rules": [
+    {
+      "selector": ".row > #main",
+      "action": "injectCSS",
+      "value": {
+        "min-width": "0",
+        "max-width": "100%"
+      }
+    },
+    {
+      "selector": "#content .c-intro__wrapper",
+      "action": "injectCSS",
+      "value": {
+        "grid-template-columns": "minmax(0, 1fr)"
+      }
+    }
+  ]
+}

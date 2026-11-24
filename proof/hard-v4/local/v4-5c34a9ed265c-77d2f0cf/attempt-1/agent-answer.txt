@@ -1,0 +1,13 @@
+{
+  "barrier": "The recorded Tab traversal ended at the cookie dialog’s Close control before reaching “Classifieds, Etc.”. The submenu containing “Press Releases” is hidden at rest and opens on pointer hover.",
+  "rules": [
+    {
+      "selector": "div.cmplz-close",
+      "action": "bindEnterToClick"
+    },
+    {
+      "selector": "#menu-primary-menu-1 > li:nth-of-type(6)",
+      "action": "mirrorHoverToFocus"
+    }
+  ]
+}

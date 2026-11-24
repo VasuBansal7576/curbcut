@@ -1,0 +1,87 @@
+{
+  "task": {
+    "id": "v4-86f207deeb57-7bc09a21",
+    "url": "https://www.mass.edu/",
+    "persona": "keyboard-only",
+    "task": "Open “About” from keyboard focus or with Arrow Down and follow “The DHE”. Confirm the public destination /about/aboutdhe.asp.",
+    "controlTask": "Hover “About”, click “The DHE” and confirm /about/aboutdhe.asp.",
+    "observedSelector": "#mainnav > nav > ul > li:nth-of-type(1) > a",
+    "outcomeChecks": [
+      {
+        "kind": "url-path",
+        "equals": "/about/aboutdhe.asp"
+      }
+    ],
+    "barrierClass": 1,
+    "relatedSelectors": [
+      "#mainnav > nav > ul > li:nth-of-type(1)",
+      "#mainnav > nav > ul > li:nth-of-type(1) > ul"
+    ],
+    "journey": [
+      {
+        "selector": "#mainnav > nav > ul > li:nth-of-type(1) > a",
+        "action": "focus",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#mainnav > nav > ul > li:nth-of-type(1) > a",
+        "action": "key",
+        "key": "ArrowDown",
+        "pointer": {
+          "action": "hover"
+        }
+      },
+      {
+        "selector": "#mainnav > nav > ul > li:nth-of-type(1) > ul > li:nth-of-type(1) > a",
+        "action": "activate"
+      }
+    ]
+  },
+  "status": "verified",
+  "phases": [
+    {
+      "name": "before",
+      "balance": 1336.7125,
+      "after": 1301.0526,
+      "status": "fail",
+      "runner": "kane",
+      "runId": "efcfdd9f-fe30-4b4e-a7e7-f95a0d71eba3",
+      "credits": 33.285855,
+      "reason": "Step 2 failed: Arrow Down left About focused and no visible or accessible “The DHE” control appeared.",
+      "video": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/before/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/before/2849afe4-60bc-40c2-babf-75270db8c7d8.evidence",
+      "basis": "recorded-journey-failed"
+    },
+    {
+      "name": "control",
+      "balance": 1301.0526,
+      "after": 1271.6794,
+      "status": "pass",
+      "runner": "kane",
+      "runId": "385196a9-e165-4f24-8616-8fe5ceca6d61",
+      "credits": 19.23193,
+      "reason": "Objective completed",
+      "video": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/control/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/control/3eae0ffe-c163-4bec-a190-ede57e94f437.evidence",
+      "basis": "recorded-journey-and-outcome"
+    },
+    {
+      "name": "attempt-1/after",
+      "balance": 1271.6794,
+      "after": 1248.579,
+      "status": "pass",
+      "runner": "kane",
+      "runId": "cb96e3af-bc33-467f-adce-1b4d19ce6cde",
+      "credits": 22.195352500000002,
+      "reason": "Objective completed",
+      "video": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/recording.mp4",
+      "evidencePack": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/70a47b25-b707-443b-98dd-d8849884cec2.evidence",
+      "basis": "recorded-journey-and-outcome"
+    }
+  ],
+  "localProposal": "proof/hard-v4/local/v4-86f207deeb57-7bc09a21/attempt-1",
+  "reason": "Objective completed",
+  "finishedAt": "2026-11-23T15:56:29.818Z"
+}

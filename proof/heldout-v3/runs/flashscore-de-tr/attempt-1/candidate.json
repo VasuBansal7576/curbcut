@@ -1,0 +1,37 @@
+{
+  "id": "flashscore-de-tr",
+  "url": "https://www.flashscore.de/",
+  "persona": "low-vision",
+  "task": "At 320 CSS pixels, read the passage beginning “U17 Weltmeisterschaft 2026 Fussball Live Ergebnisse, Aktuelle Fussball Ergebnisse, Bundesliga, Champions”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+  "controlTask": "At normal width, read the passage beginning “U17 Weltmeisterschaft 2026 Fussball Live Ergebnisse, Aktuelle Fussball Ergebnisse, Bundesliga, Champions” and verify all its text is visible without horizontal scrolling.",
+  "observedSelector": "div:nth-of-type(3) > div:nth-of-type(1) > div > h1",
+  "outcomeChecks": [
+    {
+      "kind": "contains",
+      "selector": "div:nth-of-type(3) > div:nth-of-type(1) > div > h1",
+      "equals": "U17 Weltmeisterschaft 2026 Fussball Live Ergebnisse, Aktuelle Fussball Ergebnisse, Bundesliga, Champions"
+    },
+    {
+      "kind": "fits-width",
+      "selector": "div:nth-of-type(3) > div:nth-of-type(1) > div > h1"
+    }
+  ],
+  "probe": {
+    "action": "read"
+  },
+  "site": "www.flashscore.de",
+  "match": "https://www.flashscore.de/",
+  "barrier": "The heading uses white-space: nowrap, so its text spans 619 CSS pixels inside a 320-pixel container and requires horizontal scrolling.",
+  "rules": [
+    {
+      "selector": "div:nth-of-type(3) > div:nth-of-type(1) > div > h1",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "normal"
+      }
+    }
+  ],
+  "status": "candidate",
+  "evidence": {},
+  "history": []
+}

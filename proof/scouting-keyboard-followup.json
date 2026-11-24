@@ -1,0 +1,1835 @@
+{
+  "generatedAt": "2026-11-21T19:55:27.513Z",
+  "updatedAt": "2026-11-21T20:05:43.994Z",
+  "method": "playwright-chromium-real-keyboard",
+  "constraints": {
+    "spacedMs": 7000,
+    "noAuth": true,
+    "noPayment": true,
+    "noSignup": true,
+    "noKane": true,
+    "publicPagesOnly": true,
+    "realKeyboardConfirmation": true,
+    "mouseControlRequiredForVerified": true,
+    "excludeConsentOverlays": true,
+    "excludeFixtures": true,
+    "excludeGuessedControls": true,
+    "excludeMerePageScroll": true,
+    "avoidMainThreadSites": [
+      "kidderminster",
+      "sfmta.com",
+      "ventusky.com",
+      "earth.nullschool.net",
+      "scottish procurement journey"
+    ]
+  },
+  "statusLegend": {
+    "confirmed": "Pointer activation changed objective state; trusted Tab/Enter failed to complete the same control task; selector identified.",
+    "finding": "Reachable with a named control path, but confirmation incomplete, ambiguous, or blocked without claiming a verified barrier.",
+    "inaccessible": "Probe blocked, errored, challenged, empty, or rate-limited.",
+    "no_barrier_observed": "Page reachable; keyboard could reach/activate the target or no actionable pointer-only control confirmed."
+  },
+  "summary": {
+    "total": 9,
+    "confirmed": 1,
+    "finding": 4,
+    "inaccessible": 1,
+    "no_barrier_observed": 3,
+    "distinctConfirmedSites": 1
+  },
+  "candidates": [
+    {
+      "id": "uw-au-before-menu",
+      "site": "washington.edu",
+      "url": "https://www.washington.edu/accesscomputing/AU/before.html",
+      "canonicalUrl": "https://projects.accesscomputing.uw.edu/au/before.html",
+      "finalUrl": "https://projects.accesscomputing.uw.edu/au/before.html",
+      "task": "Using only the keyboard, open the AU demo About menu and reach a submenu destination",
+      "controlTask": "Hover the AU demo About menu with the pointer and reveal submenu links",
+      "persona": "keyboard-only",
+      "widget": "menu",
+      "verification": "confirmed",
+      "access": "reachable",
+      "httpStatus": 200,
+      "observedAt": "2026-11-21T20:00:37.146Z",
+      "keyboardSequence": [
+        {
+          "step": 1,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Home",
+            "className": ""
+          }
+        },
+        {
+          "step": 2,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Before",
+            "className": ""
+          }
+        },
+        {
+          "step": 3,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "After",
+            "className": ""
+          }
+        },
+        {
+          "step": 4,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Info",
+            "className": ""
+          }
+        },
+        {
+          "step": 5,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "About",
+            "className": ""
+          }
+        }
+      ],
+      "keyboardResult": "focused About; submenu closed (submenuFocused=false)",
+      "controlResult": "passed: pointer hover revealed About submenu",
+      "barrier": "CSS :hover menu; submenu appears on pointer hover only",
+      "barrierKind": "hover_only_menu",
+      "failingSelector": "#menu > li:nth-child(1) > a",
+      "objectivePostcondition": "About submenu becomes visible and a submenu link can be reached",
+      "sourceHint": "AccessComputing AU before.html teaching demo (fixture-like; pattern useful, weaker Kane production candidate)",
+      "possibleRepair": [
+        {
+          "selector": "#menu li",
+          "action": "injectCSS",
+          "value": "#menu li:focus-within > ul{display:block !important;}"
+        }
+      ],
+      "evidence": {
+        "reachedViaTab": true,
+        "afterKeys": {
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "h": 0,
+          "text": "News\n          Governance\n          Diversity\n          Contact Us"
+        },
+        "submenuFocused": false,
+        "beforeHover": {
+          "display": "none",
+          "visibility": "visible",
+          "opacity": "1",
+          "h": 0,
+          "text": "News\n          Governance\n          Diversity\n          Contact Us"
+        },
+        "afterHover": {
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "h": 110,
+          "text": "News\nGovernance\nDiversity\nContact Us"
+        }
+      }
+    },
+    {
+      "id": "deque-mars-vid-next",
+      "site": "dequeuniversity.com",
+      "url": "https://dequeuniversity.com/demo/mars/",
+      "canonicalUrl": "https://dequeuniversity.com/demo/mars/",
+      "finalUrl": "https://dequeuniversity.com/demo/mars/",
+      "task": "Using only the keyboard, activate the Mars demo video next control",
+      "controlTask": "Click the Mars demo video next arrow with the mouse",
+      "persona": "keyboard-only",
+      "widget": "carousel",
+      "verification": "finding",
+      "access": "reachable",
+      "accessReason": null,
+      "httpStatus": 200,
+      "observedAt": "2026-11-21T20:02:07.899Z",
+      "keyboardSequence": [
+        {
+          "step": 1,
+          "key": "Tab",
+          "focused": {
+            "tag": "input",
+            "id": "from0",
+            "role": "textbox",
+            "text": "",
+            "className": "city-input ac_input ui-autocomplete-input"
+          }
+        },
+        {
+          "step": 2,
+          "key": "Tab",
+          "focused": {
+            "tag": "input",
+            "id": "to0",
+            "role": "textbox",
+            "text": "",
+            "className": "city-input ac_input ui-autocomplete-input"
+          }
+        },
+        {
+          "step": 3,
+          "key": "Tab",
+          "focused": {
+            "tag": "input",
+            "id": "deptDate0",
+            "role": null,
+            "text": "",
+            "className": "hasDatepicker input-dept"
+          }
+        },
+        {
+          "step": 4,
+          "key": "Tab",
+          "focused": {
+            "tag": "select",
+            "id": "time0",
+            "role": null,
+            "text": "12 am\n01 am\n02 am\n03 am\n04 am\n05 am\n06 am\n07 am\n08 am\n09 am\n10 am\n11 am\n12 pm\n01",
+            "className": "select-time"
+          }
+        },
+        {
+          "step": 5,
+          "key": "Tab",
+          "focused": {
+            "tag": "iframe",
+            "id": "fb_xdm_frame_http",
+            "role": null,
+            "text": "Facebook Cross Domain Communication Frame",
+            "className": ""
+          }
+        },
+        {
+          "step": 6,
+          "key": "Tab",
+          "focused": {
+            "tag": "iframe",
+            "id": "fb_xdm_frame_https",
+            "role": null,
+            "text": "Facebook Cross Domain Communication Frame",
+            "className": ""
+          }
+        },
+        {
+          "step": 7,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Add a trip",
+            "className": ""
+          }
+        },
+        {
+          "step": 8,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Find a pass",
+            "className": ""
+          }
+        },
+        {
+          "step": 9,
+          "key": "Tab",
+          "focused": {
+            "tag": "input",
+            "id": null,
+            "role": null,
+            "text": "",
+            "className": "search"
+          }
+        },
+        {
+          "step": 10,
+          "key": "Tab",
+          "focused": {
+            "tag": "input",
+            "id": null,
+            "role": null,
+            "text": "",
+            "className": "control-search"
+          }
+        },
+        {
+          "step": 11,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Login",
+            "className": "facebook-pop fb_button fb_button_medium"
+          }
+        },
+        {
+          "step": 12,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Sign In",
+            "className": ""
+          }
+        },
+        {
+          "step": 13,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "My Cart $0.00",
+            "className": "dropdown-toggle"
+          }
+        },
+        {
+          "step": 14,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "MarsCommuter®",
+            "className": ""
+          }
+        },
+        {
+          "step": 15,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Travel Agents",
+            "className": ""
+          }
+        },
+        {
+          "step": 16,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Your country",
+            "className": "dropdown-toggle"
+          }
+        },
+        {
+          "step": 17,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Your language",
+            "className": "dropdown-toggle"
+          }
+        },
+        {
+          "step": 18,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "",
+            "className": "link"
+          }
+        },
+        {
+          "step": 19,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Send me to Mars!",
+            "className": "link"
+          }
+        },
+        {
+          "step": 20,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Hotels",
+            "className": "link"
+          }
+        },
+        {
+          "step": 21,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Things to Do",
+            "className": "link"
+          }
+        },
+        {
+          "step": 22,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Mars Map",
+            "className": "link"
+          }
+        },
+        {
+          "step": 23,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Rockets",
+            "className": "link"
+          }
+        },
+        {
+          "step": 24,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Deals",
+            "className": "link"
+          }
+        },
+        {
+          "step": 25,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Groups",
+            "className": "link"
+          }
+        }
+      ],
+      "keyboardResult": "failed: Tab never focused i.vid-next.icon-video-right-arrow or .vid-arrows.nextvid",
+      "controlResult": "no_objective_effect",
+      "barrier": null,
+      "barrierKind": null,
+      "failingSelector": "i.vid-next.icon-video-right-arrow",
+      "objectivePostcondition": "Featured Mars video advances to the next clip (player src / #video-text changes)",
+      "sourceHint": "Deque Mars demo inaccessible video next control (demo site)",
+      "possibleRepair": [],
+      "evidence": {
+        "reachedViaTab": false,
+        "before": {
+          "videoText": "Life was possible on Mars",
+          "playerSrc": "https://www.youtube.com/embed/OagLGti_hTE?controls=1&showinfo=1&modestbranding=0&wmode=opaque&enablejsapi=1",
+          "activeFader": "Life was possible on Mars",
+          "activeHref": "http://www.youtube.com/embed/OagLGti_hTE?controls=1&showinfo=1&modestbranding=0&wmode=opaque&enablejsapi=1"
+        },
+        "after": {
+          "videoText": "Life was possible on Mars",
+          "playerSrc": "https://www.youtube.com/embed/OagLGti_hTE?controls=1&showinfo=1&modestbranding=0&wmode=opaque&enablejsapi=1",
+          "activeFader": "Life was possible on Mars",
+          "activeHref": "http://www.youtube.com/embed/OagLGti_hTE?controls=1&showinfo=1&modestbranding=0&wmode=opaque&enablejsapi=1"
+        },
+        "selectorUsed": "i.vid-next.icon-video-right-arrow",
+        "clickSelector": ".vid-arrows.nextvid",
+        "meta": {
+          "i": {
+            "tag": "I",
+            "className": "vid-next icon-video-right-arrow",
+            "tabindex": null
+          },
+          "parent": {
+            "tag": "DIV",
+            "className": "vid-arrows nextvid",
+            "tabindex": null
+          }
+        }
+      }
+    },
+    {
+      "id": "usgs-quake-layers",
+      "site": "usgs.gov",
+      "url": "https://earthquake.usgs.gov/earthquakes/map/",
+      "canonicalUrl": "https://earthquake.usgs.gov/earthquakes/map/",
+      "finalUrl": "https://earthquake.usgs.gov/earthquakes/map/?extent=11.86735,-133.68164&extent=57.8915,-56.33789&map=false",
+      "task": "Using only the keyboard, open a map layers or settings control on the USGS earthquake map",
+      "controlTask": "Click a Leaflet layers or settings control with the mouse",
+      "persona": "keyboard-only",
+      "widget": "map-control",
+      "verification": "no_barrier_observed",
+      "access": "reachable",
+      "accessReason": null,
+      "httpStatus": 200,
+      "observedAt": "2026-11-21T19:57:12.461Z",
+      "keyboardSequence": [
+        {
+          "step": 1,
+          "key": "Tab",
+          "focused": {
+            "tag": "button",
+            "id": null,
+            "role": null,
+            "text": "Here’s how you know",
+            "className": "usa-accordion__button usa-banner__button"
+          }
+        },
+        {
+          "step": 2,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "U.S. Geological Survey home",
+            "className": "hazdev-header__logo"
+          }
+        },
+        {
+          "step": 3,
+          "key": "Tab",
+          "focused": {
+            "tag": "button",
+            "id": null,
+            "role": null,
+            "text": "MENU",
+            "className": "usa-button hazdev-header__menu-button ng-star-inserted"
+          }
+        },
+        {
+          "step": 4,
+          "key": "Tab",
+          "focused": {
+            "tag": "button",
+            "id": null,
+            "role": null,
+            "text": "view_list\nList",
+            "className": "panel-choice selected"
+          }
+        },
+        {
+          "step": 5,
+          "key": "Enter",
+          "attemptedOn": ".subheader-navigation",
+          "note": "Enter produced objective change"
+        }
+      ],
+      "keyboardResult": "passed_or_inconclusive: keyboard reached and/or activated target",
+      "controlResult": "passed: mouse activation produced an effect on .subheader-navigation (url)",
+      "barrier": null,
+      "barrierKind": null,
+      "failingSelector": ".subheader-navigation",
+      "objectivePostcondition": "A layers/settings panel expands or map overlay options become visible",
+      "sourceHint": "USGS earthquake map interactive filter/map controls",
+      "possibleRepair": [],
+      "evidence": {
+        "meta": {
+          "tag": "div",
+          "id": null,
+          "role": null,
+          "className": "subheader-navigation",
+          "text": "view_list\nList\nmap\nMap\nsettings\nSettings",
+          "tabindex": null,
+          "href": null,
+          "ariaLabel": null,
+          "disabled": false,
+          "visible": true,
+          "rect": {
+            "w": 247,
+            "h": 36,
+            "top": 79,
+            "left": 1017
+          },
+          "nativeFocusable": false
+        },
+        "nativeFocusable": false,
+        "reachedViaTab": true,
+        "uniqueFocusTargets": 4,
+        "enterResult": {
+          "activatedViaEnter": true,
+          "change": {
+            "changed": true,
+            "reason": "url"
+          },
+          "before": {
+            "url": "https://earthquake.usgs.gov/earthquakes/map/?extent=11.86735,-133.68164&extent=57.8915,-56.33789",
+            "hash": "",
+            "nearby": {
+              "ariaExpanded": null,
+              "ariaPressed": null,
+              "className": "subheader-navigation",
+              "text": "view_list\nList\nmap\nMap\nsettings\nSettings",
+              "parentClass": "grid-container subheader-container",
+              "nextSiblingText": null
+            },
+            "layersExpanded": false,
+            "menus": [],
+            "zoomInDisabled": false,
+            "playPauseText": null,
+            "bodySnippet": "An official website of the United States government Here’s how you know MENU Earthquake Hazards Program Latest Earthquakes view_list List map Map settings Settings USGS Magnitude 2.5+ Earthquakes, Past Day Showing 42 earthquakes Filter Show All Map Area Format Magnitude DYFI ShakeMap PAGER Sort Time Magnitude 4.9 88 km WNW of El Aguilar, Argentina 2026-11-22 00:33:04 (UTC+05:30) 209.8 km 4.6 68 km"
+          },
+          "after": {
+            "url": "https://earthquake.usgs.gov/earthquakes/map/?extent=11.86735,-151.25977&extent=57.8915,-38.75977&list=false",
+            "hash": "",
+            "nearby": {
+              "ariaExpanded": null,
+              "ariaPressed": null,
+              "className": "subheader-navigation",
+              "text": "view_list\nList\nmap\nMap\nsettings\nSettings",
+              "parentClass": "grid-container subheader-container",
+              "nextSiblingText": null
+            },
+            "layersExpanded": false,
+            "menus": [],
+            "zoomInDisabled": false,
+            "playPauseText": null,
+            "bodySnippet": "An official website of the United States government Here’s how you know MENU Earthquake Hazards Program Latest Earthquakes view_list List map Map settings Settings + − 500 km 300 mi Unavailable Earthquakes Loaded Close"
+          }
+        },
+        "pointer": {
+          "passed": true,
+          "change": {
+            "changed": true,
+            "reason": "url"
+          },
+          "before": {
+            "url": "https://earthquake.usgs.gov/earthquakes/map/?extent=11.86735,-133.68164&extent=57.8915,-56.33789",
+            "hash": "",
+            "nearby": {
+              "ariaExpanded": null,
+              "ariaPressed": null,
+              "className": "subheader-navigation",
+              "text": "view_list\nList\nmap\nMap\nsettings\nSettings",
+              "parentClass": "grid-container subheader-container",
+              "nextSiblingText": null
+            },
+            "layersExpanded": false,
+            "menus": [],
+            "zoomInDisabled": false,
+            "playPauseText": null,
+            "bodySnippet": "An official website of the United States government Here’s how you know MENU Earthquake Hazards Program Latest Earthquakes view_list List map Map settings Settings USGS Magnitude 2.5+ Earthquakes, Past Day Showing 42 earthquakes Filter Show All Map Area Format Magnitude DYFI ShakeMap PAGER Sort Time Magnitude 4.9 88 km WNW of El Aguilar, Argentina 2026-11-22 00:33:04 (UTC+05:30) 209.8 km 4.6 68 km"
+          },
+          "after": {
+            "url": "https://earthquake.usgs.gov/earthquakes/map/?extent=11.86735,-133.68164&extent=57.8915,-56.33789&map=false",
+            "hash": "",
+            "nearby": {
+              "ariaExpanded": null,
+              "ariaPressed": null,
+              "className": "subheader-navigation",
+              "text": "view_list\nList\nmap\nMap\nsettings\nSettings",
+              "parentClass": "grid-container subheader-container",
+              "nextSiblingText": null
+            },
+            "layersExpanded": false,
+            "menus": [],
+            "zoomInDisabled": false,
+            "playPauseText": null,
+            "bodySnippet": "An official website of the United States government Here’s how you know MENU Earthquake Hazards Program Latest Earthquakes view_list List map Map settings Settings USGS Magnitude 2.5+ Earthquakes, Past Day Showing 42 earthquakes Filter Show All Map Area Format Magnitude DYFI ShakeMap PAGER Sort Time Magnitude 4.9 88 km WNW of El Aguilar, Argentina 2026-11-22 00:33:04 (UTC+05:30) 209.8 km 4.6 68 km"
+          },
+          "clickError": null
+        },
+        "consent": {
+          "consentLikeCount": 0
+        },
+        "selectorUsed": ".subheader-navigation"
+      }
+    },
+    {
+      "id": "leaflet-example-layers",
+      "site": "leafletjs.com",
+      "url": "https://leafletjs.com/examples/layers-control/example.html",
+      "canonicalUrl": "https://leafletjs.com/examples/layers-control/example.html",
+      "finalUrl": "https://leafletjs.com/examples/layers-control/example.html",
+      "task": "Using only the keyboard, open the Leaflet layers control on the official example",
+      "controlTask": "Open the Leaflet layers control with the pointer",
+      "persona": "keyboard-only",
+      "widget": "map-control",
+      "verification": "no_barrier_observed",
+      "access": "reachable",
+      "accessReason": null,
+      "httpStatus": 200,
+      "observedAt": "2026-11-21T20:00:06.841Z",
+      "keyboardSequence": [
+        {
+          "step": 1,
+          "key": "Tab",
+          "focused": {
+            "tag": "div",
+            "id": "map",
+            "role": "region",
+            "text": "Leaflet | © OpenStreetMap",
+            "className": "leaflet-container leaflet-touch leaflet-fade-anim leaflet-box-zoom leaflet-grab leaflet-touch-drag l"
+          }
+        },
+        {
+          "step": 2,
+          "key": "Tab",
+          "focused": {
+            "tag": "img",
+            "id": null,
+            "role": "button",
+            "text": "",
+            "className": "leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
+          }
+        },
+        {
+          "step": 3,
+          "key": "Tab",
+          "focused": {
+            "tag": "img",
+            "id": null,
+            "role": "button",
+            "text": "",
+            "className": "leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
+          }
+        },
+        {
+          "step": 4,
+          "key": "Tab",
+          "focused": {
+            "tag": "img",
+            "id": null,
+            "role": "button",
+            "text": "",
+            "className": "leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
+          }
+        },
+        {
+          "step": 5,
+          "key": "Tab",
+          "focused": {
+            "tag": "img",
+            "id": null,
+            "role": "button",
+            "text": "",
+            "className": "leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
+          }
+        },
+        {
+          "step": 6,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": "button",
+            "text": "Zoom in",
+            "className": "leaflet-control-zoom-in"
+          }
+        },
+        {
+          "step": 7,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": "button",
+            "text": "Zoom out",
+            "className": "leaflet-control-zoom-out"
+          }
+        },
+        {
+          "step": 8,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": "button",
+            "text": "Layers",
+            "className": "leaflet-control-layers-toggle"
+          }
+        }
+      ],
+      "keyboardResult": "Enter expanded layers",
+      "controlResult": "passed: pointer opened layers (hoverOrClick)",
+      "barrier": null,
+      "barrierKind": null,
+      "failingSelector": ".leaflet-control-layers-toggle",
+      "objectivePostcondition": "Layers control expands and base/overlay options become visible",
+      "sourceHint": "Official Leaflet layers-control example",
+      "possibleRepair": [],
+      "evidence": {
+        "reachedViaTab": true,
+        "enterExpanded": true,
+        "before": false,
+        "after": {
+          "expanded": true,
+          "list": " OpenStreetMap\n OpenStreetMap.HOT\n OpenTopoMap\n Cities\n Parks"
+        },
+        "afterHover": true,
+        "meta": {
+          "tag": "a",
+          "href": "#",
+          "role": "button",
+          "tabindex": null,
+          "className": "leaflet-control-layers-toggle"
+        }
+      }
+    },
+    {
+      "id": "nws-radar-play",
+      "site": "radar.weather.gov",
+      "url": "https://radar.weather.gov/",
+      "canonicalUrl": "https://radar.weather.gov/",
+      "finalUrl": "https://radar.weather.gov/",
+      "task": "Using only the keyboard, play or pause the NWS radar animation",
+      "controlTask": "Click the radar play/pause control with the mouse",
+      "persona": "keyboard-only",
+      "widget": "play-control",
+      "verification": "finding",
+      "access": "reachable",
+      "accessReason": null,
+      "httpStatus": 200,
+      "observedAt": "2026-11-21T20:02:26.476Z",
+      "keyboardSequence": [
+        {
+          "step": 1,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "",
+            "className": ""
+          }
+        },
+        {
+          "step": 2,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "NATIONAL WEATHER SERVICE",
+            "className": ""
+          }
+        },
+        {
+          "step": 3,
+          "key": "Tab",
+          "focused": null
+        },
+        {
+          "step": 4,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "",
+            "className": ""
+          }
+        },
+        {
+          "step": 5,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "NATIONAL WEATHER SERVICE",
+            "className": ""
+          }
+        },
+        {
+          "step": 6,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "",
+            "className": ""
+          }
+        },
+        {
+          "step": 7,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "NATIONAL WEATHER SERVICE",
+            "className": ""
+          }
+        },
+        {
+          "step": 8,
+          "key": "Tab",
+          "focused": null
+        },
+        {
+          "step": 9,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "",
+            "className": ""
+          }
+        },
+        {
+          "step": 10,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "NATIONAL WEATHER SERVICE",
+            "className": ""
+          }
+        },
+        {
+          "step": 11,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "",
+            "className": ""
+          }
+        },
+        {
+          "step": 12,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "NATIONAL WEATHER SERVICE",
+            "className": ""
+          }
+        },
+        {
+          "step": 13,
+          "key": "Tab",
+          "focused": null
+        },
+        {
+          "step": 14,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "",
+            "className": ""
+          }
+        },
+        {
+          "step": 15,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "NATIONAL WEATHER SERVICE",
+            "className": ""
+          }
+        },
+        {
+          "step": 16,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "",
+            "className": ""
+          }
+        },
+        {
+          "step": 17,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "NATIONAL WEATHER SERVICE",
+            "className": ""
+          }
+        },
+        {
+          "step": 18,
+          "key": "Tab",
+          "focused": null
+        },
+        {
+          "step": 19,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "",
+            "className": ""
+          }
+        },
+        {
+          "step": 20,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "NATIONAL WEATHER SERVICE",
+            "className": ""
+          }
+        },
+        {
+          "step": 21,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "",
+            "className": ""
+          }
+        },
+        {
+          "step": 22,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "NATIONAL WEATHER SERVICE",
+            "className": ""
+          }
+        },
+        {
+          "step": 23,
+          "key": "Tab",
+          "focused": null
+        },
+        {
+          "step": 24,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "",
+            "className": ""
+          }
+        },
+        {
+          "step": 25,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "NATIONAL WEATHER SERVICE",
+            "className": ""
+          }
+        }
+      ],
+      "keyboardResult": "failed: Tab never focused [title*='Play' i]",
+      "controlResult": "no_objective_effect ",
+      "barrier": null,
+      "barrierKind": null,
+      "failingSelector": "[title*='Play' i]",
+      "objectivePostcondition": "Named interactive control changes objective state",
+      "sourceHint": "NWS Radar interactive weather animation",
+      "possibleRepair": [],
+      "evidence": {
+        "reachedViaTab": false,
+        "before": {
+          "label": null,
+          "pressed": null,
+          "className": null,
+          "animating": false
+        },
+        "after": {
+          "label": null,
+          "pressed": null,
+          "className": null,
+          "animating": false
+        },
+        "clickError": null,
+        "selectorUsed": "[title*='Play' i]"
+      }
+    },
+    {
+      "id": "openseamap-layers",
+      "site": "map.openseamap.org",
+      "url": "https://map.openseamap.org/",
+      "canonicalUrl": "https://map.openseamap.org/",
+      "finalUrl": "https://map.openseamap.org/",
+      "task": "Using only the keyboard, open the OpenSeaMap layers control",
+      "controlTask": "Click/open the layers map control with the mouse",
+      "persona": "keyboard-only",
+      "widget": "map-control",
+      "verification": "finding",
+      "access": "reachable",
+      "httpStatus": 200,
+      "observedAt": "2026-11-21T20:04:38.374Z",
+      "failingSelector": null,
+      "objectivePostcondition": "control state changes",
+      "sourceHint": "OpenSeaMap interactive layers control",
+      "keyboardResult": "incomplete: selector not resolved",
+      "controlResult": "not_run",
+      "barrier": null,
+      "barrierKind": null,
+      "evidence": {
+        "discovery": {
+          "title": "OpenSeaMap - The free nautical chart",
+          "url": "https://map.openseamap.org/",
+          "interesting": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "ol-unselectable ol-layers",
+              "text": "",
+              "tabindex": null,
+              "role": null
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "ol-layer",
+              "text": "",
+              "tabindex": null,
+              "role": null
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "ol-zoom ol-unselectable ol-control",
+              "text": "+\n–",
+              "tabindex": null,
+              "role": null
+            },
+            {
+              "tag": "button",
+              "id": null,
+              "className": "ol-zoom-in",
+              "text": "+",
+              "tabindex": null,
+              "role": null
+            },
+            {
+              "tag": "button",
+              "id": null,
+              "className": "ol-zoom-out",
+              "text": "–",
+              "tabindex": null,
+              "role": null
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "ol-zoomslider ol-unselectable ol-control",
+              "text": "",
+              "tabindex": null,
+              "role": null
+            },
+            {
+              "tag": "button",
+              "id": null,
+              "className": "ol-zoomslider-thumb ol-unselectable",
+              "text": "",
+              "tabindex": null,
+              "role": null
+            },
+            {
+              "tag": "div",
+              "id": "topmenu",
+              "className": "menu",
+              "text": "Edit\nView\nTools\nHelp",
+              "tabindex": null,
+              "role": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cyclosm-layers",
+      "site": "cyclosm.org",
+      "url": "https://www.cyclosm.org/",
+      "canonicalUrl": "https://www.cyclosm.org/",
+      "finalUrl": "https://www.cyclosm.org/#map=12/52.3728/4.8936/cyclosm",
+      "task": "Using only the keyboard, open the CyclOSM layers control",
+      "controlTask": "Open the layers control with the mouse",
+      "persona": "keyboard-only",
+      "widget": "map-control",
+      "verification": "no_barrier_observed",
+      "access": "reachable",
+      "accessReason": null,
+      "httpStatus": 200,
+      "observedAt": "2026-11-21T20:04:50.860Z",
+      "keyboardSequence": [
+        {
+          "step": 1,
+          "key": "Tab",
+          "focused": {
+            "tag": "button",
+            "id": null,
+            "role": null,
+            "text": "",
+            "className": "tingle-modal__close"
+          }
+        },
+        {
+          "step": 2,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "CyclOSM",
+            "className": ""
+          }
+        },
+        {
+          "step": 3,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "OpenStreetMap",
+            "className": ""
+          }
+        },
+        {
+          "step": 4,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "[1]",
+            "className": ""
+          }
+        },
+        {
+          "step": 5,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "[3]",
+            "className": ""
+          }
+        },
+        {
+          "step": 6,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "[4]",
+            "className": ""
+          }
+        },
+        {
+          "step": 7,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "cyclosm.org",
+            "className": ""
+          }
+        },
+        {
+          "step": 8,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "",
+            "className": "modalClose"
+          }
+        },
+        {
+          "step": 9,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Let's start exploring the map!",
+            "className": "modalClose"
+          }
+        },
+        {
+          "step": 10,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "OpenStreetMap",
+            "className": ""
+          }
+        },
+        {
+          "step": 11,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Github",
+            "className": ""
+          }
+        },
+        {
+          "step": 12,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "contributions",
+            "className": ""
+          }
+        },
+        {
+          "step": 13,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "OpenStreetMap-France",
+            "className": ""
+          }
+        },
+        {
+          "step": 14,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "OSMAnd",
+            "className": ""
+          }
+        },
+        {
+          "step": 15,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "All-In-One Offline Maps",
+            "className": ""
+          }
+        },
+        {
+          "step": 16,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "AlpineQuest Rando GPS",
+            "className": ""
+          }
+        },
+        {
+          "step": 17,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "OpenMultiMaps",
+            "className": ""
+          }
+        },
+        {
+          "step": 18,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "fairuse tile policy",
+            "className": ""
+          }
+        },
+        {
+          "step": 19,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "here",
+            "className": ""
+          }
+        },
+        {
+          "step": 20,
+          "key": "Tab",
+          "focused": {
+            "tag": "div",
+            "id": "map",
+            "role": null,
+            "text": "+\n−\n \n2 km\n1 mi\nLeaflet | CyclOSM v0.6 | Map data © OpenStreetMap contributors",
+            "className": "leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+          }
+        },
+        {
+          "step": 21,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": "button",
+            "text": "+",
+            "className": "leaflet-control-zoom-in"
+          }
+        },
+        {
+          "step": 22,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": "button",
+            "text": "−",
+            "className": "leaflet-control-zoom-out"
+          }
+        },
+        {
+          "step": 23,
+          "key": "Tab",
+          "focused": {
+            "tag": "button",
+            "id": null,
+            "role": null,
+            "text": "",
+            "className": "leaflet-control-geocoder-icon"
+          }
+        },
+        {
+          "step": 24,
+          "key": "Tab",
+          "focused": {
+            "tag": "button",
+            "id": null,
+            "role": null,
+            "text": "Create an itinerary with BRouter",
+            "className": "easy-button-button leaflet-bar-part leaflet-interactive unnamed-state-active"
+          }
+        },
+        {
+          "step": 25,
+          "key": "Tab",
+          "focused": {
+            "tag": "button",
+            "id": null,
+            "role": null,
+            "text": "Edit the map",
+            "className": "easy-button-button leaflet-bar-part leaflet-interactive unnamed-state-active"
+          }
+        }
+      ],
+      "keyboardResult": "Enter activated control",
+      "controlResult": "passed: mouse changed state on .leaflet-control-layers-toggle",
+      "barrier": null,
+      "barrierKind": null,
+      "failingSelector": ".leaflet-control-layers-toggle",
+      "objectivePostcondition": "Named interactive control changes objective state",
+      "sourceHint": "CyclOSM map layers control",
+      "possibleRepair": [],
+      "evidence": {
+        "reachedViaTab": true,
+        "before": {
+          "expanded": false,
+          "list": " CyclOSM CyclOSM (Live) CyclOSM (better for BE) OpenStreetMap.org OpenCycleMap OpenTopoMap OSM Piano Waymarked Trails CyclOSM Lite"
+        },
+        "after": {
+          "expanded": true,
+          "list": " CyclOSM\n CyclOSM (Live)\n CyclOSM (better for BE)\n OpenStreetMap.org\n OpenCycleMap\n OpenTopoMap\n OSM Piano\n Waymarked Trails\n CyclOSM Lite"
+        },
+        "clickError": "locator.click: Element is not visible\nCall log:\n\u001b[2m  - waiting for locator('.leaflet-control-layers-toggle').first()\u001b[22m\n\u001b[2m    - locator resolved to <a href=\"#\" title=\"Layers\" class=\"leaflet-control-layers-toggle\"></a>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n",
+        "selectorUsed": ".leaflet-control-layers-toggle"
+      }
+    },
+    {
+      "id": "waterdata-state-map",
+      "site": "waterdata.usgs.gov",
+      "url": "https://waterdata.usgs.gov/nwis/rt",
+      "canonicalUrl": "https://waterdata.usgs.gov/nwis/rt",
+      "finalUrl": "https://waterdata.usgs.gov/nwis/rt",
+      "task": "Using only the keyboard, activate a USGS real-time water state selection control",
+      "controlTask": "Click a state on the state-selection map/control with the mouse",
+      "persona": "keyboard-only",
+      "widget": "dashboard-filter",
+      "verification": "inaccessible",
+      "access": "inaccessible",
+      "accessReason": "http_403",
+      "httpStatus": 403,
+      "observedAt": "2026-11-21T20:05:14.298Z",
+      "failingSelector": null,
+      "objectivePostcondition": "control state changes",
+      "sourceHint": "USGS NWIS real-time water dashboard",
+      "evidence": {
+        "error": null
+      }
+    },
+    {
+      "id": "nature-towns-events-datepicker",
+      "site": "naturetownsandcities.org.uk",
+      "url": "https://naturetownsandcities.org.uk/events-calendar/",
+      "canonicalUrl": "https://naturetownsandcities.org.uk/events-calendar/",
+      "finalUrl": "https://naturetownsandcities.org.uk/events-calendar/",
+      "task": "Using only the keyboard, open and operate the events calendar date picker named in the accessibility statement",
+      "controlTask": "Open the date picker with the mouse",
+      "persona": "keyboard-only",
+      "widget": "datepicker",
+      "verification": "finding",
+      "access": "reachable",
+      "accessReason": null,
+      "httpStatus": 200,
+      "observedAt": "2026-11-21T20:05:25.157Z",
+      "keyboardSequence": [
+        {
+          "step": 1,
+          "key": "Tab",
+          "focused": {
+            "tag": "div",
+            "id": null,
+            "role": "region",
+            "text": "We value your privacy\n\nWe use cookies to enhance your browsing experience, serve",
+            "className": "cky-consent-container cky-banner-bottom"
+          }
+        },
+        {
+          "step": 2,
+          "key": "Tab",
+          "focused": {
+            "tag": "button",
+            "id": null,
+            "role": null,
+            "text": "Close",
+            "className": "cky-banner-btn-close"
+          }
+        },
+        {
+          "step": 3,
+          "key": "Tab",
+          "focused": {
+            "tag": "button",
+            "id": null,
+            "role": null,
+            "text": "Customize",
+            "className": "cky-btn cky-btn-customize"
+          }
+        },
+        {
+          "step": 4,
+          "key": "Tab",
+          "focused": {
+            "tag": "button",
+            "id": null,
+            "role": null,
+            "text": "Reject All",
+            "className": "cky-btn cky-btn-reject"
+          }
+        },
+        {
+          "step": 5,
+          "key": "Tab",
+          "focused": {
+            "tag": "button",
+            "id": null,
+            "role": null,
+            "text": "Accept All",
+            "className": "cky-btn cky-btn-accept"
+          }
+        },
+        {
+          "step": 6,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Skip to main content",
+            "className": "skiplink"
+          }
+        },
+        {
+          "step": 7,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Link to homepage",
+            "className": "navbar-brand"
+          }
+        },
+        {
+          "step": 8,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Login",
+            "className": "btn action"
+          }
+        },
+        {
+          "step": 9,
+          "key": "Tab",
+          "focused": {
+            "tag": "button",
+            "id": "searchModalButton",
+            "role": null,
+            "text": "Search Button",
+            "className": "search-button-nav"
+          }
+        },
+        {
+          "step": 10,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "English",
+            "className": "wpml-ls-link"
+          }
+        },
+        {
+          "step": 11,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Cymraeg",
+            "className": "wpml-ls-link"
+          }
+        },
+        {
+          "step": 12,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": "menu-item-dropdown-869",
+            "role": null,
+            "text": "About",
+            "className": "dropdown-toggle nav-link"
+          }
+        },
+        {
+          "step": 13,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Partners",
+            "className": "dropdown-item"
+          }
+        },
+        {
+          "step": 14,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Places",
+            "className": "dropdown-item"
+          }
+        },
+        {
+          "step": 15,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": "menu-item-dropdown-870",
+            "role": null,
+            "text": "Join in",
+            "className": "dropdown-toggle nav-link"
+          }
+        },
+        {
+          "step": 16,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Events",
+            "className": "dropdown-item"
+          }
+        },
+        {
+          "step": 17,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": "menu-item-dropdown-6792",
+            "role": null,
+            "text": "Accreditation",
+            "className": "dropdown-toggle nav-link"
+          }
+        },
+        {
+          "step": 18,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Become a Nature Town or Nature City",
+            "className": "dropdown-item"
+          }
+        },
+        {
+          "step": 19,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": "menu-item-dropdown-1019",
+            "role": null,
+            "text": "Resources",
+            "className": "dropdown-toggle nav-link"
+          }
+        },
+        {
+          "step": 20,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Library",
+            "className": "dropdown-item"
+          }
+        },
+        {
+          "step": 21,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "Invest",
+            "className": "nav-link"
+          }
+        },
+        {
+          "step": 22,
+          "key": "Tab",
+          "focused": {
+            "tag": "input",
+            "id": "tribe-events-events-bar-keyword",
+            "role": null,
+            "text": "Enter Keyword. Search for events by Keyword.",
+            "className": "tribe-common-form-control-text__input tribe-events-c-search__input"
+          }
+        },
+        {
+          "step": 23,
+          "key": "Tab",
+          "focused": {
+            "tag": "button",
+            "id": null,
+            "role": null,
+            "text": "Find Events",
+            "className": "tribe-common-c-btn tribe-events-c-search__button"
+          }
+        },
+        {
+          "step": 24,
+          "key": "Tab",
+          "focused": {
+            "tag": "button",
+            "id": "clear-search",
+            "role": null,
+            "text": "Clear Search",
+            "className": "clear-search primary tribe-common-c-btn"
+          }
+        },
+        {
+          "step": 25,
+          "key": "Tab",
+          "focused": {
+            "tag": "a",
+            "id": null,
+            "role": null,
+            "text": "List",
+            "className": "tribe-events-c-view-selector__list-item-link"
+          }
+        }
+      ],
+      "keyboardResult": "inconclusive",
+      "controlResult": "no_objective_effect ",
+      "barrier": null,
+      "barrierKind": null,
+      "failingSelector": "[class*='datepicker' i]",
+      "objectivePostcondition": "Named interactive control changes objective state",
+      "sourceHint": "Accessibility statement: date pickers are not fully accessible with a keyboard only",
+      "possibleRepair": [],
+      "evidence": {
+        "reachedViaTab": true,
+        "before": {
+          "open": false,
+          "value": null,
+          "calendarText": ""
+        },
+        "after": {
+          "open": false,
+          "value": null,
+          "calendarText": ""
+        },
+        "clickError": null,
+        "selectorUsed": "[class*='datepicker' i]"
+      }
+    }
+  ]
+}

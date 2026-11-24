@@ -1,0 +1,9 @@
+{
+  "id": "statcounter-edit-chart",
+  "url": "https://gs.statcounter.com/",
+  "persona": "keyboard-only",
+  "observedSelector": "#btn-edit-chart",
+  "successSelector": "form#statistics select#region",
+  "task": "Assert that the Edit Chart Data control below the main chart is keyboard focusable. Open it using the keyboard and verify the chart settings form shows the Region selector.",
+  "controlTask": "Click Edit Chart Data below the main chart. Verify the chart settings form shows the Region selector."
+}

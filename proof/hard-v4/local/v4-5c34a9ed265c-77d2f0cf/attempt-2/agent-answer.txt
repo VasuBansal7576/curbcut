@@ -1,0 +1,8 @@
+{
+  "barrier": "The six-Tab run ended on the cookie consent close control before reaching the already-focusable Classifieds, Etc. link. Its hover submenu is hidden in the snapshot, leaving Press Releases unavailable while it is closed.",
+  "rules": [
+    {"selector":"#cmplz-cookiebanner-1-optout","action":"removeFocusTrap"},
+    {"selector":"div.cmplz-close","action":"bindEnterToClick"},
+    {"selector":"#menu-primary-menu-1 > li:nth-of-type(6)","action":"mirrorHoverToFocus"}
+  ]
+}
