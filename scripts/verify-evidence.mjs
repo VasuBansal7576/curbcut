@@ -13,13 +13,16 @@ try{
  await page.evaluate(()=>document.fonts.ready)
  const meta=await page.evaluate(()=>({
    w:innerWidth,scroll:document.documentElement.scrollWidth,
+   previews:[...document.querySelectorAll('.replay')].flatMap(card=>[card.dataset.previewBefore,card.dataset.previewAfter]),
    links:[...document.querySelectorAll('a[href],video[src],img[src],track[src],script[src],link[href]')]
      .map(el=>el.href||el.src).concat(performance.getEntriesByType('resource').map(row=>row.name)),
    targets:[...document.querySelectorAll('a[href^="#"]')].map(el=>Boolean(document.getElementById(el.hash.slice(1))))
  }))
  assert.equal(meta.w,meta.scroll)
  assert(meta.targets.every(Boolean),'Missing section anchor')
- const paths=[...new Set(meta.links.map(u=>u.split('#')[0]))]
+ assert.equal(new Set(meta.previews).size,6)
+ const previewUrls=meta.previews.map(file=>new URL(file,page.url()).href)
+ const paths=[...new Set([...meta.links,...previewUrls].map(u=>u.split('#')[0]))]
  for(const url of paths){
    const response=await fetch(url,{method:'HEAD',signal:AbortSignal.timeout(30000)})
    assert.equal(response.status,200,url)
@@ -54,7 +57,7 @@ try{
  const local=(await readJSON('proof/local.json')).runs
  const external=(await readJSON('proof/public.json')).runs
  const kane=(await catalog()).filter(p=>['verified','broken','retired'].includes(p.status)).flatMap(p=>[p.evidence.before,p.evidence.control,p.evidence.after,...p.history.filter(h=>h.event==='retired').map(h=>h.video)])
- const files=[...new Set([...kane,...local.flatMap(r=>Object.values(r.videos)),...external.flatMap(r=>Object.values(r.phases).map(p=>p.video)),'proof/local/toggle.mp4','launch/curbcut-launch.mp4'])]
+ const files=[...new Set([...kane,...meta.previews.map(file=>'site/'+file),...local.flatMap(r=>Object.values(r.videos)),...external.flatMap(r=>Object.values(r.phases).map(p=>p.video)),'proof/local/toggle.mp4','launch/curbcut-launch.mp4'])]
  const recordings=[]
  for(const file of files){
    const result=await command('ffprobe',['-v','error','-show_entries','format=duration:stream=codec_name,width,height','-of','json',file])
@@ -62,7 +65,14 @@ try{
    const probe=JSON.parse(result.stdout)
    const seconds=Number(probe.format.duration)
    assert(seconds>0)
-   if(file.startsWith('launch/')){assert(seconds>=90 && seconds<=150);assert.equal(probe.streams[0].width,1920);assert.equal(probe.streams[0].height,1080)}
+   if(file.startsWith('launch/')){
+     const {master}=await readJSON('launch/film/word-times.json')
+     const authoredSeconds=master.reduce((sum,scene)=>sum+scene.frames,0)/30
+     assert((seconds>=90 && seconds<=150) || (seconds>=70 && seconds<=85),'Unexpected launch cut duration')
+     assert(Math.abs(seconds-authoredSeconds)<1/30,'Launch recording disagrees with the authored cut')
+     assert.equal(probe.streams[0].width,1920)
+     assert.equal(probe.streams[0].height,1080)
+   }
    recordings.push({file,seconds,...probe.streams[0]})
  }
  await saveJSON('proof/validation.json',{at:instant(),dashboard:{viewport:320,contentWidth:meta.scroll,linkedFilesChecked:paths.length},recordings})
