@@ -1,0 +1,416 @@
+{
+  "runner": "playwright-jev",
+  "scope": "hard-v4 development pilot",
+  "seed": "curbcut-jev-persona-development-pilot",
+  "maximumSteps": 14,
+  "registered": [
+    "v4-a2c44b1b92d5-916d2c8a",
+    "v4-d14950f24a8c-24c68b67",
+    "v4-3b4eda89b814-c75d4162",
+    "v4-86f207deeb57-7bc09a21",
+    "v4-27c6f312c486-51e6e4ad"
+  ],
+  "checkedAt": "2026-11-24T14:45:21.791Z",
+  "local": {
+    "paired": 0,
+    "agreed": 0
+  },
+  "kane": {
+    "paired": 0,
+    "agreed": 0
+  },
+  "keep": false,
+  "results": [
+    {
+      "id": "v4-a2c44b1b92d5-916d2c8a",
+      "url": "https://raptortech.com/",
+      "source": "proof/hard-v4/kane/v4-a2c44b1b92d5-916d2c8a/before/result.json",
+      "kaneBefore": "pass",
+      "localBefore": "pass",
+      "simulation": {
+        "status": "unresolved",
+        "reason": "Key budget reached.",
+        "trail": [
+          {
+            "action": "Tab",
+            "confidence": 0.73,
+            "providerMs": 442,
+            "focus": null
+          },
+          {
+            "action": "Escape",
+            "confidence": 0.28,
+            "providerMs": 379,
+            "focus": {
+              "role": "button",
+              "text": "Manage Preferences"
+            }
+          },
+          {
+            "action": "Tab",
+            "confidence": 0.27,
+            "providerMs": 474,
+            "focus": {
+              "role": "a",
+              "text": "Cookie Policy"
+            }
+          },
+          {
+            "action": "BackTab",
+            "confidence": 0.29,
+            "providerMs": 466,
+            "focus": {
+              "role": "button",
+              "text": "Close"
+            }
+          },
+          {
+            "action": "BackTab",
+            "confidence": 0.51,
+            "providerMs": 403,
+            "focus": {
+              "role": "a",
+              "text": "Register Now!"
+            }
+          },
+          {
+            "action": "BackTab",
+            "confidence": 0.23,
+            "providerMs": 408,
+            "focus": {
+              "role": "button",
+              "text": "Close"
+            }
+          },
+          {
+            "action": "BackTab",
+            "confidence": 0.48,
+            "providerMs": 518,
+            "focus": {
+              "role": "a",
+              "text": "Register Now!"
+            }
+          },
+          {
+            "action": "Tab",
+            "confidence": 0.26,
+            "providerMs": 472,
+            "focus": {
+              "role": "button",
+              "text": "Close"
+            }
+          },
+          {
+            "action": "BackTab",
+            "confidence": 0.34,
+            "providerMs": 374,
+            "focus": {
+              "role": "a",
+              "text": "Register Now!"
+            }
+          },
+          {
+            "action": "Tab",
+            "confidence": 0.24,
+            "providerMs": 418,
+            "focus": {
+              "role": "button",
+              "text": "Close"
+            }
+          },
+          {
+            "action": "Tab",
+            "confidence": 0.3,
+            "providerMs": 424,
+            "focus": {
+              "role": "a",
+              "text": "Register Now!"
+            }
+          },
+          {
+            "action": "Tab",
+            "confidence": 0.46,
+            "providerMs": 511,
+            "focus": {
+              "role": "button",
+              "text": "Close"
+            }
+          },
+          {
+            "action": "BackTab",
+            "confidence": 0.39,
+            "providerMs": 496,
+            "focus": {
+              "role": "a",
+              "text": "Register Now!"
+            }
+          },
+          {
+            "action": "BackTab",
+            "confidence": 0.23,
+            "providerMs": 360,
+            "focus": {
+              "role": "button",
+              "text": "Close"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "v4-d14950f24a8c-24c68b67",
+      "url": "https://www.outsystems.com/",
+      "source": "proof/hard-v4/kane/v4-d14950f24a8c-24c68b67/before/result.json",
+      "kaneBefore": "pass",
+      "localBefore": "fail",
+      "simulation": {
+        "status": "unresolved",
+        "reason": "Activation fell outside the registered public targets.",
+        "trail": [
+          {
+            "action": "Tab",
+            "confidence": 0.79,
+            "providerMs": 406,
+            "focus": null
+          },
+          {
+            "action": "Tab",
+            "confidence": 0.64,
+            "providerMs": 457,
+            "focus": {
+              "role": "a",
+              "text": "Bring your legacy systems into the agentic era. Explore the London World Tour recap.\nDiscover more"
+            }
+          },
+          {
+            "action": "Tab",
+            "confidence": 0.91,
+            "providerMs": 462,
+            "focus": {
+              "role": "a",
+              "text": "List of Partners (vendors)"
+            }
+          },
+          {
+            "action": "Tab",
+            "confidence": 0.9,
+            "providerMs": 473,
+            "focus": {
+              "role": "a",
+              "text": "List of Partners (vendors)"
+            }
+          },
+          {
+            "action": "Tab",
+            "confidence": 0.73,
+            "providerMs": 347,
+            "focus": {
+              "role": "button",
+              "text": "Review Settings"
+            }
+          },
+          {
+            "action": "Enter",
+            "confidence": 0.47,
+            "providerMs": 498,
+            "focus": {
+              "role": "button",
+              "text": "Accept Cookies"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "v4-3b4eda89b814-c75d4162",
+      "url": "https://www.moveworks.com/",
+      "source": "proof/hard-v4/kane/v4-3b4eda89b814-c75d4162/before/result.json",
+      "kaneBefore": "pass",
+      "localBefore": "fail",
+      "simulation": {
+        "status": "unresolved",
+        "reason": "Activation fell outside the registered public targets.",
+        "trail": [
+          {
+            "action": "Tab",
+            "confidence": 0.82,
+            "providerMs": 437,
+            "focus": null
+          },
+          {
+            "action": "Tab",
+            "confidence": 0.83,
+            "providerMs": 471,
+            "focus": {
+              "role": "a",
+              "text": "Skip to main content"
+            }
+          },
+          {
+            "action": "Tab",
+            "confidence": 0.74,
+            "providerMs": 420,
+            "focus": {
+              "role": "a",
+              "text": "Moveworks Logo"
+            }
+          },
+          {
+            "action": "ArrowRight",
+            "confidence": 0.42,
+            "providerMs": 381,
+            "focus": {
+              "role": "button",
+              "text": "Products"
+            }
+          },
+          {
+            "action": "ArrowRight",
+            "confidence": 0.62,
+            "providerMs": 479,
+            "focus": {
+              "role": "button",
+              "text": "Products"
+            }
+          },
+          {
+            "action": "ArrowRight",
+            "confidence": 0.47,
+            "providerMs": 398,
+            "focus": {
+              "role": "button",
+              "text": "Products"
+            }
+          },
+          {
+            "action": "ArrowRight",
+            "confidence": 0.29,
+            "providerMs": 482,
+            "focus": {
+              "role": "button",
+              "text": "Products"
+            }
+          },
+          {
+            "action": "Enter",
+            "confidence": 0.3,
+            "providerMs": 488,
+            "focus": {
+              "role": "button",
+              "text": "Products"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "v4-86f207deeb57-7bc09a21",
+      "url": "https://www.mass.edu/",
+      "source": "proof/hard-v4/kane-objective-pilot/v4-86f207deeb57-7bc09a21/before/result.json",
+      "kaneBefore": "fail",
+      "localBefore": "fail",
+      "simulation": {
+        "status": "unresolved",
+        "reason": "Activation fell outside the registered public targets.",
+        "trail": [
+          {
+            "action": "Tab",
+            "confidence": 0.52,
+            "providerMs": 574,
+            "focus": null
+          },
+          {
+            "action": "Enter",
+            "confidence": 0.39,
+            "providerMs": 431,
+            "focus": {
+              "visible": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "v4-27c6f312c486-51e6e4ad",
+      "url": "https://csc.gov.in/",
+      "source": "proof/hard-v4/kane-objective-pilot/v4-27c6f312c486-51e6e4ad/before/result.json",
+      "kaneBefore": "fail",
+      "localBefore": "fail",
+      "simulation": {
+        "status": "unresolved",
+        "reason": "Activation fell outside the registered public targets.",
+        "trail": [
+          {
+            "action": "Tab",
+            "confidence": 0.71,
+            "providerMs": 491,
+            "focus": null
+          },
+          {
+            "action": "Tab",
+            "confidence": 0.72,
+            "providerMs": 333,
+            "focus": {
+              "role": "a",
+              "text": "-A"
+            }
+          },
+          {
+            "action": "Tab",
+            "confidence": 0.31,
+            "providerMs": 475,
+            "focus": {
+              "role": "a",
+              "text": "A"
+            }
+          },
+          {
+            "action": "Tab",
+            "confidence": 0.41,
+            "providerMs": 461,
+            "focus": {
+              "role": "a",
+              "text": "+A"
+            }
+          },
+          {
+            "action": "Tab",
+            "confidence": 0.22,
+            "providerMs": 521,
+            "focus": {
+              "role": "a",
+              "text": ""
+            }
+          },
+          {
+            "action": "Tab",
+            "confidence": 0.17,
+            "providerMs": 752,
+            "focus": {
+              "role": "a",
+              "text": ""
+            }
+          },
+          {
+            "action": "ArrowDown",
+            "confidence": 0.18,
+            "providerMs": 956,
+            "focus": {
+              "role": "a",
+              "text": ""
+            }
+          },
+          {
+            "action": "Enter",
+            "confidence": 0.31,
+            "providerMs": 685,
+            "focus": {
+              "role": "a",
+              "text": ""
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
