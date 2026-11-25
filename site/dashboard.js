@@ -1,3 +1,9 @@
+import {ledgerRow} from './ledger.js'
+import {entries, pages} from './library.js'
+
+const table = document.querySelector('.ledger-table')
+table.insertAdjacentHTML('beforeend', entries.map((entry,index) => ledgerRow(entry,index + 5,pages)).join(''))
+
 const filters = document.querySelector('#filters')
 const groups = [...document.querySelectorAll('.ledger-table tbody')]
 const previous = document.querySelector('#prev')
@@ -21,7 +27,8 @@ function renderLedger() {
       group.querySelector('.expand').setAttribute('aria-expanded', 'false')
     }
   }
-  count.textContent = matches.length ? `${start+1}–${Math.min(start+pageSize,matches.length)} of ${matches.length} fixes` : '0 fixes'
+  count.textContent = matches.length <= 1 ? (matches.length === 1 ? '1 fix' : '0 fixes') :
+    `${start+1}–${Math.min(start+pageSize,matches.length)} of ${matches.length} fixes`
   document.querySelector('#empty').hidden = matches.length > 0
   previous.disabled = page === 0
   next.disabled = start + pageSize >= matches.length
