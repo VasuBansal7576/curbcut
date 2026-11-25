@@ -18,7 +18,7 @@ export function opening(download) {
   <div class="frame hero-grid"><div class="hero-copy"><p class="kicker"><i class="signal"></i> Accessibility, in the browser</p>
   <h1 id="hero-title">Put your<br>mouse <em>down.</em></h1>
   <p class="lead">A Chrome extension that fixes real websites as you browse. Built for keyboard users, screen reader users, and people with low vision.</p>
-  <p class="trust">Every fix comes with proof. For Kane-verified repairs, you can replay the failure, the mouse control, and the working fix.</p>
+  <p class="trust">Each fix links to its evidence. Inspect the recorded runs or open the local browser measurement.</p>
   <a class="primary" href="${download}">Download extension <span aria-hidden="true">↗</span></a></div>
   <div class="demo"><div class="orbit" aria-hidden="true"></div><div class="demo-head mono"><span><i class="light"></i> Keyboard simulation</span><a href="#reader-title">Skip demo ↓</a></div>
   <div class="browser"><div class="chrome" aria-hidden="true"><span>● ● ●</span> fieldnotes.example <span>⌁</span></div>

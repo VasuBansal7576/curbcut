@@ -1,1 +1,2 @@
-15 3 * * * cd /Users/vasu/Desktop/Kane && PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin node curbcut.mjs recheck --local >> .curbcut-nightly.log 2>&1
+# Opt in by adding this entry to your crontab. Replace the checkout path and set PATH for your Node installation.
+15 3 * * * cd /path/to/curbcut && PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin node curbcut.mjs recheck --local >> .curbcut-nightly.log 2>&1

@@ -1,6 +1,8 @@
 # Proof index
 
-Start with [Mass.edu before](hard-v4/kane/v4-86f207deeb57-7bc09a21/before/recording.mp4) and [after](hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/recording.mp4). The same keyboard task opens About and follows “The DHE” with the repair. [Pointer control](hard-v4/kane/v4-86f207deeb57-7bc09a21/control/recording.mp4) · [Kane evidence pack](hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/70a47b25-b707-443b-98dd-d8849884cec2.evidence)
+On ColorHexa, a Kane failure led to a Codex repair that reached the reporting tab. [Agent input and rules](../README.md#inspect-a-kane-run) · [Original-tab timeline](live/live-loop.json) · [OpenSeaMap report to published ZIP](report-to-fix/README.md) · [Experimental results](#experimental)
+
+Compare [Mass.edu before](hard-v4/kane/v4-86f207deeb57-7bc09a21/before/recording.mp4) and [after](hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/recording.mp4). The same keyboard task opens About and follows “The DHE” with the repair. [Pointer control](hard-v4/kane/v4-86f207deeb57-7bc09a21/control/recording.mp4) · [Kane evidence pack](hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/70a47b25-b707-443b-98dd-d8849884cec2.evidence)
 
 ## Held-out v7
 
@@ -34,7 +36,7 @@ The v7 draw registered 14 naming tasks and one document-language task from 100 n
 | Cohort | Result | Evidence |
 | --- | --- | --- |
 | Hard v4 | 64/102 local repairs, including 29/54 journeys. Kane verified 2/21 selected | [Study and per-case results](hard-v4/README.md) · [Registration](hard-v4/registration.json) · [Kane ledger](hard-v4/kane-summary.json) · [CSC before](hard-v4/kane/v4-27c6f312c486-51e6e4ad/before/recording.mp4) · [After](hard-v4/kane/v4-27c6f312c486-51e6e4ad/attempt-1/after/recording.mp4) |
-| Held-out v3 | 10/23 Kane-verified | [Study](heldout-v3/README.md) · [Ledger](heldout-v3/summary.json) |
+| Held-out v3 | 10/23 study-defined successes, including cases using a local oracle | [Study](heldout-v3/README.md) · [Ledger](heldout-v3/summary.json) |
 | Held-out v2 | 13/39 Kane-verified among started cases | [Study](heldout-v2/README.md) · [Ledger](heldout-v2/summary.json) |
 | Original held-out | 0/26 Kane-verified | [Study](heldout/README.md) · [Ledger](heldout/summary.json) |
 
@@ -44,8 +46,10 @@ The [Kane session ledger](kane/ledger.json) indexes archived sessions across coh
 
 | Claim | Result | Evidence |
 | --- | --- | --- |
-| Release bundle | 106 active repairs. 62 Kane-verified and 44 local proof | [Bundled rules and evidence pointers](../extension/bundled.json) |
+| Release bundle | 106 active repairs. 62 with Kane recordings and 44 with local proof | [Bundled rules and evidence pointers](../extension/bundled.json) |
 | Installed-extension audits | 43/43 original fixes, 11/11 new v5 fixes and 51/51 new v6 fixes passed their release audits | [Original audit](reliability/extension-e2e.json) · [New v5 audit](heldout-v5/kane-sample-20/extension-e2e.json) · [New v6 audit](heldout-v6/extension-e2e.json) · [V6 candidate exclusions](heldout-v6/extension-e2e-initial.json) |
+| November 24, 2026 installed audit | 98/105 primary checks passed across that day’s bundle, seven unconfirmed | [Installed audit](reliability/submission-extension-e2e.json) · [Targeted local recheck](reliability/submission-recheck.json) |
+| Developer fixture | Kane runs for Check, Gate and retirement | [CLI demo archive](demo/README.md) |
 | Nightly replay | 43 checked, 38 still verified, 4 inconclusive. One broken result was subsequently retired | [Nightly runs and disposition](reliability/nightly.json) · [Earlier Kane rechecks](recheck/README.md) |
 | Report to repair | ColorHexa’s color picker became keyboard-reachable in the reporting tab | [Live report recording and Kane sessions](live/README.md) · [Site-owner report](../evidence/report-d6870c43f8831c2d3b/report.md) |
 | Local harness | Three fixture tasks recorded fail, pass with the rule, and pass after a native fix | [Fixture evidence](local.json) · [Replay instructions](methodology/README.md#local-demo) |
@@ -66,11 +70,9 @@ The [Kane session ledger](kane/ledger.json) indexes archived sessions across coh
 [Jev protocol and limitations](jev/README.md)
 
 
-## Recipe, parity, and demo studies
+## Experimental
 
-- [Cost replay and live trials](cost/README.md) covers 260 archived tasks, 89 live journey trials, 34 inheritance trials, and two sets of 11 template corrections.
-- [Recipe census](census/README.md) reports pattern shares, uncertainty intervals, and recall on positives-only labels.
-- [Match mouse](mirror-dom/README.md) records the 200-site draw, the 22 eligible hover barriers, and the failed Kane verification.
-- [Jev mirror backtest](jev/mirror-backtest/README.md) records the preregistered bar and the frozen result.
-- [CLI demo runs](demo/README.md) links the original Kane sessions and terminal footage for Check, Gate, and retirement.
-- [Submission recheck](reliability/submission-recheck.json) records the seven targeted local outcomes and preserves the original release audit above. The [submission extension audit](reliability/submission-extension-e2e.json) captures 98/105 primary passes and 18/18 serving www passes.
+- **Cost.** The CLI reports estimated tokens and Kane balance changes. The model ladder and the large model alone each fixed 0/17 judged tasks. Reordering the prompt prefix produced no measurable product-cache benefit. Shared mouse controls can reuse a same-URL recording, but the archive has no equivalent-objective receipt demonstrating savings. [Cost study](cost/README.md)
+- **Family scan.** One mdBook template repaired two of five documentation URLs locally. Both repaired pages were on doc.rust-lang.org. Kane confirmed zero of the two. [Family results](family/README.md)
+- **Match mouse.** The experimental command compares DOM controls. It matched one of 22 held-out menus locally, with zero of one confirmed by Kane. The separate Jev screenshot classifier missed its precision threshold and was dropped. [DOM trial](mirror-dom/README.md) · [Classifier backtest](jev/mirror-backtest/README.md)
+- **Census.** The study estimates the reach of recipe patterns on observed pages and measures recall on positive examples. [Sample and calibration](census/README.md)

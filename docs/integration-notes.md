@@ -14,7 +14,7 @@
 
 The [seven targeted local rechecks](../proof/reliability/submission-recheck.json) were all inconclusive. Holafly’s pointer control could not resolve a unique control. Five contrast targets lacked a passing control. The Lezhin control passed, but the persona lane yielded no contrast measurement. The rules retain their prior status on an inconclusive result.
 
-The integration build had 105 active fixes, 61 Kane-verified and 44 with local proof, as shown in the launch film. The current bundle has 106 active fixes, 62 Kane-verified and 44 with local proof. The final demo, launch cut, teaser, and thumbnail are integrated. The owner’s YouTube link remains pending.
+The integration build had 105 active fixes, 61 Kane-verified and 44 with local proof at the time of integration. The current bundle has 106 active fixes, 62 Kane-verified and 44 with local proof. The final demo, launch cut, teaser, and thumbnail are integrated. The owner’s YouTube link remains pending.
 
 The archived fixture Check replay reached Kane fail, pointer pass, and patched pass, then hit a publication error because its evidence was outside the archive root. The integrated CLI puts non-local Check evidence under `proof/kane/`. That publication path was changed without a new live Kane run.
 

@@ -14,15 +14,25 @@ Point it at localhost or a public preview URL. Do not use it on login, payment, 
 }
 ```
 
-Save that as `curbcut.gate.json` in the app repo. Optional `personas` defaults to `["keyboard-only","screen-reader-view"]`.
+The fixture config is checked in at `examples/curbcut.gate.json`. For your own app, save the example as `curbcut.gate.json`. The default personas are keyboard-only and screen-reader-view.
+
+From the repository root, use Node.js 22 or newer, run `npm ci`, then `npx playwright install chromium`.
+
+**Terminal 1** — start the fixture.
 
 ```sh
 node curbcut.mjs serve
-node curbcut.mjs gate --local --config examples/curbcut.gate.json
-node curbcut.mjs gate --dry-run --config curbcut.gate.json
 ```
 
-`--local` uses the Playwright oracle and spends no Kane credits. Omit it to run Kane. `--dry-run` prints the derived checks and the Kane credit estimate.
+Expect `Curb Cut · http://127.0.0.1:4317/site/`. That address serves the local landing page with working proof paths. [Hosted landing page](https://vasubansal7576.github.io/curbcut/)
+
+**Terminal 2** — run the local Gate.
+
+```sh
+node curbcut.mjs gate --local --config examples/curbcut.gate.json
+```
+
+The shop deliberately skips Add to cart. Expect a nonzero exit, a FAIL block and the control’s DOM snippet. To see the estimated live cost, replace `--local` with `--dry-run`. Remove the flag to run with an authenticated Kane CLI. [Archived Gate failure, source change and pass](../proof/demo/README.md#2-gate-in-a-coding-agent-curbcut-gate)
 
 A failing case looks like:
 

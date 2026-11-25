@@ -1,6 +1,6 @@
 # Pull request bot
 
-A pull request can wait for a preview URL, run `curbcut gate` against it, and post Kane’s verdict as one sticky comment.
+This opt-in GitHub Action can wait for a preview URL, run `curbcut gate` against it, and post Kane’s verdict as one sticky comment.
 
 ## Setup
 
@@ -16,10 +16,15 @@ A pull request can wait for a preview URL, run `curbcut gate` against it, and po
 
 ## Local dry run
 
-Spends no Kane credits:
+From the repository root with the [Gate prerequisites](gate.md), start the fixture in terminal 1.
 
 ```sh
 node curbcut.mjs serve
+```
+
+In terminal 2, generate the comment and JSON locally. The unfixed fixture returns a failing verdict.
+
+```sh
 node .github/actions/curbcut-gate/run.mjs --url http://127.0.0.1:4317/fixtures/shop/ --config examples/curbcut.gate.json --local --json-out /tmp/curbcut-gate.json --comment-out /tmp/curbcut-comment.md
 ```
 
