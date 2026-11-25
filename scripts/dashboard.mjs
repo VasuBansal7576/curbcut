@@ -1,6 +1,7 @@
 import path from 'node:path'
-import {mkdir, writeFile} from 'node:fs/promises'
+import {copyFile, mkdir, writeFile} from 'node:fs/promises'
 import {opening, repair} from './landing-opening.mjs'
+import {readerChapter, contrastChapter, kaneChapter, jevChapter, ownerChapter, developerChapter, closing} from './landing-chapters.mjs'
 import {ROOT, readJSON} from '../core/io.mjs'
 
 import {archiveExtension} from './package-extension.mjs'
@@ -86,14 +87,34 @@ export async function buildDashboard({bundled}) {
   const download = 'assets/curbcut-extension.zip'
   await archiveExtension({output:path.join(assets,'curbcut-extension.zip')})
   const mass = entries.find(entry=>entry.patch.id==='v4-86f207deeb57-7bc09a21')
+  const [review, plates] = await Promise.all([
+    readJSON(path.join(ROOT,'proof/jev/live-naming-real-sites.json')),
+    readJSON(path.join(ROOT,'launch/film/plates/index.json'))
+  ])
+  const film = 'launch/curbcut-launch.mp4'
+  const pagesFilm = 'media/curbcut-launch.mp4'
+  if (process.env.CURBCUT_PAGES === '1') {
+    await mkdir(path.join(ROOT,'site/media'),{recursive:true})
+    await copyFile(path.join(ROOT,film),path.join(ROOT,'site',pagesFilm))
+  }
+  for (const name of ['check','gate','retire-kane']) {
+    await copyFile(path.join(ROOT,'launch/footage',name+'.mp4'),path.join(assets,'story',name+'.mp4'))
+  }
+  await copyFile(path.join(ROOT,'launch/captions/launch.vtt'),path.join(assets,'launch.vtt'))
   const html = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Curb Cut — Accessibility fixes for Chrome</title><meta name="theme-color" content="#E8E4F5"><meta name="description" content="Curb Cut fixes mouse-only menus, unnamed buttons and faint text as you browse. Watch a real repair and inspect the evidence.">
-<link rel="icon" href="assets/icon.png"><link rel="preload" href="assets/fonts/inter-tight.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="style.css"><script defer src="dashboard.js"></script><script defer src="keystroke.js"></script></head>
-<body><a class="skip" href="#title">Skip to content</a><main id="main">${opening({download,repo,count:entries.length})}
+<link rel="icon" href="assets/icon.png"><link rel="preload" as="image" href="assets/tab/foot.webp" imagesrcset="assets/tab/foot-small.webp 520w, assets/tab/foot.webp 1100w" imagesizes="(max-width:760px) 90vw, 52vw" fetchpriority="high"><link rel="preload" href="assets/fonts/inter-tight.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css"><script defer src="dashboard.js"></script><script defer src="keystroke.js"></script><script defer src="chapters.js"></script><noscript><style>[data-panel][hidden]{display:block!important;margin-block:24px}.choices,.try-copy{display:none}</style></noscript></head>
+<body><a class="skip" href="#title">Skip to content</a><main id="main"><div class="travel-focus" aria-hidden="true" hidden></div>${opening({download,repo,count:entries.length})}
 ${repair({recordings:mass.recordings,link})}
-<section class="ledger" id="evidence"><div class="frame"><p class="overline">Fix library</p><h2>Every <em>fix.</em></h2><p class="ledger-intro">Search all ${entries.length} fixes. Kane verified ${kaneCount}. The other ${entries.length-kaneCount} have local proof. Open a row for the task, recordings and evidence.</p>
+${readerChapter(link)}
+${contrastChapter(link,plates)}
+${kaneChapter(mass.recordings,link)}
+${jevChapter(link,review)}
+${ownerChapter(link)}
+${developerChapter(link)}
+<section class="ledger" id="evidence"><div class="frame"><p class="overline">Fix library</p><h2>Every fix.</h2><p class="ledger-intro">Search all ${entries.length} fixes. Kane verified ${kaneCount}. The other ${entries.length-kaneCount} have local proof. Open a row for the task, recordings and evidence.</p>
 <form id="filters" role="search" aria-label="Filter evidence"><label class="search"><span>Site</span><input name="site" type="search" placeholder="Search by domain" autocomplete="off"></label>
 ${select('barrier','Barrier',entries.map(r=>r.barrier))}${select('persona','Browsing method',entries.map(r=>r.persona))}${select('proof','Proof',entries.map(r=>r.proofType))}</form>
 <noscript><p>${proofLink('patches/index.json','Open the complete fix index')} to inspect all fixes.</p></noscript>
@@ -101,6 +122,7 @@ ${select('barrier','Barrier',entries.map(r=>r.barrier))}${select('persona','Brow
 ${entries.map(ledgerRow).join('\n')}</table><p id="empty" hidden>No matching fixes. <button type="button" id="clear">Clear filters</button></p>
 <div class="pager"><span id="count" role="status" aria-live="polite"></span><div><button id="prev" type="button" aria-label="Previous page">← Previous</button><button id="next" type="button" aria-label="Next page">Next →</button></div></div></div></section>
 
+${closing({download,film:process.env.CURBCUT_PAGES === '1' ? pagesFilm : link(film)})}
 </main><footer class="frame"><a class="wordmark" href="#opening"><i class="mark" aria-hidden="true"></i>Curb Cut</a><a href="${repo}">GitHub ↗</a></footer>
 <dialog id="player" aria-labelledby="player-title"><div class="player-head"><h2 id="player-title">Kane recording</h2><button type="button" id="close">Close</button></div><video muted controls playsinline preload="none" aria-labelledby="player-title"></video><a id="original">Open complete recording ↗</a></dialog>
 </body></html>\n`

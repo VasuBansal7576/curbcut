@@ -50,16 +50,20 @@ A 76 px headline sits low in the frame. The 22 px description identifies a priva
 | --- | --- |
 | Opening | Identify the Chrome extension and its audience beside a single large Tab key. Install and GitHub share the first screen. |
 | Colour | Pale lilac field, deep plum type, vivid orange key and accents. Colour in the evidence belongs to the recorded site. |
-| Scale | A large, closely set headline shares the frame with one object. Body text stays readable at ordinary reading size. Evidence captions use a small monospaced face. |
+| Scale | A large, closely set headline shares the frame with one object. Body text stays readable at ordinary reading size. Evidence captions use smaller Inter Tight labels. |
 | Scroll and handoff | The key compresses as the reader approaches a real keyboard task. The next chapter cuts from an object you recognise to a menu you can test. Leave ordinary page scrolling in control. |
 | Timing | Scroll determines the mechanical travel. The repair state has an immediate text change and a short visual transition. Reduced motion shows the settled artwork and switches evidence directly. |
 | Product | The key is an illustration. The menu is an actual Mass.edu capture. Compare the two recorded states, try the keys and inspect the original Kane run. |
-| Closing, after approval | Return from the individual browser repair to the site owner and developer workflow, then repeat the extension download with unpacked-install instructions. |
+| Closing | Return from the individual browser repair to the site owner and developer workflow, then repeat the extension download with unpacked-install instructions. |
 
-## Checkpoint
+## Initial two-section checkpoint
 
 [Opening and repair beside the references](../../docs/landing-review/comparison.png) · [Colour and type](type-and-colour.md) · [Desktop scroll-through](../../docs/landing-review/desktop-scroll.mp4) · [Mobile scroll-through](../../docs/landing-review/mobile-scroll.mp4)
 
 The desktop recording shows the switch compressing, the menu repair on scroll, a manual keyboard retry, and Kane reaching the destination. On mobile the visitor operates the repair switch. With reduced motion, the artwork stays still and the visitor chooses the repair state.
 
 At 320, 390 and 1440 px, axe-core 4.10.3 reported zero violations and the document width matched the viewport. A keyboard check reached The DHE after switching on the repair at each width. A cold mobile Lighthouse 12.8.2 run scored 100 for accessibility and 93 for performance. The local and Pages builds each produced 105 repairs, including 61 Kane-verified and 44 with local proof. The repository evidence check validated 606 URLs and 229 videos.
+
+## Completed page
+
+The approved opening uses Inter Tight throughout. The Tab switch compresses on scroll and the orange outline travels into the Mass.edu menu. The rest of the page follows the recorded repairs through testing, owner handoff, retirement and the developer workflow. [Full recordings and verification](../../docs/landing-review/final/README.md)
