@@ -1,6 +1,5 @@
 import assert from 'node:assert/strict'
 import path from 'node:path'
-import {access} from 'node:fs/promises'
 import {fileURLToPath} from 'node:url'
 import {ROOT,instant,readJSON,relative,saveJSON} from '../../core/io.mjs'
 import {requireKane} from '../../core/kane.mjs'
@@ -21,11 +20,35 @@ const balance=async()=>{
 }
 const phases={before:'fail',control:'pass',after:'pass'}
 const initial=await balance()
-const summary={startedAt:instant(),startingBalance:initial,reserve,cases:[]}
-await access(file).then(()=>{throw Error('A batch ledger already exists')},error=>assert.equal(error.code,'ENOENT'))
+const previous=await readJSON(file).catch(error=>{if(error.code!=='ENOENT')throw error;return null})
+const finishBudget=process.argv[2]==='--finish-budget'
+if(finishBudget) {
+  assert(previous?.finishedAt && previous.stopped?.startsWith('Remaining credits reserved') && !previous.continuation,
+    'Continue only once, after the initial credit guard stops the batch.')
+} else assert(!previous,'A batch ledger already exists.')
+const summary=previous??{startedAt:instant(),startingBalance:initial,reserve,cases:[]}
+const measured={}
+if(finishBudget){
+  for(const row of previous.cases.filter(row=>row.type==='form-label')){
+    for(const lane of row.phases){
+      const {credits}=await readJSON(path.join(ROOT,lane.result))
+      if(credits>0)(measured[lane.name]??=[]).push(credits)
+    }
+  }
+  for(const values of Object.values(measured))values.sort((a,b)=>a-b)
+  assert(Object.keys(phases).every(name=>measured[name]?.length>=3))
+  summary.continuation={openedAt:instant(),balance:initial,previousStop:previous.stopped,
+    perPhaseAllowance:Object.fromEntries(Object.entries(measured).map(([name,values])=>[name,Math.ceil(values.at(-1)*1.25)])),
+    medianPhaseCredits:Object.fromEntries(Object.entries(measured).map(([name,values])=>[name,values[Math.floor(values.length/2)]]))}
+  delete summary.stopped
+  delete summary.finishedAt
+}
 const targets=await readJSON(path.join(folder,'selection.json'))
 const tasks=[]
 for(const target of targets){
+  const existing=summary.cases.find(row=>row.id===target.id)
+  if(existing && !existing.reason?.startsWith('Stopped at the judge rerun reserve'))continue
+  if(finishBudget && target.type!=='form-label')continue
   const data=await readJSON(path.join(ROOT,target.source))
   const row=(data.rows??data.results).find(r=>(r.id??r.task.id)===target.id)
   assert.equal(row.status,'locally-fixed')
@@ -33,7 +56,7 @@ for(const target of targets){
   if(row.proposal && typeof row.proposal==='string' && !row.category){
     assert.deepEqual(await readJSON(path.join(ROOT,row.proposal,'candidate.json')),row.patch)
   }
-  tasks.push({...target,patch:row.patch,domain:siteKey(new URL(row.patch.url))})
+  tasks.push({...target,patch:row.patch,domain:siteKey(new URL(row.patch.url)),existing})
 }
 let writes=Promise.resolve()
 function persist(){
@@ -45,13 +68,16 @@ await persist()
 delete process.env.CURBCUT_KANE_MAX_STEPS
 delete process.env.CURBCUT_CHROME
 process.env.CURBCUT_KANE_MIN_CREDITS=String(reserve+phaseAllowance)
-async function runCase({id,source,type,patch}){
-  const row={id,source,type,site:new URL(patch.url).hostname,task:patch.task,persona:patch.persona,phases:[]}
-  summary.cases.push(row)
+async function runCase({id,source,type,patch,existing}){
+  const row=existing??{id,source,type,site:new URL(patch.url).hostname,task:patch.task,persona:patch.persona,phases:[]}
+  if(!existing) summary.cases.push(row)
   await persist()
   for(const [name,expected] of Object.entries(phases)){
+    if(existing?.phases.some(lane=>lane.name===name))continue
+    const guard=reserve+(summary.continuation?.perPhaseAllowance[name]??phaseAllowance)
+    if(finishBudget)process.env.CURBCUT_KANE_MIN_CREDITS=String(guard)
     const available=await balance()
-    if(available<reserve+phaseAllowance){
+    if(available<guard){
       Object.assign(row,{verdict:'inconclusive',reason:'Stopped at the judge rerun reserve before '+name})
       break
     }
@@ -86,9 +112,12 @@ async function runCase({id,source,type,patch}){
 // Near the reserve finish one case at a time.
 while(tasks.length){
   const available=await balance()
-  if(available<reserve+caseAllowance){summary.stopped='Remaining credits reserved for a judge rerun and one new case.';break}
+  const remaining=Object.keys(phases).filter(name=>!tasks[0].existing?.phases.some(lane=>lane.name===name))
+  const allowance=finishBudget?Math.max(summary.continuation.perPhaseAllowance[remaining[0]],
+    remaining.reduce((cost,name)=>cost+summary.continuation.medianPhaseCredits[name],0)*1.1):caseAllowance
+  if(available<reserve+allowance){summary.stopped='Remaining credits reserved for a judge rerun and one new case.';break}
   const batch=[tasks.shift()]
-  if(available>=reserve+2*caseAllowance+phaseAllowance){
+  if(!finishBudget && available>=reserve+2*caseAllowance+phaseAllowance){
     const next=tasks.findIndex(t=>t.domain!==batch[0].domain)
     if(next>=0)batch.push(...tasks.splice(next,1))
   }
