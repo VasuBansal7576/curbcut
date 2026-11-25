@@ -1,0 +1,15 @@
+
+Update available: 0.10.7 → 0.10.9 — run `npm install -g @testmuai/kane-cli@latest` to update
+
+Skill update available: not installed → 0.1.4 — run `kane-cli install skill`
+
+Running on: Desktop · Chrome
+evidence: sealed pack 231198f7-2a1f-4712-867c-e1f7ff11a2f0 failed L1 validation [
+  {
+    code: 'l1.steps.missing',
+    severity: 'error',
+    location: 'tests/use-the-normal-visual-page-and-a-pointer-6321fdd5/steps/',
+    message: 'L1 requires a steps/ directory'
+  }
+]
+evidence: view locally with `kane-cli evidence serve /Users/vasu/.testmuai/kaneai/sessions/5675ed97-d574-4559-a3fa-91e9b5b32b3f/evidence/231198f7-2a1f-4712-867c-e1f7ff11a2f0.evidence`
