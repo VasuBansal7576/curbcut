@@ -1,6 +1,6 @@
 # Report a barrier to verified fix
 
-**Verdict. The continuous run stopped at Curb Cut's evidence check before publication.** The saved first patched trace passes with the ordering fix on this branch, and a separate installed-extension replay showed that the same Tab presses reveal the menu after a reload.
+**Published after rechecking the recorded evidence.** The original report-to-fix run stopped at Curb Cut's trace check. Publication and the installed-extension comparison happened later and used zero additional Kane credits.
 
 On [OpenSeaMap](https://map.openseamap.org/), the task was to Tab to **View** in the map toolbar and confirm that the **Sea Marks** checkbox appears. The checkbox was left unchanged. The starting extension bundle contained no repair for the site.
 
@@ -44,9 +44,17 @@ All times are UTC on November 25, 2026. The Kane windows run from the recorded b
 
 ## What stopped publication
 
-In the first patched run, the browser recorded a trusted Tab, the Sea Marks checkbox becoming visible and then View receiving focus. The original verifier required the visibility event to follow the focus event. The fix recognizes that exact sequence when all three events belong to the same Tab and document. Rechecking the unchanged trace gives a pass, while the retry stays inconclusive because it lacks the target focus event. The original results and terminal exit are preserved. [Trace recheck](trace-recheck.json)
+In the first patched run, the browser recorded a trusted Tab, the Sea Marks checkbox becoming visible and then View receiving focus. The original verifier required the visibility event to follow the focus event. The fix recognizes that exact sequence when all three events belong to the same Tab and document. Rechecking the unchanged trace gives a pass, while the retry stays inconclusive because it lacks the target focus event. The original results and terminal exit are preserved. [Trace recheck](trace-recheck.json) · [Verifier regression test](../../tests/loop.test.mjs)
 
 In a separate headless profile, a temporary bundle used the same Grok rules and the three recorded lanes that passed the corrected check. The first three Tab presses followed the same path. The fourth Tab reached View after reloading the extension in that browser, and Sea Marks appeared with its original checked state. This replay used zero credits and did not publish the patch. An earlier temporary-bundle test used a locally verified status that the schema reserves for other types of repairs. [Local replay recording](local-reload.mp4) · [Local replay trace](local-reload.json) · [Local replay rehearsal](local-reload-rehearsal.log)
+
+## Publication and packaged extension replay
+
+On November 25 at 06:49:55 UTC, the normal Curb Cut publisher verified and bundled the Grok patch from the original before, mouse control and first after sessions. The publication command revalidated those three archived evidence packs and applied the corrected verifier to their unchanged traces. The archived first after run still records the original inconclusive outcome. The evidence ledger links to the later recheck and excludes the retry from the patch's evidence. [Publication log](publication.log) · [Published patch](../../patches/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147.json) · [Repair provenance](../kane/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/barrier-report/attempt-1/provenance.json) · [Evidence report](../../evidence/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/report.md)
+
+The comparison clip uses an isolated headless Chromium profile and the two actual extension ZIPs. Eight Tab presses skipped View with the pre-publication package. After replacing the unpacked files with the published package and reloading the extension, the same eight presses reached View and revealed the unchanged Sea Marks checkbox. The popup shows **Kane verified** and plays the before and after recordings. The extension's evidence URL setting pointed to the local archive so the branch's recordings could play before any remote release. The silent clip is 1920 × 1080. [Comparison clip](user-clip.mp4) · [Build hashes and captured key sequence](user-clip.json)
+
+The active bundle contains **106 fixes**, including **62 Kane-verified** and **44 with local proof**. [Bundle](../../extension/bundled.json) · [Fix library](../../site/index.html#evidence)
 
 ## Site scouting
 
@@ -56,4 +64,4 @@ Two local backups were Lancaster's **Neighborhoods** menu and Washburn Universit
 
 ## Validation
 
-`npm test` passed all 121 tests. `npm run build` and `npm run package` passed. The evidence verifier checked 639 dashboard URLs and 229 videos. The v5, v6 and v7 integrity checks and both landing-page viewport checks passed.
+`npm test` passed all 122 tests. `npm run build` and `npm run package` passed. The evidence verifier checked 647 dashboard URLs and 232 videos. The v5, v6 and v7 integrity checks and both landing-page viewport checks passed.

@@ -28,7 +28,8 @@ const [hardLocal,v5Local,v5Rerun,v5Sample,v6Local,v6Kane]=await Promise.all([
   'heldout-v5/kane-sample-20/summary','heldout-v6/local-summary','heldout-v6/kane-summary'
 ].map(file=>readJSON(path.join(ROOT,'proof',file+'.json'))))
 const knownRepairs=new Set(recorded.map(patch=>patch.id))
-const openTasks=publicTasks.filter(task=>!knownRepairs.has(task.id)).flatMap(task=>{
+const openTasks=publicTasks.filter(task=>!knownRepairs.has(task.id) &&
+  !active.some(patch=>['url','persona','task'].every(key=>patch[key]===task[key]))).flatMap(task=>{
   const runs=archive.filter(run=>run.taskId===task.id)
   if(!runs.length) return []
   const baseline=runs.findLast(run=>run.phase==='before')
@@ -67,7 +68,8 @@ for(const patch of recorded) {
     if(logged?.status!==expected || result.video!==file || (result.inspection?.harness?.persona!==persona && !(expected==='inconclusive' && !result.inspection)) || (key==='after'?recordedPatch!==null && recordedPatch!==patch.id:recordedPatch!==null)) throw new Error('Invalid Kane '+key+' evidence for '+patch.id)
     await Promise.all([file,result.evidencePack].map(asset=>access(path.join(ROOT,asset))))
     const pack=' · [Kane evidence pack]('+videoLink(result.evidencePack)+')'
-    return '- ['+key+' recording]('+videoLink(file)+') · [Run result]('+videoLink(observations)+')'+pack+' · Kane session '+runId+' · Kane verdict '+logged.status+(patch.evidence.localOracle?' · local oracle '+patch.evidence.localOracle[key==='retirement'?'before':key]:'')
+    const review=logged.traceReview?' · [Trace recheck]('+videoLink(logged.traceReview)+') · Original Curb Cut outcome '+logged.recordedStatus:''
+    return '- ['+key+' recording]('+videoLink(file)+') · [Run result]('+videoLink(observations)+')'+pack+' · Kane session '+runId+' · Kane verdict '+logged.status+review+(patch.evidence.localOracle?' · local oracle '+patch.evidence.localOracle[key==='retirement'?'before':key]:'')
   }
   const phases=await Promise.all(['before','control','after'].map((key,index)=>runLink(key,patch.evidence[key],patch.evidence.kaneRunIds[index])))
   const rechecks=await Promise.all(patch.history.filter(entry=>entry.event==='retired').map(entry=>runLink('retirement',entry.video,entry.runId)))

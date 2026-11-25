@@ -6,5 +6,13 @@
     "before": "fail",
     "control": "pass",
     "after": "pass"
+  },
+  "traceReview": {
+    "file": "proof/kane/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/barrier-report/attempt-1/after/trace-review.json",
+    "originalQueueResult": "proof/report-to-fix/queue-result.json",
+    "verifierFix": "9e57e5486b33b412d9effaad3bd84131ea5845a8",
+    "checkedAt": "2026-11-25T06:49:55.653Z",
+    "newKaneCredits": 0,
+    "detail": "The Kane verdicts came from the original continuous run. Curb Cut rejected the first patched trace because the visibility checkpoint appeared before the focus event from the same Tab. The verifier fix includes a regression test. The unchanged trace was rechecked before publication in a later step."
   }
 }

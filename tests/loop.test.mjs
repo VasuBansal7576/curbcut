@@ -7,6 +7,7 @@ import {readJSON} from '../core/io.mjs'
 import {match} from '../core/engine.js'
 import {ProposalRejected} from '../core/agent.mjs'
 import {taskDestination} from '../core/task.mjs'
+import {reviewRecordedJourney} from '../scripts/recorded-journey.mjs'
 const original=(await readJSON('extension/demo.json'))[0]
 const task=await readJSON('tasks/keyboard-only.json')
 const result=(status,n)=>({status,runId:'test-'+n,video:'unit-'+n+'.mp4'})
@@ -191,6 +192,17 @@ test('a hover checkpoint may precede its focus event within the same trusted Tab
  assert.equal(judgeJourney({...inputs,events:[visible,tab,focus]}).status,'inconclusive')
  assert.equal(judgeJourney({...inputs,events:[tab,{...visible,documentId:'old-map'},focus]}).status,'inconclusive')
  assert.equal(judgeJourney({...inputs,events:[tab,visible,{...focus,stepTargets:['#other']}]}).status,'inconclusive')
+})
+
+test('the archived OpenSeaMap trace can be rechecked only for its recorded objective',async()=>{
+ const attempt='proof/kane/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/barrier-report/attempt-1'
+ const patch=await readJSON(attempt+'/candidate.json')
+ const input={directory:attempt+'/after',task:patch,persona:patch.persona,patch}
+ const checked=await reviewRecordedJourney(input)
+ assert.equal(checked.review.originalStatus,'inconclusive')
+ assert.equal(checked.result.status,'pass')
+ await assert.rejects(reviewRecordedJourney({...input,task:{...patch,task:'Use the map without a pointer.'}}))
+ await assert.rejects(reviewRecordedJourney({...input,patch:{...patch,id:'another-patch'}}))
 })
 
 test('the Playwright loop keeps a successful patch as a candidate and preserves the pointer result',async()=>{
