@@ -4,17 +4,18 @@ export function opening({download, repo, count}) {
     <nav aria-label="Main navigation"><a href="#repair">The repair</a><a href="#evidence">Fix library <span class="nav-count">${count}</span></a></nav>
   </div></header>
   <section class="opening" id="opening" aria-labelledby="title"><div class="opening-stage"><div class="hero frame">
-    <div class="hero-copy"><p class="overline"><span class="extension-icon" aria-hidden="true">+</span> Chrome accessibility extension</p>
-    <h1 id="title">A way<br> <span class="landing-word">through.</span></h1>
-    <p class="summary">For people who use a keyboard, a screen reader or zoom. Curb Cut opens mouse-only menus, names buttons and makes faint text easier to read.</p>
+    <div class="hero-copy"><p class="overline"><i class="square" aria-hidden="true"></i> Mass.edu · Keyboard navigation</p>
+    <h1 id="title"><span data-barrier>The menu<br> <span class="landing-word">stays shut.</span></span><span data-answer hidden>Tab opens<br> <span class="landing-word">the menu.</span></span></h1>
+    <p class="summary"><span data-barrier>For people who use a keyboard, a screen reader or zoom, a menu can turn a website into a dead end.</span><span data-answer hidden>Curb Cut is a Chrome extension that opens mouse-only menus, names buttons and makes faint text readable as you browse.</span></p>
     <div class="actions"><a class="install" href="${download}" download><span class="download-icon" aria-hidden="true"></span>Install for Chrome</a>
     <a class="text-action" href="${repo}">GitHub <span aria-hidden="true">↗</span></a></div></div>
-    <figure class="mechanism" aria-label="Exploded illustration of the Tab key, its spring and its circuit board">
-      <div class="drawing" aria-hidden="true"><i class="registration nw"></i><i class="registration ne"></i><i class="registration sw"></i><i class="registration se"></i>
-        <div class="shadow"></div><div class="assembly">${['foot','spring','cap'].map(layer=>`<img class="key-${layer}" src="assets/tab/${layer}.webp" srcset="assets/tab/${layer}-small.webp 520w, assets/tab/${layer}.webp 1100w" sizes="(max-width:760px) 90vw, 52vw" fetchpriority="high" width="1100" height="1000" alt="">`).join('')}</div>
-        <span class="key-caption">Tab switch</span></div>
-    </figure>
-  </div><div class="hero-foot frame"><a href="#repair"><span class="down" aria-hidden="true">↓</span> Follow the keystroke</a><span class="foot-domain">mass.edu <i aria-hidden="true">/</i> Keyboard navigation</span></div></div></section>`
+    <div class="mechanism"><figure class="hero-display">
+      <div class="recording-label"><i class="rec-dot" aria-hidden="true"></i>Mass.edu <span>Recorded keystroke</span></div>
+      <div class="hero-lens"><video class="hero-footage" width="758" height="358" preload="none" muted playsinline poster="assets/story/about-closed.webp" aria-label="Mass.edu’s About menu before the repair"></video></div>
+      <figcaption><span data-barrier>Tab reaches About. Its links stay hidden.</span><span data-answer hidden>The same key reveals The DHE.</span></figcaption>
+      </figure><div class="drawing" aria-hidden="true"><div class="shadow"></div><div class="assembly">${['foot','spring','cap'].map(layer=>`<img class="key-${layer}" src="assets/tab/${layer}-small.webp" width="520" height="473" alt="">`).join('')}</div></div>
+    </div>
+  </div><div class="hero-foot frame"><a class="next-key" href="#repair"><span class="down" aria-hidden="true">↓</span> Try the repair</a><span class="foot-domain">Massachusetts Department of Higher Education</span></div></div></section>`
 }
 
 export function repair({recordings, link}) {

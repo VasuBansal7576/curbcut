@@ -14,33 +14,99 @@ for (const chapter of document.querySelectorAll('[data-choices]')) {
   })
 }
 
+const mapChapter = document.querySelector('#report-to-fix')
+const mapStop = mapChapter.querySelector('#map-stop')
+const mapPosition = mapChapter.querySelector('#map-position')
+const mapPanels = [...mapChapter.querySelectorAll('[data-panel]')]
+const lastStops = mapPanels.map(panel => ({
+  src:panel.querySelector('img').src,
+  alt:panel.querySelector('img').alt,
+  label:panel.querySelector('p').textContent
+}))
+const commonStops = ['Zoom in','Zoom out','OpenStreetMap attribution','Permalink','Unnamed button','Unnamed link','Search field']
+
+function scrubMap() {
+  const stop = Number(mapStop.value)
+  const published = mapChapter.querySelector('input[name="map"]:checked').value === '1'
+  const lane = published ? 1 : 0
+  const panel = mapPanels[lane]
+  const still = panel.querySelector('img')
+  const focus = commonStops[stop - 1] || (published ? 'View menu' : 'Page body')
+  const position = stop + ' of 8'
+  mapPosition.textContent = position
+  mapStop.setAttribute('aria-valuetext',position + ', ' + focus)
+  const end = lastStops[lane]
+  still.src = stop === 8 ? end.src : 'assets/map/' + (published ? 'published-' : 'before-') + stop + '.webp'
+  still.dataset.stop = stop
+  still.alt = stop === 8 ? end.alt : 'OpenSeaMap after Tab reached ' + focus
+  panel.querySelector('p').textContent = stop === 8 ? end.label : 'Focus moves to ' + focus + '.'
+}
+
+mapChapter.querySelector('.map-scrubber').hidden = false
+mapStop.addEventListener('input',scrubMap)
+mapChapter.addEventListener('change',scrubMap)
+scrubMap()
+
 document.addEventListener('play', event => {
-  if (!(event.target instanceof HTMLVideoElement)) return
+  if (!(event.target instanceof HTMLVideoElement) || event.target.classList.contains('hero-footage') || event.target.paused) return
   for (const other of document.querySelectorAll('video')) {
     if (other !== event.target && !other.paused) other.pause()
   }
 }, true)
 
 const focusTrace = document.querySelector('.travel-focus')
-const originWord = document.querySelector('.landing-word')
+const opening = document.querySelector('#opening')
+const problemText = opening.querySelectorAll('[data-barrier]')
+const answerText = opening.querySelectorAll('[data-answer]')
+const heroFilm = opening.querySelector('.hero-footage')
+const repairLink = opening.querySelector('.next-key')
 const sourceKey = document.querySelector('.drawing')
 const menuButton = document.querySelector('.about-target')
 const motionAllowed = matchMedia('(prefers-reduced-motion:no-preference)')
 let nextFrame
 
+let answerVisible
+
+function updateOpening(showAnswer) {
+  if (answerVisible === showAnswer) return
+  answerVisible = showAnswer
+  for (const text of problemText) text.hidden = showAnswer
+  for (const text of answerText) text.hidden = !showAnswer
+  const stem = 'assets/story/about-' + (showAnswer ? 'repaired' : 'closed')
+  heroFilm.pause()
+  heroFilm.removeAttribute('src')
+  heroFilm.poster = stem + '.webp'
+  heroFilm.setAttribute('aria-label', showAnswer ? 'The DHE appears under About on keyboard focus' : 'Focus reaches About and its menu stays closed')
+  heroFilm.load()
+  if (motionAllowed.matches && opening.getBoundingClientRect().bottom > 0) {
+    heroFilm.src = stem + '.mp4'
+    heroFilm.play().catch(() => {})
+  }
+}
+
+repairLink.addEventListener('focus',() => updateOpening(true))
+repairLink.addEventListener('blur',queueTrace)
+motionAllowed.addEventListener('change',() => {
+  answerVisible = undefined
+  queueTrace()
+})
+
 function paintTrace() {
   nextFrame = 0
   const viewportHeight = document.documentElement.clientHeight
   const repairTop = document.querySelector('#repair').getBoundingClientRect().top
+  updateOpening(scrollY >= Math.min(opening.clientWidth <= 760 ? 65 : 140,viewportHeight * .16) || document.activeElement === repairLink)
   if (!motionAllowed.matches || repairTop < -10 || scrollY < 2 || repairTop > viewportHeight * 1.6) {
     focusTrace.hidden = true
     return
   }
-  const word = originWord.getBoundingClientRect()
+  const word = opening.querySelector('h1 > span:not([hidden]) .landing-word').getBoundingClientRect()
   const key = sourceKey.getBoundingClientRect()
   const menu = menuButton.getBoundingClientRect()
-  const early = Math.min(1, scrollY / (viewportHeight * .25))
-  const progress = Math.max(0, Math.min(1, (viewportHeight * 1.05 - repairTop) / viewportHeight))
+  const narrow = opening.clientWidth <= 760
+  const early = Math.min(1, scrollY / (narrow ? 65 : viewportHeight * .25))
+  const progress = narrow ? Number(menu.top < viewportHeight && word.bottom < 0) :
+    Math.max(0, Math.min(1, (viewportHeight * 1.05 - repairTop) / viewportHeight))
   const mix = (from,to,t) => from + (to - from) * t
   const width = mix(word.width + 20, menu.width + 6, progress)
   const height = mix(word.height + 5, menu.height + 6, progress)
