@@ -37,7 +37,10 @@ async function ledgerEntry(patch) {
   const recordings = local ? [] : await Promise.all(phases.map(async phase => {
     const file = patch.evidence[phase]
     const result = await readJSON(path.join(ROOT, path.dirname(file), 'result.json'))
-    return {phase, file, pack:result.evidencePack}
+    const localVerdict = patch.evidence.localOracle?.[phase]
+    const different = localVerdict && localVerdict !== result.status
+    return {phase, file, pack:result.evidencePack,
+      ...(different && {verdict:result.status, localVerdict})}
   }))
   return {id:patch.id, domain:patch.site, task:patch.task, measurement:patch.evidence.localMeasurement, site:patch.site.replace(/^www\./, ''), barrier:barrier(patch),
     persona:personas[patch.persona], proofType:local ? 'Local' : 'Kane', recordings}

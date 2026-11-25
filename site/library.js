@@ -75,7 +75,9 @@ export const entries = [
       {
         "phase": "before",
         "file": "proof/heldout-v3/runs/asme-org-tr2/before/recording.mp4",
-        "pack": "proof/heldout-v3/runs/asme-org-tr2/before/bd711d9f-1c6f-422e-9b94-ada920d669b9.evidence"
+        "pack": "proof/heldout-v3/runs/asme-org-tr2/before/bd711d9f-1c6f-422e-9b94-ada920d669b9.evidence",
+        "verdict": "inconclusive",
+        "localVerdict": "fail"
       },
       {
         "phase": "control",
@@ -412,12 +414,16 @@ export const entries = [
       {
         "phase": "before",
         "file": "proof/heldout-v3/runs/discuz-vip-tr2/before/recording.mp4",
-        "pack": "proof/heldout-v3/runs/discuz-vip-tr2/before/4066b1f5-f548-4773-b3ac-33d151ffc4e8.evidence"
+        "pack": "proof/heldout-v3/runs/discuz-vip-tr2/before/4066b1f5-f548-4773-b3ac-33d151ffc4e8.evidence",
+        "verdict": "inconclusive",
+        "localVerdict": "fail"
       },
       {
         "phase": "control",
         "file": "proof/heldout-v3/runs/discuz-vip-tr2/control/recording.mp4",
-        "pack": "proof/heldout-v3/runs/discuz-vip-tr2/control/ee8bff5e-21cb-43be-8fd7-ab2c2b0a8c21.evidence"
+        "pack": "proof/heldout-v3/runs/discuz-vip-tr2/control/ee8bff5e-21cb-43be-8fd7-ab2c2b0a8c21.evidence",
+        "verdict": "fail",
+        "localVerdict": "pass"
       },
       {
         "phase": "after",
@@ -464,7 +470,9 @@ export const entries = [
       {
         "phase": "before",
         "file": "proof/heldout-v3/runs/dol-gov-tr2/before/recording.mp4",
-        "pack": "proof/heldout-v3/runs/dol-gov-tr2/before/424038d6-db95-4784-9e72-df4a32f44e45.evidence"
+        "pack": "proof/heldout-v3/runs/dol-gov-tr2/before/424038d6-db95-4784-9e72-df4a32f44e45.evidence",
+        "verdict": "inconclusive",
+        "localVerdict": "fail"
       },
       {
         "phase": "control",

@@ -55,7 +55,7 @@ export function opening(download, link) {
   return `<section class="hero wrap" id="opening" aria-labelledby="title"><div class="copy"><p class="kind">${icon('chrome',21)} Chrome extension</p>
     <h1 id="title">This menu<br> needs a mouse.</h1><p class="lead">Focus About on Mass.edu and Tab skips The DHE. Curb Cut opens the menu so your keyboard can reach the link.</p>
     <div class="actions"><a href="#proof" class="secondary">Watch Kane verify this ${icon('arrow',17)}</a>${installButton(download)}</div>
-    <ol class="install-note" aria-label="Install in desktop Chrome"><li>Download and unzip the extension.</li><li>Enable <b>Developer mode</b> at <code>chrome://extensions</code>.</li><li>Choose <b>Load unpacked</b> and select the extracted folder.</li></ol></div>
+    <ol class="install-note" aria-label="Install in desktop Chrome"><li>On desktop, download and unzip the extension.</li><li>Enable <b>Developer mode</b> at <code>chrome://extensions</code>.</li><li>Choose <b>Load unpacked</b> and select the extracted folder.</li></ol></div>
     <figure class="hero-demo" id="repair">${browserWindow('mass',shot)}
     <figcaption class="hero-caption"><button type="button" class="key" aria-label="Try the Tab key on Mass.edu">${['foot','spring','cap'].map(layer=>`<img class="k-${layer}" width="200" height="182" src="assets/product/tab-${layer}.webp" alt="">`).join('')}</button>
     <div><strong id="case-status" role="status">About has focus. The DHE stays hidden.</strong><span><a href="${link('evidence/v4-86f207deeb57-7bc09a21/report.md')}">See the site owner’s report ↗</a></span></div>

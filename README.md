@@ -41,7 +41,7 @@ On **OpenSeaMap**, a shortcut opened a report draft. Grok wrote the View-menu fi
 3. **Verify.** Replay the task with the proposed rule installed. Curb Cut checks the trace and archives the result, recording and evidence pack.
 4. **Retire.** Run the task again with the patch switched off. When the site passes unaided, Curb Cut can retire the rule. [Watch a patch retire](proof/demo/README.md#3-retirement)
 
-The extension ships **106 active fixes**. **62** have Kane recordings and **44** have local browser measurements. Each library entry links its evidence. [Browse the fix library](https://vasubansal7576.github.io/curbcut/#evidence) · [Bundle](extension/bundled.json)
+The extension ships **106 active fixes**. **62** have Kane recordings and **44** have local browser measurements. On November 24, 2026, the installed-extension audit recorded 98 primary passes and seven unconfirmed results across the 105 fixes in that day’s bundle. [Dated audit](proof/reliability/submission-extension-e2e.json) · [Browse the fix library](https://vasubansal7576.github.io/curbcut/#evidence) · [Bundle](extension/bundled.json)
 
 ## Run the developer fixture
 

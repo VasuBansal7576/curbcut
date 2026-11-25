@@ -509,10 +509,12 @@ article p {
   font-size: 14px;
   font-weight: 590;
 }
-.verdict i {
-  border: 1.5px solid var(--action);
-  border-radius: 50%;
+.verdict.pass i {
   color: var(--action);
+}
+.verdict i {
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
   width: 19px;
   height: 19px;
   display: grid;

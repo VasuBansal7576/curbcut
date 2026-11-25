@@ -23,7 +23,7 @@ export function ledgerRow(entry, index, pages) {
   const proofLink = (file, label) => `<a href="${link(file)}">${label}</a>`
   const {site, domain, barrier, persona, proofType, recordings, measurement, task} = entry
   const id = 'detail-' + entry.id
-  const runs = recordings.map(run => `<div><strong>${run.phase}</strong> ${videoLink(entry, run, 'Recording', link)} · ${proofLink(run.pack,'Evidence pack')}</div>`).join('')
+  const runs = recordings.map(run => `<div><strong>${run.phase}</strong> ${videoLink(entry, run, 'Recording', link)} · ${proofLink(run.pack,'Evidence pack')}${run.localVerdict ? ` · Original trace: ${esc(run.verdict)} · Local check: ${esc(run.localVerdict)}` : ''}</div>`).join('')
   const preview = previewSites.get(entry.id)
   const clips = preview ? ` class="replay" data-preview-before="assets/previews/${preview}-before.mp4" data-preview-after="assets/previews/${preview}-after.mp4"` : ''
   return `<tbody${clips} data-site="${esc(domain)}" data-barrier="${esc(barrier)}" data-persona="${esc(persona)}" data-proof="${proofType}"${index >= 5 ? ' hidden' : ''}>
