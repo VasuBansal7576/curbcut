@@ -24,4 +24,4 @@ FILM_THUMBNAIL=1 node launch/film/v9/render.cjs
 python3 launch/film/v9/finish.py
 ```
 
-The original shopping and map recordings retain their native colours. Stillroom’s shopper shots use the neutral fixture. The three locked soundtracks are stream-copied into the final movies. [Approved blue direction](direction/v9/A/end-card.png) · [Story](direction/v9/story.md) · [Delivery measurements](out/demo-verification.json)
+The archival Stillroom shopping replays use a grayscale grade. Third-party site recordings retain their native colours. Stillroom’s shopper shots use the neutral fixture. The three locked soundtracks are stream-copied into the final movies. [Approved blue direction](direction/v9/A/end-card.png) · [Story](direction/v9/story.md) · [Delivery measurements](out/demo-verification.json)

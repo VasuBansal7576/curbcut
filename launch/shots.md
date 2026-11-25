@@ -1,6 +1,6 @@
 # Curb Cut for Chrome
 
-The shopper wants the Field Headphones. Watch where focus goes when they press Tab. The opening and closing shopper views come from a fresh capture of Stillroom’s neutral fixture. The audit replays show the shop as Kane recorded it, including the earlier colours. The film uses white surroundings, near-black type and blue #2452A5 for keyboard focus, verdicts and the install action. [Approved direction](direction/v9/A/opening.png) · [Shot-by-shot story](direction/v9/story.md) · [Capture source](film/v9/capture.cjs)
+The shopper wants the Field Headphones. Watch where focus goes when they press Tab. The opening and closing shopper views come from a fresh capture of Stillroom’s neutral fixture. The six Stillroom Kane replays use a grayscale grade beneath the blue focus overlays. Third-party websites retain their recorded colours. The film uses white surroundings, near-black type and blue #2452A5 for keyboard focus, verdicts and the install action. [Approved direction](direction/v9/A/opening.png) · [Shot-by-shot story](direction/v9/story.md) · [Capture source](film/v9/capture.cjs)
 
 ## Launch
 
@@ -26,10 +26,10 @@ The shopper wants the Field Headphones. Watch where focus goes when they press T
 | 1:05.633 | The Munich Airport carousel arrow and its unnamed entry in the extension’s reading view. |
 | 1:11.633 | The same button acquires the name Vorherige Folie. Previous slide gives the English meaning. |
 | 1:15.267 | Hold the recorded reading view on the repaired button name. |
-| 1:17.667 | Move in on ExtremeTerrain’s Details link. Its own glyph and surface show the measured change from 4.39:1 to 4.50:1. |
-| 1:24.600 | Isolate Meridiano’s two original glyphs beside their captured reading-view rows in Chrome. |
-| 1:28.067 | TypeSafe Jev supplies Menú and Buscar. |
-| 1:34.967 | Both names hold. The review found 13 of 15 correct. |
+| 1:17.667 | Move in on ExtremeTerrain’s Details link. A contrast readout beside the native link counts from 4.39:1 to 4.50:1 as its colour changes. |
+| 1:24.600 | Push into Meridiano’s captured reading view and isolate the two unnamed controls. Their original glyphs appear in white on ink tiles. |
+| 1:28.067 | The blue focus ring lands on the menu tile, then travels to search. The real labels Menú and Buscar arrive in turn. |
+| 1:34.967 | Pull back to both named controls as the review result appears. The review found 13 of 15 correct. |
 | 1:39.100 | The original packaged extension on OpenSeaMap. Eight Tabs skip View. |
 | 1:43.367 | Ctrl + Shift + U opens the report. The user’s task and saved draft appear in the real extension form. |
 | 1:45.533 | Grok’s fix takes 16 seconds. Show View beside the two changes that make the task work. |
@@ -70,7 +70,7 @@ The demo opens with the entire launch. In the developer chapter the terminal chr
 | 2:58.433 | The Claude Code Stop hook runs the gate. The failed keyboard recording shows the skipped control. |
 | 3:10.933 | Kane can add the item after the source repair. The gate passes and Claude can finish. |
 | 3:21.433 | Open the fix in the toolbar and watch the recorded Mass.edu keyboard journey. |
-| 3:34.433 | On Meridiano, the menu and search names appear beside the matching real controls. |
+| 3:34.433 | Push into Meridiano’s reading view, follow focus from menu to search, and see Menú and Buscar appear in time with their descriptions. |
 | 3:49.433 | OpenSeaMap’s report shortcut opens a draft with the recent Tab history. |
 | 3:59.933 | The captured form shows the draft in the queue. |
 | 4:02.133 | Grok’s rule makes View focusable and opens its menu on focus. |

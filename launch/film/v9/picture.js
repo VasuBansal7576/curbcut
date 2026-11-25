@@ -18,7 +18,25 @@ async function prepare(work,root,data){
   for(const mode of ['on','off'])paths['shopPopup-'+mode]=work+'shop-popup-'+mode+'.png'
   paths.close=root+'launch/direction/v9/A/end-card.png'
   await Promise.all(Object.entries(paths).map(async([id,url])=>images[id]=await image(url)))
+  images.menuTile=inkTile([281,127,54,55])
+  images.searchTile=inkTile([358,125,56,57])
   await document.fonts.load('600 54px InterTight')
+}
+function inkTile(crop){
+  const [, , width,height]=crop
+  const tile=new OffscreenCanvas(width,height)
+  const ctx=tile.getContext('2d')
+  ctx.drawImage(images.meridiano,...crop,0,0,width,height)
+  const pixels=ctx.getImageData(0,0,width,height)
+  for(let i=0;i<pixels.data.length;i+=4){
+    const coverage=1-pixels.data[i]/255
+    for(let channel=0;channel<3;channel++){
+      const background=channel===2?25:23
+      pixels.data[i+channel]=lerp(background,255,coverage)
+    }
+  }
+  ctx.putImageData(pixels,0,0)
+  return tile
 }
 async function movie(id,time){
   const n=Math.min(lengths[id],Math.max(1,1+Math.floor(time*15))),key=id+n
@@ -42,11 +60,14 @@ function shell(id){g.drawImage(images['shell-'+id],0,0);return box(id)}
 function inside(b,fn){
   g.save();g.beginPath();g.roundRect(b.x,b.y,b.w,b.h,[0,0,15,15]);g.clip();fn();g.restore()
 }
-function content(im,b,x,y,w){
+function content(im,b,x,y,w,grayscale=false){
   w=Math.min(w,im.width,im.height*b.w/b.h)
   const z=b.w/w,h=b.h/z
   x=Math.max(0,Math.min(x,im.width-w));y=Math.max(0,Math.min(y,im.height-h))
-  inside(b,()=>g.drawImage(im,x,y,w,h,b.x,b.y,b.w,b.h))
+  inside(b,()=>{
+    if(grayscale)g.filter='grayscale(1)'
+    g.drawImage(im,x,y,w,h,b.x,b.y,b.w,b.h)
+  })
   return rect=>[b.x+(rect[0]-x)*z,b.y+(rect[1]-y)*z,rect[2]*z,rect[3]*z]
 }
 function focus([x,y,w,h],r=7){
@@ -119,7 +140,7 @@ async function shopProof(name,t,label,outcomeAt,mark){
   const w=pass?lerp(837,745,p):864
   const left=pass?lerp(201,168,p):199
   const cropY=sy+lerp(-60,pass?63:4,p)
-  const fit=content(im,b,left,cropY,w)
+  const fit=content(im,b,left,cropY,w,true)
   const evidence=[lerp(536,target[0],p),sy+lerp(0,target[1],p)-2,lerp(58,target[2],p),lerp(30,target[3],p)+3]
   inside(b,()=>focus(fit(evidence)))
   const outcome=t>=outcomeAt
@@ -128,7 +149,7 @@ async function shopProof(name,t,label,outcomeAt,mark){
 async function mouseShot(cart,t){
   const b=shell('shop'),time=cart?7.84+t*.5:.08+t*.74
   const im=await movie('mouseControl',time)
-  content(im,b,...(cart?[405,244,500]:[200,392,650]))
+  content(im,b,...(cart?[405,244,500]:[200,392,650]),true)
   footer(b,cart?'Field Headphones is in the cart.':time>.88?'Mouse passed':'Click Add to cart.','Kane replay',cart?null:time>.88?true:null)
 }
 function shopRule(t){
@@ -182,28 +203,69 @@ function readerShot(id,t){
   footer(b,named?'Previous slide':'Button','Munich Airport  /  screen reader')
 }
 function contrastShot(t){
-  const b=shell('contrast'),p=ease(t,2.85,.8),z=ease(t,0,2.3)
-  const w=lerp(4600,1970,z),x=lerp(320,1905,z)
-  content(images['contrast-off'],b,x,3,w)
-  g.save();g.globalAlpha=p;content(images['contrast-on'],b,x,3,w);g.restore()
-  footer(b,'Text contrast',p<.99?'4.39:1':'4.50:1')
+  const b=shell('contrast')
+  const approach=ease(t,0,2.7),detail=ease(t,2.6,3.8),repair=ease(t,2.95,2.95)
+  const w=4600-2280*approach-940*detail
+  const x=lerp(320,2852-w*.41,approach)
+  const fit=content(images['contrast-off'],b,x,3,w)
+  g.save();g.globalAlpha=repair;content(images['contrast-on'],b,x,3,w);g.restore()
+  const arrival=ease(t,1.25,.55)
+  if(arrival>0){
+    const [lx,ly,lw,lh]=fit([2718,95,268,105])
+    const cx=lx+lw+26,cy=ly+lh/2-33+(1-arrival)*10
+    inside(b,()=>{
+      g.globalAlpha=arrival
+      rounded(cx-22,cy+32,25,2,0,'white')
+      rounded(cx,cy,179,65,14,'white','#c8c8ca')
+      text((lerp(4.386958,4.501341,repair)).toFixed(2)+':1',cx+17,cy+46,42,610)
+    })
+  }
+  footer(b,'Text contrast','ExtremeTerrain')
 }
 function jevShot(id,t){
-  const b=shell('jev'),demo=id==='devNames',done=id==='accuracy'
-  const start=demo?3.0:2.55
-  const first=done?1:id==='newsite'?0:ease(t,start,.30),second=done?1:id==='newsite'?0:ease(t,start+(demo?2.28:1.16),.30)
-  const data=[{rect:[281,127,54,55],row:1128,amount:first},{rect:[358,125,56,57],row:1272,amount:second}]
+  const b=shell('jev'),demo=id==='devNames'
+  const at=demo?t:t+({newsite:0,jev:104/30,accuracy:311/30})[id]
+  const reveal=ease(at,1.75,.74),menuAt=demo?3.38:6.32,searchAt=demo?5.88:8.23
+  const menu=ease(at,menuAt,.45),search=ease(at,searchAt,.45)
+  const travel=ease(at,searchAt-.85,.67)
+  const reviewAt=demo?9.48:9.86
+  const settle=ease(at,reviewAt+1,3.1)
+  if(reveal<1){
+    const approach=ease(at,0,2.5),w=lerp(2650,1590,approach)
+    content(images['jev-off'],b,lerp(65,125,approach),1270-w*b.h/b.w*.47,w)
+  }
   inside(b,()=>{
-    text('Reading view',b.x+109,b.y+119,37,585)
-    for(const [i,item] of data.entries()){
-      const y=b.y+186+i*178
-      g.drawImage(images.meridiano,...item.rect,b.x+111,y,111,110)
-      const x=b.x+265,w=915,h=112
-      g.drawImage(images['jev-off'],190,item.row,1177,144,x,y,w,h)
-      g.save();g.globalAlpha=item.amount;g.drawImage(images['jev-on'],190,item.row,1177,144,x,y,w,h);g.restore()
+    if(reveal===0)return
+    g.beginPath();g.rect(b.x,b.y,b.w,b.h*reveal);g.clip()
+    g.fillStyle='white';g.fillRect(b.x,b.y,b.w,b.h)
+    const push=1+.17*ease(at,2,searchAt+1)-.13*settle
+    g.translate(b.x+168,b.y+270+travel*86)
+    g.scale(push,push)
+    g.translate(-168,-270-travel*86)
+    text('Reading view',109,119,37,585)
+    const rows=[[images.menuTile,1128,menu],[images.searchTile,1272,search]]
+    for(const [i,[tile,row,name]] of rows.entries()){
+      const y=181+i*177
+      rounded(110,y,114,114,15,ink)
+      g.drawImage(tile,122,y+12,90,90)
+      g.save()
+      const named=name>.5
+      g.globalAlpha=Math.abs(1-2*name)
+      g.drawImage(images[named?'jev-on':'jev-off'],190,row,1177,144,265,y+(named?(1-name)*9:0),915,112)
+      g.restore()
+    }
+    const ringAlpha=ease(at,2.4,.52)*(1-ease(at,reviewAt+.1,1.05))
+    if(ringAlpha>0){
+      g.globalAlpha=reveal*ringAlpha
+      focus([103,174+travel*177,128,128],19)
     }
   })
-  footer(b,id==='newsite'?'A page without a saved fix':'TypeSafe Jev',done||demo&&t>9.9?'13 of 15 names correct':'Meridiano')
+  if(at>=reviewAt){
+    const rise=ease(at,reviewAt,.46)
+    const x=b.x+270,y=b.y+b.h-52+(1-rise)*12
+    g.save();g.globalAlpha=rise;text('13 of 15 names correct',x,y,35,580);g.restore()
+  }
+  footer(b,id==='newsite'?'A page without a saved fix':'TypeSafe Jev','Meridiano')
 }
 function examples(t){
   if(t<.98){const b=shell('mass');massBackground(b);footer(b,'A menu the keyboard cannot open.')}
@@ -336,7 +398,8 @@ async function paint(id,t,duration){
   g.setTransform(1,0,0,1,0,0);g.fillStyle='white';g.fillRect(0,0,1920,1080)
   g.save()
   const amount=['end','signoff'].includes(id)?.004:id==='opened'||id==='skip'?.006:.016
-  const zoom=1+amount*ease(t,0,duration)
+  const continuous=['newsite','jev','accuracy'].includes(id)
+  const zoom=continuous?1:1+amount*ease(t,0,duration)
   g.translate(960,540);g.scale(zoom,zoom);g.translate(-960,-540)
   try{
     if(id.startsWith('dev'))return await developer(id,t)
