@@ -16,9 +16,11 @@ Compare [Mass.edu before](hard-v4/kane/v4-86f207deeb57-7bc09a21/before/recording
 | Report to repair | ColorHexa’s color picker became keyboard-reachable in the reporting tab | [Live report recording and Kane sessions](live/README.md) · [Site-owner report](../evidence/report-d6870c43f8831c2d3b/report.md) |
 | Local harness | Three fixture tasks recorded fail, pass with the rule, and pass after a native fix | [Fixture evidence](local.json) · [Replay instructions](methodology/README.md#local-demo) |
 
+<a name="recipe-parity-and-demo-studies"></a>
+
 ## Experimental
 
-- **Cost.** The CLI reports estimated tokens and Kane balance changes. The model ladder and the large model alone each fixed 0/17 judged tasks. Reordering the prompt prefix produced no measurable product-cache benefit. Shared mouse controls can reuse a same-URL recording, but the archive has no equivalent-objective receipt demonstrating savings. [Cost study](cost/README.md)
+- **Cost.** The cost meter is CLI-only. Run `curbcut cost` for estimated tokens and recorded Kane balance changes. The model ladder and the large model alone each fixed 0/17 judged tasks. Reordering the prompt prefix produced no measurable product-cache benefit. Shared mouse controls can reuse a same-URL recording, but the archive has no equivalent-objective receipt demonstrating savings. [Cost study](cost/README.md)
 - **Family scan.** One mdBook template repaired two of five documentation URLs locally. Both repaired pages were on doc.rust-lang.org. Kane confirmed zero of the two. [Family results](family/README.md)
 - **Match mouse.** The experimental command compares DOM controls. It matched one of 22 held-out menus locally, with zero of one confirmed by Kane. The separate Jev screenshot classifier missed its precision threshold and was dropped. [DOM trial](mirror-dom/README.md) · [Classifier backtest](jev/mirror-backtest/README.md)
 - **Census.** The study estimates the reach of recipe patterns on observed pages and measures recall on positive examples. [Sample and calibration](census/README.md)
@@ -65,6 +67,8 @@ The v7 draw registered 14 naming tasks and one document-language task from 100 n
 The [Kane session ledger](kane/ledger.json) indexes archived sessions across cohorts. The [Kane evidence guide](kane/README.md) describes the recording, result JSON and sealed pack in each phase directory.
 
 </details>
+
+<a name="typesafe-jev-experiments"></a>
 
 <details>
 <summary>TypeSafe Jev naming, instant repair and archive studies</summary>

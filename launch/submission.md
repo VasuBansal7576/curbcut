@@ -1,6 +1,6 @@
 # Curb Cut
 
-A mouse opens ColorHexa’s color picker. A keyboard skips right over it. Curb Cut repaired the swatch in the original Chrome tab. At 146 seconds, the person who reported it could open it with Enter.
+A mouse opens ColorHexa’s color picker. A keyboard skips right over it. Curb Cut repaired the swatch in the original Chrome tab. In the recorded replay, Enter opened the picker at 146 seconds.
 
 [Try the Chrome extension](https://vasubansal7576.github.io/curbcut/assets/curbcut-extension.zip) · [Install steps and interactive demo](https://vasubansal7576.github.io/curbcut/)
 
