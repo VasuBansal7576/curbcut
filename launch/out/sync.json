@@ -1,865 +1,198 @@
 {
   "fps": 30,
-  "limit_seconds": 0.2,
-  "mean_luma_threshold": 3.0,
-  "method": "Consecutive encoded frames straddling the edit, checked for mean absolute luma change in the picture. The opening frame is compared with black. Offset is measured against the Kokoro word onset; an opening cut can lead its word.",
-  "master": {
-    "sha256": "538e847604da4311b1dec3068414be969e8c17d699df07f0691c1e84418bb3f0",
-    "frames": 2265,
-    "beats": 39,
-    "passed": 39,
-    "worst_offset_seconds": 0.1673,
-    "measurements": [
-      {
-        "scene": "cold",
-        "word": "Press",
-        "event": "key",
-        "word_start": 0.1176,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 0,
-        "offset_seconds": -0.1176,
-        "frame_time": 0.0,
-        "mean_luma_difference": 121.865,
-        "passed": true
-      },
-      {
-        "scene": "cold",
-        "word": "Tab",
-        "event": "key-hit",
-        "word_start": 0.3926,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 12,
-        "offset_seconds": 0.0074,
-        "frame_time": 0.4,
-        "mean_luma_difference": 75.707,
-        "passed": true
-      },
-      {
-        "scene": "cold",
-        "word": "menu",
-        "event": "closed",
-        "word_start": 1.0426,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 32,
-        "offset_seconds": 0.024067,
-        "frame_time": 1.066667,
-        "mean_luma_difference": 115.211,
-        "passed": true
-      },
-      {
-        "scene": "menu",
-        "word": "Turn",
-        "event": "switch-off",
-        "word_start": 3.1247,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 90,
-        "offset_seconds": -0.1247,
-        "frame_time": 3.0,
-        "mean_luma_difference": 139.332,
-        "passed": true
-      },
-      {
-        "scene": "menu",
-        "word": "Curb",
-        "event": "switch-on",
-        "word_start": 3.5997,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 108,
-        "offset_seconds": 0.0003,
-        "frame_time": 3.6,
-        "mean_luma_difference": 17.798,
-        "passed": true
-      },
-      {
-        "scene": "menu",
-        "word": "Same",
-        "event": "same-key",
-        "word_start": 5.1883,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 156,
-        "offset_seconds": 0.0117,
-        "frame_time": 5.2,
-        "mean_luma_difference": 110.27,
-        "passed": true
-      },
-      {
-        "scene": "menu",
-        "word": "opens",
-        "event": "opened",
-        "word_start": 6.7883,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 204,
-        "offset_seconds": 0.0117,
-        "frame_time": 6.8,
-        "mean_luma_difference": 93.005,
-        "passed": true
-      },
-      {
-        "scene": "problem",
-        "word": "For",
-        "event": "millions",
-        "word_start": 8.6423,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 255,
-        "offset_seconds": -0.1423,
-        "frame_time": 8.5,
-        "mean_luma_difference": 61.556,
-        "passed": true
-      },
-      {
-        "scene": "problem",
-        "word": "Menus",
-        "event": "mouse",
-        "word_start": 11.0173,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 331,
-        "offset_seconds": 0.016033,
-        "frame_time": 11.033333,
-        "mean_luma_difference": 25.179,
-        "passed": true
-      },
-      {
-        "scene": "problem",
-        "word": "Buttons",
-        "event": "anonymous",
-        "word_start": 13.1673,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 396,
-        "offset_seconds": 0.0327,
-        "frame_time": 13.2,
-        "mean_luma_difference": 31.069,
-        "passed": true
-      },
-      {
-        "scene": "problem",
-        "word": "Text",
-        "event": "faint-word",
-        "word_start": 14.6673,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 441,
-        "offset_seconds": 0.0327,
-        "frame_time": 14.7,
-        "mean_luma_difference": 35.204,
-        "passed": true
-      },
-      {
-        "scene": "problem",
-        "word": "95.9",
-        "event": "percent",
-        "word_start": 16.0338,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 482,
-        "offset_seconds": 0.032867,
-        "frame_time": 16.066667,
-        "mean_luma_difference": 18.027,
-        "passed": true
-      },
-      {
-        "scene": "problem",
-        "word": "top",
-        "event": "population",
-        "word_start": 18.0088,
-        "region": [
-          110,
-          820,
-          1540,
-          104
-        ],
-        "first_frame": 541,
-        "offset_seconds": 0.024533,
-        "frame_time": 18.033333,
-        "mean_luma_difference": 33.339,
-        "passed": true
-      },
-      {
-        "scene": "wait",
-        "word": "Websites",
-        "event": "years",
-        "word_start": 22.1362,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 660,
-        "offset_seconds": -0.1362,
-        "frame_time": 22.0,
-        "mean_luma_difference": 46.087,
-        "passed": true
-      },
-      {
-        "scene": "wait",
-        "word": "wait",
-        "event": "cant-wait",
-        "word_start": 25.4612,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 764,
-        "offset_seconds": 0.005467,
-        "frame_time": 25.466667,
-        "mean_luma_difference": 43.766,
-        "passed": true
-      },
-      {
-        "scene": "title",
-        "word": "Curb",
-        "event": "brand",
-        "word_start": 27.621,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 825,
-        "offset_seconds": -0.121,
-        "frame_time": 27.5,
-        "mean_luma_difference": 44.362,
-        "passed": true
-      },
-      {
-        "scene": "title",
-        "word": "now",
-        "event": "now",
-        "word_start": 28.646,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 860,
-        "offset_seconds": 0.020667,
-        "frame_time": 28.666667,
-        "mean_luma_difference": 39.676,
-        "passed": true
-      },
-      {
-        "scene": "names",
-        "word": "A",
-        "event": "reader-off",
-        "word_start": 31.621,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 945,
-        "offset_seconds": -0.121,
-        "frame_time": 31.5,
-        "mean_luma_difference": 137.952,
-        "passed": true
-      },
-      {
-        "scene": "names",
-        "word": "previous",
-        "event": "reader-on",
-        "word_start": 34.721,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1042,
-        "offset_seconds": 0.012333,
-        "frame_time": 34.733333,
-        "mean_luma_difference": 13.181,
-        "passed": true
-      },
-      {
-        "scene": "contrast",
-        "word": "Faint",
-        "event": "contrast-off",
-        "word_start": 36.6673,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1095,
-        "offset_seconds": -0.1673,
-        "frame_time": 36.5,
-        "mean_luma_difference": 85.409,
-        "passed": true
-      },
-      {
-        "scene": "contrast",
-        "word": "readable",
-        "event": "contrast-on",
-        "word_start": 37.5673,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1128,
-        "offset_seconds": 0.0327,
-        "frame_time": 37.6,
-        "mean_luma_difference": 44.995,
-        "passed": true
-      },
-      {
-        "scene": "proof",
-        "word": "And",
-        "event": "guess",
-        "word_start": 39.642,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1185,
-        "offset_seconds": -0.142,
-        "frame_time": 39.5,
-        "mean_luma_difference": 90.226,
-        "passed": true
-      },
-      {
-        "scene": "proof",
-        "word": "Kane",
-        "event": "kane",
-        "word_start": 41.692,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1251,
-        "offset_seconds": 0.008,
-        "frame_time": 41.7,
-        "mean_luma_difference": 21.18,
-        "passed": true
-      },
-      {
-        "scene": "proof",
-        "word": "tries",
-        "event": "replay",
-        "word_start": 43.267,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1299,
-        "offset_seconds": 0.033,
-        "frame_time": 43.3,
-        "mean_luma_difference": 61.641,
-        "passed": true
-      },
-      {
-        "scene": "proof",
-        "word": "fails",
-        "event": "failed",
-        "word_start": 47.117,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1414,
-        "offset_seconds": 0.016333,
-        "frame_time": 47.133333,
-        "mean_luma_difference": 29.714,
-        "passed": true
-      },
-      {
-        "scene": "proof",
-        "word": "passes",
-        "event": "passed",
-        "word_start": 48.742,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1463,
-        "offset_seconds": 0.024667,
-        "frame_time": 48.766667,
-        "mean_luma_difference": 115.875,
-        "passed": true
-      },
-      {
-        "scene": "proof",
-        "word": "recording",
-        "event": "record",
-        "word_start": 49.767,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1494,
-        "offset_seconds": 0.033,
-        "frame_time": 49.8,
-        "mean_luma_difference": 108.032,
-        "passed": true
-      },
-      {
-        "scene": "scale",
-        "word": "105",
-        "event": "inventory",
-        "word_start": 52.1196,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1560,
-        "offset_seconds": -0.1196,
-        "frame_time": 52.0,
-        "mean_luma_difference": 72.022,
-        "passed": true
-      },
-      {
-        "scene": "scale",
-        "word": "proof",
-        "event": "popup-proof",
-        "word_start": 55.6446,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1670,
-        "offset_seconds": 0.022067,
-        "frame_time": 55.666667,
-        "mean_luma_difference": 28.319,
-        "passed": true
-      },
-      {
-        "scene": "jev",
-        "word": "On",
-        "event": "jev-off",
-        "word_start": 57.0997,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1710,
-        "offset_seconds": -0.0997,
-        "frame_time": 57.0,
-        "mean_luma_difference": 25.778,
-        "passed": true
-      },
-      {
-        "scene": "jev",
-        "word": "Jev",
-        "event": "jev",
-        "word_start": 58.7747,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1764,
-        "offset_seconds": 0.0253,
-        "frame_time": 58.8,
-        "mean_luma_difference": 16.93,
-        "passed": true
-      },
-      {
-        "scene": "jev",
-        "word": "second",
-        "event": "jev-on",
-        "word_start": 60.8747,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1827,
-        "offset_seconds": 0.0253,
-        "frame_time": 60.9,
-        "mean_luma_difference": 17.144,
-        "passed": true
-      },
-      {
-        "scene": "jev",
-        "word": "quiet",
-        "event": "quiet",
-        "word_start": 63.1497,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1895,
-        "offset_seconds": 0.016967,
-        "frame_time": 63.166667,
-        "mean_luma_difference": 144.822,
-        "passed": true
-      },
-      {
-        "scene": "owner",
-        "word": "Then",
-        "event": "paper",
-        "word_start": 64.6136,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1935,
-        "offset_seconds": -0.1136,
-        "frame_time": 64.5,
-        "mean_luma_difference": 14.935,
-        "passed": true
-      },
-      {
-        "scene": "owner",
-        "word": "owner",
-        "event": "report",
-        "word_start": 65.8386,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 1976,
-        "offset_seconds": 0.028067,
-        "frame_time": 65.866667,
-        "mean_luma_difference": 150.326,
-        "passed": true
-      },
-      {
-        "scene": "owner",
-        "word": "nobody",
-        "event": "retire",
-        "word_start": 67.2136,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 2017,
-        "offset_seconds": 0.019733,
-        "frame_time": 67.233333,
-        "mean_luma_difference": 137.932,
-        "passed": true
-      },
-      {
-        "scene": "close",
-        "word": "Curb",
-        "event": "end",
-        "word_start": 69.121,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 2070,
-        "offset_seconds": -0.121,
-        "frame_time": 69.0,
-        "mean_luma_difference": 34.459,
-        "passed": true
-      },
-      {
-        "scene": "close",
-        "word": "people",
-        "event": "end-line",
-        "word_start": 70.871,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 2127,
-        "offset_seconds": 0.029,
-        "frame_time": 70.9,
-        "mean_luma_difference": 36.333,
-        "passed": true
-      },
-      {
-        "scene": "close",
-        "word": "Get",
-        "event": "sign",
-        "word_start": 72.074,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 2163,
-        "offset_seconds": 0.026,
-        "frame_time": 72.1,
-        "mean_luma_difference": 38.507,
-        "passed": true
-      }
-    ]
-  },
-  "teaser": {
-    "sha256": "2e3ceddb93667d5b3eb635eb288089fc43b822c9c5598127094ebc04c258b353",
-    "frames": 450,
-    "beats": 10,
-    "passed": 10,
-    "worst_offset_seconds": 0.171,
-    "measurements": [
-      {
-        "scene": "teaser-cold",
-        "word": "Press",
-        "event": "key",
-        "word_start": 0.1176,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 0,
-        "offset_seconds": -0.1176,
-        "frame_time": 0.0,
-        "mean_luma_difference": 121.867,
-        "passed": true
-      },
-      {
-        "scene": "teaser-cold",
-        "word": "Tab",
-        "event": "key-hit",
-        "word_start": 0.3926,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 12,
-        "offset_seconds": 0.0074,
-        "frame_time": 0.4,
-        "mean_luma_difference": 75.706,
-        "passed": true
-      },
-      {
-        "scene": "teaser-cold",
-        "word": "menu",
-        "event": "closed",
-        "word_start": 1.0426,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 32,
-        "offset_seconds": 0.024067,
-        "frame_time": 1.066667,
-        "mean_luma_difference": 115.217,
-        "passed": true
-      },
-      {
-        "scene": "teaser-title",
-        "word": "Curb",
-        "event": "switch-off",
-        "word_start": 3.287667,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 95,
-        "offset_seconds": -0.121,
-        "frame_time": 3.166667,
-        "mean_luma_difference": 139.344,
-        "passed": true
-      },
-      {
-        "scene": "teaser-title",
-        "word": "now",
-        "event": "switch-on",
-        "word_start": 4.312667,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 130,
-        "offset_seconds": 0.020666,
-        "frame_time": 4.333333,
-        "mean_luma_difference": 17.892,
-        "passed": true
-      },
-      {
-        "scene": "teaser-menu",
-        "word": "Same",
-        "event": "same-key",
-        "word_start": 6.737667,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 197,
-        "offset_seconds": -0.171,
-        "frame_time": 6.566667,
-        "mean_luma_difference": 110.287,
-        "passed": true
-      },
-      {
-        "scene": "teaser-menu",
-        "word": "opens",
-        "event": "opened",
-        "word_start": 8.337667,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 251,
-        "offset_seconds": 0.029,
-        "frame_time": 8.366667,
-        "mean_luma_difference": 92.987,
-        "passed": true
-      },
-      {
-        "scene": "teaser-close",
-        "word": "Curb",
-        "event": "end",
-        "word_start": 10.087667,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 299,
-        "offset_seconds": -0.121,
-        "frame_time": 9.966667,
-        "mean_luma_difference": 77.528,
-        "passed": true
-      },
-      {
-        "scene": "teaser-close",
-        "word": "people",
-        "event": "end-line",
-        "word_start": 11.837667,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 356,
-        "offset_seconds": 0.029,
-        "frame_time": 11.866667,
-        "mean_luma_difference": 36.334,
-        "passed": true
-      },
-      {
-        "scene": "teaser-close",
-        "word": "Get",
-        "event": "sign",
-        "word_start": 13.040667,
-        "region": [
-          96,
-          120,
-          1728,
-          804
-        ],
-        "first_frame": 392,
-        "offset_seconds": 0.026,
-        "frame_time": 13.066667,
-        "mean_luma_difference": 38.516,
-        "passed": true
-      }
-    ]
-  },
-  "summary": {
-    "beats": 49,
-    "passed": 49,
-    "missed": 0,
-    "worst_offset_seconds": 0.171,
-    "worst_scene": "teaser-menu",
-    "worst_word": "Same"
-  }
+  "musicBPM": 120,
+  "launch": [
+    {
+      "picture": "Full page",
+      "frame": 0,
+      "seconds": 0.0,
+      "anchor": "music",
+      "offsetSeconds": 0
+    },
+    {
+      "picture": "Closed About",
+      "frame": 12,
+      "seconds": 0.4,
+      "anchor": "Tab",
+      "offsetSeconds": 0.0074
+    },
+    {
+      "picture": "Extension",
+      "frame": 90,
+      "seconds": 3.0,
+      "anchor": "music",
+      "offsetSeconds": 0
+    },
+    {
+      "picture": "Open About",
+      "frame": 150,
+      "seconds": 5.0,
+      "anchor": "music",
+      "offsetSeconds": 0
+    },
+    {
+      "picture": "Physical key",
+      "frame": 255,
+      "seconds": 8.5,
+      "anchor": "music",
+      "offsetSeconds": 0
+    },
+    {
+      "picture": "Mouse menu",
+      "frame": 330,
+      "seconds": 11.0,
+      "anchor": "music",
+      "offsetSeconds": 0
+    },
+    {
+      "picture": "Unnamed button",
+      "frame": 395,
+      "seconds": 13.1667,
+      "anchor": "Buttons",
+      "offsetSeconds": -0.0003
+    },
+    {
+      "picture": "Faint link",
+      "frame": 440,
+      "seconds": 14.6667,
+      "anchor": "Text",
+      "offsetSeconds": -0.0003
+    },
+    {
+      "picture": "95.9%",
+      "frame": 480,
+      "seconds": 16.0,
+      "anchor": "music",
+      "offsetSeconds": 0
+    },
+    {
+      "picture": "Keyboard focus",
+      "frame": 660,
+      "seconds": 22.0,
+      "anchor": "music",
+      "offsetSeconds": 0
+    },
+    {
+      "picture": "Apply fixes",
+      "frame": 825,
+      "seconds": 27.5,
+      "anchor": "music",
+      "offsetSeconds": 0
+    },
+    {
+      "picture": "Previous slide",
+      "frame": 945,
+      "seconds": 31.5,
+      "anchor": "music",
+      "offsetSeconds": 0
+    },
+    {
+      "picture": "Contrast",
+      "frame": 1095,
+      "seconds": 36.5,
+      "anchor": "music",
+      "offsetSeconds": 0
+    },
+    {
+      "picture": "Kane recording",
+      "frame": 1185,
+      "seconds": 39.5,
+      "anchor": "music",
+      "offsetSeconds": 0
+    },
+    {
+      "picture": "With the fix",
+      "frame": 1440,
+      "seconds": 48.0,
+      "anchor": "music",
+      "offsetSeconds": 0
+    },
+    {
+      "picture": "Both recordings",
+      "frame": 1500,
+      "seconds": 50.0,
+      "anchor": "music",
+      "offsetSeconds": 0
+    },
+    {
+      "picture": "105 fixes",
+      "frame": 1560,
+      "seconds": 52.0,
+      "anchor": "music",
+      "offsetSeconds": 0
+    },
+    {
+      "picture": "Meridiano",
+      "frame": 1710,
+      "seconds": 57.0,
+      "anchor": "music",
+      "offsetSeconds": 0
+    },
+    {
+      "picture": "Source change",
+      "frame": 1935,
+      "seconds": 64.5,
+      "anchor": "music",
+      "offsetSeconds": 0
+    },
+    {
+      "picture": "Chrome invitation",
+      "frame": 2070,
+      "seconds": 69.0,
+      "anchor": "music",
+      "offsetSeconds": 0
+    }
+  ],
+  "developerChapter": [
+    {
+      "scene": "task",
+      "seconds": 75.5,
+      "anchor": "music"
+    },
+    {
+      "scene": "before",
+      "seconds": 87.0,
+      "anchor": "music"
+    },
+    {
+      "scene": "patch",
+      "seconds": 98.0,
+      "anchor": "music"
+    },
+    {
+      "scene": "gateFail",
+      "seconds": 111.0,
+      "anchor": "music"
+    },
+    {
+      "scene": "gatePass",
+      "seconds": 123.5,
+      "anchor": "music"
+    },
+    {
+      "scene": "trust",
+      "seconds": 134.0,
+      "anchor": "music"
+    },
+    {
+      "scene": "names",
+      "seconds": 147.0,
+      "anchor": "music"
+    },
+    {
+      "scene": "report",
+      "seconds": 162.0,
+      "anchor": "music"
+    },
+    {
+      "scene": "retire",
+      "seconds": 172.5,
+      "anchor": "music"
+    },
+    {
+      "scene": "end",
+      "seconds": 185.0,
+      "anchor": "music"
+    }
+  ]
 }
