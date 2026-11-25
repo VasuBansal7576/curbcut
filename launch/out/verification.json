@@ -1,26 +1,40 @@
 {
   "video": "H.264, 1920 \u00d7 1080, 30 fps constant",
   "audio": "48 kHz stereo AAC",
-  "captionTracks": "Embedded English captions compared cue-for-cue with WebVTT.",
-  "sampling": "Every fifteenth decoded picture from frame zero, visually reviewed at two samples per second.",
-  "originalMasterSha256": "781bf698525693c7a43bc9c3e61ddda9089033ceb7a9d3c8ac5ddfe6d2ea4f97",
+  "captionTracks": "Embedded English cues match the WebVTT sidecars.",
+  "sampling": "Visually reviewed every fifteenth decoded frame, starting at frame zero.",
+  "originalMasterCommit": "94189fb",
+  "originalMasterSha256": "e20de029c8aa0eb015aeb274d98840171c612d656e5018f5cd14ca9885ef2a81",
+  "openSeaMap": {
+    "reportStartSeconds": 99.1,
+    "sessions": [
+      "700b66b7",
+      "7168aa29",
+      "006b53ce"
+    ],
+    "publishedAt": "2026-11-25T06:49:55.659Z",
+    "activeFixes": 106,
+    "kaneVerified": 62,
+    "localProof": 44
+  },
+  "preservedDeveloperVideoFrames": 3150,
   "master": {
-    "seconds": 75.5,
-    "frames": 2265,
+    "seconds": 142.933333,
+    "frames": 4288,
     "size": [
       1920,
       1080
     ],
     "fps": 30,
-    "captions": 25,
+    "captions": 58,
     "embeddedMatchesWebVTT": true,
-    "fileBytes": 29459333,
-    "integratedLUFS": -16.08,
-    "truePeakDBTP": -1.6,
-    "reviewFramesAt2fps": 151,
-    "sha256": "9fb061c900815818ff758e9ffa494195223bcf8dd6348c16091e72c7ebeb18d1",
+    "fileBytes": 64249738,
+    "integratedLUFS": -16.07,
+    "truePeakDBTP": -1.59,
+    "reviewFramesAt2fps": 286,
+    "sha256": "29edebc4654152b8c30173887a5955ecff1876cfe5bd5a8da3b6494e60122ca4",
     "pictureMatchesDemoPrefix": true,
-    "originalAudioPacketsMatch": true
+    "soundtrackMatchesDelivery": true
   },
   "teaser": {
     "seconds": 15.0,
@@ -30,29 +44,29 @@
       1080
     ],
     "fps": 30,
-    "captions": 5,
+    "captions": 6,
     "embeddedMatchesWebVTT": true,
-    "fileBytes": 7467522,
-    "integratedLUFS": -16.5,
-    "truePeakDBTP": -1.6,
+    "fileBytes": 10737318,
+    "integratedLUFS": -16.23,
+    "truePeakDBTP": -2.43,
     "reviewFramesAt2fps": 30,
-    "sha256": "75f2d94d962b6ee00c347c4e0024a5054a0d75c02262711726c781217236b342",
+    "sha256": "4cf9a1a10193a15de46d0a5b3db17dbaee0fe9cf83d26eb9a6d52c69cf765279",
     "pictureMatchesLaunchSelections": true
   },
   "demo": {
-    "seconds": 191.0,
-    "frames": 5730,
+    "seconds": 268.6,
+    "frames": 8058,
     "size": [
       1920,
       1080
     ],
     "fps": 30,
-    "captions": 64,
+    "captions": 101,
     "embeddedMatchesWebVTT": true,
-    "fileBytes": 56559287,
-    "integratedLUFS": -16.01,
-    "truePeakDBTP": -1.5,
-    "reviewFramesAt2fps": 382,
-    "sha256": "345d51bff4ffe7171c265eace54386e546195060f2c236e1ef86d28149a747f2"
+    "fileBytes": 100171612,
+    "integratedLUFS": -16.06,
+    "truePeakDBTP": -1.49,
+    "reviewFramesAt2fps": 538,
+    "sha256": "7b9464639708d0759020ac1e8eb502c92796b04186419181b6f9f18f5a1a1015"
   }
 }

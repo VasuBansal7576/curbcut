@@ -1,38 +1,26 @@
 # Curb Cut launch film
 
-[Watch the launch](curbcut-launch.mp4) · [Watch the 15-second teaser](curbcut-launch-15s.mp4) · [Watch the 3:11 demo](curbcut-demo.mp4) · [Thumbnail](curbcut-launch-thumbnail.png)
+[Watch the 2:23 launch](curbcut-launch.mp4) · [Watch the 15-second teaser](curbcut-launch-15s.mp4) · [Watch the 4:29 demo](curbcut-demo.mp4) · [Thumbnail](curbcut-launch-thumbnail.png)
 
-Press Tab on Mass.edu and watch the orange ring. About stays closed. Turn on Curb Cut and repeat the task. Focus moves to The DHE inside the open menu. The launch follows that repair with a screen-reader name, a contrast change, two Kane recordings, Jev naming buttons and a source change for the site owner.
+A shopper presses Tab and skips Add to cart. Kane repeats the purchase with a keyboard, with a mouse and with the fix. At 1:39 the launch follows an OpenSeaMap report from the keyboard shortcut to the published repair. Eight Tabs now reach View and reveal Sea Marks. The later evidence recheck and publication are identified in the cut. [Shot list and recording sources](shots.md) · [OpenSeaMap proof](../proof/report-to-fix/README.md)
 
-The demo opens with the complete launch. At 1:15.5 it follows a developer using curbcut check and a Claude Code Stop hook, then shows a visitor opening the evidence, reporting a barrier and a site repair allowing the extension’s fix to retire. [Shot list and recording sources](shots.md) · [Launch captions](captions/launch.vtt) · [Teaser captions](captions/teaser.vtt) · [Demo captions](captions/demo.vtt)
+The demo’s developer chapter starts at 2:22.933. It shows curbcut check, a Claude Code Stop hook, the trust popup, a report entering the queue and a patch retiring when the site works on its own. [Launch captions](captions/launch.vtt) · [Teaser captions](captions/teaser.vtt) · [Demo captions](captions/demo.vtt)
 
-## Picture and sound
+The bundle contains 106 active fixes. Kane verified 62 and 44 have local proof. Jev’s separate review found 13 of 15 names correct. [Bundled inventory](../extension/bundled.json) · [Jev evidence](../proof/jev/) · [WebAIM Million](https://webaim.org/projects/million/)
 
-The colour system uses Mist lilac, Damson, Signal orange and Slate plum. The physical Tab key shares its cap, spring and base with the landing page. Inter Tight carries the film typography and JetBrains Mono identifies sources. The original launch narration and 120 BPM score also supply the teaser. The developer chapter uses the same Kokoro voice and a new mix of the original score. [Benchmark study](direction/v8/benchmark.md) · [Colour and type sheet](direction/v8/palette-type.png) · [Music source](scripts/score.py)
+## Rebuild
 
-The 95.9% figure describes home pages with detectable accessibility failures. The launch film describes the 105-fix inventory at recording time, including 61 Kane-verified and 44 with local proof. The current bundle has 106 fixes, including 62 Kane-verified and 44 with local proof. The Meridiano recording demonstrates two specific names. The separate review assessed fifteen names. [WebAIM Million](https://webaim.org/projects/million/) · [Bundled inventory](../extension/bundled.json) · [Jev evidence](../proof/jev/)
-
-## Rebuild from the recorded soundtracks
-
-Use FFmpeg, Python with NumPy and Pillow, Node and the repository’s Playwright Chromium. The renderer starts headless Chromium with a separate temporary profile. Run from the repository root.
+Use Node, the repository’s Playwright Chromium, FFmpeg, Python with NumPy, Pillow, scipy, soundfile, kokoro-onnx and onnxruntime. Set FILM_MODELS to the directory containing the Kokoro v1.0 kokoro.onnx and voices.bin files. Run from the repository root. The picture stage uses headless Chromium and creates a fresh temporary profile.
 
 ```sh
 npm ci
 npx playwright install chromium
 export FILM_CACHE="$(mktemp -d)"
 python3 launch/film/v8/prepare.py
-node launch/film/v8/render.cjs
-python3 launch/film/v8/finish.py --mux-only
+python3 launch/film/v8/release/plates.py
+python3 launch/film/v8/release/record.py
+node launch/film/v8/release/render.cjs
+python3 launch/film/v8/release/finish.py
 ```
 
-To regenerate the developer voice, put the Kokoro v1.0 ONNX model and voices in FILM_MODELS as kokoro.onnx and voices.bin. Install kokoro-onnx, onnxruntime, soundfile and scipy in the Python environment. Use whisper.cpp’s English base model to time the new captions.
-
-```sh
-python3 launch/film/v8/audio.py
-ffmpeg -y -i "$FILM_CACHE/chapter.wav" -ar 16000 -ac 1 "$FILM_CACHE/align.wav"
-whisper-cli -m "$WHISPER_MODEL" -f "$FILM_CACHE/align.wav" -ojf -of "$FILM_CACHE/demo-words" -ml 1 -sow
-node launch/film/v8/render.cjs
-python3 launch/film/v8/finish.py
-```
-
-[Output measurements](out/demo-verification.json) · [Launch half-second contact sheet](out/contact.png) · [Demo overview](out/demo-contact.png)
+The first 99.1 seconds and the closing voice use the original recording from `94189fb`. The insert uses the same voice, pace and 88 BPM score. The demo incorporates the recorded developer chapter from `66f12285`. [Benchmark study](direction/v8/benchmark.md) · [Palette and type](direction/v8/palette-type.png) · [Output measurements](out/demo-verification.json)
