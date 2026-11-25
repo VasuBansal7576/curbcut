@@ -1,6 +1,43 @@
 export const pages = false
 export const entries = [
   {
+    "id": "sedgewick-reflow",
+    "domain": "algs4.cs.princeton.edu",
+    "task": "At 320 CSS pixels, read the passage beginning “% java Scale mandrill.jpg 200 400”. Verify the complete passage fits within the visible width using vertical scrolling only.",
+    "site": "algs4.cs.princeton.edu",
+    "barrier": "Narrow-screen reflow",
+    "persona": "Low vision",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane/sedgewick-reflow/heldout-v2/before/recording.mp4",
+        "pack": "proof/kane/sedgewick-reflow/heldout-v2/before/48c420c6-fa8d-460c-92c0-01499b1155a8.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane/sedgewick-reflow/heldout-v2/control/recording.mp4",
+        "pack": "proof/kane/sedgewick-reflow/heldout-v2/control/c9536f69-9c68-469f-bb9d-be03928c83a4.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane/sedgewick-reflow/heldout-v2/attempt-1/after/recording.mp4",
+        "pack": "proof/kane/sedgewick-reflow/heldout-v2/attempt-1/after/042200e9-02a4-4b6b-8f45-138fdd54f1cc.evidence"
+      }
+    ]
+  },
+  {
+    "id": "v6-22b764bba720837a5e6e",
+    "domain": "allstarlink.org",
+    "task": "Read the selected passage at WCAG AA contrast.",
+    "measurement": "proof/heldout-v6/measurements/v6-22b764bba720837a5e6e.json",
+    "site": "allstarlink.org",
+    "barrier": "Low contrast text",
+    "persona": "Low contrast sensitivity",
+    "proofType": "Local",
+    "recordings": []
+  },
+  {
     "id": "v5-e35e95e464a0b456fb7a",
     "domain": "armorgames.com",
     "task": "In Reading view, find the “Search Games” textbox and type test without submitting.",
@@ -1089,32 +1126,6 @@ export const entries = [
     "recordings": []
   },
   {
-    "id": "draft-7565c3d5-736d-48b1-b0e2-8c38afd36147",
-    "domain": "map.openseamap.org",
-    "task": "Use Tab to focus the View menu in the map toolbar. Verify the Sea Marks layer checkbox appears while View has focus. Leave the checkbox unchanged.",
-    "site": "map.openseamap.org",
-    "barrier": "Keyboard menu",
-    "persona": "Keyboard only",
-    "proofType": "Kane",
-    "recordings": [
-      {
-        "phase": "before",
-        "file": "proof/kane/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/barrier-report/before/recording.mp4",
-        "pack": "proof/kane/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/barrier-report/before/fccd145e-025e-491a-bbcf-8f4c86a87aca.evidence"
-      },
-      {
-        "phase": "control",
-        "file": "proof/kane/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/barrier-report/control/recording.mp4",
-        "pack": "proof/kane/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/barrier-report/control/94a8863a-cf65-4076-a98a-67d33ba6cb1f.evidence"
-      },
-      {
-        "phase": "after",
-        "file": "proof/kane/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/barrier-report/attempt-1/after/recording.mp4",
-        "pack": "proof/kane/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/barrier-report/attempt-1/after/92c3edec-40c8-463b-8b87-e6464139203e.evidence"
-      }
-    ]
-  },
-  {
     "id": "v5-c22b9bdca86b-71a63d77",
     "domain": "marinespecies.org",
     "task": "Open “Tools” using the keyboard and read “Match taxa”.",
@@ -1163,32 +1174,6 @@ export const entries = [
         "phase": "after",
         "file": "proof/kane/martinfowler-reflow/heldout-v2/attempt-1/after/recording.mp4",
         "pack": "proof/kane/martinfowler-reflow/heldout-v2/attempt-1/after/3bef6ef5-50e0-445d-9726-ff9c627c9f39.evidence"
-      }
-    ]
-  },
-  {
-    "id": "v4-86f207deeb57-7bc09a21",
-    "domain": "www.mass.edu",
-    "task": "Open “About” from keyboard focus or with Arrow Down and follow “The DHE”. Confirm the public destination /about/aboutdhe.asp.",
-    "site": "mass.edu",
-    "barrier": "Keyboard menu",
-    "persona": "Keyboard only",
-    "proofType": "Kane",
-    "recordings": [
-      {
-        "phase": "before",
-        "file": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/before/recording.mp4",
-        "pack": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/before/2849afe4-60bc-40c2-babf-75270db8c7d8.evidence"
-      },
-      {
-        "phase": "control",
-        "file": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/control/recording.mp4",
-        "pack": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/control/3eae0ffe-c163-4bec-a190-ede57e94f437.evidence"
-      },
-      {
-        "phase": "after",
-        "file": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/recording.mp4",
-        "pack": "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/70a47b25-b707-443b-98dd-d8849884cec2.evidence"
       }
     ]
   },

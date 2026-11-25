@@ -10,11 +10,11 @@ At 320 CSS pixels, read the passage beginning “% java Scale mandrill.jpg 200 4
 
 ## Recorded runs
 
-- [before recording](../../proof/kane/sedgewick-reflow/heldout-v2/before/recording.mp4) · [Run result](../../proof/kane/sedgewick-reflow/heldout-v2/before/result.json) · [Kane evidence pack](../../proof/kane/sedgewick-reflow/heldout-v2/before/48c420c6-fa8d-460c-92c0-01499b1155a8.evidence) · Kane session 035de390-b0b6-417d-a112-45ca76f46841 · Kane verdict fail
+- [before recording](../../proof/kane/sedgewick-reflow/heldout-v2/before/recording.mp4) · [Run result](../../proof/kane/sedgewick-reflow/heldout-v2/before/result.json) · [Kane evidence pack](../../proof/kane/sedgewick-reflow/heldout-v2/before/48c420c6-fa8d-460c-92c0-01499b1155a8.evidence) · Kane session 035de390-b0b6-417d-a112-45ca76f46841 · Curb Cut verdict fail
 
-- [control recording](../../proof/kane/sedgewick-reflow/heldout-v2/control/recording.mp4) · [Run result](../../proof/kane/sedgewick-reflow/heldout-v2/control/result.json) · [Kane evidence pack](../../proof/kane/sedgewick-reflow/heldout-v2/control/c9536f69-9c68-469f-bb9d-be03928c83a4.evidence) · Kane session 7b66edf0-0f93-4681-a93b-57ec96d56626 · Kane verdict pass
+- [control recording](../../proof/kane/sedgewick-reflow/heldout-v2/control/recording.mp4) · [Run result](../../proof/kane/sedgewick-reflow/heldout-v2/control/result.json) · [Kane evidence pack](../../proof/kane/sedgewick-reflow/heldout-v2/control/c9536f69-9c68-469f-bb9d-be03928c83a4.evidence) · Kane session 7b66edf0-0f93-4681-a93b-57ec96d56626 · Curb Cut verdict pass
 
-- [after recording](../../proof/kane/sedgewick-reflow/heldout-v2/attempt-1/after/recording.mp4) · [Run result](../../proof/kane/sedgewick-reflow/heldout-v2/attempt-1/after/result.json) · [Kane evidence pack](../../proof/kane/sedgewick-reflow/heldout-v2/attempt-1/after/042200e9-02a4-4b6b-8f45-138fdd54f1cc.evidence) · Kane session 2a86e20d-930b-47c0-a192-0c7836f51718 · Kane verdict pass
+- [after recording](../../proof/kane/sedgewick-reflow/heldout-v2/attempt-1/after/recording.mp4) · [Run result](../../proof/kane/sedgewick-reflow/heldout-v2/attempt-1/after/result.json) · [Kane evidence pack](../../proof/kane/sedgewick-reflow/heldout-v2/attempt-1/after/042200e9-02a4-4b6b-8f45-138fdd54f1cc.evidence) · Kane session 2a86e20d-930b-47c0-a192-0c7836f51718 · Curb Cut verdict pass
 
 [Runtime repair proposal](../../proof/kane/sedgewick-reflow/heldout-v2/attempt-1/candidate.json) · [Repair provenance](../../proof/kane/sedgewick-reflow/heldout-v2/attempt-1/provenance.json) · Failure session 035de390-b0b6-417d-a112-45ca76f46841
 

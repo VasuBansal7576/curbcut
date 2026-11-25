@@ -10,11 +10,11 @@ At 320 CSS pixels, read the passage beginning “chunk ::= block block ::= {stat
 
 ## Recorded runs
 
-- [before recording](../../proof/kane/lua-manual-reflow/heldout-v2/before/recording.mp4) · [Run result](../../proof/kane/lua-manual-reflow/heldout-v2/before/result.json) · [Kane evidence pack](../../proof/kane/lua-manual-reflow/heldout-v2/before/5c47c58f-3363-45be-98b1-5ed8137f91fe.evidence) · Kane session b83f00cf-c90e-49d4-8ae2-4a6a4f310fc0 · Kane verdict fail
+- [before recording](../../proof/kane/lua-manual-reflow/heldout-v2/before/recording.mp4) · [Run result](../../proof/kane/lua-manual-reflow/heldout-v2/before/result.json) · [Kane evidence pack](../../proof/kane/lua-manual-reflow/heldout-v2/before/5c47c58f-3363-45be-98b1-5ed8137f91fe.evidence) · Kane session b83f00cf-c90e-49d4-8ae2-4a6a4f310fc0 · Curb Cut verdict fail
 
-- [control recording](../../proof/kane/lua-manual-reflow/heldout-v2/control/recording.mp4) · [Run result](../../proof/kane/lua-manual-reflow/heldout-v2/control/result.json) · [Kane evidence pack](../../proof/kane/lua-manual-reflow/heldout-v2/control/87b66d81-ac8a-499e-8ecf-16e472dd1f0a.evidence) · Kane session 3472d244-23e5-41fa-8a90-587c7aa5d2cb · Kane verdict pass
+- [control recording](../../proof/kane/lua-manual-reflow/heldout-v2/control/recording.mp4) · [Run result](../../proof/kane/lua-manual-reflow/heldout-v2/control/result.json) · [Kane evidence pack](../../proof/kane/lua-manual-reflow/heldout-v2/control/87b66d81-ac8a-499e-8ecf-16e472dd1f0a.evidence) · Kane session 3472d244-23e5-41fa-8a90-587c7aa5d2cb · Curb Cut verdict pass
 
-- [after recording](../../proof/kane/lua-manual-reflow/heldout-v2/attempt-1/after/recording.mp4) · [Run result](../../proof/kane/lua-manual-reflow/heldout-v2/attempt-1/after/result.json) · [Kane evidence pack](../../proof/kane/lua-manual-reflow/heldout-v2/attempt-1/after/3587676c-fce3-4ebc-a171-2e1beaea5663.evidence) · Kane session 06702ffd-7a8c-4145-b63e-a070b5bc9912 · Kane verdict pass
+- [after recording](../../proof/kane/lua-manual-reflow/heldout-v2/attempt-1/after/recording.mp4) · [Run result](../../proof/kane/lua-manual-reflow/heldout-v2/attempt-1/after/result.json) · [Kane evidence pack](../../proof/kane/lua-manual-reflow/heldout-v2/attempt-1/after/3587676c-fce3-4ebc-a171-2e1beaea5663.evidence) · Kane session 06702ffd-7a8c-4145-b63e-a070b5bc9912 · Curb Cut verdict pass
 
 [Runtime repair proposal](../../proof/kane/lua-manual-reflow/heldout-v2/attempt-1/candidate.json) · [Repair provenance](../../proof/kane/lua-manual-reflow/heldout-v2/attempt-1/provenance.json) · Failure session b83f00cf-c90e-49d4-8ae2-4a6a4f310fc0
 

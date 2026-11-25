@@ -10,11 +10,11 @@ At 320 CSS pixels, read the passage beginning “> dir /B %= the /B option says 
 
 ## Recorded runs
 
-- [before recording](../../proof/kane/rust-book-reflow/heldout-v2/before/recording.mp4) · [Run result](../../proof/kane/rust-book-reflow/heldout-v2/before/result.json) · [Kane evidence pack](../../proof/kane/rust-book-reflow/heldout-v2/before/6c2f246d-4016-4925-9a76-2f4edbfcbd00.evidence) · Kane session e4ff09da-ae37-4e6b-b609-a5a30ed3e76e · Kane verdict fail
+- [before recording](../../proof/kane/rust-book-reflow/heldout-v2/before/recording.mp4) · [Run result](../../proof/kane/rust-book-reflow/heldout-v2/before/result.json) · [Kane evidence pack](../../proof/kane/rust-book-reflow/heldout-v2/before/6c2f246d-4016-4925-9a76-2f4edbfcbd00.evidence) · Kane session e4ff09da-ae37-4e6b-b609-a5a30ed3e76e · Curb Cut verdict fail
 
-- [control recording](../../proof/kane/rust-book-reflow/heldout-v2/control/recording.mp4) · [Run result](../../proof/kane/rust-book-reflow/heldout-v2/control/result.json) · [Kane evidence pack](../../proof/kane/rust-book-reflow/heldout-v2/control/6f35df2d-de3b-439b-9266-7a078df16fd6.evidence) · Kane session fa72607f-1dab-4294-b288-def12605c76c · Kane verdict pass
+- [control recording](../../proof/kane/rust-book-reflow/heldout-v2/control/recording.mp4) · [Run result](../../proof/kane/rust-book-reflow/heldout-v2/control/result.json) · [Kane evidence pack](../../proof/kane/rust-book-reflow/heldout-v2/control/6f35df2d-de3b-439b-9266-7a078df16fd6.evidence) · Kane session fa72607f-1dab-4294-b288-def12605c76c · Curb Cut verdict pass
 
-- [after recording](../../proof/kane/rust-book-reflow/heldout-v2/attempt-1/after/recording.mp4) · [Run result](../../proof/kane/rust-book-reflow/heldout-v2/attempt-1/after/result.json) · [Kane evidence pack](../../proof/kane/rust-book-reflow/heldout-v2/attempt-1/after/88f879dd-42ca-4b3e-b870-b7150a5ef18e.evidence) · Kane session b04ddb19-6c75-405e-b78b-2f18d11b124e · Kane verdict pass
+- [after recording](../../proof/kane/rust-book-reflow/heldout-v2/attempt-1/after/recording.mp4) · [Run result](../../proof/kane/rust-book-reflow/heldout-v2/attempt-1/after/result.json) · [Kane evidence pack](../../proof/kane/rust-book-reflow/heldout-v2/attempt-1/after/88f879dd-42ca-4b3e-b870-b7150a5ef18e.evidence) · Kane session b04ddb19-6c75-405e-b78b-2f18d11b124e · Curb Cut verdict pass
 
 [Runtime repair proposal](../../proof/kane/rust-book-reflow/heldout-v2/attempt-1/candidate.json) · [Repair provenance](../../proof/kane/rust-book-reflow/heldout-v2/attempt-1/provenance.json) · Failure session e4ff09da-ae37-4e6b-b609-a5a30ed3e76e
 

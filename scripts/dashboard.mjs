@@ -49,7 +49,9 @@ function select(name, label, values) {
 
 export async function buildDashboard({bundled}) {
   const entries = await Promise.all(bundled.map(ledgerEntry))
-  entries.sort((a,b) => a.site.localeCompare(b.site,'en') || a.id.localeCompare(b.id,'en'))
+  const featured = ['v4-86f207deeb57-7bc09a21', 'draft-7565c3d5-736d-48b1-b0e2-8c38afd36147']
+  const rank = entry => featured.includes(entry.id) ? featured.indexOf(entry.id) : featured.length
+  entries.sort((a,b) => rank(a)-rank(b) || a.site.localeCompare(b.site,'en') || a.id.localeCompare(b.id,'en'))
   const kaneCount = entries.filter(entry=>entry.proofType==='Kane').length
   const assets = path.join(ROOT,'site/assets')
   await mkdir(assets,{recursive:true})
@@ -83,16 +85,16 @@ export async function buildDashboard({bundled}) {
   const html = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Curb Cut — Accessibility fixes for Chrome</title><meta name="theme-color" content="#ffffff"><meta name="description" content="Curb Cut fixes mouse-only menus, unnamed buttons and faint text as you browse. Watch a real repair and inspect the evidence.">
-<link rel="icon" href="assets/icon.png"><link rel="preload" as="image" href="assets/product/mass-after-680.webp" media="(max-width:760px)" fetchpriority="high"><link rel="preload" as="image" href="assets/product/mass-after-1360.webp" media="(min-width:761px)" fetchpriority="high"><link rel="preload" href="assets/fonts/inter-tight.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="assets/icon.png"><link rel="preload" as="image" href="assets/product/mass-before-680.webp" media="(max-width:760px)" fetchpriority="high"><link rel="preload" as="image" href="assets/product/mass-before-1360.webp" media="(min-width:761px)" fetchpriority="high"><link rel="preload" href="assets/fonts/inter-tight.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css"><script type="module" src="dashboard.js"></script><script defer src="keystroke.js"></script><script defer src="chapters.js"></script><noscript><style>[data-panel][hidden]{display:block!important;margin-block:24px}.choices,.try-copy{display:none}</style></noscript></head>
-<body><a class="skip" href="#title">Skip to content</a>${navigation(repo)}<main id="main">${opening(download)}
+<body><a class="skip" href="#title">Skip to content</a>${navigation(repo)}<main id="main">${opening(download, link)}
 ${features()}
 ${examples(link,plates)}
 ${howChapter(link,review,mass.recordings)}
 ${mapChapter(map.recordings, link, file=>process.env.CURBCUT_PAGES === '1' ? mapMedia.get(file) : link(file))}
 ${ownerChapter(link)}
 ${developerChapter(link)}
-<section class="section wrap ledger" id="evidence"><div><h2>Fix library</h2><p class="ledger-intro">Search all ${entries.length} fixes. Kane verified ${kaneCount}. The other ${entries.length-kaneCount} have local proof. Open a row for the task, recordings and evidence.</p>
+<section class="section wrap ledger" id="evidence"><div><h2>Fix library</h2><p class="ledger-intro">Search all ${entries.length} fixes. ${kaneCount} have Kane recordings and ${entries.length-kaneCount} have local browser measurements. Open a row to inspect the task and its evidence. <a href="#kane-label">How to read a Kane badge</a>.</p>
 <form id="filters" role="search" aria-label="Filter evidence"><label class="search"><span>Site</span><input name="site" type="search" placeholder="Search by domain" autocomplete="off"></label>
 ${select('barrier','Barrier',entries.map(r=>r.barrier))}${select('persona','Browsing method',entries.map(r=>r.persona))}${select('proof','Proof',entries.map(r=>r.proofType))}</form>
 <noscript><p>${proofLink('patches/index.json','Open the complete fix index')} to inspect all fixes.</p></noscript>
@@ -100,7 +102,7 @@ ${select('barrier','Barrier',entries.map(r=>r.barrier))}${select('persona','Brow
 ${initialRows.join('\n')}</table><p id="empty" hidden>No matching fixes. <button type="button" id="clear">Clear filters</button></p>
 <div class="pager"><span id="count" role="status" aria-live="polite"></span><div><button id="prev" type="button" aria-label="Previous page">← Previous</button><button id="next" type="button" aria-label="Next page">Next →</button></div></div></div></section>
 
-${closing({download,film:process.env.CURBCUT_PAGES === '1' ? pagesFilm : link(film)})}
+${closing({download,link,film:process.env.CURBCUT_PAGES === '1' ? pagesFilm : link(film)})}
 </main><footer class="wrap"><a class="wordmark" href="#opening"><i aria-hidden="true"></i>Curb Cut</a><a href="${repo}">GitHub ↗</a></footer>
 <dialog id="player" aria-labelledby="player-title"><div class="player-head"><h2 id="player-title">Kane recording</h2><button type="button" id="close">Close</button></div><video muted controls playsinline preload="none" aria-labelledby="player-title"></video><a id="original">Open complete recording ↗</a></dialog>
 </body></html>\n`

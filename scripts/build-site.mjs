@@ -69,7 +69,7 @@ for(const patch of recorded) {
     await Promise.all([file,result.evidencePack].map(asset=>access(path.join(ROOT,asset))))
     const pack=' · [Kane evidence pack]('+videoLink(result.evidencePack)+')'
     const review=logged.traceReview?' · [Trace recheck]('+videoLink(logged.traceReview)+') · Original Curb Cut outcome '+logged.recordedStatus:''
-    return '- ['+key+' recording]('+videoLink(file)+') · [Run result]('+videoLink(observations)+')'+pack+' · Kane session '+runId+' · Kane verdict '+logged.status+review+(patch.evidence.localOracle?' · local oracle '+patch.evidence.localOracle[key==='retirement'?'before':key]:'')
+    return '- ['+key+' recording]('+videoLink(file)+') · [Run result]('+videoLink(observations)+')'+pack+' · Kane session '+runId+' · Curb Cut verdict '+logged.status+(result.kaneStatus && result.kaneStatus!==logged.status?' · Kane reported '+result.kaneStatus:'')+review+(patch.evidence.localOracle?' · local oracle '+patch.evidence.localOracle[key==='retirement'?'before':key]:'')
   }
   const phases=await Promise.all(['before','control','after'].map((key,index)=>runLink(key,patch.evidence[key],patch.evidence.kaneRunIds[index])))
   const rechecks=await Promise.all(patch.history.filter(entry=>entry.event==='retired').map(entry=>runLink('retirement',entry.video,entry.runId)))
@@ -185,7 +185,7 @@ const runRow=patch=>{
 }
 const openRows=openTasks.map(({site,task,latest,status})=>'| '+[md(site),task.id,status,md(latest.reason),latest.sessionId?'['+latest.sessionId+'](../../'+latest.result+')':'—'].join(' | ')+' |')
 const runTable=[
-  '| Site | Task | Persona | Before · fail | Control · pass | With repair · pass | Unpatched retirement · pass |',
+  '| Site | Task | Persona | Before | Mouse control | With repair | Unpatched retirement |',
   '| --- | --- | --- | --- | --- | --- | --- |'
 ]
 const archiveReport=[

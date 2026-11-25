@@ -6,12 +6,12 @@ const repairSwitch = hero.querySelector('.repair-switch')
 const heroStatus = hero.querySelector('#case-status')
 const key = hero.querySelector('.key')
 const prefersMotion = matchMedia('(prefers-reduced-motion:no-preference)')
-let enabled = true
+let enabled = repairSwitch.getAttribute('aria-checked') === 'true'
 
 function explainFocus(onLink) {
   hero.dataset.focus = onLink ? 'link' : 'about'
   heroStatus.textContent = onLink ? 'The DHE has keyboard focus.' :
-    enabled ? 'One Tab press opens About.' : 'About has focus. Its links stay hidden.'
+    enabled ? 'About is open. Tab reaches The DHE.' : 'About has focus. The DHE stays hidden.'
 }
 
 function setPopup(browser, visible) {
@@ -82,24 +82,3 @@ document.addEventListener('keydown', event => {
 })
 narrow.addEventListener('change', () => setNavigation(false))
 setNavigation(false)
-
-let guided = true
-let framePending = false
-function followRecordedStop() {
-  framePending = false
-  if (!guided || !prefersMotion.matches) return
-  const rect = about.getBoundingClientRect()
-  if (rect.bottom < 0 || rect.top > innerHeight) return
-  const nextStop = scrollY > 30 && rect.top < innerHeight * .32
-  if ((hero.dataset.focus === 'link') === nextStop) return
-  hero.dataset.focus = nextStop ? 'link' : 'about'
-  heroStatus.textContent = nextStop ? 'The next Tab reaches The DHE.' : 'One Tab press opens About.'
-}
-hero.addEventListener('focusin', () => { guided = false })
-hero.addEventListener('pointerdown', () => { guided = false })
-window.addEventListener('scroll', () => {
-  if (guided && prefersMotion.matches && !framePending) {
-    framePending = true
-    requestAnimationFrame(followRecordedStop)
-  }
-},{passive:true})

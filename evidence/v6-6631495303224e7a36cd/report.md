@@ -10,11 +10,11 @@ In Reading view, find the button identified by “Toggle menu” and choose its 
 
 ## Recorded runs
 
-- [before recording](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/before-1/recording.mp4) · [Run result](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/before-1/result.json) · [Kane evidence pack](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/before-1/d565037a-e679-4b27-85e7-5aac31461115.evidence) · Kane session c0685be1-5f69-474d-94d6-1a6236e544e5 · Kane verdict fail
+- [before recording](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/before-1/recording.mp4) · [Run result](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/before-1/result.json) · [Kane evidence pack](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/before-1/d565037a-e679-4b27-85e7-5aac31461115.evidence) · Kane session c0685be1-5f69-474d-94d6-1a6236e544e5 · Curb Cut verdict fail · Kane reported pass
 
-- [control recording](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/control-1/recording.mp4) · [Run result](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/control-1/result.json) · [Kane evidence pack](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/control-1/4dea8585-985e-44ba-a1c3-8599a0e56d5d.evidence) · Kane session 64450ade-d225-46a7-aff9-0dcbd850931c · Kane verdict pass
+- [control recording](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/control-1/recording.mp4) · [Run result](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/control-1/result.json) · [Kane evidence pack](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/control-1/4dea8585-985e-44ba-a1c3-8599a0e56d5d.evidence) · Kane session 64450ade-d225-46a7-aff9-0dcbd850931c · Curb Cut verdict pass
 
-- [after recording](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/after-1/recording.mp4) · [Run result](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/after-1/result.json) · [Kane evidence pack](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/after-1/961f8480-305b-45b1-b9b7-ebec73e9dd4d.evidence) · Kane session 4341d5dd-5b75-462d-8dee-11c7515ce98b · Kane verdict pass
+- [after recording](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/after-1/recording.mp4) · [Run result](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/after-1/result.json) · [Kane evidence pack](../../proof/heldout-v6/kane/v6-6631495303224e7a36cd/after-1/961f8480-305b-45b1-b9b7-ebec73e9dd4d.evidence) · Kane session 4341d5dd-5b75-462d-8dee-11c7515ce98b · Curb Cut verdict pass
 
 [Frozen local measurements and proposal](../../proof/heldout-v6/measurements/v6-6631495303224e7a36cd.json) · [Archived release bytes](../../proof/heldout-v6/release/v6-6631495303224e7a36cd.json)
 

@@ -43,22 +43,23 @@ export function browserWindow(kind, contents) {
   return `<div class="browser ${kind}">
     <div class="tabs" aria-hidden="true"><div class="lights"><i></i><i></i><i></i></div><div class="tab">${icon('globe',13)}<span>${title}</span><b>×</b></div><b class="plus">+</b></div>
     <div class="toolbar">${icon('back',16)}${icon('forward',16)}${icon('reload',15)}<div class="address">${icon('tune',13)}<span>${domain}</span>${icon('star',13)}</div>
-    <button type="button" class="pinned" aria-label="Curb Cut popup on ${domain}" aria-expanded="true" aria-controls="${kind}-popup"><img src="assets/icon.png" width="16" height="16" alt=""></button>${icon('puzzle',16)}${icon('dots',15)}</div>
-    <div class="screen">${contents}<div class="popup" id="${kind}-popup"><img src="assets/product/${kind}-popup.webp" width="544" height="1314" ${mass?'':'loading="lazy"'} alt="Installed Curb Cut popup showing one Kane-verified keyboard fix on ${domain} and its before and after recordings"></div></div></div>`
+    <button type="button" class="pinned" aria-label="Curb Cut popup on ${domain}" aria-expanded="${!mass}" ${mass ? 'disabled' : ''} aria-controls="${kind}-popup"><img src="assets/icon.png" width="16" height="16" alt=""></button>${icon('puzzle',16)}${icon('dots',15)}</div>
+    <div class="screen">${contents}<div class="popup" id="${kind}-popup" ${mass ? 'hidden' : ''}><img src="assets/product/${kind}-popup.webp" width="544" height="1314" ${mass?'':'loading="lazy"'} alt="Installed Curb Cut popup showing one Kane-verified keyboard fix on ${domain} and its before and after recordings"></div></div></div>`
 }
 
-export function opening(download) {
+export function opening(download, link) {
   const shot = `<div class="site-photo" id="mass-photo">
-    <picture><source media="(max-width:760px)" srcset="assets/product/mass-after-680.webp"><img class="mass-image" src="assets/product/mass-after-1360.webp" width="1360" height="850" alt="Mass.edu’s About menu open with The DHE as its first link" fetchpriority="high"></picture>
-    <span class="focus-ring" aria-hidden="true"></span><button class="about-target" type="button" aria-expanded="true" aria-controls="destination" aria-label="About on the recorded Mass.edu page"></button>
-    <a id="destination" href="https://www.mass.edu/about/aboutdhe.asp" aria-label="The DHE on Mass.edu"></a></div>`
+    <picture><source media="(max-width:760px)" srcset="assets/product/mass-before-680.webp"><img class="mass-image" src="assets/product/mass-before-1360.webp" width="1360" height="850" alt="Focus is on About on Mass.edu. Its submenu is closed." fetchpriority="high"></picture>
+    <span class="focus-ring" aria-hidden="true"></span><button class="about-target" type="button" aria-expanded="false" aria-controls="destination" aria-label="About on the recorded Mass.edu page"></button>
+    <a hidden id="destination" href="https://www.mass.edu/about/aboutdhe.asp" aria-label="The DHE on Mass.edu"></a></div>`
   return `<section class="hero wrap" id="opening" aria-labelledby="title"><div class="copy"><p class="kind">${icon('chrome',21)} Chrome extension</p>
-    <h1 id="title">This menu<br> needs a mouse.</h1><p class="lead">Curb Cut opens it with Tab. It fixes barriers on the sites you visit with a keyboard, a screen reader or zoom.</p>
-    <div class="actions">${installButton(download)}<a href="#how" class="secondary">See how it works ${icon('arrow',17)}</a></div><p class="install-note">For desktop Chrome</p></div>
+    <h1 id="title">This menu<br> needs a mouse.</h1><p class="lead">Focus About on Mass.edu and Tab skips The DHE. Curb Cut opens the menu so your keyboard can reach the link.</p>
+    <div class="actions"><a href="#proof" class="secondary">Watch Kane verify this ${icon('arrow',17)}</a>${installButton(download)}</div>
+    <ol class="install-note" aria-label="Install in desktop Chrome"><li>Download and unzip the extension.</li><li>Enable <b>Developer mode</b> at <code>chrome://extensions</code>.</li><li>Choose <b>Load unpacked</b> and select the extracted folder.</li></ol></div>
     <figure class="hero-demo" id="repair">${browserWindow('mass',shot)}
     <figcaption class="hero-caption"><button type="button" class="key" aria-label="Try the Tab key on Mass.edu">${['foot','spring','cap'].map(layer=>`<img class="k-${layer}" width="200" height="182" src="assets/product/tab-${layer}.webp" alt="">`).join('')}</button>
-    <div><strong id="case-status" role="status">One Tab press opens About.</strong><span>Recorded on Mass.edu with Curb Cut installed.</span></div>
-    <button class="repair-switch" type="button" role="switch" aria-label="Mass.edu repair" aria-checked="true">Fix on</button></figcaption></figure></section>`
+    <div><strong id="case-status" role="status">About has focus. The DHE stays hidden.</strong><span><a href="${link('evidence/v4-86f207deeb57-7bc09a21/report.md')}">See the site owner’s report ↗</a></span></div>
+    <button class="repair-switch" type="button" role="switch" aria-label="Mass.edu repair" aria-checked="false">Fix off</button></figcaption></figure></section>`
 }
 
 export function features() {

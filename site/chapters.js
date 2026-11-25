@@ -59,7 +59,6 @@ for (const launch of document.querySelectorAll('.clip-launch')) {
     const movie = document.createElement('video')
     movie.className = 'story-clip'
     movie.controls = true
-    movie.muted = true
     movie.playsInline = true
     movie.tabIndex = 0
     movie.poster = launch.querySelector('img').src

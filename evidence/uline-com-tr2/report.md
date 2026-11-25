@@ -10,11 +10,11 @@ At 320 CSS pixels, read the passage beginning “Help Contact Us Careers Shippin
 
 ## Recorded runs
 
-- [before recording](../../proof/heldout-v3/runs/uline-com-tr2/before/recording.mp4) · [Run result](../../proof/heldout-v3/runs/uline-com-tr2/before/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/uline-com-tr2/before/2c7e4b06-c048-4242-b43b-a143e749e00c.evidence) · Kane session 7c9b662c-baad-446a-b711-427de114e305 · Kane verdict fail · local oracle fail
+- [before recording](../../proof/heldout-v3/runs/uline-com-tr2/before/recording.mp4) · [Run result](../../proof/heldout-v3/runs/uline-com-tr2/before/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/uline-com-tr2/before/2c7e4b06-c048-4242-b43b-a143e749e00c.evidence) · Kane session 7c9b662c-baad-446a-b711-427de114e305 · Curb Cut verdict fail · local oracle fail
 
-- [control recording](../../proof/heldout-v3/runs/uline-com-tr2/control/recording.mp4) · [Run result](../../proof/heldout-v3/runs/uline-com-tr2/control/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/uline-com-tr2/control/ca9325c8-1403-46a7-86da-bcdeadfca987.evidence) · Kane session 8df9e40c-d299-46a4-949c-6abb22c5f400 · Kane verdict pass · local oracle pass
+- [control recording](../../proof/heldout-v3/runs/uline-com-tr2/control/recording.mp4) · [Run result](../../proof/heldout-v3/runs/uline-com-tr2/control/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/uline-com-tr2/control/ca9325c8-1403-46a7-86da-bcdeadfca987.evidence) · Kane session 8df9e40c-d299-46a4-949c-6abb22c5f400 · Curb Cut verdict pass · local oracle pass
 
-- [after recording](../../proof/heldout-v3/runs/uline-com-tr2/attempt-1/after/recording.mp4) · [Run result](../../proof/heldout-v3/runs/uline-com-tr2/attempt-1/after/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/uline-com-tr2/attempt-1/after/baaa61ec-f5e1-44d6-ba01-f56e2a7ecd2a.evidence) · Kane session 1bcdba5e-99a6-45db-b735-5338ff6aee95 · Kane verdict pass · local oracle pass
+- [after recording](../../proof/heldout-v3/runs/uline-com-tr2/attempt-1/after/recording.mp4) · [Run result](../../proof/heldout-v3/runs/uline-com-tr2/attempt-1/after/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/uline-com-tr2/attempt-1/after/baaa61ec-f5e1-44d6-ba01-f56e2a7ecd2a.evidence) · Kane session 1bcdba5e-99a6-45db-b735-5338ff6aee95 · Curb Cut verdict pass · local oracle pass
 
 [Runtime repair proposal](../../proof/heldout-v3/runs/uline-com-tr2/attempt-1/candidate.json) · [Repair provenance](../../proof/heldout-v3/runs/uline-com-tr2/attempt-1/provenance.json) · Failure session 7c9b662c-baad-446a-b711-427de114e305
 

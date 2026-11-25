@@ -10,11 +10,11 @@ In Reading view, locate the searchbox named “search”. Enter the text test an
 
 ## Recorded runs
 
-- [before recording](../../proof/heldout-v3/runs/poets-org-tr2/before/recording.mp4) · [Run result](../../proof/heldout-v3/runs/poets-org-tr2/before/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/poets-org-tr2/before/72fd6177-14ae-4f1a-8d27-b9070a3bb04d.evidence) · Kane session a6039b7a-2d1d-40c2-91b1-04593fcbd871 · Kane verdict fail · local oracle fail
+- [before recording](../../proof/heldout-v3/runs/poets-org-tr2/before/recording.mp4) · [Run result](../../proof/heldout-v3/runs/poets-org-tr2/before/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/poets-org-tr2/before/72fd6177-14ae-4f1a-8d27-b9070a3bb04d.evidence) · Kane session a6039b7a-2d1d-40c2-91b1-04593fcbd871 · Curb Cut verdict fail · local oracle fail
 
-- [control recording](../../proof/heldout-v3/runs/poets-org-tr2/control/recording.mp4) · [Run result](../../proof/heldout-v3/runs/poets-org-tr2/control/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/poets-org-tr2/control/0c96063e-d6a3-43a3-99f8-2a8859422aea.evidence) · Kane session f773f524-c19a-4b56-bd9f-16289c00a68d · Kane verdict pass · local oracle pass
+- [control recording](../../proof/heldout-v3/runs/poets-org-tr2/control/recording.mp4) · [Run result](../../proof/heldout-v3/runs/poets-org-tr2/control/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/poets-org-tr2/control/0c96063e-d6a3-43a3-99f8-2a8859422aea.evidence) · Kane session f773f524-c19a-4b56-bd9f-16289c00a68d · Curb Cut verdict pass · local oracle pass
 
-- [after recording](../../proof/heldout-v3/runs/poets-org-tr2/attempt-1/after/recording.mp4) · [Run result](../../proof/heldout-v3/runs/poets-org-tr2/attempt-1/after/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/poets-org-tr2/attempt-1/after/7ba378a8-faab-41d4-bf49-8ed10cb21a2f.evidence) · Kane session 68fac404-263b-461c-b97f-c4aae40f2fe5 · Kane verdict pass · local oracle pass
+- [after recording](../../proof/heldout-v3/runs/poets-org-tr2/attempt-1/after/recording.mp4) · [Run result](../../proof/heldout-v3/runs/poets-org-tr2/attempt-1/after/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/poets-org-tr2/attempt-1/after/7ba378a8-faab-41d4-bf49-8ed10cb21a2f.evidence) · Kane session 68fac404-263b-461c-b97f-c4aae40f2fe5 · Curb Cut verdict pass · local oracle pass
 
 [Runtime repair proposal](../../proof/heldout-v3/runs/poets-org-tr2/attempt-1/candidate.json) · [Repair provenance](../../proof/heldout-v3/runs/poets-org-tr2/attempt-1/provenance.json) · Failure session a6039b7a-2d1d-40c2-91b1-04593fcbd871
 

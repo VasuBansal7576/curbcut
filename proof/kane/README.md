@@ -4,7 +4,7 @@ The [session ledger](ledger.json) lists every archived Kane task result, includi
 
 ## Verified fixture repairs
 
-| Site | Task | Persona | Before · fail | Control · pass | With repair · pass | Unpatched retirement · pass |
+| Site | Task | Persona | Before | Mouse control | With repair | Unpatched retirement |
 | --- | --- | --- | --- | --- | --- | --- |
 | Stillroom fixture | [keyboard-add-headphones](../../evidence/keyboard-add-headphones/report.md) | Keyboard only | [001bf033-ff00-4be9-bbe1-d2a4672ce742](../../proof/kane/keyboard-add-headphones/2026-11-21T19-39-28.953Z/before/result.json) | [f1123b3e-9440-4c2b-9548-d24878c2fc5f](../../proof/kane/keyboard-add-headphones/2026-11-21T19-39-28.953Z/control/result.json) | [f86e31e4-4d53-4232-9580-5635cafd398b](../../proof/kane/keyboard-add-headphones/2026-11-21T19-39-28.953Z/attempt-1/after/result.json) | [958f7f45-30bc-474b-850c-696ddec10ffc](../../proof/kane/keyboard-add-headphones/2026-11-21T19-48-03.277Z/recheck-without/result.json) |
 | Stillroom fixture | [low-vision-shop-speaker](../../evidence/low-vision-shop-speaker/report.md) | 320px reflow | [4a499b97-2acf-46da-9c21-ae30dd0630f2](../../proof/kane/low-vision-shop-speaker/2026-11-21T19-44-34.430Z/before/result.json) | [59c627a1-eae2-4886-aa8e-5fff7c7b94ae](../../proof/kane/low-vision-shop-speaker/2026-11-21T19-44-34.430Z/control/result.json) | [b5fdcc75-9ec1-4dad-884f-1554818b20c5](../../proof/kane/low-vision-shop-speaker/2026-11-21T19-44-34.430Z/attempt-1/after/result.json) | [900e83bc-9d0c-46d2-bae8-f32ac64542fd](../../proof/kane/low-vision-shop-speaker/2026-11-21T19-48-03.277Z/recheck-without/result.json) |
@@ -12,7 +12,7 @@ The [session ledger](ledger.json) lists every archived Kane task result, includi
 
 ## Verified public repairs
 
-| Site | Task | Persona | Before · fail | Control · pass | With repair · pass | Unpatched retirement · pass |
+| Site | Task | Persona | Before | Mouse control | With repair | Unpatched retirement |
 | --- | --- | --- | --- | --- | --- | --- |
 | www.asme.org | [asme-org-tr2](../../evidence/asme-org-tr2/report.md) | Screen-reader view | [dffdcb17-8db4-4bd1-b59e-1a36c48fea2b](../../proof/heldout-v3/runs/asme-org-tr2/before/result.json) | [ce1c01b8-efe2-4032-9d97-f8a0b810c697](../../proof/heldout-v3/runs/asme-org-tr2/control/result.json) | [1bb0ccfd-5c83-4e1e-9e75-70c4dfbc09df](../../proof/heldout-v3/runs/asme-org-tr2/attempt-1/after/result.json) | — |
 | www.calculator.net | [calculator-net-add-days](../../evidence/calculator-net-add-days/report.md) | Screen-reader view | [dd3fe745-35dd-47e6-a38e-d7e932cbfdf6](../../proof/kane/calculator-net-add-days/2026-11-21T19-46-40.781Z/before/result.json) | [1f663588-b62e-4cb3-9e7d-1a63e38af852](../../proof/kane/calculator-net-add-days/2026-11-21T19-46-40.781Z/control/result.json) | [15e8f204-b925-455f-bb0d-62d41867f890](../../proof/kane/calculator-net-add-days/runtime-replay/attempt-1/after/result.json) | — |

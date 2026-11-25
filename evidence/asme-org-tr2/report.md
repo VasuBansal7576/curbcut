@@ -10,11 +10,11 @@ In Reading view, locate the searchbox named “Search products, events, courses,
 
 ## Recorded runs
 
-- [before recording](../../proof/heldout-v3/runs/asme-org-tr2/before/recording.mp4) · [Run result](../../proof/heldout-v3/runs/asme-org-tr2/before/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/asme-org-tr2/before/bd711d9f-1c6f-422e-9b94-ada920d669b9.evidence) · Kane session dffdcb17-8db4-4bd1-b59e-1a36c48fea2b · Kane verdict inconclusive · local oracle fail
+- [before recording](../../proof/heldout-v3/runs/asme-org-tr2/before/recording.mp4) · [Run result](../../proof/heldout-v3/runs/asme-org-tr2/before/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/asme-org-tr2/before/bd711d9f-1c6f-422e-9b94-ada920d669b9.evidence) · Kane session dffdcb17-8db4-4bd1-b59e-1a36c48fea2b · Curb Cut verdict inconclusive · Kane reported fail · local oracle fail
 
-- [control recording](../../proof/heldout-v3/runs/asme-org-tr2/control/recording.mp4) · [Run result](../../proof/heldout-v3/runs/asme-org-tr2/control/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/asme-org-tr2/control/085189ea-c9cd-4bd2-b77d-02216a1a1bfe.evidence) · Kane session ce1c01b8-efe2-4032-9d97-f8a0b810c697 · Kane verdict pass · local oracle pass
+- [control recording](../../proof/heldout-v3/runs/asme-org-tr2/control/recording.mp4) · [Run result](../../proof/heldout-v3/runs/asme-org-tr2/control/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/asme-org-tr2/control/085189ea-c9cd-4bd2-b77d-02216a1a1bfe.evidence) · Kane session ce1c01b8-efe2-4032-9d97-f8a0b810c697 · Curb Cut verdict pass · local oracle pass
 
-- [after recording](../../proof/heldout-v3/runs/asme-org-tr2/attempt-1/after/recording.mp4) · [Run result](../../proof/heldout-v3/runs/asme-org-tr2/attempt-1/after/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/asme-org-tr2/attempt-1/after/8aa0884e-fe91-46d0-b4a6-5bbaa3334b63.evidence) · Kane session 1bb0ccfd-5c83-4e1e-9e75-70c4dfbc09df · Kane verdict pass · local oracle pass
+- [after recording](../../proof/heldout-v3/runs/asme-org-tr2/attempt-1/after/recording.mp4) · [Run result](../../proof/heldout-v3/runs/asme-org-tr2/attempt-1/after/result.json) · [Kane evidence pack](../../proof/heldout-v3/runs/asme-org-tr2/attempt-1/after/8aa0884e-fe91-46d0-b4a6-5bbaa3334b63.evidence) · Kane session 1bb0ccfd-5c83-4e1e-9e75-70c4dfbc09df · Curb Cut verdict pass · local oracle pass
 
 [Runtime repair proposal](../../proof/heldout-v3/runs/asme-org-tr2/attempt-1/candidate.json) · [Repair provenance](../../proof/heldout-v3/runs/asme-org-tr2/attempt-1/provenance.json) · Failure session dffdcb17-8db4-4bd1-b59e-1a36c48fea2b
 
