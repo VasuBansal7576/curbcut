@@ -1,94 +1,86 @@
-# Curb Cut film edit
+# Curb Cut for Chrome
 
-The launch opens with a shopper unable to reach Add to cart. OpenSeaMap begins at **1:39.100**. The same eight Tabs that skipped View before publication reach it in the packaged extension. The demo opens with the entire launch and adds the developer chapter at **2:22.933**. [Launch film](curbcut-launch.mp4) · [Teaser](curbcut-launch-15s.mp4) · [Demo](curbcut-demo.mp4)
+The shopper wants the Field Headphones. Watch where focus goes when they press Tab. The opening and closing shopper views come from a fresh capture of Stillroom’s neutral fixture. The audit replays show the shop as Kane recorded it, including the earlier colours. The film uses white surroundings, near-black type and blue #2452A5 for keyboard focus, verdicts and the install action. [Approved direction](direction/v9/A/opening.png) · [Shot-by-shot story](direction/v9/story.md) · [Capture source](film/v9/capture.cjs)
 
 ## Launch
 
-| Start | Spoken anchor | Picture |
-|---:|---|---|
-| 0:00.000 | Opening | A shopper focuses the search field in Stillroom. The recorded keyboard entry starts here. |
-| 0:03.333 | They press Tab | The focus ring leaves Search and jumps over the headphones’ Add to cart button. A dashed outline identifies the skipped control. |
-| 0:09.633 | In 2026 | The physical orange Tab key sits alone after the failed purchase. |
-| 0:11.633 | 95.9 percent | 95.9% fills the Damson field, with its top-million-home-pages denominator and WebAIM credit. |
-| 0:16.800 | And almost all | The recorded menu, unnamed button and faint Details glyph appear together as examples of recurring barriers. |
-| 0:20.100 | So we built | The physical Tab key and the Curb Cut wordmark share the frame. |
-| 0:21.433 | It fixes | The captured Chrome extension switches on. |
-| 0:26.833 | Step one | Kane repeats the shopping task. The orange ring skips the headphones and a Failed badge appears. |
-| 0:33.600 | Kane tries again | Kane’s actual mouse run adds the same item; the shop displays its confirmation. |
-| 0:36.667 | So the website | The mouse run opens its cart. Field Headphones is inside. |
-| 0:39.100 | Step two | The agent’s recorded candidate supplies the element selector and repair. Two keycaps show what Tab and Enter will do. |
-| 0:43.533 | Step three | On the repaired shop the keyboard reaches Add to cart. The native confirmation and Passed badge follow. |
-| 0:49.067 | Step four | The extension’s captured Mass.edu listing identifies a verified fix and provides the before and after recordings. |
-| 0:53.800 | Some barriers | The actual Mass.edu homepage establishes the new site beside the physical Tab key. |
-| 0:55.933 | On mass.edu | In the original Kane recording About keeps focus. Arrow Down leaves the menu closed. |
-| 1:01.100 | With Curb Cut | In the repaired recording the menu opens, then the orange ring lands on The DHE. |
-| 1:04.000 | Enter | Enter navigates to the recorded About the Department of Higher Education page. |
-| 1:05.633 | For blind users | A Munich Airport carousel arrow lifts into isolation. The screen reader can only announce Button. |
-| 1:11.633 | On Munich Airport | The same arrow acquires the name Previous slide, in time with the spoken label. |
-| 1:15.267 | Kane found it | The captured reading view shows the native German name, Vorherige Folie, beside its English translation. |
-| 1:17.667 | The most common failure | The original Details glyph goes from 4.39:1 to 4.50:1 when Curb Cut nudges its colour. |
-| 1:24.600 | And on pages | Two captured Meridiano controls appear without names. |
-| 1:28.067 | Jev | TypeSafe Jev appears above the real controls. Menú and Buscar attach as Jev names them. |
-| 1:34.967 | 13 | The two named controls hold while the result of the 15-name review appears. No new name is supplied on the quiet line. |
-| 1:39.100 | On OpenSeaMap | The original extension package skips View. Orange traces the focused toolbar controls. The underline marks the missed menu. |
-| 1:43.367 | One shortcut | Ctrl, Shift and U depress. The report lifts out of the actual browser recording. The filled draft shows its queue confirmation. |
-| 1:45.533 | Grok writes | The View glyph and two plain-language rules show the keyboard repair Grok proposed in 16 seconds. |
-| 1:48.033 | Kane tries it | Unpatched keyboard recording 700b66b7. The menu stays closed. |
-| 1:51.200 | The mouse works | Mouse recording 7168aa29. Hover reveals Sea Marks. The passing verdict follows the visible menu. |
-| 1:53.400 | With the fix | Patched keyboard recording 006b53ce. View takes focus, Sea Marks appears and Kane passes it. |
-| 1:55.533 | Minutes later | The recorded evidence is rechecked. The publisher’s UTC time sits beside the verified repair from the extension. |
-| 1:59.267 | Now the same eight Tabs | In the comparison between the two actual packages, the eighth Tab now opens View. |
-| 2:01.467 | Sea Marks | The unchanged checked Sea Marks box sits beside the installed extension’s Kane verified badge. |
-| 2:03.667 | Today | 106 fixes are live in the extension. |
-| 2:07.167 | 62 | 62 proven by Kane appears alongside the total. The other 44 have local proof. |
-| 2:09.500 | And every fix | The actual Mass.edu owner report slides out with its source-change recommendation and recording links. |
-| 2:15.400 | When the website | The shop’s own Add to cart button works with the extension fix switched off. |
-| 2:17.167 | our patch | The retirement command records the patch’s withdrawal. |
-| 2:18.500 | Curb Cut | The physical Tab key returns beside Curb Cut. Verified by Kane appears on the final line. |
-| 2:21.267 | Verified by Kane | The physical Tab key and the Curb Cut wordmark hold through the final line. |
+| Start | Picture and action |
+|---|---|
+| 0:00.000 | Stillroom opens in Chrome. The shopper focuses Search. Both products and their purchase buttons are in view. The physical Tab key sits below the window. |
+| 0:03.333 | The key depresses. Focus moves from Search to the Porch Speaker’s Add to cart and skips the headphones. Hold the two buttons together. |
+| 0:09.633 | The shopper stays at the wrong item as the narration widens to other home pages. |
+| 0:11.633 | 95.9% appears beside the shop with its top-million-home-pages denominator and WebAIM 2026 credit. |
+| 0:16.800 | Three short browser views introduce a menu, an unnamed carousel button and faint text. |
+| 0:20.100 | The actual installed extension popup opens beneath the Curb Cut icon on Stillroom. |
+| 0:21.433 | Apply fixes switches on while the shop stays in view. |
+| 0:26.833 | Kane’s original shopping recording. Focus leaves Search, passes the headphones and lands on the speaker. The failed keyboard verdict follows. |
+| 0:33.600 | Kane’s mouse run activates the headphones’ Add to cart. |
+| 0:36.667 | The cart opens. Field Headphones is inside. |
+| 0:39.100 | The headphones sit beside the two actions in the proposed repair. Tab reaches the button and Enter activates it. |
+| 0:43.533 | Kane’s repaired keyboard run reaches the purchase control. The site reports the addition. |
+| 0:49.067 | Open the actual Mass.edu extension entry, including its fix and evidence controls. |
+| 0:53.800 | Establish the Mass.edu page. |
+| 0:55.933 | In the unpatched Kane recording, About has focus and the menu stays closed. |
+| 1:01.100 | In the patched recording the menu opens and focus moves to The DHE. |
+| 1:04.000 | The recorded destination is About the Department of Higher Education. |
+| 1:05.633 | The Munich Airport carousel arrow and its unnamed entry in the extension’s reading view. |
+| 1:11.633 | The same button acquires the name Vorherige Folie. Previous slide gives the English meaning. |
+| 1:15.267 | Hold the recorded reading view on the repaired button name. |
+| 1:17.667 | Move in on ExtremeTerrain’s Details link. Its own glyph and surface show the measured change from 4.39:1 to 4.50:1. |
+| 1:24.600 | Isolate Meridiano’s two original glyphs beside their captured reading-view rows in Chrome. |
+| 1:28.067 | TypeSafe Jev supplies Menú and Buscar. |
+| 1:34.967 | Both names hold. The review found 13 of 15 correct. |
+| 1:39.100 | The original packaged extension on OpenSeaMap. Eight Tabs skip View. |
+| 1:43.367 | Ctrl + Shift + U opens the report. The user’s task and saved draft appear in the real extension form. |
+| 1:45.533 | Grok’s fix takes 16 seconds. Show View beside the two changes that make the task work. |
+| 1:48.033 | The keyboard without the fix skips View. The failed verdict carries session 700b66b7. |
+| 1:51.200 | The mouse opens View and reveals Sea Marks. The passing verdict carries session 7168aa29. |
+| 1:53.400 | The repaired keyboard reaches View and reveals Sea Marks. The passing verdict carries session 006b53ce. |
+| 1:55.533 | Cut to the later publication at 06:49:55 UTC after the archived evidence was rechecked. |
+| 1:59.267 | The same eight Tabs in the published package open View. |
+| 2:01.467 | Sea Marks retains its original checked state. The real installed popup and evidence recordings open below the toolbar icon. |
+| 2:03.667 | 106 fixes live in the extension. |
+| 2:07.167 | 62 of those fixes are proven by Kane. The other 44 have local proof. |
+| 2:09.500 | The Mass.edu source-change recommendation opens beside the extension entry and its proof links. |
+| 2:15.400 | The headphones work in the recorded shop with the extension fix switched off. |
+| 2:17.167 | Back in the neutral shop, the native button works. The recheck verdict confirms that the patch retired. |
+| 2:18.500 | Curb Cut for Chrome, Install for Chrome and the project address share the frame with the actual verified popup. |
+| 2:21.267 | Hold on the two visible recording previews through “Verified by Kane.” |
 
-## OpenSeaMap evidence
-
-The failed keyboard, passing mouse and passing patched-keyboard cards show three distinct Kane recordings. Each occupies 88% of the frame width. The original command stopped because Curb Cut’s trace check classified the patched run as inconclusive. The publisher later revalidated the original recordings’ evidence packs and used the corrected trace check. The comparison uses the two actual extension packages. Its popup plays the archived recordings. [Report and chronology](../proof/report-to-fix/README.md) · [Original report capture](../proof/report-to-fix/browser.mp4) · [Package comparison](../proof/report-to-fix/user-clip.mp4) · [Publication log](../proof/report-to-fix/publication.log)
-
-| Input | Kane session | Evidence |
-|---|---|---|
-| Keyboard without the fix | 700b66b7 | [Recording](../proof/kane/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/barrier-report/before/recording.mp4) |
-| Mouse hover | 7168aa29 | [Recording](../proof/kane/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/barrier-report/control/recording.mp4) |
-| Keyboard with the fix | 006b53ce | [Recording](../proof/kane/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/barrier-report/attempt-1/after/recording.mp4) · [Trace recheck](../proof/report-to-fix/trace-recheck.json) |
-
-## Teaser
+## Fifteen-second teaser
 
 | Start | Picture |
-|---:|---|
+|---|---|
 | 0:00.000 | Eight Tabs skip View. |
-| 0:04.267 | Ctrl+Shift+U opens the report. |
+| 0:04.267 | The keyboard shortcut opens Report a barrier. |
 | 0:06.433 | Grok writes the fix. |
-| 0:08.933 | The same keys open View. |
-| 0:11.133 | Sea Marks and the verified popup. |
-| 0:13.333 | Curb Cut and the Kane sign-off. |
+| 0:08.933 | The same keys now reach View. |
+| 0:11.133 | Sea Marks and the extension’s verification. |
+| 0:13.333 | Hold the install action and the real popup. |
 
-## Developer chapter
+## Demo
 
-| Demo time | Recorded action |
-|---:|---|
-| 2:22.933 | Stillroom keyboard shopping task. |
-| 2:34.433 | Run curbcut check. Tab skips the headphones. |
-| 2:45.433 | The proposed rule makes Add to cart reachable. Enter adds the item. |
-| 2:58.433 | The Claude Code Stop hook blocks completion after the failed check. |
-| 3:10.933 | The source repair passes and Claude can finish. |
-| 3:21.433 | The visitor opens the popup and watches the recording. |
-| 3:34.433 | Jev names the Meridiano menu and search controls. |
-| 3:49.433 | On OpenSeaMap the visitor opens the real report, reviews the navigation keys and saves the draft. |
-| 3:59.933 | The captured form identifies the queued draft. Its receipt is dated 06:38:19 UTC. |
-| 4:02.133 | The two keyboard actions summarize Grok’s recorded candidate. |
-| 4:04.867 | The rechecked evidence and publication time appear beside the installed fix. |
-| 4:07.500 | The packaged extension shows the recorded before and after runs alongside Sea Marks. |
-| 4:10.100 | The shop works with the extension fix off. The recheck retires that fix. |
-| 4:22.600 | The visitor can buy the headphones with the keyboard. |
+The demo opens with the entire launch. In the developer chapter the terminal chrome identifies the shell or the Claude Code Stop hook. The hook command is taken from the shipped example settings. The command output and subsequent keyboard actions come from the recorded runs. [Gate recording](footage/gate.mp4) · [Stop hook settings](../examples/claude/settings.json) · [Source runs](footage/manifest.json)
 
-The chapter preserves the Stillroom check, Claude Code Stop hook, trust popup and retirement recordings. The report walkthrough uses the original OpenSeaMap capture. The OpenSeaMap follow-up runs for 10.167 seconds after the draft. [Developer recording manifest](footage/manifest.json) · [Source repair](../proof/report-to-fix/README.md) · [Mass.edu and Munich capture metadata](film/plates/index.json) · [Jev evidence](../proof/jev/live-naming-demo/capture.json)
+| Demo time | Action |
+|---|---|
+| 2:22.933 | Return to the newly captured shop. A developer defines the shopper’s task. |
+| 2:34.433 | Run curbcut check in Terminal. Cut to the Kane recording where focus skips the headphones. |
+| 2:45.433 | The terminal shows the before, control and repaired results. Cut to the keyboard reaching Add to cart and adding Field Headphones. |
+| 2:58.433 | The Claude Code Stop hook runs the gate. The failed keyboard recording shows the skipped control. |
+| 3:10.933 | Kane can add the item after the source repair. The gate passes and Claude can finish. |
+| 3:21.433 | Open the fix in the toolbar and watch the recorded Mass.edu keyboard journey. |
+| 3:34.433 | On Meridiano, the menu and search names appear beside the matching real controls. |
+| 3:49.433 | OpenSeaMap’s report shortcut opens a draft with the recent Tab history. |
+| 3:59.933 | The captured form shows the draft in the queue. |
+| 4:02.133 | Grok’s rule makes View focusable and opens its menu on focus. |
+| 4:04.867 | Publication follows the evidence recheck. |
+| 4:07.500 | Both archived recordings play in the real packaged extension popup. |
+| 4:10.100 | The independent site repair passes Kane’s check. The terminal records retirement. |
+| 4:22.600 | Return to the neutral shop. Focus reaches Field Headphones and Enter adds it to the cart. |
 
-## Voice and music
+## Evidence and sound
 
-The launch uses the original problem-first voice and locally synthesized 88 BPM score from `94189fb`. The OpenSeaMap lines and both inventory sentences use the original Kokoro `af_heart` voice at 1.04 speed. The score continues under the insert. The developer chapter preserves its recorded mix from `66f12285` and adds the report follow-up. [New narration](film/v8/release/lines.json) · [Voice settings](scripts/voice.py) · [Mix and captions](film/v8/release/finish.py) · [Delivery measurements](out/demo-verification.json)
+The first OpenSeaMap run stopped at Curb Cut’s trace check. Later, the publisher rechecked the three archived evidence packs, shipped the fix and compared the two actual packages. The Sea Marks checkbox was left unchanged. [Chronology](../proof/report-to-fix/README.md) · [Publication log](../proof/report-to-fix/publication.log) · [Installed package comparison](../proof/report-to-fix/user-clip.mp4)
+
+The three approved AAC tracks are copied into the exports. The problem-first voice is from 94189fb. The additional OpenSeaMap narration uses the original Kokoro voice and settings. The music is the project’s locally synthesized 88 BPM score. English captions are supplied both as WebVTT and as selectable MP4 tracks. [Voice settings](scripts/voice.py) · [Score source](scripts/score.py) · [Delivery measurements](out/demo-verification.json)

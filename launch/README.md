@@ -10,17 +10,18 @@ The bundle contains 106 active fixes. Kane verified 62 and 44 have local proof. 
 
 ## Rebuild
 
-Use Node, the repository’s Playwright Chromium, FFmpeg, Python with NumPy, Pillow, scipy, soundfile, kokoro-onnx and onnxruntime. Set FILM_MODELS to the directory containing the Kokoro v1.0 kokoro.onnx and voices.bin files. Run from the repository root. The picture stage uses headless Chromium and creates a fresh temporary profile.
+The picture build uses Playwright’s headless Chromium in temporary profiles, FFmpeg, Python with NumPy and Pillow, and the three approved AAC masters. Run these commands from the repository root.
 
 ```sh
 npm ci
 npx playwright install chromium
 export FILM_CACHE="$(mktemp -d)"
-python3 launch/film/v8/prepare.py
-python3 launch/film/v8/release/plates.py
-python3 launch/film/v8/release/record.py
-node launch/film/v8/release/render.cjs
-python3 launch/film/v8/release/finish.py
+python3 launch/film/v9/media.py
+node launch/film/v9/capture.cjs
+node launch/film/v9/popup.cjs
+node launch/film/v9/render.cjs
+FILM_THUMBNAIL=1 node launch/film/v9/render.cjs
+python3 launch/film/v9/finish.py
 ```
 
-The first 99.1 seconds and the closing voice use the original recording from `94189fb`. The insert uses the same voice, pace and 88 BPM score. The demo incorporates the recorded developer chapter from `66f12285`. [Benchmark study](direction/v8/benchmark.md) · [Palette and type](direction/v8/palette-type.png) · [Output measurements](out/demo-verification.json)
+The original shopping and map recordings retain their native colours. Stillroom’s shopper shots use the neutral fixture. The three locked soundtracks are stream-copied into the final movies. [Approved blue direction](direction/v9/A/end-card.png) · [Story](direction/v9/story.md) · [Delivery measurements](out/demo-verification.json)
