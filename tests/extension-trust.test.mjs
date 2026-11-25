@@ -281,12 +281,14 @@ test('popup loads inline Kane clips for a verified fix',async()=>{
     await popup.goto(new URL('popup.html',worker.url()).href)
     const video=popup.locator('#active-patches video')
     await video.first().waitFor({state:'attached',timeout:15000})
-    assert.ok(await video.count()>=2)
+    assert.equal(await video.count(),3)
     const src=await video.first().getAttribute('src')
     assert.match(src,/proof\/local\/keyboard-only\/before\.mp4/)
-    assert.equal(await video.first().getAttribute('aria-label'),'Before recording')
+    assert.equal(await video.first().getAttribute('aria-label'),'Keyboard before')
     assert.equal(await video.first().getAttribute('muted'),'')
-    await popup.locator('#active-patches video').nth(1).evaluate(node=>{
+    assert.equal(await video.nth(1).getAttribute('aria-label'),'Mouse control')
+    assert.equal(await video.nth(2).getAttribute('aria-label'),'Keyboard after')
+    await video.nth(2).evaluate(node=>{
       node.muted=true
       node.pause()
     })

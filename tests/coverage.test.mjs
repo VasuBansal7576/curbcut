@@ -151,8 +151,9 @@ test('installed popup copies and downloads the CLI report without submitting it'
     await popup.goto(new URL('popup.html',worker.url()).href)
     const panel=popup.locator('[data-patch-id="'+id+'"]')
     await panel.getByText('Kane verified',{exact:true}).waitFor()
-    await panel.getByRole('link',{name:'Before recording'}).waitFor()
-    await panel.getByRole('link',{name:'After recording'}).waitFor()
+    await panel.getByRole('link',{name:'Keyboard before'}).waitFor()
+    await panel.getByRole('link',{name:'Mouse control'}).waitFor()
+    await panel.getByRole('link',{name:'Keyboard after'}).waitFor()
     const [download]=await Promise.all([popup.waitForEvent('download'),
       panel.getByRole('button',{name:'Export report'}).click()])
     assert.equal(download.suggestedFilename(),id+'.md')

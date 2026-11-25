@@ -113,7 +113,7 @@ export function createReport(patch) {
   const local=patch.status==='locally-verified'
   const entries=wcagCriteria(patch).map(entry=>entry.id)
   const evidence=local?[['Local measurement',patch.evidence.localMeasurement]]:
-    [['Kane before recording',patch.evidence.before],['Kane after recording',patch.evidence.after]]
+    [['Kane before recording',patch.evidence.before],['Kane mouse control',patch.evidence.control],['Kane after recording',patch.evidence.after]]
   const references=evidence.flatMap(([label,file])=>{
     const relative=evidencePath(file)
     return relative?['- ['+label+']('+(local?repo+'/blob/main/':rawRoot)+relative+')']:[]

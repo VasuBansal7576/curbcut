@@ -113,7 +113,7 @@ import { createReport } from './lib/report.js';
     } else video.pause();
   }
 
-  function evidencePlayer(href, label) {
+  function evidencePlayer(href, label, preview = true) {
     const figure = document.createElement("figure");
     figure.className = "clip";
     const video = document.createElement("video");
@@ -123,11 +123,11 @@ import { createReport } from './lib/report.js';
     video.muted = true;
     video.defaultMuted = true;
     video.tabIndex = 0;
-    video.preload = "metadata";
+    video.preload = preview ? "metadata" : "none";
     video.setAttribute("muted", "");
     video.setAttribute("aria-label", label);
     video.setAttribute("controlslist", "nodownload");
-    if (!prefersReducedMotion()) {
+    if (preview && !prefersReducedMotion()) {
       video.autoplay = true;
       video.muted = true;
     }
@@ -202,24 +202,39 @@ import { createReport } from './lib/report.js';
       li.append(top, name);
 
       const before = evidenceUrl(patch.evidence?.before);
+      const control = evidenceUrl(patch.evidence?.control);
       const after = evidenceUrl(patch.evidence?.after);
       const measurement = evidenceUrl(patch.evidence?.localMeasurement);
       if (kind.cls === "local" && measurement) {
-        const link = proofLink(measurement, "View measurements");
+        const link = proofLink(measurement, "Local measurements");
         link.className = "measurement";
         li.append(link);
       } else if (kind.cls === "verified" && (before || after)) {
         const clips = document.createElement("div");
         clips.className = "evidence-clips";
         clips.setAttribute("aria-label", "Proof recordings");
-        if (before) clips.append(evidencePlayer(before, "Before recording"));
-        if (after) clips.append(evidencePlayer(after, "After recording"));
+        const beforeLabel = patch.persona === "keyboard-only" ? "Keyboard before" : "Before recording";
+        const afterLabel = patch.persona === "keyboard-only" ? "Keyboard after" : "After recording";
+        if (before) clips.append(evidencePlayer(before, beforeLabel));
+        if (control) {
+          const disclosure = document.createElement("details");
+          const summary = document.createElement("summary");
+          summary.textContent = "Mouse control";
+          const player = evidencePlayer(control, "Mouse control", false);
+          disclosure.append(summary, player);
+          disclosure.addEventListener("toggle", () => {
+            if (!disclosure.open) player.querySelector("video").pause();
+          });
+          clips.append(disclosure);
+        }
+        if (after) clips.append(evidencePlayer(after, afterLabel));
         li.append(clips);
         const links = document.createElement("div");
         links.className = "evidence-links";
         links.setAttribute("aria-label", "Open proof recordings");
-        if (before) links.append(proofLink(before, "Before recording"));
-        if (after) links.append(proofLink(after, "After recording"));
+        if (before) links.append(proofLink(before, beforeLabel));
+        if (control) links.append(proofLink(control, "Mouse control"));
+        if (after) links.append(proofLink(after, afterLabel));
         li.append(links);
       }
 
