@@ -18,7 +18,7 @@ test('popup and options keep charcoal, white, the pink ring, and one grotesk',as
   assert.match(css,new RegExp(charcoal,'i'))
   assert.match(css,new RegExp(ring,'i'))
   assert.match(css,/Inter Tight/)
-  assert.match(css,/:where\(a, button, input, select, summary\):focus-visible/)
+  assert.match(css,/:where\(a, button, input, select, summary, video\):focus-visible/)
   assert.match(css,/outline: 2px solid var\(--ring\)/)
   assert.match(css,/\.mark \{[\s\S]*border: 3px solid var\(--ring\)/)
   assert.match(css,/\.primary \{ background: var\(--primary\); color: var\(--paper\)/)

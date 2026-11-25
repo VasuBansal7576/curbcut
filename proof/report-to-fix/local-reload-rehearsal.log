@@ -1,0 +1,20 @@
+{"stage":"unpatched local browser","at":"2026-11-25T06:45:00.155Z","extensionId":"dedigdaiopjfniegfjdiiemiandbichc","focus":[{"tag":"A","name":"","target":false},{"tag":"A","name":"","target":false},{"tag":"INPUT","name":"","target":false},{"tag":"BODY","name":"<p id=\"noJavascript\">You","target":false},{"tag":"A","name":"","target":false},{"tag":"A","name":"","target":false},{"tag":"INPUT","name":"","target":false},{"tag":"BUTTON","name":"+","target":false},{"tag":"BUTTON","name":"–","target":false},{"tag":"A","name":"OpenStreetMap","target":false},{"tag":"BUTTON","name":"","target":false},{"tag":"A","name":"","target":false}],"checkboxVisible":false,"checked":true}
+{"stage":"same browser reloaded a temporary bundle","at":"2026-11-25T06:45:01.039Z","extensionId":"dedigdaiopjfniegfjdiiemiandbichc","patchId":"draft-7565c3d5-736d-48b1-b0e2-8c38afd36147","patchStatus":"locally-verified"}
+node:internal/modules/run_main:111
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+false !== true
+
+    at file:///Users/vasu/.t3/worktrees/Kane/t3-b9a59eca-60066a04fecd88e1/.curbcut/replay-report-reload.mjs:94:10 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.13.0

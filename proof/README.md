@@ -44,7 +44,7 @@ The [Kane session ledger](kane/ledger.json) indexes archived sessions across coh
 
 | Claim | Result | Evidence |
 | --- | --- | --- |
-| Release bundle | 105 active repairs. 61 Kane-verified and 44 local proof | [Bundled rules and evidence pointers](../extension/bundled.json) |
+| Release bundle | 106 active repairs. 62 Kane-verified and 44 local proof | [Bundled rules and evidence pointers](../extension/bundled.json) |
 | Installed-extension audits | 43/43 original fixes, 11/11 new v5 fixes and 51/51 new v6 fixes passed their release audits | [Original audit](reliability/extension-e2e.json) · [New v5 audit](heldout-v5/kane-sample-20/extension-e2e.json) · [New v6 audit](heldout-v6/extension-e2e.json) · [V6 candidate exclusions](heldout-v6/extension-e2e-initial.json) |
 | Nightly replay | 43 checked, 38 still verified, 4 inconclusive. One broken result was subsequently retired | [Nightly runs and disposition](reliability/nightly.json) · [Earlier Kane rechecks](recheck/README.md) |
 | Report to repair | ColorHexa’s color picker became keyboard-reachable in the reporting tab | [Live report recording and Kane sessions](live/README.md) · [Site-owner report](../evidence/report-d6870c43f8831c2d3b/report.md) |

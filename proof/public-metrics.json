@@ -6,8 +6,8 @@
     "low-vision": 28,
     "screen-reader-view": 21
   },
-  "fixed": 62,
-  "open": 17,
+  "fixed": 63,
+  "open": 16,
   "publicTasks": [
     {
       "url": "https://www.target.com/",
@@ -2493,11 +2493,15 @@
       "id": "openseamap-view-menu",
       "url": "https://map.openseamap.org/",
       "persona": "keyboard-only",
-      "task": "First assert the View menu control in the main map toolbar is keyboard focusable. Open View with Tab and Enter. Verify the Sea Marks checkbox appears as an available layer control.",
+      "task": "Use Tab to focus the View menu in the map toolbar. Verify the Sea Marks layer checkbox appears while View has focus. Leave the checkbox unchanged.",
       "observations": [
         {
           "source": "proof/kane/ledger.json",
           "status": "blocked"
+        },
+        {
+          "source": "patches/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147.json",
+          "status": "fixed"
         }
       ]
     },

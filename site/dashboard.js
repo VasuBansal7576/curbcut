@@ -5,16 +5,6 @@ const next = document.querySelector('#next')
 const count = document.querySelector('#count')
 const player = document.querySelector('#player')
 const video = player.querySelector('video')
-const film = document.querySelector('#film')
-const startFilm = document.querySelector('#start-film')
-film.controls = false
-startFilm.hidden = false
-startFilm.addEventListener('click', () => {
-  film.controls = true
-  film.focus()
-  film.play().catch(() => {})
-  startFilm.hidden = true
-})
 const pageSize = 5
 let page = 0
 
@@ -58,10 +48,12 @@ document.addEventListener('click', event => {
   const link = event.target.closest('a[data-recording]')
   if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return
   event.preventDefault()
-  document.querySelector('#film').pause()
   document.querySelector('#player-title').textContent = link.dataset.recording
   document.querySelector('#original').href = link.href
-  video.src = link.href
+  const row = link.closest('.replay')
+  const clip = link.dataset.phase === 'before' ? row?.dataset.previewBefore :
+    link.dataset.phase === 'after' ? row?.dataset.previewAfter : null
+  video.src = link.dataset.preview || clip || link.href
   player.showModal()
   video.play().catch(() => {})
 })

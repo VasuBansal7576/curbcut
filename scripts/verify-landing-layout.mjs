@@ -1,4 +1,3 @@
-import assert from 'node:assert/strict'
 import {chromium} from 'playwright'
 import {serve} from '../core/server.mjs'
 
@@ -6,10 +5,10 @@ const server = await serve(Number(process.env.CURBCUT_LAYOUT_PORT ?? 43824))
 const browser = await chromium.launch({channel:'chromium',args:['--mute-audio']})
 try {
   for (const width of [390,1440]) {
-    const page = await browser.newPage({viewport:{width,height:width === 390 ? 844 : 900}})
+    const page = await browser.newPage({viewport:{width,height:width === 390 ? 844 : 900},reducedMotion:'reduce'})
     await page.goto('http://127.0.0.1:'+server.address().port+'/site/')
     await page.evaluate(() => document.fonts.ready)
-    await page.waitForSelector('.site-switcher:visible')
+    await page.waitForSelector('h1:visible')
     const samples = await page.evaluate(async () => {
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT)
       const ranges = []
@@ -33,7 +32,8 @@ try {
         for (const {range,group,node} of ranges) {
           for (const rect of range.getClientRects()) {
             const left = Math.max(0,rect.left), right = Math.min(innerWidth,rect.right)
-            const top = Math.max(0,rect.top), bottom = Math.min(innerHeight,rect.bottom)
+            const box = node.parentElement.getBoundingClientRect()
+            const top = Math.max(0,rect.top,box.top), bottom = Math.min(innerHeight,rect.bottom,box.bottom)
             if (right <= left || bottom <= top) continue
             for (const other of visible) {
               if (group !== other.group && left < other.right && right > other.left && top < other.bottom && bottom > other.top) {
@@ -47,15 +47,7 @@ try {
         if (y >= last) return samples
       }
     })
-    const buttons = page.locator('.site-switcher button')
-    assert.equal(await buttons.count(),3)
-    for (const button of await buttons.all()) {
-      await button.focus()
-      await page.keyboard.press('Enter')
-      assert.equal(await page.locator('.replay:visible').count(),1)
-      assert.equal(await page.locator('.replay:visible h3').textContent(),await button.textContent())
-    }
-    console.log(width+'px: '+samples+' scroll positions and three site selections passed.')
+    console.log(width+'px: '+samples+' scroll positions without text collisions.')
     await page.close()
   }
 } finally {

@@ -1,7 +1,9 @@
+import assert from 'node:assert/strict'
 import path from 'node:path'
 import {readdir,readFile} from 'node:fs/promises'
 import {ROOT,readJSON,saveJSON} from '../core/io.mjs'
 import {parseRun} from '../core/kane.mjs'
+import {reviewRecordedJourney} from './recorded-journey.mjs'
 
 export async function archiveKane() {
   const roots=['proof/kane','proof/heldout-v3/runs','proof/hard-v4/kane','proof/hard-v4/kane-objective-pilot',
@@ -22,11 +24,25 @@ export async function archiveKane() {
     const parsed=parseRun({stdout,code:result.exitCode})
     const agrees=parsed.runId===result.runId && parsed.status===(result.kaneStatus??result.status) && result.evidenceValid===true &&
       (parsed.status===result.status || result.browserVerdict?.status===result.status)
-    const status=agrees?result.status:'inconclusive'
+    const reviewFile=path.join(directory,'trace-review.json')
+    const review=await readJSON(path.join(ROOT,reviewFile)).catch(error=>{
+      if(error.code!=='ENOENT') throw error
+      return null
+    })
+    if(review) {
+      const candidate=await readJSON(path.join(ROOT,path.dirname(directory),'candidate.json'))
+      assert.equal(path.basename(directory),'after')
+      assert.equal(candidate.id,file.split(path.sep)[0])
+      assert(agrees && result.status==='inconclusive' && result.integrity==='complete-journey-not-witnessed')
+      const checked=await reviewRecordedJourney({directory,task:candidate,persona:candidate.persona,patch:candidate})
+      assert.deepEqual(review,checked.review)
+    }
+    const status=review?.browserVerdict.status??(agrees?result.status:'inconclusive')
     return {
       taskId:file.split(path.sep)[0], phase:path.basename(directory).replace(/^(before|control|after)-[12]$/,'$1'), sessionId:result.runId??null, status,
       ...(status!==result.status?{recordedStatus:result.status}:{}),
-      reason:result.integrity??result.reason??null, credits:result.credits??null,
+      ...(review?{traceReview:reviewFile,originalReason:result.integrity}:{}),
+      reason:review?.browserVerdict.basis??result.integrity??result.reason??null, credits:result.credits??null,
       result:resultFile, recording:result.video??null, evidencePack:result.evidencePack??null
     }
   }))

@@ -19,8 +19,9 @@ export function serve(port=4317) {
   const server=http.createServer(async(req,res)=>{
     const json=(code,data)=>{res.writeHead(code,{'Content-Type':'application/json'});res.end(JSON.stringify(data))}
     try {
-      if(req.headers.host!=='127.0.0.1:'+port && req.headers.host!=='localhost:'+port) return json(403,{error:'Local host required'})
-      const url=new URL(req.url,'http://127.0.0.1:'+port)
+      const boundPort=server.address().port
+      if(req.headers.host!=='127.0.0.1:'+boundPort && req.headers.host!=='localhost:'+boundPort) return json(403,{error:'Local host required'})
+      const url=new URL(req.url,'http://127.0.0.1:'+boundPort)
       if(['OPTIONS','POST'].includes(req.method) && ['/instant/decide','/instant/queue','/instant/name','/instant/language','/instant/stuck','/instant/state','/instant/glance','/instant/finder'].includes(url.pathname)) {
         const origin=req.headers.origin
         if(origin && !/^chrome-extension:\/\/[a-p]{32}$/.test(origin)) return json(403,{error:'Extension only'})

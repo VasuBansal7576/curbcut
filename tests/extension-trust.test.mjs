@@ -1,11 +1,11 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import {mkdtemp,readdir,readFile,rm} from 'node:fs/promises'
+import {cp,mkdtemp,readdir,readFile,rm,writeFile} from 'node:fs/promises'
 import {tmpdir} from 'node:os'
 import path from 'node:path'
 import {runInNewContext} from 'node:vm'
 import {chromium} from 'playwright'
-import {enqueueDraft} from '../core/jev-queue.mjs'
+import {enqueueDraft,verifyQueue} from '../core/jev-queue.mjs'
 import {ROOT,readJSON} from '../core/io.mjs'
 import {serve} from '../core/server.mjs'
 
@@ -85,6 +85,86 @@ test('a barrier draft is stored on the local verification queue',async()=>{
   await rm(file,{force:true})
 })
 
+test('verify-queue turns a saved report into a measured task without editing the draft',async()=>{
+  const server=await serve(0)
+  const origin='http://127.0.0.1:'+server.address().port
+  const url=origin+'/fixtures/shop/'
+  const report={url,title:'Stillroom Supply',persona:'keyboard-only',task:'Search for headphones and add Field Headphones to the cart. Confirm Cart (1).'}
+  let file
+  try {
+    const response=await fetch(origin+'/tasks/draft',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(report)})
+    assert.equal(response.status,202)
+    const {id}=await response.json()
+    file=path.join(ROOT,'.curbcut/instant-queue',id+'.json')
+    let calls=0
+    const options={id,authenticate:async()=>{},repair:async(task,options)=>{
+      calls++
+      assert.equal(task.id,id)
+      assert.equal(task.url,url)
+      assert.equal(task.task,report.task)
+      assert.equal(task.observedSelector,'.add-to-cart')
+      assert.equal(task.probe.action,'click')
+      assert.deepEqual(task.outcomeChecks,[{kind:'text',selector:'#cart-status',equals:'Field Headphones added to cart.'}])
+      assert.equal(options.agentOnly,true)
+      return {status:'verified'}
+    }}
+    assert.deepEqual(await verifyQueue(options),[{id,status:'verified'}])
+    assert.deepEqual(await verifyQueue(options),[])
+    assert.equal(calls,1)
+    const saved=await readJSON(file)
+    assert.equal(saved.status,'verified')
+    assert.deepEqual(saved.report,report)
+    assert.equal(saved.task.observedSelector,'.add-to-cart')
+  } finally {
+    if(file) await rm(file,{force:true})
+    await new Promise(resolve=>server.close(resolve))
+  }
+})
+
+test('reloading the unpacked extension refreshes the patch bundle in the same profile',async()=>{
+  const directory=await mkdtemp(path.join(tmpdir(),'curbcut-reload-'))
+  const extension=path.join(directory,'extension')
+  const server=await serve(0)
+  let context
+  try {
+    await cp(path.join(ROOT,'extension'),extension,{recursive:true})
+    const constants=path.join(extension,'lib/constants.js')
+    const settings=await readFile(constants,'utf8')
+    await writeFile(constants,settings.replace('http://127.0.0.1:4317/patches/index.json',
+      'http://127.0.0.1:'+server.address().port+'/disabled-feed'))
+    const bundled=path.join(extension,'bundled.json')
+    await writeFile(bundled,'[]')
+    context=await chromium.launchPersistentContext(path.join(directory,'profile'),{channel:'chromium',headless:true,
+      args:['--disable-extensions-except='+extension,'--load-extension='+extension,'--disable-background-networking']})
+    const worker=context.serviceWorkers().find(worker=>worker.url().startsWith('chrome-extension:'))??
+      await context.waitForEvent('serviceworker',{timeout:8000})
+    assert.deepEqual(await worker.evaluate(async()=> (await ensureSeeded()).patches),[])
+    const patch=await readJSON(path.join(ROOT,'patches/v4-86f207deeb57-7bc09a21.json'))
+    await writeFile(bundled,JSON.stringify([patch]))
+    const manager=await context.newPage()
+    await manager.goto('chrome://extensions/')
+    await manager.evaluate(()=>new Promise(resolve=>chrome.developerPrivate.updateProfileConfiguration({inDeveloperMode:true},resolve)))
+    await manager.close()
+    const restarted=context.waitForEvent('serviceworker',{predicate:item=>item.url()===worker.url(),timeout:8000})
+    await worker.evaluate(()=>chrome.runtime.reload()).catch(()=>{})
+    const next=await restarted
+    const ids=await next.evaluate(async id=>{
+      for(let attempt=0;attempt<40;attempt++) {
+        const {patches}=await chrome.storage.local.get('patches')
+        if(patches?.some(patch=>patch.id===id)) return patches.map(patch=>patch.id)
+        await new Promise(resolve=>setTimeout(resolve,100))
+      }
+    },patch.id)
+    assert.deepEqual(ids,[patch.id])
+  } finally {
+    try {await context?.close()}
+    finally {
+      await rm(directory,{recursive:true,force:true})
+      await new Promise(resolve=>server.close(resolve))
+    }
+  }
+})
+
 test('popup lists retired site-fixed notices, Kane proof, and saves a barrier draft without a Jev key',async()=>{
   let server
   try {server=await serve()} catch(error) {
@@ -147,6 +227,69 @@ test('popup lists retired site-fixed notices, Kane proof, and saves a barrier dr
     }
     assert.ok(drafts.length || await reportPopup.getByText(/extension and will retry/).count(),'A draft should be queued or held in extension storage.')
     for(const name of drafts) await rm(path.join(ROOT,'.curbcut/instant-queue',name),{force:true})
+  } finally {
+    try {await context?.close()}
+    finally {
+      await rm(profile,{recursive:true,force:true})
+      server?.close()
+    }
+  }
+},{timeout:60000})
+
+test('popup loads inline Kane clips for a verified fix',async()=>{
+  let server
+  try {server=await serve()} catch(error) {
+    if(error.code!=='EADDRINUSE') throw error
+    server=await serve(0)
+  }
+  const profile=await mkdtemp(path.join(tmpdir(),'curbcut-clip-'))
+  const extension=path.resolve('extension')
+  const shop='http://127.0.0.1:4317/fixtures/shop/'
+  const origin='http://127.0.0.1:'+server.address().port+'/'
+  const donor=await readJSON(path.join(ROOT,'patches/keyboard-add-headphones.json'))
+  const verified={...donor,status:'verified',
+    evidence:{...donor.evidence,before:'proof/local/keyboard-only/before.mp4',after:'proof/local/keyboard-only/after.mp4',
+      control:'proof/local/keyboard-only/control.mp4'}}
+  let context
+  try {
+    context=await chromium.launchPersistentContext(profile,{channel:'chromium',headless:true,
+      args:['--disable-extensions-except='+extension,'--load-extension='+extension,'--disable-background-networking']})
+    const worker=context.serviceWorkers().find(item=>item.url().startsWith('chrome-extension:'))??
+      await context.waitForEvent('serviceworker',{predicate:item=>item.url().startsWith('chrome-extension:'),timeout:8000})
+    await worker.evaluate(async ()=>{
+      const start=Date.now()
+      while(Date.now()-start<8000) {
+        const {lastFeedAt}=await chrome.storage.local.get('lastFeedAt')
+        if(lastFeedAt) return
+        await new Promise(resolve=>setTimeout(resolve,50))
+      }
+    })
+    await worker.evaluate(async ({patches,evidenceBase})=>{
+      await chrome.storage.local.set({patches,demoPatches:[],lastFeedAt:new Date().toISOString(),enabled:true,evidenceBase})
+    },{patches:[verified],evidenceBase:origin})
+    const page=context.pages()[0]??await context.newPage()
+    await page.goto(shop,{waitUntil:'domcontentloaded',timeout:15000})
+    const tabId=await worker.evaluate(async href=>{
+      const tabs=await chrome.tabs.query({})
+      return tabs.find(tab=>tab.url===href)?.id??null
+    },shop)
+    assert.ok(tabId)
+    await worker.evaluate(async tabId=>{
+      await chrome.storage.local.set({pendingStuck:true,capturedTabId:tabId})
+    },tabId)
+    const popup=await context.newPage()
+    await popup.goto(new URL('popup.html',worker.url()).href)
+    const video=popup.locator('#active-patches video')
+    await video.first().waitFor({state:'attached',timeout:15000})
+    assert.ok(await video.count()>=2)
+    const src=await video.first().getAttribute('src')
+    assert.match(src,/proof\/local\/keyboard-only\/before\.mp4/)
+    assert.equal(await video.first().getAttribute('aria-label'),'Before recording')
+    assert.equal(await video.first().getAttribute('muted'),'')
+    await popup.locator('#active-patches video').nth(1).evaluate(node=>{
+      node.muted=true
+      node.pause()
+    })
   } finally {
     try {await context?.close()}
     finally {

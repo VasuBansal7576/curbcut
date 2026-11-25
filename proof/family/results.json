@@ -1,0 +1,264 @@
+{
+  "generatedAt": "2026-11-25T05:25:12.340Z",
+  "template": "rust-book-reflow",
+  "familyName": "Reflow overflow",
+  "familyId": "reflow",
+  "sites": [
+    {
+      "url": "https://doc.rust-lang.org/book/ch01-02-hello-world.html",
+      "id": "rust-book-reflow",
+      "persona": "low-vision",
+      "before": {
+        "status": "fail",
+        "reason": "The target does not fit the visible width."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "status": "repaired",
+      "patch": {
+        "id": "rust-book-reflow",
+        "url": "https://doc.rust-lang.org/book/ch01-02-hello-world.html",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels, read the passage beginning \u201c> dir /B %= the /B option says to only show\u201d. Verify the complete passage fits within the visible width using vertical scrolling only.",
+        "controlTask": "At normal width, read the passage beginning \u201c> dir /B %= the /B option says to only show\u201d and verify all its text is visible without horizontal scrolling.",
+        "observedSelector": "#mdbook-content > main > pre:nth-of-type(9)",
+        "outcomeChecks": [
+          {
+            "kind": "contains",
+            "selector": "#mdbook-content > main > pre:nth-of-type(9)",
+            "equals": "> dir /B %= the /B option says to only show"
+          },
+          {
+            "kind": "fits-width",
+            "selector": "#mdbook-content > main > pre:nth-of-type(9)"
+          }
+        ],
+        "probe": {
+          "action": "read"
+        },
+        "site": "doc.rust-lang.org",
+        "match": "https://doc.rust-lang.org/book/ch01-02-hello-world.html",
+        "barrier": "At 320 CSS pixels, white-space: pre keeps the CMD passage on an unwrapped line, giving the code block a scroll width of 532 px within 280 px of visible width.",
+        "rules": [
+          {
+            "selector": "code.language-cmd.hljs",
+            "action": "injectCSS",
+            "value": {
+              "white-space": "pre-wrap"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {
+          "repairMethod": "inheritance",
+          "templateId": "8af0bf46843848432f7e",
+          "inherited-from": "rust-book-reflow",
+          "localMeasurement": "proof/family/sites/rust-book-reflow/local-repair.json"
+        },
+        "history": []
+      },
+      "verdicts": [
+        {
+          "templateId": "8af0bf46843848432f7e",
+          "source": "rust-book-reflow",
+          "rules": [
+            {
+              "selector": "code.language-cmd.hljs",
+              "action": "injectCSS",
+              "value": {
+                "white-space": "pre-wrap"
+              }
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the read action."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the read action."
+          }
+        }
+      ],
+      "reason": "inconclusive",
+      "verification": {
+        "minimumVerified": 3,
+        "oneIn": 5,
+        "seed": "curbcut-family-v1",
+        "verifiedInstances": 1,
+        "mode": "full"
+      },
+      "kane": {
+        "status": "inconclusive",
+        "reason": "Maximum steps exceeded (11/9)",
+        "before": {
+          "status": "inconclusive",
+          "reason": "Maximum steps exceeded (11/9)"
+        }
+      },
+      "kaneReason": "Maximum steps exceeded (11/9)"
+    },
+    {
+      "url": "https://doc.rust-lang.org/book/ch01-03-hello-cargo.html",
+      "id": "family-642da9dc87705f33",
+      "persona": "low-vision",
+      "before": {
+        "status": "fail",
+        "reason": "The target does not fit the visible width."
+      },
+      "control": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "status": "repaired",
+      "patch": {
+        "id": "family-642da9dc87705f33",
+        "url": "https://doc.rust-lang.org/book/ch01-03-hello-cargo.html",
+        "persona": "low-vision",
+        "task": "At 320 CSS pixels, read the preformatted code and verify it fits within the visible width using vertical scrolling only.",
+        "controlTask": "At normal width, read the preformatted code and verify all its text is visible without horizontal scrolling.",
+        "observedSelector": "#mdbook-content > main > pre:nth-of-type(9)",
+        "outcomeChecks": [
+          {
+            "kind": "fits-width",
+            "selector": "#mdbook-content > main > pre:nth-of-type(9)"
+          }
+        ],
+        "probe": {
+          "action": "read"
+        },
+        "site": "doc.rust-lang.org",
+        "match": "https://doc.rust-lang.org/book/ch01-03-hello-cargo.html",
+        "barrier": "At 320 CSS pixels, white-space: pre keeps the CMD passage on an unwrapped line, giving the code block a scroll width of 532 px within 280 px of visible width.",
+        "rules": [
+          {
+            "selector": "code.language-console.hljs",
+            "action": "injectCSS",
+            "value": {
+              "white-space": "pre-wrap"
+            }
+          }
+        ],
+        "status": "candidate",
+        "evidence": {
+          "repairMethod": "inheritance",
+          "templateId": "8af0bf46843848432f7e",
+          "inherited-from": "rust-book-reflow",
+          "localMeasurement": "proof/family/sites/family-642da9dc87705f33/local-repair.json"
+        },
+        "history": []
+      },
+      "verdicts": [
+        {
+          "templateId": "8af0bf46843848432f7e",
+          "source": "rust-book-reflow",
+          "rules": [
+            {
+              "selector": "code.language-console.hljs",
+              "action": "injectCSS",
+              "value": {
+                "white-space": "pre-wrap"
+              }
+            }
+          ],
+          "after": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the read action."
+          },
+          "pointer": {
+            "status": "pass",
+            "reason": "Checked the declared outcome after the read action."
+          }
+        }
+      ],
+      "reason": "inconclusive",
+      "verification": {
+        "minimumVerified": 3,
+        "oneIn": 5,
+        "seed": "curbcut-family-v1",
+        "verifiedInstances": 1,
+        "mode": "full"
+      },
+      "kane": {
+        "status": "inconclusive",
+        "reason": "Objective completed",
+        "before": {
+          "status": "inconclusive",
+          "reason": "Objective completed"
+        }
+      },
+      "kaneReason": "Objective completed"
+    },
+    {
+      "url": "https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html",
+      "id": "family-180190a01f9d6259",
+      "persona": "low-vision",
+      "before": {
+        "status": "inconclusive",
+        "reason": "locator.isVisible: Error: strict mode violation: locator('code.language-rust.ignore') resolved to 19 elements:"
+      },
+      "control": {
+        "status": "inconclusive",
+        "reason": "locator.isVisible: Error: strict mode violation: locator('code.language-rust.ignore') resolved to 19 elements:"
+      },
+      "status": "drifted or blocked",
+      "reason": "locator.isVisible: Error: strict mode violation: locator('code.language-rust.ignore') resolved to 19 elements:"
+    },
+    {
+      "url": "https://doc.rust-lang.org/rust-by-example/hello.html",
+      "id": "family-48686604cbca83d2",
+      "persona": "low-vision",
+      "before": {
+        "status": "inconclusive",
+        "reason": "The unique target was not visible."
+      },
+      "control": {
+        "status": "inconclusive",
+        "reason": "The unique target was not visible."
+      },
+      "status": "drifted or blocked",
+      "reason": "The unique target was not visible."
+    },
+    {
+      "url": "https://doc.rust-lang.org/cargo/getting-started/installation.html",
+      "id": "family-626cd3e2f4cc636f",
+      "persona": "low-vision",
+      "before": {
+        "status": "inconclusive",
+        "reason": "The unique target was not visible."
+      },
+      "control": {
+        "status": "inconclusive",
+        "reason": "The unique target was not visible."
+      },
+      "status": "drifted or blocked",
+      "reason": "The unique target was not visible."
+    }
+  ],
+  "repaired": 2,
+  "scanned": 5,
+  "kane": {
+    "enabled": true,
+    "used": 48.301099999999906,
+    "balanceBefore": 1464.6433,
+    "balanceAfter": 1416.3422,
+    "floor": 1380,
+    "budget": 80,
+    "sites": [
+      {
+        "url": "https://doc.rust-lang.org/book/ch01-02-hello-world.html",
+        "id": "rust-book-reflow",
+        "spent": 23.82860000000005,
+        "status": "inconclusive"
+      },
+      {
+        "url": "https://doc.rust-lang.org/book/ch01-03-hello-cargo.html",
+        "id": "family-642da9dc87705f33",
+        "spent": 24.472499999999854,
+        "status": "inconclusive"
+      }
+    ]
+  }
+}

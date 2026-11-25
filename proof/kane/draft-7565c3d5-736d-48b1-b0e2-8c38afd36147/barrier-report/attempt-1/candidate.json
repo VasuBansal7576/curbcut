@@ -1,0 +1,69 @@
+{
+  "id": "draft-7565c3d5-736d-48b1-b0e2-8c38afd36147",
+  "url": "https://map.openseamap.org/",
+  "persona": "keyboard-only",
+  "task": "Use Tab to focus the View menu in the map toolbar. Verify the Sea Marks layer checkbox appears while View has focus. Leave the checkbox unchanged.",
+  "controlTask": "Hover over the View menu in the map toolbar. Verify the menu opens and makes the Sea Marks layer checkbox visible. Leave the checkbox unchanged.",
+  "observedSelector": "#topmenu > ul > li:has(> img[alt=\"view\"])",
+  "successSelector": "#checkLayerSeamark",
+  "outcomeChecks": [
+    {
+      "kind": "visible",
+      "selector": "#checkLayerSeamark"
+    }
+  ],
+  "barrierClass": 1,
+  "journey": [
+    {
+      "selector": "#topmenu > ul > li:has(> img[alt=\"view\"])",
+      "action": "focus",
+      "pointer": {
+        "action": "hover"
+      },
+      "checks": [
+        {
+          "kind": "visible",
+          "selector": "#checkLayerSeamark"
+        }
+      ]
+    },
+    {
+      "selector": "#checkLayerSeamark",
+      "action": "observe"
+    }
+  ],
+  "site": "map.openseamap.org",
+  "match": "https://map.openseamap.org/",
+  "barrier": "View toolbar item is a non-focusable li whose submenu opens only via CSS :hover (.menu li:hover > ul { display:block }), so Tab never reaches it and Sea Marks stays hidden",
+  "rules": [
+    {
+      "selector": "#topmenu > ul > li:has(> img[alt=\"view\"])",
+      "action": "makeFocusable"
+    },
+    {
+      "selector": "#topmenu > ul > li:has(> img[alt=\"view\"])",
+      "action": "setRole",
+      "value": "button"
+    },
+    {
+      "selector": "#topmenu > ul > li:has(> img[alt=\"view\"])",
+      "action": "mirrorHoverToFocus"
+    },
+    {
+      "selector": "#topmenu > ul > li:has(> img[alt=\"view\"])",
+      "action": "restoreFocusOutline"
+    },
+    {
+      "selector": "#topmenu > ul > li:has(> img[alt=\"view\"])",
+      "action": "addLabel",
+      "value": "View"
+    }
+  ],
+  "status": "candidate",
+  "evidence": {
+    "ladderRung": "small",
+    "ladderModel": "grok-4.5",
+    "repairMethod": "full-agent"
+  },
+  "history": []
+}

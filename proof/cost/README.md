@@ -99,7 +99,20 @@ Run `CURBCUT_AGENT=grok CURBCUT_MODEL=grok-4.6 node proof/cost/diff-v2.mjs` to r
 ## Running the cost controls
 
 - Run `curbcut cost` to summarize the JSON records written to `.curbcut/cost/` by `check`, `fix`, and `gate`. The per-run record includes the before and after Kane balance, the balance difference, and the token counting method. A missing balance yields an unknown total. Estimated prompt savings, skipped calls, and step budget changes are recorded separately from the observed balance.
-- Pass a JSON array of task objects to `curbcut fix` to group proposals by site and model. Set `CURBCUT_MODEL_SMALL` to try a smaller model on the first proposal. A failed local replay advances to the regular model.
+- Pass a JSON array of task objects to `curbcut fix` to group proposals by site and model. The agent ladder proposes with a small or fast model first (`grok-4.5`, or Codex at low effort) and retries once with the larger model (`grok-4.6`, or Codex at medium effort) when selector validation or the local before/after check fails. `CURBCUT_LADDER=off` disables it. `curbcut cost` sums `ladder.smallModelFixes` for repairs the small model handled alone.
 - [The family policy](../../core/cost-policy.json) requires three distinct Kane-verified instances. A hash of the seed, template, and instance selects approximately one in five subsequent instances for Kane verification. A selected instance that fails verification returns the family to full verification. Other instances can publish with local proof and the sampling decision. Kane-verified repairs carry sealed Kane evidence.
 - Repairs with a passing local pointer control can reuse the same URL’s sealed Kane mouse-control recording for the UTC day. The patch records the source task when a control is reused. A high-confidence bot challenge from the configured Jev preflight stops Kane verification.
 - [Archive step limits](../../core/step-limits.json) use the 95th percentile of decisive steps plus three, capped by the existing persona limit. Types with fewer than five observations use the existing default. Regenerate the table with `node proof/cost/step-limits.mjs`.
+
+## Prompt prefix caching
+
+The repair prompt now puts the instructions, DSL reference, and example in a fixed prefix. Task, failure, and DOM neighbourhood JSON follow that prefix. Two different tasks share the same prefix bytes. `recordCost` stores `cached_input_tokens` when the provider reports `cached_input_tokens` or `cache_read_input_tokens`.
+
+Two live grok-4.5 calls used that prefix (7,655 characters) with different task payloads and `--output-format json`.
+
+| Call | input_tokens | cache_read_input_tokens | cache_creation_input_tokens | output_tokens | total_tokens |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 1 | 12,447 | 7,808 | 0 | 952 | 21,207 |
+| 2 | 12,441 | 7,808 | 0 | 1,691 | 21,940 |
+
+Cached tokens did not increase on the second call. Both calls already read 7,808 cached input tokens, so the prefix was already in cache (cache creation was 0). The product parser now reads pretty-printed JSON usage as well as JSON lines.

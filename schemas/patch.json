@@ -655,6 +655,14 @@
           "minLength": 1,
           "maxLength": 240
         },
+        "ladderRung": {
+          "enum": ["small", "large"]
+        },
+        "ladderModel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
         "templateId": {
           "type": "string",
           "minLength": 1,

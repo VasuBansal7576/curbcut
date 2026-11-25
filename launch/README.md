@@ -10,7 +10,7 @@ The demo opens with the complete launch. At 1:15.5 it follows a developer using 
 
 The colour system uses Mist lilac, Damson, Signal orange and Slate plum. The physical Tab key shares its cap, spring and base with the landing page. Inter Tight carries the film typography and JetBrains Mono identifies sources. The original launch narration and 120 BPM score also supply the teaser. The developer chapter uses the same Kokoro voice and a new mix of the original score. [Benchmark study](direction/v8/benchmark.md) · [Colour and type sheet](direction/v8/palette-type.png) · [Music source](scripts/score.py)
 
-The 95.9% figure describes home pages with detectable accessibility failures. Curb Cut’s inventory contains 105 active fixes, including 61 Kane-verified and 44 with local proof. The Meridiano recording demonstrates two specific names. The separate review assessed fifteen names. [WebAIM Million](https://webaim.org/projects/million/) · [Bundled inventory](../extension/bundled.json) · [Jev evidence](../proof/jev/)
+The 95.9% figure describes home pages with detectable accessibility failures. The launch film describes the 105-fix inventory at recording time, including 61 Kane-verified and 44 with local proof. The current bundle has 106 fixes, including 62 Kane-verified and 44 with local proof. The Meridiano recording demonstrates two specific names. The separate review assessed fifteen names. [WebAIM Million](https://webaim.org/projects/million/) · [Bundled inventory](../extension/bundled.json) · [Jev evidence](../proof/jev/)
 
 ## Rebuild from the recorded soundtracks
 

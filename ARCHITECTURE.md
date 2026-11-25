@@ -27,7 +27,7 @@ flowchart LR
     queue -->|"verify-queue"| task
 ```
 
-The repair agent is selected with `CURBCUT_AGENT` (`codex`, the default, or `grok`). `check` derives a task from a URL and plain English, then runs the local oracle and the `fix` loop. `gate` replays configured tasks against a developer’s running app and prints failures for a coding agent to fix in source. Tasks with a declarative objective try inherited templates and deterministic recipes before requesting an agent proposal. Passing local repairs proceed to Kane verification or publish with local evidence under the family sampling policy. Tasks without a local objective use the Kane baseline to collect the failure. [Live loop](core/loop.mjs) · [Cost policy and replay](proof/cost/README.md)
+The repair agent is selected with `CURBCUT_AGENT` (`codex`, the default, or `grok`). `check` derives a task from a URL and plain English, then runs the local oracle and the `fix` loop. `gate` replays configured tasks against a developer’s running app and prints failures for a coding agent to fix in source. Tasks with a declarative objective try inherited templates and deterministic recipes before requesting an agent proposal. The agent tries a small or fast model first and retries once with a larger model when selector validation or the local before/after check fails (`CURBCUT_LADDER=off` disables this). Passing local repairs proceed to Kane verification or publish with local evidence under the family sampling policy. `curbcut family` applies one inherited template across sites that share a platform or theme and writes one owner report. Tasks without a local objective use the Kane baseline to collect the failure. [Live loop](core/loop.mjs) · [Cost policy and replay](proof/cost/README.md)
 
 The pull request action waits for a preview URL, runs the gate, uploads Kane recordings, and posts one sticky comment. [PR bot](docs/pr-bot.md)
 
@@ -72,4 +72,4 @@ The nightly local recheck retires a verified rule when the original task passes 
 | [`fixtures/`](fixtures/) and [`examples/`](examples/) | Local test pages, example nightly schedule, and pull request workflow |
 | [`site/`](site/) and [`launch/`](launch/) | Evidence dashboard, film, screenshots and launch copy |
 | [`docs/`](docs/) and [`.github/`](.github/) | Original build brief, agent gate, pull request bot, and Pages workflow |
-| [`curbcut.mjs`](curbcut.mjs) | CLI entry point: `fix`, `check`, `gate`, `cost`, `report`, `recheck` |
+| [`curbcut.mjs`](curbcut.mjs) | CLI entry point: `fix`, `check`, `gate`, `family`, `cost`, `report`, `recheck` |

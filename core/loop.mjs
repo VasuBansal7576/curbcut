@@ -4,7 +4,7 @@ import {ROOT,instant,readJSON,saveJSON,command,relative} from './io.mjs'
 import {normalizeTask} from './task.mjs'
 import {runKane,requireKane} from './kane.mjs'
 import {preflight} from './preflight.mjs'
-import {propose,ProposalRejected,rejectRepeated} from './agent.mjs'
+import {propose,ProposalRejected,rejectRepeated,ladderEnabled,ladderRungs} from './agent.mjs'
 import {oracle,replayLane} from './probe.mjs'
 import validate from './validate.generated.cjs'
 import {recipes,inherited,bundledTemplates,digest} from './recipes.mjs'
@@ -96,14 +96,17 @@ export async function repairLocally(data,{base,replay=replayLane,write=propose,a
   let failure={...before,snapshot:withPointerContext(before.snapshot)},previous=null
   const previousAttempts=[]
   const infrastructure=new Map()
-  const small=process.env.CURBCUT_MODEL_SMALL
+  const ladder=ladderEnabled()?ladderRungs():null
+  const small=ladder?undefined:process.env.CURBCUT_MODEL_SMALL
   for(let index=1;index<=attempts;index++) {
     const proposal=path.join(base,'attempt-'+index)
     let patch
     try {
       const diff=nearMiss && index===1
+      const rung=ladder?index===1?undefined:'large':undefined
+      const model=ladder?index===1?undefined:ladder.large.model:index===1?small:undefined
       patch=await write(task,{...failure,nearMiss:diff?nearMiss:undefined,previousAttempts:[...previousAttempts]},previous,proposal,
-        {retryInvalid:Boolean(diff),model:index===1?small:undefined})
+        {retryInvalid:Boolean(diff),model,rung})
       if(diff) patch.evidence={repairMethod:'agent-diff',templateId:nearMiss.patch.evidence.templateId,'inherited-from':nearMiss.patch.evidence['inherited-from']}
       else patch.evidence={...patch.evidence,repairMethod:'full-agent'}
       if(!validate(patch) || patch.status!=='candidate' || !match(patch,task.url) || patch.id!==task.id) {
@@ -136,6 +139,10 @@ export async function repairLocally(data,{base,replay=replayLane,write=propose,a
     attempt.pointer=measured(pointer)
     if(pointer.status==='pass') {
       if(small && index===1) recordCost('small-model',{largeCallsAvoided:1})
+      if(ladder) {
+        const usedLarge=index>1 || patch.evidence?.ladderRung==='large'
+        recordCost('ladder',usedLarge?{largeModelFixes:1}:{smallModelFixes:1})
+      }
       await saveJSON(path.join(proposal,'candidate.json'),patch)
       return result('locally-fixed',after.reason,patch,relative(proposal))
     }
@@ -177,7 +184,7 @@ async function verifyRegisteredCandidate(task,patch,{dir,run,persist,progress,pr
   return {status:'verified',patch:verified,before,control,after}
 }
 
-async function familyDecision(task,patch,policy) {
+export async function familyDecision(task,patch,policy) {
   const templateId=patch.evidence.templateId
   if(!templateId || patch.evidence.repairMethod!=='inheritance') return null
   if(!Number.isSafeInteger(policy.minimumVerified) || policy.minimumVerified<1 ||

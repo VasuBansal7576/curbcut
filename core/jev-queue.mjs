@@ -7,6 +7,7 @@ import {fix,withLock} from './loop.mjs'
 import {requireKane} from './kane.mjs'
 import {match} from './engine.js'
 import {threshold} from './jev-policy.js'
+import {deriveTask} from './check.mjs'
 
 const queue=path.join(ROOT,'.curbcut/instant-queue')
 const actions=new Set(['mirrorHoverToFocus','mirrorHoverEventToFocus','makeFocusable','setRole','bindEnterToClick','restoreFocusOutline',
@@ -54,7 +55,7 @@ export async function enqueueDraft(report) {
   return {id,status:'draft'}
 }
 
-export function verifyQueue() {
+export function verifyQueue({id,repair=fix,authenticate=requireKane,progress}={}) {
   return withLock(async()=>{
     const names=await readdir(queue).catch(error=>{
       if(error.code==='ENOENT') return []
@@ -62,25 +63,40 @@ export function verifyQueue() {
     })
     const outcomes=[]
     for(const name of names.sort()) {
-      if(!/^instant-[a-f0-9-]{36}\.json$/.test(name)) continue
+      if(!/^(instant|draft)-[a-f0-9-]{36}\.json$/.test(name) || (id && name!==id+'.json')) continue
       const file=path.join(queue,name)
       const entry=await readJSON(file)
-      if(entry.status!=='queued') continue
+      const draft=name.startsWith('draft-')
+      if(entry.status!==(draft?'draft':'queued')) continue
+      let task=entry.task
+      if(draft) {
+        try {
+          task={...await deriveTask({...task,task:entry.report?.task}),id:task.id}
+        } catch(error) {
+          await saveJSON(file,{...entry,checkedAt:instant(),error:error.message})
+          outcomes.push({id:task.id,status:'draft',reason:error.message})
+          continue
+        }
+      }
       const published=await readJSON(path.join(ROOT,'patches',name)).catch(error=>{
         if(error.code!=='ENOENT') throw error
       })
-      if(published?.status==='verified' && JSON.stringify(published.rules)===JSON.stringify(entry.patch.rules)) {
-        await saveJSON(file,{...entry,status:'verified',checkedAt:instant(),result:{patch:published}})
-        outcomes.push({id:entry.task.id,status:'verified'})
+      const same=draft?['id','url','persona','task'].every(key=>published?.[key]===task[key]):
+        JSON.stringify(published?.rules)===JSON.stringify(entry.patch.rules)
+      if(published?.status==='verified' && same) {
+        await saveJSON(file,{...entry,task,status:'verified',checkedAt:instant(),result:{patch:published}})
+        outcomes.push({id:task.id,status:'verified'})
         continue
       }
-      await requireKane()
-      const directory=path.join(ROOT,'proof/kane',entry.task.id,'instant-queue')
-      const provenance={priorAgentProposal:'TypeSafe '+entry.model,sourceLocalRun:'.curbcut/instant-queue/'+name,
-        confidence:entry.confidence,localOracle:null}
-      const result=await fix(entry.task,{base:directory,registeredCandidate:entry.patch,provenance})
-      await saveJSON(file,{...entry,status:result.status,checkedAt:instant(),result})
-      outcomes.push({id:entry.task.id,status:result.status})
+      await authenticate()
+      const directory=path.join(ROOT,'proof/kane',task.id,draft?'barrier-report':'instant-queue')
+      const result=await repair(task,{base:directory,progress,...(draft?{agentOnly:true}:{
+        registeredCandidate:entry.patch,provenance:{priorAgentProposal:'TypeSafe '+entry.model,
+          sourceLocalRun:'.curbcut/instant-queue/'+name,confidence:entry.confidence,localOracle:null}
+      })})
+      const {error,...saved}=entry
+      await saveJSON(file,{...saved,task,status:result.status,checkedAt:instant(),result})
+      outcomes.push({id:task.id,status:result.status})
     }
     return outcomes
   })

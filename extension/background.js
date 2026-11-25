@@ -345,7 +345,7 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.alarms.create(Ext.FEED_ALARM, {
     periodInMinutes: Ext.FEED_PERIOD_MINUTES,
   });
-  ensureSeeded().catch(() => {});
+  refreshFeeds().catch(() => {});
 });
 
 chrome.runtime.onStartup.addListener(() => {

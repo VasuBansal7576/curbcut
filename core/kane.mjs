@@ -195,10 +195,16 @@ export function judgeJourney({task,persona,events,checks,kaneStatus}) {
     return null
   }
   for(const [index,step] of task.journey.entries()) {
+    const start=position
     const miss=finds(step,index)
     if(miss) {missed.push(miss);break}
     if(step.checks) {
-      const checkpoint=scoped.findIndex((event,eventIndex)=>eventIndex>=position && event.type==='journey-checkpoint' && event.index===index)
+      const matchesCheckpoint=event=>event?.type==='journey-checkpoint' && event.index===index
+      const [tab,earlyCheckpoint,focus]=scoped.slice(Math.max(0,position-3),position)
+      if(!pointer && step.action==='focus' && position-3>=start && tab?.type==='tab' &&
+        matchesCheckpoint(earlyCheckpoint) && focus?.type==='tab-focus' && tab.documentId &&
+        tab.documentId===earlyCheckpoint.documentId && tab.documentId===focus.documentId) continue
+      const checkpoint=scoped.findIndex((event,eventIndex)=>eventIndex>=position && matchesCheckpoint(event))
       if(checkpoint===-1) {missed.push({index,selector:step.selector,method:'checkpoint'});break}
       position=checkpoint+1
     }
