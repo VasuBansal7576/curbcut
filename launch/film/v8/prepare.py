@@ -49,6 +49,8 @@ nav("menu",PLATES/"mass-on-10.png",(60,683,742,1603))
 Image.open(A2/"mass-before.jpg").save(WORK/"wide.png")
 brand("switchOff", LAUNCH/"direction/v8/source/switch-off.png")
 brand("switchOn", LAUNCH/"direction/v8/source/switch-on.png")
+brand("sharedFix", PLATES/"popup-proof-and-report.png",(101,904,1857,1956))
+brand("recordingLinks", PLATES/"popup-proof-and-report.png",(168,1847,1284,1964))
 brand("report", PLATES/"owner-report.png",(68,35,1535,553))
 for name, file, crop in [
     ("arrow","munich",(0,670,100,770)),("dots","meridiano",(284,130,332,178)),
@@ -64,6 +66,8 @@ for name in ["foot","spring","cap"]:
 
 kane = "proof/hard-v4/kane/v4-86f207deeb57-7bc09a21/"
 clips = {
+    "mouseControl":("launch/footage/check-kane-control.mp4",37,10,"crop=1280:720:0:0"),
+    "destination":(kane+"attempt-1/after/recording.mp4",85.8,3,"crop=1280:720:0:0"),
     "fail":(kane+"before/recording.mp4",90.5,10,"crop=1280:720:0:0"),
     "pass":(kane+"attempt-1/after/recording.mp4",69,13,"crop=1280:720:0:0"),
     "checkTerm":("launch/footage/check.mp4",0,12,"crop=1520:648:36:86"),
