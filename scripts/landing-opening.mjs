@@ -1,39 +1,71 @@
-export function opening({download, repo, count}) {
-  return `<header class="mast"><div class="frame mast-inner">
-    <a class="wordmark" href="#opening" aria-label="Curb Cut home"><i class="mark" aria-hidden="true"></i>Curb Cut</a>
-    <nav aria-label="Main navigation"><a href="#repair">The repair</a><a href="#evidence">Fix library <span class="nav-count">${count}</span></a></nav>
-  </div></header>
-  <section class="opening" id="opening" aria-labelledby="title"><div class="opening-stage"><div class="hero frame">
-    <div class="hero-copy"><p class="overline"><i class="square" aria-hidden="true"></i> Mass.edu · Keyboard navigation</p>
-    <h1 id="title"><span data-barrier>The menu<br> <span class="landing-word">stays shut.</span></span><span data-answer hidden>Tab opens<br> <span class="landing-word">the menu.</span></span></h1>
-    <p class="summary"><span data-barrier>For people who use a keyboard, a screen reader or zoom, a menu can turn a website into a dead end.</span><span data-answer hidden>Curb Cut is a Chrome extension that opens mouse-only menus, names buttons and makes faint text readable as you browse.</span></p>
-    <div class="actions"><a class="install" href="${download}" download><span class="download-icon" aria-hidden="true"></span>Install for Chrome</a>
-    <a class="text-action" href="${repo}">GitHub <span aria-hidden="true">↗</span></a></div></div>
-    <div class="mechanism"><figure class="hero-display">
-      <div class="recording-label"><i class="rec-dot" aria-hidden="true"></i>Mass.edu <span>Recorded keystroke</span></div>
-      <div class="hero-lens"><video class="hero-footage" width="758" height="358" preload="none" muted playsinline poster="assets/story/about-closed.webp" aria-label="Mass.edu’s About menu before the repair"></video></div>
-      <figcaption><span data-barrier>Tab reaches About. Its links stay hidden.</span><span data-answer hidden>The same key reveals The DHE.</span></figcaption>
-      </figure><div class="drawing" aria-hidden="true"><div class="shadow"></div><div class="assembly">${['foot','spring','cap'].map(layer=>`<img class="key-${layer}" src="assets/tab/${layer}-small.webp" width="520" height="473" alt="">`).join('')}</div></div>
-    </div>
-  </div><div class="hero-foot frame"><a class="next-key" href="#repair"><span class="down" aria-hidden="true">↓</span> Try the repair</a><span class="foot-domain">Massachusetts Department of Higher Education</span></div></div></section>`
+const icons={
+ download:'<path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/>',
+ arrow:'<path d="M5 12h14m-5-5 5 5-5 5"/>',
+ external:'<path d="M6 18 18 6M7 6h11v11"/>',
+ menu:'<path d="M3 7h18M3 16h18"/>',
+ chrome:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.6"/><path d="M12 8.4h8.2M8.9 13.8 4.7 6.6M15.1 13.8l-4.2 7.1"/>',
+ back:'<path d="m13 5-7 7 7 7M6 12h14"/>',
+ forward:'<path d="m11 5 7 7-7 7M18 12H4"/>',
+ reload:'<path d="M20 11a8 8 0 1 0-2.7 7M20 4v7h-7"/>',
+ tune:'<path d="M3 8h9m5 0h4M3 16h4m5 0h9"/><circle cx="14" cy="8" r="2.3"/><circle cx="9" cy="16" r="2.3"/>',
+ puzzle:'<path d="M4 5h5a3 3 0 1 1 6 0h4v5a3 3 0 1 1 0 6v4h-5a3 3 0 1 0-6 0H4z"/>',
+ star:'<path d="m12 3 2.8 5.9 6.5.9-4.7 4.6 1.1 6.4-5.7-3-5.7 3 1.1-6.4-4.7-4.6 6.5-.9z"/>',
+ dots:'<circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/>',
+ globe:'<circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/>',
+ keyboard:'<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M5 9h1m2 0h1m2 0h1m2 0h1m2 0h1M6 12h1m2 0h1m2 0h1m2 0h1m-8 4h8"/>',
+ sound:'<path d="M2 11v2m4-6v10m4-14v18m4-16v14m4-11v8m4-6v4"/>',
+ contrast:'<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor"/>',
+ fail:'<path d="m7 7 10 10M17 7 7 17"/>',
+ pass:'<path d="m5 12 4.5 4.5L19 7"/>'
+};
+export function icon(id, size=20) {
+  return `<svg aria-hidden="true" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${icons[id]}</svg>`
 }
 
-export function repair({recordings, link}) {
-  const before = recordings.find(run=>run.phase==='before')
-  const after = recordings.find(run=>run.phase==='after')
-  return `<section class="repair" id="repair" aria-labelledby="case-title"><div class="case-stage frame">
-    <div class="case-top"><p class="overline"><i class="square" aria-hidden="true"></i> A keyboard repair</p><a href="https://www.mass.edu/">Massachusetts Department of Higher Education <span aria-hidden="true">↗</span></a></div>
-    <div class="case-grid"><div class="case-copy"><h2 id="case-title">Behind a<br> closed menu.</h2>
-    <p>On Mass.edu, a mouse could open the About menu. A keyboard couldn’t reach its first link, “The DHE.”</p>
-    <p class="try-copy">Try the About menu with <kbd>↓</kbd>, then switch on the fix and press <kbd>Tab</kbd> from About.</p>
-    <button type="button" class="repair-switch" role="switch" aria-checked="false" aria-label="Curb Cut repair" aria-controls="capture" hidden><i aria-hidden="true"></i><span>Curb Cut off</span></button>
-    </div>
-    <figure class="specimen"><div class="capture-head"><span><i class="rec-dot" aria-hidden="true"></i> Recorded site</span><span>www.mass.edu</span></div>
-    <div class="capture" id="capture"><div class="viewport"><img src="assets/story/mass-off-10-1080.webp" srcset="assets/story/mass-off-10-560.webp 560w, assets/story/mass-off-10-1080.webp 1080w" sizes="(max-width:500px) 139vw, (max-width:760px) 96vw, 58vw" width="1400" height="980" alt="Mass.edu’s About menu in the closed state" loading="lazy">
-    <img class="open-capture" src="assets/story/mass-on-10-1080.webp" srcset="assets/story/mass-on-10-560.webp 560w, assets/story/mass-on-10-1080.webp 1080w" sizes="(max-width:500px) 139vw, (max-width:760px) 96vw, 58vw" width="1400" height="980" alt="" loading="lazy" aria-hidden="true">
-    <button class="about-target" type="button" aria-expanded="false" aria-controls="destination" hidden><span class="sr">About</span></button><a id="destination" href="https://www.mass.edu/about/aboutdhe.asp" hidden><span class="sr">The DHE</span></a></div></div>
-    <figcaption><span class="state-label" data-state-label>Without fix</span><span id="case-status" role="status">Arrow Down leaves the menu closed.</span></figcaption></figure></div>
-    <div class="case-foot"><p>Kane, an AI tester, tried the same task by keyboard. The first run failed. With the fix, it reached The DHE.</p>
-    <div class="run-links">${[[before,'Before'],[after,'After']].map(([run,label])=>`<a href="${link(run.file)}" data-recording="Mass.edu · ${label.toLowerCase()} the repair" data-preview="assets/previews/kane-${run.phase}.mp4"><span class="play-glyph" aria-hidden="true"></span>${label} <span class="sr">· Watch Kane recording</span></a>`).join('')}</div></div>
-  </div></section>`
+
+export function installButton(download) {
+  return `<a class="install" download href="${download}">${icon('download',18)} Install for Chrome</a>`
+}
+
+export function navigation(repo) {
+  const links = [['What it does','features'],['How it works','how'],['Proof','proof'],['For developers','developers'],['Fix library','evidence'],['Install','install'],['FAQ','faq']]
+  return `<header class="mast"><nav class="wrap" aria-label="Main navigation">
+    <a class="wordmark" href="#opening"><i aria-hidden="true"></i>Curb Cut</a>
+    <button class="hamburger" type="button" aria-expanded="false" aria-controls="navigation-links" aria-label="Navigation menu" hidden>${icon('menu')}</button>
+    <div id="navigation-links" class="nav-links">${links.map(([label,id])=>`<a href="#${id}">${label}</a>`).join('')}</div>
+    <a class="github" href="${repo}">GitHub ${icon('external',15)}</a></nav></header>`
+}
+
+export function browserWindow(kind, contents) {
+  const mass = kind === 'mass'
+  const domain = mass ? 'mass.edu' : 'map.openseamap.org'
+  const title = mass ? 'Massachusetts Department of Higher Education' : 'OpenSeaMap · The free nautical chart'
+  return `<div class="browser ${kind}">
+    <div class="tabs" aria-hidden="true"><div class="lights"><i></i><i></i><i></i></div><div class="tab">${icon('globe',13)}<span>${title}</span><b>×</b></div><b class="plus">+</b></div>
+    <div class="toolbar">${icon('back',16)}${icon('forward',16)}${icon('reload',15)}<div class="address">${icon('tune',13)}<span>${domain}</span>${icon('star',13)}</div>
+    <button type="button" class="pinned" aria-label="Curb Cut popup on ${domain}" aria-expanded="true" aria-controls="${kind}-popup"><img src="assets/icon.png" width="16" height="16" alt=""></button>${icon('puzzle',16)}${icon('dots',15)}</div>
+    <div class="screen">${contents}<div class="popup" id="${kind}-popup"><img src="assets/product/${kind}-popup.webp" width="544" height="1314" ${mass?'':'loading="lazy"'} alt="Installed Curb Cut popup showing one Kane-verified keyboard fix on ${domain} and its before and after recordings"></div></div></div>`
+}
+
+export function opening(download) {
+  const shot = `<div class="site-photo" id="mass-photo">
+    <picture><source media="(max-width:760px)" srcset="assets/product/mass-after-680.webp"><img class="mass-image" src="assets/product/mass-after-1360.webp" width="1360" height="850" alt="Mass.edu’s About menu open with The DHE as its first link" fetchpriority="high"></picture>
+    <span class="focus-ring" aria-hidden="true"></span><button class="about-target" type="button" aria-expanded="true" aria-controls="destination" aria-label="About on the recorded Mass.edu page"></button>
+    <a id="destination" href="https://www.mass.edu/about/aboutdhe.asp" aria-label="The DHE on Mass.edu"></a></div>`
+  return `<section class="hero wrap" id="opening" aria-labelledby="title"><div class="copy"><p class="kind">${icon('chrome',21)} Chrome extension</p>
+    <h1 id="title">This menu<br> needs a mouse.</h1><p class="lead">Curb Cut opens it with Tab. It fixes barriers on the sites you visit with a keyboard, a screen reader or zoom.</p>
+    <div class="actions">${installButton(download)}<a href="#how" class="secondary">See how it works ${icon('arrow',17)}</a></div><p class="install-note">For desktop Chrome</p></div>
+    <figure class="hero-demo" id="repair">${browserWindow('mass',shot)}
+    <figcaption class="hero-caption"><button type="button" class="key" aria-label="Try the Tab key on Mass.edu">${['foot','spring','cap'].map(layer=>`<img class="k-${layer}" width="200" height="182" src="assets/product/tab-${layer}.webp" alt="">`).join('')}</button>
+    <div><strong id="case-status" role="status">One Tab press opens About.</strong><span>Recorded on Mass.edu with Curb Cut installed.</span></div>
+    <button class="repair-switch" type="button" role="switch" aria-label="Mass.edu repair" aria-checked="true">Fix on</button></figcaption></figure></section>`
+}
+
+export function features() {
+  const examples = [
+    ['keyboard','Open mouse-only menus','Reach the links inside a menu using the keyboard.','repair'],
+    ['sound','Give buttons a name','Hear what each control does with a screen reader.','names'],
+    ['contrast','Make faint text readable','Read low-contrast text against its background.','contrast']
+  ]
+  return `<section class="features wrap" id="features"><h2>What it does</h2><div class="feature-grid">${examples.map(([symbol,title,description,id])=>`<article>${icon(symbol,25)}<div><h3><a href="#${id}">${title}</a></h3><p>${description}</p></div></article>`).join('')}</div></section>`
 }
