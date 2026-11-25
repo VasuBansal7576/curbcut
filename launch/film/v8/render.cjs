@@ -20,8 +20,8 @@ async function main(){
   try{
     const page=context.pages()[0]
     await page.goto(pathToFileURL(path.join(__dirname,'stage.html')).href)
-    await page.evaluate(async ({directory,lengths})=>{await load(directory,lengths);detailInk()},{
-      directory:pathToFileURL(path.join(work,'media')).href+'/',lengths:read(path.join(work,'media/clips.json'))})
+    await page.evaluate(async ({directory,lengths,tracks})=>{await load(directory,lengths,tracks);detailInk()},{
+      directory:pathToFileURL(path.join(work,'media')).href+'/',lengths:read(path.join(work,'media/clips.json')),tracks:read(path.join(work,'media/tracks.json'))})
     await page.evaluate(()=>thumbnail())
     const thumbnail=await page.locator('canvas').screenshot()
     fs.writeFileSync(path.resolve(__dirname,'../../curbcut-launch-thumbnail.png'),thumbnail)

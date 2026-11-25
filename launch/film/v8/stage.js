@@ -2,14 +2,14 @@ const canvas = document.querySelector('canvas')
 const g = canvas.getContext('2d',{alpha:false})
 const M='#e8e4f5', D='#302039', S='#5c4b64', O='#ff784a', edge='#c3b9ce'
 const assets={}, clipCache=new Map()
-let directory, movies
+let directory, movies, tracks
 const sat=x=>Math.max(0,Math.min(1,x))
 const mix=(a,b,t)=>a+(b-a)*t
 const step=(time,at,duration)=>{const t=sat((time-at)/duration);return t*t*(3-2*t)}
 const pop=(t,at,d)=>1-Math.pow(1-sat((t-at)/d),3)
 const still=async url=>{const i=new Image();i.src=url;await i.decode();return i}
-async function load(media, lengths){
-  directory=media;movies=lengths
+async function load(media, lengths, positions){
+  directory=media;movies=lengths;tracks=positions
   await Promise.all([document.fonts.load('600 58px InterTight'),document.fonts.load('500 19px JetBrains')])
   await Promise.all('nav menu wide switchOff switchOn report arrow dots search details foot spring cap'.split(' ').map(async n=>{assets[n]=await still(media+n+(['foot','spring','cap'].includes(n)?'.webp':'.png'))}))
 }
@@ -200,21 +200,47 @@ function clipCard(im,x,y,w,h,label,outcome,box){
   g.restore()
   if(outcome){rr(x,y+h+34,10,40,4,O);type(outcome,x+31,y+h+70,40,575)}
 }
+function coordinate(movie,time){
+  const series=tracks[movie]
+  return series[Math.min(series.length-1,Math.max(0,Math.floor(time*15)))]
+}
+function projectedRing(frame,crop,rect){
+  const scale=frame.w/crop[2]
+  ring(frame.x+(rect[0]-crop[0])*scale,frame.y+(rect[1]-crop[1])*scale,rect[2]*scale,rect[3]*scale,9)
+}
+function verdict(text,passed,x,y){
+  const w=245,h=76
+  rr(x,y,w,h,18,passed?D:O)
+  const ink=passed?'#fff':D
+  g.save();g.strokeStyle=ink;g.lineWidth=5;g.lineCap='round';g.lineJoin='round'
+  g.beginPath()
+  if(passed){g.moveTo(x+24,y+39);g.lineTo(x+35,y+50);g.lineTo(x+55,y+27)}
+  else{g.moveTo(x+29,y+27);g.lineTo(x+51,y+49);g.moveTo(x+51,y+27);g.lineTo(x+29,y+49)}
+  g.stroke();g.restore()
+  type(text,x+75,y+53,45,660,ink)
+}
+function keyCaption(keyName,copy,x,y){
+  const w=keyName==='Arrow Down'?181:100
+  rr(x,y-41,w,59,11,D)
+  type(keyName,x+w/2,y,30,600,M,'center')
+  type(copy,x+w+28,y+1,39,555)
+}
 async function proof(t){
-  const failBox=[667,22,590,126],passBox=[285,124,601,132]
-  if(t<8.5){
-    const im=await clip('fail',t)
-    const x=363,y=407,w=1194,h=255
-    clipCard(im,x,y,w,h,t<2?'mass.edu':'Kane recording  /  mass.edu',t>=7.6?'Without the fix  ·  Failed':t>=6.5?'Without the fix':'',failBox)
-  }else if(t<10.5){
-    const u=t-8.5,landed=u>=22/30,at=landed?2.1+u-22/30:.95+u
-    const im=await clip('pass',at)
-    clipCard(im,363,407,1194,255,'Kane recording  /  mass.edu',u>=.75?'With the fix  ·  Passed':'With the fix',landed?passBox:failBox)
-  }else{
-    const a=await clip('fail',7), b=await clip('pass',t-7.5)
-    clipCard(a,176,432,732,157,'Without the fix','Failed',failBox)
-    clipCard(b,1010,432,732,157,'With the fix','Passed',passBox)
-  }
+  const repaired=t>=8, u=t-8, dhe=repaired&&u>=37/30
+  const movie=repaired?'pass':'fail'
+  const source=repaired?(dhe?7.25+u-37/30:u):t
+  const im=await clip(movie,source),baseline=coordinate(movie,source)
+  const frame={x:147,y:190,w:1626,h:708}
+  const sw=mix(655,575,step(t,0,5))
+  const crop=[745-.27*sw,Math.max(0,baseline-103),sw,sw*frame.h/frame.w]
+  nativeCard(im,frame.x,frame.y,frame.w,frame.h,crop,'Kane recording   /   mass.edu')
+  const travel=repaired?step(u,1.13,.27):0
+  projectedRing(frame,crop,[718,baseline+mix(-36,-13,travel),mix(55,110,travel),mix(23,21,travel)])
+  if(!repaired&&t>=5.5)verdict('Failed',false,frame.x+frame.w-245,75)
+  if(dhe)verdict('Passed',true,frame.x+frame.w-245,75)
+  const keyName=repaired?'Tab':'Arrow Down'
+  const copy=dhe?'The DHE has keyboard focus.':repaired?(u>=.74?'About opens.':'About has keyboard focus.'):'About stays closed.'
+  keyCaption(keyName,copy,frame.x,977)
 }
 async function launchPicture(id,t){
   surface()
@@ -242,18 +268,52 @@ async function launchPicture(id,t){
 function nativeCard(im,x,y,w,h,box,label){
   clipCard(im,x,y,w,h,label,'',box)
 }
-function shopBox(im,wide=false){
-  const sx=wide?183:258, sy=wide?220:295, w=wide?901:700
-  return [sx,sy,w,Math.round(w*645/1270)]
-}
 function shopCaption(text,sub,x=325,y=829){
   rr(x,y-34,9,43,4,O);type(text,x+29,y,45,580)
   if(sub)src(sub,x+29,y+57)
 }
-async function shopScene(movie,elapsed,heading,description,wide=false){
-  const im=await clip(movie,movie==='gateAfter'?Math.min(3.6,elapsed):movie==='retireShop'?Math.min(8.6,elapsed):elapsed)
-  nativeCard(im,325,217,1270,645,shopBox(im,wide),heading)
-  if(description)shopCaption(description,'',325,954)
+async function shopScene(movie,t,heading){
+  const frame={x:121,y:157,w:1678,h:748}
+  const im=await clip(movie,t), searchY=coordinate(movie,t)
+  const intro=movie==='shopIntro',retired=movie==='retireShop'
+  const failed=movie==='shopBefore'||movie==='gateBefore'
+  const focusedAt={shopBefore:26/15,shopAfter:23/15,gateBefore:23/15,gateAfter:21/15,retireShop:1.75}
+  const change=focusedAt[movie]??100
+  const progress=step(t,change-.04,.22)
+  const target=movie==='shopBefore'||retired?[893,277,80,30]:movie==='gateBefore'?[296,331,102,31]:[546,277,80,30]
+  const search=[536,0,58,30]
+  const focus=intro?[296,searchY-2,240,33]:[
+    mix(search[0],target[0],progress),
+    searchY+mix(search[1],target[1],progress)-2,
+    mix(search[2],target[2],progress),mix(search[3],target[3],progress)+4
+  ]
+  const w=intro?805:failed||retired?803:mix(720,581,step(t,change,.80))
+  const left=intro||failed||retired?234:mix(194,164,progress)
+  const h=w*frame.h/frame.w
+  const top=Math.min(720-h,Math.max(0,searchY+mix(-51,failed?30:retired?3:98,progress)))
+  const crop=[left,top,w,h]
+  nativeCard(im,frame.x,frame.y,frame.w,frame.h,crop,heading)
+  projectedRing(frame,crop,focus)
+  const addedAt={shopAfter:6.25,gateAfter:5.75,retireShop:6}
+  const added=t>=(addedAt[movie]??Infinity)
+  let bottom='Find headphones and add them to the cart.'
+  if(!intro){
+    if(failed)bottom=progress<.98?'Focus starts on Search.':movie==='shopBefore'?'Focus skips Field Headphones and lands on Porch Speaker.':'Focus skips Add to cart and lands on Shipping details.'
+    else bottom=added?'Field Headphones added to cart.':progress<.98?'Focus starts on Search.':'Enter activates Add to cart.'
+  }
+  if(failed&&progress>=.98){
+    const scale=frame.w/w
+    const fx=frame.x+(548-left)*scale, fy=frame.y+(searchY+275-top)*scale
+    g.save();g.setLineDash([8,6]);rr(fx-2,fy-2,76*scale+4,34*scale+4,8,null,S,3);g.restore()
+    rr(fx-141,fy+7,128,45,9,D)
+    type('Skipped',fx-77,fy+39,29,590,M,'center')
+  }
+  if(added){
+    const scale=frame.w/w,y=frame.y+(searchY+346-top)*scale
+    const x=frame.x+(298-left)*scale
+    line(x,y,x+155*scale*pop(t,addedAt[movie],.32),y,O,5)
+  }
+  shopCaption(bottom,'',frame.x,991)
 }
 async function terminal(n,t,heading,message,focus){
   const im=await clip(n,t),x=398,y=348,w=1124,h=335
@@ -295,43 +355,44 @@ async function popupScene(t,length,report){
   }else{
     if(at<2.85){
       const f=step(at,.45,.8);box=[imageW*mix(.08,.54,f),imageH*.01,imageW*mix(.82,.44,f),imageH*.94]
-    }else box=[imageW*.11,imageH*.065,imageW*.77,imageH*.174]
+    }else box=[imageW*.22,imageH*.022,imageW*.70,imageH*.64]
     title=at<2.85?'Extension popup':'Kane recording'
   }
-  const ratio=box[2]/box[3],h=666,w=Math.min(1285,h*ratio),actualH=w/ratio
+  const playback=!report&&at>=2.85
+  const ratio=box[2]/box[3],h=playback?790:666,w=Math.min(playback?1640:1285,h*ratio),actualH=w/ratio
   nativeCard(im,(1920-w)/2,528-actualH/2,w,actualH,box,title)
 }
 async function chapterPicture(shot,t){
   surface()
   const {id,duration}=shot
   if(id==='task'){
-    await shopScene('shopBefore',t,'Stillroom  /  shop','Find headphones and add them to the cart.',true)
+    await shopScene('shopIntro',t,'Stillroom  /  shop')
   }else if(id==='before'){
     if(t<5)await terminal('checkTerm',t*.49,'Terminal','curbcut check',0)
-    else await shopScene('shopBefore',t-5,'Kane recording  /  keyboard','The keyboard skips Add to cart.')
+    else await shopScene('shopBefore',t-5,'Kane recording  /  keyboard')
   }else if(id==='patch'){
     if(t<6.5)await terminal('checkTerm',mix(3.2,11.9,t/6.5),'Terminal','Let the button take focus. Let Enter activate it.',76)
-    else await shopScene('shopAfter',t-6.5,'Kane recording  /  keyboard',t>=10.75?'Field Headphones added.':'Try the repaired button with Enter.')
+    else await shopScene('shopAfter',(t-6.5)*1.5,'Kane recording  /  keyboard')
   }else if(id==='gateFail'){
     if(t<6.5)await terminal('gateTerm',Math.min(t,5.4),'Claude Code  /  Stop hook','Run the check before Claude finishes.',0)
-    else await shopScene('gateBefore',t-6,'Kane recording  /  keyboard','Failed. The Stop hook sends the work back.')
+    else await shopScene('gateBefore',t-6.5,'Kane recording  /  keyboard')
   }else if(id==='gatePass'){
-    if(t<5)await shopScene('gateAfter',t+4,'Kane recording  /  repaired site','The button now works by keyboard.')
+    if(t<5)await shopScene('gateAfter',t*1.6,'Kane recording  /  repaired site')
     else await terminal('gateTerm',Math.min(10.9,7.3+t-5),'Claude Code  /  Stop hook','Passed. Claude can finish.',115)
   }else if(id==='trust')await popupScene(t,duration,false)
   else if(id==='names')names(t,true)
   else if(id==='report')await popupScene(t,duration,true)
   else if(id==='retire'){
-    if(t<8)await shopScene('retireShop',t,'Kane recording  /  extension fix off','The site works on its own.')
+    if(t<8)await shopScene('retireShop',t,'Kane recording  /  extension fix off')
     else await terminal('retireTerm',(t-8)*1.6,'Terminal','Curb Cut retires the fix.',0)
   }else if(id==='end'){
-    await shopScene('retireShop',10,'Stillroom  /  shop','A working button for the next shopper.',true)
+    await shopScene('retireShop',6.5+t,'Stillroom  /  shop')
   }
 }
 async function picture(shot,t){
   g.save()
   const duration=shot.frames/30
-  const amount=shot.chapter ? .025 : ['closed','opened','switch','reader','contrast','kane','owner','jev'].includes(shot.id) ? .048 : .033
+  const amount=shot.chapter ? .018 : shot.id==='kane' ? .028 : duration>3 ? .095 : .045
   const camera=1+amount*step(t,0,duration)
   g.translate(960,540);g.scale(camera,camera);g.translate(-960,-540)
   if(shot.chapter)await chapterPicture(shot,t)
