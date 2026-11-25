@@ -1,0 +1,62 @@
+{
+  "id": "v4-719c31e107dae52fa9e6",
+  "url": "https://www.whatmobile.com.pk/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search” field and type test without submitting.",
+  "observedSelector": "#searchInput",
+  "requiredName": "Search",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#searchInput",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.whatmobile.com.pk",
+  "match": "https://www.whatmobile.com.pk/",
+  "barrier": "The search input has a textbox role but no accessible name, so it cannot be found as “Search” in Reading view.",
+  "rules": [
+    {
+      "selector": "#searchInput",
+      "action": "addLabel",
+      "value": "Search"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v4-719c31e107dae52fa9e6/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v4-719c31e107dae52fa9e6/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v4-719c31e107dae52fa9e6/after/recording.mp4",
+    "kaneRunIds": [
+      "6fe2b2c1-ecfb-466f-89ca-91be2fdc0c3b",
+      "cadc2ef3-3217-49f6-a454-330ad876e3b7",
+      "bacc1a79-de3a-477c-81c4-0e842957ceff"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T14:58:17.172Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T14:58:17.172Z",
+      "before": "6fe2b2c1-ecfb-466f-89ca-91be2fdc0c3b",
+      "control": "cadc2ef3-3217-49f6-a454-330ad876e3b7",
+      "after": "bacc1a79-de3a-477c-81c4-0e842957ceff"
+    }
+  ]
+}

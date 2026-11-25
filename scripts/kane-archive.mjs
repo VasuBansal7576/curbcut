@@ -7,7 +7,8 @@ import {reviewRecordedJourney} from './recorded-journey.mjs'
 
 export async function archiveKane() {
   const roots=['proof/kane','proof/heldout-v3/runs','proof/hard-v4/kane','proof/hard-v4/kane-objective-pilot',
-    'proof/heldout-v5/kane','proof/heldout-v5/kane-rerun-50','proof/heldout-v5/kane-sample-20','proof/heldout-v6/kane','proof/heldout-v6/calibration']
+    'proof/heldout-v5/kane','proof/heldout-v5/kane-rerun-50','proof/heldout-v5/kane-sample-20','proof/heldout-v6/kane','proof/heldout-v6/calibration',
+    'proof/kane-batch-2026-11-25/runs']
   const entries=(await Promise.all(roots.map(async root=>{
     const files=await readdir(path.join(ROOT,root),{recursive:true}).catch(error=>{
       if(error.code==='ENOENT') return []

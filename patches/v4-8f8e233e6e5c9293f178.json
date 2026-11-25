@@ -1,0 +1,62 @@
+{
+  "id": "v4-8f8e233e6e5c9293f178",
+  "url": "https://www.keralakaumudi.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “SEARCH NEWS” textbox and type test without submitting.",
+  "controlTask": "Click the visible “SEARCH NEWS” field and type test without submitting.",
+  "observedSelector": "div:nth-of-type(3) > div > div:nth-of-type(2) > ul > li:nth-of-type(1) > form > input",
+  "requiredName": "SEARCH NEWS",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "div:nth-of-type(3) > div > div:nth-of-type(2) > ul > li:nth-of-type(1) > form > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.keralakaumudi.com",
+  "match": "https://www.keralakaumudi.com/",
+  "barrier": "The SEARCH NEWS input has a textbox role but no accessible name in Reading view.",
+  "rules": [
+    {
+      "selector": "div:nth-of-type(3) > div > div:nth-of-type(2) > ul > li:nth-of-type(1) > form > input",
+      "action": "addLabel",
+      "value": "SEARCH NEWS"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v4-8f8e233e6e5c9293f178/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v4-8f8e233e6e5c9293f178/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v4-8f8e233e6e5c9293f178/after/recording.mp4",
+    "kaneRunIds": [
+      "595a092d-51a1-4959-bdb2-fc01f817ff68",
+      "883343f2-3954-4014-8d4c-e223ac768161",
+      "ee31ae71-c04f-4613-896e-2c965bb00822"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T15:05:43.232Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T15:05:43.232Z",
+      "before": "595a092d-51a1-4959-bdb2-fc01f817ff68",
+      "control": "883343f2-3954-4014-8d4c-e223ac768161",
+      "after": "ee31ae71-c04f-4613-896e-2c965bb00822"
+    }
+  ]
+}

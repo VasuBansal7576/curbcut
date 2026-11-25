@@ -17,8 +17,11 @@ test('bundled patches group into recipes by unique action signature',()=>{
   assert.equal(recipes.reduce((sum,recipe)=>sum+recipe.patchCount,0),patches.length)
   assert.equal(new Set(recipes.map(recipe=>recipe.signature)).size,recipes.length)
   const byId=Object.fromEntries(recipes.map(recipe=>[recipe.id,recipe]))
-  assert.equal(byId.setContrast.patchCount,41)
-  assert.equal(byId['unnamed-field'].patchCount,18)
+  for(const [id,action] of [['setContrast','setContrast'],['unnamed-field','addLabel']]) {
+    const matching=patches.filter(patch=>patch.rules.length && patch.rules.every(rule=>rule.action===action))
+    assert.equal(byId[id].patchCount,matching.length)
+    assert.deepEqual(byId[id].patchIds.toSorted(),matching.map(patch=>patch.id).toSorted())
+  }
   assert.equal(byId['clickable-div-as-button'].signature,'makeFocusable+setRole+bindEnterToClick+restoreFocusOutline')
   assert.equal(byId['hover-only-menu'].signature,'mirrorHoverToFocus')
   assert.equal(byId.reflow.signature,'injectCSS')

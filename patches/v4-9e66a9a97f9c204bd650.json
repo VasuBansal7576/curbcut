@@ -1,0 +1,62 @@
+{
+  "id": "v4-9e66a9a97f9c204bd650",
+  "url": "https://thewire.in/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search news” searchbox and type test without submitting.",
+  "controlTask": "Click the visible “Search news” field and type test without submitting.",
+  "observedSelector": "#root > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div > input",
+  "requiredName": "Search news",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#root > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "searchbox"
+  },
+  "site": "thewire.in",
+  "match": "https://thewire.in/",
+  "barrier": "The search input has a searchbox role but no accessible name, so screen-reader users cannot find it as “Search news” in Reading view.",
+  "rules": [
+    {
+      "selector": "#root > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div > input",
+      "action": "addLabel",
+      "value": "Search news"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v4-9e66a9a97f9c204bd650/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v4-9e66a9a97f9c204bd650/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v4-9e66a9a97f9c204bd650/after/recording.mp4",
+    "kaneRunIds": [
+      "e9a1e039-0a93-441d-9723-6321a487f0fd",
+      "32d6fafe-b39b-4710-8dc8-93c25abe54c6",
+      "a475a547-48df-4317-976a-60de27b2f798"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T15:14:04.337Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T15:14:04.337Z",
+      "before": "e9a1e039-0a93-441d-9723-6321a487f0fd",
+      "control": "32d6fafe-b39b-4710-8dc8-93c25abe54c6",
+      "after": "a475a547-48df-4317-976a-60de27b2f798"
+    }
+  ]
+}

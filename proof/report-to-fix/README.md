@@ -54,7 +54,7 @@ On November 25 at 06:49:55 UTC, the normal Curb Cut publisher verified and bundl
 
 The comparison clip uses an isolated headless Chromium profile and the two actual extension ZIPs. Eight Tab presses skipped View with the pre-publication package. After replacing the unpacked files with the published package and reloading the extension, the same eight presses reached View and revealed the unchanged Sea Marks checkbox. The popup shows **Kane verified** and plays the before and after recordings. The extension's evidence URL setting pointed to the local archive so the branch's recordings could play before any remote release. The silent clip is 1920 × 1080. [Comparison clip](user-clip.mp4) · [Build hashes and captured key sequence](user-clip.json)
 
-The active bundle contains **106 fixes**, including **62 Kane-verified** and **44 with local proof**. [Bundle](../../extension/bundled.json) · [Fix library](../../site/index.html#evidence)
+The active bundle contains **128 fixes**, including **84 Kane-verified** and **44 with local proof**. [Bundle](../../extension/bundled.json) · [Fix library](../../site/index.html#evidence)
 
 ## Site scouting
 

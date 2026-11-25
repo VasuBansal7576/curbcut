@@ -1,0 +1,62 @@
+{
+  "id": "v5-987edaaf216b0e19b87b",
+  "url": "https://www.facer.io/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search watch faces” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search watch faces” field and type test without submitting.",
+  "observedSelector": "div:nth-of-type(1) > header > header-v2 > nav > div > div:nth-of-type(2) > ul > header-search > li > form > div > input",
+  "requiredName": "Search watch faces",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "div:nth-of-type(1) > header > header-v2 > nav > div > div:nth-of-type(2) > ul > header-search > li > form > div > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.facer.io",
+  "match": "https://www.facer.io/",
+  "barrier": "The desktop search input has a native textbox role but no accessible name, so it cannot be found as “Search watch faces” in Reading view.",
+  "rules": [
+    {
+      "selector": "nav.app-header--desktop #searchWatchfaces input#srch-term",
+      "action": "addLabel",
+      "value": "Search watch faces"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v5-987edaaf216b0e19b87b/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v5-987edaaf216b0e19b87b/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v5-987edaaf216b0e19b87b/after/recording.mp4",
+    "kaneRunIds": [
+      "de70cceb-6d00-46fc-9891-29dbf859664e",
+      "75e4063d-1176-4773-897e-dc9cb5702c95",
+      "5e3b5b6d-cb67-43eb-8979-02f41bb71449"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T14:42:35.930Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T14:42:35.930Z",
+      "before": "de70cceb-6d00-46fc-9891-29dbf859664e",
+      "control": "75e4063d-1176-4773-897e-dc9cb5702c95",
+      "after": "5e3b5b6d-cb67-43eb-8979-02f41bb71449"
+    }
+  ]
+}

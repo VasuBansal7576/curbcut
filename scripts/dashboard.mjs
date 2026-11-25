@@ -97,7 +97,7 @@ ${howChapter(link,review,mass.recordings)}
 ${mapChapter(map.recordings, link, file=>process.env.CURBCUT_PAGES === '1' ? mapMedia.get(file) : link(file))}
 ${ownerChapter(link)}
 ${developerChapter(link)}
-<section class="section wrap ledger" id="evidence"><div><h2>Fix library</h2><p class="ledger-intro">Search all ${entries.length} fixes. ${kaneCount} have Kane recordings and ${entries.length-kaneCount} have local browser measurements. Open a row to inspect the task and its evidence. <a href="#kane-label">How to read a Kane badge</a>.</p>
+<section class="section wrap ledger" id="evidence"><div><h2>Fix library</h2><p class="ledger-intro">Search all ${entries.length} fixes. ${kaneCount} have Kane recordings and ${entries.length-kaneCount} have local browser measurements. Open a row to inspect the task and its evidence. <a href="#kane-label">How to read a Kane badge</a> · ${proofLink('proof/kane-batch-2026-11-25/README.md','November 25 verification results')}.</p>
 <form id="filters" role="search" aria-label="Filter evidence"><label class="search"><span>Site</span><input name="site" type="search" placeholder="Search by domain" autocomplete="off"></label>
 ${select('barrier','Barrier',entries.map(r=>r.barrier))}${select('persona','Browsing method',entries.map(r=>r.persona))}${select('proof','Proof',entries.map(r=>r.proofType))}</form>
 <noscript><p>${proofLink('patches/index.json','Open the complete fix index')} to inspect all fixes.</p></noscript>

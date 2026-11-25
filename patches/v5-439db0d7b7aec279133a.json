@@ -1,0 +1,62 @@
+{
+  "id": "v5-439db0d7b7aec279133a",
+  "url": "https://gamekillerapp.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search” field and type test without submitting.",
+  "observedSelector": "#__nuxt > div > div > div:nth-of-type(2) > section > section:nth-of-type(2) > div:nth-of-type(2) > div > input",
+  "requiredName": "Search",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#__nuxt > div > div > div:nth-of-type(2) > section > section:nth-of-type(2) > div:nth-of-type(2) > div > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "gamekillerapp.com",
+  "match": "https://gamekillerapp.com/",
+  "barrier": "The native search textbox has no accessible name, so Reading view cannot identify it as Search.",
+  "rules": [
+    {
+      "selector": "section.label-box > div.search-container > div > input.search-input",
+      "action": "addLabel",
+      "value": "Search"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v5-439db0d7b7aec279133a/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v5-439db0d7b7aec279133a/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v5-439db0d7b7aec279133a/after/recording.mp4",
+    "kaneRunIds": [
+      "ac828542-2216-428d-8f2f-7054f0634ba3",
+      "89d3fdd2-bc4f-40a3-9d38-9bd645808655",
+      "23b479b0-642f-4e10-90a2-d2a79e698536"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T14:39:48.209Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T14:39:48.209Z",
+      "before": "ac828542-2216-428d-8f2f-7054f0634ba3",
+      "control": "89d3fdd2-bc4f-40a3-9d38-9bd645808655",
+      "after": "23b479b0-642f-4e10-90a2-d2a79e698536"
+    }
+  ]
+}

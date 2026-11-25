@@ -1,0 +1,62 @@
+{
+  "id": "v5-5f22528618352a280b18",
+  "url": "https://www.india.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search on india.com...” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search on india.com...” field and type test without submitting.",
+  "observedSelector": "#t2",
+  "requiredName": "Search on india.com...",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#t2",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.india.com",
+  "match": "https://www.india.com/",
+  "barrier": "The visible search input #t2 has a native textbox role but no accessible name, so it cannot be found by its expected name in Reading view.",
+  "rules": [
+    {
+      "selector": "#t2",
+      "action": "addLabel",
+      "value": "Search on india.com..."
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v5-5f22528618352a280b18/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v5-5f22528618352a280b18/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v5-5f22528618352a280b18/after/recording.mp4",
+    "kaneRunIds": [
+      "5d0bd397-6e4d-4a4d-9885-a9141cf95c9c",
+      "0d06f770-d4b4-40ab-ac7f-b275c4a48e30",
+      "68cd4d38-5ed3-4529-9ac0-600ea7b78a60"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T14:30:01.211Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T14:30:01.211Z",
+      "before": "5d0bd397-6e4d-4a4d-9885-a9141cf95c9c",
+      "control": "0d06f770-d4b4-40ab-ac7f-b275c4a48e30",
+      "after": "68cd4d38-5ed3-4529-9ac0-600ea7b78a60"
+    }
+  ]
+}

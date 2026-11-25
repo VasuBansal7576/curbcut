@@ -1,0 +1,62 @@
+{
+  "id": "v5-4d9b7cd1a38df17dc02d",
+  "url": "https://www.kenyans.co.ke/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search Kenyans.co.ke” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search Kenyans.co.ke” field and type test without submitting.",
+  "observedSelector": "#edit-search",
+  "requiredName": "Search Kenyans.co.ke",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#edit-search",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.kenyans.co.ke",
+  "match": "https://www.kenyans.co.ke/",
+  "barrier": "The search input is a focusable textbox with no accessible name, so Reading view cannot identify it as “Search Kenyans.co.ke”.",
+  "rules": [
+    {
+      "selector": "#edit-search",
+      "action": "addLabel",
+      "value": "Search Kenyans.co.ke"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v5-4d9b7cd1a38df17dc02d/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v5-4d9b7cd1a38df17dc02d/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v5-4d9b7cd1a38df17dc02d/after/recording.mp4",
+    "kaneRunIds": [
+      "09398806-c1c2-47a6-a33c-bfb179935833",
+      "82039194-58a8-4bb8-99cd-d91650ecc3a3",
+      "657ecc08-ff25-4056-8191-e8ab71c74b02"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T14:32:25.789Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T14:32:25.789Z",
+      "before": "09398806-c1c2-47a6-a33c-bfb179935833",
+      "control": "82039194-58a8-4bb8-99cd-d91650ecc3a3",
+      "after": "657ecc08-ff25-4056-8191-e8ab71c74b02"
+    }
+  ]
+}

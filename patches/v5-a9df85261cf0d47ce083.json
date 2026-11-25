@@ -1,0 +1,62 @@
+{
+  "id": "v5-a9df85261cf0d47ce083",
+  "url": "https://webhook.site/#!/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search Query” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search Query” field and type test without submitting.",
+  "observedSelector": "#search-input",
+  "requiredName": "Search Query",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#search-input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "webhook.site",
+  "match": "https://webhook.site/",
+  "barrier": "The search textarea has the native textbox role but no accessible name, so Reading view cannot identify it as Search Query.",
+  "rules": [
+    {
+      "selector": "#search-input",
+      "action": "addLabel",
+      "value": "Search Query"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v5-a9df85261cf0d47ce083/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v5-a9df85261cf0d47ce083/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v5-a9df85261cf0d47ce083/after/recording.mp4",
+    "kaneRunIds": [
+      "8ce0e552-c583-4bdd-af50-1d3c4370602d",
+      "ceb33db9-9dcf-484a-bc2a-5ec7f65515ca",
+      "5453eaa2-7f09-4a8e-8346-1e149ca9cb28"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T14:35:06.493Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T14:35:06.493Z",
+      "before": "8ce0e552-c583-4bdd-af50-1d3c4370602d",
+      "control": "ceb33db9-9dcf-484a-bc2a-5ec7f65515ca",
+      "after": "5453eaa2-7f09-4a8e-8346-1e149ca9cb28"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "v5-7b267457c921bdee8928",
+  "url": "https://www.nelomanga.net/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search manga...” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search manga...” field and type test without submitting.",
+  "observedSelector": "#search_story",
+  "requiredName": "Search manga...",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#search_story",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.nelomanga.net",
+  "match": "https://www.nelomanga.net/",
+  "barrier": "The search input has a textbox role but no accessible name, so it cannot be found by the name “Search manga...” in Reading view.",
+  "rules": [
+    {
+      "selector": "#search_story",
+      "action": "addLabel",
+      "value": "Search manga..."
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v5-7b267457c921bdee8928/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v5-7b267457c921bdee8928/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v5-7b267457c921bdee8928/after/recording.mp4",
+    "kaneRunIds": [
+      "2ccdd6fd-a1ac-45b3-974a-4177bd6026b5",
+      "b6a8689c-c1da-4ca1-a70e-70415d7e1bbe",
+      "64858f00-832c-4a8d-97a4-d3eb27d1d6fe"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T14:37:36.711Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T14:37:36.711Z",
+      "before": "2ccdd6fd-a1ac-45b3-974a-4177bd6026b5",
+      "control": "b6a8689c-c1da-4ca1-a70e-70415d7e1bbe",
+      "after": "64858f00-832c-4a8d-97a4-d3eb27d1d6fe"
+    }
+  ]
+}

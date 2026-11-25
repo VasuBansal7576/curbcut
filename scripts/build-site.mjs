@@ -27,6 +27,7 @@ const [hardLocal,v5Local,v5Rerun,v5Sample,v6Local,v6Kane]=await Promise.all([
   'hard-v4/local-summary','heldout-v5/local-summary','heldout-v5/kane-rerun-50/summary',
   'heldout-v5/kane-sample-20/summary','heldout-v6/local-summary','heldout-v6/kane-summary'
 ].map(file=>readJSON(path.join(ROOT,'proof',file+'.json'))))
+const batch=await readJSON(path.join(ROOT,'proof/kane-batch-2026-11-25/summary.json'))
 const knownRepairs=new Set(recorded.map(patch=>patch.id))
 const openTasks=publicTasks.filter(task=>!knownRepairs.has(task.id) &&
   !active.some(patch=>['url','persona','task'].every(key=>patch[key]===task[key]))).flatMap(task=>{
@@ -76,7 +77,19 @@ for(const patch of recorded) {
   const localRetirements=patch.history.filter(entry=>entry.event==='local-retired' && entry.evidence).map(entry=>
     '- [Local regression and retirement]('+videoLink(entry.evidence)+') · '+entry.reason)
   let proposal
-  if(patch.evidence.repairMethod) {
+  const batchCase=batch.cases.find(row=>row.id===patch.id && row.verdict==='pass' &&
+    row.phases.some(lane=>lane.name==='after' && lane.recording===patch.evidence.after))
+  if(batchCase) {
+    const local=await readJSON(path.join(ROOT,batchCase.source))
+    const row=(local.results??local.rows).find(row=>(row.id??row.task.id)===patch.id)
+    if(row?.status!=='locally-fixed' || !isDeepStrictEqual(patch,{...row.patch,status:patch.status,evidence:patch.evidence,history:patch.history}) ||
+      !['before','control','after'].every((name,index)=>batchCase.phases.some(lane=>lane.name===name && lane.evidenceValid &&
+        lane.status===(name==='before'?'fail':'pass') && lane.recording===patch.evidence[name] && lane.runId===patch.evidence.kaneRunIds[index]))) {
+      throw new Error('Batch release differs from the recorded case or local proposal for '+patch.id)
+    }
+    const candidate=typeof row.proposal==='string'?row.proposal+'/candidate.json':batchCase.source
+    proposal='[Locally verified proposal]('+videoLink(candidate)+') · [Batch ledger]('+videoLink('proof/kane-batch-2026-11-25/README.md')+')'
+  } else if(patch.evidence.repairMethod) {
     const attempt=path.dirname(path.dirname(patch.evidence.after))
     const provenancePath=attempt+'/provenance.json'
     const provenance=await read(provenancePath,null)

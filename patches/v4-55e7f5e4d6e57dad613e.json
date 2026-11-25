@@ -1,0 +1,62 @@
+{
+  "id": "v4-55e7f5e4d6e57dad613e",
+  "url": "https://www.webassign.net/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search” field and type test without submitting.",
+  "observedSelector": "#menu-primary > li:nth-of-type(5) > form > input:nth-of-type(1)",
+  "requiredName": "Search",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#menu-primary > li:nth-of-type(5) > form > input:nth-of-type(1)",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.webassign.net",
+  "match": "https://www.webassign.net/",
+  "barrier": "The search input has a textbox role but no accessible name, so it cannot be found as “Search” in Reading view.",
+  "rules": [
+    {
+      "selector": "#menu-primary > li:nth-of-type(5) > form > input:nth-of-type(1)",
+      "action": "addLabel",
+      "value": "Search"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v4-55e7f5e4d6e57dad613e/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v4-55e7f5e4d6e57dad613e/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v4-55e7f5e4d6e57dad613e/after/recording.mp4",
+    "kaneRunIds": [
+      "719cca0e-c426-43ee-bd83-be3f4d567c4a",
+      "5d467ec1-aabf-48f3-9787-bbbd8ca3fdda",
+      "da84aa71-76e0-41da-a095-dce9edecdb0d"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T15:02:42.448Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T15:02:42.448Z",
+      "before": "719cca0e-c426-43ee-bd83-be3f4d567c4a",
+      "control": "5d467ec1-aabf-48f3-9787-bbbd8ca3fdda",
+      "after": "da84aa71-76e0-41da-a095-dce9edecdb0d"
+    }
+  ]
+}

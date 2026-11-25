@@ -2543,6 +2543,130 @@
     ]
   },
   {
+    "id": "v4-129cd532652cd7a08d8e",
+    "url": "https://thewest.com.au/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search” searchbox and type test without submitting.",
+    "controlTask": "Click the visible “Search” field and type test without submitting.",
+    "observedSelector": "#root > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > form > div > input",
+    "requiredName": "Search",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#root > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > form > div > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "searchbox"
+    },
+    "site": "thewest.com.au",
+    "match": "https://thewest.com.au/",
+    "barrier": "The search input has a searchbox role but lacks an accessible name, so it cannot be found as “Search” in Reading view.",
+    "rules": [
+      {
+        "selector": "#root > div:nth-of-type(2) > div > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > form > div > input",
+        "action": "addLabel",
+        "value": "Search"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v4-129cd532652cd7a08d8e/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v4-129cd532652cd7a08d8e/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v4-129cd532652cd7a08d8e/after/recording.mp4",
+      "kaneRunIds": [
+        "50b2a61b-066b-43df-a75c-3108102744f2",
+        "5942b47a-e2ea-42c7-a8bc-47a5f001aae3",
+        "195577a9-4d55-4745-ac61-5f93dd8ca2ea"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T15:11:42.016Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T15:11:42.016Z",
+        "before": "50b2a61b-066b-43df-a75c-3108102744f2",
+        "control": "5942b47a-e2ea-42c7-a8bc-47a5f001aae3",
+        "after": "195577a9-4d55-4745-ac61-5f93dd8ca2ea"
+      }
+    ]
+  },
+  {
+    "id": "v4-1d969d3c33df6a6de327",
+    "url": "https://kprofiles.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Type here to search...” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Type here to search...” field and type test without submitting.",
+    "observedSelector": "#header > div:nth-of-type(2) > div > div > div > div:nth-of-type(2) > form > input",
+    "requiredName": "Type here to search...",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#header > div:nth-of-type(2) > div > div > div > div:nth-of-type(2) > form > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "kprofiles.com",
+    "match": "https://kprofiles.com/",
+    "barrier": "The search input has the textbox role but lacks an accessible name, so it cannot be found by its prompt in Reading view.",
+    "rules": [
+      {
+        "selector": "#header > div:nth-of-type(2) > div > div > div > div:nth-of-type(2) > form > input",
+        "action": "addLabel",
+        "value": "Type here to search..."
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v4-1d969d3c33df6a6de327/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v4-1d969d3c33df6a6de327/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v4-1d969d3c33df6a6de327/after/recording.mp4",
+      "kaneRunIds": [
+        "c2100924-3a84-4b50-95aa-930fee28f04f",
+        "f8c59488-357b-4b73-a12d-a8e241f4cf84",
+        "65c4ad74-4f67-4605-ae26-bc75016b601a"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T15:02:22.914Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T15:02:22.914Z",
+        "before": "c2100924-3a84-4b50-95aa-930fee28f04f",
+        "control": "f8c59488-357b-4b73-a12d-a8e241f4cf84",
+        "after": "65c4ad74-4f67-4605-ae26-bc75016b601a"
+      }
+    ]
+  },
+  {
     "id": "v4-27c6f312c486-51e6e4ad",
     "url": "https://csc.gov.in/",
     "persona": "keyboard-only",
@@ -2626,6 +2750,378 @@
     ]
   },
   {
+    "id": "v4-536f5aabeed4ef336c4d",
+    "url": "https://vignanam.org/#&panel1-1",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search for Stotram...” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search for Stotram...” field and type test without submitting.",
+    "observedSelector": "#searchbar",
+    "requiredName": "Search for Stotram...",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#searchbar",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "vignanam.org",
+    "match": "https://vignanam.org/",
+    "barrier": "The #searchbar textbox has no accessible name in Reading view.",
+    "rules": [
+      {
+        "selector": "#searchbar",
+        "action": "addLabel",
+        "value": "Search for Stotram..."
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v4-536f5aabeed4ef336c4d/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v4-536f5aabeed4ef336c4d/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v4-536f5aabeed4ef336c4d/after/recording.mp4",
+      "kaneRunIds": [
+        "2fc7b4d6-a5b6-4a57-a960-8cd4da6e64fe",
+        "a32f934f-675f-48bc-bb1f-80823c83c19e",
+        "03dd316d-e4ba-40ae-b828-2f4c5ba16ce7"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T14:50:37.582Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T14:50:37.582Z",
+        "before": "2fc7b4d6-a5b6-4a57-a960-8cd4da6e64fe",
+        "control": "a32f934f-675f-48bc-bb1f-80823c83c19e",
+        "after": "03dd316d-e4ba-40ae-b828-2f4c5ba16ce7"
+      }
+    ]
+  },
+  {
+    "id": "v4-55e7f5e4d6e57dad613e",
+    "url": "https://www.webassign.net/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search” field and type test without submitting.",
+    "observedSelector": "#menu-primary > li:nth-of-type(5) > form > input:nth-of-type(1)",
+    "requiredName": "Search",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#menu-primary > li:nth-of-type(5) > form > input:nth-of-type(1)",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.webassign.net",
+    "match": "https://www.webassign.net/",
+    "barrier": "The search input has a textbox role but no accessible name, so it cannot be found as “Search” in Reading view.",
+    "rules": [
+      {
+        "selector": "#menu-primary > li:nth-of-type(5) > form > input:nth-of-type(1)",
+        "action": "addLabel",
+        "value": "Search"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v4-55e7f5e4d6e57dad613e/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v4-55e7f5e4d6e57dad613e/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v4-55e7f5e4d6e57dad613e/after/recording.mp4",
+      "kaneRunIds": [
+        "719cca0e-c426-43ee-bd83-be3f4d567c4a",
+        "5d467ec1-aabf-48f3-9787-bbbd8ca3fdda",
+        "da84aa71-76e0-41da-a095-dce9edecdb0d"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T15:02:42.448Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T15:02:42.448Z",
+        "before": "719cca0e-c426-43ee-bd83-be3f4d567c4a",
+        "control": "5d467ec1-aabf-48f3-9787-bbbd8ca3fdda",
+        "after": "da84aa71-76e0-41da-a095-dce9edecdb0d"
+      }
+    ]
+  },
+  {
+    "id": "v4-5bfc1f759db965ccf1a8",
+    "url": "https://netshort.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search” searchbox and type test without submitting.",
+    "controlTask": "Click the visible “Search” field and type test without submitting.",
+    "observedSelector": "div:nth-of-type(2) > div:nth-of-type(3) > header > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > input",
+    "requiredName": "Search",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "div:nth-of-type(2) > div:nth-of-type(3) > header > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "searchbox"
+    },
+    "site": "netshort.com",
+    "match": "https://netshort.com/",
+    "barrier": "The search input has the searchbox role but lacks an accessible name, so it cannot be found as “Search” in Reading view.",
+    "rules": [
+      {
+        "selector": "div:nth-of-type(2) > div:nth-of-type(3) > header > div > div > div:nth-of-type(2) > div:nth-of-type(1) > div > input",
+        "action": "addLabel",
+        "value": "Search"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v4-5bfc1f759db965ccf1a8/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v4-5bfc1f759db965ccf1a8/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v4-5bfc1f759db965ccf1a8/after/recording.mp4",
+      "kaneRunIds": [
+        "f75e18b5-8d03-461b-8113-96ea5a2e79a9",
+        "a9e9c7c9-7dfc-4813-8663-a0f323e18220",
+        "63db9295-a91a-4038-b8e9-ead9a9f1e704"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T15:07:42.664Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T15:07:42.664Z",
+        "before": "f75e18b5-8d03-461b-8113-96ea5a2e79a9",
+        "control": "a9e9c7c9-7dfc-4813-8663-a0f323e18220",
+        "after": "63db9295-a91a-4038-b8e9-ead9a9f1e704"
+      }
+    ]
+  },
+  {
+    "id": "v4-62c500cf7fa2effb9570",
+    "url": "https://www.mumuplayer.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search for Games” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search for Games” field and type test without submitting.",
+    "observedSelector": "#Sch",
+    "requiredName": "Search for Games",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#Sch",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.mumuplayer.com",
+    "match": "https://www.mumuplayer.com/",
+    "barrier": "The search textbox #Sch has no accessible name, so it cannot be found as “Search for Games” in Reading view.",
+    "rules": [
+      {
+        "selector": "#Sch",
+        "action": "addLabel",
+        "value": "Search for Games"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v4-62c500cf7fa2effb9570/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v4-62c500cf7fa2effb9570/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v4-62c500cf7fa2effb9570/after/recording.mp4",
+      "kaneRunIds": [
+        "4836a6be-fdb3-4903-ab03-949bae3e944d",
+        "638d1427-7e44-42fc-bd45-b68b14cacc45",
+        "0a1f20c1-6fa3-4fe3-bce2-9c5e3240108d"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T14:46:36.221Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T14:46:36.221Z",
+        "before": "4836a6be-fdb3-4903-ab03-949bae3e944d",
+        "control": "638d1427-7e44-42fc-bd45-b68b14cacc45",
+        "after": "0a1f20c1-6fa3-4fe3-bce2-9c5e3240108d"
+      }
+    ]
+  },
+  {
+    "id": "v4-719c31e107dae52fa9e6",
+    "url": "https://www.whatmobile.com.pk/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search” field and type test without submitting.",
+    "observedSelector": "#searchInput",
+    "requiredName": "Search",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#searchInput",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.whatmobile.com.pk",
+    "match": "https://www.whatmobile.com.pk/",
+    "barrier": "The search input has a textbox role but no accessible name, so it cannot be found as “Search” in Reading view.",
+    "rules": [
+      {
+        "selector": "#searchInput",
+        "action": "addLabel",
+        "value": "Search"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v4-719c31e107dae52fa9e6/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v4-719c31e107dae52fa9e6/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v4-719c31e107dae52fa9e6/after/recording.mp4",
+      "kaneRunIds": [
+        "6fe2b2c1-ecfb-466f-89ca-91be2fdc0c3b",
+        "cadc2ef3-3217-49f6-a454-330ad876e3b7",
+        "bacc1a79-de3a-477c-81c4-0e842957ceff"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T14:58:17.172Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T14:58:17.172Z",
+        "before": "6fe2b2c1-ecfb-466f-89ca-91be2fdc0c3b",
+        "control": "cadc2ef3-3217-49f6-a454-330ad876e3b7",
+        "after": "bacc1a79-de3a-477c-81c4-0e842957ceff"
+      }
+    ]
+  },
+  {
+    "id": "v4-7822d8bab86396640afa",
+    "url": "https://coub.com/featured/creators",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search Coub” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search Coub” field and type test without submitting.",
+    "observedSelector": "div:nth-of-type(2) > div > header:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(1) > form > div > input",
+    "requiredName": "Search Coub",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "div:nth-of-type(2) > div > header:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(1) > form > div > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "coub.com",
+    "match": "https://coub.com/featured/creators",
+    "barrier": "The search textbox has no accessible name, so it cannot be found as “Search Coub” in Reading view.",
+    "rules": [
+      {
+        "selector": "div:nth-of-type(2) > div > header:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(1) > form > div > input",
+        "action": "addLabel",
+        "value": "Search Coub"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v4-7822d8bab86396640afa/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v4-7822d8bab86396640afa/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v4-7822d8bab86396640afa/after/recording.mp4",
+      "kaneRunIds": [
+        "dcd30f74-e313-40d7-b517-725040fdf96f",
+        "53161fac-b4e2-4a14-8737-1eb193b10cb7",
+        "2d9522e4-cf15-4360-af14-645f38d577b0"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T15:16:43.765Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T15:16:43.765Z",
+        "before": "dcd30f74-e313-40d7-b517-725040fdf96f",
+        "control": "53161fac-b4e2-4a14-8737-1eb193b10cb7",
+        "after": "2d9522e4-cf15-4360-af14-645f38d577b0"
+      }
+    ]
+  },
+  {
     "id": "v4-86f207deeb57-7bc09a21",
     "url": "https://www.mass.edu/",
     "persona": "keyboard-only",
@@ -2702,6 +3198,626 @@
         "before": "efcfdd9f-fe30-4b4e-a7e7-f95a0d71eba3",
         "control": "385196a9-e165-4f24-8616-8fe5ceca6d61",
         "after": "cb96e3af-bc33-467f-adce-1b4d19ce6cde"
+      }
+    ]
+  },
+  {
+    "id": "v4-8f3294d8284af81ec387",
+    "url": "https://www.discgolfscene.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search” field and type test without submitting.",
+    "observedSelector": "#navbar > form:nth-of-type(2) > div:nth-of-type(1) > input",
+    "requiredName": "Search",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#navbar > form:nth-of-type(2) > div:nth-of-type(1) > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.discgolfscene.com",
+    "match": "https://www.discgolfscene.com/",
+    "barrier": "The navbar textbox has no accessible name, so it cannot be found as “Search” in Reading view.",
+    "rules": [
+      {
+        "selector": "#navbar > form:nth-of-type(2) > div:nth-of-type(1) > input",
+        "action": "addLabel",
+        "value": "Search"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v4-8f3294d8284af81ec387/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v4-8f3294d8284af81ec387/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v4-8f3294d8284af81ec387/after/recording.mp4",
+      "kaneRunIds": [
+        "49960e48-fc8a-4776-865c-9bc0cd1c6e87",
+        "1fdec547-63c7-4e54-be5f-3dc93fa3ab7d",
+        "edc1c03d-e86d-41f1-8cd3-bce0faec8621"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T15:00:25.723Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T15:00:25.723Z",
+        "before": "49960e48-fc8a-4776-865c-9bc0cd1c6e87",
+        "control": "1fdec547-63c7-4e54-be5f-3dc93fa3ab7d",
+        "after": "edc1c03d-e86d-41f1-8cd3-bce0faec8621"
+      }
+    ]
+  },
+  {
+    "id": "v4-8f8e233e6e5c9293f178",
+    "url": "https://www.keralakaumudi.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “SEARCH NEWS” textbox and type test without submitting.",
+    "controlTask": "Click the visible “SEARCH NEWS” field and type test without submitting.",
+    "observedSelector": "div:nth-of-type(3) > div > div:nth-of-type(2) > ul > li:nth-of-type(1) > form > input",
+    "requiredName": "SEARCH NEWS",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "div:nth-of-type(3) > div > div:nth-of-type(2) > ul > li:nth-of-type(1) > form > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.keralakaumudi.com",
+    "match": "https://www.keralakaumudi.com/",
+    "barrier": "The SEARCH NEWS input has a textbox role but no accessible name in Reading view.",
+    "rules": [
+      {
+        "selector": "div:nth-of-type(3) > div > div:nth-of-type(2) > ul > li:nth-of-type(1) > form > input",
+        "action": "addLabel",
+        "value": "SEARCH NEWS"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v4-8f8e233e6e5c9293f178/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v4-8f8e233e6e5c9293f178/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v4-8f8e233e6e5c9293f178/after/recording.mp4",
+      "kaneRunIds": [
+        "595a092d-51a1-4959-bdb2-fc01f817ff68",
+        "883343f2-3954-4014-8d4c-e223ac768161",
+        "ee31ae71-c04f-4613-896e-2c965bb00822"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T15:05:43.232Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T15:05:43.232Z",
+        "before": "595a092d-51a1-4959-bdb2-fc01f817ff68",
+        "control": "883343f2-3954-4014-8d4c-e223ac768161",
+        "after": "ee31ae71-c04f-4613-896e-2c965bb00822"
+      }
+    ]
+  },
+  {
+    "id": "v4-9e66a9a97f9c204bd650",
+    "url": "https://thewire.in/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search news” searchbox and type test without submitting.",
+    "controlTask": "Click the visible “Search news” field and type test without submitting.",
+    "observedSelector": "#root > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div > input",
+    "requiredName": "Search news",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#root > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "searchbox"
+    },
+    "site": "thewire.in",
+    "match": "https://thewire.in/",
+    "barrier": "The search input has a searchbox role but no accessible name, so screen-reader users cannot find it as “Search news” in Reading view.",
+    "rules": [
+      {
+        "selector": "#root > div > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div > input",
+        "action": "addLabel",
+        "value": "Search news"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v4-9e66a9a97f9c204bd650/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v4-9e66a9a97f9c204bd650/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v4-9e66a9a97f9c204bd650/after/recording.mp4",
+      "kaneRunIds": [
+        "e9a1e039-0a93-441d-9723-6321a487f0fd",
+        "32d6fafe-b39b-4710-8dc8-93c25abe54c6",
+        "a475a547-48df-4317-976a-60de27b2f798"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T15:14:04.337Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T15:14:04.337Z",
+        "before": "e9a1e039-0a93-441d-9723-6321a487f0fd",
+        "control": "32d6fafe-b39b-4710-8dc8-93c25abe54c6",
+        "after": "a475a547-48df-4317-976a-60de27b2f798"
+      }
+    ]
+  },
+  {
+    "id": "v4-b370040967d3a144a363",
+    "url": "https://hngangjiegou.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search” field and type test without submitting.",
+    "observedSelector": "#search",
+    "requiredName": "Search",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#search",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "hngangjiegou.com",
+    "match": "https://hngangjiegou.com/",
+    "barrier": "The #search textbox has no accessible name, so it cannot be found by the name Search in Reading view.",
+    "rules": [
+      {
+        "selector": "#search",
+        "action": "addLabel",
+        "value": "Search"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v4-b370040967d3a144a363/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v4-b370040967d3a144a363/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v4-b370040967d3a144a363/after/recording.mp4",
+      "kaneRunIds": [
+        "3e85ede9-0f02-4655-851e-d9cad42be683",
+        "abaf5b7b-80aa-4dfb-82a9-f20563557e69",
+        "23095368-91b7-4009-8bac-ad750c76e41d"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T14:47:55.918Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T14:47:55.918Z",
+        "before": "3e85ede9-0f02-4655-851e-d9cad42be683",
+        "control": "abaf5b7b-80aa-4dfb-82a9-f20563557e69",
+        "after": "23095368-91b7-4009-8bac-ad750c76e41d"
+      }
+    ]
+  },
+  {
+    "id": "v5-2cdebc725e6217cd5bea",
+    "url": "https://www.definitions.net/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search for dictionary definitions” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search for dictionary definitions” field and type test without submitting.",
+    "observedSelector": "#search",
+    "requiredName": "Search for dictionary definitions",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#search",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.definitions.net",
+    "match": "https://www.definitions.net/",
+    "barrier": "The native textbox #search has no accessible name, so it cannot be found by its expected name in Reading view.",
+    "rules": [
+      {
+        "selector": "input#search",
+        "action": "addLabel",
+        "value": "Search for dictionary definitions"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v5-2cdebc725e6217cd5bea/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v5-2cdebc725e6217cd5bea/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v5-2cdebc725e6217cd5bea/after/recording.mp4",
+      "kaneRunIds": [
+        "a7329e7f-ca31-4fb3-ab91-c756128499d1",
+        "641e9390-797a-4a20-b915-8b437ab9002e",
+        "ef874ad0-75e0-4bbe-b060-fbb553001128"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T14:28:53.555Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T14:28:53.555Z",
+        "before": "a7329e7f-ca31-4fb3-ab91-c756128499d1",
+        "control": "641e9390-797a-4a20-b915-8b437ab9002e",
+        "after": "ef874ad0-75e0-4bbe-b060-fbb553001128"
+      }
+    ]
+  },
+  {
+    "id": "v5-439db0d7b7aec279133a",
+    "url": "https://gamekillerapp.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search” field and type test without submitting.",
+    "observedSelector": "#__nuxt > div > div > div:nth-of-type(2) > section > section:nth-of-type(2) > div:nth-of-type(2) > div > input",
+    "requiredName": "Search",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#__nuxt > div > div > div:nth-of-type(2) > section > section:nth-of-type(2) > div:nth-of-type(2) > div > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "gamekillerapp.com",
+    "match": "https://gamekillerapp.com/",
+    "barrier": "The native search textbox has no accessible name, so Reading view cannot identify it as Search.",
+    "rules": [
+      {
+        "selector": "section.label-box > div.search-container > div > input.search-input",
+        "action": "addLabel",
+        "value": "Search"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v5-439db0d7b7aec279133a/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v5-439db0d7b7aec279133a/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v5-439db0d7b7aec279133a/after/recording.mp4",
+      "kaneRunIds": [
+        "ac828542-2216-428d-8f2f-7054f0634ba3",
+        "89d3fdd2-bc4f-40a3-9d38-9bd645808655",
+        "23b479b0-642f-4e10-90a2-d2a79e698536"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T14:39:48.209Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T14:39:48.209Z",
+        "before": "ac828542-2216-428d-8f2f-7054f0634ba3",
+        "control": "89d3fdd2-bc4f-40a3-9d38-9bd645808655",
+        "after": "23b479b0-642f-4e10-90a2-d2a79e698536"
+      }
+    ]
+  },
+  {
+    "id": "v5-4d9b7cd1a38df17dc02d",
+    "url": "https://www.kenyans.co.ke/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search Kenyans.co.ke” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search Kenyans.co.ke” field and type test without submitting.",
+    "observedSelector": "#edit-search",
+    "requiredName": "Search Kenyans.co.ke",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#edit-search",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.kenyans.co.ke",
+    "match": "https://www.kenyans.co.ke/",
+    "barrier": "The search input is a focusable textbox with no accessible name, so Reading view cannot identify it as “Search Kenyans.co.ke”.",
+    "rules": [
+      {
+        "selector": "#edit-search",
+        "action": "addLabel",
+        "value": "Search Kenyans.co.ke"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v5-4d9b7cd1a38df17dc02d/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v5-4d9b7cd1a38df17dc02d/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v5-4d9b7cd1a38df17dc02d/after/recording.mp4",
+      "kaneRunIds": [
+        "09398806-c1c2-47a6-a33c-bfb179935833",
+        "82039194-58a8-4bb8-99cd-d91650ecc3a3",
+        "657ecc08-ff25-4056-8191-e8ab71c74b02"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T14:32:25.789Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T14:32:25.789Z",
+        "before": "09398806-c1c2-47a6-a33c-bfb179935833",
+        "control": "82039194-58a8-4bb8-99cd-d91650ecc3a3",
+        "after": "657ecc08-ff25-4056-8191-e8ab71c74b02"
+      }
+    ]
+  },
+  {
+    "id": "v5-5c4180c90d404bc4bd14",
+    "url": "https://www.indriya.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search by Pin code / City / State” searchbox and type test without submitting.",
+    "controlTask": "Click the visible “Search by Pin code / City / State” field and type test without submitting.",
+    "observedSelector": "#typeahead",
+    "requiredName": "Search by Pin code / City / State",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#typeahead",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "searchbox"
+    },
+    "site": "www.indriya.com",
+    "match": "https://www.indriya.com/",
+    "barrier": "The store locator input already has the searchbox role but lacks an accessible name in Reading view.",
+    "rules": [
+      {
+        "selector": "#typeahead",
+        "action": "addLabel",
+        "value": "Search by Pin code / City / State"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v5-5c4180c90d404bc4bd14/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v5-5c4180c90d404bc4bd14/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v5-5c4180c90d404bc4bd14/after/recording.mp4",
+      "kaneRunIds": [
+        "1badc73f-65c8-417a-9147-f1036310463b",
+        "3d6d20de-39bc-4746-a324-b6cd4dd752fb",
+        "dfb0cb87-77b6-47ff-9efd-e506f0b3fc56"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T14:32:49.552Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T14:32:49.552Z",
+        "before": "1badc73f-65c8-417a-9147-f1036310463b",
+        "control": "3d6d20de-39bc-4746-a324-b6cd4dd752fb",
+        "after": "dfb0cb87-77b6-47ff-9efd-e506f0b3fc56"
+      }
+    ]
+  },
+  {
+    "id": "v5-5f22528618352a280b18",
+    "url": "https://www.india.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search on india.com...” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search on india.com...” field and type test without submitting.",
+    "observedSelector": "#t2",
+    "requiredName": "Search on india.com...",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#t2",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.india.com",
+    "match": "https://www.india.com/",
+    "barrier": "The visible search input #t2 has a native textbox role but no accessible name, so it cannot be found by its expected name in Reading view.",
+    "rules": [
+      {
+        "selector": "#t2",
+        "action": "addLabel",
+        "value": "Search on india.com..."
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v5-5f22528618352a280b18/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v5-5f22528618352a280b18/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v5-5f22528618352a280b18/after/recording.mp4",
+      "kaneRunIds": [
+        "5d0bd397-6e4d-4a4d-9885-a9141cf95c9c",
+        "0d06f770-d4b4-40ab-ac7f-b275c4a48e30",
+        "68cd4d38-5ed3-4529-9ac0-600ea7b78a60"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T14:30:01.211Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T14:30:01.211Z",
+        "before": "5d0bd397-6e4d-4a4d-9885-a9141cf95c9c",
+        "control": "0d06f770-d4b4-40ab-ac7f-b275c4a48e30",
+        "after": "68cd4d38-5ed3-4529-9ac0-600ea7b78a60"
+      }
+    ]
+  },
+  {
+    "id": "v5-7577362f6282cf34117d",
+    "url": "https://www.indiabix.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search” field and type test without submitting.",
+    "observedSelector": "#txtSearchKey",
+    "requiredName": "Search",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#txtSearchKey",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.indiabix.com",
+    "match": "https://www.indiabix.com/",
+    "barrier": "The native textbox #txtSearchKey has no accessible name, so it cannot be identified as “Search” in Reading view.",
+    "rules": [
+      {
+        "selector": "#txtSearchKey",
+        "action": "addLabel",
+        "value": "Search"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v5-7577362f6282cf34117d/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v5-7577362f6282cf34117d/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v5-7577362f6282cf34117d/after/recording.mp4",
+      "kaneRunIds": [
+        "9467db3f-b173-45b3-927f-937f291995d1",
+        "f4de4357-fb1d-4caa-b032-1decf867ce05",
+        "97008dff-ff1d-4a09-9cea-0ff8bad17c3f"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T14:34:49.941Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T14:34:49.941Z",
+        "before": "9467db3f-b173-45b3-927f-937f291995d1",
+        "control": "f4de4357-fb1d-4caa-b032-1decf867ce05",
+        "after": "97008dff-ff1d-4a09-9cea-0ff8bad17c3f"
       }
     ]
   },
@@ -2793,6 +3909,68 @@
     ]
   },
   {
+    "id": "v5-7b267457c921bdee8928",
+    "url": "https://www.nelomanga.net/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search manga...” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search manga...” field and type test without submitting.",
+    "observedSelector": "#search_story",
+    "requiredName": "Search manga...",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#search_story",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.nelomanga.net",
+    "match": "https://www.nelomanga.net/",
+    "barrier": "The search input has a textbox role but no accessible name, so it cannot be found by the name “Search manga...” in Reading view.",
+    "rules": [
+      {
+        "selector": "#search_story",
+        "action": "addLabel",
+        "value": "Search manga..."
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v5-7b267457c921bdee8928/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v5-7b267457c921bdee8928/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v5-7b267457c921bdee8928/after/recording.mp4",
+      "kaneRunIds": [
+        "2ccdd6fd-a1ac-45b3-974a-4177bd6026b5",
+        "b6a8689c-c1da-4ca1-a70e-70415d7e1bbe",
+        "64858f00-832c-4a8d-97a4-d3eb27d1d6fe"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T14:37:36.711Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T14:37:36.711Z",
+        "before": "2ccdd6fd-a1ac-45b3-974a-4177bd6026b5",
+        "control": "b6a8689c-c1da-4ca1-a70e-70415d7e1bbe",
+        "after": "64858f00-832c-4a8d-97a4-d3eb27d1d6fe"
+      }
+    ]
+  },
+  {
     "id": "v5-7dc57bda3fb85932eb21",
     "url": "https://trackjs.com/",
     "persona": "low-vision",
@@ -2854,6 +4032,68 @@
         "before": "6a82cb5b-ad5a-40bd-8b19-8b4e34c87122",
         "control": "6d083a4c-7ad8-423f-a8de-a0954f7c944b",
         "after": "0b89ade8-fc09-4169-9cfc-c8294fb0eed0"
+      }
+    ]
+  },
+  {
+    "id": "v5-987edaaf216b0e19b87b",
+    "url": "https://www.facer.io/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search watch faces” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search watch faces” field and type test without submitting.",
+    "observedSelector": "div:nth-of-type(1) > header > header-v2 > nav > div > div:nth-of-type(2) > ul > header-search > li > form > div > input",
+    "requiredName": "Search watch faces",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "div:nth-of-type(1) > header > header-v2 > nav > div > div:nth-of-type(2) > ul > header-search > li > form > div > input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "www.facer.io",
+    "match": "https://www.facer.io/",
+    "barrier": "The desktop search input has a native textbox role but no accessible name, so it cannot be found as “Search watch faces” in Reading view.",
+    "rules": [
+      {
+        "selector": "nav.app-header--desktop #searchWatchfaces input#srch-term",
+        "action": "addLabel",
+        "value": "Search watch faces"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v5-987edaaf216b0e19b87b/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v5-987edaaf216b0e19b87b/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v5-987edaaf216b0e19b87b/after/recording.mp4",
+      "kaneRunIds": [
+        "de70cceb-6d00-46fc-9891-29dbf859664e",
+        "75e4063d-1176-4773-897e-dc9cb5702c95",
+        "5e3b5b6d-cb67-43eb-8979-02f41bb71449"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T14:42:35.930Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T14:42:35.930Z",
+        "before": "de70cceb-6d00-46fc-9891-29dbf859664e",
+        "control": "75e4063d-1176-4773-897e-dc9cb5702c95",
+        "after": "5e3b5b6d-cb67-43eb-8979-02f41bb71449"
       }
     ]
   },
@@ -2951,6 +4191,68 @@
         "before": "460c7499-3ea1-4bc3-9a09-363f33035a52",
         "control": "b435dc9f-d3d2-47e9-9340-8995d195ef44",
         "after": "4ea72be2-0206-4c0b-b67d-8e7b22ecd2de"
+      }
+    ]
+  },
+  {
+    "id": "v5-a9df85261cf0d47ce083",
+    "url": "https://webhook.site/#!/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search Query” textbox and type test without submitting.",
+    "controlTask": "Click the visible “Search Query” field and type test without submitting.",
+    "observedSelector": "#search-input",
+    "requiredName": "Search Query",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#search-input",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "textbox"
+    },
+    "site": "webhook.site",
+    "match": "https://webhook.site/",
+    "barrier": "The search textarea has the native textbox role but no accessible name, so Reading view cannot identify it as Search Query.",
+    "rules": [
+      {
+        "selector": "#search-input",
+        "action": "addLabel",
+        "value": "Search Query"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v5-a9df85261cf0d47ce083/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v5-a9df85261cf0d47ce083/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v5-a9df85261cf0d47ce083/after/recording.mp4",
+      "kaneRunIds": [
+        "8ce0e552-c583-4bdd-af50-1d3c4370602d",
+        "ceb33db9-9dcf-484a-bc2a-5ec7f65515ca",
+        "5453eaa2-7f09-4a8e-8346-1e149ca9cb28"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T14:35:06.493Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T14:35:06.493Z",
+        "before": "8ce0e552-c583-4bdd-af50-1d3c4370602d",
+        "control": "ceb33db9-9dcf-484a-bc2a-5ec7f65515ca",
+        "after": "5453eaa2-7f09-4a8e-8346-1e149ca9cb28"
       }
     ]
   },
@@ -3438,6 +4740,68 @@
         "before": "8a712d55-dc89-406b-b2de-930a054f147c",
         "control": "9ec2e3bb-49ac-4b27-a16a-09c2f4b49760",
         "after": "51146f1b-6f38-496c-96ef-31db65b00f29"
+      }
+    ]
+  },
+  {
+    "id": "v5-ef812af22b0a73baac84",
+    "url": "https://www.ghanaweb.com/",
+    "persona": "screen-reader-view",
+    "task": "In Reading view, find the “Search GhanaWeb” searchbox and type test without submitting.",
+    "controlTask": "Click the visible “Search GhanaWeb” field and type test without submitting.",
+    "observedSelector": "#pagecontainer > div:nth-of-type(5) > div > div:nth-of-type(1) > div:nth-of-type(2) > form > input:nth-of-type(3)",
+    "requiredName": "Search GhanaWeb",
+    "outcomeChecks": [
+      {
+        "kind": "value",
+        "selector": "#pagecontainer > div:nth-of-type(5) > div > div:nth-of-type(1) > div:nth-of-type(2) > form > input:nth-of-type(3)",
+        "equals": "test"
+      }
+    ],
+    "probe": {
+      "action": "type",
+      "value": "test",
+      "role": "searchbox"
+    },
+    "site": "www.ghanaweb.com",
+    "match": "https://www.ghanaweb.com/",
+    "barrier": "The visible, focusable GhanaWeb search input has a searchbox role but no accessible name, so it cannot be found by name in Reading view.",
+    "rules": [
+      {
+        "selector": "#pagecontainer .top-bar form.flexsearch--form > input.search--input",
+        "action": "addLabel",
+        "value": "Search GhanaWeb"
+      }
+    ],
+    "status": "verified",
+    "evidence": {
+      "before": "proof/kane-batch-2026-11-25/runs/v5-ef812af22b0a73baac84/before/recording.mp4",
+      "control": "proof/kane-batch-2026-11-25/runs/v5-ef812af22b0a73baac84/control/recording.mp4",
+      "after": "proof/kane-batch-2026-11-25/runs/v5-ef812af22b0a73baac84/after/recording.mp4",
+      "kaneRunIds": [
+        "b9760f7f-4c7a-4204-8db7-aec5d6f931ca",
+        "308933ab-33b8-408e-98d5-a675ca1cd16e",
+        "a253c08c-b0d7-43ab-bcec-f2cc9ab6eb2c"
+      ],
+      "kaneVerdicts": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "localOracle": {
+        "before": "fail",
+        "control": "pass",
+        "after": "pass"
+      },
+      "verifiedAt": "2026-11-25T14:41:58.263Z"
+    },
+    "history": [
+      {
+        "event": "verified",
+        "at": "2026-11-25T14:41:58.263Z",
+        "before": "b9760f7f-4c7a-4204-8db7-aec5d6f931ca",
+        "control": "308933ab-33b8-408e-98d5-a675ca1cd16e",
+        "after": "a253c08c-b0d7-43ab-bcec-f2cc9ab6eb2c"
       }
     ]
   },

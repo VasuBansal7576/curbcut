@@ -8,7 +8,8 @@ Compare [Mass.edu before](hard-v4/kane/v4-86f207deeb57-7bc09a21/before/recording
 
 | Claim | Result | Evidence |
 | --- | --- | --- |
-| Release bundle | 106 active repairs. 62 with Kane recordings and 44 with local proof | [Bundled rules and evidence pointers](../extension/bundled.json) |
+| Release bundle | 128 active repairs. 84 with Kane recordings and 44 with local proof | [Bundled rules and evidence pointers](../extension/bundled.json) |
+| November 25 Kane batch | 33 candidates, 22 verified, 3 failed, 4 inconclusive, 4 blocked | [Case outcomes, recordings and sealed packs](kane-batch-2026-11-25/README.md) · [Packaged ZIP receipt](kane-batch-2026-11-25/release.json) |
 | Installed-extension audits | 43/43 original fixes, 11/11 new v5 fixes and 51/51 new v6 fixes passed their release audits | [Original audit](reliability/extension-e2e.json) · [New v5 audit](heldout-v5/kane-sample-20/extension-e2e.json) · [New v6 audit](heldout-v6/extension-e2e.json) · [V6 candidate exclusions](heldout-v6/extension-e2e-initial.json) |
 | November 24, 2026 installed audit | 98/105 primary checks passed across that day’s bundle, seven unconfirmed | [Installed audit](reliability/submission-extension-e2e.json) · [Targeted local recheck](reliability/submission-recheck.json) |
 | Developer fixture | Kane runs for Check, Gate and retirement | [CLI demo archive](demo/README.md) |

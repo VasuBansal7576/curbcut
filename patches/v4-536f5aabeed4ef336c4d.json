@@ -1,0 +1,62 @@
+{
+  "id": "v4-536f5aabeed4ef336c4d",
+  "url": "https://vignanam.org/#&panel1-1",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search for Stotram...” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search for Stotram...” field and type test without submitting.",
+  "observedSelector": "#searchbar",
+  "requiredName": "Search for Stotram...",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#searchbar",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "vignanam.org",
+  "match": "https://vignanam.org/",
+  "barrier": "The #searchbar textbox has no accessible name in Reading view.",
+  "rules": [
+    {
+      "selector": "#searchbar",
+      "action": "addLabel",
+      "value": "Search for Stotram..."
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v4-536f5aabeed4ef336c4d/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v4-536f5aabeed4ef336c4d/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v4-536f5aabeed4ef336c4d/after/recording.mp4",
+    "kaneRunIds": [
+      "2fc7b4d6-a5b6-4a57-a960-8cd4da6e64fe",
+      "a32f934f-675f-48bc-bb1f-80823c83c19e",
+      "03dd316d-e4ba-40ae-b828-2f4c5ba16ce7"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T14:50:37.582Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T14:50:37.582Z",
+      "before": "2fc7b4d6-a5b6-4a57-a960-8cd4da6e64fe",
+      "control": "a32f934f-675f-48bc-bb1f-80823c83c19e",
+      "after": "03dd316d-e4ba-40ae-b828-2f4c5ba16ce7"
+    }
+  ]
+}

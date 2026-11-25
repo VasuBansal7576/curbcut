@@ -1,12 +1,12 @@
 {
-  "tested": 252,
-  "blocked": 79,
+  "tested": 274,
+  "blocked": 101,
   "blockedByPersona": {
     "keyboard-only": 30,
     "low-vision": 28,
-    "screen-reader-view": 21
+    "screen-reader-view": 43
   },
-  "fixed": 63,
+  "fixed": 85,
   "open": 16,
   "publicTasks": [
     {
@@ -3042,6 +3042,38 @@
       ]
     },
     {
+      "id": "v4-129cd532652cd7a08d8e",
+      "url": "https://thewest.com.au/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search” searchbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v4-129cd532652cd7a08d8e.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v4-1d969d3c33df6a6de327",
+      "url": "https://kprofiles.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Type here to search...” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v4-1d969d3c33df6a6de327.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
       "id": "v4-27c6f312c486-51e6e4ad",
       "url": "https://csc.gov.in/",
       "persona": "keyboard-only",
@@ -3053,6 +3085,102 @@
         },
         {
           "source": "patches/v4-27c6f312c486-51e6e4ad.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v4-536f5aabeed4ef336c4d",
+      "url": "https://vignanam.org/#&panel1-1",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search for Stotram...” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v4-536f5aabeed4ef336c4d.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v4-55e7f5e4d6e57dad613e",
+      "url": "https://www.webassign.net/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v4-55e7f5e4d6e57dad613e.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v4-5bfc1f759db965ccf1a8",
+      "url": "https://netshort.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search” searchbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v4-5bfc1f759db965ccf1a8.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v4-62c500cf7fa2effb9570",
+      "url": "https://www.mumuplayer.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search for Games” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v4-62c500cf7fa2effb9570.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v4-719c31e107dae52fa9e6",
+      "url": "https://www.whatmobile.com.pk/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v4-719c31e107dae52fa9e6.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v4-7822d8bab86396640afa",
+      "url": "https://coub.com/featured/creators",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search Coub” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v4-7822d8bab86396640afa.json",
           "status": "fixed"
         }
       ]
@@ -3074,6 +3202,166 @@
       ]
     },
     {
+      "id": "v4-8f3294d8284af81ec387",
+      "url": "https://www.discgolfscene.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v4-8f3294d8284af81ec387.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v4-8f8e233e6e5c9293f178",
+      "url": "https://www.keralakaumudi.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “SEARCH NEWS” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v4-8f8e233e6e5c9293f178.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v4-9e66a9a97f9c204bd650",
+      "url": "https://thewire.in/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search news” searchbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v4-9e66a9a97f9c204bd650.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v4-b370040967d3a144a363",
+      "url": "https://hngangjiegou.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v4-b370040967d3a144a363.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-2cdebc725e6217cd5bea",
+      "url": "https://www.definitions.net/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search for dictionary definitions” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-2cdebc725e6217cd5bea.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-439db0d7b7aec279133a",
+      "url": "https://gamekillerapp.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-439db0d7b7aec279133a.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-4d9b7cd1a38df17dc02d",
+      "url": "https://www.kenyans.co.ke/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search Kenyans.co.ke” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-4d9b7cd1a38df17dc02d.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-5c4180c90d404bc4bd14",
+      "url": "https://www.indriya.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search by Pin code / City / State” searchbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-5c4180c90d404bc4bd14.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-5f22528618352a280b18",
+      "url": "https://www.india.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search on india.com...” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-5f22528618352a280b18.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-7577362f6282cf34117d",
+      "url": "https://www.indiabix.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-7577362f6282cf34117d.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
       "id": "v5-78c6473662e589ae4e3e",
       "url": "https://lawphil.net/",
       "persona": "low-vision",
@@ -3085,6 +3373,22 @@
         },
         {
           "source": "patches/v5-78c6473662e589ae4e3e.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-7b267457c921bdee8928",
+      "url": "https://www.nelomanga.net/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search manga...” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-7b267457c921bdee8928.json",
           "status": "fixed"
         }
       ]
@@ -3106,6 +3410,22 @@
       ]
     },
     {
+      "id": "v5-987edaaf216b0e19b87b",
+      "url": "https://www.facer.io/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search watch faces” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-987edaaf216b0e19b87b.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
       "id": "v5-9e9bb4ee04e0ed570269",
       "url": "https://www.systemrequirementslab.com/cyri",
       "persona": "low-vision",
@@ -3117,6 +3437,22 @@
         },
         {
           "source": "patches/v5-9e9bb4ee04e0ed570269.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-a9df85261cf0d47ce083",
+      "url": "https://webhook.site/#!/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search Query” textbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-a9df85261cf0d47ce083.json",
           "status": "fixed"
         }
       ]
@@ -3229,6 +3565,22 @@
         },
         {
           "source": "patches/v5-e35e95e464a0b456fb7a.json",
+          "status": "fixed"
+        }
+      ]
+    },
+    {
+      "id": "v5-ef812af22b0a73baac84",
+      "url": "https://www.ghanaweb.com/",
+      "persona": "screen-reader-view",
+      "task": "In Reading view, find the “Search GhanaWeb” searchbox and type test without submitting.",
+      "observations": [
+        {
+          "source": "proof/kane/ledger.json",
+          "status": "blocked"
+        },
+        {
+          "source": "patches/v5-ef812af22b0a73baac84.json",
           "status": "fixed"
         }
       ]

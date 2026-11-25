@@ -1,0 +1,62 @@
+{
+  "id": "v5-5c4180c90d404bc4bd14",
+  "url": "https://www.indriya.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search by Pin code / City / State” searchbox and type test without submitting.",
+  "controlTask": "Click the visible “Search by Pin code / City / State” field and type test without submitting.",
+  "observedSelector": "#typeahead",
+  "requiredName": "Search by Pin code / City / State",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#typeahead",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "searchbox"
+  },
+  "site": "www.indriya.com",
+  "match": "https://www.indriya.com/",
+  "barrier": "The store locator input already has the searchbox role but lacks an accessible name in Reading view.",
+  "rules": [
+    {
+      "selector": "#typeahead",
+      "action": "addLabel",
+      "value": "Search by Pin code / City / State"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v5-5c4180c90d404bc4bd14/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v5-5c4180c90d404bc4bd14/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v5-5c4180c90d404bc4bd14/after/recording.mp4",
+    "kaneRunIds": [
+      "1badc73f-65c8-417a-9147-f1036310463b",
+      "3d6d20de-39bc-4746-a324-b6cd4dd752fb",
+      "dfb0cb87-77b6-47ff-9efd-e506f0b3fc56"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T14:32:49.552Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T14:32:49.552Z",
+      "before": "1badc73f-65c8-417a-9147-f1036310463b",
+      "control": "3d6d20de-39bc-4746-a324-b6cd4dd752fb",
+      "after": "dfb0cb87-77b6-47ff-9efd-e506f0b3fc56"
+    }
+  ]
+}

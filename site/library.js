@@ -344,6 +344,32 @@ export const entries = [
     ]
   },
   {
+    "id": "v4-7822d8bab86396640afa",
+    "domain": "coub.com",
+    "task": "In Reading view, find the “Search Coub” textbox and type test without submitting.",
+    "site": "coub.com",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-7822d8bab86396640afa/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-7822d8bab86396640afa/before/9535d17f-c408-4555-84e1-3b3dd818ace3.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-7822d8bab86396640afa/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-7822d8bab86396640afa/control/2fef70da-5098-451a-94f6-9e80f62689b9.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-7822d8bab86396640afa/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-7822d8bab86396640afa/after/7b17b801-93bf-4e2f-a390-0c321a277459.evidence"
+      }
+    ]
+  },
+  {
     "id": "v4-27c6f312c486-51e6e4ad",
     "domain": "csc.gov.in",
     "task": "Open “ABOUT” from keyboard focus or with Arrow Down and follow “About MeitY”. Confirm the public destination /meity.",
@@ -381,6 +407,32 @@ export const entries = [
     "recordings": []
   },
   {
+    "id": "v5-2cdebc725e6217cd5bea",
+    "domain": "www.definitions.net",
+    "task": "In Reading view, find the “Search for dictionary definitions” textbox and type test without submitting.",
+    "site": "definitions.net",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-2cdebc725e6217cd5bea/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-2cdebc725e6217cd5bea/before/86ffc3d6-82e4-4307-a543-2cee23fd513e.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-2cdebc725e6217cd5bea/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-2cdebc725e6217cd5bea/control/e19478d8-5bbc-4212-af47-8e83019c4101.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-2cdebc725e6217cd5bea/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-2cdebc725e6217cd5bea/after/61cf5890-0724-462a-a5b0-82f1442fe3a9.evidence"
+      }
+    ]
+  },
+  {
     "id": "v6-0509ee40ba8a472daa86",
     "domain": "developpez.net",
     "task": "Read the selected passage at WCAG AA contrast.",
@@ -401,6 +453,32 @@ export const entries = [
     "persona": "Low contrast sensitivity",
     "proofType": "Local",
     "recordings": []
+  },
+  {
+    "id": "v4-8f3294d8284af81ec387",
+    "domain": "www.discgolfscene.com",
+    "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+    "site": "discgolfscene.com",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-8f3294d8284af81ec387/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-8f3294d8284af81ec387/before/af3b65d2-02a2-4816-ba8a-e78e91b889e8.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-8f3294d8284af81ec387/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-8f3294d8284af81ec387/control/f5d4226a-6064-4201-8e48-228c5229f02d.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-8f3294d8284af81ec387/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-8f3294d8284af81ec387/after/c1876b22-1098-4279-a8eb-99947df1b296.evidence"
+      }
+    ]
   },
   {
     "id": "discuz-vip-tr2",
@@ -561,6 +639,32 @@ export const entries = [
     "recordings": []
   },
   {
+    "id": "v5-987edaaf216b0e19b87b",
+    "domain": "www.facer.io",
+    "task": "In Reading view, find the “Search watch faces” textbox and type test without submitting.",
+    "site": "facer.io",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-987edaaf216b0e19b87b/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-987edaaf216b0e19b87b/before/7e91ecc6-ceec-470a-b052-267efb5576b0.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-987edaaf216b0e19b87b/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-987edaaf216b0e19b87b/control/663e3103-a7e5-434f-9083-4cc6244d6f7e.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-987edaaf216b0e19b87b/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-987edaaf216b0e19b87b/after/d0789d66-08d8-49df-95c7-9a56356814ac.evidence"
+      }
+    ]
+  },
+  {
     "id": "flashscore-de-tr",
     "domain": "www.flashscore.de",
     "task": "At 320 CSS pixels, read the passage beginning “U17 Weltmeisterschaft 2026 Fussball Live Ergebnisse, Aktuelle Fussball Ergebnisse, Bundesliga, Champions”. Verify the complete passage fits within the visible width using vertical scrolling only.",
@@ -688,6 +792,32 @@ export const entries = [
     ]
   },
   {
+    "id": "v5-439db0d7b7aec279133a",
+    "domain": "gamekillerapp.com",
+    "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+    "site": "gamekillerapp.com",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-439db0d7b7aec279133a/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-439db0d7b7aec279133a/before/a37af7d2-63c4-4e19-a790-f8b3f4a80785.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-439db0d7b7aec279133a/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-439db0d7b7aec279133a/control/d9ded511-1c87-4ed5-ad13-45bda2cd8d10.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-439db0d7b7aec279133a/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-439db0d7b7aec279133a/after/3e728c03-8ebb-45df-81f4-bff699fad5aa.evidence"
+      }
+    ]
+  },
+  {
     "id": "gao-about-reflow",
     "domain": "www.gao.gov",
     "task": "At 320 CSS pixels, read the passage beginning “Learn about our role in the government, plus our history, performance,”. Verify the complete passage fits within the visible width using vertical scrolling only.",
@@ -747,6 +877,32 @@ export const entries = [
         "phase": "after",
         "file": "proof/kane/geeksforgeeks-open-search/resume-2026-11-22T03-40-55.719Z/attempt-1/after/recording.mp4",
         "pack": "proof/kane/geeksforgeeks-open-search/resume-2026-11-22T03-40-55.719Z/attempt-1/after/f0dfa649-dc54-4aef-bb8b-4b9d94ca2184.evidence"
+      }
+    ]
+  },
+  {
+    "id": "v5-ef812af22b0a73baac84",
+    "domain": "www.ghanaweb.com",
+    "task": "In Reading view, find the “Search GhanaWeb” searchbox and type test without submitting.",
+    "site": "ghanaweb.com",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-ef812af22b0a73baac84/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-ef812af22b0a73baac84/before/b0715a37-325c-437e-8292-c1a3a6bd075c.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-ef812af22b0a73baac84/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-ef812af22b0a73baac84/control/b70f5a07-bad9-4dcb-9d68-b8ad0784e46b.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-ef812af22b0a73baac84/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-ef812af22b0a73baac84/after/5f3af5b0-e992-4bab-a380-3b3015b43c3b.evidence"
       }
     ]
   },
@@ -825,6 +981,32 @@ export const entries = [
         "phase": "after",
         "file": "proof/kane/elm-reflow/heldout-v2/attempt-1/after/recording.mp4",
         "pack": "proof/kane/elm-reflow/heldout-v2/attempt-1/after/61a5cba3-ffe4-46a1-9188-4cdd5e56b40c.evidence"
+      }
+    ]
+  },
+  {
+    "id": "v4-b370040967d3a144a363",
+    "domain": "hngangjiegou.com",
+    "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+    "site": "hngangjiegou.com",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-b370040967d3a144a363/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-b370040967d3a144a363/before/37634c3e-b507-4741-9aa9-62ebc760a8d7.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-b370040967d3a144a363/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-b370040967d3a144a363/control/79c6b900-3b47-4950-a240-a0f3548c4e0e.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-b370040967d3a144a363/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-b370040967d3a144a363/after/3196cc7c-cdbb-4c01-8ab3-71b990b0aab4.evidence"
       }
     ]
   },
@@ -942,6 +1124,84 @@ export const entries = [
     ]
   },
   {
+    "id": "v5-5f22528618352a280b18",
+    "domain": "www.india.com",
+    "task": "In Reading view, find the “Search on india.com...” textbox and type test without submitting.",
+    "site": "india.com",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-5f22528618352a280b18/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-5f22528618352a280b18/before/199f8d97-7f26-4932-bd3c-5e145737dadf.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-5f22528618352a280b18/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-5f22528618352a280b18/control/2f5e5dae-4fbc-4a9f-bbd4-e563edc6b343.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-5f22528618352a280b18/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-5f22528618352a280b18/after/d8435d21-9c15-441b-8374-7dca85f2da94.evidence"
+      }
+    ]
+  },
+  {
+    "id": "v5-7577362f6282cf34117d",
+    "domain": "www.indiabix.com",
+    "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+    "site": "indiabix.com",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-7577362f6282cf34117d/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-7577362f6282cf34117d/before/a37fa93b-47de-41dc-a062-549a455a5fcb.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-7577362f6282cf34117d/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-7577362f6282cf34117d/control/cc18248a-597d-4730-b48f-244018aabeb0.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-7577362f6282cf34117d/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-7577362f6282cf34117d/after/251e264e-e49f-4bf2-b94a-382cd6daa0a6.evidence"
+      }
+    ]
+  },
+  {
+    "id": "v5-5c4180c90d404bc4bd14",
+    "domain": "www.indriya.com",
+    "task": "In Reading view, find the “Search by Pin code / City / State” searchbox and type test without submitting.",
+    "site": "indriya.com",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-5c4180c90d404bc4bd14/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-5c4180c90d404bc4bd14/before/736e38dd-df79-48da-a975-ede20a307630.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-5c4180c90d404bc4bd14/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-5c4180c90d404bc4bd14/control/f5fe5814-b1e3-463d-96b4-2d56d2cd17a6.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-5c4180c90d404bc4bd14/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-5c4180c90d404bc4bd14/after/84c93318-020c-4609-b437-396a4ee4617e.evidence"
+      }
+    ]
+  },
+  {
     "id": "v6-a234fe2d550b908ef465",
     "domain": "www.infinitepay.io",
     "task": "Read the selected passage at WCAG AA contrast.",
@@ -990,6 +1250,58 @@ export const entries = [
     ]
   },
   {
+    "id": "v5-4d9b7cd1a38df17dc02d",
+    "domain": "www.kenyans.co.ke",
+    "task": "In Reading view, find the “Search Kenyans.co.ke” textbox and type test without submitting.",
+    "site": "kenyans.co.ke",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-4d9b7cd1a38df17dc02d/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-4d9b7cd1a38df17dc02d/before/3f3bfb65-baa8-4b68-a030-e116b66cba3d.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-4d9b7cd1a38df17dc02d/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-4d9b7cd1a38df17dc02d/control/70561973-0c15-4428-befc-eb3a80b0f259.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-4d9b7cd1a38df17dc02d/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-4d9b7cd1a38df17dc02d/after/b09ae80e-b5d9-4885-bab3-98491a37b6b9.evidence"
+      }
+    ]
+  },
+  {
+    "id": "v4-8f8e233e6e5c9293f178",
+    "domain": "www.keralakaumudi.com",
+    "task": "In Reading view, find the “SEARCH NEWS” textbox and type test without submitting.",
+    "site": "keralakaumudi.com",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-8f8e233e6e5c9293f178/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-8f8e233e6e5c9293f178/before/bc5acc87-9f5a-4703-9b59-e235ead2d7a0.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-8f8e233e6e5c9293f178/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-8f8e233e6e5c9293f178/control/f56a6984-f4d7-41c9-8798-77496be882d3.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-8f8e233e6e5c9293f178/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-8f8e233e6e5c9293f178/after/bf6aa6a9-f258-498d-8560-b9adb3e52612.evidence"
+      }
+    ]
+  },
+  {
     "id": "kidderminster-application-faq",
     "domain": "www.kidderminster.ac.uk",
     "task": "First assert the FAQ disclosure What is a next of kin? is in the sequential keyboard focus order. Open it with Tab and Enter. Verify the answer beginning A next of kin is a relative is visible. Stay on the public information page.",
@@ -1025,6 +1337,32 @@ export const entries = [
     "persona": "Low contrast sensitivity",
     "proofType": "Local",
     "recordings": []
+  },
+  {
+    "id": "v4-1d969d3c33df6a6de327",
+    "domain": "kprofiles.com",
+    "task": "In Reading view, find the “Type here to search...” textbox and type test without submitting.",
+    "site": "kprofiles.com",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-1d969d3c33df6a6de327/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-1d969d3c33df6a6de327/before/be36b542-2df3-42da-bfad-f1bc13f36d65.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-1d969d3c33df6a6de327/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-1d969d3c33df6a6de327/control/24e7bc3b-07e5-4b79-9128-3ff9155fcdfb.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-1d969d3c33df6a6de327/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-1d969d3c33df6a6de327/after/7f3aad46-8f53-4f02-804b-b6b45f9bcf2f.evidence"
+      }
+    ]
   },
   {
     "id": "v6-ca1af71af5543e3a0a13",
@@ -1251,6 +1589,32 @@ export const entries = [
     ]
   },
   {
+    "id": "v4-62c500cf7fa2effb9570",
+    "domain": "www.mumuplayer.com",
+    "task": "In Reading view, find the “Search for Games” textbox and type test without submitting.",
+    "site": "mumuplayer.com",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-62c500cf7fa2effb9570/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-62c500cf7fa2effb9570/before/62e1ae9e-4e52-4a35-88c0-ca749dd9d0fe.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-62c500cf7fa2effb9570/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-62c500cf7fa2effb9570/control/a8cbb0e7-6aca-428e-a11e-6950fb6c380b.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-62c500cf7fa2effb9570/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-62c500cf7fa2effb9570/after/b0e9977d-4fc9-405d-98a9-fa9e6f241ec8.evidence"
+      }
+    ]
+  },
+  {
     "id": "v6-5193be8805ece27f858e",
     "domain": "www.munich-airport.de",
     "task": "In Reading view, find the button identified by “Vorherige Folie” and choose its row to report it. If no row conveys that name, report that the task failed.",
@@ -1326,6 +1690,58 @@ export const entries = [
         "phase": "after",
         "file": "proof/kane/sanantonio-library-reader/heldout-v2/attempt-1/after/recording.mp4",
         "pack": "proof/kane/sanantonio-library-reader/heldout-v2/attempt-1/after/c334d518-70f4-4aad-b5c3-f418192daf2e.evidence"
+      }
+    ]
+  },
+  {
+    "id": "v5-7b267457c921bdee8928",
+    "domain": "www.nelomanga.net",
+    "task": "In Reading view, find the “Search manga...” textbox and type test without submitting.",
+    "site": "nelomanga.net",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-7b267457c921bdee8928/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-7b267457c921bdee8928/before/9e0874a9-b275-4b11-bf59-ae0d73cbb0a2.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-7b267457c921bdee8928/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-7b267457c921bdee8928/control/9d4a906f-af85-4587-9d59-8aaddb61f945.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-7b267457c921bdee8928/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-7b267457c921bdee8928/after/52e44650-3669-4802-9da8-8c982434b2aa.evidence"
+      }
+    ]
+  },
+  {
+    "id": "v4-5bfc1f759db965ccf1a8",
+    "domain": "netshort.com",
+    "task": "In Reading view, find the “Search” searchbox and type test without submitting.",
+    "site": "netshort.com",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-5bfc1f759db965ccf1a8/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-5bfc1f759db965ccf1a8/before/2e2d6429-c2e9-4c11-8eb8-a3ac60aa613c.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-5bfc1f759db965ccf1a8/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-5bfc1f759db965ccf1a8/control/13e5374e-834e-43f7-a8e1-654bd59db917.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-5bfc1f759db965ccf1a8/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-5bfc1f759db965ccf1a8/after/5c8fae3c-7286-4df1-a92a-4357aba1d536.evidence"
       }
     ]
   },
@@ -1704,6 +2120,58 @@ export const entries = [
     "recordings": []
   },
   {
+    "id": "v4-129cd532652cd7a08d8e",
+    "domain": "thewest.com.au",
+    "task": "In Reading view, find the “Search” searchbox and type test without submitting.",
+    "site": "thewest.com.au",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-129cd532652cd7a08d8e/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-129cd532652cd7a08d8e/before/b2c85c0b-929b-4b01-bd35-91c2dcf14c5e.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-129cd532652cd7a08d8e/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-129cd532652cd7a08d8e/control/b996b73c-7588-4e77-a423-ee29be038fdb.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-129cd532652cd7a08d8e/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-129cd532652cd7a08d8e/after/644efdfb-0b0f-4dc2-bfe5-864038955a5e.evidence"
+      }
+    ]
+  },
+  {
+    "id": "v4-9e66a9a97f9c204bd650",
+    "domain": "thewire.in",
+    "task": "In Reading view, find the “Search news” searchbox and type test without submitting.",
+    "site": "thewire.in",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-9e66a9a97f9c204bd650/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-9e66a9a97f9c204bd650/before/7e6c492f-2185-4278-96e8-9a5cf2d222a0.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-9e66a9a97f9c204bd650/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-9e66a9a97f9c204bd650/control/69f1dbe4-74ee-4e7e-aeeb-3fc4553048e8.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-9e66a9a97f9c204bd650/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-9e66a9a97f9c204bd650/after/5870c4bb-8ca0-42fe-8b6e-04424b5165a8.evidence"
+      }
+    ]
+  },
+  {
     "id": "v5-7dc57bda3fb85932eb21",
     "domain": "trackjs.com",
     "task": "At 320 CSS pixels, read the passage beginning “Shipping AI code is fast. Debugging it without context is hard. TrackJS” and confirm it fits without horizontal scrolling.",
@@ -1952,6 +2420,32 @@ export const entries = [
     ]
   },
   {
+    "id": "v4-536f5aabeed4ef336c4d",
+    "domain": "vignanam.org",
+    "task": "In Reading view, find the “Search for Stotram...” textbox and type test without submitting.",
+    "site": "vignanam.org",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-536f5aabeed4ef336c4d/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-536f5aabeed4ef336c4d/before/0117c48d-54d0-41fe-8aa4-d6ea6e323bc5.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-536f5aabeed4ef336c4d/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-536f5aabeed4ef336c4d/control/8d1c190a-d011-4a10-8cb5-44fb088d18ad.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-536f5aabeed4ef336c4d/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-536f5aabeed4ef336c4d/after/a289e9fb-e2a1-4995-ab71-fbdea65cfe42.evidence"
+      }
+    ]
+  },
+  {
     "id": "w3schools-select-swatch",
     "domain": "www.w3schools.com",
     "task": "First assert that the leftmost swatch in the top row of the color map, labeled #003366, has a link destination or an explicit tabindex of 0. Select that swatch with Tab and Enter, and verify the selected color reads #003366.",
@@ -1989,6 +2483,32 @@ export const entries = [
     "recordings": []
   },
   {
+    "id": "v4-55e7f5e4d6e57dad613e",
+    "domain": "www.webassign.net",
+    "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+    "site": "webassign.net",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-55e7f5e4d6e57dad613e/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-55e7f5e4d6e57dad613e/before/631c0619-74d6-497f-a0a5-a34343e312bd.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-55e7f5e4d6e57dad613e/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-55e7f5e4d6e57dad613e/control/3f5f7fbf-a546-4b57-b6a6-87aa2536fae4.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-55e7f5e4d6e57dad613e/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-55e7f5e4d6e57dad613e/after/f0a30fd3-697c-4985-89ea-209d1d0dfe76.evidence"
+      }
+    ]
+  },
+  {
     "id": "v6-f71982b146d641303e52",
     "domain": "webguard.pro",
     "task": "Read the selected passage at WCAG AA contrast.",
@@ -1998,6 +2518,58 @@ export const entries = [
     "persona": "Low contrast sensitivity",
     "proofType": "Local",
     "recordings": []
+  },
+  {
+    "id": "v5-a9df85261cf0d47ce083",
+    "domain": "webhook.site",
+    "task": "In Reading view, find the “Search Query” textbox and type test without submitting.",
+    "site": "webhook.site",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-a9df85261cf0d47ce083/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-a9df85261cf0d47ce083/before/1b9647a4-bb39-4c73-ad19-052e0c62082d.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-a9df85261cf0d47ce083/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-a9df85261cf0d47ce083/control/f05292d2-bfc2-4961-9fec-0ee2d403a36f.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v5-a9df85261cf0d47ce083/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v5-a9df85261cf0d47ce083/after/23d8a4ab-73c3-451a-84f5-6e4b50cf1709.evidence"
+      }
+    ]
+  },
+  {
+    "id": "v4-719c31e107dae52fa9e6",
+    "domain": "www.whatmobile.com.pk",
+    "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+    "site": "whatmobile.com.pk",
+    "barrier": "Missing form labels",
+    "persona": "Screen reader view",
+    "proofType": "Kane",
+    "recordings": [
+      {
+        "phase": "before",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-719c31e107dae52fa9e6/before/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-719c31e107dae52fa9e6/before/44ae16a5-f1fc-4241-9942-b25534ea4a6f.evidence"
+      },
+      {
+        "phase": "control",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-719c31e107dae52fa9e6/control/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-719c31e107dae52fa9e6/control/dba2d3d6-dd32-4c63-a513-d017d37699a7.evidence"
+      },
+      {
+        "phase": "after",
+        "file": "proof/kane-batch-2026-11-25/runs/v4-719c31e107dae52fa9e6/after/recording.mp4",
+        "pack": "proof/kane-batch-2026-11-25/runs/v4-719c31e107dae52fa9e6/after/84429d15-b091-482f-ac6a-68a7838e2a68.evidence"
+      }
+    ]
   },
   {
     "id": "v6-a4ddc85e350589d755c9",

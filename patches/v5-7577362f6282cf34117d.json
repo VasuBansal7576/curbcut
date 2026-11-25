@@ -1,0 +1,62 @@
+{
+  "id": "v5-7577362f6282cf34117d",
+  "url": "https://www.indiabix.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search” field and type test without submitting.",
+  "observedSelector": "#txtSearchKey",
+  "requiredName": "Search",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#txtSearchKey",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.indiabix.com",
+  "match": "https://www.indiabix.com/",
+  "barrier": "The native textbox #txtSearchKey has no accessible name, so it cannot be identified as “Search” in Reading view.",
+  "rules": [
+    {
+      "selector": "#txtSearchKey",
+      "action": "addLabel",
+      "value": "Search"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v5-7577362f6282cf34117d/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v5-7577362f6282cf34117d/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v5-7577362f6282cf34117d/after/recording.mp4",
+    "kaneRunIds": [
+      "9467db3f-b173-45b3-927f-937f291995d1",
+      "f4de4357-fb1d-4caa-b032-1decf867ce05",
+      "97008dff-ff1d-4a09-9cea-0ff8bad17c3f"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T14:34:49.941Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T14:34:49.941Z",
+      "before": "9467db3f-b173-45b3-927f-937f291995d1",
+      "control": "f4de4357-fb1d-4caa-b032-1decf867ce05",
+      "after": "97008dff-ff1d-4a09-9cea-0ff8bad17c3f"
+    }
+  ]
+}

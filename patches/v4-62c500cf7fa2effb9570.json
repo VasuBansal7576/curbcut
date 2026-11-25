@@ -1,0 +1,62 @@
+{
+  "id": "v4-62c500cf7fa2effb9570",
+  "url": "https://www.mumuplayer.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search for Games” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search for Games” field and type test without submitting.",
+  "observedSelector": "#Sch",
+  "requiredName": "Search for Games",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#Sch",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.mumuplayer.com",
+  "match": "https://www.mumuplayer.com/",
+  "barrier": "The search textbox #Sch has no accessible name, so it cannot be found as “Search for Games” in Reading view.",
+  "rules": [
+    {
+      "selector": "#Sch",
+      "action": "addLabel",
+      "value": "Search for Games"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v4-62c500cf7fa2effb9570/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v4-62c500cf7fa2effb9570/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v4-62c500cf7fa2effb9570/after/recording.mp4",
+    "kaneRunIds": [
+      "4836a6be-fdb3-4903-ab03-949bae3e944d",
+      "638d1427-7e44-42fc-bd45-b68b14cacc45",
+      "0a1f20c1-6fa3-4fe3-bce2-9c5e3240108d"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T14:46:36.221Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T14:46:36.221Z",
+      "before": "4836a6be-fdb3-4903-ab03-949bae3e944d",
+      "control": "638d1427-7e44-42fc-bd45-b68b14cacc45",
+      "after": "0a1f20c1-6fa3-4fe3-bce2-9c5e3240108d"
+    }
+  ]
+}

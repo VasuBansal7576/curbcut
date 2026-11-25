@@ -1,0 +1,62 @@
+{
+  "id": "v5-ef812af22b0a73baac84",
+  "url": "https://www.ghanaweb.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search GhanaWeb” searchbox and type test without submitting.",
+  "controlTask": "Click the visible “Search GhanaWeb” field and type test without submitting.",
+  "observedSelector": "#pagecontainer > div:nth-of-type(5) > div > div:nth-of-type(1) > div:nth-of-type(2) > form > input:nth-of-type(3)",
+  "requiredName": "Search GhanaWeb",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#pagecontainer > div:nth-of-type(5) > div > div:nth-of-type(1) > div:nth-of-type(2) > form > input:nth-of-type(3)",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "searchbox"
+  },
+  "site": "www.ghanaweb.com",
+  "match": "https://www.ghanaweb.com/",
+  "barrier": "The visible, focusable GhanaWeb search input has a searchbox role but no accessible name, so it cannot be found by name in Reading view.",
+  "rules": [
+    {
+      "selector": "#pagecontainer .top-bar form.flexsearch--form > input.search--input",
+      "action": "addLabel",
+      "value": "Search GhanaWeb"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v5-ef812af22b0a73baac84/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v5-ef812af22b0a73baac84/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v5-ef812af22b0a73baac84/after/recording.mp4",
+    "kaneRunIds": [
+      "b9760f7f-4c7a-4204-8db7-aec5d6f931ca",
+      "308933ab-33b8-408e-98d5-a675ca1cd16e",
+      "a253c08c-b0d7-43ab-bcec-f2cc9ab6eb2c"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T14:41:58.263Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T14:41:58.263Z",
+      "before": "b9760f7f-4c7a-4204-8db7-aec5d6f931ca",
+      "control": "308933ab-33b8-408e-98d5-a675ca1cd16e",
+      "after": "a253c08c-b0d7-43ab-bcec-f2cc9ab6eb2c"
+    }
+  ]
+}

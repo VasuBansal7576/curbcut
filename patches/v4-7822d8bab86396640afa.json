@@ -1,0 +1,62 @@
+{
+  "id": "v4-7822d8bab86396640afa",
+  "url": "https://coub.com/featured/creators",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search Coub” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search Coub” field and type test without submitting.",
+  "observedSelector": "div:nth-of-type(2) > div > header:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(1) > form > div > input",
+  "requiredName": "Search Coub",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "div:nth-of-type(2) > div > header:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(1) > form > div > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "coub.com",
+  "match": "https://coub.com/featured/creators",
+  "barrier": "The search textbox has no accessible name, so it cannot be found as “Search Coub” in Reading view.",
+  "rules": [
+    {
+      "selector": "div:nth-of-type(2) > div > header:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(1) > form > div > input",
+      "action": "addLabel",
+      "value": "Search Coub"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v4-7822d8bab86396640afa/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v4-7822d8bab86396640afa/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v4-7822d8bab86396640afa/after/recording.mp4",
+    "kaneRunIds": [
+      "dcd30f74-e313-40d7-b517-725040fdf96f",
+      "53161fac-b4e2-4a14-8737-1eb193b10cb7",
+      "2d9522e4-cf15-4360-af14-645f38d577b0"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T15:16:43.765Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T15:16:43.765Z",
+      "before": "dcd30f74-e313-40d7-b517-725040fdf96f",
+      "control": "53161fac-b4e2-4a14-8737-1eb193b10cb7",
+      "after": "2d9522e4-cf15-4360-af14-645f38d577b0"
+    }
+  ]
+}

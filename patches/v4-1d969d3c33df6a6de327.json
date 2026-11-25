@@ -1,0 +1,62 @@
+{
+  "id": "v4-1d969d3c33df6a6de327",
+  "url": "https://kprofiles.com/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Type here to search...” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Type here to search...” field and type test without submitting.",
+  "observedSelector": "#header > div:nth-of-type(2) > div > div > div > div:nth-of-type(2) > form > input",
+  "requiredName": "Type here to search...",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#header > div:nth-of-type(2) > div > div > div > div:nth-of-type(2) > form > input",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "kprofiles.com",
+  "match": "https://kprofiles.com/",
+  "barrier": "The search input has the textbox role but lacks an accessible name, so it cannot be found by its prompt in Reading view.",
+  "rules": [
+    {
+      "selector": "#header > div:nth-of-type(2) > div > div > div > div:nth-of-type(2) > form > input",
+      "action": "addLabel",
+      "value": "Type here to search..."
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v4-1d969d3c33df6a6de327/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v4-1d969d3c33df6a6de327/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v4-1d969d3c33df6a6de327/after/recording.mp4",
+    "kaneRunIds": [
+      "c2100924-3a84-4b50-95aa-930fee28f04f",
+      "f8c59488-357b-4b73-a12d-a8e241f4cf84",
+      "65c4ad74-4f67-4605-ae26-bc75016b601a"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T15:02:22.914Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T15:02:22.914Z",
+      "before": "c2100924-3a84-4b50-95aa-930fee28f04f",
+      "control": "f8c59488-357b-4b73-a12d-a8e241f4cf84",
+      "after": "65c4ad74-4f67-4605-ae26-bc75016b601a"
+    }
+  ]
+}

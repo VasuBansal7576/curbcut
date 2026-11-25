@@ -1,0 +1,62 @@
+{
+  "id": "v5-2cdebc725e6217cd5bea",
+  "url": "https://www.definitions.net/",
+  "persona": "screen-reader-view",
+  "task": "In Reading view, find the “Search for dictionary definitions” textbox and type test without submitting.",
+  "controlTask": "Click the visible “Search for dictionary definitions” field and type test without submitting.",
+  "observedSelector": "#search",
+  "requiredName": "Search for dictionary definitions",
+  "outcomeChecks": [
+    {
+      "kind": "value",
+      "selector": "#search",
+      "equals": "test"
+    }
+  ],
+  "probe": {
+    "action": "type",
+    "value": "test",
+    "role": "textbox"
+  },
+  "site": "www.definitions.net",
+  "match": "https://www.definitions.net/",
+  "barrier": "The native textbox #search has no accessible name, so it cannot be found by its expected name in Reading view.",
+  "rules": [
+    {
+      "selector": "input#search",
+      "action": "addLabel",
+      "value": "Search for dictionary definitions"
+    }
+  ],
+  "status": "verified",
+  "evidence": {
+    "before": "proof/kane-batch-2026-11-25/runs/v5-2cdebc725e6217cd5bea/before/recording.mp4",
+    "control": "proof/kane-batch-2026-11-25/runs/v5-2cdebc725e6217cd5bea/control/recording.mp4",
+    "after": "proof/kane-batch-2026-11-25/runs/v5-2cdebc725e6217cd5bea/after/recording.mp4",
+    "kaneRunIds": [
+      "a7329e7f-ca31-4fb3-ab91-c756128499d1",
+      "641e9390-797a-4a20-b915-8b437ab9002e",
+      "ef874ad0-75e0-4bbe-b060-fbb553001128"
+    ],
+    "kaneVerdicts": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "localOracle": {
+      "before": "fail",
+      "control": "pass",
+      "after": "pass"
+    },
+    "verifiedAt": "2026-11-25T14:28:53.555Z"
+  },
+  "history": [
+    {
+      "event": "verified",
+      "at": "2026-11-25T14:28:53.555Z",
+      "before": "a7329e7f-ca31-4fb3-ab91-c756128499d1",
+      "control": "641e9390-797a-4a20-b915-8b437ab9002e",
+      "after": "ef874ad0-75e0-4bbe-b060-fbb553001128"
+    }
+  ]
+}
