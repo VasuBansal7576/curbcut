@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Curb Cut opening</title>
+<style>html,body{margin:0;background:#e8e4f5}main,canvas{width:1920px;height:1080px;display:block;overflow:hidden}</style>
+</head><body><main id="opening" data-composition-id="opening" data-start="0" data-duration="10" data-width="1920" data-height="1080"><canvas id="keyboard" class="clip" data-layout-allow-overflow data-start="0" data-duration="10" data-track-index="1" data-track-kind="graphics" width="1920" height="1080" aria-label="Curb Cut opening the About menu with a keyboard"></canvas></main><script src="gsap.min.js"></script><script src="recording.js"></script><script src="stage.bundle.js"></script><script>
+  const playhead = { seconds: 0 }
+  const timeline = gsap.timeline({ paused: true })
+  timeline.to(playhead, { seconds: 10, duration: 10, ease: 'none', onUpdate: () => window.drawTime?.(playhead.seconds) }, 0)
+  window.__timelines = window.__timelines || {}
+  window.__timelines['opening'] = timeline
+  window.prepareStage(timeline, playhead).catch(error => {
+    document.body.dataset.error = error.message
+    console.error(error)
+  })
+</script></body></html>
