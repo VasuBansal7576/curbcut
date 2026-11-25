@@ -1,347 +1,225 @@
 WEBVTT
 
-00:00:00.155 --> 00:00:02.352
-This is someone shopping
-with only a keyboard.
+00:00:00.240 --> 00:00:02.532
+I need the Department of Higher Education.
 
-00:00:03.343 --> 00:00:05.393
-They press Tab to move through the page…
+00:00:02.692 --> 00:00:03.609
+Tab to About.
 
-00:00:05.393 --> 00:00:07.242
-and the Add to cart button gets skipped.
+00:00:03.769 --> 00:00:04.498
+Down arrow.
 
-00:00:07.382 --> 00:00:08.599
-They can't buy anything.
+00:00:04.658 --> 00:00:05.737
+Where did the link go?
 
-00:00:08.843 --> 00:00:09.618
-That's not rare.
+00:00:07.273 --> 00:00:09.009
+Down arrow leaves About focused.
 
-00:00:09.618 --> 00:00:15.268
-In 2026, 95.9 percent
-of the top million home pages
+00:00:09.169 --> 00:00:10.789
+The link underneath stays hidden.
 
-00:00:15.268 --> 00:00:16.667
-had accessibility failures.
+00:00:12.090 --> 00:00:14.540
+On OpenSeaMap, the keyboard skips View.
 
-00:00:16.815 --> 00:00:19.814
-And almost all of them come
-from the same six mistakes.
+00:00:17.143 --> 00:00:19.193
+They press Tab to move through the page.
 
-00:00:20.110 --> 00:00:21.283
-So we built Curb Cut.
+00:00:25.620 --> 00:00:28.664
+At Munich Airport, listen to the previous
+slide control.
 
-00:00:21.427 --> 00:00:23.877
-It fixes those barriers from the outside,
+00:00:28.824 --> 00:00:29.270
+[Reading voice] Button.
 
-00:00:23.877 --> 00:00:26.521
-right in your browser,
-and proves every fix works.
+00:00:31.830 --> 00:00:34.228
+On ExtremeTerrain, the Details link is faint.
 
-00:00:26.819 --> 00:00:27.844
-Step one.
+00:00:36.620 --> 00:00:37.838
+I turn on Curb Cut.
 
-00:00:27.844 --> 00:00:32.669
-Kane, an AI testing agent, tries the task
-the way a disabled person would.
+00:00:37.998 --> 00:00:38.809
+Same menu.
 
-00:00:32.669 --> 00:00:33.320
-It fails.
+00:00:38.969 --> 00:00:39.932
+Same keyboard.
 
-00:00:33.601 --> 00:00:35.326
-Kane tries again with a mouse.
+00:00:41.912 --> 00:00:42.609
+There it is.
 
-00:00:35.326 --> 00:00:36.494
-The same task works.
+00:00:42.769 --> 00:00:43.635
+The DHE.
 
-00:00:36.663 --> 00:00:38.809
-So the website is broken, not the task.
+00:00:44.702 --> 00:00:46.210
+And Enter takes you to the page.
 
-00:00:39.085 --> 00:00:39.810
-Step two.
-
-00:00:39.810 --> 00:00:41.835
-An agent writes a small, safe fix.
-
-00:00:41.835 --> 00:00:43.240
-Just rules, no code.
-
-00:00:43.519 --> 00:00:44.444
-Step three.
-
-00:00:44.444 --> 00:00:47.469
-Kane runs the task again with the fix,
-and it passes.
-
-00:00:47.469 --> 00:00:48.762
-The recording is the proof.
-
-00:00:49.052 --> 00:00:49.927
-Step four.
-
-00:00:49.927 --> 00:00:53.509
-The extension shares the proven fix
-with everyone who visits that site.
-
-00:00:53.810 --> 00:00:55.935
-Some barriers are whole journeys.
-
-00:00:55.935 --> 00:01:00.842
-On mass.edu, a keyboard user reaches About,
-and the menu never opens.
-
-00:01:01.087 --> 00:01:03.862
-With Curb Cut, the same keys open the menu,
-
-00:01:03.862 --> 00:01:05.370
-and Enter takes you to the page.
-
-00:01:05.649 --> 00:01:09.699
-For blind users, the most common barrier
-is a button with no name.
-
-00:01:09.699 --> 00:01:11.494
-A screen reader just says, button.
-
-00:01:11.631 --> 00:01:15.256
+00:00:47.034 --> 00:00:50.659
 On Munich Airport, Curb Cut names it:
 previous slide.
 
-00:01:15.256 --> 00:01:17.428
-Kane found it with the fix,
-and couldn't without it.
+00:00:50.993 --> 00:00:52.177
+[Reading voice] Vorherige Folie.
 
-00:01:17.676 --> 00:01:20.676
-The most common failure of all is faint text.
-
-00:01:20.676 --> 00:01:23.726
+00:00:54.106 --> 00:00:57.156
 Curb Cut nudges the colour
 just enough to be readable,
 
-00:01:23.726 --> 00:01:24.347
+00:00:57.156 --> 00:00:57.777
 and measures it.
 
-00:01:24.606 --> 00:01:28.081
+00:00:59.139 --> 00:01:02.614
 And on pages we've never fixed,
 there's an experiment.
 
-00:01:28.081 --> 00:01:31.031
+00:01:02.614 --> 00:01:05.564
 Jev, a fast decision model from TypeSafe,
 
-00:01:31.031 --> 00:01:33.750
+00:01:05.564 --> 00:01:08.283
 names unlabelled buttons live,
 in about a second.
 
-00:01:33.872 --> 00:01:37.197
+00:01:08.405 --> 00:01:11.730
 On real sites,
 13 of its 15 names were right.
 
-00:01:37.197 --> 00:01:39.009
+00:01:11.730 --> 00:01:13.542
 When it isn't sure, it stays quiet.
 
-00:01:39.200 --> 00:01:43.147
-On OpenSeaMap, a site we've never fixed,
-the keyboard skips View.
+00:01:13.903 --> 00:01:17.978
+On ColorHexa, try opening this blue swatch
+using only the keyboard.
 
-00:01:43.467 --> 00:01:45.330
-One shortcut reports the barrier.
+00:01:19.133 --> 00:01:23.958
+Kane, an AI testing agent, tries the task
+the way a disabled person would.
 
-00:01:45.633 --> 00:01:47.828
-Grok writes the fix
-in sixteen seconds.
+00:01:23.958 --> 00:01:24.609
+It fails.
 
-00:01:48.133 --> 00:01:50.992
-Kane tries it. Without the fix, the
-keyboard fails.
+00:01:26.144 --> 00:01:27.869
+Kane tries again with a mouse.
 
-00:01:51.300 --> 00:01:52.267
-The mouse works.
+00:01:27.869 --> 00:01:29.037
+The same task works.
 
-00:01:53.500 --> 00:01:55.307
-With the fix, the keyboard passes.
+00:01:29.206 --> 00:01:31.352
+So the website is broken, not the task.
 
-00:01:55.633 --> 00:01:59.035
-Minutes later, after a recheck,
-the fix ships in the extension.
+00:01:32.973 --> 00:01:35.865
+Here’s a failure that went straight back to
+the coding agent.
 
-00:01:59.367 --> 00:02:01.247
-Now the same eight Tabs open View.
+00:01:36.191 --> 00:01:40.886
+Its identifier travels with the assertion
+into the coding agent’s repair record.
 
-00:02:01.567 --> 00:02:02.946
-Sea Marks is right there.
-
-00:02:03.767 --> 00:02:06.967
-Today, 106 fixes are live
-in the extension.
-
-00:02:07.267 --> 00:02:09.280
-62 of them proven by Kane.
-
-00:02:09.501 --> 00:02:11.951
-And every fix can go back to the site owner:
-
-00:02:11.951 --> 00:02:15.401
-the exact change,
-with Kane's recording as proof.
-
-00:02:15.401 --> 00:02:18.239
-When the website fixes itself,
-our patch retires.
-
-00:02:18.497 --> 00:02:19.322
-Curb Cut.
-
-00:02:19.322 --> 00:02:21.622
-Fixing the web for the people it shuts out.
-
-00:02:21.622 --> 00:02:22.823
-Verified by Kane.
-
-00:02:23.153 --> 00:02:26.193
-Developers can do the same thing
-on a site they're building.
-
-00:02:26.193 --> 00:02:28.209
-Start with what a visitor came to do.
-
-00:02:28.629 --> 00:02:33.536
-Here, someone wants to find a pair of headphones
-and add them to their cart using a keyboard.
-
-00:02:34.653 --> 00:02:37.313
-Give that task and the
-address to curbcut check.
-
-00:02:37.313 --> 00:02:39.258
-Kane opens the shop and tries it.
-
-00:02:39.678 --> 00:02:40.913
-Watch the Add button.
-
-00:02:40.913 --> 00:02:42.673
-The keyboard skips right past it.
-
-00:02:42.673 --> 00:02:44.489
-The headphones stay on the shelf.
-
-00:02:45.653 --> 00:02:48.013
-Curb Cut proposes a small change.
-
-00:02:48.013 --> 00:02:51.089
+00:01:41.301 --> 00:01:44.377
 Let the button take focus,
 and let Enter activate it.
 
-00:02:51.509 --> 00:02:52.793
-Kane tries again.
+00:01:45.133 --> 00:01:48.158
+Kane runs the task again with the fix,
+and it passes.
 
-00:02:52.793 --> 00:02:55.593
-Same shop, same headphones, same keyboard.
+00:01:48.158 --> 00:01:49.451
+The recording is the proof.
 
-00:02:55.593 --> 00:02:57.503
-This time there's an item in the cart.
+00:01:53.533 --> 00:01:56.583
+Back on the original tab,
+Shift+Tab reaches the swatch.
 
-00:02:58.653 --> 00:03:01.573
-A developer can put that
-check into Claude Code, too.
+00:01:57.003 --> 00:01:58.269
+Enter opens the picker.
 
-00:03:01.573 --> 00:03:03.709
-Here it runs when Claude tries to finish.
-
-00:03:04.129 --> 00:03:06.843
-The first time, the button
-still skips the keyboard.
-
-00:03:06.843 --> 00:03:09.804
-The check fails and the Stop
-hook sends the work back.
-
-00:03:11.153 --> 00:03:13.993
-The developer fixes the
-button in the site itself.
-
-00:03:13.993 --> 00:03:15.569
-Claude reaches the end again.
-
-00:03:15.989 --> 00:03:18.153
-This time Kane can add the headphones.
-
-00:03:18.153 --> 00:03:20.256
-The check passes and Claude can finish.
-
-00:03:21.653 --> 00:03:25.473
-A person using the extension
-can look at the evidence, too.
-
-00:03:25.473 --> 00:03:28.202
-Open Curb Cut on the page
-and choose the recording.
-
-00:03:28.622 --> 00:03:30.753
-It shows what happened in the browser.
-
-00:03:30.753 --> 00:03:33.165
-You can see for yourself
-whether the menu opened.
-
-00:03:34.653 --> 00:03:37.593
-On a new page, Jev looks
-at what each button does.
-
-00:03:37.593 --> 00:03:40.233
-Here on Meridiano, one opens the menu.
-
-00:03:40.233 --> 00:03:41.586
-Another opens search.
-
-00:03:42.006 --> 00:03:43.913
-People checked the suggestions.
-
-00:03:43.913 --> 00:03:46.273
-Jev got 13 right out of 15.
-
-00:03:46.273 --> 00:03:48.534
-When it's unsure,
-it leaves the button alone.
-
-00:03:49.653 --> 00:03:53.033
+00:02:00.866 --> 00:02:04.246
 If something else gets in the
 way, open Report a barrier.
 
-00:03:53.033 --> 00:03:55.925
-Describe what you were trying
-to do and where you got stuck.
+00:02:05.000 --> 00:02:06.863
+One shortcut reports the barrier.
 
-00:03:56.345 --> 00:03:58.914
-The extension keeps a
-draft so you can review it.
+00:02:07.166 --> 00:02:09.361
+Grok writes the fix
+in sixteen seconds.
 
-00:04:00.033 --> 00:04:01.545
-The report lands in the queue.
+00:02:09.666 --> 00:02:12.525
+Kane tries it. Without the fix, the
+keyboard fails.
 
-00:04:02.233 --> 00:04:04.644
-Grok makes View open on keyboard focus.
+00:02:12.833 --> 00:02:13.800
+The mouse works.
 
-00:04:04.967 --> 00:04:07.271
-The publisher checks
-Kane's saved evidence.
+00:02:15.033 --> 00:02:16.840
+With the fix, the keyboard passes.
 
-00:04:07.600 --> 00:04:09.883
-Open the extension
-to watch the recordings.
+00:02:17.166 --> 00:02:20.568
+Minutes later, after a recheck,
+the fix ships in the extension.
 
-00:04:10.320 --> 00:04:14.200
+00:02:20.900 --> 00:02:22.780
+Now the same eight Tabs open View.
+
+00:02:23.100 --> 00:02:24.479
+Sea Marks is right there.
+
+00:02:25.300 --> 00:02:28.500
+Today, 106 fixes are live
+in the extension.
+
+00:02:28.800 --> 00:02:30.813
+62 of them proven by Kane.
+
+00:02:31.253 --> 00:02:34.173
+A developer can put that
+check into Claude Code, too.
+
+00:02:34.173 --> 00:02:36.309
+Here it runs when Claude tries to finish.
+
+00:02:36.729 --> 00:02:39.443
+The first time, the button
+still skips the keyboard.
+
+00:02:39.443 --> 00:02:42.404
+The check fails and the Stop
+hook sends the work back.
+
+00:02:43.753 --> 00:02:46.593
+The developer fixes the
+button in the site itself.
+
+00:02:46.593 --> 00:02:48.169
+Claude reaches the end again.
+
+00:02:48.589 --> 00:02:50.753
+This time Kane can add the headphones.
+
+00:02:50.753 --> 00:02:52.856
+The check passes and Claude can finish.
+
+00:02:54.034 --> 00:02:56.484
+And every fix can go back to the site owner:
+
+00:02:56.484 --> 00:02:59.934
+the exact change,
+with Kane's recording as proof.
+
+00:03:00.153 --> 00:03:04.033
 And when a site owner makes a repair,
 the browser should get out of the way.
 
-00:04:14.200 --> 00:04:17.637
+00:03:04.033 --> 00:03:07.470
 Kane tries the task with the
 extension's fix switched off.
 
-00:04:18.057 --> 00:04:19.560
+00:03:07.890 --> 00:03:09.393
 The button works on its own.
 
-00:04:19.560 --> 00:04:21.337
+00:03:09.393 --> 00:03:11.170
 Curb Cut retires the fix.
 
-00:04:22.820 --> 00:04:27.428
+00:03:12.653 --> 00:03:17.261
 The next person who comes to buy those headphones
 can use the keyboard from the start.
+
+00:03:19.213 --> 00:03:20.844
+Install Curb Cut for Chrome.
