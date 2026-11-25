@@ -1,0 +1,258 @@
+{
+  "startedAt": "2026-11-25T06:32:09.094Z",
+  "model": "grok-4.5",
+  "kaneCredits": 0,
+  "prefixChars": 7655,
+  "prefixNote": "Fixed instructions plus compact DSL example. Earlier write-up treated 7,808 cached tokens as this prefix.",
+  "tasks": [
+    {
+      "id": "v5-5a314b63f68c-905985ea",
+      "currentChars": 27802,
+      "taskFirstChars": 27802,
+      "payloadChars": 20146
+    },
+    {
+      "id": "v5-fcd52c5a5920e388762d",
+      "currentChars": 14635,
+      "taskFirstChars": 14635,
+      "payloadChars": 6979
+    }
+  ],
+  "calls": [
+    {
+      "label": "current-a",
+      "index": 1,
+      "task": "v5-5a314b63f68c-905985ea",
+      "promptChars": 27802,
+      "exitCode": 0,
+      "wallMs": 49777,
+      "input_tokens": 19166,
+      "cache_read_input_tokens": 7808,
+      "cache_creation_input_tokens": 0,
+      "output_tokens": 2961,
+      "total_tokens": 29935,
+      "usage": {
+        "input_tokens": 19166,
+        "cache_read_input_tokens": 7808,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 2961,
+        "reasoning_tokens": 2876,
+        "total_tokens": 29935
+      }
+    },
+    {
+      "label": "current-b",
+      "index": 2,
+      "task": "v5-fcd52c5a5920e388762d",
+      "promptChars": 14635,
+      "exitCode": 0,
+      "wallMs": 8755,
+      "input_tokens": 14595,
+      "cache_read_input_tokens": 7808,
+      "cache_creation_input_tokens": 0,
+      "output_tokens": 314,
+      "total_tokens": 22717,
+      "usage": {
+        "input_tokens": 14595,
+        "cache_read_input_tokens": 7808,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 314,
+        "reasoning_tokens": 259,
+        "total_tokens": 22717
+      }
+    },
+    {
+      "label": "current-a",
+      "index": 3,
+      "task": "v5-5a314b63f68c-905985ea",
+      "promptChars": 27802,
+      "exitCode": 0,
+      "wallMs": 21704,
+      "input_tokens": 19039,
+      "cache_read_input_tokens": 7936,
+      "cache_creation_input_tokens": 0,
+      "output_tokens": 1141,
+      "total_tokens": 28116,
+      "usage": {
+        "input_tokens": 19039,
+        "cache_read_input_tokens": 7936,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 1141,
+        "reasoning_tokens": 1048,
+        "total_tokens": 28116
+      }
+    },
+    {
+      "label": "current-b",
+      "index": 4,
+      "task": "v5-fcd52c5a5920e388762d",
+      "promptChars": 14635,
+      "exitCode": 0,
+      "wallMs": 11351,
+      "input_tokens": 14465,
+      "cache_read_input_tokens": 7936,
+      "cache_creation_input_tokens": 0,
+      "output_tokens": 286,
+      "total_tokens": 22687,
+      "usage": {
+        "input_tokens": 14465,
+        "cache_read_input_tokens": 7936,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 286,
+        "reasoning_tokens": 230,
+        "total_tokens": 22687
+      }
+    },
+    {
+      "label": "task-first-a",
+      "index": 5,
+      "task": "v5-5a314b63f68c-905985ea",
+      "promptChars": 27802,
+      "exitCode": 0,
+      "wallMs": 63941,
+      "input_tokens": 19038,
+      "cache_read_input_tokens": 7936,
+      "cache_creation_input_tokens": 0,
+      "output_tokens": 3732,
+      "total_tokens": 30706,
+      "usage": {
+        "input_tokens": 19038,
+        "cache_read_input_tokens": 7936,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 3732,
+        "reasoning_tokens": 3645,
+        "total_tokens": 30706
+      }
+    },
+    {
+      "label": "task-first-b",
+      "index": 6,
+      "task": "v5-fcd52c5a5920e388762d",
+      "promptChars": 14635,
+      "exitCode": 0,
+      "wallMs": 10943,
+      "input_tokens": 14461,
+      "cache_read_input_tokens": 7936,
+      "cache_creation_input_tokens": 0,
+      "output_tokens": 532,
+      "total_tokens": 22929,
+      "usage": {
+        "input_tokens": 14461,
+        "cache_read_input_tokens": 7936,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 532,
+        "reasoning_tokens": 475,
+        "total_tokens": 22929
+      }
+    },
+    {
+      "label": "task-first-a",
+      "index": 7,
+      "task": "v5-5a314b63f68c-905985ea",
+      "promptChars": 27802,
+      "exitCode": 0,
+      "wallMs": 57727,
+      "input_tokens": 19036,
+      "cache_read_input_tokens": 7936,
+      "cache_creation_input_tokens": 0,
+      "output_tokens": 3668,
+      "total_tokens": 30640,
+      "usage": {
+        "input_tokens": 19036,
+        "cache_read_input_tokens": 7936,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 3668,
+        "reasoning_tokens": 3582,
+        "total_tokens": 30640
+      }
+    },
+    {
+      "label": "task-first-b",
+      "index": 8,
+      "task": "v5-fcd52c5a5920e388762d",
+      "promptChars": 14635,
+      "exitCode": 0,
+      "wallMs": 9261,
+      "input_tokens": 14464,
+      "cache_read_input_tokens": 7936,
+      "cache_creation_input_tokens": 0,
+      "output_tokens": 336,
+      "total_tokens": 22736,
+      "usage": {
+        "input_tokens": 14464,
+        "cache_read_input_tokens": 7936,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 336,
+        "reasoning_tokens": 278,
+        "total_tokens": 22736
+      }
+    },
+    {
+      "label": "trivial",
+      "index": 9,
+      "task": null,
+      "promptChars": 49,
+      "exitCode": 0,
+      "wallMs": 6657,
+      "input_tokens": 10172,
+      "cache_read_input_tokens": 7936,
+      "cache_creation_input_tokens": 0,
+      "output_tokens": 23,
+      "total_tokens": 18131,
+      "usage": {
+        "input_tokens": 10172,
+        "cache_read_input_tokens": 7936,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 23,
+        "reasoning_tokens": 18,
+        "total_tokens": 18131
+      }
+    },
+    {
+      "label": "trivial",
+      "index": 10,
+      "task": null,
+      "promptChars": 49,
+      "exitCode": 0,
+      "wallMs": 5269,
+      "input_tokens": 10170,
+      "cache_read_input_tokens": 7936,
+      "cache_creation_input_tokens": 0,
+      "output_tokens": 23,
+      "total_tokens": 18129,
+      "usage": {
+        "input_tokens": 10170,
+        "cache_read_input_tokens": 7936,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 23,
+        "reasoning_tokens": 18,
+        "total_tokens": 18129
+      }
+    }
+  ],
+  "completedAt": "2026-11-25T06:36:14.507Z",
+  "summary": {
+    "prefixChars": 7655,
+    "estimatedPrefixTokens": 1914,
+    "currentCached": [
+      7808,
+      7936,
+      7808,
+      7936
+    ],
+    "taskFirstCached": [
+      7936,
+      7936,
+      7936,
+      7936
+    ],
+    "trivialCached": [
+      7936,
+      7936
+    ],
+    "orderingChangedCachedCount": true,
+    "currentEqualsTaskFirst": false,
+    "trivialShowsProviderPrefix": true,
+    "verdict": "A 49-character trivial prompt still read 7,936 cached input tokens. The 7,655-character product prefix is about 1,914 estimated tokens, so the cached count is the grok CLI system prompt, not our prefix. Prefix-first and task-first both read 7,936 after warmup. Ordering does not change the cached count."
+  }
+}
