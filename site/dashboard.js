@@ -59,6 +59,7 @@ document.addEventListener('click', event => {
 })
 document.querySelector('#close').addEventListener('click', () => player.close())
 player.addEventListener('close', () => {
+  if (player.open) return
   video.pause()
   video.removeAttribute('src')
   video.load()

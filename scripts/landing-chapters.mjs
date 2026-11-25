@@ -59,6 +59,37 @@ export function jevChapter(link, review) {
     <div class="review-strip"><strong>${review.adjudication.correct}<small> / ${review.summary.appliedNames}</small></strong><div class="ticks" aria-hidden="true">${Array.from({length:review.summary.appliedNames},(_,i)=>`<i class="${i<review.adjudication.correct?'correct':'vague'}"></i>`).join('')}</div><p>Names judged correct in a manual review. Two were too vague. <a href="${link(site)}">Read the review ↗</a></p></div></div></section>`
 }
 
+export function mapChapter(recordings, link, media) {
+  const playback = (file,title,copy) => `<a class="map-play" data-recording="${title}" href="${media(file)}"><i class="play-glyph" aria-hidden="true"></i>${copy}</a>`
+  const checks = [
+    ['before','700b66b7','Keyboard without the fix','Fail'],
+    ['control','7168aa29','Mouse over View','Pass'],
+    ['after','006b53ce','Keyboard with the fix','Pass']
+  ]
+  return `<section class="chapter sea-chart" id="report-to-fix" aria-labelledby="map-title" data-choices><div class="frame">
+    <div class="chapter-meta"><span>Report a barrier</span><span>OpenSeaMap · Baltic Sea</span></div>
+    <div class="chart-lead"><div><h2 id="map-title">Eight Tabs.<br>No View.</h2>
+      <p class="body-copy">On OpenSeaMap, eight presses of Tab skipped the View menu. Curb Cut had never patched this site.</p></div>
+      <figure class="chart-window"><div class="chart-scale" aria-hidden="true"></div>
+      ${panel('map',0,'<img src="assets/map/missed.webp" loading="lazy" width="960" height="387" alt="OpenSeaMap toolbar with View closed above the Baltic Sea"><p>Tab skips View. Sea Marks stays hidden.</p>')}
+      ${panel('map',1,'<img src="assets/map/reached.webp" loading="lazy" width="960" height="387" alt="The View menu is open with the Sea Marks checkbox visible"><p>Tab reaches View. Sea Marks appears.</p>')}
+      <figcaption>${choices('map','Compare the installed extension packages',['Before the report','Published fix'])}
+      <div class="map-scrubber" hidden><label for="map-stop">Recorded Tab stop</label><output for="map-stop" id="map-position">8 of 8</output>
+      <input type="range" id="map-stop" min="1" max="8" value="8" step="1"></div></figcaption></figure></div>
+    <div class="chart-log"><div class="chart-time"><strong>16<span>s</span></strong><p>Time Grok took to write the fix.</p></div>
+    <div class="chart-events"><div><h3>Report the missed stop.</h3><p>The user opened “Report a barrier.” The extension captured the page, the focused link and the recent Tab presses. Grok used that report to make View open on keyboard focus.</p>
+    ${playback('proof/report-to-fix/browser.mp4','OpenSeaMap · original barrier report','Watch the original report')}</div>
+    <div><h3>Try it three ways.</h3><p>Kane tried to reveal Sea Marks. Play the recorded keyboard and mouse checks.</p>
+    <ul class="chart-runs">${checks.map(([phase,id,task,result])=>{
+      const run=recordings.find(r=>r.phase===phase)
+      return `<li><a href="${media(run.file)}" data-recording="OpenSeaMap · ${task}"><i class="play-glyph" aria-hidden="true"></i><span>${task}<small>Session ${id}</small></span><b>${result}</b></a></li>`
+    }).join('')}</ul></div>
+    <div><h3>Ship it. Press Tab again.</h3><p>The first run stopped before publication. Curb Cut later rechecked the same recording and key events, confirmed the pass and shipped the fix. With the published extension, the same eight presses opened View and revealed Sea Marks.</p>
+    ${playback('proof/report-to-fix/user-clip.mp4','OpenSeaMap · installed packages before and after publication','Watch both installed versions')}
+    <a class="source-link" href="${link('proof/report-to-fix/README.md')}">Read the full OpenSeaMap proof ↗</a></div></div></div>
+    </div></section>`
+}
+
 export function ownerChapter(link) {
   return `<section class="chapter owner" id="owner" aria-labelledby="owner-title"><div class="frame"><div class="chapter-meta"><span>Site owner</span><span>The source fix</span></div>
     <div class="owner-grid"><div><h2 id="owner-title">So one day,<br>nobody needs us.</h2><p class="body-copy">A browser fix helps the person using it. They can share a report from the extension showing the site owner how to repair the original page for everyone.</p></div>

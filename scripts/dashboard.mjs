@@ -1,7 +1,7 @@
 import path from 'node:path'
 import {copyFile, mkdir, writeFile} from 'node:fs/promises'
 import {opening, repair} from './landing-opening.mjs'
-import {readerChapter, contrastChapter, kaneChapter, jevChapter, ownerChapter, developerChapter, closing} from './landing-chapters.mjs'
+import {readerChapter, contrastChapter, kaneChapter, jevChapter, mapChapter, ownerChapter, developerChapter, closing} from './landing-chapters.mjs'
 import {ROOT, readJSON} from '../core/io.mjs'
 
 import {archiveExtension} from './package-extension.mjs'
@@ -92,10 +92,18 @@ export async function buildDashboard({bundled}) {
     readJSON(path.join(ROOT,'launch/film/plates/index.json'))
   ])
   const film = 'launch/curbcut-launch.mp4'
+  const map = entries.find(entry=>entry.patch.id==='draft-7565c3d5-736d-48b1-b0e2-8c38afd36147')
+  const mapMedia = new Map([
+    ['proof/report-to-fix/browser.mp4','media/openseamap-report.mp4'],
+    ['proof/report-to-fix/user-clip.mp4','media/openseamap-comparison.mp4'],
+    ...map.recordings.map(run=>[run.file,'media/openseamap-'+run.phase+'.mp4'])
+  ])
   const pagesFilm = 'media/curbcut-launch.mp4'
   if (process.env.CURBCUT_PAGES === '1') {
     await mkdir(path.join(ROOT,'site/media'),{recursive:true})
-    await copyFile(path.join(ROOT,film),path.join(ROOT,'site',pagesFilm))
+    for (const [source, dest] of [[film,pagesFilm], ...mapMedia]) {
+      await copyFile(path.join(ROOT,source),path.join(ROOT,'site',dest))
+    }
   }
   for (const name of ['check','gate','retire-kane']) {
     await copyFile(path.join(ROOT,'launch/footage',name+'.mp4'),path.join(assets,'story',name+'.mp4'))
@@ -104,7 +112,7 @@ export async function buildDashboard({bundled}) {
   const html = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Curb Cut — Accessibility fixes for Chrome</title><meta name="theme-color" content="#E8E4F5"><meta name="description" content="Curb Cut fixes mouse-only menus, unnamed buttons and faint text as you browse. Watch a real repair and inspect the evidence.">
-<link rel="icon" href="assets/icon.png"><link rel="preload" as="image" href="assets/tab/foot.webp" imagesrcset="assets/tab/foot-small.webp 520w, assets/tab/foot.webp 1100w" imagesizes="(max-width:760px) 90vw, 52vw" fetchpriority="high"><link rel="preload" href="assets/fonts/inter-tight.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="assets/icon.png"><link rel="preload" as="image" href="assets/story/about-closed.webp" fetchpriority="high"><link rel="preload" href="assets/fonts/inter-tight.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css"><script defer src="dashboard.js"></script><script defer src="keystroke.js"></script><script defer src="chapters.js"></script><noscript><style>[data-panel][hidden]{display:block!important;margin-block:24px}.choices,.try-copy{display:none}</style></noscript></head>
 <body><a class="skip" href="#title">Skip to content</a><main id="main"><div class="travel-focus" aria-hidden="true" hidden></div>${opening({download,repo,count:entries.length})}
 ${repair({recordings:mass.recordings,link})}
@@ -112,6 +120,7 @@ ${readerChapter(link)}
 ${contrastChapter(link,plates)}
 ${kaneChapter(mass.recordings,link)}
 ${jevChapter(link,review)}
+${mapChapter(map.recordings, link, file=>process.env.CURBCUT_PAGES === '1' ? mapMedia.get(file) : link(file))}
 ${ownerChapter(link)}
 ${developerChapter(link)}
 <section class="ledger" id="evidence"><div class="frame"><p class="overline">Fix library</p><h2>Every fix.</h2><p class="ledger-intro">Search all ${entries.length} fixes. Kane verified ${kaneCount}. The other ${entries.length-kaneCount} have local proof. Open a row for the task, recordings and evidence.</p>

@@ -1753,3 +1753,275 @@ h2,
   margin-top: 8px;
   font-size: 0.96rem;
 }
+.hero {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.04fr);
+  gap: clamp(20px, 3.2vw, 54px);
+}
+.hero-copy h1 {
+  font-size: clamp(74px, 8.8vw, 162px);
+  line-height: .91;
+}
+.hero-copy .summary {
+  max-width: 27em;
+  min-height: 4.4em;
+}
+.mechanism {
+  position: relative;
+  max-width: 760px;
+  padding: 0 0 clamp(65px, 7vw, 125px);
+}
+.hero-display {
+  position: relative;
+  width: 95%;
+  padding: 4px;
+  background: var(--plum);
+  color: var(--mist);
+  border-radius: 7px;
+}
+.recording-label, .hero-display figcaption {
+  display: flex;
+  align-items: center;
+  padding: 9px 12px;
+  font-size: clamp(12px, .95vw, 16px);
+  gap: 8px;
+  line-height: 1.25;
+}
+.recording-label span {
+  margin-left: auto;
+  color: #d5cadd;
+}
+.hero-footage {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: var(--plum);
+}
+.hero-display figcaption {
+  max-width: 72%;
+}
+.mechanism .drawing {
+  position: absolute;
+  right: -3%;
+  bottom: -5%;
+  width: 40%;
+  aspect-ratio: 1.18;
+  pointer-events: none;
+}
+.mechanism .assembly {
+  inset: 0;
+}
+.sea-chart {
+  background: #302039;
+  color: var(--mist);
+}
+.sea-chart .chapter-meta {
+  color: #ffad8f;
+}
+.chart-lead, .chart-log {
+  display: grid;
+  grid-template-columns: minmax(0, .83fr) minmax(0, 1.17fr);
+  align-items: center;
+  gap: clamp(36px, 4.5vw, 88px);
+}
+.chart-lead h2 {
+  color: #ff946e;
+  font-size: clamp(64px, 7.9vw, 154px);
+}
+.chart-lead .body-copy {
+  max-width: 24em;
+  margin-top: 22px;
+}
+.chart-window {
+  color: var(--plum);
+  background: var(--mist);
+  border: 1px solid #bcadc7;
+  box-shadow: 7px 7px 0 #72596e;
+}
+.chart-scale {
+  height: 13px;
+  border-bottom: 1px solid #85748c;
+  background: repeating-linear-gradient(90deg, transparent 0 15px, #74627a 15px 16px) left bottom/100% 5px no-repeat;
+}
+.chart-window img {
+  width: 100%;
+  height: auto;
+}
+.chart-window p {
+  font-size: clamp(18px, 1.65vw, 27px);
+  line-height: 1.2;
+  font-weight: 575;
+  padding: 16px 20px 0;
+}
+.chart-window figcaption {
+  padding: 14px 20px 18px;
+}
+.chart-window .choices {
+  margin: 0;
+}
+.chart-log {
+  align-items: start;
+  margin-top: clamp(54px, 7.5vw, 132px);
+  padding-top: clamp(20px, 3vw, 46px);
+  border-top: 1px solid #8c748e;
+}
+.chart-time strong {
+  display: block;
+  font-size: clamp(100px, 16vw, 290px);
+  font-weight: 550;
+  line-height: .86;
+  letter-spacing: -.075em;
+  color: var(--orange);
+}
+.chart-time strong span {
+  font-size: .42em;
+  letter-spacing: -.05em;
+}
+.chart-time p {
+  margin-top: 12px;
+  font-size: clamp(17px, 1.4vw, 24px);
+}
+.chart-events > div + div {
+  margin-top: 34px;
+  padding-top: 28px;
+  border-top: 1px solid #8c748e;
+}
+.chart-events p {
+  max-width: 42em;
+  margin: 14px 0;
+  line-height: 1.5;
+  font-size: clamp(16px, 1.25vw, 21px);
+}
+.map-play, .chart-runs a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.map-play {
+  width: fit-content;
+  font-weight: 600;
+  color: #ffb498;
+  padding-block: 6px;
+}
+.chart-runs {
+  padding: 0;
+  list-style: none;
+}
+.chart-runs a {
+  padding: 12px 14px;
+  border: 1px solid #927f97;
+  margin-top: -1px;
+}
+.chart-runs a:hover, .chart-runs a:focus-visible {
+  background: #523e59;
+}
+.chart-runs small {
+  display: block;
+  color: #d2c5db;
+}
+.chart-runs b {
+  margin-left: auto;
+  color: #ffb498;
+}
+.sea-chart :focus-visible {
+  outline-color: #ffad8f;
+}
+@media (min-width: 761px) and (prefers-reduced-motion: no-preference) {
+  .chart-time {
+    position: sticky;
+    top: 10vh;
+  }
+}
+@media (max-width: 760px) {
+  .hero, .chart-lead, .chart-log {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hero {
+    gap: 12px;
+  }
+  .hero-copy h1 {
+    font-size: clamp(55px, 14vw, 100px);
+    margin: .24em 0;
+  }
+  .hero-copy .summary {
+    min-height: 0;
+  }
+  .mechanism {
+    padding-bottom: 54px;
+    max-width: 450px;
+    margin: 15px 0 6px;
+  }
+  .mechanism .drawing {
+    right: -1%;
+    bottom: -2%;
+    width: 37%;
+  }
+  .hero-display {
+    width: 96%;
+  }
+  .chart-lead, .chart-log {
+    gap: 28px;
+  }
+  .chart-window p, .chart-window figcaption {
+    padding-inline: 12px;
+  }
+  .chart-time strong {
+    font-size: clamp(96px, 24vw, 150px);
+  }
+}
+.map-scrubber {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: .86rem;
+}
+.map-scrubber label {
+  font-weight: 600;
+}
+.map-scrubber output {
+  font-variant-numeric: tabular-nums;
+}
+.map-scrubber input {
+  grid-column: 1/-1;
+  width: 100%;
+  height: 25px;
+  margin: 0;
+  accent-color: var(--plum);
+  cursor: pointer;
+}
+.map-scrubber input:focus-visible {
+  outline-color: var(--plum);
+}
+@media (max-width: 500px) {
+  .chart-window img {
+    aspect-ratio: 1.75;
+    object-fit: cover;
+    object-position: 35% center;
+  }
+}
+.hero-lens {
+  position: relative;
+}
+.hero-lens:after {
+  content: "";
+  position: absolute;
+  left: 3.25%;
+  top: 15.6%;
+  width: 12.5%;
+  height: 12%;
+  border: 2px solid var(--orange);
+  border-radius: 3px;
+  pointer-events: none;
+}
+@media (max-width: 500px) {
+  .chart-window img:where([data-stop]):not([data-stop="8"]) {
+    object-position: left center;
+  }
+  .chart-window img:is([data-stop="3"], [data-stop="4"]) {
+    object-position: right center;
+  }
+}
