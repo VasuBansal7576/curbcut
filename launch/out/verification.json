@@ -1,12 +1,11 @@
 {
-  "video": "H.264, 1920 \u00d7 1080, 30 fps constant",
+  "video": "H.264, 1920 × 1080, 30 fps constant",
   "audio": "48 kHz stereo AAC",
   "captionTracks": "Embedded English cues match the WebVTT sidecars.",
-  "sampling": "Visually reviewed every fifteenth decoded frame, starting at frame zero.",
+  "sampling": "Reviewed the demo in temporal sheets covering every frame. Compared every decoded demo frame with its edited shot at 128 × 72 and every decoded launch frame with its source selection at the same resolution. Checked the launch splice separately.",
   "originalMasterCommit": "94189fb",
   "originalMasterSha256": "e20de029c8aa0eb015aeb274d98840171c612d656e5018f5cd14ca9885ef2a81",
   "openSeaMap": {
-    "reportStartSeconds": 99.1,
     "sessions": [
       "700b66b7",
       "7168aa29",
@@ -15,25 +14,26 @@
     "publishedAt": "2026-11-25T06:49:55.659Z",
     "activeFixes": 106,
     "kaneVerified": 62,
-    "localProof": 44
+    "localProof": 44,
+    "launchSequenceStartSeconds": 95.033333,
+    "demoSequenceStartSeconds": 120.633333
   },
   "master": {
-    "seconds": 142.933333,
-    "frames": 4288,
+    "seconds": 138.866667,
+    "frames": 4166,
     "size": [
       1920,
       1080
     ],
     "fps": 30,
-    "captions": 58,
+    "captions": 57,
     "embeddedMatchesWebVTT": true,
-    "fileBytes": 58516611,
-    "integratedLUFS": -16.07,
+    "fileBytes": 56819522,
+    "integratedLUFS": -16.1,
     "truePeakDBTP": -1.59,
-    "reviewFramesAt2fps": 286,
-    "sha256": "113cd10d27ba8f0f03d80365590e4a595545f7ade8b0ffa89caee60a3ab3576d",
-    "soundtrackMatchesDelivery": true,
-    "pictureMatchesDemoPrefix": true
+    "framesChecked": 4166,
+    "contactSheetIntervalSeconds": 2,
+    "sha256": "de2d9375621c3e7fae4f7023370681903d02f174a522b57812b9a50a4e024ac4"
   },
   "teaser": {
     "seconds": 15.0,
@@ -54,21 +54,27 @@
     "pictureMatchesLaunchSelections": true
   },
   "demo": {
-    "seconds": 268.6,
-    "frames": 8058,
+    "seconds": 204.433333,
+    "frames": 6133,
     "size": [
       1920,
       1080
     ],
     "fps": 30,
-    "captions": 101,
+    "captions": 66,
     "embeddedMatchesWebVTT": true,
-    "fileBytes": 89090530,
-    "integratedLUFS": -16.06,
-    "truePeakDBTP": -1.49,
-    "reviewFramesAt2fps": 538,
-    "sha256": "ecb8548dddcfa94519aad63bf3a72c415673faddee783e623e5b02952f32ba4a",
-    "soundtrackMatchesDelivery": true
+    "fileBytes": 30879876,
+    "integratedLUFS": -16.49,
+    "truePeakDBTP": -1.66,
+    "framesChecked": 6133,
+    "contactSheetIntervalSeconds": 2,
+    "sha256": "c0054f3721d016a31b453e15208f4bce4fc207857ca83f78dd2baa68f3c524ca"
   },
-  "direction": "A \u00b7 Chrome on white, blue #2452A5"
+  "direction": "A · Chrome on white, blue #2452A5",
+  "colorHexa": {
+    "demoSequenceStartSeconds": 73.633333,
+    "sourceRunId": "3c57743a-4f8b-4c78-9f77-d6e4630e9d31",
+    "sameTabFeedAppliedSeconds": 144.395,
+    "pickerOpenedSeconds": 145.96
+  }
 }
