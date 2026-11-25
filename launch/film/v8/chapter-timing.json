@@ -1,0 +1,167 @@
+[
+  {
+    "id": "task",
+    "start": 0,
+    "duration": 11.5,
+    "cues": [
+      {
+        "start": 0.22,
+        "end": 5.276,
+        "text": "Developers can do the same thing on a site they're building. Start with what a visitor came to do."
+      },
+      {
+        "start": 5.696,
+        "end": 10.602666666666666,
+        "text": "Here, someone wants to find a pair of headphones and add them to their cart using a keyboard."
+      }
+    ]
+  },
+  {
+    "id": "before",
+    "start": 11.5,
+    "duration": 11.0,
+    "cues": [
+      {
+        "start": 0.22,
+        "end": 4.824666666666666,
+        "text": "Give that task and the address to curbcut check. Kane opens the shop and tries it."
+      },
+      {
+        "start": 5.244666666666666,
+        "end": 10.055583333333333,
+        "text": "Watch the Add button. The keyboard skips right past it. The headphones stay on the shelf."
+      }
+    ]
+  },
+  {
+    "id": "patch",
+    "start": 22.5,
+    "duration": 13.0,
+    "cues": [
+      {
+        "start": 0.22,
+        "end": 5.655583333333333,
+        "text": "Curb Cut proposes a small change. Let the button take focus, and let Enter activate it."
+      },
+      {
+        "start": 6.075583333333333,
+        "end": 12.07025,
+        "text": "Kane tries again. Same shop, same headphones, same keyboard. This time there's an item in the cart."
+      }
+    ]
+  },
+  {
+    "id": "gateFail",
+    "start": 35.5,
+    "duration": 12.5,
+    "cues": [
+      {
+        "start": 0.22,
+        "end": 5.276,
+        "text": "A developer can put that check into Claude Code, too. Here it runs when Claude tries to finish."
+      },
+      {
+        "start": 5.696,
+        "end": 11.370666666666667,
+        "text": "The first time, the button still skips the keyboard. The check fails and the Stop hook sends the work back."
+      }
+    ]
+  },
+  {
+    "id": "gatePass",
+    "start": 48.0,
+    "duration": 10.5,
+    "cues": [
+      {
+        "start": 0.22,
+        "end": 4.636,
+        "text": "The developer fixes the button in the site itself. Claude reaches the end again."
+      },
+      {
+        "start": 5.056,
+        "end": 9.322666666666667,
+        "text": "This time Kane can add the headphones. The check passes and Claude can finish."
+      }
+    ]
+  },
+  {
+    "id": "trust",
+    "start": 58.5,
+    "duration": 13.0,
+    "cues": [
+      {
+        "start": 0.22,
+        "end": 6.769333333333333,
+        "text": "A person using the extension can look at the evidence, too. Open Curb Cut on the page and choose the recording."
+      },
+      {
+        "start": 7.189333333333333,
+        "end": 11.732083333333332,
+        "text": "It shows what happened in the browser. You can see for yourself whether the menu opened."
+      }
+    ]
+  },
+  {
+    "id": "names",
+    "start": 71.5,
+    "duration": 15.0,
+    "cues": [
+      {
+        "start": 0.22,
+        "end": 7.153333333333333,
+        "text": "On a new page, Jev looks at what each button does. Here on Meridiano, one opens the menu. Another opens search."
+      },
+      {
+        "start": 7.573333333333333,
+        "end": 14.101333333333333,
+        "text": "People checked the suggestions. Jev got 13 right out of 15. When it's unsure, it leaves the button alone."
+      }
+    ]
+  },
+  {
+    "id": "report",
+    "start": 86.5,
+    "duration": 10.5,
+    "cues": [
+      {
+        "start": 0.22,
+        "end": 6.492,
+        "text": "If something else gets in the way, open Report a barrier. Describe what you were trying to do and where you got stuck."
+      },
+      {
+        "start": 6.912,
+        "end": 9.480708333333332,
+        "text": "The extension keeps a draft so you can review it."
+      }
+    ]
+  },
+  {
+    "id": "retire",
+    "start": 97.0,
+    "duration": 12.5,
+    "cues": [
+      {
+        "start": 0.22,
+        "end": 7.537333333333333,
+        "text": "And when a site owner makes a repair, the browser should get out of the way. Kane tries the task with the extension's fix switched off."
+      },
+      {
+        "start": 7.957333333333333,
+        "end": 11.236625,
+        "text": "The button works on its own. Curb Cut retires the fix."
+      }
+    ]
+  },
+  {
+    "id": "end",
+    "start": 109.5,
+    "duration": 6.0,
+    "cues": [
+      {
+        "start": 0.22,
+        "end": 4.827999999999999,
+        "text": "The next person who comes to buy those headphones can use the keyboard from the start."
+      }
+    ]
+  }
+]
