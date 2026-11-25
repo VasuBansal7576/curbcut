@@ -171,6 +171,28 @@ input:disabled, button:disabled { opacity: .65; cursor: default; }
 .patch-item summary { min-height: 24px; }
 .patch-item details:first-of-type, .measurement { margin-top: 6px; }
 .evidence-links, .report-actions { display: flex; flex-wrap: wrap; gap: 8px; padding: 8px 0 0; }
+.evidence-clips {
+  display: grid;
+  gap: 8px;
+  padding: 8px 0 0;
+}
+.clip { margin: 0; }
+.clip video {
+  display: block;
+  width: 100%;
+  min-height: 80px;
+  max-height: 140px;
+  background: var(--foreground);
+}
+.clip figcaption {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: .8rem;
+  font-weight: 700;
+}
+@media (prefers-reduced-motion: reduce) {
+  .clip video { scroll-behavior: auto; }
+}
 .report-actions .status { flex-basis: 100%; }
 .site-fixed {
   margin: 12px 0 0;
@@ -250,7 +272,7 @@ a:hover, .text-button:hover { color: var(--foreground); }
 .measurement { display: inline-block; font-size: .9rem; }
 .text-button { border: 0; background: transparent; padding-inline: 0; }
 
-:where(a, button, input, select, summary):focus-visible {
+:where(a, button, input, select, summary, video):focus-visible {
   outline: 2px solid var(--ring);
   outline-offset: 3px;
 }

@@ -155,3 +155,66 @@ test('popup lists retired site-fixed notices, Kane proof, and saves a barrier dr
     }
   }
 },{timeout:60000})
+
+test('popup loads inline Kane clips for a verified fix',async()=>{
+  let server
+  try {server=await serve()} catch(error) {
+    if(error.code!=='EADDRINUSE') throw error
+    server=await serve(0)
+  }
+  const profile=await mkdtemp(path.join(tmpdir(),'curbcut-clip-'))
+  const extension=path.resolve('extension')
+  const shop='http://127.0.0.1:4317/fixtures/shop/'
+  const origin='http://127.0.0.1:'+server.address().port+'/'
+  const donor=await readJSON(path.join(ROOT,'patches/keyboard-add-headphones.json'))
+  const verified={...donor,status:'verified',
+    evidence:{...donor.evidence,before:'proof/local/keyboard-only/before.mp4',after:'proof/local/keyboard-only/after.mp4',
+      control:'proof/local/keyboard-only/control.mp4'}}
+  let context
+  try {
+    context=await chromium.launchPersistentContext(profile,{channel:'chromium',headless:true,
+      args:['--disable-extensions-except='+extension,'--load-extension='+extension,'--disable-background-networking']})
+    const worker=context.serviceWorkers().find(item=>item.url().startsWith('chrome-extension:'))??
+      await context.waitForEvent('serviceworker',{predicate:item=>item.url().startsWith('chrome-extension:'),timeout:8000})
+    await worker.evaluate(async ()=>{
+      const start=Date.now()
+      while(Date.now()-start<8000) {
+        const {lastFeedAt}=await chrome.storage.local.get('lastFeedAt')
+        if(lastFeedAt) return
+        await new Promise(resolve=>setTimeout(resolve,50))
+      }
+    })
+    await worker.evaluate(async ({patches,evidenceBase})=>{
+      await chrome.storage.local.set({patches,demoPatches:[],lastFeedAt:new Date().toISOString(),enabled:true,evidenceBase})
+    },{patches:[verified],evidenceBase:origin})
+    const page=context.pages()[0]??await context.newPage()
+    await page.goto(shop,{waitUntil:'domcontentloaded',timeout:15000})
+    const tabId=await worker.evaluate(async href=>{
+      const tabs=await chrome.tabs.query({})
+      return tabs.find(tab=>tab.url===href)?.id??null
+    },shop)
+    assert.ok(tabId)
+    await worker.evaluate(async tabId=>{
+      await chrome.storage.local.set({pendingStuck:true,capturedTabId:tabId})
+    },tabId)
+    const popup=await context.newPage()
+    await popup.goto(new URL('popup.html',worker.url()).href)
+    const video=popup.locator('#active-patches video')
+    await video.first().waitFor({state:'attached',timeout:15000})
+    assert.ok(await video.count()>=2)
+    const src=await video.first().getAttribute('src')
+    assert.match(src,/proof\/local\/keyboard-only\/before\.mp4/)
+    assert.equal(await video.first().getAttribute('aria-label'),'Before recording')
+    assert.equal(await video.first().getAttribute('muted'),'')
+    await popup.locator('#active-patches video').nth(1).evaluate(node=>{
+      node.muted=true
+      node.pause()
+    })
+  } finally {
+    try {await context?.close()}
+    finally {
+      await rm(profile,{recursive:true,force:true})
+      server?.close()
+    }
+  }
+},{timeout:60000})

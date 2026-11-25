@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import {mkdtemp,readFile,rm} from 'node:fs/promises'
 import {tmpdir} from 'node:os'
 import path from 'node:path'
-import {agentArgs,agentBackend,propose,proposeCoverageNames} from '../core/agent.mjs'
+import {agentArgs,agentBackend,ladderEnabled,ladderRungs,proposalInstructions,proposalPrefix,propose,proposeCoverageNames} from '../core/agent.mjs'
 import {readJSON} from '../core/io.mjs'
 
 const task=await readJSON('tasks/keyboard-only.json')
@@ -12,7 +12,7 @@ const proposal=JSON.stringify({barrier:original.barrier,rules:original.rules})
 const names=JSON.stringify([{index:0,name:'Open search',basis:'The crop shows a magnifying glass.'}])
 
 function restoreAgentEnv(previous) {
-  for(const key of ['CURBCUT_AGENT','CURBCUT_MODEL','CURBCUT_GROK']) {
+  for(const key of ['CURBCUT_AGENT','CURBCUT_MODEL','CURBCUT_GROK','CURBCUT_LADDER','CURBCUT_MODEL_SMALL','CURBCUT_MODEL_LARGE','CURBCUT_CODEX_LARGE']) {
     if(previous[key]===undefined) delete process.env[key]
     else process.env[key]=previous[key]
   }
@@ -23,7 +23,7 @@ test('CURBCUT_AGENT selects codex by default and grok with its model and executa
   try {
     delete process.env.CURBCUT_AGENT
     delete process.env.CURBCUT_MODEL
-    assert.deepEqual(agentBackend(),{id:'codex',writer:'codex exec',model:'gpt-6.2-sol',executable:'codex',timeout:150000,namingTimeout:130000})
+    assert.deepEqual(agentBackend(),{id:'codex',writer:'codex exec',model:'gpt-6.2-sol',executable:'codex',timeout:150000,namingTimeout:130000,effort:'low'})
     process.env.CURBCUT_AGENT='grok'
     const grok=agentBackend()
     assert.equal(grok.id,'grok')
@@ -159,6 +159,78 @@ test('a template correction sends the patch schema and retries a schema error on
     assert.equal(calls[0].validatorMessage,undefined)
     assert.match(calls[1].validatorMessage,/\/rules.*minItems/)
     assert.deepEqual(patch.rules,original.rules)
+  } finally {
+    restoreAgentEnv(previous)
+    await rm(directory,{recursive:true,force:true})
+  }
+})
+
+test('two tasks share a fixed prompt prefix of at least 800 characters',async()=>{
+  const schema=await readJSON('schemas/patch.json')
+  const prefix=proposalPrefix(schema)
+  assert.ok(prefix.length>=800)
+  const other={...task,id:'other-task',url:'http://127.0.0.1:4317/fixtures/shop/porch.html',task:'Open porch details'}
+  const first=proposalInstructions(task,{runner:'playwright',reason:'Tab skipped the control'},null,schema)
+  const second=proposalInstructions(other,{runner:'playwright',reason:'The name is missing'},null,schema)
+  assert.equal(first.slice(0,prefix.length),prefix)
+  assert.equal(second.slice(0,prefix.length),prefix)
+  assert.equal(first.slice(0,prefix.length),second.slice(0,prefix.length))
+  assert.notEqual(first,second)
+})
+
+test('the ladder uses the small model first and retries once with the large model',async()=>{
+  const previous={CURBCUT_AGENT:process.env.CURBCUT_AGENT,CURBCUT_MODEL:process.env.CURBCUT_MODEL,CURBCUT_GROK:process.env.CURBCUT_GROK,
+    CURBCUT_LADDER:process.env.CURBCUT_LADDER,CURBCUT_MODEL_SMALL:process.env.CURBCUT_MODEL_SMALL,CURBCUT_MODEL_LARGE:process.env.CURBCUT_MODEL_LARGE}
+  const directory=await mkdtemp(path.join(tmpdir(),'curbcut-ladder-'))
+  const models=[]
+  process.env.CURBCUT_AGENT='grok'
+  delete process.env.CURBCUT_MODEL
+  delete process.env.CURBCUT_LADDER
+  try {
+    assert.equal(ladderEnabled(),true)
+    assert.deepEqual(ladderRungs({id:'grok',model:'grok-4.5'}),{small:{model:'grok-4.5'},large:{model:'grok-4.6'}})
+    const patch=await propose(task,{runner:'playwright',reason:'Tab skipped the control'},null,directory,{
+      validateSelectors:async()=>({ok:models.length>1,matches:models.length>1?[]:[{field:'selector',selector:'div.add-to-cart',issue:'zero matches'}]}),
+      run:async(_exe,args)=>{
+        const model=args[args.indexOf('-m')+1]
+        models.push(model)
+        const body=models.length===1?JSON.stringify({barrier:original.barrier,rules:original.rules.slice(0,1)}):proposal
+        return {code:0,stdout:body,stderr:''}
+      }
+    })
+    assert.deepEqual(models,['grok-4.5','grok-4.6'])
+    assert.equal(patch.evidence.ladderRung,'large')
+    assert.equal(patch.barrier,original.barrier)
+  } finally {
+    restoreAgentEnv(previous)
+    await rm(directory,{recursive:true,force:true})
+  }
+})
+
+test('CURBCUT_LADDER=off keeps a single model and CURBCUT_LADDER default records a small-model win',async()=>{
+  const previous={CURBCUT_AGENT:process.env.CURBCUT_AGENT,CURBCUT_MODEL:process.env.CURBCUT_MODEL,CURBCUT_GROK:process.env.CURBCUT_GROK,
+    CURBCUT_LADDER:process.env.CURBCUT_LADDER}
+  const directory=await mkdtemp(path.join(tmpdir(),'curbcut-ladder-off-'))
+  process.env.CURBCUT_AGENT='grok'
+  delete process.env.CURBCUT_MODEL
+  try {
+    process.env.CURBCUT_LADDER='off'
+    assert.equal(ladderEnabled(),false)
+    const models=[]
+    await propose(task,{runner:'playwright',reason:'Tab skipped the control'},null,path.join(directory,'off'),{
+      validateSelectors:async()=>({ok:true,matches:[]}),
+      run:async(_exe,args)=>{
+        models.push(args[args.indexOf('-m')+1])
+        return {code:0,stdout:proposal,stderr:''}
+      }
+    })
+    assert.deepEqual(models,['grok-4.5'])
+    delete process.env.CURBCUT_LADDER
+    const won=await propose(task,{runner:'playwright',reason:'Tab skipped the control'},null,path.join(directory,'on'),{
+      validateSelectors:async()=>({ok:true,matches:[]}),
+      run:async()=>({code:0,stdout:proposal,stderr:''})
+    })
+    assert.equal(won.evidence.ladderRung,'small')
   } finally {
     restoreAgentEnv(previous)
     await rm(directory,{recursive:true,force:true})

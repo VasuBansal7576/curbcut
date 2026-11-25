@@ -124,3 +124,35 @@ export function createReport(patch) {
     entries.map(id=>'- '+criteria[id][1]).join('\n'),'## Source change',...patch.rules.map(source),
     '## Verification',local?'Local proof (Chromium measurement).':'Kane task replay.',references.join('\n')].filter(Boolean).join('\n\n')+'\n'
 }
+
+function evidenceLink(label,file) {
+  const relative=evidencePath(file)
+  if(!relative) return null
+  const href=/^proof\/family\//.test(relative)?repo+'/blob/main/'+relative:rawRoot+relative
+  return '- ['+label+']('+href+')'
+}
+
+export function createFamilyReport({familyId,familyName,barrier,template,sites=[],rules=[],evidence=[]}) {
+  const name=familyName||familyId
+  const patch={site:name,match:name,barrier,rules,persona:template?.persona,status:'verified'}
+  const entries=wcagCriteria(patch).map(entry=>entry.id)
+  const repaired=sites.filter(site=>['repaired','verified','locally-verified'].includes(site.status))
+  const others=sites.filter(site=>!repaired.includes(site))
+  const siteLine=site=>'- '+line(site.url||site.site)+' — '+line(site.status)+(site.reason?' ('+line(site.reason)+')':'')
+  const references=evidence.map(([label,file])=>evidenceLink(label,file)).filter(Boolean)
+  return ['# Accessibility repair for '+line(name),
+    '**Platform or theme** '+line(name),
+    '**Template** '+line(template?.id||familyId),
+    '**Sites scanned** '+String(sites.length),
+    '## Barrier',line(barrier||template?.barrier||'Shared accessibility barrier'),
+    '## Relevant WCAG criteria',entries.map(id=>'- '+id+' '+criteria[id][0]).join('\n'),
+    '## Who it blocks',entries.map(id=>'- '+criteria[id][1]).join('\n'),
+    '## Affected sites',
+    repaired.length?repaired.map(siteLine).join('\n'):'- None of the scanned sites were repaired by this template.',
+    others.length?'Sites the template did not repair:\n\n'+others.map(siteLine).join('\n'):'',
+    '## Source change','One change in the shared platform or theme repairs every affected site.',
+    ...(rules.length?rules.map(source):['No instantiated rule was available.']),
+    '## Verification',
+    references.length?references.join('\n'):'Local Playwright replay in an isolated Chromium profile.'
+  ].filter(Boolean).join('\n\n')+'\n'
+}

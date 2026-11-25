@@ -1,0 +1,37 @@
+{
+  "id": "family-642da9dc87705f33",
+  "url": "https://doc.rust-lang.org/book/ch01-03-hello-cargo.html",
+  "status": "repaired",
+  "rules": [
+    {
+      "selector": "code.language-console.hljs",
+      "action": "injectCSS",
+      "value": {
+        "white-space": "pre-wrap"
+      }
+    }
+  ],
+  "verdicts": [
+    {
+      "templateId": "8af0bf46843848432f7e",
+      "source": "rust-book-reflow",
+      "rules": [
+        {
+          "selector": "code.language-console.hljs",
+          "action": "injectCSS",
+          "value": {
+            "white-space": "pre-wrap"
+          }
+        }
+      ],
+      "after": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      },
+      "pointer": {
+        "status": "pass",
+        "reason": "Checked the declared outcome after the read action."
+      }
+    }
+  ]
+}

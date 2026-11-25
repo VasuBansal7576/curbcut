@@ -102,6 +102,47 @@ import { createReport } from './lib/report.js';
     return anchor;
   }
 
+  function prefersReducedMotion() {
+    return Boolean(window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches);
+  }
+
+  function toggleClip(video) {
+    if (video.paused) {
+      const play = video.play();
+      if (play && typeof play.catch === "function") play.catch(() => {});
+    } else video.pause();
+  }
+
+  function evidencePlayer(href, label) {
+    const figure = document.createElement("figure");
+    figure.className = "clip";
+    const video = document.createElement("video");
+    video.src = href;
+    video.controls = true;
+    video.playsInline = true;
+    video.muted = true;
+    video.defaultMuted = true;
+    video.tabIndex = 0;
+    video.preload = "metadata";
+    video.setAttribute("muted", "");
+    video.setAttribute("aria-label", label);
+    video.setAttribute("controlslist", "nodownload");
+    if (!prefersReducedMotion()) {
+      video.autoplay = true;
+      video.muted = true;
+    }
+    video.addEventListener("keydown", (event) => {
+      if (event.key === " " || event.key === "Enter" || event.key === "k" || event.key === "K") {
+        event.preventDefault();
+        toggleClip(video);
+      }
+    });
+    const caption = document.createElement("figcaption");
+    caption.textContent = label;
+    figure.append(video, caption);
+    return figure;
+  }
+
   function evidenceUrl(path) {
     return Ext.evidenceHref(path, state.evidenceBase || Ext.EVIDENCE_BASE);
   }
@@ -168,9 +209,15 @@ import { createReport } from './lib/report.js';
         link.className = "measurement";
         li.append(link);
       } else if (kind.cls === "verified" && (before || after)) {
+        const clips = document.createElement("div");
+        clips.className = "evidence-clips";
+        clips.setAttribute("aria-label", "Proof recordings");
+        if (before) clips.append(evidencePlayer(before, "Before recording"));
+        if (after) clips.append(evidencePlayer(after, "After recording"));
+        li.append(clips);
         const links = document.createElement("div");
         links.className = "evidence-links";
-        links.setAttribute("aria-label", "Proof recordings");
+        links.setAttribute("aria-label", "Open proof recordings");
         if (before) links.append(proofLink(before, "Before recording"));
         if (after) links.append(proofLink(after, "After recording"));
         li.append(links);
@@ -306,9 +353,13 @@ import { createReport } from './lib/report.js';
     page.available = Boolean(result?.ok);
     page.url = result?.url || result?.tab?.url || "";
     page.isFixture = Boolean(result?.isFixture);
-    page.active = Array.isArray(result?.active)
-      ? result.active.filter(patch => patch.matchedRules?.length || patch.unverified)
-      : [];
+    const listed = Array.isArray(result?.active) ? result.active : [];
+    const applied = listed.filter(patch => patch.matchedRules?.length || patch.unverified);
+    const known = Ext.selectActivePatches(page.url, state).filter(patch =>
+      ["verified", "locally-verified"].includes(patch.status) && (patch.evidence?.before || patch.evidence?.after));
+    const byId = new Map(applied.map(patch => [patch.id, patch]));
+    for (const patch of known) if (!byId.has(patch.id)) byId.set(patch.id, patch);
+    page.active = [...byId.values()];
     page.sensitive = Boolean(result?.sensitive);
     page.instantPatch = result?.instantPatch || null;
     page.retired = Ext.selectRetiredPatches(page.url, state);

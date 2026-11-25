@@ -12,19 +12,21 @@ import {runGate,serializeGate} from './core/gate.mjs'
 import {meter,summarizeCost} from './core/cost.mjs'
 import {runCensus} from './core/census.mjs'
 import {createReport} from './extension/lib/report.js'
+import {runFamily} from './core/family.mjs'
 
-const usage='curbcut serve | curbcut verify-queue | curbcut report <patch-id> | curbcut fix <task.json> | curbcut check <url> "<task>" [--persona keyboard-only|screen-reader-view|low-vision] [--local] [--dry-run] | curbcut gate [--config curbcut.gate.json] [--url <preview>] [--local] [--dry-run] [--json] | curbcut census <url-list-file> [--limit N] | curbcut cost [--json] | curbcut preflight <task.json> | curbcut visual-preflight <task.json> | curbcut recheck [patch-id|--public|--local [patch-id]]'
+const usage='curbcut serve | curbcut verify-queue | curbcut report <patch-id> | curbcut family <listfile-or-urls...> --template <family-id> [--kane] [--json] | curbcut fix <task.json> | curbcut check <url> "<task>" [--persona keyboard-only|screen-reader-view|low-vision] [--local] [--dry-run] | curbcut gate [--config curbcut.gate.json] [--url <preview>] [--local] [--dry-run] [--json] | curbcut census <url-list-file> [--limit N] | curbcut cost [--json] | curbcut preflight <task.json> | curbcut visual-preflight <task.json> | curbcut recheck [patch-id|--public|--local [patch-id]]'
 
 function parseArgv(argv) {
   const flags={}
   const rest=[]
   for(let i=0;i<argv.length;i++) {
     const arg=argv[i]
-    if(arg==='--local' || arg==='--dry-run' || arg==='--public' || arg==='--json') flags[arg.slice(2)]=true
-    else if(arg==='--persona' || arg==='--config' || arg==='--url' || arg==='--limit') flags[arg.slice(2)]=argv[++i]
+    if(arg==='--local' || arg==='--dry-run' || arg==='--public' || arg==='--json' || arg==='--kane') flags[arg.slice(2)]=true
+    else if(arg==='--persona' || arg==='--config' || arg==='--url' || arg==='--limit' || arg==='--template') flags[arg.slice(2)]=argv[++i]
     else if(arg.startsWith('--persona=')) flags.persona=arg.slice(10)
     else if(arg.startsWith('--config=')) flags.config=arg.slice(9)
     else if(arg.startsWith('--url=')) flags.url=arg.slice(6)
+    else if(arg.startsWith('--template=')) flags.template=arg.slice(11)
     else rest.push(arg)
   }
   return {action:rest[0],rest:rest.slice(1),flags}
@@ -32,7 +34,11 @@ function parseArgv(argv) {
 
 const {action,rest,flags}=parseArgv(process.argv.slice(2))
 async function main() {
-  if(action==='census' && rest[0]) {
+  if(action==='family' && rest[0]) {
+    const result=await runFamily(rest,{template:flags.template,kane:Boolean(flags.kane)})
+    process.stdout.write(flags.json?JSON.stringify({template:result.template,familyName:result.familyName,scanned:result.scanned,
+      repaired:result.repaired,kane:result.kane,directory:result.directory,sites:result.sites.map(site=>({url:site.url,status:site.status,reason:site.reason}))},null,2)+'\n':result.report)
+  } else if(action==='census' && rest[0]) {
     const limit=flags.limit===undefined?undefined:Number(flags.limit)
     if(Object.hasOwn(flags,'limit') && (!Number.isInteger(limit) || limit<0)) throw new Error('census --limit needs a non-negative integer')
     const result=await runCensus(rest[0],{limit})
@@ -75,8 +81,8 @@ async function main() {
   else console.log(usage)
 }
 try {
-  if(['check','fix','gate'].includes(action)) await meter(action,{
-    balance:action!=='fix' && (flags.local || flags['dry-run'])?null:requireKane
+  if(['check','fix','gate','family'].includes(action)) await meter(action,{
+    balance:action==='family'?flags.kane?requireKane:null:action!=='fix' && (flags.local || flags['dry-run'])?null:requireKane
   },main)
   else await main()
 } catch(error) {console.error(error.message);process.exitCode=2}

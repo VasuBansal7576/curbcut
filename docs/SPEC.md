@@ -10,7 +10,7 @@ Hackathon judging (equal weight): Ships (works end to end), Verified (Kane caugh
 - No arbitrary remote JavaScript in patches. Patches are declarative JSON only.
 - Public pages only. Stop before any login, payment or account creation. Low request rates.
 - Never claim screen-reader parity beyond what the screen-reader view actually tests.
-- Be frugal with Kane credits (`kane-cli balance`). Develop against the local fixture site first; real sites only for final proof runs.
+- Be frugal with Kane credits (`kane-cli balance`). Develop against the local fixture site first; real sites only for final proof runs. `curbcut family` scans a platform or theme with one inherited template. The repair agent climbs a small-then-large model ladder unless `CURBCUT_LADDER=off`.
 
 ## Components
 
