@@ -1,0 +1,76 @@
+{
+  "recordedOutcome": "inconclusive",
+  "originalResultsUnchanged": true,
+  "evaluations": [
+    {
+      "lane": "before",
+      "file": "proof/kane/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/barrier-report/before/result.json",
+      "sessionId": "700b66b7-5292-4f62-a065-f68e422ce5ea",
+      "kane": "fail",
+      "runVerdict": "fail",
+      "correctedVerdict": {
+        "status": "fail",
+        "basis": "recorded-journey-failed",
+        "missed": [
+          {
+            "index": 0,
+            "selector": "#topmenu > ul > li:has(> img[alt=\"view\"])",
+            "method": "focus"
+          }
+        ]
+      },
+      "kaneCredits": 22.363005,
+      "balanceBefore": 1416.3422,
+      "balanceAfter": 1389.3902
+    },
+    {
+      "lane": "control",
+      "file": "proof/kane/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/barrier-report/control/result.json",
+      "sessionId": "7168aa29-00c7-4051-8f07-5ef30704757e",
+      "kane": "pass",
+      "runVerdict": "pass",
+      "correctedVerdict": {
+        "status": "pass",
+        "basis": "recorded-journey-and-outcome"
+      },
+      "kaneCredits": 17.4186525,
+      "balanceBefore": 1389.3902,
+      "balanceAfter": 1368.8928
+    },
+    {
+      "lane": "attempt-1/after",
+      "file": "proof/kane/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/barrier-report/attempt-1/after/result.json",
+      "sessionId": "006b53ce-69e2-485b-88a9-612d56890d6f",
+      "kane": "pass",
+      "runVerdict": "inconclusive",
+      "correctedVerdict": {
+        "status": "pass",
+        "basis": "recorded-journey-and-outcome"
+      },
+      "kaneCredits": 22.509882499999996,
+      "balanceBefore": 1368.8928,
+      "balanceAfter": 1344.0156
+    },
+    {
+      "lane": "attempt-1/after-retry",
+      "file": "proof/kane/draft-7565c3d5-736d-48b1-b0e2-8c38afd36147/barrier-report/attempt-1/after-retry/result.json",
+      "sessionId": "f9be2f79-0c82-4007-a92a-100ca4de1443",
+      "kane": "pass",
+      "runVerdict": "inconclusive",
+      "correctedVerdict": {
+        "status": "inconclusive",
+        "basis": "complete-journey-not-witnessed",
+        "missed": [
+          {
+            "index": 0,
+            "selector": "#topmenu > ul > li:has(> img[alt=\"view\"])",
+            "method": "focus"
+          }
+        ]
+      },
+      "kaneCredits": 15.726939999999999,
+      "balanceBefore": 1344.0156,
+      "balanceAfter": 1327.634
+    }
+  ]
+}

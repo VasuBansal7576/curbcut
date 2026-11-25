@@ -34,6 +34,7 @@ flowchart LR
 Use Node.js 22 or newer. Run `npm ci` and `npm link` to install the CLI, or run `node curbcut.mjs` directly. Run `npx playwright install chromium` before running local browser checks or the test suite.
 
 - `curbcut check <url> "<task>"` runs the repair loop for a plain-English task. Run with `--dry-run` first to see the estimated Kane credit cost. Live runs require an authenticated Kane CLI and the selected coding agent CLI on your PATH. Set `CURBCUT_AGENT=grok` or `CURBCUT_AGENT=codex` (default) to select the repair agent.
+- `curbcut verify-queue [report-id]` checks saved barrier reports and instant repair candidates. Run `curbcut serve` to receive reports from the extension. Describe the control and the visible result in the report so Curb Cut can derive a replayable task.
 - `curbcut gate --config curbcut.gate.json` prints failing selectors and reasons so a coding agent can fix the source. Add `--local` to Check or Gate for Playwright without Kane credits. The [Claude Code Stop hook](docs/gate.md#claude-code-stop-hook) runs Gate after edits.
 - The [PR bot](docs/pr-bot.md) runs Gate against a preview URL, posts one updated comment, and uploads Kane recordings.
 - `curbcut cost` summarizes recorded tokens and Kane balance changes. Recipes and inherited rules get a local replay before a full agent proposal. The family policy samples eligible inherited fixes for Kane. The repair agent tries a small model first and retries once with a larger model unless `CURBCUT_LADDER=off`. [Cost proof and policy](proof/cost/README.md)

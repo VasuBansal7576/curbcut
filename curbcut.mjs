@@ -14,7 +14,7 @@ import {runCensus} from './core/census.mjs'
 import {createReport} from './extension/lib/report.js'
 import {runFamily} from './core/family.mjs'
 
-const usage='curbcut serve | curbcut verify-queue | curbcut report <patch-id> | curbcut family <listfile-or-urls...> --template <family-id> [--kane] [--json] | curbcut fix <task.json> | curbcut check <url> "<task>" [--persona keyboard-only|screen-reader-view|low-vision] [--local] [--dry-run] | curbcut gate [--config curbcut.gate.json] [--url <preview>] [--local] [--dry-run] [--json] | curbcut census <url-list-file> [--limit N] | curbcut cost [--json] | curbcut preflight <task.json> | curbcut visual-preflight <task.json> | curbcut recheck [patch-id|--public|--local [patch-id]]'
+const usage='curbcut serve | curbcut verify-queue [report-id] | curbcut report <patch-id> | curbcut family <listfile-or-urls...> --template <family-id> [--kane] [--json] | curbcut fix <task.json> | curbcut check <url> "<task>" [--persona keyboard-only|screen-reader-view|low-vision] [--local] [--dry-run] | curbcut gate [--config curbcut.gate.json] [--url <preview>] [--local] [--dry-run] [--json] | curbcut census <url-list-file> [--limit N] | curbcut cost [--json] | curbcut preflight <task.json> | curbcut visual-preflight <task.json> | curbcut recheck [patch-id|--public|--local [patch-id]]'
 
 function parseArgv(argv) {
   const flags={}
@@ -48,7 +48,14 @@ async function main() {
         labelled:recipe.labelled.n}))},null,2))
   } else if(action==='cost') console.log(JSON.stringify(await summarizeCost(),null,2))
   else if(action==='serve') {await serve();console.log('Curb Cut · http://127.0.0.1:4317/site/')}
-  else if(action==='verify-queue') console.log(JSON.stringify(await verifyQueue(),null,2))
+  else if(action==='verify-queue') {
+    const [id]=rest
+    const results=await verifyQueue({id,progress:async(phase,run)=>{
+      console.error([new Date().toISOString(),phase,run?.runId,run?.status].filter(Boolean).join(' '))
+    }})
+    console.log(JSON.stringify(results,null,2))
+    if(id && !results.some(result=>['verified','already-accessible'].includes(result.status))) process.exitCode=1
+  }
   else if(action==='report' && rest[0]) {
     const patch=(await catalog()).find(patch=>patch.id===rest[0])
     if(!patch) throw new Error('Unknown patch '+rest[0])

@@ -177,6 +177,22 @@ test('Kane hover journeys require visible focused activation and record invisibl
   events:[focus,{...activate,type:'blocked-activation'}]}).basis,'required-keyboard-activation-invisible')
 })
 
+test('a hover checkpoint may precede its focus event within the same trusted Tab',()=>{
+ const task={barrierClass:1,journey:[
+  {selector:'#view',action:'focus',checks:[{kind:'visible',selector:'#layers'}]},
+  {selector:'#layers',action:'observe'}
+ ]}
+ const context={top:true,documentId:'map'}
+ const tab={...context,type:'tab'}
+ const visible={...context,type:'journey-checkpoint',index:0}
+ const focus={...context,type:'tab-focus',stepTargets:['#view']}
+ const inputs={task,persona:'keyboard-only',checks:[true],kaneStatus:'pass'}
+ assert.equal(judgeJourney({...inputs,events:[tab,visible,focus]}).status,'pass')
+ assert.equal(judgeJourney({...inputs,events:[visible,tab,focus]}).status,'inconclusive')
+ assert.equal(judgeJourney({...inputs,events:[tab,{...visible,documentId:'old-map'},focus]}).status,'inconclusive')
+ assert.equal(judgeJourney({...inputs,events:[tab,visible,{...focus,stepTargets:['#other']}]}).status,'inconclusive')
+})
+
 test('the Playwright loop keeps a successful patch as a candidate and preserves the pointer result',async()=>{
  const {mkdtemp,rm}=await import('node:fs/promises')
  const {tmpdir}=await import('node:os')

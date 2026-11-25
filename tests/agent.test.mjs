@@ -5,6 +5,7 @@ import {tmpdir} from 'node:os'
 import path from 'node:path'
 import {agentArgs,agentBackend,ladderEnabled,ladderRungs,proposalInstructions,proposalPrefix,propose,proposeCoverageNames} from '../core/agent.mjs'
 import {readJSON} from '../core/io.mjs'
+import validate from '../core/validate.generated.cjs'
 
 const task=await readJSON('tasks/keyboard-only.json')
 const original=(await readJSON('extension/demo.json'))[0]
@@ -200,6 +201,7 @@ test('the ladder uses the small model first and retries once with the large mode
     })
     assert.deepEqual(models,['grok-4.5','grok-4.6'])
     assert.equal(patch.evidence.ladderRung,'large')
+    assert.equal(validate(patch),true)
     assert.equal(patch.barrier,original.barrier)
   } finally {
     restoreAgentEnv(previous)
@@ -231,6 +233,7 @@ test('CURBCUT_LADDER=off keeps a single model and CURBCUT_LADDER default records
       run:async()=>({code:0,stdout:proposal,stderr:''})
     })
     assert.equal(won.evidence.ladderRung,'small')
+    assert.equal(validate(won),true)
   } finally {
     restoreAgentEnv(previous)
     await rm(directory,{recursive:true,force:true})

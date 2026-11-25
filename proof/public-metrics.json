@@ -2493,7 +2493,7 @@
       "id": "openseamap-view-menu",
       "url": "https://map.openseamap.org/",
       "persona": "keyboard-only",
-      "task": "First assert the View menu control in the main map toolbar is keyboard focusable. Open View with Tab and Enter. Verify the Sea Marks checkbox appears as an available layer control.",
+      "task": "Use Tab to focus the View menu in the map toolbar. Verify the Sea Marks layer checkbox appears while View has focus. Leave the checkbox unchanged.",
       "observations": [
         {
           "source": "proof/kane/ledger.json",
