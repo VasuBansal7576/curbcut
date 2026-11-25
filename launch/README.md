@@ -6,7 +6,9 @@ A shopper presses Tab and skips Add to cart. Kane tries to add Field Headphones 
 
 The demo’s developer chapter starts at 2:22.933. It shows curbcut check, a Claude Code Stop hook, the trust popup, a report entering the queue and a patch retiring when the site works on its own. [Launch captions](captions/launch.vtt) · [Teaser captions](captions/teaser.vtt) · [Demo captions](captions/demo.vtt)
 
-The bundle contains 106 active fixes. Kane verified 62 and 44 have local proof. Jev’s separate review found 13 of 15 names correct. [Bundled inventory](../extension/bundled.json) · [Jev evidence](../proof/jev/) · [WebAIM Million](https://webaim.org/projects/million/)
+The bundle contains 128 active fixes. Kane verified 84 and 44 have local proof. Jev’s separate review found 13 of 15 names correct. [Bundled inventory](../extension/bundled.json) · [Jev evidence](../proof/jev/) · [WebAIM Million](https://webaim.org/projects/million/)
+
+The demo and launch cut show the November 25 bundle totals on the two cards from 2:03.667 to 2:09.500. The original narration and its captions give the earlier totals at 2:03.767 and 2:07.267. The teaser contains no bundle count. [Frame and audio comparisons](out/verification.json)
 
 ## Source
 
