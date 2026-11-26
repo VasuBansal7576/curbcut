@@ -1,68 +1,99 @@
 # Curb Cut
 
-On Mass.edu, Tab to **About**, press **Arrow Down**, then **Tab**. The keyboard skips the submenu and lands on **Board Business**. Turn on Curb Cut and repeat. Focus lands on **The DHE**. Press Enter to follow the link.
+**The web is broken for anyone who doesn't use a mouse. Curb Cut fixes it live, and Kane proves every fix.**
 
-Curb Cut is a Chrome extension that repairs controls in the page you already have open. Its CLI gives a coding agent the failed task, checks the repair, and saves the evidence you can inspect in the popup.
+Go to [Mass.edu](https://www.mass.edu/). Tab to **About**. Press **Arrow Down**, then **Tab**.
 
-**[Try the extension](https://vasubansal7576.github.io/curbcut/assets/curbcut-extension.zip)** · **[Inspect a Kane run](#inspect-a-kane-run)** · [Try the interactive comparison](https://vasubansal7576.github.io/curbcut/)
+The menu never opens. Focus jumps straight past it to **Board Business**. If you navigate by keyboard, half the site doesn't exist.
 
-**YouTube demo — [add the public watch URL here]**
+Turn on Curb Cut and do it again. Focus lands on **The DHE**. Press Enter. You're in.
 
-## Try the extension
+No site owner shipped anything. No overlay vendor asked you to trust them. The fix was verified by [Kane CLI](https://kaneclihack.sh) on the real site before it ever reached your browser.
 
-1. Download and unzip the [extension ZIP](https://vasubansal7576.github.io/curbcut/assets/curbcut-extension.zip) on a computer with Chrome.
-2. Open `chrome://extensions` and enable **Developer mode**.
-3. Choose **Load unpacked** and select the extracted folder containing `manifest.json`.
+**[Install the extension](https://vasubansal7576.github.io/curbcut/assets/curbcut-extension.zip)** · **[Watch the demo](#)** · **[Inspect a Kane run](#receipts-not-promises)** · [Live site](https://vasubansal7576.github.io/curbcut/)
 
-Open Mass.edu and try the keys above. The toolbar popup lets you switch the fix off, replay the keyboard and mouse runs, or export the source change for the site owner. [Open Mass.edu](https://www.mass.edu/) · [Read the Mass.edu report](evidence/v4-86f207deeb57-7bc09a21/report.md)
+---
 
-## Inspect a Kane run
+## Receipts, not promises
 
-**ColorHexa’s picker worked with a mouse. Tab skipped the swatch.** Kane recorded the reason in session `3c57743a` and Codex’s proposal cites that exact session.
+Every accessibility overlay on the market asks for the same thing: trust. Curb Cut doesn't. A fix ships only when Kane runs the same task three times and the story holds:
+
+| Run | Expected |
+| --- | --- |
+| Keyboard, without the fix | **Fails** |
+| Mouse | **Passes**, so the destination really works |
+| Keyboard, with the fix | **Passes** |
+
+If any run breaks that pattern, the fix doesn't ship. Every shipped fix links to its recordings.
+
+**128 fixes ship today. 84 are proven by Kane on the live site.** The other 44 are measured in a real browser, such as contrast ratios computed from rendered pixels. [Browse every fix](https://vasubansal7576.github.io/curbcut/#evidence) · [Bundle](extension/bundled.json)
+
+## The loop, end to end
+
+ColorHexa's color picker works with a mouse. With a keyboard, Tab walks straight past it.
+
+**1. Kane catches it.** Session [`3c57743a`](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/before/result.json) fails and says why:
 
 > The visible swatch is a non-focusable DIV, so keyboard-only controls cannot open it.
 
-Codex wrote four rules for `div.sp-replacer.sp-light`. They put the swatch in the tab order, give it the button role, bind Enter to its click action, and restore its focus outline. [Agent input and session ID](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/attempt-1/provenance.json) · [Four-rule answer](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/attempt-1/agent-answer.txt)
+**2. The agent reads Kane, not a guess.** Codex gets that exact session as input and writes four rules for `div.sp-replacer.sp-light`: add it to the tab order, give it the button role, bind Enter to its click, and restore its focus ring. [What Codex received](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/attempt-1/provenance.json) · [What it wrote](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/attempt-1/agent-answer.txt)
 
-| Kane session | What happened |
+**3. Kane checks the work.** The mouse control [`dedca760`](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/control/result.json) passes. The repaired keyboard run [`cbcbc771`](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/attempt-1/after/result.json) passes.
+
+**4. It lands in the tab you already had open.** The installed extension picks up the fix at 144.4 seconds. Shift+Tab reaches the swatch, and Enter opens the picker at 146.0 seconds. No reload. [Watch it happen](https://raw.githubusercontent.com/VasuBansal7576/curbcut/main/proof/live/chrome.mp4) · [Event timeline](proof/live/live-loop.json)
+
+That's the whole product: **Kane finds it, the agent fixes it, Kane proves it, and the user gets it.**
+
+It works on sites nobody has touched yet, too. On OpenSeaMap the keyboard skipped the View menu entirely. One shortcut filed the report, Grok wrote the fix in 16 seconds, and Kane verified it. Now the same eight Tabs reveal **Sea Marks**. [Report, recordings and before/after packages](proof/report-to-fix/README.md)
+
+## Fixes retire themselves
+
+A patch is a stopgap, not a business model. Curb Cut reruns each task with its patch switched off, and when the site passes on its own, the patch retires. Site owners get a report with the exact source change to make, so they can fix it properly. [Watch a patch retire](proof/demo/README.md#3-retirement)
+
+## For developers: a gate your agent can't talk past
+
+Your coding agent says the UI is done. Is it, for someone on a keyboard?
+
+```sh
+curbcut gate --config curbcut.gate.json
+```
+
+Gate runs your keyboard and screen-reader tasks through Kane and hands the agent the failing selector and Kane's reason, so it fixes **your source**, not an overlay. Wire it into a [Claude Code Stop hook](docs/gate.md#claude-code-stop-hook) and the agent can't finish until Kane passes. Or drop in the [PR bot](docs/pr-bot.md) to get Kane's verdicts and recordings on every preview.
+
+| Command | What it does |
 | --- | --- |
-| [Keyboard before · 3c57743a](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/before/result.json) | Fail. The keyboard could not open the swatch. |
-| [Mouse control · dedca760](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/control/result.json) | Pass. Clicking the swatch opened the picker. |
-| [Keyboard after · cbcbc771](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/attempt-1/after/result.json) | Pass. The repaired swatch accepted keyboard activation. |
+| `curbcut check <url> "<task>"` | Reproduce, repair and verify a barrier from a plain-English task. Add `--dry-run` to see the Kane credit estimate first. |
+| `curbcut gate` | Fail the build when a keyboard user can't finish a task. Add `--local` for a free Playwright pass. |
+| `curbcut serve` | Receive barrier reports from the extension. |
+| `curbcut verify-queue` | Turn saved reports into replayable Kane tasks. |
+| `curbcut cost` | Tokens and Kane credits spent, per run. |
 
-**Back in the original tab**, the installed extension picked up the published fix at 144.395 seconds. Shift+Tab from the search field reached the swatch. Enter opened the picker at 145.960 seconds. [Watch the original tab](https://raw.githubusercontent.com/VasuBansal7576/curbcut/main/proof/live/chrome.mp4) · [Event timeline](proof/live/live-loop.json)
+## Try it in 60 seconds
 
-On **OpenSeaMap**, a shortcut opened a report draft. Grok wrote the View-menu fix 16.4 seconds after the local Playwright baseline finished. Curb Cut accepted the saved Kane trace after rechecking its event order. The same eight Tabs that skipped View with the old ZIP revealed **Sea Marks** with the published ZIP. [Report, recordings and package comparison](proof/report-to-fix/README.md)
+**The extension:**
+1. [Download the ZIP](https://vasubansal7576.github.io/curbcut/assets/curbcut-extension.zip) and unzip it.
+2. Open `chrome://extensions` and turn on **Developer mode**.
+3. Click **Load unpacked** and pick the folder.
 
-## What Kane does
+Open Mass.edu and try the keys above. The popup lets you switch the fix off to compare, replay Kane's recordings, or export the fix for the site owner.
 
-1. **Reproduce.** Run the task with the affected input method and capture where it breaks. The ColorHexa agent received that failure reason.
-2. **Control.** Try the same task with a mouse to establish that the destination works.
-3. **Verify.** Replay the task with the proposed rule installed. Curb Cut checks the trace and archives the result, recording and evidence pack.
-4. **Retire.** Run the task again with the patch switched off. When the site passes unaided, Curb Cut can retire the rule. [Watch a patch retire](proof/demo/README.md#3-retirement)
-
-The extension ships **128 active fixes**. **84** have Kane recordings and **44** have local browser measurements. On November 24, 2026, the installed-extension audit recorded 98 primary passes and seven unconfirmed results across the 105 fixes in that day’s bundle. [November 25 Kane batch](proof/kane-batch-2026-11-25/README.md) · [Dated audit](proof/reliability/submission-extension-e2e.json) · [Browse the fix library](https://vasubansal7576.github.io/curbcut/#evidence) · [Bundle](extension/bundled.json)
-
-## Run the developer fixture
-
-From a checkout with Node.js 22 or newer, run `npm ci` and `npx playwright install chromium`. A live Check needs an authenticated Kane CLI and your chosen repair agent on PATH (Codex by default, or Grok with `CURBCUT_AGENT=grok`).
-
-**Terminal 1** — serve the shop and local report receiver from the repository root.
+**The CLI** (Node.js 22 or newer):
 
 ```sh
-node curbcut.mjs serve
+git clone --depth 1 https://github.com/VasuBansal7576/curbcut.git && cd curbcut
+npm ci && npx playwright install chromium
+
+node curbcut.mjs serve   # terminal 1: demo shop on http://127.0.0.1:4317
+node curbcut.mjs check http://127.0.0.1:4317/fixtures/shop/ \
+  "Search for headphones and add Field Headphones to the cart. Confirm Cart (1)." --dry-run   # terminal 2
 ```
 
-It prints `Curb Cut · http://127.0.0.1:4317/site/`. Open that address to preview the landing page with its sibling proof and recording directories. [Public Pages deployment](https://vasubansal7576.github.io/curbcut/)
+Drop `--dry-run` to run it live. That needs an authenticated Kane CLI and Codex (the default) or Grok (`CURBCUT_AGENT=grok`) on your PATH. [Archived run of this exact command](proof/demo/README.md)
 
-**Terminal 2** — inspect the plan before spending credits.
+## Scale
 
-```sh
-node curbcut.mjs check http://127.0.0.1:4317/fixtures/shop/ "Search for headphones and add Field Headphones to the cart. Confirm Cart (1)." --dry-run
-```
+More than 2,500 sites scouted across seven held-out studies, with every pass, failure and blocked run archived along with Kane's reason. In the November 25 batch, Kane verified 22 more fixes on the live web. [Proof index](proof/README.md) · [November 25 batch](proof/kane-batch-2026-11-25/README.md) · [Research and experiments](proof/README.md#experimental)
 
-Expect `check dry-run`, the target selector, and estimated Kane credits. Remove `--dry-run` for the live repair. The archived fresh-clone run ended with `check verified` and published the repair. [Fixture replay and terminal results](proof/demo/README.md)
+---
 
-To check a source change, run Gate against the shop or your preview. The Claude Code Stop hook, pull request bot and scheduled retirement check are opt-in integrations. [Gate and Stop hook](docs/gate.md) · [PR bot](docs/pr-bot.md) · [Example cron entry](examples/curbcut.cron)
-
-[Proof index and cohort results](proof/README.md) · [Experimental results](proof/README.md#experimental) · [Architecture](ARCHITECTURE.md) · [MIT license](LICENSE)
+[Architecture](ARCHITECTURE.md) · [MIT license](LICENSE)
