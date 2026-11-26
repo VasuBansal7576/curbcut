@@ -8,7 +8,7 @@ The demo’s developer chapter starts at 2:22.933. It shows curbcut check, a Cla
 
 The bundle contains 128 active fixes. Kane verified 84 and 44 have local proof. Jev’s separate review found 13 of 15 names correct. [Bundled inventory](../extension/bundled.json) · [Jev evidence](../proof/jev/) · [WebAIM Million](https://webaim.org/projects/million/)
 
-The demo and launch cut show the November 25 bundle totals on the two cards from 2:03.667 to 2:09.500. The original narration and its captions give the earlier totals at 2:03.767 and 2:07.267. The teaser contains no bundle count. [Frame and audio comparisons](out/verification.json)
+The films were recorded with the November 24 bundle and show its totals, 106 fixes with 62 proven by Kane. The November 25 Kane batch raised the bundle to 128 fixes with 84 proven by Kane. [Batch ledger](../proof/kane-batch-2026-11-25/README.md)
 
 ## Source
 
