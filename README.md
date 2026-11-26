@@ -1,6 +1,6 @@
 # Curb Cut
 
-**The web is broken for anyone who doesn't use a mouse. Curb Cut fixes it live, and Kane proves every fix.**
+**The web is broken for anyone who doesn't use a mouse. Curb Cut repairs keyboard barriers in your browser and shows the evidence behind each fix.**
 
 Go to [Mass.edu](https://www.mass.edu/). Tab to **About**. Press **Arrow Down**, then **Tab**.
 
@@ -10,13 +10,13 @@ Turn on Curb Cut and do it again. Focus lands on **The DHE**. Press Enter. You'r
 
 No site owner shipped anything. No overlay vendor asked you to trust them. The fix was verified by [Kane CLI](https://kaneclihack.sh) on the real site before it ever reached your browser.
 
-**[Install the extension](https://vasubansal7576.github.io/curbcut/assets/curbcut-extension.zip)** · **[Watch the demo](#)** · **[Inspect a Kane run](#receipts-not-promises)** · [Live site](https://vasubansal7576.github.io/curbcut/)
+**[Install the extension](https://vasubansal7576.github.io/curbcut/assets/curbcut-extension.zip)** · **[Watch the demo (MP4)](https://raw.githubusercontent.com/VasuBansal7576/curbcut/main/launch/curbcut-demo.mp4)** · **[Inspect a Kane run](#receipts-not-promises)** · [Live site](https://vasubansal7576.github.io/curbcut/)
 
 ---
 
 ## Receipts, not promises
 
-Every accessibility overlay on the market asks for the same thing: trust. Curb Cut doesn't. A fix ships only when Kane runs the same task three times and the story holds:
+Every accessibility overlay on the market asks for the same thing: trust. Curb Cut doesn't. To earn the Kane-verified label, a repair needs three runs of the same task:
 
 | Run | Expected |
 | --- | --- |
@@ -24,7 +24,7 @@ Every accessibility overlay on the market asks for the same thing: trust. Curb C
 | Mouse | **Passes**, so the destination really works |
 | Keyboard, with the fix | **Passes** |
 
-If any run breaks that pattern, the fix doesn't ship. Every shipped fix links to its recordings.
+If the evidence doesn’t match that pattern, the repair doesn’t earn the Kane-verified label. Kane-verified repairs link to the recordings; the other repairs link to local browser evidence.
 
 **128 fixes ship today. 84 are proven by Kane on the live site.** The other 44 are measured in a real browser, such as contrast ratios computed from rendered pixels. [Browse every fix](https://vasubansal7576.github.io/curbcut/#evidence) · [Bundle](extension/bundled.json)
 
@@ -44,7 +44,7 @@ ColorHexa's color picker works with a mouse. With a keyboard, Tab walks straight
 
 That's the whole product: **Kane finds it, the agent fixes it, Kane proves it, and the user gets it.**
 
-It works on sites nobody has touched yet, too. On OpenSeaMap the keyboard skipped the View menu entirely. One shortcut filed the report, Grok wrote the fix in 16 seconds, and Kane verified it. Now the same eight Tabs reveal **Sea Marks**. [Report, recordings and before/after packages](proof/report-to-fix/README.md)
+It works on sites nobody has touched yet, too. On OpenSeaMap the keyboard skipped the View menu entirely. One shortcut filed the report, and Grok wrote the fix in 16 seconds. Curb Cut initially stopped at the trace check, then published the repair after rechecking Kane’s recorded runs. Now the same eight Tabs reveal **Sea Marks**. [Report, recordings and before/after packages](proof/report-to-fix/README.md)
 
 ## Fixes retire themselves
 
