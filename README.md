@@ -1,10 +1,8 @@
 # Curb Cut
 
-On [Mass.edu](https://www.mass.edu/), hover over **About** and the menu opens. Try with a keyboard: Tab to **About**, press **Arrow Down**, then **Tab** again. Focus jumps to **Board Business**. You never get a chance to choose **The DHE**.
+Try using a website without a mouse. A menu opens on hover, but pressing Tab takes you right past it. If the link you need is inside, you can see where you want to go and still have no way to get there.
 
-Turn on Curb Cut and press the same keys. This time, focus lands on **The DHE**. Press Enter to follow the link.
-
-Curb Cut is a Chrome extension that repairs barriers like this in the browser. [Kane CLI](https://kaneclihack.sh) tested this repair on the live site. You can replay the runs or try it yourself.
+Curb Cut is a Chrome extension that helps with barriers like this. A repair can make a menu reachable by keyboard, give an unlabeled button a name, or make faint text easier to read. The extension applies the fix in your browser and shows the evidence behind it.
 
 **[Install the extension](https://vasubansal7576.github.io/curbcut/assets/curbcut-extension.zip)** · **[Watch the demo (MP4)](https://raw.githubusercontent.com/VasuBansal7576/curbcut/main/launch/curbcut-demo.mp4)** · **[Inspect a Kane run](#receipts-not-promises)** · [Live site](https://vasubansal7576.github.io/curbcut/)
 
@@ -26,7 +24,7 @@ If the evidence doesn’t match that pattern, the repair doesn’t earn the Kane
 
 ## The loop, end to end
 
-ColorHexa's color picker works with a mouse. With a keyboard, Tab walks straight past it.
+In one recorded task, clicking a swatch opened a color picker. Pressing Tab skipped the swatch, so a keyboard user couldn't open it.
 
 **1. Kane catches it.** Session [`3c57743a`](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/before/result.json) fails and says why:
 
@@ -40,7 +38,7 @@ ColorHexa's color picker works with a mouse. With a keyboard, Tab walks straight
 
 The failed run tells Codex which control to repair. The passing replay tells us whether the repair was worth shipping.
 
-On OpenSeaMap, where Curb Cut had no existing patch, the keyboard skipped the View menu entirely. One shortcut filed the report, and Grok wrote the fix in 16 seconds. Curb Cut initially stopped at the trace check, then published the repair after rechecking Kane’s recorded runs. Now the same eight Tabs reveal **Sea Marks**. [Report, recordings and before/after packages](proof/report-to-fix/README.md)
+In a separate test on a page Curb Cut had never patched, pressing Tab skipped a menu that opened on hover. One shortcut filed the report, and Grok wrote the fix in 16 seconds. Curb Cut initially stopped at the trace check, then published the repair after rechecking Kane’s recorded runs. With the repair, the same eight Tab presses reached the menu and revealed its checkbox. [Report, recordings and before/after packages](proof/report-to-fix/README.md)
 
 ## Fixes retire themselves
 
@@ -71,7 +69,7 @@ Gate runs your keyboard and screen-reader tasks through Kane and hands the agent
 2. Open `chrome://extensions` and turn on **Developer mode**.
 3. Click **Load unpacked** and pick the folder.
 
-Open Mass.edu and try the keys above. The popup lets you switch the fix off to compare, replay Kane's recordings, or export the fix for the site owner.
+Pick a keyboard repair in the [fix library](https://vasubansal7576.github.io/curbcut/#evidence) and open its page. Follow the task in its recording, then switch the repair off and on in the popup to compare. You can also export the fix for the site owner.
 
 **The CLI** (Node.js 22 or newer):
 
