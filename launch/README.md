@@ -2,7 +2,7 @@
 
 [Watch the 2:23 launch](curbcut-launch.mp4) · [Watch the 15-second teaser](curbcut-launch-15s.mp4) · [Watch the 4:29 demo](curbcut-demo.mp4) · [Thumbnail](curbcut-launch-thumbnail.png)
 
-A shopper presses Tab and skips Add to cart. Kane tries to add Field Headphones to the cart with a keyboard, with a mouse and with the fix. At 1:39 the launch follows an OpenSeaMap report from the keyboard shortcut to the published repair. Eight Tabs now reach View and reveal Sea Marks. The later evidence recheck and publication are identified in the cut. [OpenSeaMap proof](../proof/report-to-fix/README.md)
+A shopper finds the headphones but can’t reach **Add to cart** with Tab. The launch film starts there. Kane runs the same shopping task with a keyboard, with a mouse, and then with the keyboard after the fix. At 1:39 the launch follows an OpenSeaMap report from the keyboard shortcut to the published repair. Eight Tabs now reach View and reveal Sea Marks. The later evidence recheck and publication are identified in the cut. [OpenSeaMap proof](../proof/report-to-fix/README.md)
 
 The demo’s developer chapter starts at 2:22.933. It shows curbcut check, a Claude Code Stop hook, the trust popup, a report entering the queue and a patch retiring when the site works on its own. [Launch captions](captions/launch.vtt) · [Teaser captions](captions/teaser.vtt) · [Demo captions](captions/demo.vtt)
 

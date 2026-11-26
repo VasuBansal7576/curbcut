@@ -1,6 +1,6 @@
 # Pull request bot
 
-This opt-in GitHub Action can wait for a preview URL, run `curbcut gate` against it, and post Kane’s verdict as one sticky comment.
+If a preview breaks a task for keyboard users, the reviewer should be able to see where it happened. This opt-in GitHub Action waits for the preview, runs `curbcut gate`, and adds Kane’s verdict to one comment it updates on the pull request.
 
 ## Setup
 

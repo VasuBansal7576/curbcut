@@ -1,6 +1,6 @@
-# Curb Cut — build spec
+# Curb Cut build spec
 
-Curb Cut repairs barriers in the browser. Each bundled fix links to Kane recordings or local browser measurements.
+The starting point is a task a person can’t finish, such as opening a menu without a mouse. Curb Cut repairs the barrier in the browser. Each bundled fix links to Kane recordings or local browser measurements.
 Kane CLI (installed: `kane-cli`, run `kane-cli --help`, `kane-cli run --help`) runs a task with a specified input method. A coding agent writes a declarative patch and Kane replays the task. The extension applies published rules on matching pages.
 
 Hackathon judging (equal weight): Ships (works end to end), Verified (Kane caught/proved something real), Closed loop (Kane result feeds back to the agent, tighter is better), Craft (a developer would install it tonight). The repo must be public later, so keep it clean.

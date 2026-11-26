@@ -1,14 +1,10 @@
 # Curb Cut
 
-**The web is broken for anyone who doesn't use a mouse. Curb Cut repairs keyboard barriers in your browser and shows the evidence behind each fix.**
+On [Mass.edu](https://www.mass.edu/), hover over **About** and the menu opens. Try with a keyboard: Tab to **About**, press **Arrow Down**, then **Tab** again. Focus jumps to **Board Business**. You never get a chance to choose **The DHE**.
 
-Go to [Mass.edu](https://www.mass.edu/). Tab to **About**. Press **Arrow Down**, then **Tab**.
+Turn on Curb Cut and press the same keys. This time, focus lands on **The DHE**. Press Enter to follow the link.
 
-The menu never opens. Focus jumps straight past it to **Board Business**. If you navigate by keyboard, half the site doesn't exist.
-
-Turn on Curb Cut and do it again. Focus lands on **The DHE**. Press Enter. You're in.
-
-No site owner shipped anything. No overlay vendor asked you to trust them. The fix was verified by [Kane CLI](https://kaneclihack.sh) on the real site before it ever reached your browser.
+Curb Cut is a Chrome extension that repairs barriers like this in the browser. [Kane CLI](https://kaneclihack.sh) tested this repair on the live site. You can replay the runs or try it yourself.
 
 **[Install the extension](https://vasubansal7576.github.io/curbcut/assets/curbcut-extension.zip)** · **[Watch the demo (MP4)](https://raw.githubusercontent.com/VasuBansal7576/curbcut/main/launch/curbcut-demo.mp4)** · **[Inspect a Kane run](#receipts-not-promises)** · [Live site](https://vasubansal7576.github.io/curbcut/)
 
@@ -16,7 +12,7 @@ No site owner shipped anything. No overlay vendor asked you to trust them. The f
 
 ## Receipts, not promises
 
-Every accessibility overlay on the market asks for the same thing: trust. Curb Cut doesn't. To earn the Kane-verified label, a repair needs three runs of the same task:
+For a mouse-only control, a keyboard failure tells us part of the story. We also need to know the control works with a mouse and that the same keyboard task passes after the repair. Here’s what a Kane-verified repair needs:
 
 | Run | Expected |
 | --- | --- |
@@ -36,23 +32,23 @@ ColorHexa's color picker works with a mouse. With a keyboard, Tab walks straight
 
 > The visible swatch is a non-focusable DIV, so keyboard-only controls cannot open it.
 
-**2. The agent reads Kane, not a guess.** Codex gets that exact session as input and writes four rules for `div.sp-replacer.sp-light`: add it to the tab order, give it the button role, bind Enter to its click, and restore its focus ring. [What Codex received](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/attempt-1/provenance.json) · [What it wrote](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/attempt-1/agent-answer.txt)
+**2. Codex reads the failed run.** Codex gets that exact session as input and writes four rules for `div.sp-replacer.sp-light`: add it to the tab order, give it the button role, bind Enter to its click, and restore its focus ring. [What Codex received](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/attempt-1/provenance.json) · [What it wrote](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/attempt-1/agent-answer.txt)
 
 **3. Kane checks the work.** The mouse control [`dedca760`](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/control/result.json) passes. The repaired keyboard run [`cbcbc771`](proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/attempt-1/after/result.json) passes.
 
 **4. It lands in the tab you already had open.** The installed extension picks up the fix at 144.4 seconds. Shift+Tab reaches the swatch, and Enter opens the picker at 146.0 seconds. No reload. [Watch it happen](https://raw.githubusercontent.com/VasuBansal7576/curbcut/main/proof/live/chrome.mp4) · [Event timeline](proof/live/live-loop.json)
 
-That's the whole product: **Kane finds it, the agent fixes it, Kane proves it, and the user gets it.**
+The failed run tells Codex which control to repair. The passing replay tells us whether the repair was worth shipping.
 
-It works on sites nobody has touched yet, too. On OpenSeaMap the keyboard skipped the View menu entirely. One shortcut filed the report, and Grok wrote the fix in 16 seconds. Curb Cut initially stopped at the trace check, then published the repair after rechecking Kane’s recorded runs. Now the same eight Tabs reveal **Sea Marks**. [Report, recordings and before/after packages](proof/report-to-fix/README.md)
+On OpenSeaMap, where Curb Cut had no existing patch, the keyboard skipped the View menu entirely. One shortcut filed the report, and Grok wrote the fix in 16 seconds. Curb Cut initially stopped at the trace check, then published the repair after rechecking Kane’s recorded runs. Now the same eight Tabs reveal **Sea Marks**. [Report, recordings and before/after packages](proof/report-to-fix/README.md)
 
 ## Fixes retire themselves
 
-A patch is a stopgap, not a business model. Curb Cut reruns each task with its patch switched off, and when the site passes on its own, the patch retires. Site owners get a report with the exact source change to make, so they can fix it properly. [Watch a patch retire](proof/demo/README.md#3-retirement)
+A browser patch helps now. Fixing the original site helps everyone. Curb Cut reruns each task with its patch switched off, and when the site passes on its own, the patch retires. Site owners get a report with the exact source change to make, so they can fix it properly. [Watch a patch retire](proof/demo/README.md#3-retirement)
 
 ## For developers: a gate your agent can't talk past
 
-Your coding agent says the UI is done. Is it, for someone on a keyboard?
+Your coding agent added an **Add to cart** button. Can someone reach it with Tab and press Enter? Run the task before calling the UI done.
 
 ```sh
 curbcut gate --config curbcut.gate.json

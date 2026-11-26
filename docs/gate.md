@@ -1,6 +1,6 @@
 # Agent gate
 
-`curbcut gate` runs declared tasks against a running app as a keyboard user and as the screen-reader view. A failure prints Kane’s reason (or the local oracle’s reason with `--local`) and a compact DOM snippet. The coding agent should change the **source**, not a Curb Cut patch.
+A page can look finished while Tab skips **Add to cart**. `curbcut gate` runs tasks you specify against the running app with keyboard-only input and with Curb Cut’s screen-reader view. A failure prints Kane’s reason (or the local oracle’s reason with `--local`) and a compact DOM snippet. The coding agent should change the **source**, not a Curb Cut patch.
 
 Point it at localhost or a public preview URL. Do not use it on login, payment, or account-creation flows.
 

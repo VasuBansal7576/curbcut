@@ -1,5 +1,7 @@
 # Curb Cut architecture
 
+A repair starts with something a person can’t do: reach a menu, activate a button, or tell what an unnamed control does. This page follows that task from the first report to the evidence, the extension, and the eventual fix on the original site.
+
 ```mermaid
 flowchart LR
     scout["Scout or user report"] --> task["Barrier task"]

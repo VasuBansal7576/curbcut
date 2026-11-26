@@ -1,6 +1,6 @@
 # Proof index
 
-On ColorHexa, a Kane failure led to a Codex repair that reached the reporting tab. [Agent input and rules](../README.md#inspect-a-kane-run) · [Original-tab timeline](live/live-loop.json) · [OpenSeaMap report to published ZIP](report-to-fix/README.md) · [Experimental results](#experimental)
+Start with a task you can watch: Tab skipped ColorHexa’s color picker. Kane recorded the failure, Codex used it to write a repair, and the fix reached the same tab. [Agent input and rules](../README.md#the-loop-end-to-end) · [Original-tab timeline](live/live-loop.json) · [OpenSeaMap report to published ZIP](report-to-fix/README.md) · [Experimental results](#experimental)
 
 Compare [Mass.edu before](hard-v4/kane/v4-86f207deeb57-7bc09a21/before/recording.mp4) and [after](hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/recording.mp4). The same keyboard task opens About and follows “The DHE” with the repair. [Pointer control](hard-v4/kane/v4-86f207deeb57-7bc09a21/control/recording.mp4) · [Kane evidence pack](hard-v4/kane/v4-86f207deeb57-7bc09a21/attempt-1/after/70a47b25-b707-443b-98dd-d8849884cec2.evidence)
 

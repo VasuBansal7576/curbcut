@@ -2,7 +2,7 @@
 
 Draft release notes. Build the extension-only zip with `npm run package`.
 
-Curb Cut ships 128 active repairs. 84 have Kane recordings and 44 have local proof, comprising 41 contrast repairs and three development-page language repairs. The popup exports a Markdown report for the site owner.
+If Tab skips a menu or a screen reader can’t tell you what a button does, a repair can help while the original site still needs fixing. Curb Cut ships 128 active repairs. 84 have Kane recordings and 44 have local proof, comprising 41 contrast repairs and three development-page language repairs. The popup exports a Markdown report for the site owner.
 
 | Study | Result |
 | --- | --- |

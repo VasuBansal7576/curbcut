@@ -1,10 +1,10 @@
 # Curb Cut
 
-A mouse opens ColorHexa’s color picker. A keyboard skips right over it. Curb Cut repaired the swatch in the original Chrome tab. In the recorded replay, Enter opened the picker at 146 seconds.
+On ColorHexa, clicking the swatch opens the color picker. If you use a keyboard, Tab skips the swatch, so you can’t open the picker at all. We built Curb Cut to repair barriers like that in Chrome. In the recorded run, the repair reached the same tab the user had open, and Enter opened the picker at 146 seconds.
 
 [Try the Chrome extension](https://vasubansal7576.github.io/curbcut/assets/curbcut-extension.zip) · [Install steps and interactive demo](https://vasubansal7576.github.io/curbcut/)
 
-**YouTube demo — [add the public watch URL here]**
+[Watch the 4:29 demo (MP4)](https://raw.githubusercontent.com/VasuBansal7576/curbcut/main/launch/curbcut-demo.mp4)
 
 Kane’s keyboard run recorded the failure. “The visible swatch is a non-focusable DIV, so keyboard-only controls cannot open it.” Codex’s proposal cites that session, `3c57743a`, and adds four rules to the swatch. It gives the control keyboard focus, a button role, Enter activation and a visible focus outline. [Agent input](https://github.com/VasuBansal7576/curbcut/blob/main/proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/attempt-1/provenance.json) · [Codex’s four rules](https://github.com/VasuBansal7576/curbcut/blob/main/proof/kane/report-d6870c43f8831c2d3b/2026-11-22T11-01-51.855Z/attempt-1/agent-answer.txt)
 
